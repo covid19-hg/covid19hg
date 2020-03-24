@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: COVID-19 Host Genetics Initiative
-image: /img/home-jumbotron.jpg
+image: /img/header.png
 heading: The goal
 subheading: A collaborative effort
 mainpitch:
