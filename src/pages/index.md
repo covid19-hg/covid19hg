@@ -1,21 +1,25 @@
 ---
 templateKey: index-page
-title: COVID-19 Host Genetics Initiative 
+title: COVID-19 Host Genetics Initiative
 image: /img/home-jumbotron.jpg
-heading: The goal 
-subheading: A collaborative effort 
+heading: The goal
+subheading: A collaborative effort
 mainpitch:
-  title: Why Kaldi
+  title: Why?
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) pneumonia has
+    spread rapidly across the world. We can use genetic analysis to identify
+    differences in individual disease susceptibility, severity and prognosis.
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  While the majority of individuals presents mild symptoms, a subgroup of
+  critically ill patients is admitted to intensive care units and requires
+  mechanical ventilation. The proportion of critically ill patients varies
+  across countries and depends on the specific type of screening strategy
+  enforced in the population.  Patients admitted to intensive care units tend to
+  be older and being diagnosed with previous comorbid conditions. But this does
+  not fully explain differences in disease severity between individuals.  We
+  think that genetic susceptibility can play a role in explaining differences in
+  individual disease susceptibility, severity and prognosis.
 intro:
   blurbs:
     - image: /img/coffee.png
