@@ -32,7 +32,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Obtain a [Mapbox access token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/) and create an `.env.development` file with the following content:
 
 ```shell
-MAPBOX_API_KEY=your-mapbox-api-key
+GATSBY_MAPBOX_API_KEY=your-mapbox-api-key
 ```
 
 Usually this API key is unrestricted because it's only used for local development and this env file is not checked into version control.
