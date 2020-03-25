@@ -24,6 +24,7 @@ function encode(data) {
 
 const Index = () => {
   const [state, setState] = useState({});
+  const [submitButtonEnabled, setSubmitButtonEnabled] = useState(false);
   const recaptchaRef = createRef();
 
   const handleChange = e => {
@@ -34,18 +35,28 @@ const Index = () => {
     e.preventDefault();
     const form = e.target;
     const recaptchaValue = recaptchaRef.current.getValue();
+    console.log("state", {
+      "form-name": form.getAttribute("name"),
+      "g-recaptcha-response": recaptchaValue,
+      ...state
+    });
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
         "g-recaptcha-response": recaptchaValue,
-        "g-recaptcha": RECAPTCHA_KEY,
         ...state
       })
     })
       .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error));
+  };
+
+  const onRecaptchaChange = val => {
+    if (!!val) {
+      setSubmitButtonEnabled(true);
+    }
   };
 
   return (
@@ -109,9 +120,17 @@ const Index = () => {
                   />
                 </div>
               </div>
-              <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
+              <Recaptcha
+                ref={recaptchaRef}
+                sitekey={RECAPTCHA_KEY}
+                onChange={onRecaptchaChange}
+              />
               <div className="field">
-                <button className="button is-link" type="submit">
+                <button
+                  className="button is-link"
+                  type="submit"
+                  disabled={!submitButtonEnabled}
+                >
                   Send
                 </button>
               </div>
