@@ -35,11 +35,6 @@ const Index = () => {
     e.preventDefault();
     const form = e.target;
     const recaptchaValue = recaptchaRef.current.getValue();
-    console.log("state", {
-      "form-name": form.getAttribute("name"),
-      "g-recaptcha-response": recaptchaValue,
-      ...state
-    });
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
