@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Map from '../components/Map'
+import InstitutionsList from '../components/InstitutionsList'
 
 export const ProductPageTemplate = ({ image, title }) => (
   <div className="content">
@@ -34,7 +35,7 @@ export const ProductPageTemplate = ({ image, title }) => (
               <Map />
             </div>
             <div className="column is-one-third">
-              Insitution List
+              <InstitutionsList />
             </div>
           </div>
         </div>
