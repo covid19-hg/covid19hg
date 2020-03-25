@@ -2,8 +2,10 @@
 templateKey: index-page
 title: The COVID-19 Host Genetics Initiative
 image: /img/header.png
-heading: Objectives 
-subheading: A global collaboration to fight the COVID-19 pandemic through human genetic analysis
+heading: Objectives
+subheading: >-
+  A global collaboration to fight the COVID-19 pandemic through human genetic
+  analysis
 mainpitch:
   title: Mission
   description: >
@@ -22,18 +24,16 @@ description: >-
   individual disease susceptibility, severity and prognosis.
 intro:
   blurbs:
-    - image: /img/image-needed.png
+    - image: /img/world-map.png
       text: >
-        Phase 1: Planning and collaboration. In the coming days and 
-        weeks, we hope to join forces with as
-        many research partners as possible. The covid19hg initiative is
-        currently comprised of over thirty partners including biobanks,
-        universities, research institutes, and industry partners.
-        The more partners that join, the more powerful our 
-        meta-analyses becomes. 
-        Here is the full list of partners. link to
-        partners page. Click here to contact us for more information 
-        about joining. 
+        Phase 1: Planning and collaboration. In the coming days and  weeks, we
+        hope to join forces with as many research partners as possible. The
+        covid19hg initiative is currently comprised of over thirty partners
+        including biobanks, universities, research institutes, and industry
+        partners. The more partners that join, the more powerful our 
+        meta-analyses becomes.  Here is the full list of partners. link to
+        partners page. Click here to contact us for more information  about
+        joining. 
     - image: /img/image-needed.png
       text: >
         Phase 2: Retrospective analysis: existing epidemiological cohorts
@@ -42,21 +42,20 @@ intro:
         been diagnosed with COVID-19 and carry out association analyses to
         derive immediate insight. These data will provide rapid 
         proof-of-concept results.
-    - image: /img/image-needed.png 
+    - image: /img/image-needed.png
       text: >
-        Phase 3: Prospective analysis. Our partners will send us samples 
-        from patients infected by COVID-19 who are not already present on 
-        our existing cohorts. We will carry out genotyping and 
-        association analysis and combine these sample with our
-        retrospective samples. In the coming weeks, we expect to 
-        receive thousands of samples from Italy.
-    - image: /img/image-needed.png 
+        Phase 3: Prospective analysis. Our partners will send us samples  from
+        patients infected by COVID-19 who are not already present on  our
+        existing cohorts. We will carry out genotyping and  association analysis
+        and combine these sample with our retrospective samples. In the coming
+        weeks, we expect to  receive thousands of samples from Italy.
+    - image: /img/image-needed.png
       text: >
-        Phase 4. Ongoing distribution of results: meta-analysis will 
-        continue as more partners and samples are added. Summary statistics 
-        will be shared and continuously updated on this website 
-        without restriction. Our results could help identify susceptible
-        populations and lead to development of new therapeutics.
+        Phase 4. Ongoing distribution of results: meta-analysis will  continue
+        as more partners and samples are added. Summary statistics  will be
+        shared and continuously updated on this website  without restriction.
+        Our results could help identify susceptible populations and lead to
+        development of new therapeutics.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
