@@ -40,6 +40,7 @@ const Index = () => {
       body: encode({
         "form-name": form.getAttribute("name"),
         "g-recaptcha-response": recaptchaValue,
+        "g-recaptcha": RECAPTCHA_KEY,
         ...state
       })
     })
