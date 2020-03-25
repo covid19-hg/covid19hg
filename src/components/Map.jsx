@@ -15,7 +15,7 @@ const initializeMap = el => {
   const mapboxMap = new MapboxMap({
     container: el,
     style: "mapbox://styles/mapbox/light-v10",
-    accessToken: process.env.MAPBOX_API_KEY,
+    accessToken: process.env.GATSBY_MAPBOX_API_KEY,
     bounds: [southWest, northEast],
     fitBoundsOptions: {
       padding: {
