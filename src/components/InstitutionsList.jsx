@@ -1,13 +1,28 @@
-import React from "react"
+import React from "react";
 const data = require("../data.json");
 
 const InstitutionsList = () => {
-  const items = data.map(({study_biobank}, index) => (
-    <li key={`item-{index}`}>{study_biobank}</li>
-  ))
+  const rows = data.map(
+    ({ study_biobank, coordinator, city_country }, index) => (
+      <tr key={`item-${index}`}>
+        <td>{study_biobank}</td>
+        <td>{coordinator}</td>
+        <td>{city_country}</td>
+      </tr>
+    )
+  );
   return (
-    <ul>{items}</ul>
-  )
-}
+    <table className="table is-striped">
+      <thead>
+        <tr>
+          <th>Study</th>
+          <th>Coordinator</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>
+  );
+};
 
-export default InstitutionsList
+export default InstitutionsList;
