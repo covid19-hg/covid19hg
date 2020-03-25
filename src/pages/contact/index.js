@@ -55,7 +55,7 @@ const Index = () => {
             <form
               name="contact-recaptcha"
               method="post"
-              action="/thanks/"
+              action="/contact/thanks/"
               data-netlify="true"
               data-netlify-recaptcha="true"
               onSubmit={handleSubmit}
