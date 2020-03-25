@@ -1,19 +1,45 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
-title: About our values
+title: A collaborative effort
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+## Why?
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) pneumonia has spread rapidly across the world. While the majority of individuals presents mild symptoms, a subgroup of critically ill patients is admitted to intensive care units and requires mechanical ventilation. The proportion of critically ill patients varies across countries and depends on the specific type of screening strategy enforced in the population.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+Patients admitted to intensive care units tend to be older and being diagnosed with previous comorbid conditions. But this does not fully explain differences in disease severity between individuals.
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+We think that genetic susceptibility can play a role in explaining differences in individual disease susceptibility, severity and prognosis.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+## The goal
+
+*The idea is simple*: can we create a community behind studying the genetics of people that have been infected with COVID-19?
+
+## How does it work?
+
+1) You send us consented DNA samples together with some basic clinical information
+
+2) We genotype the sample for free (GSA global screening array)
+
+3) Every 1000 samples, we will run whole-genome and HLA-specific imputations and make the genetic and curated clinical data available to the scientific community
+
+## Which clinical information should I collect ?
+
+*The more, the merrier*
+
+However, this is the suggested set of information:
+
+* Age
+* Sex
+* Body Mass Index
+* Smoking information (past, current, never) and number of cigarettes/day
+* Comorbidities; Diabetes, cardiovascular diseases, renal insufficiency, COPD, Malignant tumor, autoimmune diseases
+* Pneumonia: non-present, present: unilateral, present: bilateral (dual)
+* Any relevant severity score: E.g. Sequential Organ Failure Assessment (SOFA) score, Clinical Pulmonary Infection Score (CPIS), quick sepsis related organ failure assessment (qSOFA)
+* If patient is currently in intensive care. Therapy: oxygen, continuous positive airway pressure (CPAP), intubation
+
+Other information that are relevant: Hematologic malignancy, organ transplant, immunodeficiency, asthma, cystic fibrosis, Charlson comorbity index, MI, CHF, PVD, CVA, Dementia, COPD, CT, PUD, Liver disease, DM, Hemiplegia, CKD, Leukemia, Lymphoma, AIDS, Days with symptoms, antiviral at diagnosis, mortality, clinical laboratory, radiological data.
+
+## Which consent do I need?
+
+Patient consent should allow for genetic and clinical data to be shared with the broader scientific community upon approval of the study coordinator. We can share the consent forms used across studies.
