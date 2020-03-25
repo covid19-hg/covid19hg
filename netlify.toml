@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "npm run build"
+  command = "echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && yarn run build"
   functions = "lambda"
 [build.environment]
   YARN_VERSION = "1.9.4"
