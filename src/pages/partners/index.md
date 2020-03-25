@@ -1,7 +1,7 @@
 ---
 templateKey: 'partners-page'
 path: /partners
-title: Our Coffee
+title: Partners
 image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
 description: >-

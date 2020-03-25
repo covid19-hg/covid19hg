@@ -1,3 +1,14 @@
+const dotEnv = require('dotenv')
+
+const localConfig = dotEnv.config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+if (localConfig.error) {
+  console.warn(
+    'Cannot load local env variables. Ignore if on CI or if no local-specifiv env variables are needed.\n',
+    localConfig.error
+  )
+}
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',
