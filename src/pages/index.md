@@ -3,12 +3,16 @@ templateKey: index-page
 title: The COVID-19 Host Genetics Initiative
 image: /img/header-4.png
 heading: Objectives
-subheading: >-
-  A global collaboration to fight the COVID-19 pandemic through human genetic
-  analysis
+subheading: '-'
 mainpitch:
   title: Mission
-  description: ' The COVID-19 host genetics initiative aims to provide support and an analytical network for studies that are broadly interested in identifying genetic determinants of COVID-19 susceptibility and severity.  Such discoveries could help to generate hypotheses for drug repurposing, identify individuals at unusually high or low risk, and contribute to global knowledge of the biology of SARS-CoV-2 infection and disease.'
+  description: >-
+    The COVID-19 host genetics initiative brings together the human genetics
+    community to generate, share and analyze data to learn the genetic
+    determinants of COVID-19 susceptibility, severity and outcomes. Such
+    discoveries could help to generate hypotheses for drug repurposing, identify
+    individuals at unusually high or low risk, and contribute to global
+    knowledge of the biology of SARS-CoV-2 infection and disease.
 description: >-
   The COVID-19 host genetics initiative is a bottom-up collaborative effort that
   has three main aims:
@@ -16,9 +20,9 @@ intro:
   blurbs:
     - image: /img/world-map.png
       text: >-
-        Aim 1: Provide an environment where researchers interested in COVID-19
-        host genetics can interact with each other and share resources (e.g.
-        protocols, questionnaires).
+        Aim 1: Provide an environment to foster the sharing of resources to
+        facilitate COVID-19 host genetics research (e.g. protocols,
+        questionnaires).
     - image: /img/obj-sharing.png
       text: >
         Aim 2: Organize analytical activities across studies to identify genetic
@@ -27,7 +31,7 @@ intro:
       text: >
         Aim 3: Provide a platform to share the results from such activities, as
         well as the individual-level data where possible, to benefit the broader
-        scientific community
+        scientific community.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
