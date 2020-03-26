@@ -14,16 +14,7 @@ mainpitch:
     genetics of individuals affected by COVID-19 to join forces to accelerate
     scientific discoveries that may help the treatment and prevention of
     COVID-19.
-description: >-
-  While the majority of individuals presents mild symptoms, a subgroup of
-  critically ill patients is admitted to intensive care units and requires
-  mechanical ventilation. The proportion of critically ill patients varies
-  across countries and depends on the specific type of screening strategy
-  enforced in the population.  Patients admitted to intensive care units tend to
-  be older and being diagnosed with previous comorbid conditions. But this does
-  not fully explain differences in disease severity between individuals.  We
-  think that genetic susceptibility can play a role in explaining differences in
-  individual disease susceptibility, severity and prognosis.
+description: '  The COVID-19 host genetics initiative aims to provide support and an analytical network for studies that are broadly interested in identifying genetic determinants of COVID-19 susceptibility and severity.  Such discoveries could help to generate hypotheses for drug repurposing, identify individuals at unusually high or low risk, and contribute to global knowledge of the biology of SARS-CoV-2 infection and disease.'
 intro:
   blurbs:
     - image: /img/world-map.png
