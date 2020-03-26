@@ -6,45 +6,38 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-}) => (
+export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro }) => (
   <div>
     <div
-      className="full-width-image margin-top-0"
+      className="full-width-image" 
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`,
+        backgroundPosition: `top`,
+        backgroundAttachment: `scroll`,
       }}
     >
-      <div
+      {/*     <div
         style={{
+          position: 'relative',
+          left: '10em',
+          marginRight: '20px',
+          top: '-200px',
           display: 'flex',
           height: '150px',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
           flexDirection: 'column',
+          border: '1px solid black',
         }}
       >
-        <h1
+  <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: '#262262',
-            color: 'white',
+            color: '#262262',
             lineHeight: '1',
             padding: '0.25em',
+            fontSize: '50%',
           }}
         >
           {title}
@@ -52,17 +45,14 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: '#262262',
-            color: 'white',
+            color: '#262262',
             lineHeight: '1',
             padding: '0.25em',
           }}
         >
           {subheading}
         </h3>
-      </div>
+      </div>*/}
     </div>
     <section className="section section--gradient">
       <div className="container">
@@ -80,24 +70,20 @@ export const IndexPageTemplate = ({
                 </div>
                 <div className="columns">
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
+                    <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
                     <p>{description}</p>
                   </div>
                 </div>
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
+                    <Link className="btn" to="/about">
                       More information
                     </Link>
                   </div>
                 </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest updates 
-                  </h3>
+                  <h3 className="has-text-weight-semibold is-size-2">News</h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
@@ -177,7 +163,7 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 400, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

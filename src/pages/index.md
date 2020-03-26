@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: The COVID-19 Host Genetics Initiative
-image: /img/header.png
+image: /img/header-4.png
 heading: Objectives
 subheading: >-
   A global collaboration to fight the COVID-19 pandemic through human genetic
@@ -26,7 +26,7 @@ intro:
   blurbs:
     - image: /img/world-map.png
       text: >
-        Phase 1: Planning and collaboration. In the coming days and  weeks, we
+        Objective 1: Collaboration. In the coming days and  weeks, we
         hope to join forces with as many research partners as possible. The
         covid19hg initiative is currently comprised of over thirty partners
         including biobanks, universities, research institutes, and industry
@@ -34,28 +34,28 @@ intro:
         meta-analyses becomes.  Here is the full list of partners. link to
         partners page. Click here to contact us for more information  about
         joining. 
-    - image: /img/image-needed.png
+    - image: /img/study-schematic-blue.png
       text: >
-        Phase 2: Retrospective analysis: existing epidemiological cohorts
+        Objective 2: Retrospective study. existing epidemiological cohorts
         contain rich collections of genetic and phenotopic data for select
         individuals. We will identify indivduals in these cohorts that have 
         been diagnosed with COVID-19 and carry out association analyses to
         derive immediate insight. These data will provide rapid 
         proof-of-concept results.
-    - image: /img/image-needed.png
+    - image: /img/study-schematic-blue2.png
       text: >
-        Phase 3: Prospective analysis. Our partners will send us samples  from
+        Objective 3: Prospective study. Our partners will send us samples  from
         patients infected by COVID-19 who are not already present on  our
         existing cohorts. We will carry out genotyping and  association analysis
         and combine these sample with our retrospective samples. In the coming
         weeks, we expect to  receive thousands of samples from Italy.
-    - image: /img/image-needed.png
+    - image: /img/obj-sharing.png
       text: >
-        Phase 4. Ongoing distribution of results: meta-analysis will  continue
-        as more partners and samples are added. Summary statistics  will be
-        shared and continuously updated on this website  without restriction.
-        Our results could help identify susceptible populations and lead to
-        development of new therapeutics.
+        Objective 4: Data sharing. Summary statistics  will be 
+        continuously updated on this website for the research community
+        to use without restriction. As more partners and samples 
+        are added, our meta-analysis gains power to identify useful
+        signal.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
