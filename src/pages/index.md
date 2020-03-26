@@ -27,7 +27,7 @@ intro:
       text: >
         Aim 2: Organize analytical activities across studies to identify genetic
         determinants of COVID-19 susceptibility and severity.
-    - image: /img/logo.png
+    - image: /img/browser.png
       text: >
         Aim 3: Provide a platform to share the results from such activities, as
         well as the individual-level data where possible, to benefit the broader
