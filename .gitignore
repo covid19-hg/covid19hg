@@ -10,3 +10,4 @@ yarn-error.log
 
 # API keys
 .env.development
+.env.local
