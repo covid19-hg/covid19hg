@@ -34,6 +34,7 @@ intro:
         scientific community.
     - image: /img/see-our-partners.png
       link: /partners
+      text: ⠀
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
