@@ -9,7 +9,7 @@ import BlogRoll from '../components/BlogRoll'
 export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro }) => (
   <div>
     <div
-      className="full-width-image" 
+      className="full-width-image"
       style={{
         backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`,
         backgroundPosition: `top`,
@@ -169,6 +169,7 @@ export const pageQuery = graphql`
               }
             }
             text
+            link
           }
           heading
           description
