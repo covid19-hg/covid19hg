@@ -40,6 +40,22 @@ GATSBY_SITE_RECAPTCHA_KEY=your-Google-recaptcha-key
 Usually these API keys are unrestricted because they are only used for local development and this env file is not checked into version control.
 The production build on Netlify will use different, restricted API keys.
 
+
+# Data Updates
+
+Follow these instructions if you need to update the data when the Google Sheet has changed:
+
+- Ensure the Python dependencies in `requirements.txt` are installed.
+- [Obtain an API key](https://developers.google.com/maps/documentation/geocoding/get-api-key#get-the-api-key).
+- [Enable the Google Geocoding API for the current project](https://support.google.com/googleapi/answer/6158841?hl=en).
+- Create a file named `.env.local` in the project directory with the following content:
+```shell
+GOOGLE_API_KEY=your-Google-API-key
+```
+- Download the Google Sheet as a CSV file into the project directory.
+- Run the `generate_data.py` script.
+This will generate a `data.json` file in the `src` directory.
+
 ## Getting Started (Recommended)
 
 Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
