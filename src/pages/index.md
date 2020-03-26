@@ -32,6 +32,8 @@ intro:
         Aim 3: Provide a platform to share the results from such activities, as
         well as the individual-level data where possible, to benefit the broader
         scientific community.
+    - image: /img/see-our-partners.png
+      link: /partners
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
