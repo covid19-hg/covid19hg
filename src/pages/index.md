@@ -9,9 +9,11 @@ subheading: >-
 mainpitch:
   title: Mission
   description: >
-    Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) pneumonia has
-    spread rapidly across the world. We can use genetic analysis to identify
-    differences in individual disease susceptibility, severity and prognosis.
+    Given the recognized COVID-19 crisis that is impacting many countries across
+    the world, it is of paramount importance that scientists exploring the
+    genetics of individuals affected by COVID-19 to join forces to accelerate
+    scientific discoveries that may help the treatment and prevention of
+    COVID-19.
 description: >-
   While the majority of individuals presents mild symptoms, a subgroup of
   critically ill patients is admitted to intensive care units and requires
@@ -26,14 +28,13 @@ intro:
   blurbs:
     - image: /img/world-map.png
       text: >
-        Objective 1: Collaboration. In the coming days and  weeks, we
-        hope to join forces with as many research partners as possible. The
-        covid19hg initiative is currently comprised of over thirty partners
-        including biobanks, universities, research institutes, and industry
-        partners. The more partners that join, the more powerful our 
-        meta-analyses becomes.  Here is the full list of partners. link to
-        partners page. Click here to contact us for more information  about
-        joining. 
+        Objective 1: Collaboration. In the coming days and  weeks, we hope to
+        join forces with as many research partners as possible. The covid19hg
+        initiative is currently comprised of over thirty partners including
+        biobanks, universities, research institutes, and industry partners. The
+        more partners that join, the more powerful our  meta-analyses becomes. 
+        Here is the full list of partners. link to partners page. Click here to
+        contact us for more information  about joining. 
     - image: /img/study-schematic-blue.png
       text: >
         Objective 2: Retrospective study. existing epidemiological cohorts
@@ -51,11 +52,10 @@ intro:
         weeks, we expect to  receive thousands of samples from Italy.
     - image: /img/obj-sharing.png
       text: >
-        Objective 4: Data sharing. Summary statistics  will be 
-        continuously updated on this website for the research community
-        to use without restriction. As more partners and samples 
-        are added, our meta-analysis gains power to identify useful
-        signal.
+        Objective 4: Data sharing. Summary statistics  will be  continuously
+        updated on this website for the research community to use without
+        restriction. As more partners and samples  are added, our meta-analysis
+        gains power to identify useful signal.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
