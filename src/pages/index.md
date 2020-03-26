@@ -19,11 +19,11 @@ intro:
         Aim 1: Provide an environment where researchers interested in COVID-19
         host genetics can interact with each other and share resources (e.g.
         protocols, questionnaires).
-    - image: /img/study-schematic-blue.png
+    - image: /img/obj-sharing.png
       text: >
         Aim 2: Organize analytical activities across studies to identify genetic
         determinants of COVID-19 susceptibility and severity.
-    - image: /img/study-schematic-blue2.png
+    - image: /img/logo.png
       text: >
         Aim 3: Provide a platform to share the results from such activities, as
         well as the individual-level data where possible, to benefit the broader
