@@ -29,14 +29,16 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Node (I recommend using v8.2.0 or higher)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 - [Netlify CLI](https://github.com/netlify/cli)
-- Obtain a [Mapbox access token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/) and create an `.env.development` file with the following content:
+- Obtain a [Mapbox access token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/) and a [Google recaptcha key](http://www.google.com/recaptcha/admin).
+- Create an `.env.development` file with the following content:
 
 ```shell
 GATSBY_MAPBOX_API_KEY=your-mapbox-api-key
+GATSBY_SITE_RECAPTCHA_KEY=your-Google-recaptcha-key
 ```
 
-Usually this API key is unrestricted because it's only used for local development and this env file is not checked into version control.
-The production build on Netlify will use a different, restricted API key.
+Usually these API keys are unrestricted because they are only used for local development and this env file is not checked into version control.
+The production build on Netlify will use different, restricted API keys.
 
 ## Getting Started (Recommended)
 
