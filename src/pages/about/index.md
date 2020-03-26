@@ -17,7 +17,7 @@ The COVID-19 host genetics initiative is a bottom-up collaborative effort that h
 2. Organize analytical activities across studies to identify genetic determinants of COVID-19 susceptibility and severity.
 3. Provide a platform to share the results from such activities, as well as the individual-level data where possible, to benefit the broader scientific community.
 
-## Which studies can partecipate?
+## Which studies can participate?
 
 
 
