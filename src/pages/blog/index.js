@@ -2,11 +2,13 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
+import useCanonicalLinkMetaTag from "../../components/useCanonicalLinkMetaTag"
 
-export default class BlogIndexPage extends React.Component {
-  render() {
+const BlogIndexPage = () => {
+    const canonicalLinkMetaTag = useCanonicalLinkMetaTag('/blog/')
     return (
       <Layout>
+        {canonicalLinkMetaTag}
         <div
         >
           <h1
@@ -18,7 +20,7 @@ export default class BlogIndexPage extends React.Component {
               padding: '1rem',
             }}
           >
-            News 
+            News
           </h1>
         </div>
         <section className="section">
@@ -30,5 +32,7 @@ export default class BlogIndexPage extends React.Component {
         </section>
       </Layout>
     )
-  }
+
 }
+
+export default BlogIndexPage

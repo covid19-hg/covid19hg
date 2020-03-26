@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Map from '../components/Map'
 import InstitutionsList from '../components/InstitutionsList'
+import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag"
 
 export const ProductPageTemplate = ({ image, title }) => (
   <div className="content">
@@ -41,9 +42,11 @@ ProductPageTemplate.propTypes = {
 
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const canonicalLinkMetaTag = useCanonicalLinkMetaTag('/partners/')
 
   return (
     <Layout>
+      {canonicalLinkMetaTag}
       <ProductPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}

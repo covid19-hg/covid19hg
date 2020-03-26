@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag"
 
 export const BlogPostTemplate = ({
   content,
@@ -55,9 +56,11 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
+  const canonicalLinkMetaTag = useCanonicalLinkMetaTag(post.fields.slug)
 
   return (
     <Layout>
+      {canonicalLinkMetaTag}
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -90,6 +93,9 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
+      fields {
+        slug
+      }
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
