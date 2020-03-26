@@ -5,6 +5,7 @@ import React, { useState, createRef } from 'react'
 import Layout from '../../components/Layout'
 import { navigate } from 'gatsby-link'
 import Recaptcha from 'react-google-recaptcha'
+import useCanonicalLinkMetaTag from "../../components/useCanonicalLinkMetaTag"
 
 const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY
 if (typeof RECAPTCHA_KEY === 'undefined') {
@@ -26,6 +27,7 @@ const Index = () => {
   const [state, setState] = useState({})
   const [submitButtonEnabled, setSubmitButtonEnabled] = useState(false)
   const recaptchaRef = createRef()
+  const canonicalLinkMetaTag = useCanonicalLinkMetaTag('/contact/')
 
   const handleChange = e => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -56,6 +58,7 @@ const Index = () => {
 
   return (
     <Layout>
+      {canonicalLinkMetaTag}
       <section className="section">
         <div className="container">
           <div className="content">
