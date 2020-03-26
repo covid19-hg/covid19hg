@@ -26,7 +26,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content={`${withPrefix('/')}img/header-4.png`} />
-        <meta property="twitter:image" content={`${withPrefix('/')}img/header-4.png`} />
+        <meta property="twitter:image" content={`${withPrefix('/')}img/twitter-summary-large.png`} />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="COVID-19 Host Genetics Initiative" />
         <meta
