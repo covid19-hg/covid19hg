@@ -8,9 +8,8 @@ import InstitutionsList from "../components/InstitutionsList";
 export const ProductPageTemplate = ({ image, title }) => (
   <div className="content">
     <div
-      className="full-width-image-container margin-top-0"
     >
-      <h2
+      <h1
         className="has-text-weight-bold is-size-1"
         style={{
           boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
@@ -20,7 +19,7 @@ export const ProductPageTemplate = ({ image, title }) => (
         }}
       >
         {title}
-      </h2>
+      </h1>
     </div>
     <section className="section section--gradient">
       <div className="container">
