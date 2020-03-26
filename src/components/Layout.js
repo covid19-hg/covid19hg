@@ -7,7 +7,7 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description, siteUrl } = useSiteMetadata()
   return (
     <div>
       <Helmet>
@@ -25,9 +25,9 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content={`${withPrefix('/')}img/header-4.png`} />
+        <meta property="og:image" content={`${siteUrl}/img/header-4.png`} />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:image" content="https://covid19hg.netlify.com/img/twitter-summary-large.png" />
+        <meta property="twitter:image" content={`${siteUrl}/img/twitter-summary-large.png`} />
         <meta property="twitter:title" content="COVID-19 Host Genetics Initiative" />
         <meta
           property="twitter:description"
