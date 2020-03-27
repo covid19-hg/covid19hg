@@ -1,41 +1,49 @@
-Study/biobank,Coordinator,Email,City/country,"Prospective (P)
+Coordinator,Study/biobank,Email,City/country,"Prospective (P)
 Restrospective (R)",Expected sample size,Type of genetic analysis,,,Genotyping done at FIMM,Other assays planned?,
 ,,,,,,GWAS,WES,WGS,,,
-Italian collection,Alessandra Reineri ,alessandra.renieri@unisi.it,Italy,P&R,2000,x,X (at UNISI),,x,Viral RNA seq (at UNISI),Ethics approval from 16 March 2020
-Finnish collection,Markus Perola,markus.perola@thl.fi,Finland,P,> 100,x,,,x,,
-Stanford collection,Manuel Rivas/Euan Ashley,"mrivas@stanford.edu, euan@stanford.edu","Stanford, USA",P,> 100,,,x,,x (viral rna seq.),
-Mount Sinai Collection,Eimear Kenny,eimear.kenny@mssm.edu,"New York City, USA",P,?,?,?,?,,?,
-Greater Boston COVID-19 Host Genetics Initiative,Vijay Sankaran/ Ben Neale,sankaran@broadinstitute.org; bneale@broadinstitute.org,"Boston, USA",P,>100,X,,X,,,
-UCLA collection ,Bogdan Pasaniuc/Dan Geschwind/ Nelson Freimer,"bpasaniuc@mednet.ucla.edu;
+Alessandra Reineri ,Siena/Italy collection,alessandra.renieri@unisi.it,Italy,P&R,2000,x,X (at UNISI),,x,Viral RNA seq (at UNISI),Ethics approval from 16 March 2020
+Markus Perola,"Finland, THL & FinnGen",markus.perola@thl.fi,Finland,P,> 100,x,,,x,,
+Manuel Rivas/Euan Ashley,Stanford collection,"mrivas@stanford.edu, euan@stanford.edu","Stanford, USA",P,> 100,,,x,,x (viral rna seq.),
+Eimear Kenny,Mount Sinai Collection,eimear.kenny@mssm.edu,"New York City, USA",P,?,?,?,?,,?,
+Vijay Sankaran/ Ben Neale,Greater Boston COVID-19 Host Genetics Initiative,sankaran@broadinstitute.org; bneale@broadinstitute.org,"Boston, USA",P,>100,X,,X,,,
+Bogdan Pasaniuc/Dan Geschwind/ Nelson Freimer,UCLA collection ,"bpasaniuc@mednet.ucla.edu;
 NFreimer@mednet.ucla.edu","Los Angeles, CA, USA",P,>100,X,?,?,,?,
-EPFL (Swiss + Italian collection),Jacques Fellay / Christian Thorball,"jacques.fellay@epfl.ch, christian.thorball@epfl.ch",Switzerland + Italy,P,?,,,x,,RNAseq,
-Columbia University,Krzysztof Kiryluk,kk473@columbia.edu,"New York City, USA",P,?,x,x,?,,?,
-Cardiff University,Matthias Eberl,eberlm@cf.ac.uk,"Cardiff, UK",P,?,,,,,immune profiling of blood (T cells and cytokines),Ethics approval from 20 March 2020
-"Canadian Population Cohort (CanPath - CARTaGENE, Ontario, BC n=330,000)",Philip Awadalla,philip.awadalla@oicr.on.ca,"Toronto, Canada",R&P,?,X,,X,?,"RNAseq, serotyping",
-Intramural NIH,Leslie Biesecker,lesb@mail.nih.gov,"Bethesda, Maryland, USA",?,?,X,?,?,,immune profiling of blood (T cells and cytokines),
-Estonian Biobank,Reedik Mägi,reedik.magi@ut.ee,"Tartu, Estonia",R/P?,?,X,,,,"viral RNA seq, genotyping, HLA allele imputation",Ethics approval deadline 27 March
-COVID-Q,Brent Richards,brent.richards@mcgill.ca,"Montreal, Canada",P,100000 anticipated,X,X,,,"RNAseq, proteomics, metabolomics",
-Canadian Longitudinal Study of Aging,Brent Richards,brent.richards@mcgill.ca,"Montreal, Canada",R,"30,000",X,,,,"Metabolomics completing on 10,000",
-Lifelines,Lude Franke,l.h.franke@umcg.nl,"Groningen, Netherlands",P,50000 (individuals with genotype data),X,,,,"RNA-seq, scRNA-seq, Microbiome, Metabolomics, Proteomics (see www.ludesign.nl/research)",
-Karolinska Institutet,Hugo Zeberg,hugo.zeberg@ki.se,"Stockholm, Sweden",P/R,>500,X,,,?,,
-China Kadoorie Biobank,Robin Walters,robin.walters@ndph.ox.ac.uk,"Oxford, UK",P,v small (v few cases in regions where study was recruited),X,,,,Available for downstream analysis of variants of interest (e.g. PHeWAS). Imputed HLA classical alleles available,
-VCU,Nancy Cox,nancy.j.cox@vumc.org,"Nashville, TN, USA",R,,X,,,,,
-BioMe,"Judy Cho; 
-Ruth Loos","Judy.Cho@mssm.edu;
+Jacques Fellay / Christian Thorball,EPFL (Swiss + Italian collection),"jacques.fellay@epfl.ch, christian.thorball@epfl.ch","Lausanne, Switzerland",P,100,,,x,,RNAseq,
+"Krzysztof Kiryluk, Wendy Chung et al.",Columbia University,kk473@columbia.edu,"New York City, USA",P,>1000,x,x,x,,RNAseq,
+Matthias Eberl,Cardiff University,eberlm@cf.ac.uk,"Cardiff, UK",P,?,,,,,immune profiling of blood (T cells and cytokines),Ethics approval from 20 March 2020
+Philip Awadalla,"Canadian Population Cohort (CanPath - CARTaGENE, Ontario, BC n=330,000)",philip.awadalla@oicr.on.ca,"Toronto, Canada",R&P,?,X,,X,?,"RNAseq, serotyping",
+Leslie Biesecker,Intramural NIH,lesb@mail.nih.gov,"Bethesda, Maryland, USA",?,?,X,?,?,,immune profiling of blood (T cells and cytokines),
+Reedik Mägi,Estonian Biobank,reedik.magi@ut.ee,"Tartu, Estonia",R/P?,?,X,,,,"viral RNA seq, genotyping, HLA allele imputation",Ethics approval deadline 27 March
+Brent Richards,Biobanque Quebec COVID,brent.richards@mcgill.ca,"Montreal, Canada",P,"30,000 anticipated",X,X,,,"RNAseq, proteomics, metabolomics",
+Brent Richards,Canadian Longitudinal Study of Aging,brent.richards@mcgill.ca,"Montreal, Canada",R,"30,000",X,,,,"Metabolomics completing on 10,000",
+Lude Franke,Lifelines,l.h.franke@umcg.nl,"Groningen, Netherlands",P,50000 (individuals with genotype data),X,,,,"RNA-seq, scRNA-seq, Microbiome, Metabolomics, Proteomics (see www.ludesign.nl/research)",
+Hugo Zeberg,Karolinska Institutet,hugo.zeberg@ki.se,"Stockholm, Sweden",P/R,>500,X,,,?,,
+Robin Walters,China Kadoorie Biobank,robin.walters@ndph.ox.ac.uk,"Oxford, UK",P,v small (v few cases in regions where study was recruited),X,,,,Available for downstream analysis of variants of interest (e.g. PHeWAS). Imputed HLA classical alleles available,
+"Nancy Cox; Jennifer ""Piper"" Below; Lea Davis",VUMC/BioVU,nancy.j.cox@vumc.org; jennifer.e.below@vanderbilt.edu,"Nashville, TN, USA",R,120000,X,,,,,
+"Judy Cho; 
+Ruth Loos",BioMe,"Judy.Cho@mssm.edu;
 ruth.loos@mssm.edu","New York City, USA",R,,X,X,,,,
-Michigan Genomics Initiative,Mike Boehnke; Sebastian Zoellner,"boehnke@umich.edu; 
+Mike Boehnke; Sebastian Zoellner,Michigan Genomics Initiative,"boehnke@umich.edu; 
 szoellne@umich.edu","Ann Arbor, MI, USA",R,,X,,,,,
-Genes & Health,David van Heel,d.vanheel@qmul.ac.uk,"London, UK",R,,X,,,,,
-"MVP  
-(& AllofUs)",Chris O'Donnell,christopher.odonnell@va.gov,"Boston, MA, USA",R&P,,X,,,,,
-Colorado Center for Personalized Medicine,Kathleen Barnes,KATHLEEN.BARNES@cuanschutz.edu,"Aurora, CO, USA",R&P,,X,,,,,
-Memorial Sloan Kettering,"Kelly Bolton, Ken Offit, Vijai Joseph",boltonk@mskcc.org; offitk@mskcc.org; josephv@mskcc.org,"New York City, USA",R&P,?,,,,x,Targeted myeloid panel to study impact of clonal hematopoesis and cardiotoxicity,
-Free University of Brussels,Isabelle Migeotte,Isabelle.Migeotte@erasme.ulb.ac.be,"Brussels, Belgium",R&P,>100,,,,x,,
-"Heart Institute, University of Sao Paulo","Jose Krieger, Alexandre Pereira","krieger@incor.usp.br, alexandre.pereira@incor.usp.br","Sao Paulo, Brazil",P,~1000,,,,,,
-Emory University,Jennifer Mulle,jmulle@emory.edu,"Atlanta, GA, USA",P,500,,,,X,,
-Nord Trøndelag Health Study (HUNT) ,"Maiken Elvestad Gabrielsen, Sarah Graham","maiken.e.gabrielsen@ntnu.no, sarahgra@umich.edu","Trondheim, Norway",R,70K genotyped,x,,2000,,,
-"Liège Area / Belgium collection. ULiege/GIGA-Institute, CHU and CHC","Michel Georges, Souad Rahmouni","srahmouni@uliege.be, michel.georges@uliege.be","Liege, Belgium",P&R,>500,,,,,"RNAseq, viral RNAseq, serotyping, genotyping, HLA, immune phenotyping, cytolkines",Ethics approval from 23 March 2020
-Hospital Clínic: COVID19 patients,"Judith Garcia-Aymerich, Mariona Bustamante",mariona.bustamante@isglobal.org,"Barcelona, Spain",P,60,,,,x,"Viral RNAseq?, blood RNAseq, flow cytometry, serotyping, cytokines, phenotyping",
-Hospital Clínic: health workers ,"Alberto Garcia-Basteiro, Mariona Bustamante",mariona.bustamante@isglobal.org,"Barcelona, Spain",P,562,,,,x,"Viral RNAseq?, blood RNAseq, flow cytometry, serotyping, cytokines, phenotyping",
-Hospital St Joan de Déu: pregnant mothers and fetus,"Edurne Mazarico, Mariona Bustamante",mariona.bustamante@isglobal.org,"Barcelona, Spain",at birth,50 COVID19 + 50 controls,,,,x,"blood RNAseq, flow cytometry, serotyping, cytokines, placenta immune profiles, phenotyping",
-Hospital Gregorio Marañón: patients,"Mara Parellada, Javier González-Peñas",javier.gonzalez@iisgm.com,"Madrid, Spain",P,> 800,,x,,x," Inmune profiles, clinical phenotyping, psychiatric longitudinal phenotyping, NGS Target seq (regulatory-regions); whole exome (subset)",
+David van Heel,Genes & Health,d.vanheel@qmul.ac.uk,"London, UK",R,,X,,,,,
+Chris O'Donnell,"MVP  
+(& AllofUs)",christopher.odonnell@va.gov,"Boston, MA, USA",R&P,,X,,,,,
+Kathleen Barnes,Colorado Center for Personalized Medicine,KATHLEEN.BARNES@cuanschutz.edu,"Aurora, CO, USA",R&P,,X,,,,,
+"Kelly Bolton, Ken Offit, Vijai Joseph",Memorial Sloan Kettering,boltonk@mskcc.org; offitk@mskcc.org; josephv@mskcc.org,"New York City, USA",R&P,?,,,,x,Targeted myeloid panel to study impact of clonal hematopoesis and cardiotoxicity,
+Isabelle Migeotte,Free University of Brussels,Isabelle.Migeotte@erasme.ulb.ac.be,"Brussels, Belgium",R&P,>100,,,,x,,
+"Jose Krieger, Alexandre Pereira","Heart Institute, University of Sao Paulo","krieger@incor.usp.br, alexandre.pereira@incor.usp.br","Sao Paulo, Brazil",P,~1000,,,,,,
+Jennifer Mulle/Mike Epstein/Dave Cutler,Emory University,jmulle@emory.edu,"Atlanta, GA, USA",P,500,,,,X,,
+"Maiken Elvestad Gabrielsen, Sarah Graham",Nord Trøndelag Health Study (HUNT) ,"maiken.e.gabrielsen@ntnu.no, sarahgra@umich.edu","Trondheim, Norway",R,70K genotyped,x,,2000,,,
+"Michel Georges, Souad Rahmouni","Liège Area / Belgium collection. ULiege/GIGA-Institute, CHU and CHC","srahmouni@uliege.be, michel.georges@uliege.be","Liege, Belgium",P&R,>500,,,,,"RNAseq, viral RNAseq, serotyping, genotyping, HLA, immune phenotyping, cytolkines",Ethics approval from 23 March 2020
+"Judith Garcia-Aymerich, Mariona Bustamante",Hospital Clínic: COVID19 patients,mariona.bustamante@isglobal.org,"Barcelona, Spain",P,60,,,,x,"Viral RNAseq?, blood RNAseq, flow cytometry, serotyping, cytokines, phenotyping",
+"Alberto Garcia-Basteiro, Mariona Bustamante",Hospital Clínic: health workers ,mariona.bustamante@isglobal.org,"Barcelona, Spain",P,562,,,,x,"Viral RNAseq?, blood RNAseq, flow cytometry, serotyping, cytokines, phenotyping",
+"Edurne Mazarico, Mariona Bustamante",Hospital St Joan de Déu: pregnant mothers and fetus,mariona.bustamante@isglobal.org,"Barcelona, Spain",at birth,50 COVID19 + 50 controls,,,,x,"blood RNAseq, flow cytometry, serotyping, cytokines, placenta immune profiles, phenotyping",
+"Mara Parellada, Javier González-Peñas",Hospital Gregorio Marañón: patients,javier.gonzalez@iisgm.com,"Madrid, Spain",P,> 800,,?,,x,"clinical phenotyping, psychiatric longitudinal phenotyping",
+Eco de Geus/Michel Nivard/Meike Bartels/Dorret Boomsma,Netherlands Twin Register (NTR),eco.de.geus@vu.nl,"Amsterdam, Netherlands",P,20k genotyped,x,,,,,
+Raul Rabadan/Ioan Filip,Columbia University,rr2579@cumc.columbia.edu; if2179@cumc.columbia.edu,"New York City, USA",P & R,?,x,,,,"total RNAseq?, single-cell RNAseq?, HLA analysis, associated pathogens",
+Michael Zody,New York Genome Center,mczody@nygenome.org,"New York City, USA",P,?,x,x,x,,"Full length viral sequencing, immune receptor sequencing",
+"Susan Hoover (PI)/
+Chan,Chun-Hung /
+Murat Sincan",Sanford Health COVID-19 Cohort,murat.sincan@sanfordhealth.org,"Sioux Falls, South Dakota, USA",R & P ,"25,000 genotyped in the biobank. Prospective study will be enrolling patients as they come. Patient numbers unknown.",X,,,In-house genotyping,,IRB approval pending
+Giorgia Girotto/Paolo Gasparini/Massimiliano Cocca/Margherita Francescatto,University of Trieste/IRCCS Burlo Garofolo,giorgia.girotto@burlo.trieste.it; massimiliano.cocca@burlo.trieste.it; margherita.francescatto@gmail.com,"Trieste, Italy",P&R,Retrospective study: 5500 already genotyped and imputed; prospective study: numbers to be defined,X,X,X,,IgM; IgG profiles,Prospective study approval pending 
+Tara Matise,Rutgers University,matise@dls.rutgers.edu,"New Brunswick, NJ",P,"500 HCW; 250 Non-HCW, 144 family members",X,,,X,,Genetic component is still pre-approval
