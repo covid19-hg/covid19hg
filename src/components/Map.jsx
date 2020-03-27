@@ -71,12 +71,7 @@ const App = () => {
       addCollaborators(data, mapboxMap);
     }
   }, []);
-  return (
-    <div
-      style={{height: "50vh"}}
-      ref={mapElRef}
-    ></div>
-  );
+  return <div style={{ height: "50vh" }} ref={mapElRef}></div>;
 };
 
 export default App;
