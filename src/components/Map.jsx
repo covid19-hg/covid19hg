@@ -1,8 +1,8 @@
 import React, { useCallback, useRef } from "react";
-import { Map as MapboxMap, Marker, Popup } from "mapbox-gl";
+import { Map as MapboxMap, Marker, Popup, NavigationControl } from "mapbox-gl";
 import _min from "lodash/min";
 import _max from "lodash/max";
-import "../mapbox-gl.css"
+import "../mapbox-gl.css";
 
 const data = require("../data.json");
 
@@ -27,6 +27,16 @@ const initializeMap = el => {
       }
     }
   });
+  // Add zoom controls
+  mapboxMap.addControl(
+    new NavigationControl({
+      showCompass: false
+    })
+  );
+
+  // Disable map rotation with touch gesture
+  mapboxMap.dragRotate.disable();
+  mapboxMap.touchZoomRotate.disableRotation();
 
   return mapboxMap;
 };
