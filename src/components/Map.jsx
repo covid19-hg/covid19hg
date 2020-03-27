@@ -14,10 +14,11 @@ const initializeMap = el => {
 
   const mapboxMap = new MapboxMap({
     container: el,
-    style: "mapbox://styles/mapbox/light-v10",
+    style: "mapbox://styles/huy-nguyen/ck8aqzc8n0x4d1int7403icph",
     accessToken: process.env.GATSBY_MAPBOX_API_KEY,
     renderWorldCopies: false,
     bounds: [southWest, northEast],
+    minZoom: 1.2,
     fitBoundsOptions: {
       padding: {
         top: 50,
@@ -42,11 +43,21 @@ const initializeMap = el => {
 };
 
 const addCollaborators = (rawData, mapboxMap) => {
-  rawData.map(({ lat, lng, study_biobank }) => {
+  // These sizes are obtained by inspecting the actual SVG created by Mapbox:
+  const defaultWidth = 27;
+  const defaultHeight = 41;
+
+  rawData.forEach(({ lat, lng, study_biobank }) => {
     const popup = new Popup({ closeButton: false });
     popup.setLngLat([lng, lat]).setText(study_biobank);
 
+    // Use the default marker but halve the size:
     const marker = new Marker();
+    const defaultElement = marker.getElement();
+    const svg = defaultElement.querySelector("svg");
+    svg.setAttribute("width", `${defaultWidth / 2}px`);
+    svg.setAttribute("height", `${defaultHeight / 2}px`);
+
     marker.setLngLat([lng, lat]).setPopup(popup);
     marker.addTo(mapboxMap);
   });
@@ -61,12 +72,7 @@ const App = () => {
       addCollaborators(data, mapboxMap);
     }
   }, []);
-  return (
-    <div
-      style={{height: "50vh"}}
-      ref={mapElRef}
-    ></div>
-  );
+  return <div style={{ height: "50vh" }} ref={mapElRef}></div>;
 };
 
 export default App;
