@@ -14,7 +14,7 @@ const initializeMap = el => {
 
   const mapboxMap = new MapboxMap({
     container: el,
-    style: "mapbox://styles/huy-nguyen/ck8ak3bn414w51ipr3niqucz0",
+    style: "mapbox://styles/huy-nguyen/ck8alo7ay0uck1ipbpmdwggyz",
     accessToken: process.env.GATSBY_MAPBOX_API_KEY,
     renderWorldCopies: false,
     bounds: [southWest, northEast],
