@@ -19,8 +19,8 @@ df = pd.read_csv(
     skiprows=[1],
     header=0,
     names=[
-        "study_biobank",
         "coordinator",
+        "study_biobank",
         "email",
         "city_country",
         "prospective_retrospective",
