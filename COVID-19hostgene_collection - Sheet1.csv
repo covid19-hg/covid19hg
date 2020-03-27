@@ -7,7 +7,7 @@ Manuel Rivas/Euan Ashley,Stanford collection,"mrivas@stanford.edu, euan@stanford
 Eimear Kenny,Mount Sinai Collection,eimear.kenny@mssm.edu,"New York City, USA",P,?,?,?,?,,?,
 Vijay Sankaran/ Ben Neale,Greater Boston COVID-19 Host Genetics Initiative,sankaran@broadinstitute.org; bneale@broadinstitute.org,"Boston, USA",P,>100,X,,X,,,
 Bogdan Pasaniuc/Dan Geschwind/ Nelson Freimer,UCLA collection ,"bpasaniuc@mednet.ucla.edu;
-NFreimer@mednet.ucla.edu","Los Angeles, CA, USA",P,>100,X,?,?,,?,
+NFreimer@mednet.ucla.edu","Los Angeles, CA, USA",R&P,>100,X,?,?,,?,
 Jacques Fellay / Christian Thorball,EPFL (Swiss + Italian collection),"jacques.fellay@epfl.ch, christian.thorball@epfl.ch","Lausanne, Switzerland",P,100,,,x,,RNAseq,
 "Krzysztof Kiryluk, Wendy Chung et al.",Columbia University,kk473@columbia.edu,"New York City, USA",P,>1000,x,x,x,,RNAseq,
 Matthias Eberl,Cardiff University,eberlm@cf.ac.uk,"Cardiff, UK",P,?,,,,,immune profiling of blood (T cells and cytokines),Ethics approval from 20 March 2020
@@ -46,4 +46,5 @@ Michael Zody,New York Genome Center,mczody@nygenome.org,"New York City, USA",P,?
 Chan,Chun-Hung /
 Murat Sincan",Sanford Health COVID-19 Cohort,murat.sincan@sanfordhealth.org,"Sioux Falls, South Dakota, USA",R & P ,"25,000 genotyped in the biobank. Prospective study will be enrolling patients as they come. Patient numbers unknown.",X,,,In-house genotyping,,IRB approval pending
 Giorgia Girotto/Paolo Gasparini/Massimiliano Cocca/Margherita Francescatto,University of Trieste/IRCCS Burlo Garofolo,giorgia.girotto@burlo.trieste.it; massimiliano.cocca@burlo.trieste.it; margherita.francescatto@gmail.com,"Trieste, Italy",P&R,Retrospective study: 5500 already genotyped and imputed; prospective study: numbers to be defined,X,X,X,,IgM; IgG profiles,Prospective study approval pending 
-Tara Matise,Rutgers University,matise@dls.rutgers.edu,"New Brunswick, NJ",P,"500 HCW; 250 Non-HCW, 144 family members",X,,,X,,Genetic component is still pre-approval
+Tara Matise,Rutgers University,matise@dls.rutgers.edu,"New Brunswick, NJ",P,"500 HCW; 250 Non-HCW, 144 family members. Repeated testing over 6 months",X,,,X,,Genetic component is still pre-approval
+Giordano Bottà,Allelica,giordano@allelica.com,"Rome, Italy",P,,,,,X,,
