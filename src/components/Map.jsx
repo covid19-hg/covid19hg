@@ -18,6 +18,7 @@ const initializeMap = el => {
     accessToken: process.env.GATSBY_MAPBOX_API_KEY,
     renderWorldCopies: false,
     bounds: [southWest, northEast],
+    minZoom: 1.2,
     fitBoundsOptions: {
       padding: {
         top: 50,
