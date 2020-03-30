@@ -55,9 +55,10 @@ marker_lngs = [coord[0] for coord in marker_coords]
 marker_lats = [coord[1] for coord in marker_coords]
 
 df = df.assign(lat=marker_lats, lng=marker_lngs,
-               label_lat=label_lats, label_lng=label_lngs)
-marker_df = df[["lat", "lng", "study_biobank", "coordinator", "city_country"]]
-label_df = df[["label_lat", "label_lng", "study_biobank"]]
+               label_lat=label_lats, label_lng=label_lngs, id=df.index.astype(str))
+marker_df = df[["lat", "lng", "study_biobank",
+                "coordinator", "city_country", "id"]]
+label_df = df[["label_lat", "label_lng", "study_biobank", "id"]]
 
 json_string = marker_df.to_json(orient="records")
 with open("src/data.json", "w") as f:
@@ -66,6 +67,7 @@ with open("src/data.json", "w") as f:
 geojson_features = [
     {
         "type": "Feature",
+        "id": x[4],
         "properties": {
             "study_biobank": x[3],
         },
