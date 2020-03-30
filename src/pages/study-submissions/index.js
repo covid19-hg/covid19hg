@@ -11,7 +11,7 @@ const Index = () => {
         <div className="container">
           <div className="content">
             <iframe
-              class="airtable-embed"
+              class="airtable-embed airtable-dynamic-height"
               src="https://airtable.com/embed/shr5quu3uUDSaT5fs?backgroundColor=blue&viewControls=on"
               frameborder="0"
               onmousewheel=""
