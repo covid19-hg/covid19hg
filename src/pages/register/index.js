@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <Layout>
       {canonicalLinkMetaTag}
-      <section className="section">
+    <section className="section" style={{ height: '4500px' }}>
         <div className="container">
           <div className="content">
             <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
@@ -17,7 +17,7 @@ const Index = () => {
               frameborder="0"
               onmousewheel=""
               width="100%"
-              height="3900"
+              height="4200px"
               style={{
                 background: 'transparent',
                 border: '1px solid #ccc',
