@@ -6,7 +6,10 @@ import "../mapbox-gl.css";
 
 const data = require("../data.json");
 
-const initializeMap = el => {
+export const SET_SELECTED_INSTITUTION_ACTION = "setSelectedInstitution";
+export const UNSET_SELECTED_INSTITUTION_ACTION = "unsetSelectedInstitution";
+
+const initializeMap = (el, dispatch) => {
   const lats = data.map(({ lat }) => lat);
   const lngs = data.map(({ lng }) => lng);
   const southWest = [_min(lngs), _min(lats)];
@@ -42,37 +45,58 @@ const initializeMap = el => {
   return mapboxMap;
 };
 
-const addCollaborators = (rawData, mapboxMap) => {
+const addCollaborators = (rawData, mapboxMap, dispatchMessageToParent) => {
   // These sizes are obtained by inspecting the actual SVG created by Mapbox:
   const defaultWidth = 27;
   const defaultHeight = 41;
 
-  rawData.forEach(({ lat, lng, study_biobank }) => {
+  rawData.forEach(({ lat, lng, study_biobank, id }) => {
     const popup = new Popup({ closeButton: false });
     popup.setLngLat([lng, lat]).setText(study_biobank);
 
     // Use the default marker but halve the size:
     const marker = new Marker();
-    const defaultElement = marker.getElement();
-    const svg = defaultElement.querySelector("svg");
+    const markerElement = marker.getElement();
+    markerElement.style.cursor = "pointer";
+    const svg = markerElement.querySelector("svg");
     svg.setAttribute("width", `${defaultWidth / 2}px`);
     svg.setAttribute("height", `${defaultHeight / 2}px`);
+
+    markerElement.addEventListener("click", event => {
+      // Need to `stopPropagation` so that it doesn't bubble up to the map and
+      // dispatch the "unsetSelectedInstitution" action
+      event.stopPropagation();
+      dispatchMessageToParent({
+        type: SET_SELECTED_INSTITUTION_ACTION,
+        id
+      });
+    });
 
     marker.setLngLat([lng, lat]).setPopup(popup);
     marker.addTo(mapboxMap);
   });
+
+  mapboxMap.on("click", event => {
+    // Any click that bubbles up here means it must not have originated inside a marker:
+    dispatchMessageToParent({
+      type: UNSET_SELECTED_INSTITUTION_ACTION
+    });
+  });
 };
 
-const App = () => {
+const Map = ({ dispatchMessageToParent }) => {
   const mapboxMapRef = useRef(undefined);
-  const mapElRef = useCallback(el => {
-    if (el !== null) {
-      const mapboxMap = initializeMap(el);
-      mapboxMapRef.current = mapboxMap;
-      addCollaborators(data, mapboxMap);
-    }
-  }, []);
+  const mapElRef = useCallback(
+    el => {
+      if (el !== null) {
+        const mapboxMap = initializeMap(el, dispatchMessageToParent);
+        mapboxMapRef.current = mapboxMap;
+        addCollaborators(data, mapboxMap, dispatchMessageToParent);
+      }
+    },
+    [dispatchMessageToParent]
+  );
   return <div style={{ height: "50vh" }} ref={mapElRef}></div>;
 };
 
-export default App;
+export default Map;
