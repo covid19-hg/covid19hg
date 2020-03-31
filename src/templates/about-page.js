@@ -22,7 +22,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
               <iframe
                 width='100%'
                 height='1500'
-                src="https://docs.google.com/document/u/1/d/e/2PACX-1vSCBpAFs6kaJ0qWhH2eD_ZL0f6T7cHhwFKUnFkHWCnm7lFYOjas-VpCgi6Y5iACYDk3Sf44YLgYd9_h/pub"
+                src="https://docs.google.com/document/u/1/d/e/2PACX-1vSCBpAFs6kaJ0qWhH2eD_ZL0f6T7cHhwFKUnFkHWCnm7lFYOjas-VpCgi6Y5iACYDk3Sf44YLgYd9_h/pub?embedded=true"
                 >
               </iframe>
             </div>
