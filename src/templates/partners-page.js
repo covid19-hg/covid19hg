@@ -10,7 +10,7 @@ import InstitutionsList from "../components/InstitutionsList";
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
 import { fetchJSON } from "../Utils";
 import _zip from "lodash/zip";
-import _groupBy from "lodash/groupby";
+import _groupBy from "lodash/groupBy";
 import _partition from "lodash/partition";
 import _flatten from "lodash/flatten";
 import _sortBy from "lodash/sortBy";
