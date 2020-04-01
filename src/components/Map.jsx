@@ -4,12 +4,10 @@ import _min from "lodash/min";
 import _max from "lodash/max";
 import "../mapbox-gl.css";
 
-const data = require("../data.json");
-
 export const SET_SELECTED_INSTITUTION_ACTION = "setSelectedInstitution";
 export const UNSET_SELECTED_INSTITUTION_ACTION = "unsetSelectedInstitution";
 
-const initializeMap = (el, dispatch) => {
+const initializeMap = (el, data) => {
   const lats = data.map(({ lat }) => lat);
   const lngs = data.map(({ lng }) => lng);
   const southWest = [_min(lngs), _min(lats)];
@@ -45,7 +43,11 @@ const initializeMap = (el, dispatch) => {
   return mapboxMap;
 };
 
-const addCollaborators = (rawData, mapboxMap, dispatchMessageToParent) => {
+const addCollaborators = async (
+  rawData,
+  mapboxMap,
+  dispatchMessageToParent
+) => {
   // These sizes are obtained by inspecting the actual SVG created by Mapbox:
   const defaultWidth = 27;
   const defaultHeight = 41;
@@ -84,14 +86,14 @@ const addCollaborators = (rawData, mapboxMap, dispatchMessageToParent) => {
   });
 };
 
-const Map = ({ dispatchMessageToParent }) => {
+const Map = ({ dispatchMessageToParent, mapData }) => {
   const mapboxMapRef = useRef(undefined);
   const mapElRef = useCallback(
     el => {
       if (el !== null) {
-        const mapboxMap = initializeMap(el, dispatchMessageToParent);
+        const mapboxMap = initializeMap(el, mapData);
         mapboxMapRef.current = mapboxMap;
-        addCollaborators(data, mapboxMap, dispatchMessageToParent);
+        addCollaborators(mapData, mapboxMap, dispatchMessageToParent);
       }
     },
     [dispatchMessageToParent]
