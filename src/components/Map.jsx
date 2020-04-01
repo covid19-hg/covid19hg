@@ -96,7 +96,7 @@ const Map = ({ dispatchMessageToParent, mapData }) => {
         addCollaborators(mapData, mapboxMap, dispatchMessageToParent);
       }
     },
-    [dispatchMessageToParent]
+    [dispatchMessageToParent, mapData]
   );
   return <div style={{ height: "50vh" }} ref={mapElRef}></div>;
 };
