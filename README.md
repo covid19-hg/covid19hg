@@ -29,12 +29,13 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Node (I recommend using v8.2.0 or higher)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 - [Netlify CLI](https://github.com/netlify/cli)
-- Obtain a [Mapbox access token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/) and a [Google recaptcha key](http://www.google.com/recaptcha/admin).
+- Obtain a [Mapbox access token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/), a [Google recaptcha key](http://www.google.com/recaptcha/admin) and an [Airtable API key](https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-):
 - Create an `.env.development` file with the following content:
 
 ```shell
 GATSBY_MAPBOX_API_KEY=your-mapbox-api-key
 GATSBY_SITE_RECAPTCHA_KEY=your-Google-recaptcha-key
+AIRTABLE_API_KEY=your-airtable-api-key
 ```
 
 Usually these API keys are unrestricted because they are only used for local development and this env file is not checked into version control.
