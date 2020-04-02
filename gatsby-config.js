@@ -19,19 +19,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-source-airtable",
-      options: {
-        apiKey: process.env.AIRTABLE_API_KEY,
-        tables: [
-          {
-            baseId: "appVc6kMY1ZNr0uv5",
-            tableName: "Submission"
-            // tableView:
-          },
-        ]
-      }
-    },
-    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: process.env.GOOGLE_ANLYTICS_TRACKING_ID,
