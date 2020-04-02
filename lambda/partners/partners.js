@@ -36,7 +36,7 @@ const unthrottledFetchData = () => {
   })
 };
 
-const fetchData = throttle(unthrottledFetchData, 2000);
+const fetchData = throttle(unthrottledFetchData, 10000);
 
 exports.handler = async function(event, context) {
   try {
