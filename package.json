@@ -4,7 +4,6 @@
   "version": "1.1.3",
   "author": "Austin Green",
   "dependencies": {
-    "airtable": "^0.8.1",
     "bulma": "^0.8.0",
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.0.23",
@@ -28,6 +27,7 @@
     "netlify-cms-app": "2.11.32",
     "netlify-cms-media-library-cloudinary": "^1.3.2",
     "netlify-cms-media-library-uploadcare": "^0.5.2",
+    "netlify-lambda": "1.6.3",
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
@@ -48,7 +48,8 @@
     "develop": "yarn run clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "postinstall": "netlify-lambda install"
   },
   "devDependencies": {
     "dotenv": "8.2.0",
