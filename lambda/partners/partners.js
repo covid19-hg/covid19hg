@@ -1,6 +1,6 @@
 /* eslint-disable */
-const Airtable = require("airtable")
-const throttle = require("lodash/throttle")
+const Airtable = require("airtable");
+const throttle = require("lodash/throttle");
 
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
@@ -9,7 +9,6 @@ Airtable.configure({
 const base = Airtable.base("appVc6kMY1ZNr0uv5");
 
 const unthrottledFetchData = () => {
-  console.log("begin fetch from Airtable API");
   let data = [];
   return new Promise((resolve, reject) => {
     base("Submission")
@@ -27,16 +26,20 @@ const unthrottledFetchData = () => {
         err => {
           if (err) {
             console.error(err);
-            reject(err)
+            reject(err);
           }
-          console.log("end fetch from Airtable API with", data.length, "records");
-          resolve(data)
+          console.log(
+            "Successfully fetch from Airtable API with",
+            data.length,
+            "records"
+          );
+          resolve(data);
         }
       );
-  })
+  });
 };
 
-const fetchData = throttle(unthrottledFetchData, 10000);
+const fetchData = throttle(unthrottledFetchData, 5000);
 
 exports.handler = async function(event, context) {
   try {
@@ -46,7 +49,6 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({ data })
     };
   } catch (err) {
-    console.log(err); // output to netlify function log
     return {
       statusCode: 500,
       body: JSON.stringify({ msg: err.message }) // Could be a custom message or object i.e. JSON.stringify(err)
