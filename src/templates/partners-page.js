@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect, useState } from "react";
+import React, { useReducer, useEffect, useState, useMemo } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
@@ -10,6 +10,10 @@ import InstitutionsList from "../components/InstitutionsList";
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
 import { fetchJSON } from "../Utils";
 import _zip from "lodash/zip";
+import _groupBy from "lodash/groupBy";
+import _partition from "lodash/partition";
+import _flatten from "lodash/flatten";
+import _sortBy from "lodash/sortBy";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -63,10 +67,10 @@ export const ProductPageTemplate = ({ title, mapData }) => {
         <div className="container">
           <div className="section">
             <div className="columns">
-              <div className="column is-two-thirds">
+              <div className="column is-three-quarters">
                 <Map dispatchMessageToParent={dispatch} mapData={mapData} />
               </div>
-              <div className="column is-one-third ">{details}</div>
+              <div className="column is-one-quarter">{details}</div>
             </div>
           </div>
           <div className="section">
@@ -88,47 +92,71 @@ ProductPageTemplate.propTypes = {
   title: PropTypes.string
 };
 
-const getFetchURL = place =>
+const getCityFetchURL = cityCountry =>
   `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-    place
-  )}.json?types=place&access_token=${
+    cityCountry
+  )}.json?access_token=${process.env.GATSBY_MAPBOX_API_KEY}&limit=1`;
+
+const getInstitutionFetchURL = ({ institution, cityCountry }, { lng, lat }) =>
+  `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+    `${institution}, ${cityCountry}`
+  )}.json?access_token=${
     process.env.GATSBY_MAPBOX_API_KEY
-  }&limit=1`;
+  }&proximity=${lng},${lat}&limit=1`;
 
 const ProductPage = ({ data }) => {
   const {
     markdownRemark: { frontmatter },
     allAirtable: { nodes }
   } = data;
-  const mapData = nodes
-    .map(
-      (
-        { data: { Study, Investigator, Country, City, Affiliation } },
-        index
-      ) => ({
-        study: Study,
-        investigator: Investigator,
-        country: Country,
-        city: City,
-        affiliation: Affiliation,
-        id: index.toString()
-      })
-    );
 
   const [processedMapData, setProcessedMapData] = useState(undefined);
 
+  const extractCoordFromFetchResult = ({ features }) => {
+    const [lng, lat] = features[0].center;
+    return { lng, lat };
+  };
+
   useEffect(() => {
     const fetchData = async () => {
+      const withIds = nodes.map(
+        (
+          { data: { Study, Investigator, Country, City, Affiliation } },
+          index
+        ) => ({
+          study: Study,
+          investigator: Investigator,
+          country: Country,
+          city: City,
+          affiliation: Affiliation,
+          id: index.toString()
+        })
+      );
       try {
-        const promises = mapData.map(({ city, country }) =>
-          fetchJSON(getFetchURL(`${city} ${country}`))
+        const groupedByCity = _groupBy(
+          withIds,
+          ({ city, country }) => `${city} ${country}`
         );
-        const fetchResult = await Promise.all(promises);
-        const fetchedCoords = fetchResult.map(({ features }) => {
-          const [lng, lat] = features[0].center;
-          return { lng, lat };
-        });
-        const rawData = _zip(fetchedCoords, mapData).map(
+        // Split records into cities with one or multiple records. Records in
+        // cities that have only one record take the coords of that city.
+        // Records in cities with multiple records take the location of the
+        // institution (with priority given to coords close to corresponding
+        // cities' coords) with fallback to the city if the institution cannot
+        // be resolved.
+        const [singlesKeyValuePairs, multiplesKeyValuePairs] = _partition(
+          Object.entries(groupedByCity),
+          ([, value]) => value.length === 1
+        );
+        const singles = singlesKeyValuePairs.map(([, elem]) => elem[0]);
+        const singlesFetchResult = await Promise.all(
+          singles.map(({ city, country }) =>
+            fetchJSON(getCityFetchURL(`${city} ${country}`))
+          )
+        );
+        const singlesCoords = singlesFetchResult.map(elem =>
+          extractCoordFromFetchResult(elem)
+        );
+        const singlesData = _zip(singlesCoords, singles).map(
           ([
             { lng, lat },
             { affiliation, city, country, id, investigator, study }
@@ -142,6 +170,56 @@ const ProductPage = ({ data }) => {
             affiliation
           })
         );
+        const multiplesDataNested = await Promise.all(
+          multiplesKeyValuePairs.map(
+            async ([cityCountry, placesInSameCity]) => {
+              const cityFetchResult = await fetchJSON(
+                getCityFetchURL(cityCountry)
+              );
+              const cityCoords = extractCoordFromFetchResult(cityFetchResult);
+              const individualResults = await Promise.all(
+                placesInSameCity.map(({ affiliation }) =>
+                  fetchJSON(
+                    getInstitutionFetchURL(
+                      { institution: affiliation, cityCountry },
+                      { lng: cityCoords.lng, lat: cityCoords.lat }
+                    )
+                  )
+                )
+              );
+              const individualCoords = [];
+              for (let i = 0; i < individualResults.length; i += 1) {
+                const result = individualResults[i];
+                if (result.features.length > 0) {
+                  individualCoords.push(extractCoordFromFetchResult(result));
+                } else {
+                  individualCoords.push(cityCoords);
+                }
+              }
+              const merged = _zip(individualCoords, placesInSameCity).map(
+                ([
+                  { lng, lat },
+                  { affiliation, city, country, id, investigator, study }
+                ]) => ({
+                  lng,
+                  lat,
+                  study_biobank: study,
+                  coordinator: investigator,
+                  city_country: `${city}, ${country}`,
+                  id,
+                  affiliation
+                })
+              );
+              return merged;
+            }
+          )
+        );
+        const multiplesData = _flatten(multiplesDataNested);
+        const rawData = _sortBy(
+          [...singlesData, ...multiplesData],
+          ({ id }) => id
+        );
+
         setProcessedMapData(rawData);
       } catch (e) {
         console.error(e);

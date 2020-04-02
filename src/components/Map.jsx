@@ -3,6 +3,11 @@ import { Map as MapboxMap, Marker, Popup, NavigationControl } from "mapbox-gl";
 import _min from "lodash/min";
 import _max from "lodash/max";
 import "../mapbox-gl.css";
+import getPlaceLabelsPlaceLabelsMapboxLayer from "../mapboxLayers/place-labels-place-labels-mapbox-layer";
+import getAdministrativeBoundariesAdminMapboxLayer from "../mapboxLayers/administrative-boundaries-admin-mapbox-layer";
+import getLandWaterLandMapboxLayer from "../mapboxLayers/land-water-land-mapbox-layer.js";
+import getLandWaterWaterMapboxLayer from "../mapboxLayers/land-water-water-mapbox-layer.js";
+import getLandWaterBuiltMapboxLayer from "../mapboxLayers/land-water-built-mapbox-layer.js";
 
 export const SET_SELECTED_INSTITUTION_ACTION = "setSelectedInstitution";
 export const UNSET_SELECTED_INSTITUTION_ACTION = "unsetSelectedInstitution";
@@ -13,9 +18,66 @@ const initializeMap = (el, data) => {
   const southWest = [_min(lngs), _min(lats)];
   const northEast = [_max(lngs), _max(lats)];
 
+  const mapboxStyleGeoJsonFeatures = data.map(
+    ({ lat, lng, id, study_biobank }) => ({
+      type: "Feature",
+      id,
+      properties: {
+        study_biobank
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [lng, lat]
+      }
+    })
+  );
+  const markersSourceId = "markers-source";
+  const streetMapSourceId = "mapbox-streets"
+  const terrainSourceId = "mapbox-terrain"
+  const mapboxStyle = {
+    version: 8,
+    glyphs: "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+    sources: {
+      [streetMapSourceId]: {
+        type: "vector",
+        url: "mapbox://mapbox.mapbox-streets-v8"
+      },
+      [terrainSourceId]: {
+        type: "vector",
+        url: "mapbox://mapbox.mapbox-terrain-v2"
+      },
+      [markersSourceId]: {
+        type: "geojson",
+        data: {
+          type: "FeatureCollection",
+          features: mapboxStyleGeoJsonFeatures
+        }
+      }
+    },
+    layers: [
+      ...getLandWaterLandMapboxLayer(streetMapSourceId, terrainSourceId),
+      ...getLandWaterWaterMapboxLayer(streetMapSourceId),
+      ...getLandWaterBuiltMapboxLayer(streetMapSourceId),
+      ...getPlaceLabelsPlaceLabelsMapboxLayer(streetMapSourceId),
+      ...getAdministrativeBoundariesAdminMapboxLayer(streetMapSourceId),
+      {
+        id: "mapbox-studio-data-ch3fyp",
+        type: "symbol",
+        source: markersSourceId,
+        layout: {
+          "text-field": ["to-string", ["get", "study_biobank"]],
+          "text-size": 14,
+          "text-justify": "left",
+          "text-anchor": "bottom-left"
+        },
+        paint: { "text-translate": [9, 0] }
+      }
+    ]
+  };
+
   const mapboxMap = new MapboxMap({
     container: el,
-    style: "mapbox://styles/huy-nguyen/ck8aqzc8n0x4d1int7403icph",
+    style: mapboxStyle,
     accessToken: process.env.GATSBY_MAPBOX_API_KEY,
     renderWorldCopies: false,
     bounds: [southWest, northEast],
@@ -96,7 +158,7 @@ const Map = ({ dispatchMessageToParent, mapData }) => {
         addCollaborators(mapData, mapboxMap, dispatchMessageToParent);
       }
     },
-    [dispatchMessageToParent]
+    [dispatchMessageToParent, mapData]
   );
   return <div style={{ height: "50vh" }} ref={mapElRef}></div>;
 };
