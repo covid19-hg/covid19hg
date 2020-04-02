@@ -1,37 +1,39 @@
 /* eslint-disable */
+const Airtable = require("airtable")
+const throttle = require("lodash/throttle")
+
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
   apiKey: process.env.AIRTABLE_API_KEY
 });
 const base = Airtable.base("appVc6kMY1ZNr0uv5");
 
-const unthrottledFetchData = async () => {
+const unthrottledFetchData = () => {
   console.log("begin fetch from Airtable API");
   let data = [];
-  base("Submission")
-    .select()
-    .eachPage(
-      (records, fetchNextPage) => {
-        const fields = records.map(
-          ({
-            fields: { Study, Investigator, Affiliation, City, Country }
-          }) => ({ Study, Investigator, Affiliation, City, Country })
-        );
-        data = [...data, ...fields];
-        fetchNextPage();
-      },
-      err => {
-        if (err) {
-          console.error(err);
-          return;
+  return new Promise((resolve, reject) => {
+    base("Submission")
+      .select()
+      .eachPage(
+        (records, fetchNextPage) => {
+          const fields = records.map(
+            ({
+              fields: { Study, Investigator, Affiliation, City, Country }
+            }) => ({ Study, Investigator, Affiliation, City, Country })
+          );
+          data = [...data, ...fields];
+          fetchNextPage();
+        },
+        err => {
+          if (err) {
+            console.error(err);
+            reject(err)
+          }
+          console.log("end fetch from Airtable API with", data.length, "records");
+          resolve(data)
         }
-        console.log("end fetch from Airtable API with", data.length, "records");
-      }
-    );
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ data })
-  };
+      );
+  })
 };
 
 const fetchData = throttle(unthrottledFetchData, 2000);
