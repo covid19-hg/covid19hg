@@ -177,40 +177,44 @@ const ProductPage = ({ data }) => {
                 getCityFetchURL(cityCountry)
               );
               const cityCoords = extractCoordFromFetchResult(cityFetchResult);
-              const individualResults = await Promise.all(
-                placesInSameCity.map(({ affiliation }) =>
-                  fetchJSON(
-                    getInstitutionFetchURL(
-                      { institution: affiliation, cityCountry },
-                      { lng: cityCoords.lng, lat: cityCoords.lat }
-                    )
-                  )
+              return await Promise.all(
+                placesInSameCity.map(
+                  async ({
+                    affiliation,
+                    city,
+                    country,
+                    id,
+                    investigator,
+                    study
+                  }) => {
+                    let coords;
+                    try {
+                      const fetchResult = await fetchJSON(
+                        getInstitutionFetchURL(
+                          { institution: affiliation, cityCountry },
+                          { lng: cityCoords.lng, lat: cityCoords.lat }
+                        )
+                      );
+                      if (fetchResult.features.length > 0) {
+                        coords = extractCoordFromFetchResult(fetchResult);
+                      } else {
+                        coords = cityCoords;
+                      }
+                    } catch (e) {
+                      coords = cityCoords;
+                    }
+                    return {
+                      lng: coords.lng,
+                      lat: coords.lat,
+                      study_biobank: study,
+                      coordinator: investigator,
+                      city_country: `${city}, ${country}`,
+                      id,
+                      affiliation
+                    };
+                  }
                 )
               );
-              const individualCoords = [];
-              for (let i = 0; i < individualResults.length; i += 1) {
-                const result = individualResults[i];
-                if (result.features.length > 0) {
-                  individualCoords.push(extractCoordFromFetchResult(result));
-                } else {
-                  individualCoords.push(cityCoords);
-                }
-              }
-              const merged = _zip(individualCoords, placesInSameCity).map(
-                ([
-                  { lng, lat },
-                  { affiliation, city, country, id, investigator, study }
-                ]) => ({
-                  lng,
-                  lat,
-                  study_biobank: study,
-                  coordinator: investigator,
-                  city_country: `${city}, ${country}`,
-                  id,
-                  affiliation
-                })
-              );
-              return merged;
             }
           )
         );
