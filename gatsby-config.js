@@ -10,8 +10,6 @@ if (localConfig.error) {
   )
 }
 
-console.log("airtable API key", process.env.AIRTABLE_API_KEY);
-
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.covid19hg.org',
