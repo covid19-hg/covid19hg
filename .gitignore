@@ -11,3 +11,9 @@ yarn-error.log
 # API keys
 .env.development
 .env.local
+
+# Local Netlify folder
+.netlify
+
+# Netlify artifacts
+reduxcache*

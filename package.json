@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "dotenv": "8.2.0",
+    "netlify-cli": "2.40.0",
     "prettier": "^1.15.3"
   }
 }
