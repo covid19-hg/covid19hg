@@ -34,16 +34,17 @@ export const ProductPageTemplate = ({ title, mapData }) => {
     details = null;
   } else {
     const info = mapData.find(({ id }) => id === state);
+    const {study, city, country, investigator, affiliation} = info;
     details = (
       <>
         <h2 className="title is-4">Study</h2>
-        <p>{info.study_biobank}</p>
+        <p>{study}</p>
         <h2 className="title is-4">Location</h2>
-        <p>{info.city_country}</p>
-        <h2 className="title is-4">Coordinators</h2>
-        <p>{info.coordinator}</p>
+        <p>{`${city}, ${country}`}</p>
+        <h2 className="title is-4">Investigators</h2>
+        <p>{investigator}</p>
         <h2 className="title is-4">Affiliation</h2>
-        <p>{info.affiliation}</p>
+        <p>{affiliation}</p>
       </>
     );
   }
@@ -74,7 +75,7 @@ export const ProductPageTemplate = ({ title, mapData }) => {
             </div>
           </div>
           <div className="section">
-            <InstitutionsList mapData={mapData}/>
+            {/* <InstitutionsList mapData={mapData}/> */}
           </div>
         </div>
         <center>
@@ -120,18 +121,8 @@ const ProductPage = ({ data }) => {
     const fetchData = async () => {
       try {
         const airtableData = await fetchJSON("/.netlify/functions/partners");
-        const withIds = airtableData.data.map(
-          ({ Study, Investigator, Affiliation, City, Country }, index) => ({
-            study: Study,
-            investigator: Investigator,
-            country: Country,
-            city: City,
-            affiliation: Affiliation,
-            id: index.toString()
-          })
-        );
         const groupedByCity = _groupBy(
-          withIds,
+          airtableData.data.slice(0, 10),
           ({ city, country }) => `${city} ${country}`
         );
         // Split records into cities with one or multiple records. Records in
@@ -154,18 +145,7 @@ const ProductPage = ({ data }) => {
           extractCoordFromFetchResult(elem)
         );
         const singlesData = _zip(singlesCoords, singles).map(
-          ([
-            { lng, lat },
-            { affiliation, city, country, id, investigator, study }
-          ]) => ({
-            lng,
-            lat,
-            study_biobank: study,
-            coordinator: investigator,
-            city_country: `${city}, ${country}`,
-            id,
-            affiliation
-          })
+          ([ { lng, lat }, datum ]) => ({ ...datum, lng, lat, })
         );
         const multiplesDataNested = await Promise.all(
           multiplesKeyValuePairs.map(
@@ -176,19 +156,12 @@ const ProductPage = ({ data }) => {
               const cityCoords = extractCoordFromFetchResult(cityFetchResult);
               return await Promise.all(
                 placesInSameCity.map(
-                  async ({
-                    affiliation,
-                    city,
-                    country,
-                    id,
-                    investigator,
-                    study
-                  }) => {
+                  async (datum) => {
                     let coords;
                     try {
                       const fetchResult = await fetchJSON(
                         getInstitutionFetchURL(
-                          { institution: affiliation, cityCountry },
+                          { institution: datum.affiliation, cityCountry },
                           { lng: cityCoords.lng, lat: cityCoords.lat }
                         )
                       );
@@ -201,13 +174,9 @@ const ProductPage = ({ data }) => {
                       coords = cityCoords;
                     }
                     return {
+                      ...datum,
                       lng: coords.lng,
                       lat: coords.lat,
-                      study_biobank: study,
-                      coordinator: investigator,
-                      city_country: `${city}, ${country}`,
-                      id,
-                      affiliation
                     };
                   }
                 )
@@ -216,12 +185,7 @@ const ProductPage = ({ data }) => {
           )
         );
         const multiplesData = _flatten(multiplesDataNested);
-        const rawData = _sortBy(
-          [...singlesData, ...multiplesData],
-          ({ id }) => id
-        );
-
-        setProcessedMapData(rawData);
+        setProcessedMapData([...singlesData, ...multiplesData]);
       } catch (e) {
         console.error(e);
       }

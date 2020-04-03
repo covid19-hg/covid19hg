@@ -15,12 +15,25 @@ const unthrottledFetchData = () => {
       .select()
       .eachPage(
         (records, fetchNextPage) => {
-          const fields = records.map(
-            ({
-              fields: { Study, Investigator, Affiliation, City, Country }
-            }) => ({ Study, Investigator, Affiliation, City, Country })
-          );
-          data = [...data, ...fields];
+          const recordFields = records.map(({ fields, id }) => ({
+            investigator: fields["Investigator"],
+            retrospective: fields["Retrospective"],
+            prospective: fields["Prospective"],
+            retrospectiveSampleSize: fields["Retrospective sample size"],
+            prospectiveSampleSize: fields["Prospective sample size"],
+            genotyping: fields["Genotyping"],
+            wes: fields["WES"],
+            otherAssays: fields["Other assays"],
+            studyDesign: fields["Study design"],
+            affiliation: fields["Affiliation"],
+            city: fields["City"],
+            country: fields["Country"],
+            researchQuestion: fields["Research Question"],
+            study: fields["Study"],
+            studyLink: fields["Study link"],
+            id,
+          }));
+          data = [...data, ...recordFields];
           fetchNextPage();
         },
         err => {
@@ -46,7 +59,7 @@ exports.handler = async function(event, context) {
     const data = await fetchData();
     return {
       statusCode: 200,
-      headers: {'Cache-Control': 'public, maxage=5'},
+      headers: { "Cache-Control": "public, maxage=5" },
       body: JSON.stringify({ data })
     };
   } catch (err) {

@@ -19,11 +19,11 @@ const initializeMap = (el, data) => {
   const northEast = [_max(lngs), _max(lats)];
 
   const mapboxStyleGeoJsonFeatures = data.map(
-    ({ lat, lng, id, study_biobank }) => ({
+    ({ lat, lng, id, study }) => ({
       type: "Feature",
       id,
       properties: {
-        study_biobank
+        study
       },
       geometry: {
         type: "Point",
@@ -65,7 +65,7 @@ const initializeMap = (el, data) => {
         type: "symbol",
         source: markersSourceId,
         layout: {
-          "text-field": ["to-string", ["get", "study_biobank"]],
+          "text-field": ["to-string", ["get", "study"]],
           "text-size": 14,
           "text-justify": "left",
           "text-anchor": "bottom-left"
