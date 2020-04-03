@@ -46,6 +46,7 @@ exports.handler = async function(event, context) {
     const data = await fetchData();
     return {
       statusCode: 200,
+      headers: {'Cache-Control': 'public, maxage=5'},
       body: JSON.stringify({ data })
     };
   } catch (err) {
