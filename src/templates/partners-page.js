@@ -106,8 +106,7 @@ const getInstitutionFetchURL = ({ institution, cityCountry }, { lng, lat }) =>
 
 const ProductPage = ({ data }) => {
   const {
-    markdownRemark: { frontmatter },
-    allAirtable: { nodes }
+    markdownRemark: { frontmatter }
   } = data;
 
   const [processedMapData, setProcessedMapData] = useState(undefined);
@@ -119,20 +118,18 @@ const ProductPage = ({ data }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const withIds = nodes.map(
-        (
-          { data: { Study, Investigator, Country, City, Affiliation } },
-          index
-        ) => ({
-          study: Study,
-          investigator: Investigator,
-          country: Country,
-          city: City,
-          affiliation: Affiliation,
-          id: index.toString()
-        })
-      );
       try {
+        const airtableData = await fetchJSON("/.netlify/functions/partners");
+        const withIds = airtableData.data.map(
+          ({ Study, Investigator, Affiliation, City, Country }, index) => ({
+            study: Study,
+            investigator: Investigator,
+            country: Country,
+            city: City,
+            affiliation: Affiliation,
+            id: index.toString()
+          })
+        );
         const groupedByCity = _groupBy(
           withIds,
           ({ city, country }) => `${city} ${country}`
@@ -267,17 +264,6 @@ export default ProductPage;
 
 export const productPageQuery = graphql`
   query PartnersPage($id: String!) {
-    allAirtable(filter: { table: { eq: "Submission" } }) {
-      nodes {
-        data {
-          Study
-          Investigator
-          Country
-          City
-          Affiliation
-        }
-      }
-    }
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
