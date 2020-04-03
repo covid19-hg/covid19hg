@@ -74,7 +74,7 @@ export const ProductPageTemplate = ({ title, mapData }) => {
             </div>
           </div>
           <div className="section">
-            <InstitutionsList />
+            <InstitutionsList mapData={mapData}/>
           </div>
         </div>
         <center>
