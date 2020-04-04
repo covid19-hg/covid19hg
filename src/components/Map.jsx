@@ -132,7 +132,9 @@ const addCollaborators = async (
       event.stopPropagation();
       dispatchMessageToParent({
         type: SET_SELECTED_INSTITUTION_ACTION,
-        id
+        payload: {
+          id,
+        }
       });
     });
 
