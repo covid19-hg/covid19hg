@@ -23,6 +23,7 @@ const unthrottledFetchData = () => {
             prospectiveSampleSize: fields["Prospective sample size"],
             genotyping: fields["Genotyping"],
             wes: fields["WES"],
+            wgs: fields["WGS"],
             otherAssays: fields["Other assays"],
             studyDesign: fields["Study design"],
             affiliation: fields["Affiliation"],
@@ -31,6 +32,7 @@ const unthrottledFetchData = () => {
             researchQuestion: fields["Research Question"],
             study: fields["Study"],
             studyLink: fields["Study link"],
+            assaysPlanned: fields["Additional assays planned"],
             id,
           }));
           data = [...data, ...recordFields];
