@@ -140,7 +140,6 @@ const Partners = ({ title, mapData }) => {
       ({ country }) => country === state[selectedCountryStateName]
     );
   }
-  console.log("filteredData", filteredData.length);
 
   let card;
   if (state.selectedId === undefined) {
