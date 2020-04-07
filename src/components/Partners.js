@@ -148,24 +148,33 @@ const Partners = ({ title, mapData }) => {
     );
   }
   if (state[keywordSearchStateName] !== "") {
-    filteredData = filteredData.filter(
-      elem => elem.allText.includes(state[keywordSearchStateName])
-    )
+    filteredData = filteredData.filter((elem) =>
+      elem.allText.includes(state[keywordSearchStateName])
+    );
   }
 
   let card;
-  if (state.selectedId === undefined) {
-    card = null;
-  } else if (
+  if (
+    state.selectedId === undefined ||
     filteredData.map(({ id }) => id).includes(state.selectedId) === false
   ) {
-    // Do not show card if the selected study has been filtered out:
-    card = null;
+    // Do not show card if there's no selected study or if  the selected study has been filtered out:
+    card = (
+      <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
+        <div className="card">
+          <div className="card-header" style={{ minHeight: "5rem" }}>
+            <div className="card-header-title">
+              <div className="title is-4"> Please select a study </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   } else {
     const cardInfo = mapData.find(({ id }) => id === state.selectedId);
     card = (
       <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
-        <div className="title is-2">Study details</div>
+        <div className="title is-4">Study details</div>
         <Card cardInfo={cardInfo} />
       </div>
     );
@@ -225,7 +234,7 @@ const Partners = ({ title, mapData }) => {
         root: materialStyles.checkboxFormControl,
       }}
     >
-      <FormLabel component="legend">Assays planned</FormLabel>
+      <FormLabel component="legend">Genetic analysis</FormLabel>
       <FormGroup>
         <Select
           id="partners-assays-planned"
@@ -424,6 +433,11 @@ const Partners = ({ title, mapData }) => {
     </List>
   );
 
+  const studyListHeadingText =
+    mapData.length === filteredData.length
+      ? `Registered studies (${mapData.length})`
+      : `Matching studies (${filteredData.length})`;
+
   return (
     <div className="content">
       <div>
@@ -442,7 +456,7 @@ const Partners = ({ title, mapData }) => {
       <section className="section section--gradient" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section" style={{ paddingTop: 0 }}>
-            <div className="title is-2">Find studies</div>
+            <div className="title is-4">Find studies</div>
             <div className="columns">
               <div className="column is-one-third">{studyTypeElem}</div>
               <div className="column is-one-third">{assaysPlannedElem}</div>
@@ -472,9 +486,7 @@ const Partners = ({ title, mapData }) => {
           <div className="section">
             <div className="columns">
               <div className="column is-one-third">
-                <div className="title is-2">
-                  Registered studies ({mapData.length})
-                </div>
+                <div className="title is-4">{studyListHeadingText} </div>
                 <div style={{ maxHeight: "30vh", overflowY: "auto" }}>
                   {list}
                 </div>
