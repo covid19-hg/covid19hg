@@ -15,6 +15,7 @@ const unthrottledFetchData = () => {
       .select()
       .eachPage(
         (records, fetchNextPage) => {
+          console.log("records", records.slice(0, 5));
           const recordFields = records.map(({ fields, id }) => ({
             investigator: fields["Investigator"],
             retrospective: fields["Retrospective"],
@@ -26,6 +27,7 @@ const unthrottledFetchData = () => {
             wgs: fields["WGS"],
             otherAssays: fields["Other assays"],
             studyDesign: fields["Study design"],
+            studyDesignUnformatted: fields["Study design unformatted"],
             affiliation: fields["Affiliation"],
             city: fields["City"],
             country: fields["Country"],

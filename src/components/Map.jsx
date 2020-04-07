@@ -18,7 +18,15 @@ const terrainSourceId = "mapbox-terrain";
 const markerLayerId = "markers-layer";
 const visibilityFeatureStateName = "isVisible";
 
-const createMarker = ({ lng, lat, study, dispatchMessageToParent, popup, id, mapboxMap,  }) => {
+const createMarker = ({
+  lng,
+  lat,
+  study,
+  dispatchMessageToParent,
+  popup,
+  id,
+  mapboxMap,
+}) => {
   // Use the default marker but halve the size:
   const marker = new Marker();
   const markerElement = marker.getElement();
@@ -172,11 +180,21 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
   });
 
   data.forEach(({ lat, lng, study, id }) => {
-    const marker = createMarker({ lng, lat, study, dispatchMessageToParent, popup, id, mapboxMap });
+    const marker = createMarker({
+      lng,
+      lat,
+      study,
+      dispatchMessageToParent,
+      popup,
+      id,
+      mapboxMap,
+    });
     marker.addTo(mapboxMap);
     markers.set(id, {
       marker,
-      lng, lat, study,
+      lng,
+      lat,
+      study,
       isInMap: true,
     });
   });
@@ -196,22 +214,35 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
   return mapboxInfo;
 };
 
-const adjustMarkerVisibility = (mapboxInfoRef, visibleIds, dispatchMessageToParent) => {
-
-  const { current: {map, popup, markers} } = mapboxInfoRef;
+const adjustMarkerVisibility = (
+  mapboxInfoRef,
+  visibleIds,
+  dispatchMessageToParent
+) => {
+  const {
+    current: { map, popup, markers },
+  } = mapboxInfoRef;
 
   for (const [id, markerInfo] of markers.entries()) {
     if (visibleIds.includes(id) === true && markerInfo.isInMap === false) {
-      const {lng, lat, study} = markerInfo;
-      const marker = createMarker({lng, lat, study, dispatchMessageToParent, popup, id, mapboxMap: map})
-      marker.addTo(map)
-      markerInfo.marker = marker
+      const { lng, lat, study } = markerInfo;
+      const marker = createMarker({
+        lng,
+        lat,
+        study,
+        dispatchMessageToParent,
+        popup,
+        id,
+        mapboxMap: map,
+      });
+      marker.addTo(map);
+      markerInfo.marker = marker;
       markerInfo.isInMap = true;
     } else if (
       visibleIds.includes(id) === false &&
       markerInfo.isInMap === true
     ) {
-      markerInfo.marker.remove()
+      markerInfo.marker.remove();
       markerInfo.isInMap = false;
     }
   }
@@ -243,19 +274,19 @@ const adjustLabelVisibility = (mapboxInfoRef, visibleIds) => {
 const MapComponent = ({ dispatchMessageToParent, mapData, filteredData }) => {
   const mapboxInfoRef = useRef(undefined);
   const visibleIds = filteredData.map(({ id }) => id).sort();
-  const mapElRef = useRef(null)
+  const mapElRef = useRef(null);
 
   useEffect(() => {
-    const {current: el} = mapElRef;
-      if (el !== null) {
-        const mapboxInfo = initializeMap(el, mapData, dispatchMessageToParent);
-        mapboxInfoRef.current = mapboxInfo;
-        mapboxInfo.map.on("load", () => {
-          mapboxInfo.isStyleLoaded = true;
-          adjustLabelVisibility(mapboxInfoRef, visibleIds);
-        });
-      }
-  }, [])
+    const { current: el } = mapElRef;
+    if (el !== null) {
+      const mapboxInfo = initializeMap(el, mapData, dispatchMessageToParent);
+      mapboxInfoRef.current = mapboxInfo;
+      mapboxInfo.map.on("load", () => {
+        mapboxInfo.isStyleLoaded = true;
+        adjustLabelVisibility(mapboxInfoRef, visibleIds);
+      });
+    }
+  }, []);
 
   useEffect(() => {
     adjustMarkerVisibility(mapboxInfoRef, visibleIds, dispatchMessageToParent);
