@@ -1,6 +1,7 @@
 import React from "react"
 import Chip from "@material-ui/core/Chip";
 import { makeStyles } from "@material-ui/core/styles";
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 
 const viralSequencingColor = "rgb(204, 223, 254)"
 const transcriptomicsColor = "rgb(193, 244, 233)"
@@ -59,7 +60,7 @@ const Card = ({cardInfo }) => {
   const {
     study, investigator, affiliation, city, country, retrospective, prospective,
     retrospectiveSampleSize, prospectiveSampleSize, researchQuestion, studyDesign,
-    wes, wgs, genotyping, assaysPlanned, otherAssays
+    wes, wgs, genotyping, assaysPlanned, otherAssays, studyLink
   } = cardInfo;
 
   const materialStyles = useMaterialStyles()
@@ -84,10 +85,26 @@ const Card = ({cardInfo }) => {
     mainAssayChips = assayOptions.map(({name, styleName}) => assaysPlanned.includes(name) ? (<Chip key={name} label={name} className={materialStyles[styleName]}/>) : null)
   }
 
+  let cardTitle
+  if (studyLink !== undefined) {
+    cardTitle = (
+      <a className="card-header-title" href={studyLink} rel="noopener noreferrer" target="_blank">
+        <div className="title" style={{marginBottom: 0}}>{study}</div>
+        <OpenInNewIcon style={{marginLeft: "0.5rem"}}/>
+      </a>
+    )
+  } else {
+    cardTitle = (
+      <div className="card-header-title">
+        <div className="title is-2" style={{marginBottom: 0}}>{study}</div>
+      </div>
+    )
+  }
+
   return (
     <div className="card">
       <div className="card-header">
-        <div className="card-header-title">{study}</div>
+        {cardTitle}
       </div>
       <div className="card-content">
         <div className="columns">
