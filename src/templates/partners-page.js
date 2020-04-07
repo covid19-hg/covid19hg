@@ -39,7 +39,7 @@ const ProductPage = ({ data }) => {
       try {
         const airtableData = await fetchJSON("/.netlify/functions/partners");
         const groupedByCity = _groupBy(
-          airtableData.data.slice(0, 10),
+          airtableData.data,
           ({ city, country }) => `${city} ${country}`
         );
         // Split records into cities with one or multiple records. Records in
@@ -101,10 +101,29 @@ const ProductPage = ({ data }) => {
           )
         );
         const multiplesData = _flatten(multiplesDataNested);
-        const merged = [
-          ...singlesData,
-          ...multiplesData,
-        ].map((elem, index) => ({ ...elem, geoJsonId: index }));
+        const merged = [...singlesData, ...multiplesData].map((elem, index) => {
+          const allText = _flatten([
+            elem.investigator.toLowerCase(),
+            elem.studyDesignUnformatted.toLowerCase(),
+            elem.affiliation.toLowerCase(),
+            elem.city.toLowerCase(),
+            elem.country.toLowerCase(),
+            "researchQuestion" in elem
+              ? elem.researchQuestion.toLowerCase()
+              : [],
+            elem.study.toLowerCase(),
+            "assaysPlanned" in elem
+              ? elem.assaysPlanned.map((assay) => assay.toLowerCase())
+              : [],
+            "otherAssays" in elem ? elem.otherAssays.toLowerCase() : [],
+          ]).join(" ");
+          return {
+            ...elem,
+            geoJsonId: index,
+            allText,
+          };
+        });
+
         setProcessedMapData(merged);
       } catch (e) {
         console.error(e);

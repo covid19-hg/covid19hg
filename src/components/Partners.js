@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useCallback } from "react";
 import PropTypes from "prop-types";
 import Map, {
   SET_SELECTED_INSTITUTION_ACTION,
@@ -20,9 +20,10 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Card, { assayOptions } from "./Card";
 import CountrySelect from "./CountrySelect";
 import TextField from "@material-ui/core/TextField";
+import _debounce from "lodash/debounce";
 
 const assayNames = assayOptions.map(({ name }) => name);
-const studyListStyleName = "studyList"
+const studyListStyleName = "studyList";
 
 const useMaterialStyles = makeStyles(() => ({
   chips: {
@@ -50,7 +51,7 @@ const useMaterialStyles = makeStyles(() => ({
   [studyListStyleName]: {
     marginTop: 0,
     marginLeft: 0,
-  }
+  },
 }));
 
 const SET_FORM_STATE = "SET_FORM_STATE";
@@ -96,6 +97,7 @@ const Partners = ({ title, mapData }) => {
   const assaysStateName = "assays";
   const researchCategoriesStateName = "researchCategories";
   const selectedCountryStateName = "selectedCountry";
+  const keywordSearchStateName = "keywordSearch";
 
   const [state, dispatch] = useReducer(reducer, {
     selectedId: undefined,
@@ -107,6 +109,7 @@ const Partners = ({ title, mapData }) => {
     [assaysStateName]: [],
     [researchCategoriesStateName]: [],
     [selectedCountryStateName]: undefined,
+    [keywordSearchStateName]: "",
   });
 
   const materialStyles = useMaterialStyles();
@@ -144,6 +147,11 @@ const Partners = ({ title, mapData }) => {
       ({ country }) => country === state[selectedCountryStateName]
     );
   }
+  if (state[keywordSearchStateName] !== "") {
+    filteredData = filteredData.filter(
+      elem => elem.allText.includes(state[keywordSearchStateName])
+    )
+  }
 
   let card;
   if (state.selectedId === undefined) {
@@ -155,7 +163,12 @@ const Partners = ({ title, mapData }) => {
     card = null;
   } else {
     const cardInfo = mapData.find(({ id }) => id === state.selectedId);
-    card = <Card cardInfo={cardInfo} />;
+    card = (
+      <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
+        <div className="title is-2">Study details</div>
+        <Card cardInfo={cardInfo} />
+      </div>
+    );
   }
 
   const studyTypeElem = (
@@ -362,6 +375,19 @@ const Partners = ({ title, mapData }) => {
     </FormControl>
   );
 
+  const onKeywordSearchChange = useCallback(
+    _debounce((value) => {
+      dispatch({
+        type: SET_FORM_STATE,
+        payload: {
+          name: keywordSearchStateName,
+          value: value.toLowerCase(),
+        },
+      });
+    }, 250),
+    []
+  );
+
   const keywordSearchElem = (
     <FormControl
       comnponent="fieldset"
@@ -372,6 +398,7 @@ const Partners = ({ title, mapData }) => {
         label="Keyword"
         variant="outlined"
         fullWidth={true}
+        onChange={(event) => onKeywordSearchChange(event.target.value)}
       />
     </FormControl>
   );
@@ -390,9 +417,12 @@ const Partners = ({ title, mapData }) => {
     );
   });
 
-  const list = <List classes={{
-    // root: materialStyles[studyListStyleName]
-  }} dense={true}  component="div"> {listItems} </List>;
+  const list = (
+    <List dense={true} component="div">
+      {" "}
+      {listItems}{" "}
+    </List>
+  );
 
   return (
     <div className="content">
@@ -409,9 +439,9 @@ const Partners = ({ title, mapData }) => {
           {title}
         </h1>
       </div>
-      <section className="section section--gradient" style={{paddingTop: 0}}>
+      <section className="section section--gradient" style={{ paddingTop: 0 }}>
         <div className="container">
-          <div className="section" style={{paddingTop: 0}}>
+          <div className="section" style={{ paddingTop: 0 }}>
             <div className="title is-2">Find studies</div>
             <div className="columns">
               <div className="column is-one-third">{studyTypeElem}</div>
@@ -442,8 +472,10 @@ const Partners = ({ title, mapData }) => {
           <div className="section">
             <div className="columns">
               <div className="column is-one-third">
-                <div className="title is-2">Registered studies ({mapData.length})</div>
-                <div style={{maxHeight: "30vh", overflowY: "auto"}}>
+                <div className="title is-2">
+                  Registered studies ({mapData.length})
+                </div>
+                <div style={{ maxHeight: "30vh", overflowY: "auto" }}>
                   {list}
                 </div>
               </div>
