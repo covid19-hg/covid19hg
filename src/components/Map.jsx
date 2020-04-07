@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Map as MapboxMap, Marker, Popup, NavigationControl } from "mapbox-gl";
 import _min from "lodash/min";
 import _max from "lodash/max";
@@ -8,7 +8,6 @@ import getAdministrativeBoundariesAdminMapboxLayer from "../mapboxLayers/adminis
 import getLandWaterLandMapboxLayer from "../mapboxLayers/land-water-land-mapbox-layer.js";
 import getLandWaterWaterMapboxLayer from "../mapboxLayers/land-water-water-mapbox-layer.js";
 import getLandWaterBuiltMapboxLayer from "../mapboxLayers/land-water-built-mapbox-layer.js";
-import { useEffect } from "react";
 
 export const SET_SELECTED_INSTITUTION_ACTION = "setSelectedInstitution";
 export const UNSET_SELECTED_INSTITUTION_ACTION = "unsetSelectedInstitution";
@@ -19,6 +18,45 @@ const terrainSourceId = "mapbox-terrain";
 const markerLayerId = "markers-layer";
 const visibilityFeatureStateName = "isVisible";
 
+const createMarker = ({ lng, lat, study, dispatchMessageToParent, popup, id, mapboxMap,  }) => {
+  // Use the default marker but halve the size:
+  const marker = new Marker();
+  const markerElement = marker.getElement();
+  markerElement.style.cursor = "pointer";
+  const svg = markerElement.querySelector("svg");
+
+  // These sizes are obtained by inspecting the actual SVG created by Mapbox:
+  const defaultWidth = 27;
+  const defaultHeight = 41;
+  svg.setAttribute("width", `${defaultWidth / 2}px`);
+  svg.setAttribute("height", `${defaultHeight / 2}px`);
+
+  markerElement.addEventListener("click", (event) => {
+    // Need to `stopPropagation` so that it doesn't bubble up to the map and
+    // dispatch the "unsetSelectedInstitution" action
+    event.stopPropagation();
+    dispatchMessageToParent({
+      type: SET_SELECTED_INSTITUTION_ACTION,
+      payload: {
+        id,
+      },
+    });
+  });
+  markerElement.addEventListener("mouseenter", (event) => {
+    event.stopPropagation();
+    popup
+      .setLngLat([lng, lat])
+      .setHTML(study)
+      .addTo(mapboxMap);
+  });
+  markerElement.addEventListener("mouseleave", (event) => {
+    event.stopPropagation();
+    popup.remove();
+  });
+
+  marker.setLngLat([lng, lat]).setPopup(popup);
+  return marker;
+};
 const initializeMap = (el, data, dispatchMessageToParent) => {
   const lats = data.map(({ lat }) => lat);
   const lngs = data.map(({ lng }) => lng);
@@ -107,6 +145,7 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
       },
     },
   });
+
   // Add zoom controls
   mapboxMap.addControl(
     new NavigationControl({
@@ -125,7 +164,6 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
     });
   });
 
-
   const markers = new Map();
 
   const popup = new Popup({
@@ -134,46 +172,12 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
   });
 
   data.forEach(({ lat, lng, study, id }) => {
-    // Use the default marker but halve the size:
-    const marker = new Marker();
-    marker.setPopup(popup);
-    const markerElement = marker.getElement();
-    markerElement.style.cursor = "pointer";
-    const svg = markerElement.querySelector("svg");
-
-    // These sizes are obtained by inspecting the actual SVG created by Mapbox:
-    const defaultWidth = 27;
-    const defaultHeight = 41;
-    svg.setAttribute("width", `${defaultWidth / 2}px`);
-    svg.setAttribute("height", `${defaultHeight / 2}px`);
-
-    markerElement.addEventListener("click", (event) => {
-      // Need to `stopPropagation` so that it doesn't bubble up to the map and
-      // dispatch the "unsetSelectedInstitution" action
-      event.stopPropagation();
-      dispatchMessageToParent({
-        type: SET_SELECTED_INSTITUTION_ACTION,
-        payload: {
-          id,
-        },
-      });
-    });
-    markerElement.addEventListener("mouseenter", (event) => {
-      event.stopPropagation();
-      popup
-        .setLngLat([lng, lat])
-        .setHTML(study)
-        .addTo(mapboxMap);
-    });
-    markerElement.addEventListener("mouseleave", (event) => {
-      event.stopPropagation();
-      popup.remove();
-    });
-
-    marker.setLngLat([lng, lat]).setPopup(popup);
+    const marker = createMarker({ lng, lat, study, dispatchMessageToParent, popup, id, mapboxMap });
+    marker.addTo(mapboxMap);
     markers.set(id, {
       marker,
-      isInMap: false,
+      lng, lat, study,
+      isInMap: true,
     });
   });
 
@@ -186,27 +190,37 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
     markers,
     labelInfo,
     isStyleLoaded: false,
+    popup,
   };
 
   return mapboxInfo;
 };
 
-const adjustVisibleMarkers = (mapboxInfoRef, visibleIds) => {
-  const { current: mapboxInfo } = mapboxInfoRef;
-  for (const [id, markerInfo] of mapboxInfo.markers.entries()) {
+const adjustMarkerVisibility = (mapboxInfoRef, visibleIds, dispatchMessageToParent) => {
+
+  const { current: {map, popup, markers} } = mapboxInfoRef;
+
+  for (const [id, markerInfo] of markers.entries()) {
     if (visibleIds.includes(id) === true && markerInfo.isInMap === false) {
-      markerInfo.marker.addTo(mapboxInfo.map);
+      const {lng, lat, study} = markerInfo;
+      const marker = createMarker({lng, lat, study, dispatchMessageToParent, popup, id, mapboxMap: map})
+      marker.addTo(map)
+      markerInfo.marker = marker
       markerInfo.isInMap = true;
     } else if (
       visibleIds.includes(id) === false &&
       markerInfo.isInMap === true
     ) {
-      markerInfo.marker.remove();
+      markerInfo.marker.remove()
       markerInfo.isInMap = false;
     }
   }
+};
 
-  const { labelInfo, map, isStyleLoaded } = mapboxInfo;
+const adjustLabelVisibility = (mapboxInfoRef, visibleIds) => {
+  const {
+    current: { labelInfo, map, isStyleLoaded },
+  } = mapboxInfoRef;
   if (isStyleLoaded === true) {
     for (const [id, info] of labelInfo.entries()) {
       if (visibleIds.includes(id) === true && info.isVisible === false) {
@@ -229,24 +243,23 @@ const adjustVisibleMarkers = (mapboxInfoRef, visibleIds) => {
 const MapComponent = ({ dispatchMessageToParent, mapData, filteredData }) => {
   const mapboxInfoRef = useRef(undefined);
   const visibleIds = filteredData.map(({ id }) => id).sort();
+  const mapElRef = useRef(null)
 
-  const mapElRef = useCallback(
-    (el) => {
+  useEffect(() => {
+    const {current: el} = mapElRef;
       if (el !== null) {
         const mapboxInfo = initializeMap(el, mapData, dispatchMessageToParent);
         mapboxInfoRef.current = mapboxInfo;
-        adjustVisibleMarkers(mapboxInfoRef, visibleIds);
         mapboxInfo.map.on("load", () => {
           mapboxInfo.isStyleLoaded = true;
-          adjustVisibleMarkers(mapboxInfoRef, visibleIds);
+          adjustLabelVisibility(mapboxInfoRef, visibleIds);
         });
       }
-    },
-    [dispatchMessageToParent, mapData, visibleIds]
-  );
+  }, [])
 
   useEffect(() => {
-    adjustVisibleMarkers(mapboxInfoRef, visibleIds);
+    adjustMarkerVisibility(mapboxInfoRef, visibleIds, dispatchMessageToParent);
+    adjustLabelVisibility(mapboxInfoRef, visibleIds);
   }, [visibleIds]);
 
   return <div style={{ height: "50vh" }} ref={mapElRef}></div>;
