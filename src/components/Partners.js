@@ -245,7 +245,7 @@ const Partners = ({ title, mapData }) => {
         root: materialStyles.checkboxFormControl,
       }}
     >
-      <FormLabel component="legend">Genetic analysis</FormLabel>
+      <FormLabel component="legend">Assays planned</FormLabel>
       <FormGroup>
         <Select
           id="partners-assays-planned"
@@ -292,7 +292,7 @@ const Partners = ({ title, mapData }) => {
         root: materialStyles.checkboxFormControl,
       }}
     >
-      <FormLabel component="legend">Assays Planned</FormLabel>
+      <FormLabel component="legend">Genetic analysis</FormLabel>
       <FormGroup row={true}>
         <FormControlLabel
           control={
