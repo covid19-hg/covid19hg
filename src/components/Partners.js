@@ -22,6 +22,7 @@ import CountrySelect from "./CountrySelect";
 import TextField from "@material-ui/core/TextField";
 
 const assayNames = assayOptions.map(({ name }) => name);
+const studyListStyleName = "studyList"
 
 const useMaterialStyles = makeStyles(() => ({
   chips: {
@@ -46,6 +47,10 @@ const useMaterialStyles = makeStyles(() => ({
     display: "block",
     marginTop: "0.5rem",
   },
+  [studyListStyleName]: {
+    marginTop: 0,
+    marginLeft: 0,
+  }
 }));
 
 const SET_FORM_STATE = "SET_FORM_STATE";
@@ -385,7 +390,9 @@ const Partners = ({ title, mapData }) => {
     );
   });
 
-  const list = <List> {listItems} </List>;
+  const list = <List classes={{
+    // root: materialStyles[studyListStyleName]
+  }} dense={true}  component="div"> {listItems} </List>;
 
   return (
     <div className="content">
@@ -402,9 +409,10 @@ const Partners = ({ title, mapData }) => {
           {title}
         </h1>
       </div>
-      <section className="section section--gradient">
+      <section className="section section--gradient" style={{paddingTop: 0}}>
         <div className="container">
-          <div className="section">
+          <div className="section" style={{paddingTop: 0}}>
+            <div className="title is-2">Find studies</div>
             <div className="columns">
               <div className="column is-one-third">{studyTypeElem}</div>
               <div className="column is-one-third">{assaysPlannedElem}</div>
@@ -433,13 +441,13 @@ const Partners = ({ title, mapData }) => {
           </div>
           <div className="section">
             <div className="columns">
-              <div
-                className={`column is-one-quarter`}
-                style={{ maxHeight: "50vh", overflowY: "auto" }}
-              >
-                {list}
+              <div className="column is-one-third">
+                <div className="title is-2">Registered studies ({mapData.length})</div>
+                <div style={{maxHeight: "30vh", overflowY: "auto"}}>
+                  {list}
+                </div>
               </div>
-              <div className="column is-three-quarters">
+              <div className="column is-two-thirds">
                 <Map
                   dispatchMessageToParent={dispatch}
                   mapData={mapData}

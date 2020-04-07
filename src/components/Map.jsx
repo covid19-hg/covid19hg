@@ -262,7 +262,7 @@ const MapComponent = ({ dispatchMessageToParent, mapData, filteredData }) => {
     adjustLabelVisibility(mapboxInfoRef, visibleIds);
   }, [visibleIds]);
 
-  return <div style={{ height: "50vh" }} ref={mapElRef}></div>;
+  return <div style={{ height: "40vh" }} ref={mapElRef}></div>;
 };
 
 export default MapComponent;

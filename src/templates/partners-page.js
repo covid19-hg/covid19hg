@@ -39,7 +39,7 @@ const ProductPage = ({ data }) => {
       try {
         const airtableData = await fetchJSON("/.netlify/functions/partners");
         const groupedByCity = _groupBy(
-          airtableData.data,
+          airtableData.data.slice(0, 10),
           ({ city, country }) => `${city} ${country}`
         );
         // Split records into cities with one or multiple records. Records in
