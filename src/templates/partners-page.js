@@ -103,11 +103,12 @@ const ProductPage = ({ data }) => {
         const multiplesData = _flatten(multiplesDataNested);
         const merged = [...singlesData, ...multiplesData].map((elem, index) => {
           const allText = _flatten([
-            elem.investigator.toLowerCase(),
-            elem.studyDesignUnformatted.toLowerCase(),
-            elem.affiliation.toLowerCase(),
-            elem.city.toLowerCase(),
-            elem.country.toLowerCase(),
+            ("investigator" in elem) ? elem.investigator.toLowerCase() : [],
+            ("studyDesignUnformatted" in elem) ? elem.studyDesignUnformatted.toLowerCase() : [],
+            ("affiliation" in elem) ? elem.affiliation.toLowerCase() : [],
+            ("city" in elem) ? elem.city.toLowerCase() : [],
+            ("country" in elem) ? elem.country.toLowerCase() : [],
+            ("country" in elem) ? elem.country.toLowerCase() : [],
             "researchQuestion" in elem
               ? elem.researchQuestion.toLowerCase()
               : [],
