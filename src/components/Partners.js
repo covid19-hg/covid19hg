@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer } from "react";
 import PropTypes from "prop-types";
 import Map, {
   SET_SELECTED_INSTITUTION_ACTION,
@@ -32,7 +32,6 @@ const useMaterialStyles = makeStyles(() => ({
     margin: 2,
   },
   checkboxFormControl: {
-    borderWidth: "1px",
     padding: "0 0.625rem",
     borderWidth: "1px",
     borderStyle: "solid",
@@ -144,9 +143,11 @@ const Partners = ({ title, mapData }) => {
   let card;
   if (state.selectedId === undefined) {
     card = null;
-  } else if (filteredData.map(({id}) => id).includes(state.selectedId) === false) {
+  } else if (
+    filteredData.map(({ id }) => id).includes(state.selectedId) === false
+  ) {
     // Do not show card if the selected study has been filtered out:
-    card = null
+    card = null;
   } else {
     const cardInfo = mapData.find(({ id }) => id === state.selectedId);
     card = <Card cardInfo={cardInfo} />;
@@ -439,7 +440,11 @@ const Partners = ({ title, mapData }) => {
                 {list}
               </div>
               <div className="column is-three-quarters">
-                <Map dispatchMessageToParent={dispatch} mapData={mapData} />
+                <Map
+                  dispatchMessageToParent={dispatch}
+                  mapData={mapData}
+                  filteredData={filteredData}
+                />
               </div>
             </div>
           </div>

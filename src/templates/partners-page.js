@@ -101,7 +101,11 @@ const ProductPage = ({ data }) => {
           )
         );
         const multiplesData = _flatten(multiplesDataNested);
-        setProcessedMapData([...singlesData, ...multiplesData]);
+        const merged = [
+          ...singlesData,
+          ...multiplesData,
+        ].map((elem, index) => ({ ...elem, geoJsonId: index }));
+        setProcessedMapData(merged);
       } catch (e) {
         console.error(e);
       }
