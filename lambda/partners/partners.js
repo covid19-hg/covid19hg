@@ -4,7 +4,7 @@ const throttle = require("lodash/throttle");
 
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
-  apiKey: process.env.AIRTABLE_API_KEY
+  apiKey: process.env.AIRTABLE_API_KEY,
 });
 const base = Airtable.base("appVc6kMY1ZNr0uv5");
 
@@ -15,7 +15,6 @@ const unthrottledFetchData = () => {
       .select()
       .eachPage(
         (records, fetchNextPage) => {
-          console.log("records", records.slice(0, 5));
           const recordFields = records.map(({ fields, id }) => ({
             investigator: fields["Investigator"],
             retrospective: fields["Retrospective"],
@@ -35,12 +34,13 @@ const unthrottledFetchData = () => {
             study: fields["Study"],
             studyLink: fields["Study link"],
             assaysPlanned: fields["Additional assays planned"],
+            researchCategory: fields["Research Category"],
             id,
           }));
           data = [...data, ...recordFields];
           fetchNextPage();
         },
-        err => {
+        (err) => {
           if (err) {
             console.error(err);
             reject(err);
@@ -64,12 +64,12 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 200,
       headers: { "Cache-Control": "public, maxage=5" },
-      body: JSON.stringify({ data })
+      body: JSON.stringify({ data }),
     };
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ msg: err.message }) // Could be a custom message or object i.e. JSON.stringify(err)
+      body: JSON.stringify({ msg: err.message }), // Could be a custom message or object i.e. JSON.stringify(err)
     };
   }
 };

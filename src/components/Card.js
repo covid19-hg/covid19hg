@@ -102,6 +102,7 @@ const Card = ({ cardInfo }) => {
     assaysPlanned,
     otherAssays,
     studyLink,
+    researchCategory,
   } = cardInfo;
 
   const materialStyles = useMaterialStyles();
@@ -189,6 +190,29 @@ const Card = ({ cardInfo }) => {
     );
   }
 
+  let researchCategoriesElem;
+  if (researchCategory !== undefined && researchCategory.length > 0) {
+    const chips = researchCategory.map((name) => (
+      <Chip key={name} label={name} className={materialStyles.chip} />
+    ));
+    researchCategoriesElem = (
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "max-content 1fr",
+          marginTop: "0.5rem",
+          alignItems: "center",
+          gridColumnGap: "1rem",
+        }}
+      >
+        <div className="has-text-weight-bold">Research categories</div>
+        <div style={{ justifySelf: "start" }}>{chips}</div>
+      </div>
+    );
+  } else {
+    researchCategoriesElem = null;
+  }
+
   return (
     <div className="card">
       <div className="card-header">{cardTitle}</div>
@@ -229,6 +253,7 @@ const Card = ({ cardInfo }) => {
               Study design
             </div>
             <div>{studyDesignUnformatted}</div>
+            {researchCategoriesElem}
           </div>
         </div>
       </div>
