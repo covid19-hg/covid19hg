@@ -129,15 +129,24 @@ const Card = ({ cardInfo }) => {
 
   const wesChip =
     wes === true ? (
-      <Chip label="WES" className={`${materialStyles.wesChip} ${materialStyles.chip}`} />
+      <Chip
+        label="WES"
+        className={`${materialStyles.wesChip} ${materialStyles.chip}`}
+      />
     ) : null;
   const wgsChip =
     wgs === true ? (
-      <Chip label="WGS" className={`${materialStyles.wgsChip} ${materialStyles.chip}`} />
+      <Chip
+        label="WGS"
+        className={`${materialStyles.wgsChip} ${materialStyles.chip}`}
+      />
     ) : null;
   const gwasChip =
     genotyping === true ? (
-      <Chip label="GWAS" className={`${materialStyles.gwasChip} ${materialStyles.chip}`} />
+      <Chip
+        label="GWAS"
+        className={`${materialStyles.gwasChip} ${materialStyles.chip}`}
+      />
     ) : null;
 
   let mainAssayChips;
@@ -146,7 +155,11 @@ const Card = ({ cardInfo }) => {
   } else {
     mainAssayChips = assayOptions.map(({ name, styleName }) =>
       assaysPlanned.includes(name) ? (
-        <Chip key={name} label={name} className={`${materialStyles[styleName]} ${materialStyles.chip}`} />
+        <Chip
+          key={name}
+          label={name}
+          className={`${materialStyles[styleName]} ${materialStyles.chip}`}
+        />
       ) : null
     );
   }
