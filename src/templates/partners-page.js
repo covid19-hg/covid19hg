@@ -1,98 +1,16 @@
-import React, { useReducer, useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Map, {
-  SET_SELECTED_INSTITUTION_ACTION,
-  UNSET_SELECTED_INSTITUTION_ACTION
-} from "../components/Map";
-import InstitutionsList from "../components/InstitutionsList";
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
 import { fetchJSON } from "../Utils";
 import _zip from "lodash/zip";
 import _groupBy from "lodash/groupBy";
 import _partition from "lodash/partition";
 import _flatten from "lodash/flatten";
-import _sortBy from "lodash/sortBy";
+import Partners from "../components/Partners";
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case SET_SELECTED_INSTITUTION_ACTION:
-      return action.id;
-    case UNSET_SELECTED_INSTITUTION_ACTION:
-      return undefined;
-    default:
-      return state;
-  }
-};
-
-export const ProductPageTemplate = ({ title, mapData }) => {
-  const [state, dispatch] = useReducer(reducer, undefined);
-
-  let details;
-  if (state === undefined) {
-    details = null;
-  } else {
-    const info = mapData.find(({ id }) => id === state);
-    details = (
-      <>
-        <h2 className="title is-4">Study</h2>
-        <p>{info.study_biobank}</p>
-        <h2 className="title is-4">Location</h2>
-        <p>{info.city_country}</p>
-        <h2 className="title is-4">Coordinators</h2>
-        <p>{info.coordinator}</p>
-        <h2 className="title is-4">Affiliation</h2>
-        <p>{info.affiliation}</p>
-      </>
-    );
-  }
-
-  return (
-    <div className="content">
-      <div>
-        <h1
-          className="has-text-weight-bold is-size-1"
-          style={{
-            boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-            backgroundColor: "#142166",
-            color: "white",
-            padding: "1rem"
-          }}
-        >
-          {title}
-        </h1>
-      </div>
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-three-quarters">
-                <Map dispatchMessageToParent={dispatch} mapData={mapData} />
-              </div>
-              <div className="column is-one-quarter">{details}</div>
-            </div>
-          </div>
-          <div className="section">
-            <InstitutionsList />
-          </div>
-        </div>
-        <center>
-          <p>
-            <strong>Website team: </strong> Matthew Solomonson, Huy Nguyen
-          </p>
-        </center>
-      </section>
-    </div>
-  );
-};
-
-ProductPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string
-};
-
-const getCityFetchURL = cityCountry =>
+const getCityFetchURL = (cityCountry) =>
   `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
     cityCountry
   )}.json?access_token=${process.env.GATSBY_MAPBOX_API_KEY}&limit=1`;
@@ -106,7 +24,7 @@ const getInstitutionFetchURL = ({ institution, cityCountry }, { lng, lat }) =>
 
 const ProductPage = ({ data }) => {
   const {
-    markdownRemark: { frontmatter }
+    markdownRemark: { frontmatter },
   } = data;
 
   const [processedMapData, setProcessedMapData] = useState(undefined);
@@ -120,18 +38,8 @@ const ProductPage = ({ data }) => {
     const fetchData = async () => {
       try {
         const airtableData = await fetchJSON("/.netlify/functions/partners");
-        const withIds = airtableData.data.map(
-          ({ Study, Investigator, Affiliation, City, Country }, index) => ({
-            study: Study,
-            investigator: Investigator,
-            country: Country,
-            city: City,
-            affiliation: Affiliation,
-            id: index.toString()
-          })
-        );
         const groupedByCity = _groupBy(
-          withIds,
+          airtableData.data,
           ({ city, country }) => `${city} ${country}`
         );
         // Split records into cities with one or multiple records. Records in
@@ -150,23 +58,13 @@ const ProductPage = ({ data }) => {
             fetchJSON(getCityFetchURL(`${city} ${country}`))
           )
         );
-        const singlesCoords = singlesFetchResult.map(elem =>
+        const singlesCoords = singlesFetchResult.map((elem) =>
           extractCoordFromFetchResult(elem)
         );
-        const singlesData = _zip(singlesCoords, singles).map(
-          ([
-            { lng, lat },
-            { affiliation, city, country, id, investigator, study }
-          ]) => ({
-            lng,
-            lat,
-            study_biobank: study,
-            coordinator: investigator,
-            city_country: `${city}, ${country}`,
-            id,
-            affiliation
-          })
-        );
+        const singlesData = _zip(
+          singlesCoords,
+          singles
+        ).map(([{ lng, lat }, datum]) => ({ ...datum, lng, lat }));
         const multiplesDataNested = await Promise.all(
           multiplesKeyValuePairs.map(
             async ([cityCountry, placesInSameCity]) => {
@@ -175,53 +73,58 @@ const ProductPage = ({ data }) => {
               );
               const cityCoords = extractCoordFromFetchResult(cityFetchResult);
               return await Promise.all(
-                placesInSameCity.map(
-                  async ({
-                    affiliation,
-                    city,
-                    country,
-                    id,
-                    investigator,
-                    study
-                  }) => {
-                    let coords;
-                    try {
-                      const fetchResult = await fetchJSON(
-                        getInstitutionFetchURL(
-                          { institution: affiliation, cityCountry },
-                          { lng: cityCoords.lng, lat: cityCoords.lat }
-                        )
-                      );
-                      if (fetchResult.features.length > 0) {
-                        coords = extractCoordFromFetchResult(fetchResult);
-                      } else {
-                        coords = cityCoords;
-                      }
-                    } catch (e) {
+                placesInSameCity.map(async (datum) => {
+                  let coords;
+                  try {
+                    const fetchResult = await fetchJSON(
+                      getInstitutionFetchURL(
+                        { institution: datum.affiliation, cityCountry },
+                        { lng: cityCoords.lng, lat: cityCoords.lat }
+                      )
+                    );
+                    if (fetchResult.features.length > 0) {
+                      coords = extractCoordFromFetchResult(fetchResult);
+                    } else {
                       coords = cityCoords;
                     }
-                    return {
-                      lng: coords.lng,
-                      lat: coords.lat,
-                      study_biobank: study,
-                      coordinator: investigator,
-                      city_country: `${city}, ${country}`,
-                      id,
-                      affiliation
-                    };
+                  } catch (e) {
+                    coords = cityCoords;
                   }
-                )
+                  return {
+                    ...datum,
+                    lng: coords.lng,
+                    lat: coords.lat,
+                  };
+                })
               );
             }
           )
         );
         const multiplesData = _flatten(multiplesDataNested);
-        const rawData = _sortBy(
-          [...singlesData, ...multiplesData],
-          ({ id }) => id
-        );
+        const merged = [...singlesData, ...multiplesData].map((elem, index) => {
+          const allText = _flatten([
+            elem.investigator.toLowerCase(),
+            elem.studyDesignUnformatted.toLowerCase(),
+            elem.affiliation.toLowerCase(),
+            elem.city.toLowerCase(),
+            elem.country.toLowerCase(),
+            "researchQuestion" in elem
+              ? elem.researchQuestion.toLowerCase()
+              : [],
+            elem.study.toLowerCase(),
+            "assaysPlanned" in elem
+              ? elem.assaysPlanned.map((assay) => assay.toLowerCase())
+              : [],
+            "otherAssays" in elem ? elem.otherAssays.toLowerCase() : [],
+          ]).join(" ");
+          return {
+            ...elem,
+            geoJsonId: index,
+            allText,
+          };
+        });
 
-        setProcessedMapData(rawData);
+        setProcessedMapData(merged);
       } catch (e) {
         console.error(e);
       }
@@ -234,11 +137,7 @@ const ProductPage = ({ data }) => {
     mainContent = null;
   } else {
     mainContent = (
-      <ProductPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        mapData={processedMapData}
-      />
+      <Partners title={frontmatter.title} mapData={processedMapData} />
     );
   }
 
@@ -255,9 +154,9 @@ const ProductPage = ({ data }) => {
 ProductPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
+      frontmatter: PropTypes.object,
+    }),
+  }),
 };
 
 export default ProductPage;
