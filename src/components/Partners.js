@@ -17,10 +17,12 @@ import Input from "@material-ui/core/Input";
 import Chip from "@material-ui/core/Chip";
 import FormControl from "@material-ui/core/FormControl";
 import MenuItem from "@material-ui/core/MenuItem";
-import Card, { assayOptions } from "./Card";
+import Card, { assayOptions, researchCategoryOptions } from "./Card";
 import CountrySelect from "./CountrySelect";
 import TextField from "@material-ui/core/TextField";
 import _debounce from "lodash/debounce";
+import _flatten from "lodash/flatten";
+import _uniq from "lodash/uniq";
 
 const assayNames = assayOptions.map(({ name }) => name);
 const studyListStyleName = "studyList";
@@ -111,10 +113,13 @@ const Partners = ({ title, mapData }) => {
     [selectedCountryStateName]: undefined,
     [keywordSearchStateName]: "",
   });
+  const researchCategoryNames = _uniq(
+    _flatten(mapData.map(({ researchCategory }) => researchCategory)).filter(
+      (elem) => !!elem
+    )
+  );
 
   const materialStyles = useMaterialStyles();
-
-  const researchCategoryOptions = ["Pediatrics"];
 
   let filteredData = mapData;
   if (state[retrospectiveStateName] === true) {
@@ -140,6 +145,12 @@ const Partners = ({ title, mapData }) => {
     filteredData = filteredData.filter(
       (elem) =>
         "assaysPlanned" in elem && elem.assaysPlanned.includes(assayName)
+    );
+  });
+  state[researchCategoriesStateName].forEach((category) => {
+    filteredData = filteredData.filter(
+      (elem) =>
+        "researchCategory" in elem && elem.researchCategory.includes(category)
     );
   });
   if (state[selectedCountryStateName] !== undefined) {
@@ -374,7 +385,7 @@ const Partners = ({ title, mapData }) => {
           )}
           MenuProps={MenuProps}
         >
-          {researchCategoryOptions.map((name) => (
+          {researchCategoryNames.map((name) => (
             <MenuItem key={name} value={name}>
               {name}
             </MenuItem>
