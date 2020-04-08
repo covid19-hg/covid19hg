@@ -5,7 +5,6 @@ const throttle = require("lodash/throttle");
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
   apiKey: process.env.AIRTABLE_API_KEY,
-  view: "Partners Page",
 });
 const base = Airtable.base("appVc6kMY1ZNr0uv5");
 
@@ -13,7 +12,7 @@ const unthrottledFetchData = () => {
   let data = [];
   return new Promise((resolve, reject) => {
     base("Submission")
-      .select()
+      .select({ view: "Partners Page" })
       .eachPage(
         (records, fetchNextPage) => {
           const recordFields = records.map(({ fields, id }) => ({
