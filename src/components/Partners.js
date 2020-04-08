@@ -448,7 +448,7 @@ const Partners = ({ title, mapData, listData }) => {
     listElem = (
       <>
         <div className="title is-4">{studyListHeadingText} </div>
-        <div style={{ maxHeight: "30vh", overflowY: "auto" }}>
+        <div style={{ maxHeight: "36vh", overflowY: "auto" }}>
           <List dense={true} component="div">
             {listItems}
           </List>
