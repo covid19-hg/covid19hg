@@ -36,6 +36,7 @@ const unthrottledFetchData = () => {
             studyLink: fields["Study link"],
             assaysPlanned: fields["Additional assays planned"],
             researchCategory: fields["Research Category"],
+            timeCreated: Date.parse(fields["Time created"]),
             id,
           }));
           data = [...data, ...recordFields];
