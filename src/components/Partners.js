@@ -161,10 +161,7 @@ const Partners = ({ title, mapData, listData }) => {
     }
     if (state[keywordSearchStateName] !== "") {
       filteredData = filteredData.filter((elem) =>
-      {
-        console.log(elem);
-        return elem.allText.includes(state[keywordSearchStateName])
-      }
+        elem.allText.includes(state[keywordSearchStateName])
       );
     }
 

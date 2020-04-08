@@ -64,7 +64,6 @@ const ProductPage = ({ data }) => {
             allText,
           };
         });
-        console.log("listData", listData);
         setListData(listData);
 
         const groupedByCity = _groupBy(
