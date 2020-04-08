@@ -9,7 +9,6 @@ import _groupBy from "lodash/groupBy";
 import _partition from "lodash/partition";
 import _flatten from "lodash/flatten";
 import Partners from "../components/Partners";
-import _sortBy from "lodash/sortBy";
 
 const getCityFetchURL = (cityCountry) =>
   `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
@@ -41,7 +40,7 @@ const ProductPage = ({ data }) => {
       try {
         const airtableData = await fetchJSON("/.netlify/functions/partners");
 
-        const unsortedListData = airtableData.data.map((elem) => {
+        const listData = airtableData.data.map((elem) => {
           const allText = _flatten([
             "investigator" in elem ? elem.investigator.toLowerCase() : [],
             "studydesignunformatted" in elem
@@ -65,10 +64,6 @@ const ProductPage = ({ data }) => {
             allText,
           };
         });
-        const listData = _sortBy(
-          unsortedListData,
-          ({ timeCreated }) => timeCreated
-        );
         setListData(listData);
 
         const groupedByCity = _groupBy(
@@ -134,14 +129,10 @@ const ProductPage = ({ data }) => {
           )
         );
         const multiplesData = _flatten(multiplesDataNested);
-        const unsortedMapData = [
+        const mapData = [
           ...singlesData,
           ...multiplesData,
         ].map((elem, index) => ({ ...elem, geoJsonId: index }));
-        const mapData = _sortBy(
-          unsortedMapData,
-          ({ timeCreated }) => timeCreated
-        );
         setMapData(mapData);
       } catch (e) {
         console.error(e);
