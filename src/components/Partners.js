@@ -17,12 +17,13 @@ import Input from "@material-ui/core/Input";
 import Chip from "@material-ui/core/Chip";
 import FormControl from "@material-ui/core/FormControl";
 import MenuItem from "@material-ui/core/MenuItem";
-import Card, { assayOptions, researchCategoryOptions } from "./Card";
+import Card, { assayOptions } from "./Card";
 import CountrySelect from "./CountrySelect";
 import TextField from "@material-ui/core/TextField";
 import _debounce from "lodash/debounce";
 import _flatten from "lodash/flatten";
 import _uniq from "lodash/uniq";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const assayNames = assayOptions.map(({ name }) => name);
 const studyListStyleName = "studyList";
@@ -90,7 +91,7 @@ const MenuProps = {
   },
 };
 
-const Partners = ({ title, mapData }) => {
+const Partners = ({ title, mapData, listData }) => {
   const retrospectiveStateName = "isRetrospectiveSelected";
   const prospectiveStateName = "isProspectiveSelected";
   const wesStateName = "isWesSelected";
@@ -113,82 +114,61 @@ const Partners = ({ title, mapData }) => {
     [selectedCountryStateName]: undefined,
     [keywordSearchStateName]: "",
   });
-  const researchCategoryNames = _uniq(
-    _flatten(mapData.map(({ researchCategory }) => researchCategory)).filter(
-      (elem) => !!elem
-    )
-  );
-
   const materialStyles = useMaterialStyles();
 
-  let filteredData = mapData;
-  if (state[retrospectiveStateName] === true) {
-    filteredData = filteredData.filter(
-      ({ retrospective }) => retrospective === true
-    );
-  }
-  if (state[prospectiveStateName] === true) {
-    filteredData = filteredData.filter(
-      ({ prospective }) => prospective === true
-    );
-  }
-  if (state[wesStateName] === true) {
-    filteredData = filteredData.filter(({ wes }) => wes === true);
-  }
-  if (state[wgsStateName] === true) {
-    filteredData = filteredData.filter(({ wgs }) => wgs === true);
-  }
-  if (state[gwasStateName] === true) {
-    filteredData = filteredData.filter(({ genotyping }) => genotyping === true);
-  }
-  state[assaysStateName].forEach((assayName) => {
-    filteredData = filteredData.filter(
-      (elem) =>
-        "assaysPlanned" in elem && elem.assaysPlanned.includes(assayName)
-    );
-  });
-  state[researchCategoriesStateName].forEach((category) => {
-    filteredData = filteredData.filter(
-      (elem) =>
-        "researchCategory" in elem && elem.researchCategory.includes(category)
-    );
-  });
-  if (state[selectedCountryStateName] !== undefined) {
-    filteredData = filteredData.filter(
-      ({ country }) => country === state[selectedCountryStateName]
-    );
-  }
-  if (state[keywordSearchStateName] !== "") {
-    filteredData = filteredData.filter((elem) =>
-      elem.allText.includes(state[keywordSearchStateName])
-    );
-  }
-
-  let card;
-  if (
-    state.selectedId === undefined ||
-    filteredData.map(({ id }) => id).includes(state.selectedId) === false
-  ) {
-    // Do not show card if there's no selected study or if  the selected study has been filtered out:
-    card = (
-      <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
-        <div className="card">
-          <div className="card-header" style={{ minHeight: "5rem" }}>
-            <div className="card-header-title">
-              <div className="title is-4"> Please select a study </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+  let filteredIds;
+  if (listData === undefined) {
+    filteredIds = [];
   } else {
-    const cardInfo = mapData.find(({ id }) => id === state.selectedId);
-    card = (
-      <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
-        <div className="title is-4">Study details</div>
-        <Card cardInfo={cardInfo} />
-      </div>
-    );
+    let filteredData = listData;
+    if (state[retrospectiveStateName] === true) {
+      filteredData = filteredData.filter(
+        ({ retrospective }) => retrospective === true
+      );
+    }
+    if (state[prospectiveStateName] === true) {
+      filteredData = filteredData.filter(
+        ({ prospective }) => prospective === true
+      );
+    }
+    if (state[wesStateName] === true) {
+      filteredData = filteredData.filter(({ wes }) => wes === true);
+    }
+    if (state[wgsStateName] === true) {
+      filteredData = filteredData.filter(({ wgs }) => wgs === true);
+    }
+    if (state[gwasStateName] === true) {
+      filteredData = filteredData.filter(
+        ({ genotyping }) => genotyping === true
+      );
+    }
+    state[assaysStateName].forEach((assayName) => {
+      filteredData = filteredData.filter(
+        (elem) =>
+          "assaysPlanned" in elem && elem.assaysPlanned.includes(assayName)
+      );
+    });
+    state[researchCategoriesStateName].forEach((category) => {
+      filteredData = filteredData.filter(
+        (elem) =>
+          "researchCategory" in elem && elem.researchCategory.includes(category)
+      );
+    });
+    if (state[selectedCountryStateName] !== undefined) {
+      filteredData = filteredData.filter(
+        ({ country }) => country === state[selectedCountryStateName]
+      );
+    }
+    if (state[keywordSearchStateName] !== "") {
+      filteredData = filteredData.filter((elem) =>
+      {
+        console.log(elem);
+        return elem.allText.includes(state[keywordSearchStateName])
+      }
+      );
+    }
+
+    filteredIds = filteredData.map(({ id }) => id);
   }
 
   const studyTypeElem = (
@@ -350,50 +330,60 @@ const Partners = ({ title, mapData }) => {
     </FormControl>
   );
 
-  const researchCategoriesElem = (
-    <FormControl
-      component="fieldset"
-      classes={{
-        root: materialStyles.checkboxFormControl,
-      }}
-    >
-      <FormLabel component="legend">Research Categories</FormLabel>
-      <FormGroup>
-        <Select
-          multiple={true}
-          value={state[researchCategoriesStateName]}
-          onChange={(event) =>
-            dispatch({
-              type: SET_FORM_STATE,
-              payload: {
-                name: researchCategoriesStateName,
-                value: event.target.value,
-              },
-            })
-          }
-          input={<Input />}
-          renderValue={(selected) => (
-            <div className={materialStyles.chips}>
-              {selected.map((value) => (
-                <Chip
-                  key={value}
-                  label={value}
-                  className={materialStyles.chip}
-                />
-              ))}
-            </div>
-          )}
-          MenuProps={MenuProps}
-        >
-          {researchCategoryNames.map((name) => (
-            <MenuItem key={name} value={name}>
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormGroup>
-    </FormControl>
-  );
+  let researchCategoriesElem;
+  if (listData === undefined) {
+    researchCategoriesElem = null;
+  } else {
+    const researchCategoryNames = _uniq(
+      _flatten(listData.map(({ researchCategory }) => researchCategory)).filter(
+        (elem) => !!elem
+      )
+    );
+    researchCategoriesElem = (
+      <FormControl
+        component="fieldset"
+        classes={{
+          root: materialStyles.checkboxFormControl,
+        }}
+      >
+        <FormLabel component="legend">Research Categories</FormLabel>
+        <FormGroup>
+          <Select
+            multiple={true}
+            value={state[researchCategoriesStateName]}
+            onChange={(event) =>
+              dispatch({
+                type: SET_FORM_STATE,
+                payload: {
+                  name: researchCategoriesStateName,
+                  value: event.target.value,
+                },
+              })
+            }
+            input={<Input />}
+            renderValue={(selected) => (
+              <div className={materialStyles.chips}>
+                {selected.map((value) => (
+                  <Chip
+                    key={value}
+                    label={value}
+                    className={materialStyles.chip}
+                  />
+                ))}
+              </div>
+            )}
+            MenuProps={MenuProps}
+          >
+            {researchCategoryNames.map((name) => (
+              <MenuItem key={name} value={name}>
+                {name}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormGroup>
+      </FormControl>
+    );
+  }
 
   const onKeywordSearchChange = useCallback(
     _debounce((value) => {
@@ -423,31 +413,102 @@ const Partners = ({ title, mapData }) => {
     </FormControl>
   );
 
-  const listItems = filteredData.map(({ id, study }) => {
-    const selected = state.selectedId !== undefined && state.selectedId === id;
-    const onClick = () =>
-      dispatch({
-        type: SET_SELECTED_INSTITUTION_ACTION,
-        payload: { id },
-      });
-    return (
-      <ListItem button selected={selected} key={id} onClick={onClick}>
-        <ListItemText>{study}</ListItemText>
-      </ListItem>
+  let listElem, card;
+  if (listData === undefined) {
+    listElem = (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <CircularProgress />
+      </div>
     );
-  });
+    card = null;
+  } else {
+    const filteredData = listData.filter(({ id }) => filteredIds.includes(id));
+    const listItems = filteredData.map(({ id, study }) => {
+      const selected =
+        state.selectedId !== undefined && state.selectedId === id;
+      const onClick = () =>
+        dispatch({
+          type: SET_SELECTED_INSTITUTION_ACTION,
+          payload: { id },
+        });
+      return (
+        <ListItem button selected={selected} key={id} onClick={onClick}>
+          <ListItemText>{study}</ListItemText>
+        </ListItem>
+      );
+    });
 
-  const list = (
-    <List dense={true} component="div">
-      {" "}
-      {listItems}{" "}
-    </List>
-  );
+    const studyListHeadingText =
+      listData.length === filteredData.length
+        ? `Registered studies (${listData.length})`
+        : `Matching studies (${filteredData.length})`;
+    listElem = (
+      <>
+        <div className="title is-4">{studyListHeadingText} </div>
+        <div style={{ maxHeight: "30vh", overflowY: "auto" }}>
+          <List dense={true} component="div">
+            {listItems}
+          </List>
+        </div>
+      </>
+    );
 
-  const studyListHeadingText =
-    mapData.length === filteredData.length
-      ? `Registered studies (${mapData.length})`
-      : `Matching studies (${filteredData.length})`;
+    if (
+      state.selectedId === undefined ||
+      filteredData.map(({ id }) => id).includes(state.selectedId) === false
+    ) {
+      // Do not show card if there's no selected study or if  the selected study has been filtered out:
+      card = (
+        <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div className="card">
+            <div className="card-header" style={{ minHeight: "5rem" }}>
+              <div className="card-header-title">
+                <div className="title is-4"> Please select a study </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      const cardInfo = listData.find(({ id }) => id === state.selectedId);
+      card = (
+        <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div className="title is-4">Study details</div>
+          <Card cardInfo={cardInfo} />
+        </div>
+      );
+    }
+  }
+
+  let mapElem;
+  if (mapData === undefined) {
+    mapElem = (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <CircularProgress />
+      </div>
+    );
+  } else {
+    const filteredData = mapData.filter(({ id }) => filteredIds.includes(id));
+    mapElem = (
+      <Map
+        dispatchMessageToParent={dispatch}
+        mapData={mapData}
+        filteredData={filteredData}
+      />
+    );
+  }
 
   return (
     <div className="content">
@@ -496,19 +557,8 @@ const Partners = ({ title, mapData }) => {
           </div>
           <div className="section">
             <div className="columns">
-              <div className="column is-one-third">
-                <div className="title is-4">{studyListHeadingText} </div>
-                <div style={{ maxHeight: "30vh", overflowY: "auto" }}>
-                  {list}
-                </div>
-              </div>
-              <div className="column is-two-thirds">
-                <Map
-                  dispatchMessageToParent={dispatch}
-                  mapData={mapData}
-                  filteredData={filteredData}
-                />
-              </div>
+              <div className="column is-one-third">{listElem}</div>
+              <div className="column is-two-thirds">{mapElem}</div>
             </div>
           </div>
           {card}

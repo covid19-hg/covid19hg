@@ -27,7 +27,8 @@ const ProductPage = ({ data }) => {
     markdownRemark: { frontmatter },
   } = data;
 
-  const [processedMapData, setProcessedMapData] = useState(undefined);
+  const [mapData, setMapData] = useState(undefined);
+  const [listData, setListData] = useState(undefined);
 
   const extractCoordFromFetchResult = ({ features }) => {
     const [lng, lat] = features[0].center;
@@ -38,6 +39,34 @@ const ProductPage = ({ data }) => {
     const fetchData = async () => {
       try {
         const airtableData = await fetchJSON("/.netlify/functions/partners");
+
+        const listData = airtableData.data.map((elem) => {
+          const allText = _flatten([
+            "investigator" in elem ? elem.investigator.toLowerCase() : [],
+            "studydesignunformatted" in elem
+              ? elem.studydesignunformatted.toLowerCase()
+              : [],
+            "affiliation" in elem ? elem.affiliation.toLowerCase() : [],
+            "city" in elem ? elem.city.toLowerCase() : [],
+            "country" in elem ? elem.country.toLowerCase() : [],
+            "country" in elem ? elem.country.toLowerCase() : [],
+            "researchquestion" in elem
+              ? elem.researchquestion.toLowerCase()
+              : [],
+            elem.study.toLowerCase(),
+            "assaysplanned" in elem
+              ? elem.assaysplanned.map((assay) => assay.toLowerCase())
+              : [],
+            "otherassays" in elem ? elem.otherassays.toLowerCase() : [],
+          ]).join(" ");
+          return {
+            ...elem,
+            allText,
+          };
+        });
+        console.log("listData", listData);
+        setListData(listData);
+
         const groupedByCity = _groupBy(
           airtableData.data,
           ({ city, country }) => `${city} ${country}`
@@ -101,31 +130,11 @@ const ProductPage = ({ data }) => {
           )
         );
         const multiplesData = _flatten(multiplesDataNested);
-        const merged = [...singlesData, ...multiplesData].map((elem, index) => {
-          const allText = _flatten([
-            ("investigator" in elem) ? elem.investigator.toLowerCase() : [],
-            ("studyDesignUnformatted" in elem) ? elem.studyDesignUnformatted.toLowerCase() : [],
-            ("affiliation" in elem) ? elem.affiliation.toLowerCase() : [],
-            ("city" in elem) ? elem.city.toLowerCase() : [],
-            ("country" in elem) ? elem.country.toLowerCase() : [],
-            ("country" in elem) ? elem.country.toLowerCase() : [],
-            "researchQuestion" in elem
-              ? elem.researchQuestion.toLowerCase()
-              : [],
-            elem.study.toLowerCase(),
-            "assaysPlanned" in elem
-              ? elem.assaysPlanned.map((assay) => assay.toLowerCase())
-              : [],
-            "otherAssays" in elem ? elem.otherAssays.toLowerCase() : [],
-          ]).join(" ");
-          return {
-            ...elem,
-            geoJsonId: index,
-            allText,
-          };
-        });
-
-        setProcessedMapData(merged);
+        const mapData = [
+          ...singlesData,
+          ...multiplesData,
+        ].map((elem, index) => ({ ...elem, geoJsonId: index }));
+        setMapData(mapData);
       } catch (e) {
         console.error(e);
       }
@@ -133,15 +142,9 @@ const ProductPage = ({ data }) => {
     fetchData();
   }, []);
 
-  let mainContent;
-  if (processedMapData === undefined) {
-    mainContent = null;
-  } else {
-    mainContent = (
-      <Partners title={frontmatter.title} mapData={processedMapData} />
-    );
-  }
-
+  const mainContent = (
+    <Partners title={frontmatter.title} listData={listData} mapData={mapData} />
+  );
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/partners/");
 
   return (
