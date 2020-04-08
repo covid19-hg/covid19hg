@@ -135,6 +135,11 @@ const Index = () => {
             </form>
           </div>
         </div>
+        <center>
+          <p>
+            <strong>Website team: </strong> Matthew Solomonson, Huy Nguyen
+          </p>
+        </center>
       </section>
     </Layout>
   )

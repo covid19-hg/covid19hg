@@ -513,11 +513,6 @@ const Partners = ({ title, mapData }) => {
           </div>
           {card}
         </div>
-        <center>
-          <p>
-            <strong>Website team: </strong> Matthew Solomonson, Huy Nguyen
-          </p>
-        </center>
       </section>
     </div>
   );
