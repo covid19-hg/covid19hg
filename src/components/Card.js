@@ -174,7 +174,7 @@ const Card = ({ cardInfo }) => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <div className="title" style={{ marginBottom: 0 }}>
+        <div className="title is-4" style={{ marginBottom: 0 }}>
           {study}
         </div>
         <OpenInNewIcon style={{ marginLeft: "0.5rem" }} />
@@ -183,7 +183,7 @@ const Card = ({ cardInfo }) => {
   } else {
     cardTitle = (
       <div className="card-header-title">
-        <div className="title is-2" style={{ marginBottom: 0 }}>
+        <div className="title is-4" style={{ marginBottom: 0 }}>
           {study}
         </div>
       </div>
