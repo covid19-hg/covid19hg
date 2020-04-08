@@ -36,6 +36,7 @@
     "react-dom": "^16.8.4",
     "react-google-recaptcha": "2.0.1",
     "react-helmet": "^5.2.0",
+    "typeface-roboto": "0.0.75",
     "uuid": "^3.2.1"
   },
   "keywords": [
