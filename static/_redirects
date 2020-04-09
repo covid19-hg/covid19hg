@@ -2,3 +2,6 @@
 # Domain migration
 https://www.covid19hg.com/*  https://www.covid19hg.org/:splat 301!
 https://covid19hg.com/*  https://www.covid19hg.org/:splat 301!
+
+# Test rewrite
+/results-test/* https://huy-nguyen.github.io/temp-netlify-cra/:splat 200
