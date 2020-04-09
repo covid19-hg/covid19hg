@@ -2,3 +2,6 @@
 # Domain migration
 https://www.covid19hg.com/*  https://www.covid19hg.org/:splat 301!
 https://covid19hg.com/*  https://www.covid19hg.org/:splat 301!
+
+# Test rewrite
+/results/* http://34.73.216.3/results/:splat 200
