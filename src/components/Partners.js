@@ -44,6 +44,11 @@ const useMaterialStyles = makeStyles(() => ({
     display: "block",
     minHeight: "65px",
   },
+  dropdownSelect: {
+    "&&:focus": {
+      backgroundColor: "rgba(0, 0, 0, 0)",
+    },
+  },
   checkboxFormControl: {
     padding: "0.2rem 0.625rem",
     borderWidth: "1px",
@@ -240,7 +245,9 @@ const Partners = ({ title, mapData, listData }) => {
           id="partners-assays-planned"
           multiple={true}
           value={state[assaysStateName]}
-          // variant="outlined"
+          classes={{
+            select: materialStyles.dropdownSelect,
+          }}
           onChange={(event) =>
             dispatch({
               type: SET_FORM_STATE,
@@ -361,6 +368,9 @@ const Partners = ({ title, mapData, listData }) => {
             multiple={true}
             value={state[researchCategoriesStateName]}
             disableUnderline={true}
+            classes={{
+              select: materialStyles.dropdownSelect,
+            }}
             onChange={(event) =>
               dispatch({
                 type: SET_FORM_STATE,

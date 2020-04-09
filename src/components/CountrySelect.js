@@ -52,9 +52,7 @@ export default function CountrySelect({ onChange }) {
           {option.label} ({option.code})
         </React.Fragment>
       )}
-      renderInput={(params) => {
-        console.log("renderInputs params", params);
-        return (
+      renderInput={(params) => (
           <TextField
             {...params}
             label="Choose a country"
@@ -70,8 +68,8 @@ export default function CountrySelect({ onChange }) {
               autoComplete: "new-password", // disable autocomplete and autofill
             }}
           />
-        );
-      }}
+        )
+      }
     />
   );
 }
