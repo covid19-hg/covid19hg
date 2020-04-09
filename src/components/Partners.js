@@ -24,6 +24,7 @@ import _debounce from "lodash/debounce";
 import _flatten from "lodash/flatten";
 import _uniq from "lodash/uniq";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import "typeface-roboto";
 
 const assayNames = assayOptions.map(({ name }) => name);
 const studyListStyleName = "studyList";
@@ -36,8 +37,20 @@ const useMaterialStyles = makeStyles(() => ({
   chip: {
     margin: 2,
   },
-  checkboxFormControl: {
+  dropdownFormControl: {
     padding: "0 0.625rem",
+    borderWidth: "1px",
+    borderStyle: "solid",
+    display: "block",
+    minHeight: "65px",
+  },
+  dropdownSelect: {
+    "&&:focus": {
+      backgroundColor: "rgba(0, 0, 0, 0)",
+    },
+  },
+  checkboxFormControl: {
+    padding: "0.2rem 0.625rem",
     borderWidth: "1px",
     borderStyle: "solid",
     display: "block",
@@ -54,6 +67,10 @@ const useMaterialStyles = makeStyles(() => ({
   [studyListStyleName]: {
     marginTop: 0,
     marginLeft: 0,
+  },
+  keywordSearchOutline: {
+    borderColor: "rgb(51, 51, 51)",
+    borderRadius: 0,
   },
 }));
 
@@ -219,7 +236,7 @@ const Partners = ({ title, mapData, listData }) => {
     <FormControl
       component="fieldset"
       classes={{
-        root: materialStyles.checkboxFormControl,
+        root: materialStyles.dropdownFormControl,
       }}
     >
       <FormLabel component="legend">Assays planned</FormLabel>
@@ -228,7 +245,9 @@ const Partners = ({ title, mapData, listData }) => {
           id="partners-assays-planned"
           multiple={true}
           value={state[assaysStateName]}
-          variant="outlined"
+          classes={{
+            select: materialStyles.dropdownSelect,
+          }}
           onChange={(event) =>
             dispatch({
               type: SET_FORM_STATE,
@@ -238,7 +257,7 @@ const Partners = ({ title, mapData, listData }) => {
               },
             })
           }
-          input={<Input />}
+          input={<Input disableUnderline={true} />}
           renderValue={(selected) => (
             <div className={materialStyles.chips}>
               {selected.map((value) => (
@@ -340,7 +359,7 @@ const Partners = ({ title, mapData, listData }) => {
       <FormControl
         component="fieldset"
         classes={{
-          root: materialStyles.checkboxFormControl,
+          root: materialStyles.dropdownFormControl,
         }}
       >
         <FormLabel component="legend">Research Categories</FormLabel>
@@ -348,6 +367,10 @@ const Partners = ({ title, mapData, listData }) => {
           <Select
             multiple={true}
             value={state[researchCategoriesStateName]}
+            disableUnderline={true}
+            classes={{
+              select: materialStyles.dropdownSelect,
+            }}
             onChange={(event) =>
               dispatch({
                 type: SET_FORM_STATE,
@@ -405,6 +428,11 @@ const Partners = ({ title, mapData, listData }) => {
         label="Keyword"
         variant="outlined"
         fullWidth={true}
+        InputProps={{
+          classes: {
+            notchedOutline: materialStyles.keywordSearchOutline,
+          },
+        }}
         onChange={(event) => onKeywordSearchChange(event.target.value)}
       />
     </FormControl>
@@ -448,7 +476,7 @@ const Partners = ({ title, mapData, listData }) => {
     listElem = (
       <>
         <div className="title is-4">{studyListHeadingText} </div>
-        <div style={{ maxHeight: "30vh", overflowY: "auto" }}>
+        <div style={{ maxHeight: "36vh", overflowY: "auto" }}>
           <List dense={true} component="div">
             {listItems}
           </List>

@@ -1,32 +1,38 @@
 /* eslint-disable no-use-before-define */
 // Adapted from
 // https://material-ui.com/components/autocomplete/#country-select
-import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import TextField from "@material-ui/core/TextField";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import { makeStyles } from "@material-ui/core/styles";
 
 // ISO 3166-1 alpha-2
 // ⚠️ No support for IE 11
 function countryToFlag(isoCode) {
-  return typeof String.fromCodePoint !== 'undefined'
+  return typeof String.fromCodePoint !== "undefined"
     ? isoCode
         .toUpperCase()
-        .replace(/./g, (char) => String.fromCodePoint(char.charCodeAt(0) + 127397))
+        .replace(/./g, (char) =>
+          String.fromCodePoint(char.charCodeAt(0) + 127397)
+        )
     : isoCode;
 }
 
 const useStyles = makeStyles({
+  outline: {
+    borderColor: "rgb(51, 51, 51)",
+    borderRadius: 0,
+  },
   option: {
     fontSize: 15,
-    '& > span': {
+    "& > span": {
       marginRight: 10,
       fontSize: 18,
     },
   },
 });
 
-export default function CountrySelect({onChange}) {
+export default function CountrySelect({ onChange }) {
   const classes = useStyles();
 
   return (
@@ -38,7 +44,7 @@ export default function CountrySelect({onChange}) {
       classes={{
         option: classes.option,
       }}
-      autoHighlight
+      autoHighlight={true}
       getOptionLabel={(option) => option.label}
       renderOption={(option) => (
         <React.Fragment>
@@ -47,16 +53,23 @@ export default function CountrySelect({onChange}) {
         </React.Fragment>
       )}
       renderInput={(params) => (
-        <TextField
-          {...params}
-          label="Choose a country"
-          variant="outlined"
-          inputProps={{
-            ...params.inputProps,
-            autoComplete: 'new-password', // disable autocomplete and autofill
-          }}
-        />
-      )}
+          <TextField
+            {...params}
+            label="Choose a country"
+            variant="outlined"
+            InputProps={{
+              classes: {
+                notchedOutline: classes.outline,
+              },
+              ...params.InputProps,
+            }}
+            inputProps={{
+              ...params.inputProps,
+              autoComplete: "new-password", // disable autocomplete and autofill
+            }}
+          />
+        )
+      }
     />
   );
 }
