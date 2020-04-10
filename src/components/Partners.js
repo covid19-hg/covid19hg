@@ -1,8 +1,8 @@
-import React, { useReducer, useCallback } from "react";
+import React, { useReducer, useCallback, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import Map, {
   SET_SELECTED_INSTITUTION_ACTION,
-  UNSET_SELECTED_INSTITUTION_ACTION,
+  UNSET_SELECTED_INSTITUTION_ACTION
 } from "../components/Map";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
@@ -103,9 +103,49 @@ const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
     style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-    },
-  },
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP
+    }
+  }
+};
+
+const usePrevious = value => {
+  const ref = useRef(undefined);
+  useEffect(() => {
+    ref.current = value
+  });
+  return ref.current;
+};
+// This list item will scroll itself into view when it becomes selelected for
+// the first time if it's out of view.
+const SmartListItem = ({ id, study, selectedId, dispatch }) => {
+  const prevSelectedId = usePrevious(selectedId);
+  const elRef = useRef(null);
+  const rememberEl = useCallback(el => (elRef.current = el), []);
+  const isSelected = selectedId !== undefined && selectedId === id;
+  useEffect(() => {
+    if (selectedId === id && selectedId !== prevSelectedId) {
+      const { current: el } = elRef;
+      if (el !== null) {
+        // Taken from https://stackoverflow.com/a/52835382/7075699
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "start"
+        });
+        return undefined
+      }
+    }
+  }, [isSelected, id, prevSelectedId, selectedId]);
+  const onClick = () =>
+    dispatch({
+      type: SET_SELECTED_INSTITUTION_ACTION,
+      payload: { id }
+    });
+  return (
+    <ListItem button selected={isSelected} onClick={onClick} ref={rememberEl}>
+      <ListItemText>{study}</ListItemText>
+    </ListItem>
+  );
 };
 
 const Partners = ({ title, mapData, listData }) => {
@@ -445,7 +485,7 @@ const Partners = ({ title, mapData, listData }) => {
         style={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <CircularProgress />
@@ -454,20 +494,15 @@ const Partners = ({ title, mapData, listData }) => {
     card = null;
   } else {
     const filteredData = listData.filter(({ id }) => filteredIds.includes(id));
-    const listItems = filteredData.map(({ id, study }) => {
-      const selected =
-        state.selectedId !== undefined && state.selectedId === id;
-      const onClick = () =>
-        dispatch({
-          type: SET_SELECTED_INSTITUTION_ACTION,
-          payload: { id },
-        });
-      return (
-        <ListItem button selected={selected} key={id} onClick={onClick}>
-          <ListItemText>{study}</ListItemText>
-        </ListItem>
-      );
-    });
+    const listItems = filteredData.map(({ id, study }) => (
+      <SmartListItem
+        key={id}
+        id={id}
+        study={study}
+        selectedId={state.selectedId}
+        dispatch={dispatch}
+      />
+    ));
 
     const studyListHeadingText =
       listData.length === filteredData.length
