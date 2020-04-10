@@ -4,4 +4,4 @@ https://www.covid19hg.com/*  https://www.covid19hg.org/:splat 301!
 https://covid19hg.com/*  https://www.covid19hg.org/:splat 301!
 
 # Test rewrite
-/temp-netlify-cra/* https://huy-nguyen.github.io/temp-netlify-cra/:splat 200
+/results/* http://35.227.47.218/results/:splat 200
