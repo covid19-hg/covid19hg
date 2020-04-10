@@ -531,6 +531,7 @@ const Partners = ({ title, mapData, listData }) => {
         dispatchMessageToParent={dispatch}
         mapData={mapData}
         filteredData={filteredData}
+        selected={state.selectedId}
       />
     );
   }

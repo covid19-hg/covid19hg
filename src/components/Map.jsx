@@ -271,7 +271,12 @@ const adjustLabelVisibility = (mapboxInfoRef, visibleIds) => {
   }
 };
 
-const MapComponent = ({ dispatchMessageToParent, mapData, filteredData }) => {
+const MapComponent = ({
+  dispatchMessageToParent,
+  mapData,
+  filteredData,
+  selected
+}) => {
   const mapboxInfoRef = useRef(undefined);
   const visibleIds = filteredData.map(({ id }) => id).sort();
   const mapElRef = useRef(null);
@@ -287,6 +292,14 @@ const MapComponent = ({ dispatchMessageToParent, mapData, filteredData }) => {
       });
     }
   }, []);
+
+  useEffect(() => {
+    const { current: mapboxInfo } = mapboxInfoRef;
+    if (selected !== undefined && mapboxInfo !== undefined) {
+      const { lng, lat } = mapData.find(({ id }) => id === selected);
+      mapboxInfo.map.flyTo({ center: [lng, lat], zoom: 6 });
+    }
+  }, [selected]);
 
   useEffect(() => {
     adjustMarkerVisibility(mapboxInfoRef, visibleIds, dispatchMessageToParent);
