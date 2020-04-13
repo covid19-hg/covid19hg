@@ -196,6 +196,7 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
       lat,
       study,
       isInMap: true,
+      isMarkedAsSelected: false,
     });
   });
 
@@ -214,14 +215,21 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
   return mapboxInfo;
 };
 
+const setMarkerColor = (marker, color) => marker.getElement().querySelector("path").parentElement.setAttribute("fill", color)
+
 const adjustMarkerVisibility = (
   mapboxInfoRef,
   visibleIds,
-  dispatchMessageToParent
+  dispatchMessageToParent,
+  selectedId,
 ) => {
   const {
     current: { map, popup, markers },
   } = mapboxInfoRef;
+
+  const highglightedMarkerColor = "red"
+  // This color was determined by inspecting the DOM:
+  const defaultMarkerColor = "#3FB1CE"
 
   for (const [id, markerInfo] of markers.entries()) {
     if (visibleIds.includes(id) === true && markerInfo.isInMap === false) {
@@ -238,17 +246,26 @@ const adjustMarkerVisibility = (
       marker.addTo(map);
       markerInfo.marker = marker;
       markerInfo.isInMap = true;
+
     } else if (
       visibleIds.includes(id) === false &&
       markerInfo.isInMap === true
     ) {
       markerInfo.marker.remove();
       markerInfo.isInMap = false;
+      markerInfo.isMarkedAsSelected = false
+    }
+    if (markerInfo.isMarkedAsSelected === false && selectedId === id && markerInfo.isInMap === true) {
+      setMarkerColor(markerInfo.marker, highglightedMarkerColor)
+      markerInfo.isMarkedAsSelected = true
+    } else if (markerInfo.isMarkedAsSelected === true && selectedId !== id && markerInfo.isInMap === true) {
+      setMarkerColor(markerInfo.marker, defaultMarkerColor)
+      markerInfo.isMarkedAsSelected = false
     }
   }
 };
 
-const adjustLabelVisibility = (mapboxInfoRef, visibleIds) => {
+const adjustLabelVisibility = (mapboxInfoRef, visibleIds, selectedId) => {
   const {
     current: { labelInfo, map, isStyleLoaded },
   } = mapboxInfoRef;
@@ -302,7 +319,7 @@ const MapComponent = ({
   }, [selected]);
 
   useEffect(() => {
-    adjustMarkerVisibility(mapboxInfoRef, visibleIds, dispatchMessageToParent);
+    adjustMarkerVisibility(mapboxInfoRef, visibleIds, dispatchMessageToParent, selected);
     adjustLabelVisibility(mapboxInfoRef, visibleIds);
   }, [visibleIds]);
 
