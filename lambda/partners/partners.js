@@ -36,6 +36,7 @@ const unthrottledFetchData = () => {
             assaysPlanned: fields["Additional assays planned"],
             researchCategory: fields["Research Category"],
             timeCreated: Date.parse(fields["Time created"]),
+            mapLocation: fields["Map location"],
             id,
           }));
           data = [...data, ...recordFields];
