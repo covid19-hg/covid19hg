@@ -11,9 +11,9 @@ import _flatten from "lodash/flatten";
 import Partners from "../components/Partners";
 import _sortBy from "lodash/sortBy";
 
-const getCityFetchURL = (cityCountry) =>
+const getSimpleLocationFetchURL = (locationName) =>
   `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-    cityCountry
+    locationName
   )}.json?access_token=${process.env.GATSBY_MAPBOX_API_KEY}&limit=1`;
 
 const getInstitutionFetchURL = ({ institution, cityCountry }, { lng, lat }) =>
@@ -71,8 +71,16 @@ const ProductPage = ({ data }) => {
         );
         setListData(listData);
 
+        const [withExplicitMapLocation, withoutExplicitMapLocation] = _partition(listData, ({mapLocation}) => mapLocation !== undefined)
+
+        const withExplicitMapLocationFetchResult = await Promise.all(
+          withExplicitMapLocation.map(({mapLocation}) => fetchJSON(getSimpleLocationFetchURL(mapLocation)))
+        )
+        const withExplicitMapLocationCoords = withExplicitMapLocationFetchResult.map(elem => extractCoordFromFetchResult(elem))
+        const withExplicitMapLocationData = _zip(withExplicitMapLocationCoords, withExplicitMapLocation).map(([{lng, lat}, datum]) => ({...datum, lng, lat}))
+
         const groupedByCity = _groupBy(
-          airtableData.data,
+          withoutExplicitMapLocation,
           ({ city, country }) => `${city} ${country}`
         );
         // Split records into cities with one or multiple records. Records in
@@ -88,7 +96,7 @@ const ProductPage = ({ data }) => {
         const singles = singlesKeyValuePairs.map(([, elem]) => elem[0]);
         const singlesFetchResult = await Promise.all(
           singles.map(({ city, country }) =>
-            fetchJSON(getCityFetchURL(`${city} ${country}`))
+            fetchJSON(getSimpleLocationFetchURL(`${city} ${country}`))
           )
         );
         const singlesCoords = singlesFetchResult.map((elem) =>
@@ -102,7 +110,7 @@ const ProductPage = ({ data }) => {
           multiplesKeyValuePairs.map(
             async ([cityCountry, placesInSameCity]) => {
               const cityFetchResult = await fetchJSON(
-                getCityFetchURL(cityCountry)
+                getSimpleLocationFetchURL(cityCountry)
               );
               const cityCoords = extractCoordFromFetchResult(cityFetchResult);
               return await Promise.all(
@@ -135,6 +143,7 @@ const ProductPage = ({ data }) => {
         );
         const multiplesData = _flatten(multiplesDataNested);
         const unsortedMapData = [
+          ...withExplicitMapLocationData,
           ...singlesData,
           ...multiplesData,
         ].map((elem, index) => ({ ...elem, geoJsonId: index }));
