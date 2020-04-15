@@ -4,9 +4,9 @@ title: Frequently Asked Questions
 qas:
   - question: How can I submit my data?
     answer: >+
-      You can submit data in two ways. You can submit results summary statistics
+      You can submit data in two ways. You can submit *results summary statistics**
       (calculated and formatted according to the analysis plan) or you can
-      submit individual-level data.
+      submit *individual-level data*.
 
       We prefer you submit individual-level data because they can be used beyond
       the few analyses that are described in the analysis plan.
@@ -62,6 +62,21 @@ qas:
       will receive access to the dataset(s) archived at the EGA.
 
   - question: |
+      Who will have access to the results summary statistics?
+    answer: >-
+      Results summary statistics will be meta-analyzed across studies and immediately made available to the scientific community via the website result browser, via [GWAS catalog](https://www.ebi.ac.uk/gwas/), [Open Target Platform](https://www.targetvalidation.org/) and other portals.
+
+  - question: |
+      My data cannot leave my country, what can I do?
+    answer: >-
+      EGA is working with partners to establish federated nodes, however, these are still in development at this time.
+
+  - question: |
+      Is the system compliant with current European regulations for data protection?
+    answer:
+      (TBD)
+
+  - question: |
       In which format should I submit the genetic data?
     answer: >-
       The EGA accepts data the following formats
@@ -78,4 +93,19 @@ qas:
       All array-based technologies are accepted, which may include the raw data,
       intensity and analysis files, and there are no restrictions on data
       formats accepted.
+  - question: |
+      In which format should I submit the clinical/phenotype data ?
+    answer: >-
+      https://docs.google.com/spreadsheets/d/1RXrJIzHKkyB8qx5tHLQjcBioiDAOrQ3odAuqMS3pUUI/edit?usp=sharing
+
+  - question: |
+      I’m still collecting samples, can I upload my data in batches?
+    answer: >-
+      Yes, this is entirely possible. We suggest creating a dataset to submit every 500 samples.
+
+  - question: |
+      I’m a US, NIH-funded study, can I submit the data?
+    answer: >-
+      Yes.
+
 ---

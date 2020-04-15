@@ -8,43 +8,50 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 const useMaterialStyles = makeStyles(() => ({
   panelDetailsRoot: {
     flexDirection: "column",
-  }
-}))
+  },
+}));
 
 export const FaqPageTemplate = ({ title, qas }) => {
-  const materialStyles = useMaterialStyles()
+  const materialStyles = useMaterialStyles();
 
   const pairs = qas.map(({ question, answer }, index) => (
     <ExpansionPanel key={`pair-${index}`}>
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
         <ReactMarkdown source={question} />
       </ExpansionPanelSummary>
-      <ExpansionPanelDetails classes={{
-        root: materialStyles.panelDetailsRoot,
-      }}>
+      <ExpansionPanelDetails
+        classes={{
+          root: materialStyles.panelDetailsRoot,
+        }}
+      >
         <ReactMarkdown source={answer} />
       </ExpansionPanelDetails>
     </ExpansionPanel>
   ));
   return (
-    <div>
+    <div className="content">
+      <div>
+        <h1
+          className="has-text-weight-bold is-size-1"
+          style={{
+            boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
+            backgroundColor: "#142166",
+            color: "white",
+            padding: "1rem",
+          }}
+        >
+          {title}
+        </h1>
+      </div>
       <section className="section section--gradient">
-        <div className="container"></div>
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="tile">
-                  <h1 className="title">{title}</h1>
-                </div>
-                <ul> {pairs} </ul>
-              </div>
-            </div>
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <ul> {pairs} </ul>
           </div>
         </div>
       </section>
@@ -64,7 +71,7 @@ FaqPageTemplate.propTypes = {
 
 const FaqPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/faq");
+  const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/faq/");
 
   return (
     <Layout>
