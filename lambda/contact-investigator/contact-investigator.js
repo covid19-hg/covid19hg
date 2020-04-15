@@ -43,19 +43,17 @@ exports.handler = async (event, context) => {
             throw new Error("Invalid study id", studyId);
           } else {
             const emails = studyDatum.emails;
-            console.log("Simulating email sent to", emails);
+            console.info("Simulating an email sent to", emails);
             const html = template({
               name: params.name,
               email: params.email,
               message: params.message,
             });
             const msg = {
-              // TODO: replace with investigator's email:
-              to: "huy@broadinstitute.org",
-              // TODO: replace with real official emails:
-              replyTo: "me@huy.dev",
-              from: "huy@broadinstitute.org",
-
+              // TODO: replace with real investigator's email:
+              to: "contact@covid19hg.org",
+              replyTo: "no-reply@covid19hg.org",
+              from: "no-reply@covid19hg.org",
               subject:
                 "Message from COVID-19 Host Genetics Initiative website visitor",
               html,
