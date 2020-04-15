@@ -6,7 +6,7 @@ qas:
     answer: >+
       You can submit data in two ways. You can submit results summary statistics
       (calculated and formatted according to the analysis plan) or you can
-      submit individual-level data. 
+      submit individual-level data.
 
       We prefer you submit individual-level data because they can be used beyond
       the few analyses that are described in the analysis plan.
@@ -71,7 +71,7 @@ qas:
 
 
       All manufacturer-specific raw data formats for the major next [generation
-      sequencing platforms](https://ega-archive.org/ega/submission/sequence)are
+      sequencing platforms](https://ega-archive.org/ega/submission/sequence) are
       accepted, including aligned BAM files and variation files in VCF format.
 
 

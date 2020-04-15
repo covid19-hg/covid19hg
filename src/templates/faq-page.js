@@ -8,14 +8,25 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { makeStyles } from '@material-ui/core/styles';
+
+const useMaterialStyles = makeStyles(() => ({
+  panelDetailsRoot: {
+    flexDirection: "column",
+  }
+}))
 
 export const FaqPageTemplate = ({ title, qas }) => {
+  const materialStyles = useMaterialStyles()
+
   const pairs = qas.map(({ question, answer }, index) => (
     <ExpansionPanel key={`pair-${index}`}>
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
         <ReactMarkdown source={question} />
       </ExpansionPanelSummary>
-      <ExpansionPanelDetails>
+      <ExpansionPanelDetails classes={{
+        root: materialStyles.panelDetailsRoot,
+      }}>
         <ReactMarkdown source={answer} />
       </ExpansionPanelDetails>
     </ExpansionPanel>
