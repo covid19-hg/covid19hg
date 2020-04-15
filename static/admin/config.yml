@@ -30,6 +30,19 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/faq/index.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden"}
+          - {label: Title, name: title, widget: string}
+          - label: Questions and Answers
+            name: qas
+            widget: list
+            fields:
+              - {label: Question, name: question, widget: markdown}
+              - {label: Answer, name: answer, widget: markdown}
+
       - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"
