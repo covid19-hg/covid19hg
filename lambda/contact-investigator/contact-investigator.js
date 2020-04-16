@@ -16,6 +16,9 @@ const templateString = fs.readFileSync(
 );
 const template = Handlebars.compile(templateString);
 
+const captchaVerificationErrorMessage = "Error validating captcha"
+const emailSendingErrorMessage = "Error sending email"
+
 exports.handler = async (event, context) => {
 
   // Check that request comes from allowed origins:
@@ -35,7 +38,7 @@ exports.handler = async (event, context) => {
     console.error("Invalid request's origin", event.headers.origin);
     return {
       statusCode: 400,
-      body: JSON.stringify("Error validating captcha."),
+      body: JSON.stringify(captchaVerificationErrorMessage),
     };
   }
 
@@ -97,7 +100,7 @@ exports.handler = async (event, context) => {
               }
               return {
                 statusCode: 500,
-                body: JSON.stringify(error.message),
+                body: JSON.stringify(emailSendingErrorMessage),
               };
             }
           }
@@ -105,7 +108,7 @@ exports.handler = async (event, context) => {
           console.error("Error fetching Airtable data", error.message);
           return {
             statusCode: 500,
-            body: JSON.stringify("Error sending email"),
+            body: JSON.stringify(emailSendingErrorMessage),
           };
         }
       } else {
@@ -115,15 +118,13 @@ exports.handler = async (event, context) => {
         );
         return {
           statusCode: 400,
-          body: JSON.stringify("Incorrect captcha response."),
+          body: JSON.stringify(captchaVerificationErrorMessage),
         };
       }
     } else {
       return {
         statusCode: 500,
-        body: JSON.stringify(
-          "Error while attempting to verify captcha response"
-        ),
+        body: JSON.stringify( captchaVerificationErrorMessage),
       };
     }
   } catch (error) {
