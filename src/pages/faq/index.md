@@ -27,15 +27,30 @@ qas:
       **Individual-level data**
 
 
-      You can submit individual-level data (i.e. genetic and clinical phenotype
-      data) via the [European Genome-phenome Archive](https://ega-archive.org/)
-      (EGA). EGA offers services for archiving, processing and distribution for
-      all types of potentially identifiable genetic and phenotypic human data at
-      the European Bioinformatics Institute (EBI). To start your submission
-      please contact the EGA helpdesk via
+      If you are not from US:
+
+
+      * You can submit individual-level data (i.e. genetic and clinical
+      phenotype data) via the [European Genome-phenome
+      Archive](https://ega-archive.org/) (EGA). EGA offers services for
+      archiving, processing and distribution for all types of potentially
+      identifiable genetic and phenotypic human data at the European
+      Bioinformatics Institute (EBI). To start your submission please contact
+      the EGA helpdesk via
       [helpdesk@ega-archive.org](mailto:helpdesk@ega-archive.org) and mark the
       email F.A.O Giselle Kerry stating that your submission is part of the
       COVID-19 Host Genetics Initiative.
+
+
+      If you are from the US:
+
+
+      * You can submit individual-level data via [NHGRI
+      AnVIL](https://anvilproject.org/). The AnVIL can ingest datasets, process
+      them via standardized pipelines and perform quality control on them, and
+      make them accessible to other researchers in a cloud-based environment. To
+      start your submission, please contact XXX  and mark the email Attn:
+      *COVID-19 Host Genetics Initiative*.
   - question: '**Who will have access to the individual-level data?**'
     answer: >-
       Researchers can have access to individual-level data in two
@@ -100,13 +115,13 @@ qas:
       notices can be found [here](https://ega-archive.org/gdpr-notice).
   - question: '**In which format should I submit the genetic data?**'
     answer: >-
-      The EGA recommends using open standards and formats that are maintained by
-      the Global Alliance for Genomics and Health (GA4GH), published in the
-      GA4GH [Genomic Data Toolkit](https://www.ga4gh.org/genomic-data-toolkit/).
-      For genome sequencing data this includes FASTQ, BAM, CRAM, and VCF. All
-      array-based technologies are accepted, which may include the raw data,
-      intensity and analysis files, and there are no restrictions on data
-      formats accepted.
+      Both EGA and AnVIL recommend using open standards and formats that are
+      maintained by the Global Alliance for Genomics and Health (GA4GH),
+      published in the GA4GH [Genomic Data
+      Toolkit](https://www.ga4gh.org/genomic-data-toolkit/). For genome
+      sequencing data this includes FASTQ, BAM, CRAM, and VCF. All array-based
+      technologies are accepted, which may include the raw data, intensity and
+      analysis files, and there are no restrictions on data formats accepted.
   - question: '**In which format should I submit the clinical/phenotype data ?**'
     answer: >-
       Clinical data should be included as part of the study submission. We
