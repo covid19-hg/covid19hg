@@ -2,3 +2,6 @@
 # Domain migration
 https://www.covid19hg.com/*  https://www.covid19hg.org/:splat 301!
 https://covid19hg.com/*  https://www.covid19hg.org/:splat 301!
+
+# Internal redirects
+/faq/ /data-sharing/

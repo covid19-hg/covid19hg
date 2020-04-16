@@ -71,7 +71,7 @@ FaqPageTemplate.propTypes = {
 
 const FaqPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/faq/");
+  const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/data-sharing/");
 
   return (
     <Layout>
