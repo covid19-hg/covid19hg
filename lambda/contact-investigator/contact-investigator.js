@@ -30,7 +30,7 @@ exports.handler = async (event, context) => {
     (
       hostname !== null &&
       hostname.includes("covid19hg.org") === false &&
-      hostname.includes("condescending-perlman-ec107b.netlify.com") === false &&
+      hostname.includes("condescending-perlman-ec107b.netlify.app") === false &&
       // TODO: remove "localhost" after testing
       hostname.includes("localhost") === false
     )
