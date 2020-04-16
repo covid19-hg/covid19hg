@@ -1,6 +1,6 @@
 ---
 templateKey: faq-page
-title: Frequently Asked Questions
+title: How to share data
 qas:
   - question: '**How can I submit my data?**'
     answer: >-
@@ -22,16 +22,18 @@ qas:
       analysis plan in the section “Results upload instructions”
 
 
+
+
       **Individual-level data**
 
 
       You can submit individual-level data (i.e. genetic and clinical phenotype
-      data) via the European Genome-phenome Archive (EGA). EGA offers services
-      for archiving, processing and distribution for all types of potentially
-      identifiable genetic and phenotypic human data at the European
-      Bioinformatics Institute (EBI). To start your submission please contact
-      the EGA helpdesk
-      via[helpdesk@ega-archive.org](mailto:helpdesk@ega-archive.org)and mark the
+      data) via the [European Genome-phenome Archive](https://ega-archive.org/)
+      (EGA). EGA offers services for archiving, processing and distribution for
+      all types of potentially identifiable genetic and phenotypic human data at
+      the European Bioinformatics Institute (EBI). To start your submission
+      please contact the EGA helpdesk via
+      [helpdesk@ega-archive.org](mailto:helpdesk@ega-archive.org) and mark the
       email F.A.O Giselle Kerry stating that your submission is part of the
       COVID-19 Host Genetics Initiative.
   - question: '**Who will have access to the individual-level data?**'
@@ -42,7 +44,9 @@ qas:
       researchers outside the initiative.
 
 
-      **[Researchers outside the initiative](https://www.covid19hg.org/about/)**
+
+
+      **Researchers outside the initiative**
 
 
       Access to individual-level data/datasets by external researchers is
@@ -55,18 +59,20 @@ qas:
       will receive access to the dataset(s) archived at the EGA.
 
 
+
+
       **Researchers within the initiative**
 
 
       Researchers within the initiative that have deposited data or results
       summary statistics or are part of established analysis groups will have
-      fast-track access to the initiative's data deposited on EGA. The Data
-      Access Committee (DAC), which is composed by the PIs of the studies that
-      have deposited the data, will facilitate access to the full data pool. We
-      are currently discussing which procedures to implement to facilitate fast
-      access to these groups of researchers. All researchers are required to
-      follow the code of conduct outlined
-      in[https://www.covid19hg.org/about/.](https://www.covid19hg.org/about/)
+      fast-track access to the initiative's data deposited on EGA. The DAC,
+      which is composed by the PIs of the studies that have deposited the data,
+      will facilitate access to the full data pool. We are currently discussing
+      which procedures to implement to facilitate fast access to these groups of
+      researchers. All researchers are required to follow the code of conduct
+      outlined in
+      [https://www.covid19hg.org/about/.](https://www.covid19hg.org/about/)
   - question: '**Who will have access to the results summary statistics?**'
     answer: >-
       Results summary statistics will be meta-analyzed across studies and
@@ -80,37 +86,38 @@ qas:
       expect to launch the first nodes in mid-late 2020. In the meantime, we
       suggest you contact your country's ELIXIR head of node to find out about
       the current status for your country.
-  - question: >
-      Is the system compliant with current European regulations for data
-      protection?
-    answer: (TBD)
-  - question: |
-      In which format should I submit the genetic data?
+  - question: >-
+      **Is the system compliant with current European regulations for data
+      protection?**
     answer: >-
-      The EGA accepts data the following formats
-
-
-      ![](/img/ega-accedpted-data-types.png)
-
-
-      All manufacturer-specific raw data formats for the major next [generation
-      sequencing platforms](https://ega-archive.org/ega/submission/sequence) are
-      accepted, including aligned BAM files and variation files in VCF format.
-
-
-      All array-based technologies are accepted, which may include the raw data,
+      The EGA is managed by EMBL-EBI and Center for Genome Regulation, Barcelona
+      (CRG). At EMBL, that protection is enacted by the Internal Policy 68 on
+      general data protection ([IP
+      68](https://www.embl.de/aboutus/administration/legal-services/data-protection/IP68-Data-Protection-EN-18052018.pdf)).
+      IP 68 resembles the GDPR, but adapts to the intergovernmental nature of
+      EMBL and to the needs of enabling free scientific research across national
+      borders. CRG is subject to the GDPR and implements it fully. The EGA GDPR
+      notices can be found [here](https://ega-archive.org/gdpr-notice).
+  - question: '**In which format should I submit the genetic data?**'
+    answer: >-
+      The EGA recommends using open standards and formats that are maintained by
+      the Global Alliance for Genomics and Health (GA4GH), published in the
+      GA4GH [Genomic Data Toolkit](https://www.ga4gh.org/genomic-data-toolkit/).
+      For genome sequencing data this includes FASTQ, BAM, CRAM, and VCF. All
+      array-based technologies are accepted, which may include the raw data,
       intensity and analysis files, and there are no restrictions on data
       formats accepted.
-  - question: |
-      In which format should I submit the clinical/phenotype data ?
+  - question: '**In which format should I submit the clinical/phenotype data ?**'
     answer: >-
-      https://docs.google.com/spreadsheets/d/1RXrJIzHKkyB8qx5tHLQjcBioiDAOrQ3odAuqMS3pUUI/edit?usp=sharing
-  - question: |
-      I’m still collecting samples, can I upload my data in batches?
+      Clinical data should be included as part of the study submission. We
+      suggest formatting the data following the initiative’s [data
+      dictionary](https://docs.google.com/spreadsheets/d/1RXrJIzHKkyB8qx5tHLQjcBioiDAOrQ3odAuqMS3pUUI/edit?usp=sharing)
+      (tab *FREEZE_1*). Not all the variables listed in the data dictionary are
+      required. If you want to submit variables that are not listed in the data
+      dictionary please contact
+      [stefano.ceri@polimi.it](mailto:stefano.ceri@polimi.it)
+  - question: '**I’m still collecting samples, can I upload my data in batches?**'
     answer: >-
       Yes, this is entirely possible. We suggest creating a dataset to submit
-      every 500 samples.
-  - question: |
-      I’m a US, NIH-funded study, can I submit the data?
-    answer: Yes.
+      every 500 samples
 ---
