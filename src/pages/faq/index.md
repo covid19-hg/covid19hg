@@ -10,9 +10,8 @@ qas:
 
 
       We prefer you submit individual-level data because they can be used beyond
-      the few analyses that are described in the analysis plan.
-
-
+      the few analyses that are described in the [analysis
+      plan](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit?usp=sharing).
 
 
       **Results summary statistics**
@@ -20,8 +19,6 @@ qas:
 
       Information on how to upload results summary statistics are given in the
       analysis plan in the section “Results upload instructions”
-
-
 
 
       **Individual-level data**
