@@ -45,12 +45,10 @@ qas:
       If you are from the US:
 
 
-      * You can submit individual-level data via [NHGRI
+      * We are exploring the possibility to submit the data via [NHGRI
       AnVIL](https://anvilproject.org/). The AnVIL can ingest datasets, process
       them via standardized pipelines and perform quality control on them, and
-      make them accessible to other researchers in a cloud-based environment. To
-      start your submission, please contact XXX  and mark the email Attn:
-      *COVID-19 Host Genetics Initiative*.
+      make them accessible to other researchers in a cloud-based environment.
   - question: '## **Who will have access to the individual-level data?**'
     answer: >-
       Researchers can have access to individual-level data in two ways.
