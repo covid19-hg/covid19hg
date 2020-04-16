@@ -18,8 +18,9 @@ const template = Handlebars.compile(templateString);
 
 exports.handler = async (event, context) => {
 
-  // Check that request comes from allowed origin:
-  const originUrl = url.parse(event.headers.origin);
+  // Check that request comes from allowed origins:
+  const originHeader = event.headers.origin;
+  const originUrl = url.parse(originHeader);
   const hostname = originUrl.hostname;
   if (
     hostname === null ||
@@ -52,6 +53,9 @@ exports.handler = async (event, context) => {
       )}&response=${encodeURIComponent(recaptchaReseponse)}`,
       {
         method: "POST",
+        headers: {
+          origin: originHeader,
+        }
       }
     );
     if (verificationResponse.ok) {
