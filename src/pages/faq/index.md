@@ -118,7 +118,7 @@ qas:
       sequencing data this includes FASTQ, BAM, CRAM, and VCF. All array-based
       technologies are accepted, which may include the raw data, intensity and
       analysis files, and there are no restrictions on data formats accepted.
-  - question: '**In which format should I submit the clinical/phenotype data ?**'
+  - question: '## **In which format should I submit the clinical/phenotype data ?**'
     answer: >-
       Clinical data should be included as part of the study submission. We
       suggest formatting the data following the initiative’s [data
@@ -127,7 +127,7 @@ qas:
       required. If you want to submit variables that are not listed in the data
       dictionary please contact
       [stefano.ceri@polimi.it](mailto:stefano.ceri@polimi.it)
-  - question: '**I’m still collecting samples, can I upload my data in batches?**'
+  - question: '## **I’m still collecting samples, can I upload my data in batches?**'
     answer: >-
       Yes, this is entirely possible. We suggest creating a dataset to submit
       every 500 samples
