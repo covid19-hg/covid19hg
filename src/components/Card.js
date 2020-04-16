@@ -218,6 +218,12 @@ const Card = ({ cardInfo, showContactForm }) => {
     researchCategoriesElem = null;
   }
 
+  const contactButton = (cardInfo.shouldShowContactButton === true) ? (
+    <Button variant="outlined" size="small" classes={{
+      root: materialStyles.contactButtonRoot
+    }} onClick={() => showContactForm()}>Contact</Button>
+  ) : null
+
   return (
     <div className="card">
       <div className="card-header">{cardTitle}</div>
@@ -236,9 +242,7 @@ const Card = ({ cardInfo, showContactForm }) => {
               <div className="has-text-weight-bold" style={{alignItems: "center", display: "flex"}}><div>Investigators</div></div>
               <div style={{display: "flex", alignItems: "center", justifyContent: "start"}}>
                 <div>{investigator}</div>
-                <Button variant="outlined" size="small" classes={{
-                  root: materialStyles.contactButtonRoot
-                }} onClick={() => showContactForm()}>Contact</Button>
+                {contactButton}
               </div>
               <div className="has-text-weight-bold">Affiliation</div>
               <div>{affiliation}</div>

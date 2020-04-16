@@ -1,17 +1,23 @@
-module.exports = (emailString) => {
+module.exports = (emailString, hasOptedOut) => {
+  if (hasOptedOut === true) {
+    return {
+      hasOptedOut: true,
+    }
+  }
   try {
-    // TODO: check if email consent has been given:
     const emails = emailString
       .split(/[\s;,]+/)
       .map((elem) => elem.trim())
       .filter((elem) => elem !== "");
     return {
+      hasOptedOut: false,
       isEmailAvailable: true,
       emails,
     };
   } catch (error) {
     return {
       isEmailAvailable: false,
+      hasOptedOut: false,
     };
   }
 };

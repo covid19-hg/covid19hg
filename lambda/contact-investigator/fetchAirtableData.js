@@ -14,7 +14,7 @@ module.exports = async () => {
       .eachPage(
         (records, fetchNextPage) => {
           const unfilteredRecordFields = records.map(({ fields, id }) => {
-            const emailParseResult = parseEmailField(fields["Email"])
+            const emailParseResult = parseEmailField(fields["Email"], fields["Website contact opt out"])
             if (emailParseResult.isEmailAvailable === true) {
               return {
                 id,
