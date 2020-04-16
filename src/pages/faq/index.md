@@ -70,8 +70,8 @@ qas:
       committee member/s that are responsible for making data access decisions
       in response to applications made by individuals wishing to access data. A
       DAC may be responsible for approving access to single or multiple
-      datasets.Only those who have successfully applied for access via the DAC
-      will receive access to the dataset(s) archived at the EGA.
+      datasets. Only those who have successfully applied for access via the DAC
+      will receive access to the dataset(s) archived at the EGA and AnVIL.
 
 
 
@@ -81,12 +81,12 @@ qas:
 
       Researchers within the initiative that have deposited data or results
       summary statistics or are part of established analysis groups will have
-      fast-track access to the initiative's data deposited on EGA. The DAC,
-      which is composed by the PIs of the studies that have deposited the data,
-      will facilitate access to the full data pool. We are currently discussing
-      which procedures to implement to facilitate fast access to these groups of
-      researchers. All researchers are required to follow the code of conduct
-      outlined in
+      fast-track access to the initiative's data deposited on EGA and AnVIL. The
+      DAC, which is composed by the PIs of the studies that have deposited the
+      data, will facilitate access to the full data pool. We are currently
+      discussing which procedures to implement to facilitate fast access to
+      these groups of researchers. All researchers are required to follow the
+      code of conduct outlined in
       [https://www.covid19hg.org/about/.](https://www.covid19hg.org/about/)
   - question: '## **Who will have access to the results summary statistics?**'
     answer: >-
