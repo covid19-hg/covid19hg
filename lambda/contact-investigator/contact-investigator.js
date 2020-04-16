@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const unthrottledFetchAirtableData = require("./fetchAirtableData");
 const throttle = require("lodash/throttle");
+const url = require("url");
 
 const fetchAirtableData = throttle(unthrottledFetchAirtableData, 10000);
 
@@ -16,12 +17,33 @@ const templateString = fs.readFileSync(
 const template = Handlebars.compile(templateString);
 
 exports.handler = async (event, context) => {
-  const params =
-    event.httpMethod.toUpperCase() === "GET"
-      ? event.queryStringParameters
-      : JSON.parse(event.body);
-  const recaptchaReseponse = params["g-recaptcha-response"];
+
+  // Check that request comes from allowed origin:
+  const originUrl = url.parse(event.headers.origin);
+  const hostname = originUrl.hostname;
+  if (
+    hostname === null ||
+    (
+      hostname !== null &&
+      hostname.includes("covid19hg.org") === false &&
+      hostname.includes("condescending-perlman-ec107b.netlify.com") === false &&
+      // TODO: remove "localhost" after testing
+      hostname.includes("localhost") === false
+    )
+  ) {
+    console.error("Invalid request's origin", event.headers.origin);
+    return {
+      statusCode: 400,
+      body: JSON.stringify("Error validating captcha."),
+    };
+  }
+
   try {
+    const params =
+      event.httpMethod.toUpperCase() === "GET"
+        ? event.queryStringParameters
+        : JSON.parse(event.body);
+    const recaptchaReseponse = params["g-recaptcha-response"];
     // TODO: also need to verify the domain too.
     // Also should include IP
     const verificationResponse = await fetch(
@@ -71,7 +93,7 @@ exports.handler = async (event, context) => {
               }
               return {
                 statusCode: 500,
-                body: JSON.stringify({ msg: error.message }),
+                body: JSON.stringify(error.message),
               };
             }
           }
@@ -79,7 +101,7 @@ exports.handler = async (event, context) => {
           console.error("Error fetching Airtable data", error.message);
           return {
             statusCode: 500,
-            body: JSON.stringify({ msg: "Error sending email" }),
+            body: JSON.stringify("Error sending email"),
           };
         }
       } else {
@@ -89,7 +111,7 @@ exports.handler = async (event, context) => {
         );
         return {
           statusCode: 400,
-          body: JSON.stringify("Incorrect captcha response"),
+          body: JSON.stringify("Incorrect captcha response."),
         };
       }
     } else {
@@ -107,7 +129,7 @@ exports.handler = async (event, context) => {
     }
     return {
       statusCode: 500,
-      body: JSON.stringify({ msg: error.message }),
+      body: JSON.stringify("Unexpected error while processing your request."),
     };
   }
 };
