@@ -30,13 +30,13 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/faq/index.md"
-        label: "FAQ"
-        name: "faq"
+      - file: "src/pages/data-sharing/index.md"
+        label: "Data Sharing"
+        name: "data-sharing"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden"}
           - {label: Title, name: title, widget: string}
-          - label: Questions and Answers
+          - label: Data Sharing
             name: qas
             widget: list
             fields:
