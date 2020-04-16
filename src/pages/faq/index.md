@@ -13,15 +13,11 @@ qas:
       the few analyses that are described in the analysis plan.
 
 
-      **\
-
-      Results summary statistics**
+      **Results summary statistics**
 
 
       Information on how to upload results summary statistics are given in the
       analysis plan in the section “Results upload instructions”
-
-
 
 
       **Individual-level data**
