@@ -53,12 +53,10 @@ qas:
       *COVID-19 Host Genetics Initiative*.
   - question: '## **Who will have access to the individual-level data?**'
     answer: >-
-      Researchers can have access to individual-level data in two
-      ways.Researchers within the initiative(i.e. researchers that are
-      registered to the initiative and that have also deposited data) and
-      researchers outside the initiative.
-
-
+      Researchers can have access to individual-level data in two ways.
+      Researchers within the initiative (i.e. researchers that are registered to
+      the initiative and that have also deposited data) and researchers outside
+      the initiative.
 
 
       **Researchers outside the initiative**
@@ -72,8 +70,6 @@ qas:
       DAC may be responsible for approving access to single or multiple
       datasets. Only those who have successfully applied for access via the DAC
       will receive access to the dataset(s) archived at the EGA and AnVIL.
-
-
 
 
       **Researchers within the initiative**
