@@ -47,7 +47,7 @@ qas:
       make them accessible to other researchers in a cloud-based environment. To
       start your submission, please contact XXX  and mark the email Attn:
       *COVID-19 Host Genetics Initiative*.
-  - question: '**Who will have access to the individual-level data?**'
+  - question: '## **Who will have access to the individual-level data?**'
     answer: >-
       Researchers can have access to individual-level data in two
       ways.Researchers within the initiative(i.e. researchers that are
@@ -84,13 +84,13 @@ qas:
       researchers. All researchers are required to follow the code of conduct
       outlined in
       [https://www.covid19hg.org/about/.](https://www.covid19hg.org/about/)
-  - question: '**Who will have access to the results summary statistics?**'
+  - question: '## **Who will have access to the results summary statistics?**'
     answer: >-
       Results summary statistics will be meta-analyzed across studies and
       immediately made available to the scientific community via the website
       result browser, via [GWAS catalog](https://www.ebi.ac.uk/gwas/), [Open
       Target Platform](https://www.targetvalidation.org/) and other portals.
-  - question: '**My data cannot leave my country, what can I do?**'
+  - question: '## **My data cannot leave my country, what can I do?**'
     answer: >-
       The EGA is working with the ELIXIR network to establish the EGA Federation
       network to enable data to be deposited within national jurisdictions. We
@@ -98,7 +98,7 @@ qas:
       suggest you contact your country's ELIXIR head of node to find out about
       the current status for your country.
   - question: >-
-      **Is the system compliant with current European regulations for data
+      ## **Is the system compliant with current European regulations for data
       protection?**
     answer: >-
       The EGA is managed by EMBL-EBI and Center for Genome Regulation, Barcelona
@@ -109,7 +109,7 @@ qas:
       EMBL and to the needs of enabling free scientific research across national
       borders. CRG is subject to the GDPR and implements it fully. The EGA GDPR
       notices can be found [here](https://ega-archive.org/gdpr-notice).
-  - question: '**In which format should I submit the genetic data?**'
+  - question: '## **In which format should I submit the genetic data?**'
     answer: >-
       Both EGA and AnVIL recommend using open standards and formats that are
       maintained by the Global Alliance for Genomics and Health (GA4GH),
