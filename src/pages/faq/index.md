@@ -42,7 +42,7 @@ qas:
       researchers outside the initiative.
 
 
-      [Researchers outside the initiative](https://www.covid19hg.org/about/)
+      **[Researchers outside the initiative](https://www.covid19hg.org/about/)**
 
 
       Access to individual-level data/datasets by external researchers is
@@ -55,7 +55,7 @@ qas:
       will receive access to the dataset(s) archived at the EGA.
 
 
-      Researchers within the initiative
+      **Researchers within the initiative**
 
 
       Researchers within the initiative that have deposited data or results
@@ -67,18 +67,19 @@ qas:
       access to these groups of researchers. All researchers are required to
       follow the code of conduct outlined
       in[https://www.covid19hg.org/about/.](https://www.covid19hg.org/about/)
-  - question: |
-      Who will have access to the results summary statistics?
+  - question: '**Who will have access to the results summary statistics?**'
     answer: >-
       Results summary statistics will be meta-analyzed across studies and
       immediately made available to the scientific community via the website
       result browser, via [GWAS catalog](https://www.ebi.ac.uk/gwas/), [Open
       Target Platform](https://www.targetvalidation.org/) and other portals.
-  - question: |
-      My data cannot leave my country, what can I do?
+  - question: '**My data cannot leave my country, what can I do?**'
     answer: >-
-      EGA is working with partners to establish federated nodes, however, these
-      are still in development at this time.
+      The EGA is working with the ELIXIR network to establish the EGA Federation
+      network to enable data to be deposited within national jurisdictions. We
+      expect to launch the first nodes in mid-late 2020. In the meantime, we
+      suggest you contact your country's ELIXIR head of node to find out about
+      the current status for your country.
   - question: >
       Is the system compliant with current European regulations for data
       protection?
