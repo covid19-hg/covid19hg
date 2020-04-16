@@ -2,7 +2,7 @@
 templateKey: faq-page
 title: How to share data
 qas:
-  - question: '**How can I submit my data?**'
+  - question: '## **How can I submit my data?**'
     answer: >-
       You can submit data in two ways. You can submit *results summary
       statistics* (calculated and formatted according to the analysis plan) or
