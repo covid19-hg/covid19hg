@@ -11,6 +11,7 @@ import {
   SET_FORM_STATE as SET_PARENT_FORM_STATE,
   contactFormOpenStateName,
 } from "./Partners";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
 if (typeof RECAPTCHA_KEY === "undefined") {
@@ -26,14 +27,20 @@ const nameStateName = "name";
 const emailStateName = "email";
 const messageStateName = "message";
 const submitButtonEnabledStateName = "isSubmitButtonEnabled";
-const formSubmissionFailureStateName = "hasFormSubmissionFailed";
+const submissionStatusStateName = "submissionStatus";
+
+const submissionStatuses = {
+  initial: "initial",
+  pending: "pending",
+  failure: "failure",
+};
 
 const defaultFormState = {
   [nameStateName]: "",
   [emailStateName]: "",
   [messageStateName]: "",
   [submitButtonEnabledStateName]: false,
-  [formSubmissionFailureStateName]: false,
+  [submissionStatusStateName]: submissionStatuses.initial,
 };
 
 const SET_STATE_ACTION_NAME = "SET_STATE";
@@ -96,8 +103,8 @@ const InvestigatorContactForm = ({
       dispatch({
         type: SET_STATE_ACTION_NAME,
         payload: {
-          name: formSubmissionFailureStateName,
-          value: true,
+          name: submissionStatusStateName,
+          value: submissionStatuses.failure,
         },
       }),
     []
@@ -114,6 +121,13 @@ const InvestigatorContactForm = ({
       [messageStateName]: state[messageStateName],
     };
     try {
+      dispatch({
+        type: SET_STATE_ACTION_NAME,
+        payload: {
+          name: submissionStatusStateName,
+          value: submissionStatuses.pending,
+        },
+      });
       const response = await fetch("/.netlify/functions/contact-investigator", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -130,7 +144,7 @@ const InvestigatorContactForm = ({
     }
   };
 
-  if (state[formSubmissionFailureStateName] === true) {
+  if (state[submissionStatusStateName] === submissionStatuses.failure) {
     return (
       <Dialog open={isOpen} onClose={closeContactForm}>
         <DialogTitle id="form-dialog-title">Error</DialogTitle>
@@ -153,6 +167,12 @@ const InvestigatorContactForm = ({
       </Dialog>
     );
   } else {
+    const sendButtonContent =
+      state[submissionStatusStateName] === submissionStatuses.pending ? (
+        <CircularProgress size={20} />
+      ) : (
+        "Send"
+      );
     return (
       <Dialog open={isOpen} onClose={closeContactForm}>
         <DialogTitle id="form-dialog-title">Contact Investigator</DialogTitle>
@@ -223,7 +243,7 @@ const InvestigatorContactForm = ({
                 type="submit"
                 onClick={handleSubmit}
               >
-                Send
+                {sendButtonContent}
               </Button>
             </DialogActions>
           </form>
