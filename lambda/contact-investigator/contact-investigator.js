@@ -72,7 +72,6 @@ exports.handler = async (event, context) => {
             throw new Error("Invalid study id", studyId);
           } else {
             const emails = studyDatum.emails;
-            console.info("Simulating an email sent to", emails);
             const html = template({
               name: params.name,
               email: params.email,
@@ -80,7 +79,7 @@ exports.handler = async (event, context) => {
             });
             const msg = {
               // TODO: replace with real investigator's email:
-              to: "contact@covid19hg.org",
+              to: emails,
               replyTo: "no-reply@covid19hg.org",
               from: "no-reply@covid19hg.org",
               subject:
