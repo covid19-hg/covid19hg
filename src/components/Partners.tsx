@@ -1,13 +1,10 @@
-import React, { useReducer, useCallback, useRef, useEffect, } from "react";
-import PropTypes from "prop-types";
+import React, { useReducer, useCallback } from "react";
 import Map, {
   SET_SELECTED_INSTITUTION_ACTION,
-  UNSET_SELECTED_INSTITUTION_ACTION
+  UNSET_SELECTED_INSTITUTION_ACTION,
 } from "../components/Map";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormLabel from "@material-ui/core/FormLabel";
@@ -24,10 +21,10 @@ import _debounce from "lodash/debounce";
 import _flatten from "lodash/flatten";
 import _uniq from "lodash/uniq";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import InvestigatorContactForm from "./InvestigatorContactForm"
-
+import InvestigatorContactForm from "./InvestigatorContactForm";
+import SmartListItem from "./SmartListItem";
 import "typeface-roboto";
-
+import { MapDatum, ListDatum } from "../types";
 
 const assayNames = assayOptions.map(({ name }) => name);
 const studyListStyleName = "studyList";
@@ -79,7 +76,68 @@ const useMaterialStyles = makeStyles(() => ({
 
 export const SET_FORM_STATE = "SET_FORM_STATE";
 
-const reducer = (state, action) => {
+const retrospectiveStateName = "isRetrospectiveSelected";
+const prospectiveStateName = "isProspectiveSelected";
+const wesStateName = "isWesSelected";
+const wgsStateName = "isWgsSelected";
+const gwasStateName = "isGwasSelected";
+const assaysStateName = "assays";
+const researchCategoriesStateName = "researchCategories";
+const selectedCountryStateName = "selectedCountry";
+const keywordSearchStateName = "keywordSearch";
+export const contactFormOpenStateName = "isContactFormOpen";
+
+export interface State {
+  selectedId: string | undefined;
+  [retrospectiveStateName]: boolean;
+  [prospectiveStateName]: boolean;
+  [wesStateName]: boolean;
+  [wgsStateName]: boolean;
+  [gwasStateName]: boolean;
+  [assaysStateName]: string[];
+  [researchCategoriesStateName]: string[];
+  [selectedCountryStateName]: string | undefined;
+  [keywordSearchStateName]: string;
+  [contactFormOpenStateName]: boolean;
+}
+const initialState: State = {
+  selectedId: undefined,
+  [retrospectiveStateName]: false,
+  [prospectiveStateName]: false,
+  [wesStateName]: false,
+  [wgsStateName]: false,
+  [gwasStateName]: false,
+  [assaysStateName]: [],
+  [researchCategoriesStateName]: [],
+  [selectedCountryStateName]: undefined,
+  [keywordSearchStateName]: "",
+  [contactFormOpenStateName]: false,
+};
+
+interface SetStateAction<K extends keyof State> {
+  type: typeof SET_FORM_STATE;
+  payload: {
+    name: K;
+    value: State[K];
+  };
+}
+
+export type Action<K extends keyof State> =
+  | SetStateAction<K>
+  | {
+      type: typeof UNSET_SELECTED_INSTITUTION_ACTION;
+    }
+  | {
+      type: typeof SET_SELECTED_INSTITUTION_ACTION;
+      payload: {
+        id: string;
+      };
+    };
+
+const reducer = <K extends keyof State>(
+  state: State,
+  action: Action<K>
+): State => {
   switch (action.type) {
     case SET_SELECTED_INSTITUTION_ACTION:
       return {
@@ -106,80 +164,23 @@ const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
     style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP
-    }
-  }
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+    },
+  },
 };
 
-const usePrevious = value => {
-  const ref = useRef(undefined);
-  useEffect(() => {
-    ref.current = value
-  });
-  return ref.current;
-};
-// This list item will scroll itself into view when it becomes selelected for
-// the first time if it's out of view.
-const SmartListItem = ({ id, study, selectedId, dispatch }) => {
-  const prevSelectedId = usePrevious(selectedId);
-  const elRef = useRef(null);
-  const rememberEl = useCallback(el => (elRef.current = el), []);
-  const isSelected = selectedId !== undefined && selectedId === id;
-  useEffect(() => {
-    if (selectedId === id && selectedId !== prevSelectedId) {
-      const { current: el } = elRef;
-      if (el !== null) {
-        // Taken from https://stackoverflow.com/a/52835382/7075699
-        el.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "start"
-        });
-        return undefined
-      }
-    }
-  }, [isSelected, id, prevSelectedId, selectedId]);
-  const onClick = () =>
-    dispatch({
-      type: SET_SELECTED_INSTITUTION_ACTION,
-      payload: { id }
-    });
-  return (
-    <ListItem button selected={isSelected} onClick={onClick} ref={rememberEl}>
-      <ListItemText>{study}</ListItemText>
-    </ListItem>
-  );
-};
+interface Props {
+  title: string;
+  mapData: MapDatum[];
+  listData: ListDatum[];
+}
 
-const retrospectiveStateName = "isRetrospectiveSelected";
-const prospectiveStateName = "isProspectiveSelected";
-const wesStateName = "isWesSelected";
-const wgsStateName = "isWgsSelected";
-const gwasStateName = "isGwasSelected";
-const assaysStateName = "assays";
-const researchCategoriesStateName = "researchCategories";
-const selectedCountryStateName = "selectedCountry";
-const keywordSearchStateName = "keywordSearch";
-export const contactFormOpenStateName = "isContactFormOpen";
+const Partners = ({ title, mapData, listData }: Props) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-const Partners = ({ title, mapData, listData }) => {
-
-  const [state, dispatch] = useReducer(reducer, {
-    selectedId: undefined,
-    [retrospectiveStateName]: false,
-    [prospectiveStateName]: false,
-    [wesStateName]: false,
-    [wgsStateName]: false,
-    [gwasStateName]: false,
-    [assaysStateName]: [],
-    [researchCategoriesStateName]: [],
-    [selectedCountryStateName]: undefined,
-    [keywordSearchStateName]: "",
-    [contactFormOpenStateName]: false,
-  });
   const materialStyles = useMaterialStyles();
 
-  let filteredIds;
+  let filteredIds: string[];
   if (listData === undefined) {
     filteredIds = [];
   } else {
@@ -231,18 +232,16 @@ const Partners = ({ title, mapData, listData }) => {
     filteredIds = filteredData.map(({ id }) => id);
   }
 
-  const showContactForm = useCallback(
-    () =>
-      dispatch({
-        type: SET_FORM_STATE,
-        payload: {
-          name: contactFormOpenStateName,
-          value: true,
-        },
-      }),
-    []
-  );
-
+  const showContactForm = useCallback(() => {
+    const action: SetStateAction<typeof contactFormOpenStateName> = {
+      type: SET_FORM_STATE,
+      payload: {
+        name: contactFormOpenStateName,
+        value: true,
+      },
+    };
+    dispatch(action);
+  }, []);
 
   const studyTypeElem = (
     <FormControl
@@ -257,15 +256,16 @@ const Partners = ({ title, mapData, listData }) => {
           control={
             <Checkbox
               checked={state[retrospectiveStateName]}
-              onChange={(event) =>
-                dispatch({
+              onChange={(event) => {
+                const action: SetStateAction<typeof retrospectiveStateName> = {
                   type: SET_FORM_STATE,
                   payload: {
                     name: retrospectiveStateName,
                     value: event.target.checked,
                   },
-                })
-              }
+                };
+                dispatch(action);
+              }}
             />
           }
           label="Retrospective"
@@ -307,19 +307,20 @@ const Partners = ({ title, mapData, listData }) => {
           classes={{
             select: materialStyles.dropdownSelect,
           }}
-          onChange={(event) =>
-            dispatch({
+          onChange={(event) => {
+            const action: SetStateAction<typeof assaysStateName> = {
               type: SET_FORM_STATE,
               payload: {
                 name: assaysStateName,
-                value: event.target.value,
+                value: event.target.value as string[],
               },
-            })
-          }
+            };
+            dispatch(action);
+          }}
           input={<Input disableUnderline={true} />}
           renderValue={(selected) => (
             <div className={materialStyles.chips}>
-              {selected.map((value) => (
+              {(selected as string[]).map((value) => (
                 <Chip
                   key={value}
                   label={value}
@@ -353,15 +354,16 @@ const Partners = ({ title, mapData, listData }) => {
           control={
             <Checkbox
               checked={state[gwasStateName]}
-              onChange={(event) =>
-                dispatch({
+              onChange={(event) => {
+                const action: SetStateAction<typeof gwasStateName> = {
                   type: SET_FORM_STATE,
                   payload: {
                     name: gwasStateName,
                     value: event.target.checked,
                   },
-                })
-              }
+                };
+                dispatch(action);
+              }}
             />
           }
           label="GWAS"
@@ -370,15 +372,16 @@ const Partners = ({ title, mapData, listData }) => {
           control={
             <Checkbox
               checked={state[wesStateName]}
-              onChange={(event) =>
-                dispatch({
+              onChange={(event) => {
+                const action: SetStateAction<typeof wesStateName> = {
                   type: SET_FORM_STATE,
                   payload: {
                     name: wesStateName,
                     value: event.target.checked,
                   },
-                })
-              }
+                };
+                dispatch(action);
+              }}
             />
           }
           label="WES"
@@ -388,15 +391,16 @@ const Partners = ({ title, mapData, listData }) => {
           control={
             <Checkbox
               checked={state[wgsStateName]}
-              onChange={(event) =>
-                dispatch({
+              onChange={(event) => {
+                const action: SetStateAction<typeof wgsStateName> = {
                   type: SET_FORM_STATE,
                   payload: {
                     name: wgsStateName,
                     value: event.target.checked,
                   },
-                })
-              }
+                };
+                dispatch(action);
+              }}
             />
           }
           label="WGS"
@@ -430,19 +434,20 @@ const Partners = ({ title, mapData, listData }) => {
             classes={{
               select: materialStyles.dropdownSelect,
             }}
-            onChange={(event) =>
-              dispatch({
+            onChange={(event) => {
+              const action: SetStateAction<typeof researchCategoriesStateName> = {
                 type: SET_FORM_STATE,
                 payload: {
                   name: researchCategoriesStateName,
-                  value: event.target.value,
+                  value: event.target.value as string[],
                 },
-              })
-            }
+              };
+              dispatch(action);
+            }}
             input={<Input />}
             renderValue={(selected) => (
               <div className={materialStyles.chips}>
-                {selected.map((value) => (
+                {(selected as string[]).map((value) => (
                   <Chip
                     key={value}
                     label={value}
@@ -465,19 +470,21 @@ const Partners = ({ title, mapData, listData }) => {
   }
 
   const onKeywordSearchChange = useCallback(
-    _debounce((value) => {
-      dispatch({
+    _debounce((value: string) => {
+      const action: SetStateAction<typeof keywordSearchStateName> = {
         type: SET_FORM_STATE,
         payload: {
           name: keywordSearchStateName,
           value: value.toLowerCase(),
         },
-      });
+      };
+      dispatch(action);
     }, 250),
     []
   );
 
   const keywordSearchElem = (
+    // @ts-ignore need to look deeper into Material UI's type definition to see why this errors out.
     <FormControl
       comnponent="fieldset"
       classes={{ root: materialStyles.keywordSearch }}
@@ -497,14 +504,14 @@ const Partners = ({ title, mapData, listData }) => {
     </FormControl>
   );
 
-  let listElem, card;
+  let listElem: React.ReactElement<any>, card: React.ReactElement<any> | null;
   if (listData === undefined) {
     listElem = (
       <div
         style={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         <CircularProgress />
@@ -538,7 +545,6 @@ const Partners = ({ title, mapData, listData }) => {
       </>
     );
 
-
     if (
       state.selectedId === undefined ||
       filteredData.map(({ id }) => id).includes(state.selectedId) === false
@@ -556,17 +562,17 @@ const Partners = ({ title, mapData, listData }) => {
         </div>
       );
     } else {
-      const cardInfo = listData.find(({ id }) => id === state.selectedId);
+      const cardInfo = listData.find(({ id }) => id === state.selectedId)!;
       card = (
         <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
           <div className="title is-4">Study details</div>
-          <Card cardInfo={cardInfo} showContactForm={showContactForm}/>
+          <Card cardInfo={cardInfo} showContactForm={showContactForm} />
         </div>
       );
     }
   }
 
-  let mapElem;
+  let mapElem: React.ReactElement<any>;
   if (mapData === undefined) {
     mapElem = (
       <div
@@ -590,7 +596,6 @@ const Partners = ({ title, mapData, listData }) => {
       />
     );
   }
-
 
   return (
     <div className="content">
@@ -616,15 +621,16 @@ const Partners = ({ title, mapData, listData }) => {
               <div className="column is-one-third">{assaysPlannedElem}</div>
               <div className="column is-one-third">
                 <CountrySelect
-                  onChange={(event, value) => {
+                  onChange={(_event, value: string) => {
                     const dispatchedValue = value === "" ? undefined : value;
-                    dispatch({
+                    const action: SetStateAction<typeof selectedCountryStateName> = {
                       type: SET_FORM_STATE,
                       payload: {
                         name: selectedCountryStateName,
                         value: dispatchedValue,
                       },
-                    });
+                    };
+                    dispatch(action);
                   }}
                 />
               </div>
@@ -653,11 +659,6 @@ const Partners = ({ title, mapData, listData }) => {
       </section>
     </div>
   );
-};
-
-Partners.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
 };
 
 export default Partners;
