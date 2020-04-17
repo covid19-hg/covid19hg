@@ -1,23 +1,10 @@
-module.exports = (emailString, hasOptedOut) => {
-  if (hasOptedOut === true) {
-    return {
-      hasOptedOut: true,
-    }
-  }
-  try {
-    const emails = emailString
+module.exports = (emailString) => {
+  if (emailString === undefined) {
+    return [];
+  } else {
+    return emailString
       .split(/[\s;,]+/)
       .map((elem) => elem.trim())
       .filter((elem) => elem !== "");
-    return {
-      hasOptedOut: false,
-      isEmailAvailable: true,
-      emails,
-    };
-  } catch (error) {
-    return {
-      isEmailAvailable: false,
-      hasOptedOut: false,
-    };
   }
 };

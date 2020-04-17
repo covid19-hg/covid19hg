@@ -7,18 +7,15 @@ Airtable.configure({
 });
 const base = Airtable.base("appVc6kMY1ZNr0uv5");
 module.exports = async () => {
-  let data = [];
-  return new Promise((resolve, reject) => {
+  const partnersPromise = new Promise((resolve, reject) => {
+    let data = [];
     base("Submission")
       .select({ view: "Partners Page" })
       .eachPage(
         (records, fetchNextPage) => {
           const recordFields = records.map(({ fields, id }) => {
-            const emailParseResult = parseEmailField(fields["Email"], fields["Website contact opt out"])
-            const shouldShowContactButton =
-              emailParseResult.hasOptedOut === false && emailParseResult.isEmailAvailable === true;
             return {
-              shouldShowContactButton,
+              emails: parseEmailField(fields["Email"]),
               investigator: fields["Investigator"],
               retrospective: fields["Retrospective"],
               prospective: fields["Prospective"],
@@ -50,14 +47,47 @@ module.exports = async () => {
           if (err) {
             console.error(err);
             reject(err);
+          } else {
+            resolve(data);
           }
-          console.log(
-            "Successfully fetch from Airtable API with",
-            data.length,
-            "records"
-          );
-          resolve(data);
         }
       );
   });
+  const emailOptOutPromise = new Promise((resolve, reject) => {
+    let data = [];
+    base("Email opt out")
+      .select({ view: "Grid view" })
+      .eachPage(
+        (records, fetchNextPage) => {
+          const recordFields = records
+            .map(({ fields }) => fields["Email"])
+            .filter((elem) => elem !== undefined);
+          data = [...data, ...recordFields];
+          fetchNextPage();
+        },
+        (err) => {
+          if (err) {
+            console.error(err);
+            reject(err);
+          } else {
+            resolve(data);
+          }
+        }
+      );
+  });
+  const [partnersData, emailOptOutData] = await Promise.all([
+    partnersPromise,
+    emailOptOutPromise,
+  ]);
+  const finalData = partnersData.map(({ emails, ...rest }) => {
+    const notOpedOutEmails = emails.filter(
+      (elem) => emailOptOutData.includes(elem) === false
+    );
+    const shouldShowContactButton = notOpedOutEmails.length > 0;
+    return {
+      shouldShowContactButton,
+      ...rest,
+    };
+  });
+  return finalData;
 };

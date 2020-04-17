@@ -1,5 +1,5 @@
 const Airtable = require("airtable");
-const parseEmailField = require("./parseEmailField")
+const parseEmailField = require("./parseEmailField");
 
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
@@ -7,24 +7,18 @@ Airtable.configure({
 });
 const base = Airtable.base("appVc6kMY1ZNr0uv5");
 module.exports = async () => {
-  let data = [];
-  return new Promise((resolve, reject) => {
+  const partnersPromise = new Promise((resolve, reject) => {
+    let data = [];
     base("Submission")
-      .select({ view: "Submission Data" })
+      .select({ view: "Partners Page" })
       .eachPage(
         (records, fetchNextPage) => {
-          const unfilteredRecordFields = records.map(({ fields, id }) => {
-            const emailParseResult = parseEmailField(fields["Email"], fields["Website contact opt out"])
-            if (emailParseResult.isEmailAvailable === true) {
-              return {
-                id,
-                emails: emailParseResult.emails,
-              };
-            } else {
-              return undefined
-            }
+          const recordFields = records.map(({ fields, id }) => {
+            return {
+              emails: parseEmailField(fields["Email"]),
+              id,
+            };
           });
-          const recordFields = unfilteredRecordFields.filter(elem => elem !== undefined)
           data = [...data, ...recordFields];
           fetchNextPage();
         },
@@ -32,14 +26,50 @@ module.exports = async () => {
           if (err) {
             console.error(err);
             reject(err);
+          } else {
+            resolve(data);
           }
-          console.log(
-            "Successfully fetch from Airtable API with",
-            data.length,
-            "records"
-          );
-          resolve(data);
         }
       );
   });
+  const emailOptOutPromise = new Promise((resolve, reject) => {
+    let data = [];
+    base("Email opt out")
+      .select({ view: "Grid view" })
+      .eachPage(
+        (records, fetchNextPage) => {
+          const recordFields = records
+            .map(({ fields }) => fields["Email"])
+            .filter((elem) => elem !== undefined);
+          data = [...data, ...recordFields];
+          fetchNextPage();
+        },
+        (err) => {
+          if (err) {
+            console.error(err);
+            reject(err);
+          } else {
+            resolve(data);
+          }
+        }
+      );
+  });
+  const [partnersData, emailOptOutData] = await Promise.all([
+    partnersPromise,
+    emailOptOutPromise,
+  ]);
+  const mergedData = partnersData.map(({ emails, id }) => {
+    const notOpedOutEmails = emails.filter(
+      (elem) => emailOptOutData.includes(elem) === false
+    );
+    // Remove studies whose investigators have all opted out:
+    return notOpedOutEmails.length === 0
+      ? undefined
+      : {
+          emails: notOpedOutEmails,
+          id,
+        };
+  });
+  const filteredData = mergedData.filter((elem) => elem !== undefined);
+  return filteredData;
 };
