@@ -13,6 +13,7 @@ import {
 } from "./Partners";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
+
 const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
 if (typeof RECAPTCHA_KEY === "undefined") {
   throw new Error(`
@@ -110,6 +111,8 @@ const InvestigatorContactForm = ({
     []
   );
 
+  const resetContactForm = () => dispatch({ type: RESET_ACTION_NAME })
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const recaptchaValue = recaptchaRef.current.getValue();
@@ -134,6 +137,7 @@ const InvestigatorContactForm = ({
         body: JSON.stringify(formData),
       });
       if (response.ok) {
+        resetContactForm()
         closeContactForm();
       } else {
         showErrorMessage();
@@ -157,7 +161,7 @@ const InvestigatorContactForm = ({
               Cancel
             </Button>
             <Button
-              onClick={() => dispatch({ type: RESET_ACTION_NAME })}
+              onClick={resetContactForm}
               color="primary"
             >
               Retry
@@ -167,12 +171,18 @@ const InvestigatorContactForm = ({
       </Dialog>
     );
   } else {
-    const sendButtonContent =
-      state[submissionStatusStateName] === submissionStatuses.pending ? (
-        <CircularProgress size={20} />
-      ) : (
-        "Send"
-      );
+    let sendButtonContent, cancelButtonContent, sendButtonClickHandler, cancelButtonClickHandler
+    if (state[submissionStatusStateName] === submissionStatuses.pending) {
+      sendButtonContent = <CircularProgress size={20} />
+      cancelButtonContent = <CircularProgress size={20} />
+      sendButtonClickHandler = undefined
+      cancelButtonClickHandler = undefined
+    } else {
+      sendButtonContent = "Send"
+      cancelButtonContent = "Cancel"
+      sendButtonClickHandler = handleSubmit
+      cancelButtonClickHandler = closeContactForm
+    }
     return (
       <Dialog open={isOpen} onClose={closeContactForm}>
         <DialogTitle id="form-dialog-title">Contact Investigator</DialogTitle>
@@ -181,7 +191,7 @@ const InvestigatorContactForm = ({
             Fill in the form below to send an emali to the study's
             investigators.
           </DialogContentText>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <TextField
               label="Name"
               required={true}
@@ -234,14 +244,13 @@ const InvestigatorContactForm = ({
               onChange={onRecaptchaChange}
             />
             <DialogActions>
-              <Button onClick={closeContactForm} color="primary">
-                Cancel
+              <Button onClick={cancelButtonClickHandler} color="primary">
+                {cancelButtonContent}
               </Button>
               <Button
                 disabled={false}
                 color="primary"
-                type="submit"
-                onClick={handleSubmit}
+                onClick={sendButtonClickHandler}
               >
                 {sendButtonContent}
               </Button>
