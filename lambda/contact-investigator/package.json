@@ -1,0 +1,25 @@
+{
+  "name": "send-email",
+  "version": "1.0.0",
+  "description": "netlify functions:create - Send email with no SMTP server via 'sendmail' pkg",
+  "main": "send-email.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "netlify",
+    "serverless",
+    "apis",
+    "email",
+    "js"
+  ],
+  "author": "Netlify",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "7.0.0",
+    "airtable": "0.8.1",
+    "handlebars": "4.7.6",
+    "lodash": "4.17.15",
+    "node-fetch": "2.6.0"
+  }
+}

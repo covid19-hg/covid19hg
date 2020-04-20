@@ -1,4 +1,4 @@
-import React, { useReducer, useCallback, useRef, useEffect } from "react";
+import React, { useReducer, useCallback, useRef, useEffect, } from "react";
 import PropTypes from "prop-types";
 import Map, {
   SET_SELECTED_INSTITUTION_ACTION,
@@ -24,7 +24,10 @@ import _debounce from "lodash/debounce";
 import _flatten from "lodash/flatten";
 import _uniq from "lodash/uniq";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import InvestigatorContactForm from "./InvestigatorContactForm"
+
 import "typeface-roboto";
+
 
 const assayNames = assayOptions.map(({ name }) => name);
 const studyListStyleName = "studyList";
@@ -74,7 +77,7 @@ const useMaterialStyles = makeStyles(() => ({
   },
 }));
 
-const SET_FORM_STATE = "SET_FORM_STATE";
+export const SET_FORM_STATE = "SET_FORM_STATE";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -148,16 +151,18 @@ const SmartListItem = ({ id, study, selectedId, dispatch }) => {
   );
 };
 
+const retrospectiveStateName = "isRetrospectiveSelected";
+const prospectiveStateName = "isProspectiveSelected";
+const wesStateName = "isWesSelected";
+const wgsStateName = "isWgsSelected";
+const gwasStateName = "isGwasSelected";
+const assaysStateName = "assays";
+const researchCategoriesStateName = "researchCategories";
+const selectedCountryStateName = "selectedCountry";
+const keywordSearchStateName = "keywordSearch";
+export const contactFormOpenStateName = "isContactFormOpen";
+
 const Partners = ({ title, mapData, listData }) => {
-  const retrospectiveStateName = "isRetrospectiveSelected";
-  const prospectiveStateName = "isProspectiveSelected";
-  const wesStateName = "isWesSelected";
-  const wgsStateName = "isWgsSelected";
-  const gwasStateName = "isGwasSelected";
-  const assaysStateName = "assays";
-  const researchCategoriesStateName = "researchCategories";
-  const selectedCountryStateName = "selectedCountry";
-  const keywordSearchStateName = "keywordSearch";
 
   const [state, dispatch] = useReducer(reducer, {
     selectedId: undefined,
@@ -170,6 +175,7 @@ const Partners = ({ title, mapData, listData }) => {
     [researchCategoriesStateName]: [],
     [selectedCountryStateName]: undefined,
     [keywordSearchStateName]: "",
+    [contactFormOpenStateName]: false,
   });
   const materialStyles = useMaterialStyles();
 
@@ -224,6 +230,19 @@ const Partners = ({ title, mapData, listData }) => {
 
     filteredIds = filteredData.map(({ id }) => id);
   }
+
+  const showContactForm = useCallback(
+    () =>
+      dispatch({
+        type: SET_FORM_STATE,
+        payload: {
+          name: contactFormOpenStateName,
+          value: true,
+        },
+      }),
+    []
+  );
+
 
   const studyTypeElem = (
     <FormControl
@@ -519,6 +538,7 @@ const Partners = ({ title, mapData, listData }) => {
       </>
     );
 
+
     if (
       state.selectedId === undefined ||
       filteredData.map(({ id }) => id).includes(state.selectedId) === false
@@ -540,7 +560,7 @@ const Partners = ({ title, mapData, listData }) => {
       card = (
         <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
           <div className="title is-4">Study details</div>
-          <Card cardInfo={cardInfo} />
+          <Card cardInfo={cardInfo} showContactForm={showContactForm}/>
         </div>
       );
     }
@@ -570,6 +590,7 @@ const Partners = ({ title, mapData, listData }) => {
       />
     );
   }
+
 
   return (
     <div className="content">
@@ -623,6 +644,11 @@ const Partners = ({ title, mapData, listData }) => {
             </div>
           </div>
           {card}
+          <InvestigatorContactForm
+            selectedId={state.selectedId}
+            isOpen={state[contactFormOpenStateName]}
+            dispatchMessageToParent={dispatch}
+          />
         </div>
       </section>
     </div>
