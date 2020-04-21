@@ -218,10 +218,18 @@ const Partners = ({ title, mapData, listData }: Props) => {
           "researchCategory" in elem && elem.researchCategory.includes(category)
       );
     });
-    if (state[selectedCountryStateName] !== undefined) {
-      filteredData = filteredData.filter(
-        ({ country }) => country === state[selectedCountryStateName]
-      );
+    const selectedCountry = state[selectedCountryStateName];
+    if (selectedCountry !== undefined) {
+      filteredData = filteredData.filter(({ country }) => {
+        const thisCountryString = country.toLowerCase().replace(/\s+/g, "");
+        const selectedCountryString = selectedCountry
+          .toLowerCase()
+          .replace(/\s+/g, "");
+        return (
+          thisCountryString.includes(selectedCountryString) ||
+          selectedCountryString.includes(thisCountryString)
+        );
+      });
     }
     if (state[keywordSearchStateName] !== "") {
       filteredData = filteredData.filter((elem) =>
