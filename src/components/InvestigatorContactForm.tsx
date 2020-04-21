@@ -28,6 +28,7 @@ if (typeof RECAPTCHA_KEY === "undefined") {
 
 const SET_STATE_ACTION_NAME = "SET_STATE";
 const RESET_ACTION_NAME = "RESET";
+const CAPTCHA_SOLVED = "CAPTCHA_SOLVED"
 
 const nameStateName = "name";
 const emailStateName = "email";
@@ -67,11 +68,18 @@ interface SetStateAction<K extends keyof State> {
     value: State[K];
   };
 }
+interface CaptchaSolvedAction {
+  type: typeof CAPTCHA_SOLVED,
+  payload: {
+    captchaValue: string,
+  }
+}
 type Action<K extends keyof State> =
   | SetStateAction<K>
   | {
       type: typeof RESET_ACTION_NAME;
-    };
+    } |
+  CaptchaSolvedAction
 
 const reducer = <K extends keyof State>(
   state: State,
@@ -88,6 +96,12 @@ const reducer = <K extends keyof State>(
         ...state,
         ...initialState,
       };
+    case CAPTCHA_SOLVED:
+      return {
+        ...state,
+        [submitButtonEnabledStateName]: true,
+        [captchaValueStateName]: action.payload.captchaValue,
+      }
     default:
       return state;
   }
@@ -118,12 +132,11 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
     dispatchMessageToParent(action);
   }, [dispatchMessageToParent]);
   const onRecaptchaChange = (value: string) => {
-    const action: SetStateAction<typeof captchaValueStateName> = {
-      type: SET_STATE_ACTION_NAME,
+    const action: CaptchaSolvedAction = {
+      type: CAPTCHA_SOLVED,
       payload: {
-        name: captchaValueStateName,
-        value,
-      },
+        captchaValue: value,
+      }
     };
     dispatch(action);
   };
@@ -275,7 +288,7 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
                 {cancelButtonContent}
               </Button>
               <Button
-                disabled={false}
+                disabled={!state[submitButtonEnabledStateName]}
                 color="primary"
                 type="submit"
                 onClick={sendButtonClickHandler}
