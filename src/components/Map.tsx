@@ -1,13 +1,21 @@
-import React, { useRef, useEffect } from "react";
-import { Map as MapboxMap, Marker, Popup, NavigationControl } from "mapbox-gl";
+import React, { useRef, useEffect, MutableRefObject } from "react";
+import {
+  Map as MapboxMap,
+  Marker,
+  Popup,
+  NavigationControl,
+  LngLatLike,
+  Style as MapboxStyle,
+} from "mapbox-gl";
 import _min from "lodash/min";
 import _max from "lodash/max";
 import "../mapbox-gl.css";
-import getPlaceLabelsPlaceLabelsMapboxLayer from "../mapboxLayers/place-labels-place-labels-mapbox-layer";
-import getAdministrativeBoundariesAdminMapboxLayer from "../mapboxLayers/administrative-boundaries-admin-mapbox-layer";
-import getLandWaterLandMapboxLayer from "../mapboxLayers/land-water-land-mapbox-layer.js";
-import getLandWaterWaterMapboxLayer from "../mapboxLayers/land-water-water-mapbox-layer.js";
-import getLandWaterBuiltMapboxLayer from "../mapboxLayers/land-water-built-mapbox-layer.js";
+import { MapDatum } from "../types";
+const getPlaceLabelsPlaceLabelsMapboxLayer = require("../mapboxLayers/place-labels-place-labels-mapbox-layer");
+const getAdministrativeBoundariesAdminMapboxLayer = require("../mapboxLayers/administrative-boundaries-admin-mapbox-layer");
+const getLandWaterLandMapboxLayer = require("../mapboxLayers/land-water-land-mapbox-layer.js");
+const getLandWaterWaterMapboxLayer = require("../mapboxLayers/land-water-water-mapbox-layer.js");
+const getLandWaterBuiltMapboxLayer = require("../mapboxLayers/land-water-built-mapbox-layer.js");
 
 export const SET_SELECTED_INSTITUTION_ACTION = "setSelectedInstitution";
 export const UNSET_SELECTED_INSTITUTION_ACTION = "unsetSelectedInstitution";
@@ -18,20 +26,29 @@ const terrainSourceId = "mapbox-terrain";
 const markerLayerId = "markers-layer";
 const visibilityFeatureStateName = "isVisible";
 
-const createMarker = ({
-  lng,
-  lat,
-  study,
-  dispatchMessageToParent,
-  popup,
-  id,
-  mapboxMap,
+const createMarker = (args: {
+  lng: number;
+  lat: number;
+  study: string;
+  dispatchMessageToParent: any;
+  popup: Popup;
+  id: string;
+  mapboxMap: MapboxMap;
 }) => {
+  const {
+    lng,
+    lat,
+    study,
+    dispatchMessageToParent,
+    popup,
+    id,
+    mapboxMap,
+  } = args;
   // Use the default marker but halve the size:
   const marker = new Marker();
   const markerElement = marker.getElement();
   markerElement.style.cursor = "pointer";
-  const svg = markerElement.querySelector("svg");
+  const svg = markerElement.querySelector("svg")!;
 
   // These sizes are obtained by inspecting the actual SVG created by Mapbox:
   const defaultWidth = 27;
@@ -65,13 +82,37 @@ const createMarker = ({
   marker.setLngLat([lng, lat]).setPopup(popup);
   return marker;
 };
-const initializeMap = (el, data, dispatchMessageToParent) => {
+
+interface MapboxInfo {
+  map: MapboxMap;
+  markers: Map<string, MarkerInfo>;
+  labelInfo: Map<string, LabelInfo>;
+  isStyleLoaded: boolean;
+  popup: Popup;
+}
+interface MarkerInfo {
+  marker: Marker;
+  lng: number;
+  lat: number;
+  study: string;
+  isInMap: boolean;
+  isMarkedAsSelected: boolean;
+}
+interface LabelInfo {
+  geoJsonId: number;
+  isVisible: boolean;
+}
+const initializeMap = (
+  el: HTMLDivElement,
+  data: MapDatum[],
+  dispatchMessageToParent: any
+) => {
   const lats = data.map(({ lat }) => lat);
   const lngs = data.map(({ lng }) => lng);
-  const southWest = [_min(lngs), _min(lats)];
-  const northEast = [_max(lngs), _max(lats)];
+  const southWest: LngLatLike = [_min(lngs)!, _min(lats)!];
+  const northEast: LngLatLike = [_max(lngs)!, _max(lats)!];
 
-  const mapboxStyleGeoJsonFeatures = data.map(
+  const mapboxStyleGeoJsonFeatures: GeoJSON.Feature[] = data.map(
     ({ lat, lng, geoJsonId, study, id }) => ({
       type: "Feature",
       // Note: ID of GeoJSON feature has to be an integer or string convertible
@@ -139,7 +180,7 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
 
   const mapboxMap = new MapboxMap({
     container: el,
-    style: mapboxStyle,
+    style: mapboxStyle as MapboxStyle,
     accessToken: process.env.GATSBY_MAPBOX_API_KEY,
     renderWorldCopies: false,
     bounds: [southWest, northEast],
@@ -165,14 +206,14 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
   mapboxMap.dragRotate.disable();
   mapboxMap.touchZoomRotate.disableRotation();
 
-  mapboxMap.on("click", (event) => {
+  mapboxMap.on("click", () => {
     // Any click that bubbles up here means it must not have originated inside a marker:
     dispatchMessageToParent({
       type: UNSET_SELECTED_INSTITUTION_ACTION,
     });
   });
 
-  const markers = new Map();
+  const markers: Map<string, MarkerInfo> = new Map();
 
   const popup = new Popup({
     closeButton: false,
@@ -204,7 +245,7 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
     data.map(({ id, geoJsonId }) => [id, { geoJsonId, isVisible: false }])
   );
 
-  const mapboxInfo = {
+  const mapboxInfo: MapboxInfo = {
     map: mapboxMap,
     markers,
     labelInfo,
@@ -215,88 +256,113 @@ const initializeMap = (el, data, dispatchMessageToParent) => {
   return mapboxInfo;
 };
 
-const setMarkerColor = (marker, color) => marker.getElement().querySelector("path").parentElement.setAttribute("fill", color)
+const setMarkerColor = (marker: Marker, color: string) =>
+  marker
+    .getElement()
+    .querySelector("path")!
+    .parentElement!.setAttribute("fill", color);
 
 const adjustMarkerVisibility = (
-  mapboxInfoRef,
-  visibleIds,
-  dispatchMessageToParent,
-  selectedId,
+  mapboxInfoRef: MutableRefObject<MapboxInfo | undefined>,
+  visibleIds: string[],
+  dispatchMessageToParent: any,
+  selectedId: string | undefined
 ) => {
-  const {
-    current: { map, popup, markers },
-  } = mapboxInfoRef;
+  const { current: mapboxInfo } = mapboxInfoRef;
+  if (mapboxInfo !== undefined) {
+    const { map, popup, markers } = mapboxInfo;
 
-  const highglightedMarkerColor = "red"
-  // This color was determined by inspecting the DOM:
-  const defaultMarkerColor = "#3FB1CE"
+    const highglightedMarkerColor = "red";
+    // This color was determined by inspecting the DOM:
+    const defaultMarkerColor = "#3FB1CE";
 
-  for (const [id, markerInfo] of markers.entries()) {
-    if (visibleIds.includes(id) === true && markerInfo.isInMap === false) {
-      const { lng, lat, study } = markerInfo;
-      const marker = createMarker({
-        lng,
-        lat,
-        study,
-        dispatchMessageToParent,
-        popup,
-        id,
-        mapboxMap: map,
-      });
-      marker.addTo(map);
-      markerInfo.marker = marker;
-      markerInfo.isInMap = true;
-
-    } else if (
-      visibleIds.includes(id) === false &&
-      markerInfo.isInMap === true
-    ) {
-      markerInfo.marker.remove();
-      markerInfo.isInMap = false;
-      markerInfo.isMarkedAsSelected = false
-    }
-    if (markerInfo.isMarkedAsSelected === false && selectedId === id && markerInfo.isInMap === true) {
-      setMarkerColor(markerInfo.marker, highglightedMarkerColor)
-      markerInfo.isMarkedAsSelected = true
-    } else if (markerInfo.isMarkedAsSelected === true && selectedId !== id && markerInfo.isInMap === true) {
-      setMarkerColor(markerInfo.marker, defaultMarkerColor)
-      markerInfo.isMarkedAsSelected = false
-    }
-  }
-};
-
-const adjustLabelVisibility = (mapboxInfoRef, visibleIds, selectedId) => {
-  const {
-    current: { labelInfo, map, isStyleLoaded },
-  } = mapboxInfoRef;
-  if (isStyleLoaded === true) {
-    for (const [id, info] of labelInfo.entries()) {
-      if (visibleIds.includes(id) === true && info.isVisible === false) {
-        map.setFeatureState(
-          { source: markersSourceId, id: info.geoJsonId },
-          { [visibilityFeatureStateName]: true }
-        );
-        info.isVisible = true;
-      } else if (visibleIds.includes(id) === false && info.isVisible === true) {
-        map.setFeatureState(
-          { source: markersSourceId, id: info.geoJsonId },
-          { [visibilityFeatureStateName]: false }
-        );
-        info.isVisible = false;
+    for (const [id, markerInfo] of markers.entries()) {
+      if (visibleIds.includes(id) === true && markerInfo.isInMap === false) {
+        const { lng, lat, study } = markerInfo;
+        const marker = createMarker({
+          lng,
+          lat,
+          study,
+          dispatchMessageToParent,
+          popup,
+          id,
+          mapboxMap: map,
+        });
+        marker.addTo(map);
+        markerInfo.marker = marker;
+        markerInfo.isInMap = true;
+      } else if (
+        visibleIds.includes(id) === false &&
+        markerInfo.isInMap === true
+      ) {
+        markerInfo.marker.remove();
+        markerInfo.isInMap = false;
+        markerInfo.isMarkedAsSelected = false;
+      }
+      if (
+        markerInfo.isMarkedAsSelected === false &&
+        selectedId === id &&
+        markerInfo.isInMap === true
+      ) {
+        setMarkerColor(markerInfo.marker, highglightedMarkerColor);
+        markerInfo.isMarkedAsSelected = true;
+      } else if (
+        markerInfo.isMarkedAsSelected === true &&
+        selectedId !== id &&
+        markerInfo.isInMap === true
+      ) {
+        setMarkerColor(markerInfo.marker, defaultMarkerColor);
+        markerInfo.isMarkedAsSelected = false;
       }
     }
   }
 };
 
+const adjustLabelVisibility = (
+  mapboxInfoRef: MutableRefObject<MapboxInfo | undefined>,
+  visibleIds: string[]
+) => {
+  const { current: mapboxInfo } = mapboxInfoRef;
+  if (mapboxInfo !== undefined) {
+    const { labelInfo, map, isStyleLoaded } = mapboxInfo;
+    if (isStyleLoaded === true) {
+      for (const [id, info] of labelInfo.entries()) {
+        if (visibleIds.includes(id) === true && info.isVisible === false) {
+          map.setFeatureState(
+            { source: markersSourceId, id: info.geoJsonId },
+            { [visibilityFeatureStateName]: true }
+          );
+          info.isVisible = true;
+        } else if (
+          visibleIds.includes(id) === false &&
+          info.isVisible === true
+        ) {
+          map.setFeatureState(
+            { source: markersSourceId, id: info.geoJsonId },
+            { [visibilityFeatureStateName]: false }
+          );
+          info.isVisible = false;
+        }
+      }
+    }
+  }
+};
+
+interface Props {
+  dispatchMessageToParent: any;
+  mapData: MapDatum[];
+  filteredData: MapDatum[];
+  selected: string | undefined;
+}
 const MapComponent = ({
   dispatchMessageToParent,
   mapData,
   filteredData,
-  selected
-}) => {
-  const mapboxInfoRef = useRef(undefined);
+  selected,
+}: Props) => {
+  const mapboxInfoRef = useRef<MapboxInfo | undefined>(undefined);
   const visibleIds = filteredData.map(({ id }) => id).sort();
-  const mapElRef = useRef(null);
+  const mapElRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const { current: el } = mapElRef;
@@ -313,13 +379,18 @@ const MapComponent = ({
   useEffect(() => {
     const { current: mapboxInfo } = mapboxInfoRef;
     if (selected !== undefined && mapboxInfo !== undefined) {
-      const { lng, lat } = mapData.find(({ id }) => id === selected);
+      const { lng, lat } = mapData.find(({ id }) => id === selected)!;
       mapboxInfo.map.flyTo({ center: [lng, lat], zoom: 6 });
     }
   }, [selected]);
 
   useEffect(() => {
-    adjustMarkerVisibility(mapboxInfoRef, visibleIds, dispatchMessageToParent, selected);
+    adjustMarkerVisibility(
+      mapboxInfoRef,
+      visibleIds,
+      dispatchMessageToParent,
+      selected
+    );
     adjustLabelVisibility(mapboxInfoRef, visibleIds);
   }, [visibleIds]);
 

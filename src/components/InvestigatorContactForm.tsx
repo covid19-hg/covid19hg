@@ -1,4 +1,4 @@
-import React, { useReducer, useCallback, useRef } from "react";
+import React, { useReducer, useCallback, Dispatch } from "react";
 import Recaptcha from "react-google-recaptcha";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -10,6 +10,8 @@ import TextField from "@material-ui/core/TextField";
 import {
   SET_FORM_STATE as SET_PARENT_FORM_STATE,
   contactFormOpenStateName,
+  Action as PartnersAction,
+  State as PartnersState,
 } from "./Partners";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
@@ -24,30 +26,65 @@ if (typeof RECAPTCHA_KEY === "undefined") {
   `);
 }
 
+const SET_STATE_ACTION_NAME = "SET_STATE";
+const RESET_ACTION_NAME = "RESET";
+const CAPTCHA_SOLVED = "CAPTCHA_SOLVED"
+
 const nameStateName = "name";
 const emailStateName = "email";
 const messageStateName = "message";
+const captchaValueStateName = "captchaValue";
 const submitButtonEnabledStateName = "isSubmitButtonEnabled";
 const submissionStatusStateName = "submissionStatus";
 
-const submissionStatuses = {
-  initial: "initial",
-  pending: "pending",
-  failure: "failure",
-};
+enum SubmissionStatus {
+  Initial,
+  Pending,
+  Failed,
+}
 
-const defaultFormState = {
+interface State {
+  [nameStateName]: string;
+  [emailStateName]: string;
+  [messageStateName]: string;
+  [captchaValueStateName]: string;
+  [submitButtonEnabledStateName]: boolean;
+  [submissionStatusStateName]: SubmissionStatus;
+}
+
+const initialState: State = {
   [nameStateName]: "",
   [emailStateName]: "",
   [messageStateName]: "",
+  [captchaValueStateName]: "",
   [submitButtonEnabledStateName]: false,
-  [submissionStatusStateName]: submissionStatuses.initial,
+  [submissionStatusStateName]: SubmissionStatus.Initial,
 };
 
-const SET_STATE_ACTION_NAME = "SET_STATE";
-const RESET_ACTION_NAME = "RESET";
+interface SetStateAction<K extends keyof State> {
+  type: typeof SET_STATE_ACTION_NAME;
+  payload: {
+    name: K;
+    value: State[K];
+  };
+}
+interface CaptchaSolvedAction {
+  type: typeof CAPTCHA_SOLVED,
+  payload: {
+    captchaValue: string,
+  }
+}
+type Action<K extends keyof State> =
+  | SetStateAction<K>
+  | {
+      type: typeof RESET_ACTION_NAME;
+    } |
+  CaptchaSolvedAction
 
-const reducer = (state, action) => {
+const reducer = <K extends keyof State>(
+  state: State,
+  action: Action<K>
+): State => {
   switch (action.type) {
     case SET_STATE_ACTION_NAME:
       return {
@@ -57,78 +94,85 @@ const reducer = (state, action) => {
     case RESET_ACTION_NAME:
       return {
         ...state,
-        ...defaultFormState,
+        ...initialState,
       };
+    case CAPTCHA_SOLVED:
+      return {
+        ...state,
+        [submitButtonEnabledStateName]: true,
+        [captchaValueStateName]: action.payload.captchaValue,
+      }
     default:
       return state;
   }
 };
 
-const InvestigatorContactForm = ({
+interface Props<K extends keyof PartnersState> {
+  selectedId: string | undefined;
+  isOpen: boolean;
+  dispatchMessageToParent: Dispatch<PartnersAction<K>>;
+}
+
+const InvestigatorContactForm = <K extends keyof PartnersState>({
   selectedId,
   isOpen,
   dispatchMessageToParent,
-}) => {
-  const [state, dispatch] = useReducer(reducer, defaultFormState);
-
-  const closeContactForm = useCallback(
-    () =>
-      dispatchMessageToParent({
-        type: SET_PARENT_FORM_STATE,
-        payload: {
-          name: contactFormOpenStateName,
-          value: false,
-        },
-      }),
-    [dispatchMessageToParent]
-  );
-  const onRecaptchaChange = (val) => {
-    if (!!val) {
-      dispatch({
-        type: SET_STATE_ACTION_NAME,
-        payload: {
-          name: submitButtonEnabledStateName,
-          value: true,
-        },
-      });
-    }
+}: Props<K>) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const closeContactForm = useCallback(() => {
+    const action = {
+      type: SET_PARENT_FORM_STATE,
+      payload: {
+        name: contactFormOpenStateName,
+        value: false,
+      },
+    };
+    // @ts-ignore Quite a complicated error
+    // https://stackoverflow.com/questions/56505560/could-be-instantiated-with-a-different-subtype-of-constraint-object
+    dispatchMessageToParent(action);
+  }, [dispatchMessageToParent]);
+  const onRecaptchaChange = (value: string) => {
+    const action: CaptchaSolvedAction = {
+      type: CAPTCHA_SOLVED,
+      payload: {
+        captchaValue: value,
+      }
+    };
+    dispatch(action);
   };
 
-  const recaptchaRef = useRef(null);
-  const rememberRecaptchaEl = useCallback((el) => {
-    recaptchaRef.current = el;
+  const showErrorMessage = useCallback(() => {
+    const action: SetStateAction<typeof submissionStatusStateName> = {
+      type: SET_STATE_ACTION_NAME,
+      payload: {
+        name: submissionStatusStateName,
+        value: SubmissionStatus.Failed,
+      },
+    };
+    dispatch(action);
   }, []);
 
-  const showErrorMessage = useCallback(
-    () =>
-      dispatch({
-        type: SET_STATE_ACTION_NAME,
-        payload: {
-          name: submissionStatusStateName,
-          value: submissionStatuses.failure,
-        },
-      }),
-    []
-  );
-
   const resetContactForm = () => dispatch({ type: RESET_ACTION_NAME })
+  const closeAndResetContactForm = () => {
+    closeContactForm()
+    resetContactForm()
+  }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const recaptchaValue = recaptchaRef.current.getValue();
+  const handleSubmit = async () => {
     const formData = {
-      "g-recaptcha-response": recaptchaValue,
+      "g-recaptcha-response": state[captchaValueStateName],
       studyId: selectedId,
       [nameStateName]: state[nameStateName],
       [emailStateName]: state[emailStateName],
       [messageStateName]: state[messageStateName],
     };
+
     try {
       dispatch({
         type: SET_STATE_ACTION_NAME,
         payload: {
           name: submissionStatusStateName,
-          value: submissionStatuses.pending,
+          value: SubmissionStatus.Pending,
         },
       });
       const response = await fetch("/.netlify/functions/contact-investigator", {
@@ -137,8 +181,7 @@ const InvestigatorContactForm = ({
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        resetContactForm()
-        closeContactForm();
+        closeAndResetContactForm()
       } else {
         showErrorMessage();
       }
@@ -148,16 +191,16 @@ const InvestigatorContactForm = ({
     }
   };
 
-  if (state[submissionStatusStateName] === submissionStatuses.failure) {
+  if (state[submissionStatusStateName] === SubmissionStatus.Failed) {
     return (
-      <Dialog open={isOpen} onClose={closeContactForm}>
+      <Dialog open={isOpen} onClose={closeAndResetContactForm}>
         <DialogTitle id="form-dialog-title">Error</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Unable to send email. Please try again.
           </DialogContentText>
           <DialogActions>
-            <Button onClick={closeContactForm} color="primary">
+            <Button onClick={closeAndResetContactForm} color="primary">
               Cancel
             </Button>
             <Button
@@ -171,8 +214,9 @@ const InvestigatorContactForm = ({
       </Dialog>
     );
   } else {
-    let sendButtonContent, cancelButtonContent, sendButtonClickHandler, cancelButtonClickHandler
-    if (state[submissionStatusStateName] === submissionStatuses.pending) {
+    let sendButtonContent: React.ReactChild, cancelButtonContent: React.ReactChild;
+    let sendButtonClickHandler: React.MouseEventHandler<any> | undefined, cancelButtonClickHandler: React.MouseEventHandler<any> | undefined;
+    if (state[submissionStatusStateName] === SubmissionStatus.Pending) {
       sendButtonContent = <CircularProgress size={20} />
       cancelButtonContent = <CircularProgress size={20} />
       sendButtonClickHandler = undefined
@@ -181,10 +225,10 @@ const InvestigatorContactForm = ({
       sendButtonContent = "Send"
       cancelButtonContent = "Cancel"
       sendButtonClickHandler = handleSubmit
-      cancelButtonClickHandler = closeContactForm
+      cancelButtonClickHandler = closeAndResetContactForm
     }
     return (
-      <Dialog open={isOpen} onClose={closeContactForm}>
+      <Dialog open={isOpen} onClose={closeAndResetContactForm}>
         <DialogTitle id="form-dialog-title">Contact Investigator</DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -238,18 +282,15 @@ const InvestigatorContactForm = ({
                 })
               }
             />
-            <Recaptcha
-              ref={rememberRecaptchaEl}
-              sitekey={RECAPTCHA_KEY}
-              onChange={onRecaptchaChange}
-            />
+            <Recaptcha sitekey={RECAPTCHA_KEY} onChange={onRecaptchaChange} />
             <DialogActions>
               <Button onClick={cancelButtonClickHandler} color="primary">
                 {cancelButtonContent}
               </Button>
               <Button
-                disabled={false}
+                disabled={!state[submitButtonEnabledStateName]}
                 color="primary"
+                type="submit"
                 onClick={sendButtonClickHandler}
               >
                 {sendButtonContent}

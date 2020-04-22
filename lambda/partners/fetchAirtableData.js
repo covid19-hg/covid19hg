@@ -15,8 +15,12 @@ module.exports = async () => {
         (records, fetchNextPage) => {
           const recordFields = records.map(({ fields, id }) => {
             return {
-              emails: parseEmailField(fields["Email"]),
+              study: fields["Study"],
               investigator: fields["Investigator"],
+              affiliation: fields["Affiliation"],
+              country: fields["Country"],
+              city: fields["City"],
+              studyLink: fields["Study link"],
               retrospective: fields["Retrospective"],
               prospective: fields["Prospective"],
               retrospectiveSampleSize: fields["Retrospective sample size"],
@@ -24,19 +28,15 @@ module.exports = async () => {
               genotyping: fields["Genotyping"],
               wes: fields["WES"],
               wgs: fields["WGS"],
-              otherAssays: fields["Other assays"],
-              studyDesign: fields["Study design"],
-              studyDesignUnformatted: fields["Study design unformatted"],
-              affiliation: fields["Affiliation"],
-              city: fields["City"],
-              country: fields["Country"],
-              researchQuestion: fields["Research Question"],
-              study: fields["Study"],
-              studyLink: fields["Study link"],
               assaysPlanned: fields["Additional assays planned"],
+              otherAssays: fields["Other assays"],
+              researchQuestion: fields["Research Question"],
+              studyDesign: fields["Study design"],
               researchCategory: fields["Research Category"],
+              studyDesignUnformatted: fields["Study design unformatted"],
               timeCreated: Date.parse(fields["Time created"]),
               mapLocation: fields["Map location"],
+              emails: parseEmailField(fields["Email"]),
               id,
             };
           });

@@ -2,7 +2,8 @@ import React from "react";
 import Chip from "@material-ui/core/Chip";
 import { makeStyles } from "@material-ui/core/styles";
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
+import { ListDatum } from "../types";
 
 const viralSequencingColor = "rgb(204, 223, 254)";
 const transcriptomicsColor = "rgb(193, 244, 233)";
@@ -85,10 +86,15 @@ const useMaterialStyles = makeStyles(() => ({
   contactButtonRoot: {
     marginLeft: "1rem",
     borderRadius: "20px",
-  }
+  },
 }));
 
-const Card = ({ cardInfo, showContactForm }) => {
+interface Props {
+  cardInfo: ListDatum;
+  showContactForm: VoidFunction;
+}
+
+const Card = ({ cardInfo, showContactForm }: Props) => {
   const {
     study,
     investigator,
@@ -164,6 +170,8 @@ const Card = ({ cardInfo, showContactForm }) => {
         <Chip
           key={name}
           label={name}
+          // @ts-ignore Temporary fix b/c the loop loops through object's
+          // property names and TypeScript can't reason through that
           className={`${materialStyles[styleName]} ${materialStyles.chip}`}
         />
       ) : null
@@ -218,11 +226,19 @@ const Card = ({ cardInfo, showContactForm }) => {
     researchCategoriesElem = null;
   }
 
-  const contactButton = (cardInfo.shouldShowContactButton === true) ? (
-    <Button variant="outlined" size="small" classes={{
-      root: materialStyles.contactButtonRoot
-    }} onClick={() => showContactForm()}>Contact</Button>
-  ) : null
+  const contactButton =
+    cardInfo.shouldShowContactButton === true ? (
+      <Button
+        variant="outlined"
+        size="small"
+        classes={{
+          root: materialStyles.contactButtonRoot,
+        }}
+        onClick={() => showContactForm()}
+      >
+        Contact
+      </Button>
+    ) : null;
 
   return (
     <div className="card">
@@ -239,8 +255,19 @@ const Card = ({ cardInfo, showContactForm }) => {
                 gridRowGap: "0.5rem",
               }}
             >
-              <div className="has-text-weight-bold" style={{alignItems: "center", display: "flex"}}><div>Investigators</div></div>
-              <div style={{display: "flex", alignItems: "center", justifyContent: "start"}}>
+              <div
+                className="has-text-weight-bold"
+                style={{ alignItems: "center", display: "flex" }}
+              >
+                <div>Investigators</div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "start",
+                }}
+              >
                 <div>{investigator}</div>
                 {contactButton}
               </div>

@@ -2,8 +2,18 @@ const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const ForkTSCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin")
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "develop") {
+    actions.setWebpackConfig({
+      plugins: [
+        new ForkTSCheckerWebpackPlugin({
+          checkSyntacticErrors: true,
+        }),
+      ]
+    })
+  }
   if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
