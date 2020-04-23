@@ -78,9 +78,9 @@ exports.handler = async (event, context) => {
               message: params.message,
             });
             const msg = {
-              // TODO: replace with real investigator's email:
               to: emails,
               replyTo: "no-reply@covid19hg.org",
+              cc: "contact@covid19hg.org",
               from: "no-reply@covid19hg.org",
               subject:
                 "Message from COVID-19 Host Genetics Initiative website visitor",
@@ -95,7 +95,7 @@ exports.handler = async (event, context) => {
             } catch (error) {
               console.error(error);
               if (error.message) {
-                console.error("Error while sending email", error.message.body);
+                console.error("Error while sending email", error.errors);
               }
               return {
                 statusCode: 500,
