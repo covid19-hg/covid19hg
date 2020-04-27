@@ -34,6 +34,7 @@ const createMarker = (args: {
   popup: Popup;
   id: string;
   mapboxMap: MapboxMap;
+  hasSubmittedData: boolean;
 }) => {
   const {
     lng,
@@ -97,11 +98,20 @@ interface MarkerInfo {
   study: string;
   isInMap: boolean;
   isMarkedAsSelected: boolean;
+  hasSubmittedData: boolean;
 }
 interface LabelInfo {
   geoJsonId: number;
   isVisible: boolean;
 }
+
+// This color was determined by inspecting the DOM:
+const defaultMarkerColor = "#3FB1CE";
+const highlightedMarkerColor = "red";
+const submittedDataMarkerColor = "green";
+const getUnhighlightedMarkerColor = (hasSubmittedData: boolean) =>
+  hasSubmittedData ? submittedDataMarkerColor : defaultMarkerColor;
+
 const initializeMap = (
   el: HTMLDivElement,
   data: MapDatum[],
@@ -220,7 +230,7 @@ const initializeMap = (
     closeOnClick: false,
   });
 
-  data.forEach(({ lat, lng, study, id }) => {
+  data.forEach(({ lat, lng, study, id, hasSubmittedData }) => {
     const marker = createMarker({
       lng,
       lat,
@@ -229,13 +239,16 @@ const initializeMap = (
       popup,
       id,
       mapboxMap,
+      hasSubmittedData,
     });
+    setMarkerColor(marker, getUnhighlightedMarkerColor(hasSubmittedData));
     marker.addTo(mapboxMap);
     markers.set(id, {
       marker,
       lng,
       lat,
       study,
+      hasSubmittedData,
       isInMap: true,
       isMarkedAsSelected: false,
     });
@@ -272,13 +285,9 @@ const adjustMarkerVisibility = (
   if (mapboxInfo !== undefined) {
     const { map, popup, markers } = mapboxInfo;
 
-    const highglightedMarkerColor = "red";
-    // This color was determined by inspecting the DOM:
-    const defaultMarkerColor = "#3FB1CE";
-
     for (const [id, markerInfo] of markers.entries()) {
       if (visibleIds.includes(id) === true && markerInfo.isInMap === false) {
-        const { lng, lat, study } = markerInfo;
+        const { lng, lat, study, hasSubmittedData } = markerInfo;
         const marker = createMarker({
           lng,
           lat,
@@ -287,6 +296,7 @@ const adjustMarkerVisibility = (
           popup,
           id,
           mapboxMap: map,
+          hasSubmittedData,
         });
         marker.addTo(map);
         markerInfo.marker = marker;
@@ -304,14 +314,17 @@ const adjustMarkerVisibility = (
         selectedId === id &&
         markerInfo.isInMap === true
       ) {
-        setMarkerColor(markerInfo.marker, highglightedMarkerColor);
+        setMarkerColor(markerInfo.marker, highlightedMarkerColor);
         markerInfo.isMarkedAsSelected = true;
       } else if (
         markerInfo.isMarkedAsSelected === true &&
         selectedId !== id &&
         markerInfo.isInMap === true
       ) {
-        setMarkerColor(markerInfo.marker, defaultMarkerColor);
+        setMarkerColor(
+          markerInfo.marker,
+          getUnhighlightedMarkerColor(markerInfo.hasSubmittedData)
+        );
         markerInfo.isMarkedAsSelected = false;
       }
     }
