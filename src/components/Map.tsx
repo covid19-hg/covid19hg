@@ -419,8 +419,15 @@ const MapComponent = ({
   useEffect(() => {
     const { current: mapboxInfo } = mapboxInfoRef;
     if (selected !== undefined && mapboxInfo !== undefined) {
+      const { map } = mapboxInfo;
+      const zoomLevel = map.getZoom();
+      const defaultFlyToZoomLevel = 6;
       const { lng, lat } = mapData.find(({ id }) => id === selected)!;
-      mapboxInfo.map.flyTo({ center: [lng, lat], zoom: 6 });
+      if (zoomLevel > defaultFlyToZoomLevel) {
+        mapboxInfo.map.flyTo({ center: [lng, lat] });
+      } else {
+        mapboxInfo.map.flyTo({ center: [lng, lat], zoom: 6 });
+      }
     }
   }, [selected]);
 
