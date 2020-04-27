@@ -2,6 +2,7 @@ import React, { useReducer, useCallback } from "react";
 import Map, {
   SET_SELECTED_INSTITUTION_ACTION,
   UNSET_SELECTED_INSTITUTION_ACTION,
+  legendContainerHeight as mapLegendContainerHeight,
 } from "../components/Map";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
@@ -545,7 +546,12 @@ const Partners = ({ title, mapData, listData }: Props) => {
     listElem = (
       <>
         <div className="title is-4">{studyListHeadingText} </div>
-        <div style={{ maxHeight: "36vh", overflowY: "auto" }}>
+        <div
+          style={{
+            maxHeight: `calc(${mapLegendContainerHeight}rem + 35.3vh)`,
+            overflowY: "auto",
+          }}
+        >
           <List dense={true} component="div">
             {listItems}
           </List>
@@ -622,7 +628,7 @@ const Partners = ({ title, mapData, listData }: Props) => {
       </div>
       <section className="section section--gradient" style={{ paddingTop: 0 }}>
         <div className="container">
-          <div className="section" style={{ paddingTop: 0 }}>
+          <div className="section" style={{ paddingTop: 0, paddingBottom: 0 }}>
             <div className="title is-4">Find studies</div>
             <div className="columns">
               <div className="column is-one-third">{studyTypeElem}</div>

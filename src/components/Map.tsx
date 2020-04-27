@@ -11,6 +11,14 @@ import _min from "lodash/min";
 import _max from "lodash/max";
 import "../mapbox-gl.css";
 import { MapDatum } from "../types";
+import MapMarker, {
+  defaultMarkerWidth,
+  defaultMarkerHeight,
+  defaultMarkerColor,
+  highlightedMarkerColor,
+  submittedDataMarkerColor,
+} from "./MapMarker";
+
 const getPlaceLabelsPlaceLabelsMapboxLayer = require("../mapboxLayers/place-labels-place-labels-mapbox-layer");
 const getAdministrativeBoundariesAdminMapboxLayer = require("../mapboxLayers/administrative-boundaries-admin-mapbox-layer");
 const getLandWaterLandMapboxLayer = require("../mapboxLayers/land-water-land-mapbox-layer.js");
@@ -25,6 +33,7 @@ const streetMapSourceId = "mapbox-streets";
 const terrainSourceId = "mapbox-terrain";
 const markerLayerId = "markers-layer";
 const visibilityFeatureStateName = "isVisible";
+export const legendContainerHeight = 3; // in
 
 const createMarker = (args: {
   lng: number;
@@ -51,11 +60,8 @@ const createMarker = (args: {
   markerElement.style.cursor = "pointer";
   const svg = markerElement.querySelector("svg")!;
 
-  // These sizes are obtained by inspecting the actual SVG created by Mapbox:
-  const defaultWidth = 27;
-  const defaultHeight = 41;
-  svg.setAttribute("width", `${defaultWidth / 2}px`);
-  svg.setAttribute("height", `${defaultHeight / 2}px`);
+  svg.setAttribute("width", `${defaultMarkerWidth / 2}px`);
+  svg.setAttribute("height", `${defaultMarkerHeight / 2}px`);
 
   markerElement.addEventListener("click", (event) => {
     // Need to `stopPropagation` so that it doesn't bubble up to the map and
@@ -106,9 +112,6 @@ interface LabelInfo {
 }
 
 // This color was determined by inspecting the DOM:
-const defaultMarkerColor = "#3FB1CE";
-const highlightedMarkerColor = "red";
-const submittedDataMarkerColor = "green";
 const getUnhighlightedMarkerColor = (hasSubmittedData: boolean) =>
   hasSubmittedData ? submittedDataMarkerColor : defaultMarkerColor;
 
@@ -241,7 +244,7 @@ const initializeMap = (
       mapboxMap,
       hasSubmittedData,
     });
-    setMarkerColor(marker, getUnhighlightedMarkerColor(hasSubmittedData));
+    setMarkerVisibleProperties({ marker, isSelected: false, hasSubmittedData });
     marker.addTo(mapboxMap);
     markers.set(id, {
       marker,
@@ -269,11 +272,30 @@ const initializeMap = (
   return mapboxInfo;
 };
 
-const setMarkerColor = (marker: Marker, color: string) =>
-  marker
-    .getElement()
-    .querySelector("path")!
-    .parentElement!.setAttribute("fill", color);
+const selectedMarkerZIndex = 20;
+const hasSubmittedDataMarkerZIndex = 10;
+const normalMarkerZIndex = 0;
+
+const setMarkerVisibleProperties = (args: {
+  marker: Marker;
+  isSelected: boolean;
+  hasSubmittedData: boolean;
+}) => {
+  const { marker, isSelected, hasSubmittedData } = args;
+  const element = marker.getElement();
+  const zIndex = isSelected
+    ? selectedMarkerZIndex
+    : hasSubmittedData
+    ? hasSubmittedDataMarkerZIndex
+    : normalMarkerZIndex;
+  const color = isSelected
+    ? highlightedMarkerColor
+    : hasSubmittedData
+    ? submittedDataMarkerColor
+    : defaultMarkerColor;
+  element.querySelector("path")!.parentElement!.setAttribute("fill", color);
+  element.style.zIndex = zIndex.toString();
+};
 
 const adjustMarkerVisibility = (
   mapboxInfoRef: MutableRefObject<MapboxInfo | undefined>,
@@ -314,17 +336,22 @@ const adjustMarkerVisibility = (
         selectedId === id &&
         markerInfo.isInMap === true
       ) {
-        setMarkerColor(markerInfo.marker, highlightedMarkerColor);
+        setMarkerVisibleProperties({
+          marker: markerInfo.marker,
+          isSelected: true,
+          hasSubmittedData: markerInfo.hasSubmittedData,
+        });
         markerInfo.isMarkedAsSelected = true;
       } else if (
         markerInfo.isMarkedAsSelected === true &&
         selectedId !== id &&
         markerInfo.isInMap === true
       ) {
-        setMarkerColor(
-          markerInfo.marker,
-          getUnhighlightedMarkerColor(markerInfo.hasSubmittedData)
-        );
+        setMarkerVisibleProperties({
+          marker: markerInfo.marker,
+          isSelected: false,
+          hasSubmittedData: markerInfo.hasSubmittedData,
+        });
         markerInfo.isMarkedAsSelected = false;
       }
     }
@@ -407,7 +434,44 @@ const MapComponent = ({
     adjustLabelVisibility(mapboxInfoRef, visibleIds);
   }, [visibleIds]);
 
-  return <div style={{ height: "40vh" }} ref={mapElRef}></div>;
+  const legend = (
+    <div
+      style={{
+        height: `${legendContainerHeight}rem`,
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <div>
+        <MapMarker color={defaultMarkerColor} />
+      </div>
+      <div style={{ marginLeft: "0.5rem" }}> Registered Study </div>
+
+      <div style={{ marginLeft: "1.5rem" }}>
+        <MapMarker color={submittedDataMarkerColor} />
+      </div>
+      <div style={{ marginLeft: "0.5rem" }}>Data Contributor </div>
+
+      <div style={{ marginLeft: "1.5rem" }}>
+        <MapMarker color={highlightedMarkerColor} />
+      </div>
+      <div style={{ marginLeft: "0.5rem" }}>User-selected Study</div>
+    </div>
+  );
+
+  return (
+    <div
+      style={{
+        height: `calc(${legendContainerHeight}rem + 40vh)`,
+        position: "relative",
+      }}
+    >
+      {legend}
+      <div style={{ height: "40vh" }} ref={mapElRef} />
+    </div>
+  );
 };
 
 export default MapComponent;
