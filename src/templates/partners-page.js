@@ -42,24 +42,35 @@ const ProductPage = ({ data }) => {
         const airtableData = await fetchJSON("/.netlify/functions/partners");
 
         const unsortedListData = airtableData.data.map((elem) => {
-          const allText = _flatten([
-            "investigator" in elem ? elem.investigator.toLowerCase() : [],
-            "studydesignunformatted" in elem
-              ? elem.studydesignunformatted.toLowerCase()
-              : [],
-            "affiliation" in elem ? elem.affiliation.toLowerCase() : [],
-            "city" in elem ? elem.city.toLowerCase() : [],
-            "country" in elem ? elem.country.toLowerCase() : [],
-            "country" in elem ? elem.country.toLowerCase() : [],
-            "researchquestion" in elem
-              ? elem.researchquestion.toLowerCase()
-              : [],
-            elem.study.toLowerCase(),
-            "assaysplanned" in elem
-              ? elem.assaysplanned.map((assay) => assay.toLowerCase())
-              : [],
-            "otherassays" in elem ? elem.otherassays.toLowerCase() : [],
-          ]).join(" ");
+          const allTextElems = [];
+          if (elem.investigator !== undefined) {
+            allTextElems.push(elem.investigator.toLowerCase());
+          }
+          if (elem.studyDesignUnformatted !== undefined) {
+            allTextElems.push(elem.studyDesignUnformatted.toLowerCase());
+          }
+          if (elem.affiliation !== undefined) {
+            allTextElems.push(elem.affiliation.toLowerCase());
+          }
+          if (elem.city !== undefined) {
+            allTextElems.push(elem.city.toLowerCase());
+          }
+          if (elem.country !== undefined) {
+            allTextElems.push(elem.country.toLowerCase());
+          }
+          if (elem.researchQuestion !== undefined) {
+            allTextElems.push(elem.researchQuestion.toLowerCase());
+          }
+          if (elem.assaysPlanned !== undefined) {
+            const allAssaysPlanned = elem.assaysPlanned.map((assay) =>
+              assay.toLowerCase()
+            );
+            allTextElems.push(allAssaysPlanned);
+          }
+          if (elem.otherAssays !== undefined) {
+            allTextElems.push(elem.otherAssays.toLowerCase());
+          }
+          const allText = _flatten(allTextElems).join(" ");
           return {
             ...elem,
             allText,
