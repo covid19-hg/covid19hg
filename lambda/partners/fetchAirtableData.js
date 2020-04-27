@@ -13,7 +13,7 @@ module.exports = async () => {
       .select({ view: "Partners Page" })
       .eachPage(
         (records, fetchNextPage) => {
-          const recordFields = records.map(({ fields, id }) => {
+          const unfilteredRecordFields = records.map(({ fields, id }) => {
             return {
               study: fields["Study"],
               investigator: fields["Investigator"],
@@ -37,9 +37,18 @@ module.exports = async () => {
               timeCreated: Date.parse(fields["Time created"]),
               mapLocation: fields["Map location"],
               emails: parseEmailField(fields["Email"]),
+              hasSubmittedData: Array.isArray(fields["Data"]) === true && (fields["Data"].length > 0),
               id,
             };
           });
+          const recordFields = unfilteredRecordFields.filter(obj => {
+            for (const value of Object.values(obj)) {
+              if (value !== undefined) {
+                return true
+              }
+              return false
+            }
+          })
           data = [...data, ...recordFields];
           fetchNextPage();
         },

@@ -11,6 +11,15 @@ import _min from "lodash/min";
 import _max from "lodash/max";
 import "../mapbox-gl.css";
 import { MapDatum } from "../types";
+import MapMarker, {
+  defaultMarkerWidth,
+  defaultMarkerHeight,
+  defaultMarkerColor,
+  highlightedMarkerColor,
+  submittedDataMarkerColor,
+} from "./MapMarker";
+const mapboxStyles = require("./map.module.css");
+
 const getPlaceLabelsPlaceLabelsMapboxLayer = require("../mapboxLayers/place-labels-place-labels-mapbox-layer");
 const getAdministrativeBoundariesAdminMapboxLayer = require("../mapboxLayers/administrative-boundaries-admin-mapbox-layer");
 const getLandWaterLandMapboxLayer = require("../mapboxLayers/land-water-land-mapbox-layer.js");
@@ -25,6 +34,7 @@ const streetMapSourceId = "mapbox-streets";
 const terrainSourceId = "mapbox-terrain";
 const markerLayerId = "markers-layer";
 const visibilityFeatureStateName = "isVisible";
+export const legendContainerHeight = 3; // in
 
 const createMarker = (args: {
   lng: number;
@@ -34,6 +44,7 @@ const createMarker = (args: {
   popup: Popup;
   id: string;
   mapboxMap: MapboxMap;
+  hasSubmittedData: boolean;
 }) => {
   const {
     lng,
@@ -50,11 +61,8 @@ const createMarker = (args: {
   markerElement.style.cursor = "pointer";
   const svg = markerElement.querySelector("svg")!;
 
-  // These sizes are obtained by inspecting the actual SVG created by Mapbox:
-  const defaultWidth = 27;
-  const defaultHeight = 41;
-  svg.setAttribute("width", `${defaultWidth / 2}px`);
-  svg.setAttribute("height", `${defaultHeight / 2}px`);
+  svg.setAttribute("width", `${defaultMarkerWidth / 2}px`);
+  svg.setAttribute("height", `${defaultMarkerHeight / 2}px`);
 
   markerElement.addEventListener("click", (event) => {
     // Need to `stopPropagation` so that it doesn't bubble up to the map and
@@ -97,11 +105,17 @@ interface MarkerInfo {
   study: string;
   isInMap: boolean;
   isMarkedAsSelected: boolean;
+  hasSubmittedData: boolean;
 }
 interface LabelInfo {
   geoJsonId: number;
   isVisible: boolean;
 }
+
+// This color was determined by inspecting the DOM:
+const getUnhighlightedMarkerColor = (hasSubmittedData: boolean) =>
+  hasSubmittedData ? submittedDataMarkerColor : defaultMarkerColor;
+
 const initializeMap = (
   el: HTMLDivElement,
   data: MapDatum[],
@@ -218,9 +232,10 @@ const initializeMap = (
   const popup = new Popup({
     closeButton: false,
     closeOnClick: false,
+    className: mapboxStyles["mapboxPopup"],
   });
 
-  data.forEach(({ lat, lng, study, id }) => {
+  data.forEach(({ lat, lng, study, id, hasSubmittedData }) => {
     const marker = createMarker({
       lng,
       lat,
@@ -229,13 +244,16 @@ const initializeMap = (
       popup,
       id,
       mapboxMap,
+      hasSubmittedData,
     });
+    setMarkerVisibleProperties({ marker, isSelected: false, hasSubmittedData });
     marker.addTo(mapboxMap);
     markers.set(id, {
       marker,
       lng,
       lat,
       study,
+      hasSubmittedData,
       isInMap: true,
       isMarkedAsSelected: false,
     });
@@ -256,11 +274,30 @@ const initializeMap = (
   return mapboxInfo;
 };
 
-const setMarkerColor = (marker: Marker, color: string) =>
-  marker
-    .getElement()
-    .querySelector("path")!
-    .parentElement!.setAttribute("fill", color);
+const selectedMarkerZIndex = 20;
+const hasSubmittedDataMarkerZIndex = 10;
+const normalMarkerZIndex = 0;
+
+const setMarkerVisibleProperties = (args: {
+  marker: Marker;
+  isSelected: boolean;
+  hasSubmittedData: boolean;
+}) => {
+  const { marker, isSelected, hasSubmittedData } = args;
+  const element = marker.getElement();
+  const zIndex = isSelected
+    ? selectedMarkerZIndex
+    : hasSubmittedData
+    ? hasSubmittedDataMarkerZIndex
+    : normalMarkerZIndex;
+  const color = isSelected
+    ? highlightedMarkerColor
+    : hasSubmittedData
+    ? submittedDataMarkerColor
+    : defaultMarkerColor;
+  element.querySelector("path")!.parentElement!.setAttribute("fill", color);
+  element.style.zIndex = zIndex.toString();
+};
 
 const adjustMarkerVisibility = (
   mapboxInfoRef: MutableRefObject<MapboxInfo | undefined>,
@@ -272,13 +309,9 @@ const adjustMarkerVisibility = (
   if (mapboxInfo !== undefined) {
     const { map, popup, markers } = mapboxInfo;
 
-    const highglightedMarkerColor = "red";
-    // This color was determined by inspecting the DOM:
-    const defaultMarkerColor = "#3FB1CE";
-
     for (const [id, markerInfo] of markers.entries()) {
       if (visibleIds.includes(id) === true && markerInfo.isInMap === false) {
-        const { lng, lat, study } = markerInfo;
+        const { lng, lat, study, hasSubmittedData } = markerInfo;
         const marker = createMarker({
           lng,
           lat,
@@ -287,6 +320,7 @@ const adjustMarkerVisibility = (
           popup,
           id,
           mapboxMap: map,
+          hasSubmittedData,
         });
         marker.addTo(map);
         markerInfo.marker = marker;
@@ -304,14 +338,22 @@ const adjustMarkerVisibility = (
         selectedId === id &&
         markerInfo.isInMap === true
       ) {
-        setMarkerColor(markerInfo.marker, highglightedMarkerColor);
+        setMarkerVisibleProperties({
+          marker: markerInfo.marker,
+          isSelected: true,
+          hasSubmittedData: markerInfo.hasSubmittedData,
+        });
         markerInfo.isMarkedAsSelected = true;
       } else if (
         markerInfo.isMarkedAsSelected === true &&
         selectedId !== id &&
         markerInfo.isInMap === true
       ) {
-        setMarkerColor(markerInfo.marker, defaultMarkerColor);
+        setMarkerVisibleProperties({
+          marker: markerInfo.marker,
+          isSelected: false,
+          hasSubmittedData: markerInfo.hasSubmittedData,
+        });
         markerInfo.isMarkedAsSelected = false;
       }
     }
@@ -379,8 +421,15 @@ const MapComponent = ({
   useEffect(() => {
     const { current: mapboxInfo } = mapboxInfoRef;
     if (selected !== undefined && mapboxInfo !== undefined) {
+      const { map } = mapboxInfo;
+      const zoomLevel = map.getZoom();
+      const defaultFlyToZoomLevel = 6;
       const { lng, lat } = mapData.find(({ id }) => id === selected)!;
-      mapboxInfo.map.flyTo({ center: [lng, lat], zoom: 6 });
+      if (zoomLevel > defaultFlyToZoomLevel) {
+        mapboxInfo.map.flyTo({ center: [lng, lat] });
+      } else {
+        mapboxInfo.map.flyTo({ center: [lng, lat], zoom: 6 });
+      }
     }
   }, [selected]);
 
@@ -394,7 +443,44 @@ const MapComponent = ({
     adjustLabelVisibility(mapboxInfoRef, visibleIds);
   }, [visibleIds]);
 
-  return <div style={{ height: "40vh" }} ref={mapElRef}></div>;
+  const legend = (
+    <div
+      style={{
+        height: `${legendContainerHeight}rem`,
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <div>
+        <MapMarker color={defaultMarkerColor} />
+      </div>
+      <div style={{ marginLeft: "0.5rem" }}> Registered Study </div>
+
+      <div style={{ marginLeft: "1.5rem" }}>
+        <MapMarker color={submittedDataMarkerColor} />
+      </div>
+      <div style={{ marginLeft: "0.5rem" }}>Data Contributor </div>
+
+      <div style={{ marginLeft: "1.5rem" }}>
+        <MapMarker color={highlightedMarkerColor} />
+      </div>
+      <div style={{ marginLeft: "0.5rem" }}>User-selected Study</div>
+    </div>
+  );
+
+  return (
+    <div
+      style={{
+        height: `calc(${legendContainerHeight}rem + 40vh)`,
+        position: "relative",
+      }}
+    >
+      {legend}
+      <div style={{ height: "40vh" }} ref={mapElRef} />
+    </div>
+  );
 };
 
 export default MapComponent;

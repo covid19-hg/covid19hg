@@ -13,12 +13,12 @@ import _sortBy from "lodash/sortBy";
 
 const getSimpleLocationFetchURL = (locationName) =>
   `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-    locationName
+    locationName.replace(/;/g, " ")
   )}.json?access_token=${process.env.GATSBY_MAPBOX_API_KEY}&limit=1`;
 
 const getInstitutionFetchURL = ({ institution, cityCountry }, { lng, lat }) =>
   `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-    `${institution}, ${cityCountry}`
+    `${institution}, ${cityCountry}`.replace(/;/g, " ")
   )}.json?access_token=${
     process.env.GATSBY_MAPBOX_API_KEY
   }&proximity=${lng},${lat}&limit=1`;

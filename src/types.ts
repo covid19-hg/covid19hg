@@ -21,6 +21,7 @@ export interface AirtableDatum {
   mapLocation: string | undefined;
   id: string;
   shouldShowContactButton: boolean;
+  hasSubmittedData: boolean
 }
 
 export interface ListDatum extends AirtableDatum {
