@@ -18,6 +18,7 @@ import MapMarker, {
   highlightedMarkerColor,
   submittedDataMarkerColor,
 } from "./MapMarker";
+const mapboxStyles = require("./map.module.css");
 
 const getPlaceLabelsPlaceLabelsMapboxLayer = require("../mapboxLayers/place-labels-place-labels-mapbox-layer");
 const getAdministrativeBoundariesAdminMapboxLayer = require("../mapboxLayers/administrative-boundaries-admin-mapbox-layer");
@@ -231,6 +232,7 @@ const initializeMap = (
   const popup = new Popup({
     closeButton: false,
     closeOnClick: false,
+    className: mapboxStyles["mapboxPopup"],
   });
 
   data.forEach(({ lat, lng, study, id, hasSubmittedData }) => {
