@@ -112,10 +112,6 @@ interface LabelInfo {
   isVisible: boolean;
 }
 
-// This color was determined by inspecting the DOM:
-const getUnhighlightedMarkerColor = (hasSubmittedData: boolean) =>
-  hasSubmittedData ? submittedDataMarkerColor : defaultMarkerColor;
-
 const initializeMap = (
   el: HTMLDivElement,
   data: MapDatum[],
