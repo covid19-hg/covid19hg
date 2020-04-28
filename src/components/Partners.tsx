@@ -529,13 +529,14 @@ const Partners = ({ title, mapData, listData }: Props) => {
     card = null;
   } else {
     const filteredData = listData.filter(({ id }) => filteredIds.includes(id));
-    const listItems = filteredData.map(({ id, study }) => (
+    const listItems = filteredData.map(({ id, study, hasSubmittedData }) => (
       <SmartListItem
         key={id}
         id={id}
         study={study}
         selectedId={state.selectedId}
         dispatch={dispatch}
+        hasSubmittedData={hasSubmittedData}
       />
     ));
 

@@ -112,10 +112,6 @@ interface LabelInfo {
   isVisible: boolean;
 }
 
-// This color was determined by inspecting the DOM:
-const getUnhighlightedMarkerColor = (hasSubmittedData: boolean) =>
-  hasSubmittedData ? submittedDataMarkerColor : defaultMarkerColor;
-
 const initializeMap = (
   el: HTMLDivElement,
   data: MapDatum[],
@@ -462,11 +458,6 @@ const MapComponent = ({
         <MapMarker color={submittedDataMarkerColor} />
       </div>
       <div style={{ marginLeft: "0.5rem" }}>Data Contributor </div>
-
-      <div style={{ marginLeft: "1.5rem" }}>
-        <MapMarker color={highlightedMarkerColor} />
-      </div>
-      <div style={{ marginLeft: "0.5rem" }}>User-selected Study</div>
     </div>
   );
 
