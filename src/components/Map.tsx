@@ -462,11 +462,6 @@ const MapComponent = ({
         <MapMarker color={submittedDataMarkerColor} />
       </div>
       <div style={{ marginLeft: "0.5rem" }}>Data Contributor </div>
-
-      <div style={{ marginLeft: "1.5rem" }}>
-        <MapMarker color={highlightedMarkerColor} />
-      </div>
-      <div style={{ marginLeft: "0.5rem" }}>User-selected Study</div>
     </div>
   );
 
