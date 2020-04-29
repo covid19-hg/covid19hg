@@ -1,5 +1,5 @@
 ---
-templateKey: faq-page
+templateKey: data-sharing-page
 title: How to share data
 qas:
   - question: '## **How can I submit my data?**'
