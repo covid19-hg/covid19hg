@@ -9,6 +9,7 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
+import Img from "gatsby-image";
 
 const useMaterialStyles = makeStyles(() => ({
   panelDetailsRoot: {
@@ -16,7 +17,7 @@ const useMaterialStyles = makeStyles(() => ({
   },
 }));
 
-export const FaqPageTemplate = ({ title, qas }) => {
+export const FaqPageTemplate = ({ title, qas, dataSharingWorkflowImage }) => {
   const materialStyles = useMaterialStyles();
 
   const pairs = qas.map(({ question, answer }, index) => (
@@ -51,6 +52,11 @@ export const FaqPageTemplate = ({ title, qas }) => {
       <section className="section section--gradient">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            <Img fluid={dataSharingWorkflowImage.childImageSharp.fluid} />
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
             <ul> {pairs} </ul>
           </div>
         </div>
@@ -76,7 +82,11 @@ const FaqPage = ({ data }) => {
   return (
     <Layout>
       {canonicalLinkMetaTag}
-      <FaqPageTemplate title={frontmatter.title} qas={frontmatter.qas} />
+      <FaqPageTemplate
+        title={frontmatter.title}
+        qas={frontmatter.qas}
+        dataSharingWorkflowImage={data.dataSharingWorkflowImage}
+      />
     </Layout>
   );
 };
@@ -86,6 +96,7 @@ FaqPage.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
+    dataSharingWorkflowImage: PropTypes.object,
   }),
 };
 
@@ -93,6 +104,13 @@ export default FaqPage;
 
 export const pageQuery = graphql`
   query FaqPageTemplate {
+    dataSharingWorkflowImage: file(relativePath: { eq: "data_sharing.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     markdownRemark(frontmatter: { templateKey: { eq: "faq-page" } }) {
       frontmatter {
         title
