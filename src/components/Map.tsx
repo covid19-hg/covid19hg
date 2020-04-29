@@ -306,6 +306,7 @@ const adjustMarkerVisibility = (
     const { map, popup, markers } = mapboxInfo;
 
     for (const [id, markerInfo] of markers.entries()) {
+      // First reconcile the visibility of the marker:
       if (visibleIds.includes(id) === true && markerInfo.isInMap === false) {
         const { lng, lat, study, hasSubmittedData } = markerInfo;
         const marker = createMarker({
@@ -319,6 +320,11 @@ const adjustMarkerVisibility = (
           hasSubmittedData,
         });
         marker.addTo(map);
+        setMarkerVisibleProperties({
+          marker,
+          isSelected: selectedId === id,
+          hasSubmittedData,
+        });
         markerInfo.marker = marker;
         markerInfo.isInMap = true;
       } else if (
@@ -329,6 +335,7 @@ const adjustMarkerVisibility = (
         markerInfo.isInMap = false;
         markerInfo.isMarkedAsSelected = false;
       }
+      // Then reconcile whether the marker is selected:
       if (
         markerInfo.isMarkedAsSelected === false &&
         selectedId === id &&
