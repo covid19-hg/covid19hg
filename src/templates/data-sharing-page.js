@@ -111,7 +111,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: { templateKey: { eq: "faq-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "data-sharing-page" } }) {
       frontmatter {
         title
         qas {
