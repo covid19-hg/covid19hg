@@ -35,8 +35,9 @@ qas:
       Archive](https://ega-archive.org/) (EGA). EGA offers services for
       archiving, processing and distribution for all types of potentially
       identifiable genetic and phenotypic human data at the European
-      Bioinformatics Institute (EBI). To start your submission please contact
-      the EGA helpdesk via
+      Bioinformatics Institute (EBI). To start your submission please fill this
+      [form](https://docs.google.com/forms/d/e/1FAIpQLSfjJLpqf119XfpvpV7KBqVXyF9ywQ_4NruSzwC-gtV17nTxwg/viewform)
+      or contact the EGA helpdesk via
       [helpdesk@ega-archive.org](mailto:helpdesk@ega-archive.org) and mark the
       email F.A.O Giselle Kerry stating that your submission is part of the
       COVID-19 Host Genetics Initiative.
