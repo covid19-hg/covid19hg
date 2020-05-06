@@ -7,5 +7,6 @@ featuredpost: false
 featuredimage: /img/blog-index.jpg
 tags:
   - News
+type: blog-post
 ---
 The new website is live with more information and a new updated map of the partners.

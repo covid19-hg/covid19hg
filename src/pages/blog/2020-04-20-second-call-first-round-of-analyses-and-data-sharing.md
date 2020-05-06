@@ -7,12 +7,13 @@ featuredpost: true
 featuredimage: /img/apple-touch-icon.png
 tags:
   - '#datasharing #analysis'
+type: blog-post
 ---
 The second call had more than 400 participants!
 
 
 
-Given the positive response during the call and multiple groups sharing early GWAS analyses on Slack, we **aim to launch a first meta-analysis later this week**. The broader analysis plan being developed is available [here](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit) and we would expect to make available the first meta-analysis summary statistics immediately. 
+Given the positive response during the call and multiple groups sharing early GWAS analyses on Slack, we **aim to launch a first meta-analysis later this week**. The broader analysis plan being developed is available [here](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit) and we would expect to make available the first meta-analysis summary statistics immediately.
 
 
 
