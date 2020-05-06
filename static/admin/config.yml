@@ -26,9 +26,10 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Type", name: "type", widget: "hidden", required: true, default: "blog-post"}
 
-  - name: "archive"
-    label: "Archive"
+  - name: "meeting-archives"
+    label: "Meeting Archives"
     folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -41,6 +42,7 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Type", name: "type", widget: "hidden", required: true, default: "meeting-notes"}
 
   - name: "pages"
     label: "Pages"
