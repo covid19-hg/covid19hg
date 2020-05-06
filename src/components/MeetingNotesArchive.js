@@ -6,12 +6,13 @@ import { graphql, StaticQuery } from 'gatsby'
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query MeetingNotesArchiveQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: {
             frontmatter: {
               templateKey: { eq: "blog-post" }
+              type: { eq: "meeting-notes" }
             }
           }
         ) {
