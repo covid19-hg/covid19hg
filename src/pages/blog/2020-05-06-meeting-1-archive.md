@@ -1,11 +1,12 @@
 ---
 templateKey: blog-post
-title: ' Meeting 1 archive'
+title: 'Meeting 1 archive'
 date: 2020-04-17T15:28:20.565Z
 description: 'Meeting notes from 4/17/2020 9:00am EDT / 1pm GMT / 2pm BST'
-featuredpost: true
+featuredpost: false
 tags:
   - Archive
+type: meeting-notes
 ---
 **4/17/2020 9:00am EDT / 1pm GMT / 2pm BST**
 
