@@ -28,8 +28,8 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Type", name: "type", widget: "hidden", required: true, default: "blog-post"}
 
-  - name: "meeting-archives"
-    label: "Meeting Archives"
+  - name: "meeting-archive"
+    label: "Meeting Archive"
     folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"

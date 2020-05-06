@@ -5,7 +5,7 @@ import MeetingNotesArchive from '../components/MeetingNotesArchive'
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag"
 
 const BlogIndexPage = () => {
-    const canonicalLinkMetaTag = useCanonicalLinkMetaTag('/meeting-archives/')
+    const canonicalLinkMetaTag = useCanonicalLinkMetaTag('/meeting-archive/')
     return (
       <Layout>
         {canonicalLinkMetaTag}
@@ -20,7 +20,7 @@ const BlogIndexPage = () => {
               padding: '1rem',
             }}
           >
-            News
+            Meeting Archive
           </h1>
         </div>
         <section className="section">
