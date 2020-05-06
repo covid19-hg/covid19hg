@@ -5,7 +5,7 @@ import MeetingNotesArchive from '../components/MeetingNotesArchive'
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag"
 
 const BlogIndexPage = () => {
-    const canonicalLinkMetaTag = useCanonicalLinkMetaTag('/archive/')
+    const canonicalLinkMetaTag = useCanonicalLinkMetaTag('/meeting-archives/')
     return (
       <Layout>
         {canonicalLinkMetaTag}
