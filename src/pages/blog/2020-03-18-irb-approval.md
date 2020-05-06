@@ -7,5 +7,6 @@ featuredpost: false
 featuredimage: /img/blog-index.jpg
 tags:
   - Partnership
+type: blog-post
 ---
  University of Siena has received ethical approval for sample collection. For more informations visit the wesbite: <https://sites.google.com/dbm.unisi.it/gen-covid>

@@ -7,5 +7,6 @@ featuredpost: false
 featuredimage: /img/blog-index.jpg
 tags:
   - Partnership
+type: blog-post
 ---
 The collaboration with [ICDA](https://www.icda.bio/) will help to reach the broad human genetics community and to organize the effort.
