@@ -79,24 +79,40 @@ const formatAuthorList = authors => {
   return (
     <div>
       <p>
-        <strong>Contributors: </strong>
-        {Object.keys(authorsByStudy).map(study => {
-          return (
-            <span>
-              <strong>{study}: </strong>
-              {authorsByStudy[study].map((author, i) => {
-                return (
-                  <span>
-                    {author.name} <sup>{subscripts[author.affiliation]}</sup>
-                    {authorsByStudy[study].length - 1 === i ? '.' : ','}{' '}
-                  </span>
-                )
-              })}
-            </span>
-          )
-        })}
+        <strong>Contributing studies: </strong>
+        <span>
+          {Object.keys(authorsByStudy).filter(s => s !== 'Admin and Analysis Team').map((study, i) => {
+            return (
+              <span>
+                {study}
+                {Object.keys(authorsByStudy).length - 2 === i ? '.' : ', '}
+              </span>
+            )
+          })}
+        </span>
       </p>
-      <Affiliations>
+      <p>
+        <strong>Other contributors: </strong>
+        <span>
+          {authors
+            .sort((a, b) => {
+              console.log(a.name.split(), b)
+              return a.name.split(' ')[a.name.split(' ').length - 1] >
+                b.name.split(' ')[b.name.split(' ').length - 1]
+                ? 1
+                : -1
+            })
+            .map((author, i) => {
+              return (
+                <span>
+                  {author.name}
+                  {authors.length - 1 === i ? '.' : ', '}
+                </span>
+              )
+            })}
+        </span>
+      </p>
+      {/*<Affiliations>
         {Object.keys(subscripts)
           .sort()
           .map(s => (
@@ -105,7 +121,7 @@ const formatAuthorList = authors => {
               {s}{' '}
             </span>
           ))}
-      </Affiliations>
+      </Affiliations>*/}
     </div>
   )
 }
