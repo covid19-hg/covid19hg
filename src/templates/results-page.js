@@ -60,6 +60,7 @@ const ResultsPageTemplate = ({ title, releases }) => {
       {releases.map(release => (
         <div key={release.title} className="column is-10 is-offset-1">
           <h1>{release.title}</h1>
+          <p><strong>Release date</strong>: {release.date}.</p>
           <p>
             <strong>Study abbreviations</strong>:{' '}
             {release.studyAbbreviations.map((abv, i) => (
