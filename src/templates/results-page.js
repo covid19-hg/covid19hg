@@ -133,7 +133,6 @@ const ResultsPageTemplate = ({ title, releases }) => {
           <p>
             <strong>Release date</strong>: {release.date}.
           </p>
-          {formatAuthorList(release.authors)}
           <p>
             <strong>Study abbreviations</strong>:{' '}
             {release.studyAbbreviations.map((abv, i) => (
@@ -144,13 +143,14 @@ const ResultsPageTemplate = ({ title, releases }) => {
               </span>
             ))}
           </p>
-        <p><strong>Release notes</strong>: {release.notes}</p>
+          <p>
+            <strong>Release notes</strong>: {release.notes}
+          </p>
           <p>
             <strong>Data columns</strong>:{' '}
             {release.data_columns.map((col, i) => (
               <span>
-              <strong>{col.column}: </strong>{' '}
-                {col.description}
+                <strong>{col.column}: </strong> {col.description}
                 {release.data_columns.length - 1 === i ? '.' : ','}{' '}
               </span>
             ))}
@@ -201,6 +201,8 @@ const ResultsPageTemplate = ({ title, releases }) => {
               </Plots>
             </Analysis>
           ))}
+
+          {formatAuthorList(release.authors)}
         </div>
       ))}
     </section>
