@@ -71,6 +71,10 @@ const ResultsPageTemplate = ({ title, releases }) => {
             ))}
           </p>
           <p>{release.notes}</p>
+
+          <p>
+            An interactive data browser will be available soon.
+          </p>
           {release.analyses.map(analysis => (
             <Analysis key={analysis.name}>
               <AnalysisInfo>
@@ -88,7 +92,7 @@ const ResultsPageTemplate = ({ title, releases }) => {
                   {analysis.studies.map((study, i) => {
                     return (
                       <span>
-                      {' '}
+                        {' '}
                         <strong>{study.study}</strong> ({study.cases}, {study.controls})
                         {analysis.studies.length - 1 === i ? '.' : ','}
                       </span>
