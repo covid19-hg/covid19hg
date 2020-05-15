@@ -28,8 +28,10 @@ releases:
       - name: 20200508-results-ANA2_inv_var_meta
         phenotype: ANA2, Hospitalized vs. non-hospitalized 	
         population: All
-        gz: gs://covid19-hg-public/20200508/results/ANA2_ALL_inv_var_meta.gz 
-        tbi: gs://covid19-hg-public/20200508/results/ANA2_ALL_inv_var_meta.gz.tbi
+        download:
+          name: COVID19_HGI_ANA2_20200513.txt.gz 
+          gz_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA2_20200513.txt.gz
+          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA2_20200513.txt.gz.tbi 
         manhattan:
           image: /img/ANA2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -53,8 +55,10 @@ releases:
       - name: 20200508-results-ANA5_ALL_inv_var_meta
         phenotype: ANA5, susceptibility (affected vs. population) 
         population: All
-        gz: gs://covid19-hg-public/20200508/results/ANA5_ALL_inv_var_meta.gz 
-        tbi: gs://covid19-hg-public/20200508/results/ANA5_ALL_inv_var_meta.gz.tbi
+        download:
+          name: COVID19_HGI_ANA5_20200513.txt.gz 
+          gz_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA5_20200513.txt.gz 
+          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA5_20200513.txt.gz.tbi 
         manhattan:
           image: /img/ANA5_ALL_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -93,8 +97,10 @@ releases:
       - name: 20200508-results-ANA7_inv_var_meta
         phenotype: ANA7, COVID-19 predicted by flu-like symptoms 
         population: European
-        gz: gs://covid19-hg-public/20200508/results/ANA7_inv_var_meta.gz
-        tbi: gs://covid19-hg-public/20200508/results/ANA7_inv_var_meta.gz.tbi
+        download:
+          name: COVID19_HGI_ANA7_20200513.txt.gz	 
+          gz_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA7_20200513.txt.gz 
+          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA7_20200513.txt.gz.tbi 
         manhattan:
           image: /img/ANA7_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
