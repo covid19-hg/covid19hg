@@ -5,6 +5,30 @@ releases:
   - date: May 15, 2020
     title: COVID19-hg GWAS meta-analyses round 2 
     notes: Meta-analysis was done with inverse variance weighting. Positions are on GRCh37. An AF filter of 0.0001 and an INFO filter of 0.6 was applied to each study prior to meta-analysis.
+    data_columns:
+      - column: "#CHR"
+        description: chromosome
+      - column: POS
+        description: chromosome position in build 37
+      - column: REF
+        description: non-effect allele
+      - column: ALT
+        description: effect allele (beta is for this allele)
+      - column: SNP
+        description: "#CHR:POS:REF:ALT"
+      - column: "{STUDY}_AF_Allele2"
+        description: allele frequency in {STUDY}
+      - column: all_meta_N
+        description: number of studies that had the variant after AF and INFO filtering
+          and as such were used for the meta
+      - column: all_inv_var_meta_beta
+        description: effect size on log(OR) scale
+      - column: all_inv_var_meta_sebeta
+        description: standard error of effect size
+      - column: all_inv_var_meta_p
+        description: p-value
+      - column: all_inv_var_het_p
+        description: p-value from Cochran's Q heterogeneity test
     authors:
       - name: Lude Franke
         study: Lifelines
@@ -341,5 +365,6 @@ releases:
           - study: Helix_EUR
             cases: 657
             controls: 6112
+
 
 ---

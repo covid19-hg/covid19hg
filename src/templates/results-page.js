@@ -97,12 +97,14 @@ const formatAuthorList = authors => {
         })}
       </p>
       <Affiliations>
-        {Object.keys(subscripts).sort().map(s => (
-          <span>
-            <sup>{subscripts[s]}</sup>
-            {s}{' '}
-          </span>
-        ))}
+        {Object.keys(subscripts)
+          .sort()
+          .map(s => (
+            <span>
+              <sup>{subscripts[s]}</sup>
+              {s}{' '}
+            </span>
+          ))}
       </Affiliations>
     </div>
   )
@@ -142,8 +144,17 @@ const ResultsPageTemplate = ({ title, releases }) => {
               </span>
             ))}
           </p>
-          <p>{release.notes}</p>
-
+        <p><strong>Release notes</strong>: {release.notes}</p>
+          <p>
+            <strong>Data columns</strong>:{' '}
+            {release.data_columns.map((col, i) => (
+              <span>
+              <strong>{col.column}: </strong>{' '}
+                {col.description}
+                {release.data_columns.length - 1 === i ? '.' : ','}{' '}
+              </span>
+            ))}
+          </p>
           <p>An interactive data browser will be available soon.</p>
           {release.analyses.map(analysis => (
             <Analysis key={analysis.name}>
@@ -226,6 +237,10 @@ export const pageQuery = graphql`
           title
           date
           notes
+          data_columns {
+            column
+            description
+          }
           authors {
             name
             study
