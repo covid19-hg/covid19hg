@@ -25,6 +25,11 @@ const AnalysisInfo = styled.div`
   }
 `
 
+const Affiliations = styled.p`
+  font-size: 12px;
+  margin-bottom: 20px;
+`
+
 const Plots = styled.div`
   display: flex;
   flex-direction: row;
@@ -39,6 +44,69 @@ const Plots = styled.div`
     height: auto;
   }
 `
+
+const formatAuthorList = authors => {
+  let affiliations = []
+  authors.forEach(author => {
+    if (!affiliations.includes(author.affiliation)) {
+      affiliations.push(author.affiliation)
+    }
+  })
+
+  affiliations = affiliations.sort()
+
+  const subscripts = affiliations.reduce((acc, affiliation, i) => {
+    return {
+      [affiliation]: i + 1,
+      ...acc,
+    }
+  }, {})
+
+  let authorsByStudy = authors.reduce((acc, author) => {
+    if (author.study in acc) {
+      const sortedAuthors = [author, ...acc[author.study]]
+      return {
+        ...acc,
+        [author.study]: sortedAuthors,
+      }
+    }
+    return {
+      ...acc,
+      [author.study]: [author],
+    }
+  }, {})
+
+  return (
+    <div>
+      <p>
+        <strong>Contributors: </strong>
+        {Object.keys(authorsByStudy).map(study => {
+          return (
+            <span>
+              <strong>{study}: </strong>
+              {authorsByStudy[study].map((author, i) => {
+                return (
+                  <span>
+                    {author.name} <sup>{subscripts[author.affiliation]}</sup>
+                    {authorsByStudy[study].length - 1 === i ? '.' : ','}{' '}
+                  </span>
+                )
+              })}
+            </span>
+          )
+        })}
+      </p>
+      <Affiliations>
+        {Object.keys(subscripts).sort().map(s => (
+          <span>
+            <sup>{subscripts[s]}</sup>
+            {s}{' '}
+          </span>
+        ))}
+      </Affiliations>
+    </div>
+  )
+}
 
 const ResultsPageTemplate = ({ title, releases }) => {
   return (
@@ -60,7 +128,10 @@ const ResultsPageTemplate = ({ title, releases }) => {
       {releases.map(release => (
         <div key={release.title} className="column is-10 is-offset-1">
           <h1>{release.title}</h1>
-          <p><strong>Release date</strong>: {release.date}.</p>
+          <p>
+            <strong>Release date</strong>: {release.date}.
+          </p>
+          {formatAuthorList(release.authors)}
           <p>
             <strong>Study abbreviations</strong>:{' '}
             {release.studyAbbreviations.map((abv, i) => (
@@ -73,19 +144,17 @@ const ResultsPageTemplate = ({ title, releases }) => {
           </p>
           <p>{release.notes}</p>
 
-          <p>
-            An interactive data browser will be available soon.
-          </p>
+          <p>An interactive data browser will be available soon.</p>
           {release.analyses.map(analysis => (
             <Analysis key={analysis.name}>
               <AnalysisInfo>
                 <h2>{analysis.name}</h2>
                 <p>
-                  <strong>Phenotype</strong>: {analysis.phenotype}.{' '}
-                  <strong>Population</strong>: {analysis.population}.
+                  <strong>Phenotype</strong>: {analysis.phenotype}. <strong>Population</strong>:{' '}
+                  {analysis.population}.
                 </p>
                 <p>
-                  <strong>Total cases</strong>: {analysis.studies.reduce((acc, v) => acc + v.cases, 0)}. {' '}
+                  <strong>Total cases</strong>: {analysis.studies.reduce((acc, v) => acc + v.cases, 0)}.{' '}
                   <strong>Total controls</strong>: {analysis.studies.reduce((acc, v) => acc + v.controls, 0)}.
                 </p>
                 <p>
@@ -157,6 +226,11 @@ export const pageQuery = graphql`
           title
           date
           notes
+          authors {
+            name
+            study
+            affiliation
+          }
           studyAbbreviations {
             abbreviation
             full_name
