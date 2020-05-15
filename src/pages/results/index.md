@@ -66,7 +66,7 @@ releases:
         study: Genes & Health
         affiliation: Kings College London
       - name: Genes & Health Research Team
-        study: Genes  Health
+        study: Genes & Health
         affiliation: Queen Mary University of London
       - name: Finngen
         study: Finngen
@@ -255,6 +255,27 @@ releases:
       - name: Emma Perez
         study: Greater Boston COVID-19 Host Disease Initiative
         affiliation: Brigham and Women’s hospital
+      - name: Karolina Chwialkowska
+        study: Admin and Analysis Team
+        affiliation: Various
+      - name: Margherita Francescatto
+        study: Admin and Analysis Team
+        affiliation: Various
+      - name: Amy Trankiem 
+        study: Admin and Analysis Team
+        affiliation: Various
+      - name: Matthew Solomonson
+        study: Admin and Analysis Team
+        affiliation: Various
+      - name: Rachel Liao  
+        study: Admin and Analysis Team
+        affiliation: Various
+      - name: Huy Nguyen
+        study: Admin and Analysis Team
+        affiliation: Various
+      - name: Juha Karjalainen 
+        study: Admin and Analysis Team
+        affiliation: Various
     studyAbbreviations:
       - abbreviation: BioMe_RGN
         full_name: BioMe
