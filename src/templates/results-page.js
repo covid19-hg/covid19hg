@@ -81,10 +81,12 @@ const ResultsPageTemplate = ({ title, releases }) => {
               <AnalysisInfo>
                 <h2>{analysis.name}</h2>
                 <p>
-                  <strong>Phenotype</strong>: {analysis.phenotype}.
+                  <strong>Phenotype</strong>: {analysis.phenotype}.{' '}
+                  <strong>Population</strong>: {analysis.population}.
                 </p>
                 <p>
-                  <strong>Population</strong>: {analysis.population}.
+                  <strong>Total cases</strong>: {analysis.studies.reduce((acc, v) => acc + v.cases, 0)}. {' '}
+                  <strong>Total controls</strong>: {analysis.studies.reduce((acc, v) => acc + v.controls, 0)}.
                 </p>
                 <p>
                   <span>
