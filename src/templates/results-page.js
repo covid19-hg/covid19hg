@@ -106,9 +106,9 @@ const ResultsPageTemplate = ({ title, releases }) => {
                   <p>Downloads</p>
                 </strong>
                 <p>
-                  <Link>{analysis.gz}</Link>
+                  <a href={analysis.download.gz_url}>{analysis.download.name}</a>
                   <br />
-                  <Link>{analysis.tbi}</Link>
+                  <a href={analysis.download.tbi_url}>{analysis.download.name}.tbi</a>
                 </p>
               </AnalysisInfo>
 
@@ -165,8 +165,11 @@ export const pageQuery = graphql`
             name
             phenotype
             population
-            gz
-            tbi
+            download {
+              name
+              gz_url
+              tbi_url
+            }
             studies {
               study
               cases
