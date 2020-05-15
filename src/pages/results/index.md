@@ -90,37 +90,6 @@ releases:
           - study: UKBB_EUR
             cases: 812
             controls: 371095
-      - name: 20200508-results-ANA5_EUR_inv_var_meta
-        phenotype: ANA5, susceptibility (affected vs. population) 
-        population: European
-        gz: gs://covid19-hg-public/20200508/results/ANA5_EUR_inv_var_meta.gz 
-        tbi: gs://covid19-hg-public/20200508/results/ANA5_EUR_inv_var_meta.gz.tbi
-        manhattan:
-          image: /img/ANA5_EUR_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
-        qqplot:
-          image: /img/ANA5_EUR_inv_var_meta_p_all_inv_var_meta_p_qqplot.png 
-        studies:
-          - study: BioMe_RGN_EUR
-            cases: 20
-            controls: 10169
-          - study: FinnGen_FIN
-            cases: 209
-            controls: 203431
-          - study: LifelinesCyto_EUR
-            cases: 62
-            controls: 5750
-          - study: LifelinesGsa_EUR
-            cases: 189
-            controls: 15975
-          - study: NTR_CEU
-            cases: 163
-            controls: 3160
-          - study: PHBB_EUR
-            cases: 74
-            controls: 28950
-          - study: UKBB_EUR
-            cases: 812
-            controls: 371095
       - name: 20200508-results-ANA7_inv_var_meta
         phenotype: ANA7, COVID-19 predicted by flu-like symptoms 
         population: European
