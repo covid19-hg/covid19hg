@@ -3,7 +3,7 @@ templateKey: results-page
 title: Results
 releases:
   - date: May 15, 2020
-    title: GWAS meta-analyses round 2 (May 15, 2020) 
+    title: COVID19-hg GWAS meta-analyses round 2 
     notes: Meta-analysis was done with inverse variance weighting. Positions are on GRCh37. An AF filter of 0.0001 and an INFO filter of 0.6 was applied to each study prior to meta-analysis.
     studyAbbreviations:
       - abbreviation: BioMe_RGN
