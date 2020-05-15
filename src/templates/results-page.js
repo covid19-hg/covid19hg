@@ -34,6 +34,10 @@ const Plots = styled.div`
   display: flex;
   flex-direction: row;
 
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+
   .manhattan {
     width: 70%;
     height: auto;
