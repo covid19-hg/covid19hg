@@ -92,7 +92,7 @@ const formatAuthorList = authors => {
         </span>
       </p>
       <p>
-        <strong>Other contributors: </strong>
+        <strong>Analysts and other contributors: </strong>
         <span>
           {authors
             .sort((a, b) => {
