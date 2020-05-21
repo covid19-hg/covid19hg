@@ -119,17 +119,23 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
   const materialStyles = useMaterialStyles();
 
   let studyTypeText;
-  if (retrospective === true && prospective === false) {
+  if (
+    retrospective === true &&
+    (prospective === false || prospective === undefined)
+  ) {
     const retrospectiveSampleSizeText =
       retrospectiveSampleSize === undefined
         ? ""
         : `(n=${retrospectiveSampleSize})`;
     studyTypeText = `Retrospective${retrospectiveSampleSizeText}`;
-  } else if (retrospective === false && prospective === true) {
+  } else if (
+    (retrospective === false || retrospective === undefined) &&
+    prospective === true
+  ) {
     const prospectiveSampleSizeText =
       prospectiveSampleSize === undefined ? "" : `(n=${prospectiveSampleSize})`;
-    studyTypeText = `Prospective (n=${prospectiveSampleSizeText})`;
-  } else {
+    studyTypeText = `Prospective ${prospectiveSampleSizeText}`;
+  } else if (retrospective === true && prospective === true) {
     const prospectiveSampleSizeText =
       prospectiveSampleSize === undefined ? "" : `(n=${prospectiveSampleSize})`;
     const retrospectiveSampleSizeText =
