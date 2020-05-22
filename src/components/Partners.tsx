@@ -2,78 +2,30 @@ import React, { useReducer, useCallback } from "react";
 import Map, {
   SET_SELECTED_INSTITUTION_ACTION,
   UNSET_SELECTED_INSTITUTION_ACTION,
-  legendContainerHeight as mapLegendContainerHeight,
 } from "../components/Map";
-import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Select from "@material-ui/core/Select";
-import Input from "@material-ui/core/Input";
-import Chip from "@material-ui/core/Chip";
-import FormControl from "@material-ui/core/FormControl";
-import MenuItem from "@material-ui/core/MenuItem";
-import Card, { assayOptions } from "./Card";
+import Card, { assayOptions } from "./NewCard";
 import CountrySelect from "./CountrySelect";
-import TextField from "@material-ui/core/TextField";
 import _debounce from "lodash/debounce";
 import _flatten from "lodash/flatten";
 import _uniq from "lodash/uniq";
-import CircularProgress from "@material-ui/core/CircularProgress";
 import InvestigatorContactForm from "./InvestigatorContactForm";
-import SmartListItem from "./SmartListItem";
 import "typeface-roboto";
 import { MapDatum, ListDatum } from "../types";
+import { Container, Grid } from "./materialUIContainers";
+import Typography from "@material-ui/core/Typography";
+import StudyList from "./StudyList";
+import { gridSpacing } from "./partnersPageStylingParams";
+import CheckboxGroup, { CheckboxInfo } from "./CheckboxGroup";
+import MultiSelect from "./MultiSelect";
+import TextSearch from "./TextSearch";
 
 const assayNames = assayOptions.map(({ name }) => name);
-const studyListStyleName = "studyList";
 
-const useMaterialStyles = makeStyles(() => ({
-  chips: {
-    display: "flex",
-    flexWrap: "wrap",
-  },
-  chip: {
-    margin: 2,
-  },
-  dropdownFormControl: {
-    padding: "0 0.625rem",
-    borderWidth: "1px",
-    borderStyle: "solid",
-    display: "block",
-    minHeight: "65px",
-  },
-  dropdownSelect: {
-    "&&:focus": {
-      backgroundColor: "rgba(0, 0, 0, 0)",
-    },
-  },
-  checkboxFormControl: {
-    padding: "0.2rem 0.625rem",
-    borderWidth: "1px",
-    borderStyle: "solid",
-    display: "block",
-  },
-  countrySelector: {
-    padding: "0 0.625rem",
-    display: "block",
-    marginTop: "1rem",
-  },
-  keywordSearch: {
-    display: "block",
-    marginTop: "0.5rem",
-  },
-  [studyListStyleName]: {
-    marginTop: 0,
-    marginLeft: 0,
-  },
-  keywordSearchOutline: {
-    borderColor: "rgb(51, 51, 51)",
-    borderRadius: 0,
-  },
-}));
+const FilterControlContainer = (props: { children: React.ReactNode }) => (
+  <Grid item={true} md={4} xs={6}>
+    {props.children}
+  </Grid>
+);
 
 export const SET_FORM_STATE = "SET_FORM_STATE";
 
@@ -160,26 +112,13 @@ const reducer = <K extends keyof State>(
   }
 };
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-    },
-  },
-};
-
 interface Props {
-  title: string;
   mapData: MapDatum[];
   listData: ListDatum[];
 }
 
-const Partners = ({ title, mapData, listData }: Props) => {
+const Partners = ({ mapData, listData }: Props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  const materialStyles = useMaterialStyles();
 
   let filteredIds: string[];
   if (listData === undefined) {
@@ -252,173 +191,93 @@ const Partners = ({ title, mapData, listData }: Props) => {
     dispatch(action);
   }, []);
 
+  const studyTypeCheckboxes: CheckboxInfo[] = [
+    {
+      label: "Retrospective",
+      isChecked: state[retrospectiveStateName],
+      onChange: (value: boolean) => {
+        const action: SetStateAction<typeof retrospectiveStateName> = {
+          type: SET_FORM_STATE,
+          payload: { name: retrospectiveStateName, value },
+        };
+        dispatch(action);
+      },
+    },
+    {
+      label: "Prospective",
+      isChecked: state[prospectiveStateName],
+      onChange: (value: boolean) => {
+        const action: SetStateAction<typeof prospectiveStateName> = {
+          type: SET_FORM_STATE,
+          payload: { name: prospectiveStateName, value },
+        };
+        dispatch(action);
+      },
+    },
+  ];
   const studyTypeElem = (
-    <FormControl
-      component="fieldset"
-      classes={{
-        root: materialStyles.checkboxFormControl,
-      }}
-    >
-      <FormLabel component="legend"> Study Type</FormLabel>
-      <FormGroup row={true}>
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={state[retrospectiveStateName]}
-              onChange={(event) => {
-                const action: SetStateAction<typeof retrospectiveStateName> = {
-                  type: SET_FORM_STATE,
-                  payload: {
-                    name: retrospectiveStateName,
-                    value: event.target.checked,
-                  },
-                };
-                dispatch(action);
-              }}
-            />
-          }
-          label="Retrospective"
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={state[prospectiveStateName]}
-              onChange={(event) =>
-                dispatch({
-                  type: SET_FORM_STATE,
-                  payload: {
-                    name: prospectiveStateName,
-                    value: event.target.checked,
-                  },
-                })
-              }
-            />
-          }
-          label="Prospective"
-        />
-      </FormGroup>
-    </FormControl>
+    <CheckboxGroup label="Study Type" checkboxes={studyTypeCheckboxes} />
   );
 
   const assaysPlannedElem = (
-    <FormControl
-      component="fieldset"
-      classes={{
-        root: materialStyles.dropdownFormControl,
+    <MultiSelect
+      value={state[assaysStateName]}
+      onChange={(value: string[]) => {
+        const action: SetStateAction<typeof assaysStateName> = {
+          type: SET_FORM_STATE,
+          payload: { name: assaysStateName, value },
+        };
+        dispatch(action);
       }}
-    >
-      <FormLabel component="legend">Assays planned</FormLabel>
-      <FormGroup>
-        <Select
-          id="partners-assays-planned"
-          multiple={true}
-          value={state[assaysStateName]}
-          classes={{
-            select: materialStyles.dropdownSelect,
-          }}
-          onChange={(event) => {
-            const action: SetStateAction<typeof assaysStateName> = {
-              type: SET_FORM_STATE,
-              payload: {
-                name: assaysStateName,
-                value: event.target.value as string[],
-              },
-            };
-            dispatch(action);
-          }}
-          input={<Input disableUnderline={true} />}
-          renderValue={(selected) => (
-            <div className={materialStyles.chips}>
-              {(selected as string[]).map((value) => (
-                <Chip
-                  key={value}
-                  label={value}
-                  className={materialStyles.chip}
-                />
-              ))}
-            </div>
-          )}
-          MenuProps={MenuProps}
-        >
-          {assayNames.map((name) => (
-            <MenuItem key={name} value={name}>
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormGroup>
-    </FormControl>
+      options={assayNames}
+      label="Assays Planned"
+    />
   );
+
+  const geneticAnalysisCheckboxes = [
+    {
+      label: "GWAS",
+      isChecked: state[gwasStateName],
+      onChange: (value: boolean) => {
+        const action: SetStateAction<typeof gwasStateName> = {
+          type: SET_FORM_STATE,
+          payload: { name: gwasStateName, value },
+        };
+        dispatch(action);
+      },
+    },
+    {
+      label: "WES",
+      isChecked: state[wesStateName],
+      onChange: (value: boolean) => {
+        const action: SetStateAction<typeof wesStateName> = {
+          type: SET_FORM_STATE,
+          payload: { name: wesStateName, value },
+        };
+        dispatch(action);
+      },
+    },
+    {
+      label: "WGS",
+      isChecked: state[wgsStateName],
+      onChange: (value: boolean) => {
+        const action: SetStateAction<typeof wgsStateName> = {
+          type: SET_FORM_STATE,
+          payload: { name: wgsStateName, value },
+        };
+        dispatch(action);
+      },
+    },
+  ];
 
   const geneticAnalysisElem = (
-    <FormControl
-      component="fieldset"
-      classes={{
-        root: materialStyles.checkboxFormControl,
-      }}
-    >
-      <FormLabel component="legend">Genetic analysis</FormLabel>
-      <FormGroup row={true}>
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={state[gwasStateName]}
-              onChange={(event) => {
-                const action: SetStateAction<typeof gwasStateName> = {
-                  type: SET_FORM_STATE,
-                  payload: {
-                    name: gwasStateName,
-                    value: event.target.checked,
-                  },
-                };
-                dispatch(action);
-              }}
-            />
-          }
-          label="GWAS"
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={state[wesStateName]}
-              onChange={(event) => {
-                const action: SetStateAction<typeof wesStateName> = {
-                  type: SET_FORM_STATE,
-                  payload: {
-                    name: wesStateName,
-                    value: event.target.checked,
-                  },
-                };
-                dispatch(action);
-              }}
-            />
-          }
-          label="WES"
-        />
-
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={state[wgsStateName]}
-              onChange={(event) => {
-                const action: SetStateAction<typeof wgsStateName> = {
-                  type: SET_FORM_STATE,
-                  payload: {
-                    name: wgsStateName,
-                    value: event.target.checked,
-                  },
-                };
-                dispatch(action);
-              }}
-            />
-          }
-          label="WGS"
-        />
-      </FormGroup>
-    </FormControl>
+    <CheckboxGroup
+      label="Genetic Analysis"
+      checkboxes={geneticAnalysisCheckboxes}
+    />
   );
 
-  let researchCategoriesElem;
+  let researchCategoriesElem: React.ReactElement<any> | null;
   if (listData === undefined) {
     researchCategoriesElem = null;
   } else {
@@ -428,53 +287,18 @@ const Partners = ({ title, mapData, listData }: Props) => {
       )
     );
     researchCategoriesElem = (
-      <FormControl
-        component="fieldset"
-        classes={{
-          root: materialStyles.dropdownFormControl,
+      <MultiSelect
+        value={state[researchCategoriesStateName]}
+        onChange={(value: string[]) => {
+          const action: SetStateAction<typeof researchCategoriesStateName> = {
+            type: SET_FORM_STATE,
+            payload: { name: researchCategoriesStateName, value },
+          };
+          dispatch(action);
         }}
-      >
-        <FormLabel component="legend">Research Categories</FormLabel>
-        <FormGroup>
-          <Select
-            multiple={true}
-            value={state[researchCategoriesStateName]}
-            disableUnderline={true}
-            classes={{
-              select: materialStyles.dropdownSelect,
-            }}
-            onChange={(event) => {
-              const action: SetStateAction<typeof researchCategoriesStateName> = {
-                type: SET_FORM_STATE,
-                payload: {
-                  name: researchCategoriesStateName,
-                  value: event.target.value as string[],
-                },
-              };
-              dispatch(action);
-            }}
-            input={<Input />}
-            renderValue={(selected) => (
-              <div className={materialStyles.chips}>
-                {(selected as string[]).map((value) => (
-                  <Chip
-                    key={value}
-                    label={value}
-                    className={materialStyles.chip}
-                  />
-                ))}
-              </div>
-            )}
-            MenuProps={MenuProps}
-          >
-            {researchCategoryNames.map((name) => (
-              <MenuItem key={name} value={name}>
-                {name}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormGroup>
-      </FormControl>
+        options={researchCategoryNames}
+        label="Research Categories"
+      />
     );
   }
 
@@ -493,117 +317,63 @@ const Partners = ({ title, mapData, listData }: Props) => {
   );
 
   const keywordSearchElem = (
-    // @ts-ignore need to look deeper into Material UI's type definition to see why this errors out.
-    <FormControl
-      comnponent="fieldset"
-      classes={{ root: materialStyles.keywordSearch }}
-    >
-      <TextField
-        id="standard-basic"
-        label="Keyword"
-        variant="outlined"
-        fullWidth={true}
-        InputProps={{
-          classes: {
-            notchedOutline: materialStyles.keywordSearchOutline,
-          },
-        }}
-        onChange={(event) => onKeywordSearchChange(event.target.value)}
-      />
-    </FormControl>
+    <TextSearch label="Keyword" onChange={onKeywordSearchChange} />
   );
 
-  let listElem: React.ReactElement<any>, card: React.ReactElement<any> | null;
+  const studyListSetSelected = useCallback(
+    (id: string) =>
+      dispatch({
+        type: SET_SELECTED_INSTITUTION_ACTION,
+        payload: { id },
+      }),
+    []
+  );
+
+  const listElem = (
+    <StudyList
+      listData={listData}
+      filteredIds={filteredIds}
+      selectedId={state.selectedId}
+      setSelectedStudy={studyListSetSelected}
+    />
+  );
+
+  let card: React.ReactElement<any> | null;
   if (listData === undefined) {
-    listElem = (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <CircularProgress />
-      </div>
-    );
     card = null;
   } else {
     const filteredData = listData.filter(({ id }) => filteredIds.includes(id));
-    const listItems = filteredData.map(({ id, study, hasSubmittedData }) => (
-      <SmartListItem
-        key={id}
-        id={id}
-        study={study}
-        selectedId={state.selectedId}
-        dispatch={dispatch}
-        hasSubmittedData={hasSubmittedData}
-      />
-    ));
-
-    const studyListHeadingText =
-      listData.length === filteredData.length
-        ? `Registered studies (${listData.length})`
-        : `Matching studies (${filteredData.length})`;
-    listElem = (
-      <>
-        <div className="title is-4">{studyListHeadingText} </div>
-        <div
-          style={{
-            maxHeight: `calc(${mapLegendContainerHeight}rem + 35.3vh)`,
-            overflowY: "auto",
-          }}
-        >
-          <List dense={true} component="div">
-            {listItems}
-          </List>
-        </div>
-      </>
-    );
-
     if (
       state.selectedId === undefined ||
       filteredData.map(({ id }) => id).includes(state.selectedId) === false
     ) {
       // Do not show card if there's no selected study or if  the selected study has been filtered out:
       card = (
-        <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div className="card">
-            <div className="card-header" style={{ minHeight: "5rem" }}>
-              <div className="card-header-title">
-                <div className="title is-4"> Please select a study </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <>
+          <Typography variant="h5" component="h2">
+            {" "}
+            Please select a study{" "}
+          </Typography>
+        </>
       );
     } else {
       const cardInfo = listData.find(({ id }) => id === state.selectedId)!;
       card = (
-        <div className="section" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div className="title is-4">Study details</div>
+        <>
           <Card cardInfo={cardInfo} showContactForm={showContactForm} />
-        </div>
+        </>
       );
     }
   }
 
   let mapElem: React.ReactElement<any>;
   if (mapData === undefined) {
-    mapElem = (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <CircularProgress />
-      </div>
-    );
+    mapElem = <Map hasData={false} />;
   } else {
     const filteredData = mapData.filter(({ id }) => filteredIds.includes(id));
     mapElem = (
       <Map
+        hasData={true}
         dispatchMessageToParent={dispatch}
         mapData={mapData}
         filteredData={filteredData}
@@ -613,66 +383,53 @@ const Partners = ({ title, mapData, listData }: Props) => {
   }
 
   return (
-    <div className="content">
-      <div>
-        <h1
-          className="has-text-weight-bold is-size-1"
-          style={{
-            boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-            backgroundColor: "#142166",
-            color: "white",
-            padding: "1rem",
-          }}
-        >
-          {title}
-        </h1>
-      </div>
-      <section className="section section--gradient" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="section" style={{ paddingTop: 0, paddingBottom: 0 }}>
-            <div className="title is-4">Find studies</div>
-            <div className="columns">
-              <div className="column is-one-third">{studyTypeElem}</div>
-              <div className="column is-one-third">{assaysPlannedElem}</div>
-              <div className="column is-one-third">
-                <CountrySelect
-                  onChange={(_event, value: string) => {
-                    const dispatchedValue = value === "" ? undefined : value;
-                    const action: SetStateAction<typeof selectedCountryStateName> = {
-                      type: SET_FORM_STATE,
-                      payload: {
-                        name: selectedCountryStateName,
-                        value: dispatchedValue,
-                      },
-                    };
-                    dispatch(action);
-                  }}
-                />
-              </div>
-            </div>
-            <div className="columns">
-              <div className="column is-one-third">{geneticAnalysisElem}</div>
-              <div className="column is-one-third">
-                {researchCategoriesElem}
-              </div>
-              <div className="column is-one-third">{keywordSearchElem}</div>
-            </div>
-          </div>
-          <div className="section">
-            <div className="columns">
-              <div className="column is-one-third">{listElem}</div>
-              <div className="column is-two-thirds">{mapElem}</div>
-            </div>
-          </div>
-          {card}
-          <InvestigatorContactForm
-            selectedId={state.selectedId}
-            isOpen={state[contactFormOpenStateName]}
-            dispatchMessageToParent={dispatch}
+    <Container marginTop={1}>
+      <Typography variant="h5" component="h2">
+        {" "}
+        Find studies{" "}
+      </Typography>
+      <Grid container={true} spacing={gridSpacing} marginTop={1}>
+        <FilterControlContainer> {studyTypeElem} </FilterControlContainer>
+        <FilterControlContainer> {assaysPlannedElem} </FilterControlContainer>
+        <FilterControlContainer>
+          <CountrySelect
+            onChange={(_event, value: string) => {
+              const dispatchedValue = value === "" ? undefined : value;
+              const action: SetStateAction<typeof selectedCountryStateName> = {
+                type: SET_FORM_STATE,
+                payload: {
+                  name: selectedCountryStateName,
+                  value: dispatchedValue,
+                },
+              };
+              dispatch(action);
+            }}
           />
-        </div>
-      </section>
-    </div>
+        </FilterControlContainer>
+
+        <FilterControlContainer> {geneticAnalysisElem} </FilterControlContainer>
+        <FilterControlContainer>
+          {" "}
+          {researchCategoriesElem}{" "}
+        </FilterControlContainer>
+        <FilterControlContainer> {keywordSearchElem} </FilterControlContainer>
+      </Grid>
+
+      <Grid container={true} spacing={gridSpacing} marginTop={2}>
+        {listElem}
+        {mapElem}
+      </Grid>
+
+      <Container marginTop={4} disableGutters={true}>
+        {" "}
+        {card}{" "}
+      </Container>
+      <InvestigatorContactForm
+        selectedId={state.selectedId}
+        isOpen={state[contactFormOpenStateName]}
+        dispatchMessageToParent={dispatch}
+      />
+    </Container>
   );
 };
 

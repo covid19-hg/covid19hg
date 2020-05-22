@@ -5,8 +5,8 @@ export interface AirtableDatum {
   country: string;
   city: string;
   studyLink: string;
-  retrospective: boolean;
-  prospective: boolean;
+  retrospective: boolean | undefined;
+  prospective: boolean | undefined;
   retrospectiveSampleSize: number | undefined;
   prospectiveSampleSize: number | undefined;
   genotyping: boolean;
@@ -21,7 +21,7 @@ export interface AirtableDatum {
   mapLocation: string | undefined;
   id: string;
   shouldShowContactButton: boolean;
-  hasSubmittedData: boolean
+  hasSubmittedData: boolean;
 }
 
 export interface ListDatum extends AirtableDatum {
