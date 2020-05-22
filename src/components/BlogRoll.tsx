@@ -1,7 +1,6 @@
-import React from 'react'
-import BlogItemListing from "./BlogItemListing"
-import { graphql, StaticQuery } from 'gatsby'
-
+import React from "react";
+import BlogItemListing from "./BlogItemListing";
+import { graphql, StaticQuery } from "gatsby";
 
 export default () => (
   <StaticQuery
@@ -9,11 +8,7 @@ export default () => (
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {
-            frontmatter: {
-              templateKey: { eq: "blog-post" }
-            }
-          }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
         ) {
           edges {
             node {
@@ -33,6 +28,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogItemListing data={data} count={count} />}
+    render={(data) => <BlogItemListing data={data} />}
   />
-)
+);

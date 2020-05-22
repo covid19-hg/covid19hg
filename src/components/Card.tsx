@@ -237,9 +237,7 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
       <Button
         variant="outlined"
         size="small"
-        classes={{
-          root: materialStyles.contactButtonRoot,
-        }}
+        className={materialStyles.contactButtonRoot}
         onClick={() => showContactForm()}
       >
         Contact

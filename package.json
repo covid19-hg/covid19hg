@@ -56,7 +56,7 @@
     "start": "yarn run develop",
     "build": "yarn run clean && gatsby build",
     "develop": "yarn run clean && gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "gatsby serve",
     "postinstall": "netlify-lambda install"
@@ -66,9 +66,10 @@
     "@types/mapbox-gl": "1.9.0",
     "@types/react": "16.9.23",
     "@types/react-dom": "16.9.6",
+    "@types/react-helmet": "6.0.0",
     "dotenv": "8.2.0",
     "netlify-cli": "2.40.0",
-    "prettier": "^1.15.3"
+    "prettier": "2.0.5"
   },
   "resolutions": {
     "@types/react": "16.9.23",

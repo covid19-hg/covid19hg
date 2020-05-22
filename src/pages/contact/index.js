@@ -1,60 +1,67 @@
 // Adapted from
 // https://github.com/sw-yx/gatsby-netlify-form-example-v2/blob/master/src/pages/recaptcha.js
 
-import React, { useState, createRef } from 'react'
-import Layout from '../../components/Layout'
-import { navigate } from 'gatsby-link'
-import Recaptcha from 'react-google-recaptcha'
-import useCanonicalLinkMetaTag from "../../components/useCanonicalLinkMetaTag"
+import React, { useState, createRef } from "react";
+import Layout from "../../components/NewLayout";
+import { navigate } from "gatsby-link";
+import Recaptcha from "react-google-recaptcha";
+import useCanonicalLinkMetaTag from "../../components/useCanonicalLinkMetaTag";
+import ContactPageContent from "../../components/ContactPageContent";
 
-const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY
-if (typeof RECAPTCHA_KEY === 'undefined') {
+const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
+if (typeof RECAPTCHA_KEY === "undefined") {
   throw new Error(`
   Env var GATSBY_APP_SITE_RECAPTCHA_KEY is undefined!
   You probably forget to set it in your Netlify build environment variables.
   Make sure to get a Recaptcha key at https://www.netlify.com/docs/form-handling/#custom-recaptcha-2-with-your-own-settings
   Note this demo is specifically for Recaptcha v2
-  `)
+  `);
 }
-
-function encode(data) {
+const encode = (data) => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 const Index = () => {
-  const [state, setState] = useState({})
-  const [submitButtonEnabled, setSubmitButtonEnabled] = useState(false)
-  const recaptchaRef = createRef()
-  const canonicalLinkMetaTag = useCanonicalLinkMetaTag('/contact/')
+  const [state, setState] = useState({});
+  const [submitButtonEnabled, setSubmitButtonEnabled] = useState(false);
+  const recaptchaRef = createRef();
+  const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/contact/");
 
-  const handleChange = e => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    const recaptchaValue = recaptchaRef.current.getValue()
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const recaptchaValue = recaptchaRef.current.getValue();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        'form-name': form.getAttribute('name'),
-        'g-recaptcha-response': recaptchaValue,
+        "form-name": form.getAttribute("name"),
+        "g-recaptcha-response": recaptchaValue,
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error))
-  }
+      .then(() => navigate(form.getAttribute("action")))
+      .catch((error) => alert(error));
+  };
 
-  const onRecaptchaChange = val => {
+  const onRecaptchaChange = (val) => {
     if (!!val) {
-      setSubmitButtonEnabled(true)
+      setSubmitButtonEnabled(true);
     }
-  }
+  };
+
+  return (
+    <Layout>
+      {canonicalLinkMetaTag}
+      <ContactPageContent />
+    </Layout>
+  );
 
   return (
     <Layout>
@@ -75,45 +82,45 @@ const Index = () => {
               </noscript>
 
               <div className="field">
-                <label className="label" htmlFor={'name'}>
+                <label className="label" htmlFor={"name"}>
                   Your name
                 </label>
                 <div className="control">
                   <input
                     className="input"
-                    type={'text'}
-                    name={'name'}
+                    type={"text"}
+                    name={"name"}
                     onChange={handleChange}
-                    id={'name'}
+                    id={"name"}
                     required={true}
                   />
                 </div>
               </div>
               <div className="field">
-                <label className="label" htmlFor={'email'}>
+                <label className="label" htmlFor={"email"}>
                   Email
                 </label>
                 <div className="control">
                   <input
                     className="input"
-                    type={'email'}
-                    name={'email'}
+                    type={"email"}
+                    name={"email"}
                     onChange={handleChange}
-                    id={'email'}
+                    id={"email"}
                     required={true}
                   />
                 </div>
               </div>
               <div className="field">
-                <label className="label" htmlFor={'message'}>
+                <label className="label" htmlFor={"message"}>
                   Message
                 </label>
                 <div className="control">
                   <textarea
                     className="textarea"
-                    name={'message'}
+                    name={"message"}
                     onChange={handleChange}
-                    id={'message'}
+                    id={"message"}
                     required={true}
                   />
                 </div>
@@ -142,7 +149,7 @@ const Index = () => {
         </center>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
