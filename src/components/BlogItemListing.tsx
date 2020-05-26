@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
-import { Grid } from "./materialUIContainers";
+import { Grid, Container } from "./materialUIContainers";
 import {
   Card,
   Typography,
@@ -65,9 +65,11 @@ const BlogItemListing = ({ data }: Props) => {
     </Grid>
   ));
   return (
-    <Grid container={true} spacing={3} marginTop={2}>
-      {postElems}
-    </Grid>
+    <Container fixed={true}>
+      <Grid container={true} spacing={3} marginTop={2}>
+        {postElems}
+      </Grid>
+    </Container>
   );
 };
 

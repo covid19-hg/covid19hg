@@ -39,7 +39,6 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Analysis = ({ analysis }: any) => {
-  console.log("analysis", analysis);
   const classes = useStyles();
   const studyTableRows = analysis.studies.map(
     ({ study, cases, controls }: any) => (

@@ -36,4 +36,4 @@ export default () => (
     `}
     render={(data, count) => <BlogItemListing data={data} count={count} />}
   />
-)
+);

@@ -3,7 +3,7 @@ import { Container } from "./materialUIContainers";
 import { Typography } from "@material-ui/core";
 
 const ThankYouPageContent = () => (
-  <Container marginTop={2}>
+  <Container marginTop={2} fixed={true}>
     <Typography variant="h4">Thank you!</Typography>
     <Typography>Thank you for your message.</Typography>
   </Container>
