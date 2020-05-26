@@ -1,3 +1,6 @@
+// Adapted from
+// https://github.com/sw-yx/gatsby-netlify-form-example-v2/blob/master/src/pages/recaptcha.js
+
 import React, { useState, useRef } from "react";
 import { navigate } from "gatsby-link";
 import Recaptcha from "react-google-recaptcha";
@@ -66,7 +69,7 @@ const ContactPageContent = () => {
   };
 
   return (
-    <Container marginTop={2}>
+    <Container marginTop={2} fixed={true}>
       <form
         name="contact-recaptcha"
         method="post"

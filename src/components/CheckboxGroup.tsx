@@ -30,17 +30,20 @@ interface Props {
 }
 const CheckboxGroup = ({ checkboxes, label }: Props) => {
   const classes = useStyles();
-  const checkboxElems = checkboxes.map(({ label, isChecked, onChange }) => (
-    <FormControlLabel
-      control={
-        <Checkbox
-          checked={isChecked}
-          onChange={(event) => onChange(event.target.checked)}
-        />
-      }
-      label={label}
-    />
-  ));
+  const checkboxElems = checkboxes.map(
+    ({ label, isChecked, onChange }, index) => (
+      <FormControlLabel
+        key={index}
+        control={
+          <Checkbox
+            checked={isChecked}
+            onChange={(event) => onChange(event.target.checked)}
+          />
+        }
+        label={label}
+      />
+    )
+  );
   return (
     <FormControl component="fieldset" className={classes.root}>
       <FormLabel component="legend">{label}</FormLabel>

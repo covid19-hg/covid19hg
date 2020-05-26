@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import useSiteMetadata from "./SiteMetadata";
 import { Helmet } from "react-helmet";
 
-const useCanonicalLinkMetaTag = (slug) => {
+const useCanonicalLinkMetaTag = (slug: string) => {
   const { siteUrl } = useSiteMetadata();
   const result = useMemo(() => {
     const fullUrl = `${siteUrl}${slug}`;
