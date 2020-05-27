@@ -1,8 +1,12 @@
 import React from "react";
-import { kebabCase } from "lodash";
-import { Link as GatsbyLink } from "gatsby";
 import { Container } from "../components/materialUIContainers";
-import { Typography, Chip } from "@material-ui/core";
+import { Typography, Chip, makeStyles, Theme } from "@material-ui/core";
+
+const useStyles = makeStyles((theme: Theme) => ({
+  chip: {
+    marginRight: theme.spacing(1),
+  },
+}));
 
 interface Props {
   content: string;
@@ -12,13 +16,9 @@ interface Props {
 }
 
 const BlogPostContent = ({ content, tags, helmet, title }: Props) => {
-  const tagElems = tags.map((tag) => (
-    <Chip
-      label={tag}
-      component={GatsbyLink}
-      to={`/tags/${kebabCase(tag)}/`}
-      clickable
-    />
+  const classes = useStyles();
+  const tagElems = tags.map((tag, index) => (
+    <Chip label={tag} key={index} className={classes.chip} />
   ));
 
   return (
