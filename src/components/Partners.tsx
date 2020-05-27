@@ -18,11 +18,13 @@ import { gridSpacing } from "./partnersPageStylingParams";
 import CheckboxGroup, { CheckboxInfo } from "./CheckboxGroup";
 import MultiSelect from "./MultiSelect";
 import TextSearch from "./TextSearch";
+import { useTheme } from "@material-ui/core/styles";
+import { useMediaQuery } from "@material-ui/core";
 
 const assayNames = assayOptions.map(({ name }) => name);
 
 const FilterControlContainer = (props: { children: React.ReactNode }) => (
-  <Grid item={true} md={4} xs={6}>
+  <Grid item={true} md={4} sm={6} xs={12}>
     {props.children}
   </Grid>
 );
@@ -366,8 +368,13 @@ const Partners = ({ mapData, listData }: Props) => {
     }
   }
 
-  let mapElem: React.ReactElement<any>;
-  if (mapData === undefined) {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+
+  let mapElem: React.ReactElement<any> | null;
+  if (isDesktop === false) {
+    mapElem = null;
+  } else if (mapData === undefined) {
     mapElem = <Map hasData={false} />;
   } else {
     const filteredData = mapData.filter(({ id }) => filteredIds.includes(id));
