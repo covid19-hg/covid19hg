@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/");
 
   return (
-    <Layout>
+    <Layout title="Home">
       {canonicalLinkMetaTag}
       <IndexPageContent
         image={frontmatter.image}

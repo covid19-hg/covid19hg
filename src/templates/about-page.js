@@ -12,7 +12,7 @@ const AboutPage = ({ data }) => {
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/about/");
 
   return (
-    <Layout title={post.frontmatter.title}>
+    <Layout title="About">
       {canonicalLinkMetaTag}
       <AboutPageTemplate />
     </Layout>
