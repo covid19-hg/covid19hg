@@ -10,15 +10,11 @@ import {
   makeStyles,
   Theme,
 } from "@material-ui/core";
-import clsx from "clsx";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 const useStyles = makeStyles((theme: Theme) => ({
   post: {
     padding: theme.spacing(2),
-  },
-  featuredPost: {
-    backgroundColor: "rgba(214, 48, 0, 0.2)",
   },
   readMore: {
     backgroundColor: theme.palette.background.default,
@@ -37,11 +33,7 @@ const BlogItemListing = ({ data }: Props) => {
   const { edges: posts } = data.allMarkdownRemark;
   const postElems = posts.map(({ node: post }) => (
     <Grid item={true} xs={12} md={6} key={post.fields.slug}>
-      <Card
-        className={clsx(classes.post, {
-          [classes.featuredPost]: post.frontmatter.featuredpost,
-        })}
-      >
+      <Card className={classes.post}>
         <CardContent>
           <Typography variant="h5" component={GatsbyLink} to={post.fields.slug}>
             {post.frontmatter.title}
