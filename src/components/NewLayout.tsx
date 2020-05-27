@@ -23,7 +23,6 @@ import { Link as GatsbyLink } from "gatsby";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
-import { useTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
   palette: {
@@ -131,7 +130,6 @@ interface Props {
 const Layout = ({ children, title }: Props) => {
   const classes = useStyles();
   const { title: siteTitle, description, siteUrl } = useSiteMetadata();
-  const theme = useTheme();
 
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   const [isOpenNonDesktop, setIsOpenNonDesktop] = useState<boolean>(false);
