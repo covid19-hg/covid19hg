@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import {
+  createMuiTheme,
+  ThemeProvider,
+  makeStyles,
+  Theme,
+  AppBar,
+  Drawer,
+  Toolbar,
+  Typography,
+  IconButton,
+  Hidden,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+  useMediaQuery,
+} from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Helmet } from "react-helmet";
-import Navbar from "../components/NewNavbar";
+import DefaultHelmet from "./DefaultHelmet";
 import useSiteMetadata from "./SiteMetadata";
-import { withPrefix } from "gatsby";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import "typeface-roboto";
-import { Toolbar, AppBar, Typography } from "@material-ui/core";
+import { Link as GatsbyLink } from "gatsby";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import MenuIcon from "@material-ui/icons/Menu";
+import clsx from "clsx";
+import { useTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
   palette: {
@@ -33,82 +50,198 @@ const theme = createMuiTheme({
     },
   },
 });
-
+const drawerWidthFromTheme = (theme: Theme) => theme.spacing(30);
+const useStyles = makeStyles((theme: Theme) => ({
+  appBarDesktop: {
+    width: `calc(100% - ${drawerWidthFromTheme(theme)}px)`,
+    marginLeft: drawerWidthFromTheme(theme),
+  },
+  appBarMobile: {
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    width: `calc(100% - ${drawerWidthFromTheme(theme)}px)`,
+    marginLeft: drawerWidthFromTheme(theme),
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  hide: {
+    display: "none",
+  },
+  drawer: {
+    width: drawerWidthFromTheme(theme),
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidthFromTheme(theme),
+  },
+  drawerHeader: {
+    display: "flex",
+    alignItems: "center",
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+  },
+  logo: {
+    borderRadius: theme.shape.borderRadius,
+  },
+  logoImage: {
+    width: theme.spacing(20),
+  },
+  arrowIcon: {
+    justifySelf: "flex-end",
+  },
+  navLink: {
+    textDecoration: "none",
+  },
+  contentDesktop: {
+    backgroundColor: theme.palette.background.default,
+    marginLeft: drawerWidthFromTheme(theme),
+  },
+  contentMobile: {
+    width: "100%",
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  contentShift: {
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: drawerWidthFromTheme(theme),
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+}));
 interface Props {
   children: React.ReactNode;
   title: string;
 }
 
-const TemplateWrapper = ({ children, title }: Props) => {
+const Layout = ({ children, title }: Props) => {
+  const classes = useStyles();
   const { title: siteTitle, description, siteUrl } = useSiteMetadata();
-  const titleBar =
-    title !== undefined ? (
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h4" component="h1">
-            {title}
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    ) : null;
+  const theme = useTheme();
+
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const [isOpenNonDesktop, setIsOpenNonDesktop] = useState<boolean>(false);
+  const isOpen = isDesktop ? true : isOpenNonDesktop;
+  const openDrawer = () => setIsOpenNonDesktop(true);
+  const closeDrawer = () => setIsOpenNonDesktop(false);
+  const drawerVariant = isDesktop ? "permanent" : "persistent";
+
+  const linkInfo = [
+    { href: "/", label: "Home" },
+    { href: "/about/", label: "About" },
+    { href: "/partners/", label: "Partners" },
+    { href: "/data-sharing/", label: "Data Sharing" },
+    { href: "/blog/", label: "News" },
+    { href: "/meeting-archive/", label: "Meeting Archive" },
+    { href: "/contact/", label: "Contact" },
+    { href: "/register/", label: "Register" },
+    { href: "/results/", label: "Results" },
+  ];
+  const drawerItems = linkInfo.map(({ href, label }, index) => (
+    <ListItem button={false} key={index}>
+      <ListItemText>
+        <GatsbyLink to={href} className={classes.navLink}>
+          {label}
+        </GatsbyLink>
+      </ListItemText>
+    </ListItem>
+  ));
   return (
     <>
+      <CssBaseline />
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Helmet>
-          <html lang="en" />
-          <title>{title}</title>
-          <meta name="description" content={description} />
-
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href={`${withPrefix("/")}img/apple-touch-icon.png`}
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            href={`${withPrefix("/")}img/favicon-32x32.png`}
-            sizes="32x32"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            href={`${withPrefix("/")}img/favicon-16x16.png`}
-            sizes="16x16"
-          />
-
-          <link
-            rel="mask-icon"
-            href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
-            color="#ff4400"
-          />
-          <meta name="theme-color" content="#fff" />
-
-          <meta property="og:type" content="business.business" />
-          <meta property="og:title" content={siteTitle} />
-          <meta property="og:url" content="/" />
-          <meta property="og:image" content={`${siteUrl}/img/header-4.png`} />
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta
-            property="twitter:image"
-            content={`${siteUrl}/img/twitter-summary-large.png`}
-          />
-          <meta
-            property="twitter:title"
-            content="COVID-19 Host Genetics Initiative"
-          />
-          <meta
-            property="twitter:description"
-            content="The COVID-19 host genetics initiative aims to provide support and an analytical network for studies that are broadly interested in identifying genetic determinants of COVID-19 susceptibility and severity. Such discoveries could help to generate hypotheses for drug repurposing, identify individuals at unusually high or low risk, and contribute to global knowledge of the biology of SARS-CoV-2 infection and disease."
-          />
-        </Helmet>
-        <Navbar />
-        {titleBar}
-        {children}
+        <DefaultHelmet
+          title={title}
+          description={description}
+          siteTitle={siteTitle}
+          siteUrl={siteUrl}
+        />
+        <AppBar
+          position="fixed"
+          className={clsx({
+            [classes.appBarDesktop]: isDesktop,
+            [classes.appBarMobile]: !isDesktop,
+            [classes.appBarShift]: !isDesktop && isOpenNonDesktop,
+          })}
+          color="primary"
+        >
+          <Toolbar>
+            <Hidden mdUp={true}>
+              <IconButton
+                aria-label="open drawer"
+                onClick={openDrawer}
+                edge="start"
+                color="inherit"
+                className={clsx(classes.menuButton, {
+                  [classes.hide]: !isDesktop && isOpenNonDesktop,
+                })}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Hidden>
+            <Typography variant="h4" component="h1">
+              {title}
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Drawer
+          className={classes.drawer}
+          variant={drawerVariant}
+          anchor="left"
+          open={isOpen}
+          classes={{ paper: classes.drawerPaper }}
+        >
+          <div className={classes.drawerHeader}>
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              className={classes.logo}
+              component={GatsbyLink}
+              to={"/"}
+            >
+              <img
+                src={"/img/logo.png"}
+                alt="Logo"
+                className={classes.logoImage}
+              />
+            </IconButton>
+            <Hidden mdUp={true}>
+              <IconButton onClick={closeDrawer} className={classes.arrowIcon}>
+                <ChevronLeftIcon />
+              </IconButton>
+            </Hidden>
+          </div>
+          <Divider />
+          <List> {drawerItems} </List>
+        </Drawer>
+        <div
+          className={clsx({
+            [classes.contentDesktop]: isDesktop,
+            [classes.contentMobile]: !isDesktop,
+            [classes.contentShift]: !isDesktop && isOpenNonDesktop,
+          })}
+        >
+          <div className={classes.toolbar} />
+          {children}
+        </div>
       </ThemeProvider>
     </>
   );
 };
 
-export default TemplateWrapper;
+export default Layout;

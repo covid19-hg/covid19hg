@@ -7,7 +7,7 @@ const Index = () => {
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/register/");
 
   return (
-    <Layout>
+    <Layout title="Register">
       {canonicalLinkMetaTag}
       <RegisterPageContent />
     </Layout>

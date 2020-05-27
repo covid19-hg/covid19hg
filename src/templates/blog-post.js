@@ -11,9 +11,10 @@ const BlogPost = ({ data }) => {
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag(post.fields.slug);
 
   return (
-    <Layout title={post.frontmatter.title}>
+    <Layout title="News">
       {canonicalLinkMetaTag}
       <BlogPostContent
+        title={post.frontmatter.title}
         content={post.html}
         helmet={
           <Helmet titleTemplate="%s | Blog">
