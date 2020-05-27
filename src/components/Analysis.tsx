@@ -36,6 +36,9 @@ const useStyles = makeStyles(() => ({
   plot: {
     width: "100%",
   },
+  wideTable: {
+    overflowX: "auto",
+  }
 }));
 
 const Analysis = ({ analysis }: any) => {
@@ -119,7 +122,7 @@ const Analysis = ({ analysis }: any) => {
             <Grid item={true} xs={leftColumnWidthXs} md={leftColumnWidthMd}>
               <Typography variant="h6">Contributing Studies</Typography>
             </Grid>
-            <Grid item={true} xs={rightColumnWidthXs} md={rightColumnWidthMd}>
+            <Grid item={true} xs={rightColumnWidthXs} md={rightColumnWidthMd} className={classes.wideTable}>
               {studyTable}
             </Grid>
 
