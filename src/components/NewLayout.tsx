@@ -15,6 +15,7 @@ import {
   ListItem,
   ListItemText,
   useMediaQuery,
+  Link,
 } from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import DefaultHelmet from "./DefaultHelmet";
@@ -99,7 +100,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifySelf: "flex-end",
   },
   navLink: {
-    textDecoration: "none",
+    "&:visited": {
+      color: theme.palette.text.primary,
+    },
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
   },
   contentDesktop: {
     backgroundColor: theme.palette.background.default,
@@ -152,9 +158,14 @@ const Layout = ({ children, title }: Props) => {
   const drawerItems = linkInfo.map(({ href, label }, index) => (
     <ListItem button={false} key={index}>
       <ListItemText>
-        <GatsbyLink to={href} className={classes.navLink}>
+        <Link
+          component={GatsbyLink}
+          to={href}
+          className={classes.navLink}
+          underline="none"
+        >
           {label}
-        </GatsbyLink>
+        </Link>
       </ListItemText>
     </ListItem>
   ));
