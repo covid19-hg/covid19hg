@@ -58,7 +58,7 @@ export const assayOptions = [
     color: immuneProfilingColor,
   },
 ];
-const useMaterialStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   titleContainerWithLink: {
     display: "flex",
     alignItems: "center",
@@ -83,7 +83,7 @@ const useMaterialStyles = makeStyles((theme: Theme) => ({
     backgroundColor: "rgb(255, 245, 155)",
   },
   chip: {
-    margin: theme.spacing(0.5),
+    margin: theme.spacing(0.5, 0.5, 0.5, 0),
   },
   researchCategoryChip: {
     margin: theme.spacing(0.5, 0.5, 0.5, 0),
@@ -114,9 +114,14 @@ const useMaterialStyles = makeStyles((theme: Theme) => ({
 }));
 
 const LeftHalfLeftColumnItem = (props: { children: React.ReactNode }) => (
-  <Grid item={true} md={3} display="flex" alignItems={"center" as "center"}>
-    {" "}
-    {props.children}{" "}
+  <Grid
+    item={true}
+    md={3}
+    xs={12}
+    display="flex"
+    alignItems={"center" as "center"}
+  >
+    {props.children}
   </Grid>
 );
 const LeftHalfRightColumnItem = ({
@@ -126,12 +131,12 @@ const LeftHalfRightColumnItem = ({
   <Grid
     item={true}
     md={9}
+    xs={12}
     display="flex"
     alignItems={"center" as "center"}
     {...rest}
   >
-    {" "}
-    {children}{" "}
+    {children}
   </Grid>
 );
 
@@ -161,13 +166,13 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
     researchCategory,
   } = cardInfo;
 
-  const classes = useMaterialStyles();
+  const classes = useStyles();
 
   let cardTitle: React.ReactElement<any>;
   if (studyLink === undefined) {
     cardTitle = (
       <Typography variant="h5" component="h4" gutterBottom={true}>
-        {study}{" "}
+        {study}
       </Typography>
     );
   } else {
@@ -185,8 +190,7 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
           color="inherit"
           gutterBottom={true}
         >
-          {" "}
-          {study}{" "}
+          {study}
         </Typography>
         <OpenInNewIcon className={classes.openInNewIcon} />
       </Link>
@@ -294,67 +298,61 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
         {cardTitle}
         <Divider />
         <Grid container={true} spacing={2} marginTop={1}>
-          <Grid item={true} md={6}>
-            <Grid container={true}>
-              <LeftHalfLeftColumnItem>
-                <Typography className={classes.miniTitle}>
-                  Investigators
-                </Typography>
-              </LeftHalfLeftColumnItem>
-              <LeftHalfRightColumnItem display="flex">
-                <Typography>{investigator}</Typography>
-                {contactButton}
-              </LeftHalfRightColumnItem>
+          <Grid item={true} container={true} md={6}>
+            <LeftHalfLeftColumnItem>
+              <Typography className={classes.miniTitle}>
+                Investigators
+              </Typography>
+            </LeftHalfLeftColumnItem>
+            <LeftHalfRightColumnItem display="flex">
+              <Typography>{investigator}</Typography>
+              {contactButton}
+            </LeftHalfRightColumnItem>
+            <LeftHalfLeftColumnItem>
+              <Typography className={classes.miniTitle}>Affiliation</Typography>
+            </LeftHalfLeftColumnItem>
+            <LeftHalfRightColumnItem>
+              <Typography>{affiliation} </Typography>
+            </LeftHalfRightColumnItem>
 
-              <LeftHalfLeftColumnItem>
-                <Typography className={classes.miniTitle}>
-                  Affiliation{" "}
-                </Typography>
-              </LeftHalfLeftColumnItem>
-              <LeftHalfRightColumnItem>
-                <Typography>{affiliation} </Typography>
-              </LeftHalfRightColumnItem>
+            <LeftHalfLeftColumnItem>
+              <Typography className={classes.miniTitle}>Location </Typography>
+            </LeftHalfLeftColumnItem>
+            <LeftHalfRightColumnItem>
+              <Typography>{`${city}, ${country}`}</Typography>
+            </LeftHalfRightColumnItem>
 
-              <LeftHalfLeftColumnItem>
-                <Typography className={classes.miniTitle}>Location </Typography>
-              </LeftHalfLeftColumnItem>
-              <LeftHalfRightColumnItem>
-                <Typography>{`${city}, ${country}`}</Typography>
-              </LeftHalfRightColumnItem>
+            <LeftHalfLeftColumnItem>
+              <Typography className={classes.miniTitle}>Type </Typography>
+            </LeftHalfLeftColumnItem>
+            <LeftHalfRightColumnItem>
+              <Typography>{studyTypeText} </Typography>
+            </LeftHalfRightColumnItem>
 
-              <LeftHalfLeftColumnItem>
-                <Typography className={classes.miniTitle}>Type </Typography>
-              </LeftHalfLeftColumnItem>
-              <LeftHalfRightColumnItem>
-                <Typography>{studyTypeText} </Typography>
-              </LeftHalfRightColumnItem>
+            <LeftHalfLeftColumnItem>
+              <Typography className={classes.miniTitle}>
+                Genetic Analysis
+              </Typography>
+            </LeftHalfLeftColumnItem>
+            <LeftHalfRightColumnItem>
+              {wesChip} {wgsChip} {gwasChip}
+            </LeftHalfRightColumnItem>
 
-              <LeftHalfLeftColumnItem>
-                <Typography className={classes.miniTitle}>
-                  Genetic Analysis{" "}
-                </Typography>
-              </LeftHalfLeftColumnItem>
-              <LeftHalfRightColumnItem>
-                {wesChip} {wgsChip} {gwasChip}
-              </LeftHalfRightColumnItem>
+            <LeftHalfLeftColumnItem>
+              <Typography className={classes.miniTitle}>
+                Assays Planned
+              </Typography>
+            </LeftHalfLeftColumnItem>
+            <LeftHalfRightColumnItem flexWrap="wrap">
+              {mainAssayChips}
+            </LeftHalfRightColumnItem>
 
-              <LeftHalfLeftColumnItem>
-                <Typography className={classes.miniTitle}>
-                  Assays Planned
-                </Typography>
-              </LeftHalfLeftColumnItem>
-              <LeftHalfRightColumnItem flexWrap="wrap">
-                {" "}
-                {mainAssayChips}{" "}
-              </LeftHalfRightColumnItem>
-
-              <LeftHalfLeftColumnItem>
-                <Typography className={classes.miniTitle}>
-                  Other Assays
-                </Typography>
-              </LeftHalfLeftColumnItem>
-              <LeftHalfRightColumnItem> {otherAssays} </LeftHalfRightColumnItem>
-            </Grid>
+            <LeftHalfLeftColumnItem>
+              <Typography className={classes.miniTitle}>
+                Other Assays
+              </Typography>
+            </LeftHalfLeftColumnItem>
+            <LeftHalfRightColumnItem> {otherAssays} </LeftHalfRightColumnItem>
           </Grid>
           <Grid item={true} md={6}>
             <Typography className={classes.miniTitle}>
