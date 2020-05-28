@@ -59,6 +59,25 @@ collections:
             fields:
               - {label: Question, name: question, widget: markdown}
               - {label: Answer, name: answer, widget: markdown}
+      - file: "src/pages/projects/index.md"
+        label: Projects
+        name: "projects"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden"}
+          - {label: Intro, name: intro, widget: markdown, required: true}
+          - label: Projects
+            required: true
+            name: projects
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string, required: true}
+              - {label: Description, name: description, widget: markdown, required: true}
+              - {label: Slack Channel, name: slack-channel, widget: string, required: false}
+              - label: Contact Persons
+                required: true
+                name: contact-persons
+                widget: list
+                field: {label: Name, name: name, widget: string}
 
       - file: "src/pages/index.md"
         label: "Landing Page"
