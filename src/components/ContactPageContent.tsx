@@ -111,7 +111,11 @@ const ContactPageContent = () => {
           />
         </Container>
         <Container disableGutters={true} margin={formElementMargin}>
-          <Button variant="contained" disabled={!submitButtonEnabled}>
+          <Button
+            variant="contained"
+            disabled={!submitButtonEnabled}
+            type="submit"
+          >
             Send
           </Button>
         </Container>
