@@ -28,7 +28,7 @@ import clsx from "clsx";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#262262",
+      main: "#142166",
     },
     text: {
       primary: "hsl(0, 0%, 29%)",
