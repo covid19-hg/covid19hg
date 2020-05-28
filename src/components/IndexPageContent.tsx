@@ -1,10 +1,32 @@
 import React from "react";
 import { Container, Grid } from "./materialUIContainers";
-import { Typography, Link } from "@material-ui/core";
+import {
+  Typography,
+  Link,
+  Card,
+  CardContent,
+  makeStyles,
+  Theme,
+} from "@material-ui/core";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import GatsbyLink from "gatsby-link";
 import BlogRoll from "./BlogRoll";
 import Img from "gatsby-image";
+import clsx from "clsx";
+
+const useStyles = makeStyles((theme: Theme) => ({
+  card: {
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  cardAsLink: {
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
+}));
 
 interface Props {
   image: any;
@@ -21,43 +43,72 @@ const IndexPageContent = ({
   description,
   intro,
 }: Props) => {
+  const classes = useStyles();
   const features = intro.blurbs.map((blurb, index) => {
+    console.log("blurb", blurb);
     const xsWidth = 12;
     const mdWidth = 6;
-    const image = (
-      <Container width={300} marginBottom={1}>
-        <PreviewCompatibleImage imageInfo={blurb} />
-      </Container>
-    );
-    const text = <Typography>{blurb.text}</Typography>;
+    let content: React.ReactElement<any>;
+    if (blurb.image === null) {
+      // Must be the "see our partners" entry
+      content = (
+        <Container
+          disableGutters={true}
+          display="flex"
+          justifyContent="center"
+          alignItems={"center" as "center"}
+        >
+          <Typography variant="h4">{blurb.text}</Typography>
+        </Container>
+      );
+    } else {
+      content = (
+        <>
+          <Container width={300} marginBottom={1}>
+            <PreviewCompatibleImage imageInfo={blurb} />
+          </Container>
+          <Typography>{blurb.text}</Typography>
+        </>
+      );
+    }
     const link = blurb.link;
     if (link) {
       if (link[0] === "/") {
         // Use gatsby link for internal links:
         return (
           <Grid item={true} xs={xsWidth} md={mdWidth} key={index}>
-            <GatsbyLink to={link}>
-              {image}
-              {text}
-            </GatsbyLink>
+            <Card
+              className={clsx(classes.card, classes.cardAsLink)}
+              to={link}
+              // @ts-ignore
+              component={GatsbyLink}
+            >
+              <CardContent>{content}</CardContent>
+            </Card>
           </Grid>
         );
       } else {
         // Use normal anchor tag for external link:
         return (
           <Grid item={true} xs={xsWidth} md={mdWidth} key={index}>
-            <Link href={link} underline="none">
-              {image}
-              {text}
-            </Link>
+            <Card
+              className={clsx(classes.card, classes.cardAsLink)}
+              component={Link as any}
+              // @ts-ignore
+              href={link}
+              underline="none"
+            >
+              <CardContent>{content}</CardContent>
+            </Card>
           </Grid>
         );
       }
     } else {
       return (
         <Grid item={true} xs={xsWidth} md={mdWidth} key={index}>
-          {image}
-          {text}
+          <Card className={classes.card}>
+            <CardContent>{content}</CardContent>
+          </Card>
         </Grid>
       );
     }
@@ -80,7 +131,7 @@ const IndexPageContent = ({
             <Typography gutterBottom={true}>{description}</Typography>
           </Grid>
         </Grid>
-        <Grid container={true} spacing={6} marginTop={2} marginBottom={2}>
+        <Grid container={true} spacing={3} marginTop={2} marginBottom={2}>
           {features}
         </Grid>
         <Typography variant="h4">News</Typography>

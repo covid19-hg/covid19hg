@@ -57,7 +57,7 @@ const BlogItemListing = ({ data }: Props) => {
     </Grid>
   ));
   return (
-    <Container fixed={true}>
+    <Container fixed={true} disableGutters={true}>
       <Grid container={true} spacing={3} marginTop={2}>
         {postElems}
       </Grid>
