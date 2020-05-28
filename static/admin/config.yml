@@ -77,7 +77,6 @@ collections:
                 required: true
                 name: contact-persons
                 widget: list
-                field: {label: Name, name: name, widget: string}
 
       - file: "src/pages/index.md"
         label: "Landing Page"
