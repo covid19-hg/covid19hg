@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Layout from "../components/NewLayout";
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
 import ResultspageContent from "../components/ResultsPageContent";
+import { graphql } from "gatsby";
 
 const ResultsPage = ({ data, release }) => {
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/results/");
