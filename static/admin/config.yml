@@ -64,7 +64,7 @@ collections:
         name: "projects"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden"}
-          - {label: Intro, name: intro, widget: markdown, required: true}
+          - {label: Intro, name: projectsIntro, widget: markdown, required: true}
           - label: Projects
             required: true
             name: projects
