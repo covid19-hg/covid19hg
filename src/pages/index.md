@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: The COVID-19 Host Genetics Initiative
-image: /img/header-4.png
+image: /img/header-transparent.png
 heading: Objectives
 subheading: '-'
 mainpitch:
