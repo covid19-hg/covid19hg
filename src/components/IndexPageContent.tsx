@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
   },
   cardAsLink: {
+    color: theme.palette.primary.main,
+    "&:visited": {
+      color: theme.palette.primary.main,
+    },
     "&:hover": {
       color: theme.palette.secondary.main,
     },
