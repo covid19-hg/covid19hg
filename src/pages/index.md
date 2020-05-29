@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: The COVID-19 Host Genetics Initiative
-image: /img/header-4.png
+image: /img/header-transparent.png
 heading: Objectives
 subheading: '-'
 mainpitch:
@@ -31,9 +31,8 @@ intro:
       text: >
         Aim 3: Provide a platform to share the results from meta-analytical
         activities to benefit the broader scientific community.
-    - image: /img/see-our-partners.png
-      link: /partners
-      text: ⠀
+    - link: /partners
+      text: See our partners
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their

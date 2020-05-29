@@ -18,6 +18,11 @@ import MapMarker, {
   highlightedMarkerColor,
   submittedDataMarkerColor,
 } from "./MapMarker";
+import { Grid, Container } from "./materialUIContainers";
+import { Typography, Theme, CircularProgress } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+import { ListMapTitleGridItem } from "./partnersPageStylingParams";
+
 const mapboxStyles = require("./map.module.css");
 
 const getPlaceLabelsPlaceLabelsMapboxLayer = require("../mapboxLayers/place-labels-place-labels-mapbox-layer");
@@ -34,7 +39,9 @@ const streetMapSourceId = "mapbox-streets";
 const terrainSourceId = "mapbox-terrain";
 const markerLayerId = "markers-layer";
 const visibilityFeatureStateName = "isVisible";
-export const legendContainerHeight = 3; // in
+const columnWidthMd = 8;
+const mapLegendFlexOrder = 2;
+const mapFlexOrder = 4;
 
 const createMarker = (args: {
   lng: number;
@@ -77,10 +84,7 @@ const createMarker = (args: {
   });
   markerElement.addEventListener("mouseenter", (event) => {
     event.stopPropagation();
-    popup
-      .setLngLat([lng, lat])
-      .setHTML(study)
-      .addTo(mapboxMap);
+    popup.setLngLat([lng, lat]).setHTML(study).addTo(mapboxMap);
   });
   markerElement.addEventListener("mouseleave", (event) => {
     event.stopPropagation();
@@ -393,6 +397,18 @@ const adjustLabelVisibility = (
   }
 };
 
+const useStyles = makeStyles(({ typography, spacing }: Theme) => ({
+  legendWord: {
+    marginLeft: spacing(1),
+  },
+  secondLegendIcon: {
+    marginLeft: spacing(2),
+  },
+  legendContainer: {
+    height: typography.h4.fontSize,
+  },
+}));
+
 interface Props {
   dispatchMessageToParent: any;
   mapData: MapDatum[];
@@ -446,39 +462,66 @@ const MapComponent = ({
     adjustLabelVisibility(mapboxInfoRef, visibleIds);
   }, [visibleIds]);
 
-  const legend = (
-    <div
-      style={{
-        height: `${legendContainerHeight}rem`,
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <div>
-        <MapMarker color={defaultMarkerColor} />
-      </div>
-      <div style={{ marginLeft: "0.5rem" }}> Registered Study </div>
+  const classes = useStyles();
 
-      <div style={{ marginLeft: "1.5rem" }}>
-        <MapMarker color={submittedDataMarkerColor} />
-      </div>
-      <div style={{ marginLeft: "0.5rem" }}>Data Contributor </div>
-    </div>
+  const legend = (
+    <Container display="flex" justifyContent="center" alignItems="center">
+      <MapMarker iconColor={defaultMarkerColor} />
+      <Typography className={classes.legendWord}>Registered Study</Typography>
+      <MapMarker
+        className={classes.secondLegendIcon}
+        iconColor={submittedDataMarkerColor}
+      />
+      <Typography className={classes.legendWord}>Data Contributor</Typography>
+    </Container>
   );
 
   return (
-    <div
-      style={{
-        height: `calc(${legendContainerHeight}rem + 40vh)`,
-        position: "relative",
-      }}
-    >
-      {legend}
-      <div style={{ height: "40vh" }} ref={mapElRef} />
-    </div>
+    <>
+      <ListMapTitleGridItem md={columnWidthMd} order={mapLegendFlexOrder}>
+        {legend}
+      </ListMapTitleGridItem>
+      <Grid
+        item={true}
+        md={columnWidthMd}
+        order={mapFlexOrder}
+        height="40vh"
+        ref={mapElRef}
+      />
+    </>
   );
 };
 
-export default MapComponent;
+type MapWrapperProps = { hasData: false } | ({ hasData: true } & Props);
+
+const MapWrapper = (props: MapWrapperProps) => {
+  if (props.hasData === true) {
+    return (
+      <MapComponent
+        dispatchMessageToParent={props.dispatchMessageToParent}
+        mapData={props.mapData}
+        filteredData={props.filteredData}
+        selected={props.selected}
+      />
+    );
+  } else {
+    return (
+      <>
+        <ListMapTitleGridItem md={columnWidthMd} order={mapLegendFlexOrder} />
+        <Grid
+          item={true}
+          md={columnWidthMd}
+          order={mapFlexOrder}
+          height="40vh"
+          display="flex"
+          justifyContent="center"
+          alignItems={"center" as "center"}
+        >
+          <CircularProgress />
+        </Grid>
+      </>
+    );
+  }
+};
+
+export default MapWrapper;

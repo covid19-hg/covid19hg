@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import { SvgIcon, SvgIconProps } from "@material-ui/core";
 
 // These sizes are obtained by inspecting the actual SVG created by Mapbox:
 export const defaultMarkerWidth = 27;
@@ -8,10 +9,9 @@ export const defaultMarkerColor = "#639dab";
 export const highlightedMarkerColor = "red";
 export const submittedDataMarkerColor = "orange";
 
-interface Props {
-  color: string;
-}
-const MapMarker = ({ color }: Props) => {
+type Props = SvgIconProps & { iconColor: string };
+const MapMarker = (props: Props) => {
+  const { iconColor: color, ...rest } = props;
   const drawMarker = useCallback((svg: SVGSVGElement | null) => {
     if (svg !== null) {
       // Create default map marker. Adapted from
@@ -151,7 +151,7 @@ const MapMarker = ({ color }: Props) => {
       svg.setAttributeNS(null, "width", `${defaultMarkerWidth / 2}px`);
     }
   }, []);
-  return <svg ref={drawMarker} />;
+  return <SvgIcon ref={drawMarker} {...rest} />;
 };
 
 export default MapMarker;

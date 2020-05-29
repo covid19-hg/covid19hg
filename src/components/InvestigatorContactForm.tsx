@@ -15,7 +15,6 @@ import {
 } from "./Partners";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-
 const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
 if (typeof RECAPTCHA_KEY === "undefined") {
   throw new Error(`
@@ -28,7 +27,7 @@ if (typeof RECAPTCHA_KEY === "undefined") {
 
 const SET_STATE_ACTION_NAME = "SET_STATE";
 const RESET_ACTION_NAME = "RESET";
-const CAPTCHA_SOLVED = "CAPTCHA_SOLVED"
+const CAPTCHA_SOLVED = "CAPTCHA_SOLVED";
 
 const nameStateName = "name";
 const emailStateName = "email";
@@ -69,17 +68,17 @@ interface SetStateAction<K extends keyof State> {
   };
 }
 interface CaptchaSolvedAction {
-  type: typeof CAPTCHA_SOLVED,
+  type: typeof CAPTCHA_SOLVED;
   payload: {
-    captchaValue: string,
-  }
+    captchaValue: string;
+  };
 }
 type Action<K extends keyof State> =
   | SetStateAction<K>
   | {
       type: typeof RESET_ACTION_NAME;
-    } |
-  CaptchaSolvedAction
+    }
+  | CaptchaSolvedAction;
 
 const reducer = <K extends keyof State>(
   state: State,
@@ -101,7 +100,7 @@ const reducer = <K extends keyof State>(
         ...state,
         [submitButtonEnabledStateName]: true,
         [captchaValueStateName]: action.payload.captchaValue,
-      }
+      };
     default:
       return state;
   }
@@ -136,7 +135,7 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
       type: CAPTCHA_SOLVED,
       payload: {
         captchaValue: value,
-      }
+      },
     };
     dispatch(action);
   };
@@ -152,11 +151,11 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
     dispatch(action);
   }, []);
 
-  const resetContactForm = () => dispatch({ type: RESET_ACTION_NAME })
+  const resetContactForm = () => dispatch({ type: RESET_ACTION_NAME });
   const closeAndResetContactForm = () => {
-    closeContactForm()
-    resetContactForm()
-  }
+    closeContactForm();
+    resetContactForm();
+  };
 
   const handleSubmit = async () => {
     const formData = {
@@ -181,7 +180,7 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        closeAndResetContactForm()
+        closeAndResetContactForm();
       } else {
         showErrorMessage();
       }
@@ -203,10 +202,7 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
             <Button onClick={closeAndResetContactForm} color="primary">
               Cancel
             </Button>
-            <Button
-              onClick={resetContactForm}
-              color="primary"
-            >
+            <Button onClick={resetContactForm} color="primary">
               Retry
             </Button>
           </DialogActions>
@@ -214,18 +210,20 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
       </Dialog>
     );
   } else {
-    let sendButtonContent: React.ReactChild, cancelButtonContent: React.ReactChild;
-    let sendButtonClickHandler: React.MouseEventHandler<any> | undefined, cancelButtonClickHandler: React.MouseEventHandler<any> | undefined;
+    let sendButtonContent: React.ReactChild,
+      cancelButtonContent: React.ReactChild;
+    let sendButtonClickHandler: React.MouseEventHandler<any> | undefined,
+      cancelButtonClickHandler: React.MouseEventHandler<any> | undefined;
     if (state[submissionStatusStateName] === SubmissionStatus.Pending) {
-      sendButtonContent = <CircularProgress size={20} />
-      cancelButtonContent = <CircularProgress size={20} />
-      sendButtonClickHandler = undefined
-      cancelButtonClickHandler = undefined
+      sendButtonContent = <CircularProgress size={20} />;
+      cancelButtonContent = <CircularProgress size={20} />;
+      sendButtonClickHandler = undefined;
+      cancelButtonClickHandler = undefined;
     } else {
-      sendButtonContent = "Send"
-      cancelButtonContent = "Cancel"
-      sendButtonClickHandler = handleSubmit
-      cancelButtonClickHandler = closeAndResetContactForm
+      sendButtonContent = "Send";
+      cancelButtonContent = "Cancel";
+      sendButtonClickHandler = handleSubmit;
+      cancelButtonClickHandler = closeAndResetContactForm;
     }
     return (
       <Dialog open={isOpen} onClose={closeAndResetContactForm}>

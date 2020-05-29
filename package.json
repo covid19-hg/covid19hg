@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "covid19hg.org",
+  "description": "The COVID-19 host genetics initiative aims to provide support and an analytical network for studies that are broadly interested in identifying genetic determinants of COVID-19 susceptibility and severity. Such discoveries could help to generate hypotheses for drug repurposing, identify individuals at unusually high or low risk, and contribute to global knowledge of the biology of SARS-CoV-2 infection and disease.",
   "version": "1.1.3",
   "author": "Austin Green",
   "dependencies": {
@@ -8,10 +8,10 @@
     "@material-ui/icons": "4.9.1",
     "@material-ui/lab": "4.0.0-alpha.48",
     "@material-ui/styles": "4.9.6",
-    "bulma": "^0.8.0",
     "fork-ts-checker-webpack-plugin": "4.1.3",
     "gatsby": "2.20.29",
     "gatsby-image": "^2.0.23",
+    "gatsby-plugin-favicon": "3.1.6",
     "gatsby-plugin-google-analytics": "2.2.2",
     "gatsby-plugin-material-ui": "2.1.6",
     "gatsby-plugin-netlify": "^2.0.6",
@@ -41,7 +41,6 @@
     "react-google-recaptcha": "2.0.1",
     "react-helmet": "^5.2.0",
     "react-markdown": "4.3.1",
-    "styled-components": "^5.1.0",
     "typeface-roboto": "0.0.75",
     "typescript": "3.8.3",
     "uuid": "^3.2.1"
@@ -56,7 +55,7 @@
     "start": "yarn run develop",
     "build": "yarn run clean && gatsby build",
     "develop": "yarn run clean && gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "gatsby serve",
     "postinstall": "netlify-lambda install"
@@ -66,9 +65,10 @@
     "@types/mapbox-gl": "1.9.0",
     "@types/react": "16.9.23",
     "@types/react-dom": "16.9.6",
+    "@types/react-helmet": "6.0.0",
     "dotenv": "8.2.0",
     "netlify-cli": "2.40.0",
-    "prettier": "^1.15.3"
+    "prettier": "2.0.5"
   },
   "resolutions": {
     "@types/react": "16.9.23",

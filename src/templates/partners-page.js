@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
+import Layout from "../components/NewLayout";
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
 import { fetchJSON } from "../Utils";
 import _zip from "lodash/zip";
@@ -82,13 +82,26 @@ const ProductPage = ({ data }) => {
         );
         setListData(listData);
 
-        const [withExplicitMapLocation, withoutExplicitMapLocation] = _partition(listData, ({mapLocation}) => mapLocation !== undefined)
+        const [
+          withExplicitMapLocation,
+          withoutExplicitMapLocation,
+        ] = _partition(
+          listData,
+          ({ mapLocation }) => mapLocation !== undefined
+        );
 
         const withExplicitMapLocationFetchResult = await Promise.all(
-          withExplicitMapLocation.map(({mapLocation}) => fetchJSON(getSimpleLocationFetchURL(mapLocation)))
-        )
-        const withExplicitMapLocationCoords = withExplicitMapLocationFetchResult.map(elem => extractCoordFromFetchResult(elem))
-        const withExplicitMapLocationData = _zip(withExplicitMapLocationCoords, withExplicitMapLocation).map(([{lng, lat}, datum]) => ({...datum, lng, lat}))
+          withExplicitMapLocation.map(({ mapLocation }) =>
+            fetchJSON(getSimpleLocationFetchURL(mapLocation))
+          )
+        );
+        const withExplicitMapLocationCoords = withExplicitMapLocationFetchResult.map(
+          (elem) => extractCoordFromFetchResult(elem)
+        );
+        const withExplicitMapLocationData = _zip(
+          withExplicitMapLocationCoords,
+          withExplicitMapLocation
+        ).map(([{ lng, lat }, datum]) => ({ ...datum, lng, lat }));
 
         const groupedByCity = _groupBy(
           withoutExplicitMapLocation,
@@ -176,7 +189,7 @@ const ProductPage = ({ data }) => {
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/partners/");
 
   return (
-    <Layout>
+    <Layout title="Partners">
       {canonicalLinkMetaTag}
       {mainContent}
     </Layout>
