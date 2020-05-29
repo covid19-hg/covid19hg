@@ -15,7 +15,9 @@ interface Props {
 const ProjectsPageContent = ({ projects, projectsIntro }: Props) => {
   const projectElems = projects.map(
     ({ title, description, contact_persons, slack_channel }, index) => {
-      const contactPersonsText = contact_persons.map((name) => name).join(", ");
+      const contactPersonsText = contact_persons
+        .map(({ name }) => name)
+        .join(", ");
       return (
         <Grid item={true} xs={12} key={index}>
           <Card>
