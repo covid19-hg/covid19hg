@@ -14,7 +14,7 @@ projects:
     contact-persons:
       - name: Philip Awadalla
       - name: Pradeep Natarajan
-      - name: Kelly Bolton.
+      - name: Kelly Bolton
     slack-channel: "#clonalhematopoeisis"
 
   - title: COVID19 vascular complications

@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/NewLayout";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
@@ -12,7 +12,6 @@ const ProjectsPage = ({ data }) => {
       frontmatter: { title, projectsIntro, projects },
     },
   } = data;
-  console.log("data", data);
   return (
     <Layout title={title}>
       {canonicalLinkMetaTag}

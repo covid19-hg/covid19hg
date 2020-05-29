@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid } from "./materialUIContainers";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import ReactMarkdown from "react-markdown";
 
@@ -17,7 +17,7 @@ const ProjectsPageContent = ({ projects, projectsIntro }: Props) => {
     ({ title, description, contact_persons, slack_channel }, index) => {
       const contactPersonsText = contact_persons
         .map(({ name }) => name)
-        .join(", ");
+        .join(", ") + ".";
       return (
         <Grid item={true} xs={12} key={index}>
           <Card>
@@ -41,7 +41,6 @@ const ProjectsPageContent = ({ projects, projectsIntro }: Props) => {
     }
   );
   return (
-    // @ts-ignore
     <Container marginTop={1} fixed={true}>
       <Typography>
         <ReactMarkdown source={projectsIntro} />
