@@ -122,6 +122,7 @@ const LayoutContent = ({ title, children }: Props) => {
     { href: "/", label: "Home" },
     { href: "/about/", label: "About" },
     { href: "/partners/", label: "Partners" },
+    { href: "/projects/", label: "Projects" },
     { href: "/data-sharing/", label: "Data Sharing" },
     { href: "/blog/", label: "News" },
     { href: "/meeting-archive/", label: "Meeting Archive" },
