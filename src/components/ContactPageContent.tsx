@@ -82,6 +82,7 @@ const ContactPageContent = () => {
           <p>This form won’t work with Javascript disabled</p>
         </noscript>
         <TextField
+          name="name"
           variant="outlined"
           label="Your Name"
           fullWidth={true}
@@ -89,6 +90,7 @@ const ContactPageContent = () => {
           onChange={handleChange}
         />
         <TextField
+          name="email"
           variant="outlined"
           label="Email"
           fullWidth={true}
@@ -96,6 +98,7 @@ const ContactPageContent = () => {
           onChange={handleChange}
         />
         <TextField
+          name="message"
           variant="outlined"
           label="Message"
           multiline={true}
