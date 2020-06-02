@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 export const HTMLContent = ({
   content,
-  className,
+  className = "",
 }: {
   content: string;
-  className: string;
+  className?: string;
 }) => (
   <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
 );

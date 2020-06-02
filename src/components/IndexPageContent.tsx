@@ -50,7 +50,6 @@ const IndexPageContent = ({
 }: Props) => {
   const classes = useStyles();
   const features = intro.blurbs.map((blurb, index) => {
-    console.log("blurb", blurb);
     const xsWidth = 12;
     const mdWidth = 6;
     let content: React.ReactElement<any>;
