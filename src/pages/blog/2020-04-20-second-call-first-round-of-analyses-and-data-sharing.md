@@ -5,7 +5,8 @@ date: 2020-04-20T09:54:24.603Z
 featuredpost: false
 featuredimage: /img/apple-touch-icon.png
 tags:
-  - '#datasharing #analysis'
+  - "#datasharing"
+  - "#analysis"
 type: blog-post
 description: '-'
 ---

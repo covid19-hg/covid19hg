@@ -6,7 +6,8 @@ description: '-'
 featuredpost: false
 featuredimage: /img/apple-touch-icon.png
 tags:
-  - '#portal #analysis'
+  - "#portal"
+  - "#analysis"
 type: blog-post
 ---
 There are more than 100 studies participating to the initiative and we have launched a now portal to allow exploring studies research questions and foster collaborations.
