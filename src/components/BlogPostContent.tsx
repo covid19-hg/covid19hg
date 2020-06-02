@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "../components/materialUIContainers";
 import { Typography, Chip, makeStyles, Theme } from "@material-ui/core";
+import { HTMLContent } from "./Content";
 
 const useStyles = makeStyles((theme: Theme) => ({
   chip: {
@@ -25,7 +26,9 @@ const BlogPostContent = ({ content, tags, helmet, title }: Props) => {
     <Container marginTop={2} fixed={true}>
       {helmet || ""}
       <Typography variant="h4">{title}</Typography>
-      <Typography dangerouslySetInnerHTML={{ __html: content }} />
+      <Typography>
+        <HTMLContent content={content} className="" />
+      </Typography>
       <Typography variant="h5" gutterBottom={true}>
         Tags
       </Typography>
