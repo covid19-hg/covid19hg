@@ -113,4 +113,5 @@ projects:
     slack-channel: '#ardsgwas'
     contact-persons:
       - Lea Davis
+      - Eric Kerchberger
 ---
