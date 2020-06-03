@@ -112,6 +112,6 @@ projects:
       respiratory viruses OR sepsis?
     slack-channel: '#ardsgwas'
     contact-persons:
-      - Lea Davis
-      - Eric Kerchberger
+      - name: Lea Davis
+      - name: Eric Kerchberger
 ---
