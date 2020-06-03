@@ -32,9 +32,9 @@ projects:
       severity and conversely how acute infection with SARS-CoV-2 might promote
       expansion of CHIP.
     contact-persons:
-      - name: Philip Awadalla
-      - name: Pradeep Natarajan
-      - name: Kelly Bolton
+      - Philip Awadalla
+      - Pradeep Natarajan
+      - Kelly Bolton
     slack-channel: '#covid19-hg-clonalhematopoeisis'
   - title: COVID19 vascular complications
     description: >
@@ -83,9 +83,9 @@ projects:
       an agnostic approach and focusing on known genetic risk factors for these
       vascular diseases.
     contact-persons:
-      - name: Israel Fernández Cadenas
-      - name: Stéphanie Debette
-      - name: David Alexandre Tregouet
+      - Israel Fernández Cadenas
+      - Stéphanie Debette
+      - David Alexandre Tregouet
     slack-channel: '#covid19-hg-stroke-vte'
   - title: Acute respiratory distress syndrome
     description: >-
@@ -112,8 +112,8 @@ projects:
       respiratory viruses OR sepsis?
     slack-channel: '#ardsgwas'
     contact-persons:
-      - name: Lea Davis
-      - name: Eric Kerchberger
+      - Lea Davis
+      - Eric Kerchberger
   - title: Test project
     description: This is a test.
     slack-channel: '#this-is-a-test'

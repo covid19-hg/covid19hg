@@ -35,9 +35,7 @@ export const pageQuery = graphql`
         projects {
           title
           description
-          contact_persons {
-            name
-          }
+          contact_persons
           slack_channel
         }
       }
