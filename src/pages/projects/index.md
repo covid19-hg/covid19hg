@@ -87,4 +87,30 @@ projects:
       - name: Stéphanie Debette
       - name: David Alexandre Tregouet
     slack-channel: '#covid19-hg-stroke-vte'
+  - title: Acute respiratory distress syndrome
+    description: >-
+      The most severe outcome among COVID-19 cases includes acute respiratory
+      distress syndrome (ARDS) and related respiratory failure that may fall
+      outside of the Berlin definition of ARDS (i.e., ARDS-like respiratory
+      illness) but could still share underlying genetic risk factors.
+      Additionally, while many groups are waiting for genotype data on
+      SARS-CoV-2 infected individuals to be generated, it would be prudent to
+      examine existing data on ARDS (and ARDS-like respiratory illness) in the
+      context of other non-SARS-CoV-2 respiratory viruses and in the context of
+      sepsis.
+
+
+      The primary research question includes: Which host genetic susceptibility
+      factors are associated with ARDS or ARDS-like phenotypes in the context of
+      respiratory viruses OR sepsis?
+
+
+      Discovery of these variants will then enable further comparisons with
+      other consortium or investigator-led analyses. For example: Which host
+      genetic susceptibility factors for COVID-19 ARDS are unique to SARS-CoV-2
+      infection and which ones are shared with ARDS subsequent to other
+      respiratory viruses OR sepsis?
+    slack-channel: '#ardsgwas'
+    contact-persons:
+      - Lea Davis
 ---
