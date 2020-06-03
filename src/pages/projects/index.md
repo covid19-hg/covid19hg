@@ -115,8 +115,9 @@ projects:
       - Lea Davis
       - Eric Kerchberger
   - title: Test project
-    description: This is a test.
+    description: This is a test. This is some content.
     slack-channel: '#this-is-a-test'
     contact-persons:
       - Contact Person 1
+      - Contact Person 2
 ---
