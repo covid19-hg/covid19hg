@@ -51,7 +51,7 @@ qas:
       them via standardized pipelines and perform quality control on them, and
       make them accessible to other researchers in a cloud-based environment. To
       start your submission, please contact
-      [help@lists.anvilproject.org](mailto:help@lists.anvilproject.org) and mark
+      [COVID@lists.anvilproject.org](mailto:COVID@lists.anvilproject.org) and mark
       the email Attn: COVID-19 Host Genetics Initiative.
   - question: '## **Who will have access to the individual-level data?**'
     answer: >-
