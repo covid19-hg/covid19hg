@@ -5,17 +5,56 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import { Container, Grid } from "../components/materialUIContainers";
-import { Typography } from "@material-ui/core";
+import { Typography, Box } from "@material-ui/core";
 import Analysis, { AlternatelyShadedTableRow } from "./Analysis";
+import _sortBy from "lodash/sortBy";
+import _last from "lodash/last";
+import _uniq from "lodash/uniq";
 
 const releaseLeftColumnWidthXs = 12;
 const releaseRightColumnWidthXs = 12;
 const releaseLeftColumnWidthMd = 3;
 const releaseRightColumnWidthMd = 9;
 
-const Release = (release: any) => {
+interface Props {
+  notes: string;
+  title: string;
+  authors: {
+    affiliation: string;
+    name: string;
+    study: string;
+  }[];
+  data_columns: {
+    column: string;
+    description: string;
+  }[];
+  date: string;
+  studyAbbreviations: {
+    abbreviation: string;
+    full_name: string;
+  }[];
+  analyses: {
+    name: string;
+    phenotype: string;
+    population: string;
+    download: {
+      gz_url: string;
+      name: string;
+      tbi_url: string;
+    };
+    manhattan: any;
+    qqplot: any;
+    studies: {
+      cases: number;
+      controls: number;
+      study: string;
+    }[];
+  }[];
+}
+
+const Release = (release: Props) => {
   const abbreviationRows = release.studyAbbreviations.map(
-    ({ full_name, abbreviation }: any) => (
+    ({ full_name, abbreviation }) => (
       <AlternatelyShadedTableRow key={abbreviation}>
         <TableCell component="th" scope="row">
           {full_name}
@@ -37,14 +76,12 @@ const Release = (release: any) => {
     </Table>
   );
 
-  const dataFieldRows = release.data_columns.map(
-    ({ column, description }: any) => (
-      <AlternatelyShadedTableRow key={column}>
-        <TableCell>{column}</TableCell>
-        <TableCell>{description}</TableCell>
-      </AlternatelyShadedTableRow>
-    )
-  );
+  const dataFieldRows = release.data_columns.map(({ column, description }) => (
+    <AlternatelyShadedTableRow key={column}>
+      <TableCell>{column}</TableCell>
+      <TableCell>{description}</TableCell>
+    </AlternatelyShadedTableRow>
+  ));
   const dataFieldsTable = (
     <Table size="small">
       <TableHead>
@@ -59,9 +96,18 @@ const Release = (release: any) => {
     </Table>
   );
 
-  const analysisElems = release.analyses.map((analysis: any) => (
+  const analysisElems = release.analyses.map((analysis) => (
     <Analysis analysis={analysis} key={analysis.name} />
   ));
+
+  const contributingStudies = _uniq(
+    release.authors.map(({ study }) => study)
+  ).filter((name) => name !== "Admin and Analysis Team");
+  const contributors = _sortBy(release.authors, ({ name }) =>
+    _last(name.split(" "))
+  ).map(({ name }) => name);
+  const contributingStudiesString = `${contributingStudies.join(", ")}.`;
+  const contributorsString = `${contributors.join(", ")}.`;
 
   return (
     <Container disableGutters={true}>
@@ -141,6 +187,17 @@ const Release = (release: any) => {
       <Grid container={true} marginTop={2} spacing={4}>
         {analysisElems}
       </Grid>
+
+      <Box marginTop={2} padding={1}>
+        <Typography variant="h6" gutterBottom={true}>
+          Contributing Studies
+        </Typography>
+        <Typography gutterBottom={true}>{contributingStudiesString}</Typography>
+        <Typography variant="h6" gutterBottom={true}>
+          Contributors
+        </Typography>
+        <Typography gutterBottom={true}>{contributorsString}</Typography>
+      </Box>
     </Container>
   );
 };
