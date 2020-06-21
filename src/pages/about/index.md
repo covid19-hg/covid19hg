@@ -5,6 +5,30 @@ title: A collaborative effort
 ---
 ## COVID-19 host genetics initiative
 
+### Content
+
+**\- Overview**
+
+**\- Aims**
+
+**\- Principle of collaboration**
+
+**\- Approach**
+
+\    + A: Communication and sharing of resources 
+
+\    + B: Analysis
+
+\    + C: Results and data sharing
+
+**\- Terms of use of results and Authorship**
+
+\- **Support for genotyping and sequencing**
+
+
+
+
+
 ### Overview
 
 The COVID-19 pandemic is a global crisis creating severe disruptions across the economy and health system. Insights into how to better understand and treat COVID-19 are desperately needed. Given the importance and urgency in obtaining these insights, it is critical for the scientific community to come together around this shared purpose.
@@ -81,7 +105,11 @@ Following the analysis described in the analysis plan, we run weekly iterations 
 
 The code to perform the analysis will also be made publicly available [here](https://github.com/covid19-hg)
 
-##### Support for genotyping and sequencing
+### Terms of use of results and authorship
+
+*COMING SOON*
+
+### Support for genotyping and sequencing
 
 There are several interested parties offering to make additional contributions to this effort in terms of genotyping/sequencing:
 
