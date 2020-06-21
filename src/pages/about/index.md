@@ -8,14 +8,24 @@ title: A collaborative effort
 ### Content
 
 **\- Overview**
+
 **\- Aims**
+
 **\- Principle of collaboration**
+
 **\- Approach**
-\    + A: Communication and sharing of resources 
+
+\    + A: Communication and sharing of resources
+
 \    + B: Analysis
+
 \    + C: Results and data sharing
+
 **\- Terms of use of results and Authorship**
+
 **\- Support for genotyping and sequencing**
+
+
 
 ### Overview
 
