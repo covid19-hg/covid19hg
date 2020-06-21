@@ -7,10 +7,9 @@ title: A collaborative effort
 
 ### Content
 
-**\- Overview** .   
-**\- Aims** . 
-**\- Principle of collaboration**
-
+**\- Overview**\
+**\- Aims**\
+**\- Principle of collaboration**\
 **\- Approach**
 
 &nbsp;&nbsp;&nbsp;&nbsp;+ A: Communication and sharing of resources
