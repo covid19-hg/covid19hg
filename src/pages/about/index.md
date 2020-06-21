@@ -10,16 +10,11 @@ title: A collaborative effort
 **\- Overview**\
 **\- Aims**\
 **\- Principle of collaboration**\
-**\- Approach**
-
-&nbsp;&nbsp;&nbsp;&nbsp;+ A: Communication and sharing of resources
-
-&nbsp;&nbsp;&nbsp;&nbsp;+ B: Analysis
-
-&nbsp;&nbsp;&nbsp;&nbsp;+ C: Results and data sharing
-
-**\- Terms of use of results and Authorship**
-
+**\- Approach**\
+&nbsp;&nbsp;&nbsp;&nbsp;+ A: Communication and sharing of resources\
+&nbsp;&nbsp;&nbsp;&nbsp;+ B: Analysis\
+&nbsp;&nbsp;&nbsp;&nbsp;+ C: Results and data sharing\
+**\- Terms of use of results and Authorship**\
 **\- Support for genotyping and sequencing**
 <br/><br/>
 
