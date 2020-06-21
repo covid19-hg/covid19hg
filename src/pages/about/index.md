@@ -7,10 +7,8 @@ title: A collaborative effort
 
 ### Content
 
-**\- Overview**
-
-**\- Aims**
-
+**\- Overview** .   
+**\- Aims** . 
 **\- Principle of collaboration**
 
 **\- Approach**
