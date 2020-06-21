@@ -15,11 +15,11 @@ title: A collaborative effort
 
 **\- Approach**
 
-\    + A: Communication and sharing of resources
+&nbsp;&nbsp;+ A: Communication and sharing of resources
 
-\    + B: Analysis
+&nbsp;&nbsp;+ B: Analysis
 
-\    + C: Results and data sharing
+&nbsp;&nbsp;+ C: Results and data sharing
 
 **\- Terms of use of results and Authorship**
 
