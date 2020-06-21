@@ -23,7 +23,7 @@ title: A collaborative effort
 
 **\- Terms of use of results and Authorship**
 
-**\- Support for genotyping and sequencing**
+**\- Support for genotyping and sequencing** <br />
 
 
 
