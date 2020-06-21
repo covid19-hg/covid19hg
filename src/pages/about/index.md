@@ -15,17 +15,16 @@ title: A collaborative effort
 
 **\- Approach**
 
-&nbsp;&nbsp;+ A: Communication and sharing of resources
+&nbsp;&nbsp;&nbsp;&nbsp;+ A: Communication and sharing of resources
 
-&nbsp;&nbsp;+ B: Analysis
+&nbsp;&nbsp;&nbsp;&nbsp;+ B: Analysis
 
-&nbsp;&nbsp;+ C: Results and data sharing
+&nbsp;&nbsp;&nbsp;&nbsp;+ C: Results and data sharing
 
 **\- Terms of use of results and Authorship**
 
-**\- Support for genotyping and sequencing** <br />
-
-
+**\- Support for genotyping and sequencing**
+<br/><br/>
 
 ### Overview
 
