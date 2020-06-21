@@ -25,10 +25,6 @@ title: A collaborative effort
 
 \- **Support for genotyping and sequencing**
 
-
-
-
-
 ### Overview
 
 The COVID-19 pandemic is a global crisis creating severe disruptions across the economy and health system. Insights into how to better understand and treat COVID-19 are desperately needed. Given the importance and urgency in obtaining these insights, it is critical for the scientific community to come together around this shared purpose.
@@ -73,7 +69,7 @@ Resources that are available and should continue to be shared across participant
 
 #### B:1 Data resources – Retrospective studies/existing biobanks
 
-From biobanks with existing significant genetic data and active connections to health systems, there is an opportunity to opportunistically and rapidly develop a genetic study on susceptibility and severity. For example, in Finland with the national network of biobanks covering each hospital district, it is possible to acquire almost 'real-time' updates on COVID-19 status of individuals already in FinnGen. For this group of studies we will use the structure that has already been put in place by the [Global Biobank Meta-analysis Initiative](https://www.globalbiobankmeta.org/).
+From biobanks with existing significant genetic data and active connections to health systems, there is an opportunity to opportunistically and rapidly develop a genetic study on susceptibility and severity. For this group of studies we will use the structure that has already been put in place by the [Global Biobank Meta-analysis Initiative](https://www.globalbiobankmeta.org/).
 
 We don’t expect that this group of studies will be able to share individual-level data and is likely that the analyses will be done by each participant center and meta-analyzed. Such efforts may happen quickly with relatively small numbers of cases so we encourage all to update case numbers in existing biobank studies, and when available summary statistics from analyses completed, as soon as they are available and aim to update weekly if possible.
 
@@ -101,7 +97,7 @@ These simple analyses (e.g. SNP-based association analysis, gene-burden test) fo
 
 All participants in the initiative will collaborate following the principle of collaboration outlined in the *principle of collaboration* section. Studies are invited to share individual-level data or results summary statistics. More information about data sharing is provided [here](https://www.covid19hg.org/data-sharing/).
 
-Following the analysis described in the analysis plan, we run weekly iterations of the analysis and make the summary statistics results publicly available via an association browser which will be hosted on the website [here](https://www.covid19hg.org/results/).
+Following the analysis described in the analysis plan, we run periodical iterations of the analysis and make the summary statistics results publicly available via an association browser which will be hosted on the website [here](https://www.covid19hg.org/results/).
 
 The code to perform the analysis will also be made publicly available [here](https://github.com/covid19-hg)
 
