@@ -51,41 +51,20 @@ qas:
       them via standardized pipelines and perform quality control on them, and
       make them accessible to other researchers in a cloud-based environment. To
       start your submission, please contact
-      [COVID@lists.anvilproject.org](mailto:COVID@lists.anvilproject.org) and mark
-      the email Attn: COVID-19 Host Genetics Initiative.
+      [COVID@lists.anvilproject.org](mailto:COVID@lists.anvilproject.org) and
+      mark the email Attn: COVID-19 Host Genetics Initiative.
   - question: '## **Who will have access to the individual-level data?**'
     answer: >-
-      Researchers can have access to individual-level data in two ways.
-      Researchers within the initiative (i.e. researchers that are registered to
-      the initiative and that have also deposited data) and researchers outside
-      the initiative.
+      All researchers can apply for access to the initiative's data deposited on
+      EGA and AnVIL via their respective DAC. For data at the EGA, the DAC is
+      composed by the PIs of the studies that have deposited the data, and will
+      facilitate access to the full data pool. For data on the AnVIL, a HGI
+      specific DAC composed of members of the HGI will manage data access via
+      [DUOS](https://duos.broadinstitute.org/). 
 
 
-      **Researchers outside the initiative**
-
-
-      Access to individual-level data/datasets by external researchers is
-      controlled by a Data Access Committee (DAC), which must be registered as
-      part of the submission process. A DAC may consist of a single or several
-      committee member/s that are responsible for making data access decisions
-      in response to applications made by individuals wishing to access data. A
-      DAC may be responsible for approving access to single or multiple
-      datasets. Only those who have successfully applied for access via the DAC
-      will receive access to the dataset(s) archived at the EGA and AnVIL.
-
-
-      **Researchers within the initiative**
-
-
-      Researchers within the initiative that have deposited data or results
-      summary statistics or are part of established analysis groups will have
-      fast-track access to the initiative's data deposited on EGA and AnVIL. The
-      DAC, which is composed by the PIs of the studies that have deposited the
-      data, will facilitate access to the full data pool. We are currently
-      discussing which procedures to implement to facilitate fast access to
-      these groups of researchers. All researchers are required to follow the
-      code of conduct outlined in
-      [https://www.covid19hg.org/about/.](https://www.covid19hg.org/about/)
+      All researchers are required to follow the code of conduct outlined in
+      [https://www.covid19hg.org/​about/.](https://www.covid19hg.org/about/)
   - question: '## **Who will have access to the results summary statistics?**'
     answer: >-
       Results summary statistics will be meta-analyzed across studies and
