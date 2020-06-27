@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
-
 import { Container } from '../components/materialUIContainers'
 import Release from '../components/Release'
 
@@ -49,13 +47,13 @@ const ResultsPageContent = ({ releases }: Props) => {
   }
 
   return (
-    <div>
-      <AppBar position="static">
+    <>
+      <Box bgcolor="primary.main" color="info.contrastText">
         <Tabs value={selectedRelease} onChange={handleChange} aria-label="simple tabs example">
           <Tab label="Release 3 (June 2020)" {...a11yProps(0)} />
           <Tab label="Release 2 (May 2020)" {...a11yProps(1)} />
         </Tabs>
-      </AppBar>
+      </Box>
       <Container marginTop={2} fixed={true}>
         <TabPanel value={selectedRelease} index={0}>
           <Release {...releases[0]} />
@@ -64,7 +62,7 @@ const ResultsPageContent = ({ releases }: Props) => {
           <Release {...releases[1]} />
         </TabPanel>
       </Container>
-    </div>
+    </>
   )
 }
 
