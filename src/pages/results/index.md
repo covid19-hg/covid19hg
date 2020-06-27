@@ -32,8 +32,8 @@ releases:
       - column: all_inv_var_het_p
         description: p-value from Cochran's Q heterogeneity test
     authors:
-      - name: COVID19-HG data contributors
-        study: COVID19-HG
+      - name: TBA
+        study: TBA
         affiliation: Various
     studyAbbreviations:
       - abbreviation: BRACOVID
@@ -74,8 +74,8 @@ releases:
         population: All
         download:
           name: COVID19_HGI_ANA_A2_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_A2_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_A2_V2_20200626.txt.gz.tbi
+          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_A2_V2_20200626.txt.gz
+          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_A2_V2_20200626.txt.gz.tbi
         manhattan:
           image: /img/200619/ANA_A2_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -95,8 +95,8 @@ releases:
         population: All
         download:
           name: COVID19_HGI_ANA_B1_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_B1_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_B1_V2_20200626.txt.gz.tbi
+          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B1_V2_20200626.txt.gz
+          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B1_V2_20200626.txt.gz.tbi
         manhattan:
           image: /img/200619/ANA_B1_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -117,8 +117,8 @@ releases:
         population: All
         download:
           name: COVID19_HGI_ANA_B2_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_B2_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_B2_V2_20200626.txt.gz.tbi
+          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B2_V2_20200626.txt.gz
+          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B2_V2_20200626.txt.gz.tbi
         manhattan:
           image: /img/200619/ANA_B2_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -153,8 +153,8 @@ releases:
         population: All
         download:
           name: COVID19_HGI_ANA_C1_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_C1_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_C1_V2_20200626.txt.gz.tbi
+          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C1_V2_20200626.txt.gz
+          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C1_V2_20200626.txt.gz.tbi
         manhattan:
           image: /img/200619/ANA_C1_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -192,8 +192,8 @@ releases:
         population: All
         download:
           name: COVID19_HGI_ANA_C2_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_C2_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_C2_V2_20200626.txt.gz.tbi
+          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C2_V2_20200626.txt.gz
+          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C2_V2_20200626.txt.gz.tbi
         manhattan:
           image: /img/200619/ANA_C2_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -258,8 +258,8 @@ releases:
         population: All
         download:
           name: COVID19_HGI_ANA_D1_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_D1_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/200619/results/COVID19_HGI_ANA_D1_V2_20200626.txt.gz.tbi
+          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_D1_V2_20200626.txt.gz
+          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_D1_V2_20200626.txt.gz.tbi
         manhattan:
           image: /img/200619/ANA_D1_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
