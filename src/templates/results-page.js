@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Layout from "../components/NewLayout";
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
-import ResultspageContent from "../components/ResultsPageContent";
+import ResultsPageContent from "../components/ResultsPageContent";
 import { graphql } from "gatsby";
 
 const ResultsPage = ({ data, release }) => {
@@ -11,7 +11,7 @@ const ResultsPage = ({ data, release }) => {
   return (
     <Layout title={frontmatter.title}>
       {canonicalLinkMetaTag}
-      <ResultspageContent releases={frontmatter.releases} />
+      <ResultsPageContent releases={frontmatter.releases} />
     </Layout>
   );
 };
