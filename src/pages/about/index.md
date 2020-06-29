@@ -15,8 +15,7 @@ title: A collaborative effort
 &nbsp;&nbsp;&nbsp;&nbsp;+ B: Analysis\
 &nbsp;&nbsp;&nbsp;&nbsp;+ C: Results and data sharing\
 **\- Terms of use of results and Authorship**\
-**\- Support for genotyping and sequencing**
-<br/><br/>
+**\- Support for genotyping and sequencing** <br/><br/>
 
 ### Overview
 
@@ -109,7 +108,7 @@ There are several interested parties offering to make additional contributions t
 * **Thermo Fisher** representatives in Europe are exploring ways to contribute reduced price reagents and arrays to this effort. Thermo Fisher offers discounted pricing on the new Axiom Human Genotyping SARS-Cov-2 research array in addition to their Axiom Precision Medicine and UK Biobank Axiom array. Contact: [shantanu.kaushikkar@thermofisher.com](mailto:shantanu.kaushikkar@thermofisher.com).
 * **Helix** can perform discounted Exome+ (clinical grade exome + genotyping backbone equivalent to GSA) sequencing for any COVID-19 samples where the data will be made rapidly available. Contact: [Liz Cirulli](mailto:liz.cirulli@helix.com).
 * **Gencove** can offer discounted or no cost low-pass WGS for samples with rapid data sharing. Contact: Joe Pickrell.
-* **Genomics Medicine Ireland** (GMI) is an Irish based life-sciences company and subsidiary of  WuXiNextcode (Boston HQ). The company is offering gratis generation of genomic research datasets on the basis that the generated datasets are made available in a public archive as quickly as possible. Contact: Tom O’Dwyer.
+* **Genuity Science** is a contract genomics and data-sourcing, analytics and insights organization headquartered in Boston, Massachusetts, USA with offices in Dublin, Ireland and Reykjavik, Iceland. The company is offering gratis generation of genomic research datasets on the basis that the generated datasets are made available in a public archive as quickly as possible. Contact: Tom O’Dwyer.
 * The National Genomics Infrastructure (NGI) at **SciLifeLab** in Sweden will provide heavily discounted genotyping with Illumina GSA-MD for COVID-19 patient samples. We also provide services for WES, WGS, RNA-sequencing, etc. NGI prioritizes Swedish PIs, but can take projects from other countries on a case by case basis. Contact: [support@ngisweden.se](mailto:support@ngisweden.se).
 * **Dante Labs** can perform heavily discounted clinical grade WGS and WES as well as RNAseq on Illumina platforms for any sample of patients affected by Covid-19. Data will be made available in less than three weeks only. The lab also performs RT-qPCR analysis for virus detection. Contact: [alessandro.baravelli@dantelabs.com](mailto:alessandro.baravelli@dantelabs.com).
 * **NIH** is making a series of commitments to the identification of genetic determinants associated with COVID-19 outcomes and susceptibility and is supporting genotyping/sequencing efforts. More information can be found [here](https://docs.google.com/document/d/1tI0QFTDLPkUtzj3jeRJMGKNsbkopouxE3fVIXUxpWVs/edit?usp=sharing).
