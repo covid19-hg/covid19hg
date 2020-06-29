@@ -2,7 +2,7 @@
 templateKey: results-page
 title: Results
 releases:
-  - date: June 27, 2020
+  - date: June 29, 2020
     title: COVID19-hg GWAS meta-analyses round 3
     notes: Meta-analysis was done with inverse variance weighting. Analysis carried out on GRCh38; results also available through GRCh37 liftover. An AF filter of 0.0001 and an INFO filter of 0.6 was applied to each study prior to meta-analysis.
     data_columns:

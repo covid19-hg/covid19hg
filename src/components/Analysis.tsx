@@ -134,10 +134,18 @@ const Analysis = ({ analysis }: { analysis: AnalysisProps }) => {
             <Grid item={true} xs={rightColumnWidthXs} md={rightColumnWidthMd}>
               {analysis.downloads.map((download) => (
                 <Typography key={download.name}>
-                  <strong>{download.description}{': '}</strong>
+                  <strong>
+                    {download.description}
+                    {': '}
+                  </strong>
                   <Link href={download.url} target="_blank" rel="noopener noreferrer">
                     {download.name}{' '}
                   </Link>
+                  {download.name === 'COVID19_HGI_ANA_C2_V2_20200629.txt.gz_1.0E-5.txt' ? (
+                    <p>
+                      <em><strong>Note:</strong> This analysis was updated on June 29 2:35 EST.</em>
+                    </p>
+                  ) : null}
                 </Typography>
               ))}
             </Grid>
