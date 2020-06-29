@@ -1,57 +1,65 @@
-import React from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  makeStyles,
-  Theme,
-  Link,
-  Divider,
-} from "@material-ui/core";
-import { Grid } from "./materialUIContainers";
-import _sumBy from "lodash/sumBy";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import { withStyles, createStyles } from "@material-ui/styles";
+import React from 'react'
+import { Card, CardContent, Typography, makeStyles, Theme, Link, Divider } from '@material-ui/core'
+import { Grid } from './materialUIContainers'
+import _sumBy from 'lodash/sumBy'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import { withStyles, createStyles } from '@material-ui/styles'
+
+export type AnalysisProps = {
+  name: string
+  phenotype: string
+  population: string
+  downloads: {
+    name: string
+    description: string
+    url: string
+  }[]
+  manhattan: any
+  qqplot: any
+  studies: {
+    cases: number
+    controls: number
+    study: string
+  }[]
+}
 
 export const AlternatelyShadedTableRow = withStyles((theme: Theme) =>
   createStyles({
     root: {
-      "&:nth-of-type(odd)": {
+      '&:nth-of-type(odd)': {
         backgroundColor: theme.palette.action.hover,
       },
     },
   })
-)(TableRow);
+)(TableRow)
 
-const leftColumnWidthXs = 12;
-const rightColumnWidthXs = 12;
-const leftColumnWidthMd = 3;
-const rightColumnWidthMd = 9;
+const leftColumnWidthXs = 12
+const rightColumnWidthXs = 12
+const leftColumnWidthMd = 3
+const rightColumnWidthMd = 9
 
 const useStyles = makeStyles(() => ({
   plot: {
-    width: "100%",
+    width: '100%',
   },
   wideTable: {
-    overflowX: "auto",
-  }
-}));
+    overflowX: 'auto',
+  },
+}))
 
-const Analysis = ({ analysis }: any) => {
-  const classes = useStyles();
-  const studyTableRows = analysis.studies.map(
-    ({ study, cases, controls }: any) => (
-      <AlternatelyShadedTableRow key={study}>
-        <TableCell>{study}</TableCell>
-        <TableCell align="right">{cases}</TableCell>
-        <TableCell align="right">{controls}</TableCell>
-      </AlternatelyShadedTableRow>
-    )
-  );
+const Analysis = ({ analysis }: { analysis: AnalysisProps }) => {
+  const classes = useStyles()
+  const studyTableRows = analysis.studies.map(({ study, cases, controls }: any) => (
+    <AlternatelyShadedTableRow key={study}>
+      <TableCell>{study}</TableCell>
+      <TableCell align="right">{cases}</TableCell>
+      <TableCell align="right">{controls}</TableCell>
+    </AlternatelyShadedTableRow>
+  ))
   const studyTable = (
     <Table size="small">
       <TableHead>
@@ -65,7 +73,7 @@ const Analysis = ({ analysis }: any) => {
       </TableHead>
       <TableBody>{studyTableRows}</TableBody>
     </Table>
-  );
+  )
   return (
     <Grid item={true} xs={12}>
       <Card>
@@ -77,20 +85,14 @@ const Analysis = ({ analysis }: any) => {
 
           <Grid container={true} marginTop={2} spacing={1}>
             <Grid item={true} xs={12} md={8}>
-              <img
-                src={analysis.manhattan.image.publicURL}
-                className={classes.plot}
-              />
+              <img src={analysis.manhattan.image.publicURL} className={classes.plot} />
             </Grid>
             <Grid item={true} xs={12} md={4}>
-              <img
-                src={analysis.qqplot.image.publicURL}
-                className={classes.plot}
-              />
+              <img src={analysis.qqplot.image.publicURL} className={classes.plot} />
             </Grid>
           </Grid>
 
-          <Grid container={true} alignItems={"center" as "center"} spacing={1}>
+          <Grid container={true} alignItems={'center' as 'center'} spacing={1}>
             <Grid item={true} xs={leftColumnWidthXs} md={leftColumnWidthMd}>
               <Typography variant="h6">Phenotype</Typography>
             </Grid>
@@ -109,14 +111,14 @@ const Analysis = ({ analysis }: any) => {
               <Typography variant="h6">Total Cases</Typography>
             </Grid>
             <Grid item={true} xs={rightColumnWidthXs} md={rightColumnWidthMd}>
-              <Typography>{_sumBy(analysis.studies, "cases")}</Typography>
+              <Typography>{_sumBy(analysis.studies, 'cases')}</Typography>
             </Grid>
 
             <Grid item={true} xs={leftColumnWidthXs} md={leftColumnWidthMd}>
               <Typography variant="h6">Total Controls</Typography>
             </Grid>
             <Grid item={true} xs={rightColumnWidthXs} md={rightColumnWidthMd}>
-              <Typography>{_sumBy(analysis.studies, "controls")}</Typography>
+              <Typography>{_sumBy(analysis.studies, 'controls')}</Typography>
             </Grid>
 
             <Grid item={true} xs={leftColumnWidthXs} md={leftColumnWidthMd}>
@@ -130,30 +132,20 @@ const Analysis = ({ analysis }: any) => {
               <Typography variant="h6">Downloads</Typography>
             </Grid>
             <Grid item={true} xs={rightColumnWidthXs} md={rightColumnWidthMd}>
-              <Typography>
-                <Link
-                  href={analysis.download.gz_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {analysis.download.name}{" "}
-                </Link>
-              </Typography>
-              <Typography>
-                <Link
-                  href={analysis.download.tbi_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {`${analysis.download.name}.tbi`}{" "}
-                </Link>
-              </Typography>
+              {analysis.downloads.map((download) => (
+                <Typography key={download.name}>
+                  <strong>{download.description}{': '}</strong>
+                  <Link href={download.url} target="_blank" rel="noopener noreferrer">
+                    {download.name}{' '}
+                  </Link>
+                </Typography>
+              ))}
             </Grid>
           </Grid>
         </CardContent>
       </Card>
     </Grid>
-  );
-};
+  )
+}
 
-export default Analysis;
+export default Analysis

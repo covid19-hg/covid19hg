@@ -51,10 +51,10 @@ export const pageQuery = graphql`
             name
             phenotype
             population
-            download {
+            downloads {
               name
-              gz_url
-              tbi_url
+              description
+              url
             }
             studies {
               study
