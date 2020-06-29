@@ -4,7 +4,7 @@ title: Results
 releases:
   - date: June 27, 2020
     title: COVID19-hg GWAS meta-analyses round 3
-    notes: Meta-analysis was done with inverse variance weighting. Positions are on GRCh38. An AF filter of 0.0001 and an INFO filter of 0.6 was applied to each study prior to meta-analysis.
+    notes: Meta-analysis was done with inverse variance weighting. Analysis carried out on GRCh38; results also available through GRCh37 liftover. An AF filter of 0.0001 and an INFO filter of 0.6 was applied to each study prior to meta-analysis.
     data_columns:
       - column: "#CHR"
         description: chromosome
@@ -32,20 +32,22 @@ releases:
       - column: all_inv_var_het_p
         description: p-value from Cochran's Q heterogeneity test
     authors:
-      - name: TBA
-        study: TBA
+      - name: COVID19-HG data contributors
+        study: COVID19-HG
         affiliation: Various
     studyAbbreviations:
       - abbreviation: BRACOVID
-        full_name: GEN-COVID, reCOVID
+        full_name: Genetic determinants of COVID-19 complications in the Brazilian population
       - abbreviation: BelCovid
-        full_name: GEN-COVID, reCOVID
+        full_name: Genetic modifiers for COVID-19 related illness
       - abbreviation: DECODE
         full_name: deCODE
       - abbreviation: FinnGen
         full_name: FinnGen
       - abbreviation: GENCOVID
         full_name: GEN-COVID, reCOVID
+      - abbreviation: genomicsengland100kgp_EUR
+        full_name: UK 100,000 Genomes Project
       - abbreviation: GNH
         full_name: Genes & Health
       - abbreviation: GS
@@ -72,10 +74,25 @@ releases:
       - name: ANA_A2_V2
         phenotype: very severe respiratory confirmed covid vs. population
         population: All
-        download:
-          name: COVID19_HGI_ANA_A2_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_A2_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_A2_V2_20200626.txt.gz.tbi
+        downloads:
+          - name: COVID19_HGI_ANA_A2_V2_20200629.txt.gz.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_A2_V2_20200629.txt.gz.b37.txt.gz
+          - name: COVID19_HGI_ANA_A2_V2_20200629.txt.gz.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_A2_V2_20200629.txt.gz.b37.txt.gz.tbi
+          - name: COVID19_HGI_ANA_A2_V2_20200629.txt.gz.b37_1.0E-5.txt
+            description: GRCh37 liftover (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_A2_V2_20200629.txt.gz.b37_1.0E-5.txt
+          - name: COVID19_HGI_ANA_A2_V2_20200629.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_A2_V2_20200629.txt.gz 
+          - name: COVID19_HGI_ANA_A2_V2_20200629.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_A2_V2_20200629.txt.gz.tbi
+          - name: COVID19_HGI_ANA_A2_V2_20200629.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_A2_V2_20200629.txt.gz_1.0E-5.txt
         manhattan:
           image: /img/200619/ANA_A2_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -93,10 +110,25 @@ releases:
       - name: ANA_B1_V2
         phenotype: hospitalized covid vs. not hospitalized covid
         population: All
-        download:
-          name: COVID19_HGI_ANA_B1_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B1_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B1_V2_20200626.txt.gz.tbi
+        downloads:
+          - name: COVID19_HGI_ANA_B1_V2_20200629.txt.gz.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_B1_V2_20200629.txt.gz.b37.txt.gz
+          - name: COVID19_HGI_ANA_B1_V2_20200629.txt.gz.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_B1_V2_20200629.txt.gz.b37.txt.gz.tbi
+          - name: COVID19_HGI_ANA_B1_V2_20200629.txt.gz.b37_1.0E-5.txt
+            description: GRCh37 liftover (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_B1_V2_20200629.txt.gz.b37_1.0E-5.txt
+          - name: COVID19_HGI_ANA_B1_V2_20200629.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B1_V2_20200629.txt.gz
+          - name: COVID19_HGI_ANA_B1_V2_20200629.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B1_V2_20200629.txt.gz.tbi
+          - name: COVID19_HGI_ANA_B1_V2_20200629.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B1_V2_20200629.txt.gz_1.0E-5.txt
         manhattan:
           image: /img/200619/ANA_B1_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -111,14 +143,28 @@ releases:
           - study: FinnGen_FIN
             cases: 58
             controls: 160
-
       - name: ANA_B2_V2
         phenotype: hospitalized covid vs. population
         population: All
-        download:
-          name: COVID19_HGI_ANA_B2_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B2_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B2_V2_20200626.txt.gz.tbi
+        downloads:
+          - name: COVID19_HGI_ANA_B2_V2_20200629.txt.gz.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_B2_V2_20200629.txt.gz.b37.txt.gz
+          - name: COVID19_HGI_ANA_B2_V2_20200629.txt.gz.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_B2_V2_20200629.txt.gz.b37.txt.gz.tbi
+          - name: COVID19_HGI_ANA_B2_V2_20200629.txt.gz.b37_1.0E-5.txt
+            description: GRCh37 liftover (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_B2_V2_20200629.txt.gz.b37_1.0E-5.txt
+          - name: COVID19_HGI_ANA_B2_V2_20200629.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B2_V2_20200629.txt.gz
+          - name: COVID19_HGI_ANA_B2_V2_20200629.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B2_V2_20200629.txt.gz.tbi
+          - name: COVID19_HGI_ANA_B2_V2_20200629.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_B2_V2_20200629.txt.gz_1.0E-5.txt
         manhattan:
           image: /img/200619/ANA_B2_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -151,10 +197,25 @@ releases:
       - name: ANA_C1_V2
         phenotype: covid vs. lab/self-reported negative
         population: All
-        download:
-          name: COVID19_HGI_ANA_C1_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C1_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C1_V2_20200626.txt.gz.tbi
+        downloads:
+          - name: COVID19_HGI_ANA_C1_V2_20200629.txt.gz.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_C1_V2_20200629.txt.gz.b37.txt.gz
+          - name: COVID19_HGI_ANA_C1_V2_20200629.txt.gz.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_C1_V2_20200629.txt.gz.b37.txt.gz.tbi
+          - name: COVID19_HGI_ANA_C1_V2_20200629.txt.gz.b37_1.0E-5.txt
+            description: GRCh37 liftover (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_C1_V2_20200629.txt.gz.b37_1.0E-5.txt
+          - name: COVID19_HGI_ANA_C1_V2_20200629.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C1_V2_20200629.txt.gz
+          - name: COVID19_HGI_ANA_C1_V2_20200629.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C1_V2_20200629.txt.gz.tbi
+          - name: COVID19_HGI_ANA_C1_V2_20200629.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C1_V2_20200629.txt.gz_1.0E-5.txt
         manhattan:
           image: /img/200619/ANA_C1_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -190,10 +251,25 @@ releases:
       - name: ANA_C2_V2
         phenotype: covid vs. population
         population: All
-        download:
-          name: COVID19_HGI_ANA_C2_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C2_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C2_V2_20200626.txt.gz.tbi
+        downloads:
+          - name: COVID19_HGI_ANA_C2_V2_20200629.txt.gz.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_C2_V2_20200629.txt.gz.b37.txt.gz
+          - name: COVID19_HGI_ANA_C2_V2_20200629.txt.gz.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_C2_V2_20200629.txt.gz.b37.txt.gz.tbi
+          - name: COVID19_HGI_ANA_C2_V2_20200629.txt.gz.b37_1.0E-5.txt
+            description: GRCh37 liftover (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_C2_V2_20200629.txt.gz.b37_1.0E-5.txt
+          - name: COVID19_HGI_ANA_C2_V2_20200629.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C2_V2_20200629.txt.gz
+          - name: COVID19_HGI_ANA_C2_V2_20200629.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C2_V2_20200629.txt.gz.tbi
+          - name: COVID19_HGI_ANA_C2_V2_20200629.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_C2_V2_20200629.txt.gz_1.0E-5.txt
         manhattan:
           image: /img/200619/ANA_C2_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -256,10 +332,25 @@ releases:
       - name: ANA_D1_V2
         phenotype: predicted covid from self-reported symptoms vs. predicted or self-reported non-covid
         population: All
-        download:
-          name: COVID19_HGI_ANA_D1_V2_20200626.txt.gz
-          gz_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_D1_V2_20200626.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_D1_V2_20200626.txt.gz.tbi
+        downloads:
+          - name: COVID19_HGI_ANA_D1_V2_20200629.txt.gz.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_D1_V2_20200629.txt.gz.b37.txt.gz
+          - name: COVID19_HGI_ANA_D1_V2_20200629.txt.gz.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_D1_V2_20200629.txt.gz.b37.txt.gz.tbi
+          - name: COVID19_HGI_ANA_D1_V2_20200629.txt.gz.b37_1.0E-5.txt
+            description: GRCh37 liftover (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/build_37/COVID19_HGI_ANA_D1_V2_20200629.txt.gz.b37_1.0E-5.txt
+          - name: COVID19_HGI_ANA_D1_V2_20200629.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_D1_V2_20200629.txt.gz
+          - name: COVID19_HGI_ANA_D1_V2_20200629.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_D1_V2_20200629.txt.gz.tbi
+          - name: COVID19_HGI_ANA_D1_V2_20200629.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200619/results/COVID19_HGI_ANA_D1_V2_20200629.txt.gz_1.0E-5.txt
         manhattan:
           image: /img/200619/ANA_D1_V2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -577,10 +668,13 @@ releases:
       - name: 20200508-results-ANA2_inv_var_meta
         phenotype: ANA2, Hospitalized vs. non-hospitalized 	
         population: All
-        download:
-          name: COVID19_HGI_ANA2_20200513.txt.gz 
-          gz_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA2_20200513.txt.gz
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA2_20200513.txt.gz.tbi 
+        downloads:
+          - name: COVID19_HGI_ANA2_20200513.txt.gz
+            description: GRCh37
+            url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA2_20200513.txt.gz
+          - name: COVID19_HGI_ANA2_20200513.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA2_20200513.txt.gz.tbi
         manhattan:
           image: /img/ANA2_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -604,10 +698,13 @@ releases:
       - name: 20200508-results-ANA5_ALL_inv_var_meta
         phenotype: ANA5, susceptibility (affected vs. population) 
         population: All
-        download:
-          name: COVID19_HGI_ANA5_20200513.txt.gz 
-          gz_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA5_20200513.txt.gz 
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA5_20200513.txt.gz.tbi 
+        downloads:
+          - name: COVID19_HGI_ANA5_20200513.txt.gz 
+            description: GRCh37
+            url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA5_20200513.txt.gz
+          - name: COVID19_HGI_ANA5_20200513.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA5_20200513.txt.gz.tbi
         manhattan:
           image: /img/ANA5_ALL_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -646,10 +743,13 @@ releases:
       - name: 20200508-results-ANA7_inv_var_meta
         phenotype: ANA7, COVID-19 predicted by flu-like symptoms 
         population: European
-        download:
-          name: COVID19_HGI_ANA7_20200513.txt.gz	 
-          gz_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA7_20200513.txt.gz 
-          tbi_url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA7_20200513.txt.gz.tbi 
+        downloads:
+          - name: COVID19_HGI_ANA7_20200513.txt.gz
+            description: GRCh37
+            url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA7_20200513.txt.gz
+          - name: COVID19_HGI_ANA7_20200513.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200508/results/COVID19_HGI_ANA7_20200513.txt.gz.tbi
         manhattan:
           image: /img/ANA7_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
         qqplot:
@@ -664,6 +764,3 @@ releases:
           - study: Helix_EUR
             cases: 657
             controls: 6112
-
-
----
