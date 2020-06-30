@@ -16,24 +16,21 @@ const templateString = fs.readFileSync(
 );
 const template = Handlebars.compile(templateString);
 
-const captchaVerificationErrorMessage = "Error validating captcha"
-const emailSendingErrorMessage = "Error sending email"
+const captchaVerificationErrorMessage = "Error validating captcha";
+const emailSendingErrorMessage = "Error sending email";
 
 exports.handler = async (event, context) => {
-
   // Check that request comes from allowed origins:
   const originHeader = event.headers.origin;
   const originUrl = url.parse(originHeader);
   const hostname = originUrl.hostname;
   if (
     hostname === null ||
-    (
-      hostname !== null &&
+    (hostname !== null &&
       hostname.includes("covid19hg.org") === false &&
       hostname.includes("condescending-perlman-ec107b.netlify.app") === false &&
       // TODO: remove "localhost" after testing
-      hostname.includes("localhost") === false
-    )
+      hostname.includes("localhost") === false)
   ) {
     console.error("Invalid request's origin", event.headers.origin);
     return {
@@ -58,7 +55,7 @@ exports.handler = async (event, context) => {
         method: "POST",
         headers: {
           origin: originHeader,
-        }
+        },
       }
     );
     if (verificationResponse.ok) {
@@ -123,7 +120,7 @@ exports.handler = async (event, context) => {
     } else {
       return {
         statusCode: 500,
-        body: JSON.stringify( captchaVerificationErrorMessage),
+        body: JSON.stringify(captchaVerificationErrorMessage),
       };
     }
   } catch (error) {

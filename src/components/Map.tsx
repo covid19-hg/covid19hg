@@ -44,21 +44,13 @@ const createMarker = (args: {
   lng: number;
   lat: number;
   study: string;
-  setSelected: (selected: string | undefined) => void
+  setSelected: (selected: string | undefined) => void;
   popup: Popup;
   id: string;
   mapboxMap: MapboxMap;
   hasSubmittedData: boolean;
 }) => {
-  const {
-    lng,
-    lat,
-    study,
-    setSelected,
-    popup,
-    id,
-    mapboxMap,
-  } = args;
+  const { lng, lat, study, setSelected, popup, id, mapboxMap } = args;
   // Use the default marker but halve the size:
   const marker = new Marker();
   const markerElement = marker.getElement();
@@ -72,7 +64,7 @@ const createMarker = (args: {
     // Need to `stopPropagation` so that it doesn't bubble up to the map and
     // dispatch the "unsetSelectedInstitution" action
     event.stopPropagation();
-    setSelected(id)
+    setSelected(id);
   });
   markerElement.addEventListener("mouseenter", (event) => {
     event.stopPropagation();
@@ -214,7 +206,7 @@ const initializeMap = (
 
   mapboxMap.on("click", () => {
     // Any click that bubbles up here means it must not have originated inside a marker:
-    setSelected(undefined)
+    setSelected(undefined);
   });
 
   const markers: Map<string, MarkerInfo> = new Map();
@@ -403,7 +395,7 @@ interface Props {
   mapData: MapDatum[];
   filteredData: MapDatum[];
   selected: string | undefined;
-  setSelected: (selected: string | undefined) => void
+  setSelected: (selected: string | undefined) => void;
 }
 const MapComponent = ({
   setSelected,
@@ -443,12 +435,7 @@ const MapComponent = ({
   }, [selected]);
 
   useEffect(() => {
-    adjustMarkerVisibility(
-      mapboxInfoRef,
-      visibleIds,
-      setSelected,
-      selected
-    );
+    adjustMarkerVisibility(mapboxInfoRef, visibleIds, setSelected, selected);
     adjustLabelVisibility(mapboxInfoRef, visibleIds);
   }, [visibleIds]);
 

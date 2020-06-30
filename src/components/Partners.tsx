@@ -72,7 +72,7 @@ interface SetStateAction<K extends keyof State> {
   };
 }
 
-export type Action<K extends keyof State> = SetStateAction<K>
+export type Action<K extends keyof State> = SetStateAction<K>;
 
 const reducer = <K extends keyof State>(
   state: State,
@@ -92,11 +92,16 @@ const reducer = <K extends keyof State>(
 interface Props {
   mapData: MapDatum[] | undefined;
   listData: ListDatum[] | undefined;
-  selectedPartner: string | undefined
-  setSelectedPartner: (selected: string | undefined) => void
+  selectedPartner: string | undefined;
+  setSelectedPartner: (selected: string | undefined) => void;
 }
 
-const Partners = ({ mapData, listData, selectedPartner, setSelectedPartner }: Props) => {
+const Partners = ({
+  mapData,
+  listData,
+  selectedPartner,
+  setSelectedPartner,
+}: Props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   let filteredIds: string[];
