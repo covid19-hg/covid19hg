@@ -8,9 +8,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "develop") {
     actions.setWebpackConfig({
       plugins: [
-        new ForkTSCheckerWebpackPlugin({
-          checkSyntacticErrors: true,
-        }),
+        new ForkTSCheckerWebpackPlugin(),
       ]
     })
   }
