@@ -114,8 +114,8 @@ qas:
       every 500 samples
   - question: '## **Can I access summary statistics from the individual studies?**'
     answer: >-
-      On the result page, we make available the meta-analysis summary statistics
-      for the combined studies with and without UK Biobank. However, to access
-      the study-specific summary statistics you will need to get in contact with
-      each study PI separately.
+      On the [result page](https://www.covid19hg.org/results/), we make
+      available the meta-analysis summary statistics for the combined studies
+      with and without UK Biobank. However, to access the study-specific summary
+      statistics you will need to get in contact with each study PI separately.
 ---
