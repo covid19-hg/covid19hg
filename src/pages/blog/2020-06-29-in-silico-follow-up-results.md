@@ -10,7 +10,7 @@ type: blog-post
 ---
 # In-silico follow-up results
 
-Here we  post the results from the in-silico follow up analysis done of summary statistics from release 3.
+Here we post the results from the in-silico follow up analysis done of summary statistics from release 3.
 
 ## Heritability and genetic correlations
 
@@ -52,7 +52,7 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 
 **Summary:** PheWAS analysis in the UK Biobank using GP and Hospital Episode Statistics (HES) data. Genetic Score based on COVID-19 associated SNPs. LD clumping was performed at SNPs with Pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction.
 
-**Authors:** Areti Papadopoulou -Eirini Marouli
+**Authors:** Areti Papadopoulou - Eirini Marouli
 
 **Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/phewas/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
 
@@ -62,6 +62,6 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 
 **Summary:**
 
-**Authors:**
+**Authors:** Gita Pathak
 
-**Results available here**
+**Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/PrediXcan/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
