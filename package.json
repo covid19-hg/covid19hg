@@ -57,16 +57,22 @@
     "develop": "yarn run clean && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "jest": "jest --coverage",
+    "jest:watch": "jest --watch",
     "serve": "gatsby serve",
     "postinstall": "netlify-lambda install"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "7.10.1",
     "@types/lodash": "4.14.149",
     "@types/mapbox-gl": "1.9.0",
     "@types/react": "16.9.23",
     "@types/react-dom": "16.9.6",
     "@types/react-helmet": "6.0.0",
+    "babel-jest": "26.1.0",
+    "babel-preset-gatsby": "0.4.12",
     "dotenv": "8.2.0",
+    "jest": "26.1.0",
     "netlify-cli": "2.40.0",
     "prettier": "2.0.5"
   },

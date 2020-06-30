@@ -37,18 +37,20 @@ module.exports = async () => {
               timeCreated: Date.parse(fields["Time created"]),
               mapLocation: fields["Map location"],
               emails: parseEmailField(fields["Email"]),
-              hasSubmittedData: Array.isArray(fields["Data"]) === true && (fields["Data"].length > 0),
+              hasSubmittedData:
+                Array.isArray(fields["Data"]) === true &&
+                fields["Data"].length > 0,
               id,
             };
           });
-          const recordFields = unfilteredRecordFields.filter(obj => {
+          const recordFields = unfilteredRecordFields.filter((obj) => {
             for (const value of Object.values(obj)) {
               if (value !== undefined) {
-                return true
+                return true;
               }
-              return false
+              return false;
             }
-          })
+          });
           data = [...data, ...recordFields];
           fetchNextPage();
         },

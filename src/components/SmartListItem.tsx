@@ -37,7 +37,7 @@ const SmartListItem = (props: Props) => {
       if (el !== null) {
         // Taken from https://stackoverflow.com/a/52835382/7075699
         el.scrollIntoView({
-          behavior: "smooth",
+          // behavior: "smooth",
           block: "nearest",
           inline: "start",
         });

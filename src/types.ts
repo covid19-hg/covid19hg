@@ -33,3 +33,20 @@ export interface MapDatum extends ListDatum {
   lat: number;
   geoJsonId: number;
 }
+
+
+// https://docs.mapbox.com/api/search/#geocoding-response-object
+export interface MapboxGeocodingResponse {
+  type: string,
+  query: string[]
+  attribution: string
+  features: MapboxGeocodingFeature[]
+}
+
+interface MapboxGeocodingFeature {
+  id: string
+  type: string
+  place_type: string
+  relevance: number
+  center: [number, number]
+}

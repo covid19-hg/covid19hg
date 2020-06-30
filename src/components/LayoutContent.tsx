@@ -129,6 +129,7 @@ const LayoutContent = ({ title, children }: Props) => {
     { href: "/contact/", label: "Contact" },
     { href: "/register/", label: "Register" },
     { href: "/results/", label: "Results" },
+    { href: "/acknowledgements/", label: "Acknowledgements" },
   ];
   const drawerItems = linkInfo.map(({ href, label }, index) => (
     <ListItem button={false} key={index}>
