@@ -1,10 +1,10 @@
 /* eslint-disable */
 const throttle = require("lodash/throttle");
-const unthrottledFetchPartnersData = require("./fetchPartnersData")
+const unthrottledFetchPartnersData = require("./fetchPartnersData");
 
 const fetchPartnersData = throttle(unthrottledFetchPartnersData, 5000);
 
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
   try {
     const data = await fetchPartnersData();
     return {

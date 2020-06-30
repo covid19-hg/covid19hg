@@ -4,7 +4,7 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
-import { UseAutocompleteProps} from "@material-ui/lab/useAutocomplete";
+import { UseAutocompleteProps } from "@material-ui/lab/useAutocomplete";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -35,7 +35,12 @@ const useStyles = makeStyles({
 });
 
 interface Props {
-  onChange: UseAutocompleteProps<CountryType, undefined, undefined, undefined>["onInputChange"];
+  onChange: UseAutocompleteProps<
+    CountryType,
+    undefined,
+    undefined,
+    undefined
+  >["onInputChange"];
 }
 const CountrySelect = ({ onChange }: Props) => {
   const classes = useStyles();

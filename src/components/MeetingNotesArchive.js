@@ -1,7 +1,6 @@
-import React from 'react'
-import BlogItemListing from "./BlogItemListing"
-import { graphql, StaticQuery } from 'gatsby'
-
+import React from "react";
+import BlogItemListing from "./BlogItemListing";
+import { graphql, StaticQuery } from "gatsby";
 
 export default () => (
   <StaticQuery
