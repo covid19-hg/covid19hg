@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import {
   makeStyles,
   Theme,
@@ -14,14 +14,14 @@ import {
   ListItemText,
   useMediaQuery,
   Link,
-} from "@material-ui/core";
-import DefaultHelmet from "./DefaultHelmet";
-import useSiteMetadata from "./SiteMetadata";
-import { Link as GatsbyLink } from "gatsby";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import MenuIcon from "@material-ui/icons/Menu";
-import clsx from "clsx";
-import { useTheme } from "@material-ui/core/styles";
+} from '@material-ui/core'
+import DefaultHelmet from './DefaultHelmet'
+import useSiteMetadata from './SiteMetadata'
+import { Link as GatsbyLink } from 'gatsby'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import MenuIcon from '@material-ui/icons/Menu'
+import clsx from 'clsx'
+import { useTheme } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme: Theme) => ({
   appBarDesktop: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginLeft: drawerWidthFromTheme(theme),
   },
   appBarMobile: {
-    transition: theme.transitions.create(["margin", "width"], {
+    transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   appBarShift: {
     width: `calc(100% - ${drawerWidthFromTheme(theme)}px)`,
     marginLeft: drawerWidthFromTheme(theme),
-    transition: theme.transitions.create(["margin", "width"], {
+    transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginRight: theme.spacing(2),
   },
   hide: {
-    display: "none",
+    display: 'none',
   },
   drawer: {
     width: drawerWidthFromTheme(theme),
@@ -56,8 +56,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: drawerWidthFromTheme(theme),
   },
   drawerHeader: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
@@ -69,13 +69,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: theme.spacing(20),
   },
   arrowIcon: {
-    justifySelf: "flex-end",
+    justifySelf: 'flex-end',
   },
   navLink: {
-    "&:visited": {
+    '&:visited': {
       color: theme.palette.primary.main,
     },
-    "&:hover": {
+    '&:hover': {
       color: theme.palette.secondary.main,
     },
   },
@@ -84,14 +84,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginLeft: drawerWidthFromTheme(theme),
   },
   contentMobile: {
-    width: "100%",
-    transition: theme.transitions.create("margin", {
+    width: '100%',
+    transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
   },
   contentShift: {
-    transition: theme.transitions.create("margin", {
+    transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
@@ -99,60 +99,58 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
-}));
+}))
 
-const drawerWidthFromTheme = (theme: Theme) => theme.spacing(30);
+const drawerWidthFromTheme = (theme: Theme) => theme.spacing(30)
 interface Props {
-  title: string;
-  children: React.ReactNode;
+  title: string
+  children: React.ReactNode
 }
 
 const LayoutContent = ({ title, children }: Props) => {
-  const classes = useStyles();
-  const { title: siteTitle, description, siteUrl } = useSiteMetadata();
-  const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
-  const [isOpenNonDesktop, setIsOpenNonDesktop] = useState<boolean>(false);
-  const isOpen = isDesktop ? true : isOpenNonDesktop;
-  const openDrawer = () => setIsOpenNonDesktop(true);
-  const closeDrawer = () => setIsOpenNonDesktop(false);
-  const drawerVariant = isDesktop ? "permanent" : "persistent";
+  const classes = useStyles()
+  const { title: siteTitle, description, siteUrl } = useSiteMetadata()
+  const theme = useTheme()
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'))
+  const [isOpenNonDesktop, setIsOpenNonDesktop] = useState<boolean>(false)
+  const isOpen = isDesktop ? true : isOpenNonDesktop
+  const openDrawer = () => setIsOpenNonDesktop(true)
+  const closeDrawer = () => setIsOpenNonDesktop(false)
+  const drawerVariant = isDesktop ? 'permanent' : 'persistent'
 
   const linkInfo = [
-    { href: "/", label: "Home" },
-    { href: "/about/", label: "About" },
-    { href: "/partners/", label: "Partners" },
-    { href: "/projects/", label: "Projects" },
-    { href: "/data-sharing/", label: "Data Sharing" },
-    { href: "/blog/", label: "News" },
-    { href: "/meeting-archive/", label: "Meeting Archive" },
-    { href: "/contact/", label: "Contact" },
-    { href: "/register/", label: "Register" },
-    { href: "/results/", label: "Results" },
-    { href: "/acknowledgements/", label: "Acknowledgements" },
-  ];
+    { href: '/', label: 'Home' },
+    { href: '/about/', label: 'About' },
+    { href: '/partners/', label: 'Partners' },
+    { href: '/projects/', label: 'Projects' },
+    { href: '/data-sharing/', label: 'Data Sharing' },
+    { href: '/blog/', label: 'News' },
+    { href: '/meeting-archive/', label: 'Meeting Archive' },
+    { href: '/contact/', label: 'Contact' },
+    { href: '/register/', label: 'Register' },
+    { href: '/results/', label: 'Results' },
+    {
+      href: '/blog/2020-06-29-in-silico-follow-up-results/',
+      label: (
+        <React.Fragment>
+          <em>In silico</em> follow-up results
+        </React.Fragment>
+      ),
+    },
+    { href: '/acknowledgements/', label: 'Acknowledgements' },
+  ]
   const drawerItems = linkInfo.map(({ href, label }, index) => (
     <ListItem button={false} key={index}>
       <ListItemText>
-        <Link
-          component={GatsbyLink}
-          to={href}
-          className={classes.navLink}
-          underline="none"
-        >
+        <Link component={GatsbyLink} to={href} className={classes.navLink} underline="none">
           {label}
         </Link>
       </ListItemText>
     </ListItem>
-  ));
+  ))
   return (
     <>
-      <DefaultHelmet
-        title={title}
-        description={description}
-        siteTitle={siteTitle}
-        siteUrl={siteUrl}
-      />
+      <DefaultHelmet title={title} description={description} siteTitle={siteTitle} siteUrl={siteUrl} />
       <AppBar
         position="fixed"
         className={clsx({
@@ -195,13 +193,9 @@ const LayoutContent = ({ title, children }: Props) => {
             aria-label="menu"
             className={classes.logo}
             component={GatsbyLink}
-            to={"/"}
+            to={'/'}
           >
-            <img
-              src={"/img/logo.png"}
-              alt="Logo"
-              className={classes.logoImage}
-            />
+            <img src={'/img/logo.png'} alt="Logo" className={classes.logoImage} />
           </IconButton>
           <Hidden mdUp={true}>
             <IconButton onClick={closeDrawer} className={classes.arrowIcon}>
@@ -223,7 +217,7 @@ const LayoutContent = ({ title, children }: Props) => {
         {children}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default LayoutContent;
+export default LayoutContent
