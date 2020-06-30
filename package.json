@@ -49,7 +49,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "yarn run develop",
-    "build": "yarn run clean && gatsby build",
+    "build": "yarn run clean && GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "yarn run clean && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
