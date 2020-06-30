@@ -71,6 +71,12 @@ qas:
       immediately made available to the scientific community via the website
       result browser, via [GWAS catalog](https://www.ebi.ac.uk/gwas/), [Open
       Target Platform](https://www.targetvalidation.org/) and other portals.
+  - question: '## **Can I access summary statistics from the individual studies?**'
+    answer: >-
+      On the [result page](https://www.covid19hg.org/results/), we make
+      available the meta-analysis summary statistics for the combined studies
+      with and without UK Biobank. However, to access the study-specific summary
+      statistics you will need to get in contact with each study PI separately.
   - question: '## **My data cannot leave my country, what can I do?**'
     answer: >-
       The EGA is working with the ELIXIR network to establish the EGA Federation
@@ -78,6 +84,15 @@ qas:
       expect to launch the first nodes in mid-late 2020. In the meantime, we
       suggest you contact your country's ELIXIR head of node to find out about
       the current status for your country.
+  - question: '## **In which format should I submit the genetic data?**'
+    answer: >-
+      Both EGA and AnVIL recommend using open standards and formats that are
+      maintained by the Global Alliance for Genomics and Health (GA4GH),
+      published in the GA4GH [Genomic Data
+      Toolkit](https://www.ga4gh.org/genomic-data-toolkit/). For genome
+      sequencing data this includes FASTQ, BAM, CRAM, and VCF. All array-based
+      technologies are accepted, which may include the raw data, intensity and
+      analysis files, and there are no restrictions on data formats accepted.
   - question: >-
       ## **Is the system compliant with current European regulations for data
       protection?**
@@ -90,15 +105,6 @@ qas:
       EMBL and to the needs of enabling free scientific research across national
       borders. CRG is subject to the GDPR and implements it fully. The EGA GDPR
       notices can be found [here](https://ega-archive.org/gdpr-notice).
-  - question: '## **In which format should I submit the genetic data?**'
-    answer: >-
-      Both EGA and AnVIL recommend using open standards and formats that are
-      maintained by the Global Alliance for Genomics and Health (GA4GH),
-      published in the GA4GH [Genomic Data
-      Toolkit](https://www.ga4gh.org/genomic-data-toolkit/). For genome
-      sequencing data this includes FASTQ, BAM, CRAM, and VCF. All array-based
-      technologies are accepted, which may include the raw data, intensity and
-      analysis files, and there are no restrictions on data formats accepted.
   - question: '## **In which format should I submit the clinical/phenotype data ?**'
     answer: >-
       Clinical data should be included as part of the study submission. We
@@ -108,12 +114,6 @@ qas:
       required. If you want to submit variables that are not listed in the data
       dictionary please contact
       [stefano.ceri@polimi.it](mailto:stefano.ceri@polimi.it)
-  - question: '## **Can I access summary statistics from the individual studies?**'
-    answer: >-
-      On the [result page](https://www.covid19hg.org/results/), we make
-      available the meta-analysis summary statistics for the combined studies
-      with and without UK Biobank. However, to access the study-specific summary
-      statistics you will need to get in contact with each study PI separately.
   - question: '## **I’m still collecting samples, can I upload my data in batches?**'
     answer: >-
       Yes, this is entirely possible. We suggest creating a dataset to submit
