@@ -2,12 +2,12 @@
 templateKey: projects-page
 title: Projects
 projectsIntro: >-
-  **This page lists projects that are supported by the COVID19 Host Genetics
-  Initiative but they are not part of the centralized efforts because they
-  require specialized approaches or focus on specific patients groups.**
+  #### **This page lists projects that are supported by the COVID19 Host
+  Genetics Initiative but they are not part of the centralized efforts because
+  they require specialized approaches or focus on specific patients groups.**
 
 
-  **As a reminder the centralized analyses are based on
+  #### **As a reminder the centralized analyses are based on
   [this](https://docs.google.com/document/d/1okamrqYmJfa35ClLvCt_vEe4PkvrTwggHq7T3jbeyCI/edit?usp=sharing)
   phenotype definitions and
   [this](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit?ts=5e964dc2#)
