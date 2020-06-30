@@ -62,6 +62,6 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 
 **Summary:**
 
-**Authors:** Gita Pathak
+**Authors:** 
 
 **Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/PrediXcan/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
