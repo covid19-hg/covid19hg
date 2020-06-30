@@ -108,14 +108,14 @@ qas:
       required. If you want to submit variables that are not listed in the data
       dictionary please contact
       [stefano.ceri@polimi.it](mailto:stefano.ceri@polimi.it)
-  - question: '## **I’m still collecting samples, can I upload my data in batches?**'
-    answer: >-
-      Yes, this is entirely possible. We suggest creating a dataset to submit
-      every 500 samples
   - question: '## **Can I access summary statistics from the individual studies?**'
     answer: >-
       On the [result page](https://www.covid19hg.org/results/), we make
       available the meta-analysis summary statistics for the combined studies
       with and without UK Biobank. However, to access the study-specific summary
       statistics you will need to get in contact with each study PI separately.
+  - question: '## **I’m still collecting samples, can I upload my data in batches?**'
+    answer: >-
+      Yes, this is entirely possible. We suggest creating a dataset to submit
+      every 500 samples
 ---
