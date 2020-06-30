@@ -1,12 +1,12 @@
 /* eslint-disable */
 const throttle = require("lodash/throttle");
-const unthrottledFetchAirtableData = require("./fetchAirtableData")
+const unthrottledFetchPartnersData = require("./fetchPartnersData")
 
-const fetchData = throttle(unthrottledFetchAirtableData, 5000);
+const fetchPartnersData = throttle(unthrottledFetchPartnersData, 5000);
 
 exports.handler = async function(event, context) {
   try {
-    const data = await fetchData();
+    const data = await fetchPartnersData();
     return {
       statusCode: 200,
       headers: { "Cache-Control": "public, maxage=5" },
