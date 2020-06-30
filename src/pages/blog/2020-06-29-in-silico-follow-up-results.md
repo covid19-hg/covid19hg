@@ -46,9 +46,7 @@ Here we  post the results from the in-silico follow up analysis done of summary 
 
 ## PheWAS
 
-**Summary:**
-
-PheWAS analysis in the UK Biobank using GP and Hospital Episode Statistics (HES) data.Genetic Score based on 31 covid-19 associated SNPs. LD clumping was performed at SNPs with pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction.
+**Summary:** PheWAS analysis in the UK Biobank using GP and Hospital Episode Statistics (HES) data.Genetic Score based on 31 covid-19 associated SNPs. LD clumping was performed at SNPs with pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction.
 
 **Authors:** Areti Papadopoulou -Eirini Marouli
 
