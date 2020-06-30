@@ -20,8 +20,6 @@ Here we  post the results from the in-silico follow up analysis done of summary 
 
 **Results available here**
 
-
-
 ## TWAS
 
 **Summary:**
@@ -29,8 +27,6 @@ Here we  post the results from the in-silico follow up analysis done of summary 
 **Authors:**
 
 **Results available here**
-
-
 
 ## **Fine Mapping**
 
@@ -40,9 +36,15 @@ Here we  post the results from the in-silico follow up analysis done of summary 
 
 **Results available here**
 
-
-
 ## Summary-data-based Mendelian Randomization
+
+**Summary:**
+
+**Authors:**
+
+**Results available here**
+
+## PheWAS
 
 **Summary:**
 
@@ -52,7 +54,7 @@ Here we  post the results from the in-silico follow up analysis done of summary 
 
 
 
-## PheWAS
+## S-PrediXcan/MetaXcan
 
 **Summary:**
 
