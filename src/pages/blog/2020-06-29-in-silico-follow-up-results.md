@@ -8,7 +8,6 @@ tags:
   - '#in-silico'
 type: blog-post
 ---
-# In-silico follow-up results
 
 Here we post the results from the in-silico follow up analysis done of summary statistics from release 3.
 
