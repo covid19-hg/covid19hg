@@ -31,9 +31,6 @@ const getLandWaterLandMapboxLayer = require("../mapboxLayers/land-water-land-map
 const getLandWaterWaterMapboxLayer = require("../mapboxLayers/land-water-water-mapbox-layer.js");
 const getLandWaterBuiltMapboxLayer = require("../mapboxLayers/land-water-built-mapbox-layer.js");
 
-export const SET_SELECTED_INSTITUTION_ACTION = "setSelectedInstitution";
-export const UNSET_SELECTED_INSTITUTION_ACTION = "unsetSelectedInstitution";
-
 const markersSourceId = "markers-source";
 const streetMapSourceId = "mapbox-streets";
 const terrainSourceId = "mapbox-terrain";
@@ -47,7 +44,7 @@ const createMarker = (args: {
   lng: number;
   lat: number;
   study: string;
-  dispatchMessageToParent: any;
+  setSelected: (selected: string | undefined) => void
   popup: Popup;
   id: string;
   mapboxMap: MapboxMap;
@@ -57,7 +54,7 @@ const createMarker = (args: {
     lng,
     lat,
     study,
-    dispatchMessageToParent,
+    setSelected,
     popup,
     id,
     mapboxMap,
@@ -75,12 +72,7 @@ const createMarker = (args: {
     // Need to `stopPropagation` so that it doesn't bubble up to the map and
     // dispatch the "unsetSelectedInstitution" action
     event.stopPropagation();
-    dispatchMessageToParent({
-      type: SET_SELECTED_INSTITUTION_ACTION,
-      payload: {
-        id,
-      },
-    });
+    setSelected(id)
   });
   markerElement.addEventListener("mouseenter", (event) => {
     event.stopPropagation();
@@ -119,7 +111,7 @@ interface LabelInfo {
 const initializeMap = (
   el: HTMLDivElement,
   data: MapDatum[],
-  dispatchMessageToParent: any
+  setSelected: (selected: string | undefined) => void
 ) => {
   const lats = data.map(({ lat }) => lat);
   const lngs = data.map(({ lng }) => lng);
@@ -222,9 +214,7 @@ const initializeMap = (
 
   mapboxMap.on("click", () => {
     // Any click that bubbles up here means it must not have originated inside a marker:
-    dispatchMessageToParent({
-      type: UNSET_SELECTED_INSTITUTION_ACTION,
-    });
+    setSelected(undefined)
   });
 
   const markers: Map<string, MarkerInfo> = new Map();
@@ -240,7 +230,7 @@ const initializeMap = (
       lng,
       lat,
       study,
-      dispatchMessageToParent,
+      setSelected,
       popup,
       id,
       mapboxMap,
@@ -302,7 +292,7 @@ const setMarkerVisibleProperties = (args: {
 const adjustMarkerVisibility = (
   mapboxInfoRef: MutableRefObject<MapboxInfo | undefined>,
   visibleIds: string[],
-  dispatchMessageToParent: any,
+  setSelected: (selected: string | undefined) => void,
   selectedId: string | undefined
 ) => {
   const { current: mapboxInfo } = mapboxInfoRef;
@@ -317,7 +307,7 @@ const adjustMarkerVisibility = (
           lng,
           lat,
           study,
-          dispatchMessageToParent,
+          setSelected,
           popup,
           id,
           mapboxMap: map,
@@ -410,13 +400,13 @@ const useStyles = makeStyles(({ typography, spacing }: Theme) => ({
 }));
 
 interface Props {
-  dispatchMessageToParent: any;
   mapData: MapDatum[];
   filteredData: MapDatum[];
   selected: string | undefined;
+  setSelected: (selected: string | undefined) => void
 }
 const MapComponent = ({
-  dispatchMessageToParent,
+  setSelected,
   mapData,
   filteredData,
   selected,
@@ -428,7 +418,7 @@ const MapComponent = ({
   useEffect(() => {
     const { current: el } = mapElRef;
     if (el !== null) {
-      const mapboxInfo = initializeMap(el, mapData, dispatchMessageToParent);
+      const mapboxInfo = initializeMap(el, mapData, setSelected);
       mapboxInfoRef.current = mapboxInfo;
       mapboxInfo.map.on("load", () => {
         mapboxInfo.isStyleLoaded = true;
@@ -456,7 +446,7 @@ const MapComponent = ({
     adjustMarkerVisibility(
       mapboxInfoRef,
       visibleIds,
-      dispatchMessageToParent,
+      setSelected,
       selected
     );
     adjustLabelVisibility(mapboxInfoRef, visibleIds);
@@ -498,7 +488,7 @@ const MapWrapper = (props: MapWrapperProps) => {
   if (props.hasData === true) {
     return (
       <MapComponent
-        dispatchMessageToParent={props.dispatchMessageToParent}
+        setSelected={props.setSelected}
         mapData={props.mapData}
         filteredData={props.filteredData}
         selected={props.selected}

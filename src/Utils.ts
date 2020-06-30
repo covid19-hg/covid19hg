@@ -1,6 +1,4 @@
-
-
-export const fetchJSON = async (url) => {
+export const fetchJSON = async <Data>(url: string): Promise<Data> => {
   // Note: need to `include` credentials in requests to the server hosting the static JSON files
   // so that the `Authorization` field is included in the request.
   // Otherwise, the request will be denied because of password protection.
@@ -13,4 +11,4 @@ export const fetchJSON = async (url) => {
   } else {
     throw response.statusText;
   }
-}
+};

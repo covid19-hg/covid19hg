@@ -1,8 +1,5 @@
 import React, { useReducer, useCallback } from "react";
-import Map, {
-  SET_SELECTED_INSTITUTION_ACTION,
-  UNSET_SELECTED_INSTITUTION_ACTION,
-} from "../components/Map";
+import Map from "../components/Map";
 import Card, { assayOptions } from "./NewCard";
 import CountrySelect from "./CountrySelect";
 import _debounce from "lodash/debounce";
@@ -43,7 +40,6 @@ const keywordSearchStateName = "keywordSearch";
 export const contactFormOpenStateName = "isContactFormOpen";
 
 export interface State {
-  selectedId: string | undefined;
   [retrospectiveStateName]: boolean;
   [prospectiveStateName]: boolean;
   [wesStateName]: boolean;
@@ -56,7 +52,6 @@ export interface State {
   [contactFormOpenStateName]: boolean;
 }
 const initialState: State = {
-  selectedId: undefined,
   [retrospectiveStateName]: false,
   [prospectiveStateName]: false,
   [wesStateName]: false,
@@ -77,33 +72,13 @@ interface SetStateAction<K extends keyof State> {
   };
 }
 
-export type Action<K extends keyof State> =
-  | SetStateAction<K>
-  | {
-      type: typeof UNSET_SELECTED_INSTITUTION_ACTION;
-    }
-  | {
-      type: typeof SET_SELECTED_INSTITUTION_ACTION;
-      payload: {
-        id: string;
-      };
-    };
+export type Action<K extends keyof State> = SetStateAction<K>
 
 const reducer = <K extends keyof State>(
   state: State,
   action: Action<K>
 ): State => {
   switch (action.type) {
-    case SET_SELECTED_INSTITUTION_ACTION:
-      return {
-        ...state,
-        selectedId: action.payload.id,
-      };
-    case UNSET_SELECTED_INSTITUTION_ACTION:
-      return {
-        ...state,
-        selectedId: undefined,
-      };
     case SET_FORM_STATE:
       return {
         ...state,
@@ -115,11 +90,13 @@ const reducer = <K extends keyof State>(
 };
 
 interface Props {
-  mapData: MapDatum[];
-  listData: ListDatum[];
+  mapData: MapDatum[] | undefined;
+  listData: ListDatum[] | undefined;
+  selectedPartner: string | undefined
+  setSelectedPartner: (selected: string | undefined) => void
 }
 
-const Partners = ({ mapData, listData }: Props) => {
+const Partners = ({ mapData, listData, selectedPartner, setSelectedPartner }: Props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   let filteredIds: string[];
@@ -323,11 +300,7 @@ const Partners = ({ mapData, listData }: Props) => {
   );
 
   const studyListSetSelected = useCallback(
-    (id: string) =>
-      dispatch({
-        type: SET_SELECTED_INSTITUTION_ACTION,
-        payload: { id },
-      }),
+    (id: string) => setSelectedPartner(id),
     []
   );
 
@@ -335,7 +308,7 @@ const Partners = ({ mapData, listData }: Props) => {
     <StudyList
       listData={listData}
       filteredIds={filteredIds}
-      selectedId={state.selectedId}
+      selectedId={selectedPartner}
       setSelectedStudy={studyListSetSelected}
     />
   );
@@ -346,20 +319,19 @@ const Partners = ({ mapData, listData }: Props) => {
   } else {
     const filteredData = listData.filter(({ id }) => filteredIds.includes(id));
     if (
-      state.selectedId === undefined ||
-      filteredData.map(({ id }) => id).includes(state.selectedId) === false
+      selectedPartner === undefined ||
+      filteredData.map(({ id }) => id).includes(selectedPartner) === false
     ) {
       // Do not show card if there's no selected study or if  the selected study has been filtered out:
       card = (
         <>
           <Typography variant="h5" component="h2">
-            {" "}
-            Please select a study{" "}
+            Please select a study
           </Typography>
         </>
       );
     } else {
-      const cardInfo = listData.find(({ id }) => id === state.selectedId)!;
+      const cardInfo = listData.find(({ id }) => id === selectedPartner)!;
       card = (
         <>
           <Card cardInfo={cardInfo} showContactForm={showContactForm} />
@@ -381,10 +353,10 @@ const Partners = ({ mapData, listData }: Props) => {
     mapElem = (
       <Map
         hasData={true}
-        dispatchMessageToParent={dispatch}
+        setSelected={setSelectedPartner}
         mapData={mapData}
         filteredData={filteredData}
-        selected={state.selectedId}
+        selected={selectedPartner}
       />
     );
   }
@@ -392,8 +364,7 @@ const Partners = ({ mapData, listData }: Props) => {
   return (
     <Container marginTop={1}>
       <Typography variant="h5" component="h2">
-        {" "}
-        Find studies{" "}
+        Find studies
       </Typography>
       <Grid container={true} spacing={gridSpacing} marginTop={1}>
         <FilterControlContainer> {studyTypeElem} </FilterControlContainer>
@@ -416,8 +387,7 @@ const Partners = ({ mapData, listData }: Props) => {
 
         <FilterControlContainer> {geneticAnalysisElem} </FilterControlContainer>
         <FilterControlContainer>
-          {" "}
-          {researchCategoriesElem}{" "}
+          {researchCategoriesElem}
         </FilterControlContainer>
         <FilterControlContainer> {keywordSearchElem} </FilterControlContainer>
       </Grid>
@@ -428,11 +398,10 @@ const Partners = ({ mapData, listData }: Props) => {
       </Grid>
 
       <Container marginTop={4} disableGutters={true}>
-        {" "}
-        {card}{" "}
+        {card}
       </Container>
       <InvestigatorContactForm
-        selectedId={state.selectedId}
+        selectedId={selectedPartner}
         isOpen={state[contactFormOpenStateName]}
         dispatchMessageToParent={dispatch}
       />
