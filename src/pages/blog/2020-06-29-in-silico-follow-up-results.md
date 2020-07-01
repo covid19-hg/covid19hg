@@ -10,7 +10,7 @@ type: blog-post
 ---
 Here we post the results from the in-silico follow up analysis done of summary statistics from release 3.
 
-## Heritability and genetic correlations
+## Heritability, genetic correlations and MAGMA
 
 **Summary:** We created a map of candidate genomic regions associated with COVID19 phenotypes and explored the functional implications of the candidate variants/genes based on known bioinformatics sources using the functional annotation platform FUMA. We identified 12 genes associated with COVID19 phenotypes (*ANKRD32, CDRT4, PSMD13, ERO1L, LZTFL1, XCR1, FYCO1, IFNAR2, CXCR6, CCR9, AP000295.9, AK5*) by aggregating the variant-level association statistics into a gene-based association test using MAGMA. Based on a lookup of previous GWAS results in the gwasATLAS database, these genes are primarily implicated in immunological phenotypes. We estimated the SNP heritability of these phenotypes (0.5% - 6.6%, n.s.) using LD score regression and partitioned this heritability across functional regions of the genome, but found no significant evidence of enrichment in any functional categories. We also examined genetic correlations with an array of physiological and psychological phenotypes but found no significant genetic correlations.
 
