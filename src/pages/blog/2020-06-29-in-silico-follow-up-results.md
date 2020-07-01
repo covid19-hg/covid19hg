@@ -66,15 +66,13 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 
 ### CCR3 
 
-<img width="80%"  src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_CCR3.png" />
+<img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_CCR3.png" />
 
 ### LZFTL1 
 
-<img width=80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_cg00634029_LZTFL1.png" />
+<img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_cg00634029_LZTFL1.png" />
 
 **Authors:** Loic Yengo, Peter Visscher & Naomi Wray
-
-**Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/SMR/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
 
 **Data**: [ANA\_C2\_V2\_SMR\_pSMR\_below\_1e-5\_30JUN2020_LY.txt.gz](https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/ANA_C2_V2_SMR_pSMR_below_1e-5_30JUN2020_LY.txt.gz)
 
