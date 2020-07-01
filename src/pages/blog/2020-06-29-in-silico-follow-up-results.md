@@ -68,7 +68,7 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 
 <img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_CCR3.png" />
 
-### LZFTL1 
+### LZTFL1 
 
 <img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_cg00634029_LZTFL1.png" />
 
@@ -102,6 +102,6 @@ We performed TWAS based on the genome-wide association data for each of the six 
 
 [COVID-freeze3\_MetaXcan\_PathakG.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG.xlsx)
 
-[COVID-freeze3_MetaXcan_PathakG_rp.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG_rp.xlsx)
+[COVID-freeze3\_MetaXcan\_PathakG_rp.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG_rp.xlsx)
 
 **README**: [README-TWAS-COVID19-HGI-PathakG-June30_final.pdf](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/README-TWAS-COVID19-HGI-PathakG-June30_final.pdf)
