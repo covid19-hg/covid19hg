@@ -18,6 +18,7 @@ module.exports = async () => {
               contributor: fields["Contributor"],
               role: fields["Role"],
               studyIds: fields["Study"],
+              adhocGroup: fields["AdhocGroup"],
               affiliation: fields["Affiliation"],
               affiliationLink: fields["affililationLink"],
               id,
