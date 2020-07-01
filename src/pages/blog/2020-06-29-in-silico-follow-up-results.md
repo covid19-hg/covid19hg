@@ -16,7 +16,7 @@ Here we post the results from the in-silico follow up analysis done of summary s
 
 **Authors:** Emil Uffelmann, Jeanne Savage, Philip Jansen, Christiaan de Leeuw, Danielle Posthuma
 
-**Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/magma/?project=covid-19-hg&authuser=0&organizationId=548622027621&pli=1)**
+**Data**: [CTG_insilico_COVID19-hg_29062020freeze_provisional.zip](https://storage.googleapis.com/covid19-hg-in-silico-followup/magma/CTG_insilico_COVID19-hg_29062020freeze_provisional.zip)
 
 ## TWAS
 
@@ -36,15 +36,27 @@ in leafcutter splice variation GTEx v8 Lung (Bonf-p = 2.10e-06).
 
 **Authors:** Nicholas Mancuso, Zeyun Lu, Shyamalika Gopalan, Kangcheng Hou, Bogdan Pasaniuc
 
-**Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/TWAS/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
+**Data**: [covid_07022020.twas.sp_twas.pwas.tar.bz2](https://storage.googleapis.com/covid19-hg-in-silico-followup/TWAS/covid_07022020.twas.sp_twas.pwas.tar.bz2)
+
+**README**: [covid19_063020.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/TWAS/covid19_063020.docx)
 
 ## **Fine Mapping**
 
 **Summary:** We conducted statistical fine-mapping of the meta-analysis results, assuming a single causal variant per locus and a shared causal effect across studies. For each locus with P < 1e-10 (3 Mb window around the lead variant), we applied approximate Bayes factor (ABF) with a prior variance W = 0.04 ([Wakefield, J. 2009](https://onlinelibrary.wiley.com/doi/abs/10.1002/gepi.20359)) to estimate posterior inclusion probability (PIP) and 95/99% credible sets. We observed the variants in CS at the 3p21.31 signal are in very tight LD (r2 > 0.9) across multiple populations, suggesting it might be challenging to disentangle them apart statistically. Although ABF estimates PIP = 0.85 for the lead variant of ANA_C2_V2, we note that the results should be interpreted cautiously given potential biases from different phenotyping/genotyping/imputation across studies.
 
+### COVID19_HGI_ANA_B2_V2_20200629.chr3.44367532-47367532.ABF
+
+<img width="100%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/COVID19_HGI_ANA_B2_V2_20200629.chr3.44367532-47367532.ABF.png" />
+
+### COVID19_HGI_ANA_C2_V2_20200629.chr3.44367022-47367022.ABF
+
+<img width="100%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/COVID19_HGI_ANA_C2_V2_20200629.chr3.44367022-47367022.ABF.png" />
+
 **Authors:** Masahiro Kanai, Hilary Finucane
 
-**Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/finemapping/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
+**Data**: [COVID19_HGI_20200629_ABF.tar.gz](https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/COVID19_HGI_20200629_ABF.tar.gz)
+
+**README**: [README.md](https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/README.md)
 
 ## Summary-data-based Mendelian Randomization
 
@@ -52,9 +64,23 @@ in leafcutter splice variation GTEx v8 Lung (Bonf-p = 2.10e-06).
 
 This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with methylation and expression quantitative traits loci (mQTL and eQTL respectly) from 11 mQTL and eQTL datasets (ref:<https://cnsgenomics.com/software/smr/#DataResource>). Top SMR results (p<1e-5) are reported. This archive contains two README files (\*.txt and \*.docx format), 2 SMR plots and a result file. Columns of the result file are described here:<https://cnsgenomics.com/software/smr/#SMR&HEIDIanalysis>.
 
+### CCR3 
+
+<img width="100%" max-width="700px" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_CCR3.png" />
+
+### LZFTL1 
+
+<img width="100%" max-width="700px" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_cg00634029_LZTFL1.png" />
+
 **Authors:** Loic Yengo, Peter Visscher & Naomi Wray
 
 **Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/SMR/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
+
+**Data**: [ANA\_C2\_V2\_SMR\_pSMR\_below\_1e-5\_30JUN2020_LY.txt.gz](https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/ANA_C2_V2_SMR_pSMR_below_1e-5_30JUN2020_LY.txt.gz)
+
+**README.docx**: [README.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/README.docx)
+
+**README.txt**: [README.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/README.txt)
 
 ## PheWAS
 
@@ -62,7 +88,9 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 
 **Authors:** Areti Papadopoulou, Eirini Marouli
 
-**Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/phewas/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
+**Data**: [PheWAS_ANA.B2_ANA.C2_EM.7z](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_ANA.B2_ANA.C2_EM.7z)
+
+**README**: [PheWAS_ANA.B2_ANA.C2_300620_EM.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_ANA.B2_ANA.C2_300620_EM.docx)
 
 ## S-PrediXcan/MetaXcan
 
@@ -72,4 +100,10 @@ We performed TWAS based on the genome-wide association data for each of the six 
 
 **Authors:**  Gita A Pathak, Frank R Wendt, Renato Polimanti
 
-**Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/PrediXcan/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
+**Data**
+
+[COVID-freeze3_MetaXcan_PathakG.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG.xlsx)
+
+[COVID-freeze3_MetaXcan_PathakG_rp.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG_rp.xlsx)
+
+**README**: [README-TWAS-COVID19-HGI-PathakG-June30_final.pdf](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/README-TWAS-COVID19-HGI-PathakG-June30_final.pdf)
