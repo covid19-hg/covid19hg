@@ -34,7 +34,7 @@ IFNAR2 (ENSG00000159110.19;33246482:33246718:clu_33270) twas_p=0.00000204
 
 in leafcutter splice variation GTEx v8 Lung (Bonf-p = 2.10e-06).
 
-**Authors:** Nicholas Mancuso
+**Authors:** Nicholas Mancuso, Zeyun Lu, Shyamalika Gopalan, Kangcheng Hou, Bogdan Pasaniuc
 
 **Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/TWAS/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
 
@@ -60,7 +60,7 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 
 **Summary:** PheWAS analysis in the UK Biobank using GP and Hospital Episode Statistics (HES) data. Genetic Score based on COVID-19 associated SNPs. LD clumping was performed at SNPs with Pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction.
 
-**Authors:** Areti Papadopoulou - Eirini Marouli
+**Authors:** Areti Papadopoulou, Eirini Marouli
 
 **Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/phewas/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
 
