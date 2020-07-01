@@ -3,12 +3,11 @@ templateKey: blog-post
 title: In-silico follow-up results
 date: 2020-06-29T13:17:16.411Z
 featuredpost: true
-featuredimage: ''
+featuredimage: ""
 tags:
-  - '#in-silico'
+  - "#in-silico"
 type: blog-post
 ---
-
 Here we post the results from the in-silico follow up analysis done of summary statistics from release 3.
 
 ## Heritability and genetic correlations
@@ -21,21 +20,31 @@ Here we post the results from the in-silico follow up analysis done of summary s
 
 ## TWAS
 
-**Summary:**
+**Summary:** We ran the FUSION pipeline with the ANA_B2_V2_20200629 GWAS results. We ran FUSION using reference LD from 489 EUR 1000G individuals to perform a TWAS using total mRNA abundance in GTEx v8 Lung and WholeBlood tissues fitted with the SuSiE model. We performed a proteome-wide association study (PWAS) using SuSiE models fitted in INTERVAL plasma proteins. We also performed splice-TWAS using splice variation from GTEx v8 Lung fitted with SuSiE models.
 
-**Authors:**
+Overall, we found two gene associations in GTEx v8 Lung:
 
-**Results available here**
+CXCR6 (ENSG00000172215.5) twas_p=0.00000378
+
+in total mRNA abundance GTEx v8 Lung (Bonf-p = 4.187e-06), and 
+
+IFNAR2 (ENSG00000159110.19;33252830:33262561:clu_33271) twas_p=0.00000137
+IFNAR2 (ENSG00000159110.19;33230216:33244951:clu_33269) twas_p=0.0000013
+IFNAR2 (ENSG00000159110.19;33246482:33246718:clu_33270) twas_p=0.00000204
+
+in leafcutter splice variation GTEx v8 Lung (Bonf-p = 2.10e-06).
+
+**Authors:** Nicholas Mancuso
+
+**Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/TWAS/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
 
 ## **Fine Mapping**
 
-**Summary:**
+**Summary:** We conducted statistical fine-mapping of the meta-analysis results, assuming a single causal variant per locus and a shared causal effect across studies. For each locus with P < 1e-10 (3 Mb window around the lead variant), we applied approximate Bayes factor (ABF) with a prior variance W = 0.04 ([Wakefield, J. 2009](https://onlinelibrary.wiley.com/doi/abs/10.1002/gepi.20359)) to estimate posterior inclusion probability (PIP) and 95/99% credible sets. We observed the variants in CS at the 3p21.31 signal are in very tight LD (r2 > 0.9) across multiple populations, suggesting it might be challenging to disentangle them apart statistically. Although ABF estimates PIP = 0.85 for the lead variant of ANA_C2_V2, we note that the results should be interpreted cautiously given potential biases from different phenotyping/genotyping/imputation across studies.
 
-**Authors:**
+**Authors:** Masahiro Kanai, Hilary Finucane
 
-**Results available here**
-
-
+**Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/finemapping/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
 
 ## Summary-data-based Mendelian Randomization
 
@@ -54,8 +63,6 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 **Authors:** Areti Papadopoulou - Eirini Marouli
 
 **Results available [here](https://console.cloud.google.com/storage/browser/covid19-hg-in-silico-followup/phewas/?project=covid-19-hg&authuser=0&organizationId=548622027621)**
-
-
 
 ## S-PrediXcan/MetaXcan
 
