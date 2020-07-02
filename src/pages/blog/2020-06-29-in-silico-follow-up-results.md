@@ -84,26 +84,25 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 
 **Summary:** We performed PheWAS analyses in the UK Biobank using GP and Hospital Episode Statistics (HES) data. We used a genetic score approach based on COVID-19 associated SNPs. 
 
-ANA_B2_V2
+ANA_B2__V2
+
 -Genetic Score based on GWAS signals (p<1e-5). Significant outcome: Celiac Disease (p= 4.95E-07). Using summary statistics without UK Biobank, the significant outcome was Celiac Disease (p= 8.93E-07)
 -LD clumping was performed at SNPs with Pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction. 
 
-<img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/phewas_plot_hes_icd10_covariates_15PCs.jpg" />
+<img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/phewas_plot_hes_icd10_covariates_15PCs.png" />
 
-ANA_C2_V2
+ANA_C2__V2
+
 -Genetic Score based on GWAS signals (p<1e-5). Marginally passing Bonferroni correction: Respiratory Arrest, P= 9.57E-05). Using summary statistics without UK Biobank,  no outcome passed Bonferroni correction. 
 -LD clumping was performed at SNPs with Pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction.
 
-ANA_C1_V2
+ANA_C1__V2
 
-Genetic Score based on GWAS signals (p<1e-5). No outcome passed Bonferroni correction
+-Genetic Score based on GWAS signals (p<1e-5). No outcome passed Bonferroni correction
 
 **Authors:** Areti Papadopoulou, Eirini Marouli
 
 **Data**: [PheWAS_RELEASE3_2July20_EM.7z](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_RELEASE3_2July20_EM.7z)
-
-
-
 
 
 ## S-PrediXcan/MetaXcan
