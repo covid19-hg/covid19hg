@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
     const data = await fetchPartnersData();
     return {
       statusCode: 200,
-      headers: { "Cache-Control": "public, maxage=5" },
+      headers: { "Cache-Control": "public, max-age=300" },
       body: JSON.stringify({ data }),
     };
   } catch (err) {
