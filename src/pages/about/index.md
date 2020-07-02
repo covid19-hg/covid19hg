@@ -88,7 +88,7 @@ These simple analyses (e.g. SNP-based association analysis, gene-burden test) fo
 
 ##### Additional analyses that require specialised approaches or focus on specific patients groups
 
-*The COVID-19 host genetics initiative* provides a platform for groups to self-assemble in working groups. The suggestion is to work together, create a slack channel and an analysis plan. Example are the `#ardsgwas`, `#covid19-hg-clonalhematopoeisis` Slack channel and the initiative by Jean-Laurent Casanova and colleagues looking for Monogenic inborn errors of immunity (https://www.covidhge.com/). *The COVID-19 host genetics initiative* will help to sponsor these efforts and connect researchers interested in similar topics.
+*The COVID-19 host genetics initiative* provides a platform for groups to self-assemble in working groups. The suggestion is to work together, create a slack channel and an analysis plan. Example are the `#ardsgwas`, `#covid19-hg-clonalhematopoeisis` Slack channel. *The COVID-19 host genetics initiative* helps to sponsor these efforts and connect researchers interested in similar topics. The main efforts are described [here](https://www.covid19hg.org/projects/).
 
 #### C: Results and data sharing
 
