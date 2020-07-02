@@ -16,7 +16,7 @@ Here we post the results from the in-silico follow up analysis done of summary s
 
 **Authors:** Emil Uffelmann, Jeanne Savage, Philip Jansen, Christiaan de Leeuw, Danielle Posthuma
 
-**Data**: [CTG\_insilico\_COVID19-hg\_29062020freeze\_provisional.zip](https://storage.googleapis.com/covid19-hg-in-silico-followup/magma/CTG_insilico_COVID19-hg_29062020freeze_provisional.zip)
+**Data**: [CTG_insilico_COVID19-hg_29062020freeze_provisional.zip](https://storage.googleapis.com/covid19-hg-in-silico-followup/magma/CTG_insilico_COVID19-hg_29062020freeze_provisional.zip)
 
 ## TWAS
 
@@ -36,25 +36,25 @@ in leafcutter splice variation GTEx v8 Lung (Bonf-p = 2.10e-06).
 
 **Authors:** Nicholas Mancuso, Zeyun Lu, Shyamalika Gopalan, Kangcheng Hou, Bogdan Pasaniuc
 
-**Data**: [covid\_07022020.twas.sp\_twas.pwas.tar.bz2](https://storage.googleapis.com/covid19-hg-in-silico-followup/TWAS/covid_07022020.twas.sp_twas.pwas.tar.bz2)
+**Data**: [covid_07022020.twas.sp_twas.pwas.tar.bz2](https://storage.googleapis.com/covid19-hg-in-silico-followup/TWAS/covid_07022020.twas.sp_twas.pwas.tar.bz2)
 
-**README**: [covid19\_063020.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/TWAS/covid19_063020.docx)
+**README**: [covid19_063020.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/TWAS/covid19_063020.docx)
 
 ## **Fine Mapping**
 
 **Summary:** We conducted statistical fine-mapping of the meta-analysis results, assuming a single causal variant per locus and a shared causal effect across studies. For each locus with P < 1e-10 (3 Mb window around the lead variant), we applied approximate Bayes factor (ABF) with a prior variance W = 0.04 ([Wakefield, J. 2009](https://onlinelibrary.wiley.com/doi/abs/10.1002/gepi.20359)) to estimate posterior inclusion probability (PIP) and 95/99% credible sets. We observed the variants in CS at the 3p21.31 signal are in very tight LD (r2 > 0.9) across multiple populations, suggesting it might be challenging to disentangle them apart statistically. Although ABF estimates PIP = 0.85 for the lead variant of ANA_C2_V2, we note that the results should be interpreted cautiously given potential biases from different phenotyping/genotyping/imputation across studies.
 
-### COVID19\_HGI\_ANA\_B2\_V2\_20200629.chr3.44367532-47367532.ABF
+### COVID19_HGI_ANA_B2_V2_20200629.chr3.44367532-47367532.ABF
 
 <img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/COVID19_HGI_ANA_B2_V2_20200629.chr3.44367532-47367532.ABF.png" />
 
-### COVID19\_HGI\_ANA\_C2\_V2\_20200629.chr3.44367022-47367022.ABF
+### COVID19_HGI_ANA_C2_V2_20200629.chr3.44367022-47367022.ABF
 
 <img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/COVID19_HGI_ANA_C2_V2_20200629.chr3.44367022-47367022.ABF.png" />
 
 **Authors:** Masahiro Kanai, Hilary Finucane
 
-**Data**: [COVID19\_HGI\_20200629\_ABF.tar.gz](https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/COVID19_HGI_20200629_ABF.tar.gz)
+**Data**: [COVID19_HGI_20200629_ABF.tar.gz](https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/COVID19_HGI_20200629_ABF.tar.gz)
 
 **README**: [README.md](https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/README.md)
 
@@ -64,17 +64,17 @@ in leafcutter splice variation GTEx v8 Lung (Bonf-p = 2.10e-06).
 
 This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with methylation and expression quantitative traits loci (mQTL and eQTL respectly) from 11 mQTL and eQTL datasets (ref:<https://cnsgenomics.com/software/smr/#DataResource>). Top SMR results (p<1e-5) are reported. This archive contains two README files (\*.txt and \*.docx format), 2 SMR plots and a result file. Columns of the result file are described here:<https://cnsgenomics.com/software/smr/#SMR&HEIDIanalysis>.
 
-### CCR3 
+### CCR3
 
 <img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_CCR3.png" />
 
-### LZTFL1 
+### LZTFL1
 
 <img width="80%" src="https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_cg00634029_LZTFL1.png" />
 
 **Authors:** Loic Yengo, Peter Visscher & Naomi Wray
 
-**Data**: [ANA\_C2\_V2\_SMR\_pSMR\_below\_1e-5\_30JUN2020_LY.txt.gz](https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/ANA_C2_V2_SMR_pSMR_below_1e-5_30JUN2020_LY.txt.gz)
+**Data**: [ANA_C2_V2_SMR_pSMR_below_1e-5_30JUN2020_LY.txt.gz](https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/ANA_C2_V2_SMR_pSMR_below_1e-5_30JUN2020_LY.txt.gz)
 
 **README.docx**: [README.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/README.docx)
 
@@ -82,13 +82,27 @@ This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with meth
 
 ## PheWAS
 
-**Summary:** PheWAS analysis in the UK Biobank using GP and Hospital Episode Statistics (HES) data. Genetic Score based on COVID-19 associated SNPs. LD clumping was performed at SNPs with Pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction.
+**Summary:** We performed PheWAS analyses in the UK Biobank using GP and Hospital Episode Statistics (HES) data. We used a genetic score approach based on COVID-19 associated SNPs. 
+
+ANA_B2_V2
+-Genetic Score based on GWAS signals (p<1e-5). Significant outcome: Celiac Disease (p= 4.95E-07). Using summary statistics without UK Biobank, the significant outcome was Celiac Disease (p= 8.93E-07)
+-LD clumping was performed at SNPs with Pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction. 
+
+ANA_C2_V2
+-Genetic Score based on GWAS signals (p<1e-5). Marginally passing Bonferroni correction: Respiratory Arrest, P= 9.57E-05). Using summary statistics without UK Biobank,  no outcome passed Bonferroni correction. 
+-LD clumping was performed at SNPs with Pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction.
+
+ANA_C1_V2
+
+Genetic Score based on GWAS signals (p<1e-5). No outcome passed Bonferroni correction
 
 **Authors:** Areti Papadopoulou, Eirini Marouli
 
-**Data**: [PheWAS\_ANA.B2\_ANA.C2\_EM.7z](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_ANA.B2_ANA.C2_EM.7z)
+**Data**: [PheWAS_RELEASE3_2July20_EM.7z](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_RELEASE3_2July20_EM.7z)
 
-**README**: [PheWAS\_ANA.B2\_ANA.C2\_300620\_EM.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_ANA.B2_ANA.C2_300620_EM.docx)
+
+
+
 
 ## S-PrediXcan/MetaXcan
 
@@ -100,8 +114,8 @@ We performed TWAS based on the genome-wide association data for each of the six 
 
 **Data**
 
-[COVID-freeze3\_MetaXcan\_PathakG.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG.xlsx)
+[COVID-freeze3_MetaXcan_PathakG.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG.xlsx)
 
-[COVID-freeze3\_MetaXcan\_PathakG_rp.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG_rp.xlsx)
+[COVID-freeze3_MetaXcan_PathakG_rp.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG_rp.xlsx)
 
 **README**: [README-TWAS-COVID19-HGI-PathakG-June30_final.pdf](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/README-TWAS-COVID19-HGI-PathakG-June30_final.pdf)
