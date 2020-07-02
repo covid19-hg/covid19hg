@@ -49,3 +49,11 @@ interface MapboxGeocodingFeature {
   relevance: number;
   center: [number, number];
 }
+
+export type ContributorDatum = {
+  contributor: string;
+  role: string;
+  affiliation: string;
+  affiliationLink: string | undefined;
+  id: string;
+} & ({ studyIds: string[] } | { adhocGroup: string });

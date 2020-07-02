@@ -2,7 +2,7 @@ import _sortBy from "lodash/sortBy";
 import _sumBy from "lodash/sumBy";
 import _minBy from "lodash/minBy";
 import _last from "lodash/last";
-import { RawContributor, RawStudy } from "./AcknowlegementPageContent";
+import type {  ContributorDatum as RawContributor, AirtableDatum } from "../types";
 import _partition from "lodash/partition";
 import _uniq from "lodash/uniq";
 
@@ -180,12 +180,12 @@ const getDisplayedStudy = (
 
 export const processContributorList = (
   contributors: RawContributor[],
-  studies: RawStudy[],
+  studies: AirtableDatum[],
   isLargeScreen: boolean
 ) => {
   const unsortedProcessedStudies: ProcessedStudies = new Map();
   const studyLookup = new Map(
-    studies.map(({ id, name }) => [id, name] as const)
+    studies.map(({ id, study }) => [id, study] as const)
   );
   const studyContributors: StudyContributor[] = [];
   const adhocContributors: AdhocContributor[] = [];
@@ -228,6 +228,7 @@ export const processContributorList = (
       });
     }
   }
+
 
   for (const { studyIds, role, name: contributorName } of studyContributors) {
     for (const studyId of studyIds) {

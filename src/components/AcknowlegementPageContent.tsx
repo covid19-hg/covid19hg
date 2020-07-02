@@ -19,6 +19,8 @@ import { processContributorList } from "./acknowledgementUtils";
 import _sumBy from "lodash/sumBy";
 import _zip from "lodash/zip";
 import Study from "./StudyAcknowledgement";
+import {  AirtableDatum, ContributorDatum as RawContributor } from "../types";
+
 
 const useStyles = makeStyles((theme: Theme) => ({
   citation: {
@@ -26,38 +28,35 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-export type RawContributor = {
-  contributor: string;
-  role: string;
-  affiliation: string;
-  affiliationLink: string | undefined;
-  id: string;
-} & ({ studyIds: string[] } | { adhocGroup: string });
 
-export interface RawStudy {
-  id: string;
-  name: string;
+interface FetchedContributorData {
+  data: RawContributor[]
 }
 
 interface FetchedData {
-  data: {
-    contributors: RawContributor[];
-    studies: RawStudy[];
-  };
+  contributors: RawContributor[]
+  studies: AirtableDatum[]
+}
+
+interface FetchedPartnersData {
+  data: AirtableDatum[]
 }
 
 const AcknowledgementPageContent = () => {
-  const [data, setData] = useState<FetchedData["data"] | undefined>(undefined);
+  const [data, setData] = useState<FetchedData | undefined>(undefined);
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
   const classes = useStyles();
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetched: FetchedData = await fetchJSON(
-          "/.netlify/functions/acknowledgement"
-        );
-        setData(fetched.data);
+          const [fetchedContributors, FetchedPartnersData] = await Promise.all([
+            fetchJSON<FetchedContributorData>( "/.netlify/functions/acknowledgement"),
+            fetchJSON<FetchedPartnersData>("/.netlify/functions/partners")
+          ])
+          const {data: contributors} = fetchedContributors
+          const {data: studies} = FetchedPartnersData
+          setData({contributors, studies})
       } catch (e) {
         console.error(e);
       }

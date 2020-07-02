@@ -1,28 +1,20 @@
 const throttle = require("lodash/throttle");
 const unthrottledFetchAdditionalContributorsData = require("./fetchAdditionalContributorsData");
-const unthrottledFetchPartnersData = require("../partners/fetchPartnersData");
 
 const fetchAdditionalContributorsData = throttle(
   unthrottledFetchAdditionalContributorsData,
   5000
 );
-const fetchPartnersData = throttle(unthrottledFetchPartnersData, 5000);
 
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event, context) => {
   try {
-    const [contributorsData, partnersData] = await Promise.all([
-      fetchAdditionalContributorsData(),
-      fetchPartnersData(),
-    ]);
-    const studies = partnersData.map(({ id, study }) => ({ id, name: study }));
+    const contributors = await fetchAdditionalContributorsData()
     return {
       statusCode: 200,
+      headers: { "Cache-Control": "public, max-age=300" },
       body: JSON.stringify({
-        data: {
-          contributors: contributorsData,
-          studies,
-        },
+        data: contributors
       }),
     };
   } catch (err) {
