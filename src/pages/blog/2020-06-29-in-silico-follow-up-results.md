@@ -116,8 +116,12 @@ We performed TWAS based on the genome-wide association data for each of the six 
 
 **Data**
 
-[COVID-freeze3_MetaXcan_PathakG.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG.xlsx)
+[COVID-Freeze3-SMultiXcan-PathakG.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-Freeze3-SMultiXcan-PathakG.xlsx)
 
-[COVID-freeze3_MetaXcan_PathakG_rp.xlsx](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG_rp.xlsx)
+[COVID-freeze3_MetaXcan_PathakG.xlsx](https://console.cloud.google.com/storage/browser/_details/covid19-hg-in-silico-followup/PrediXcan/COVID-freeze3_MetaXcan_PathakG.xlsx?project=covid-19-hg&authuser=0&organizationId=548622027621)
 
-**README**: [README-TWAS-COVID19-HGI-PathakG-June30_final.pdf](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/README-TWAS-COVID19-HGI-PathakG-June30_final.pdf)
+**README**
+
+ [README-TWAS-COVID19-HGI-PathakG-June30_final.pdf](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/README-TWAS-COVID19-HGI-PathakG-June30_final.pdf)
+
+[README-SMultiXcan-COVID19-HGI-PathakG-July1.pdf](https://storage.googleapis.com/covid19-hg-in-silico-followup/PrediXcan/README-TWAS-COVID19-HGI-PathakG-June30_final.pdf)
