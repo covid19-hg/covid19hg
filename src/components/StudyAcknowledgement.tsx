@@ -11,6 +11,7 @@ import { Link as GatsbyLink } from "gatsby";
 import { getPartnerPath } from "./partnersPageUtils";
 import { DisplayedStudy, RoleList } from "./acknowledgementUtils";
 import { sortByLastName } from "./acknowledgementUtils";
+import { acknowledgementsStudyTitle } from "../cypressTestDataAttrs";
 
 const useStyles = makeStyles((theme: Theme) => ({
   studyRoot: {
@@ -68,13 +69,17 @@ const StudyAcknowledgement = ({
         component={GatsbyLink}
         to={getPartnerPath(studyId)}
         gutterBottom={true}
+        data-cy={acknowledgementsStudyTitle}
       >
         {studyName}
       </Typography>
     );
   } else {
     title = (
-      <Typography variant="h5" component="h3" gutterBottom={true}>
+      <Typography
+        variant="h5" component="h3" gutterBottom={true}
+        data-cy={acknowledgementsStudyTitle}
+      >
         {studyName}
       </Typography>
     );

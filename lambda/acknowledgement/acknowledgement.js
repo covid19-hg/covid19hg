@@ -9,12 +9,12 @@ const fetchAdditionalContributorsData = throttle(
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event, context) => {
   try {
-    const contributors = await fetchAdditionalContributorsData()
+    const contributors = await fetchAdditionalContributorsData();
     return {
       statusCode: 200,
       headers: { "Cache-Control": "public, max-age=300" },
       body: JSON.stringify({
-        data: contributors
+        data: contributors,
       }),
     };
   } catch (err) {

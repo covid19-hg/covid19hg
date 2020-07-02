@@ -8,6 +8,7 @@ import {
   listAndMapHeight,
   ListMapTitleGridItem,
 } from "./partnersPageStylingParams";
+import { partnersStudyListCountCypressDataAttr } from "../cypressTestDataAttrs";
 
 const useMaterialStyles = makeStyles(() => ({
   listRoot: {
@@ -77,7 +78,12 @@ const StudyList = ({
           display="flex"
           alignItems={"center" as "center"}
         >
-          <Typography variant="h5">{studyListHeadingText}</Typography>
+          <Typography
+            variant="h5"
+            data-cy={partnersStudyListCountCypressDataAttr}
+          >
+            {studyListHeadingText}
+          </Typography>
         </ListMapTitleGridItem>
         <Grid
           item={true}

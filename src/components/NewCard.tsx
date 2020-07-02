@@ -11,6 +11,10 @@ import { ExtractProps } from "./partnersPageStylingParams";
 import Link from "@material-ui/core/Link";
 import MuiCard from "@material-ui/core/Card";
 import { CardContent, Divider } from "@material-ui/core";
+import {
+  partnersDetailCardTitleCyDataAttr,
+  partnersInvestigatorContactButton,
+} from "../cypressTestDataAttrs";
 
 const viralSequencingColor = "rgb(204, 223, 254)";
 const transcriptomicsColor = "rgb(193, 244, 233)";
@@ -171,7 +175,12 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
   let cardTitle: React.ReactElement<any>;
   if (studyLink === undefined) {
     cardTitle = (
-      <Typography variant="h5" component="h4" gutterBottom={true}>
+      <Typography
+        variant="h5"
+        component="h4"
+        gutterBottom={true}
+        data-cy={partnersDetailCardTitleCyDataAttr}
+      >
         {study}
       </Typography>
     );
@@ -183,6 +192,7 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
         target="_blank"
         underline="none"
         className={classes.titleContainerWithLink}
+        data-cy={partnersDetailCardTitleCyDataAttr}
       >
         <Typography
           variant="h5"
@@ -260,6 +270,7 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
         size="small"
         className={classes.contactButtonRoot}
         onClick={() => showContactForm()}
+        data-cy={partnersInvestigatorContactButton}
       >
         Contact
       </Button>

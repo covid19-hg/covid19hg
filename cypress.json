@@ -1,0 +1,7 @@
+{
+  "baseUrl": "http://localhost:8888",
+  "chromeWebSecurity": false,
+  "experimentalFetchPolyfill": true,
+  "viewportWidth": 1200,
+  "viewportHeight": 1000
+}

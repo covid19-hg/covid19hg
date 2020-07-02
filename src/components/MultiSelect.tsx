@@ -42,8 +42,19 @@ interface Props {
   onChange: (value: string[]) => void;
   options: string[];
   label: string;
+  // data-cy attribute for each option:
+  optionDataCyAttr: string;
+  // data-cy attribute for the main select element:
+  mainDataCyAttr: string;
 }
-const MultiSelect = ({ value, onChange, options, label }: Props) => {
+const MultiSelect = ({
+  value,
+  onChange,
+  options,
+  label,
+  optionDataCyAttr,
+  mainDataCyAttr,
+}: Props) => {
   const classes = useStyles();
   return (
     <FormControl component="fieldset" className={classes.root}>
@@ -56,6 +67,7 @@ const MultiSelect = ({ value, onChange, options, label }: Props) => {
           className={classes.select}
           onChange={(event) => onChange(event.target.value as string[])}
           input={<Input disableUnderline={true} />}
+          data-cy={mainDataCyAttr}
           renderValue={(selected) => (
             <Box display="flex" flexWrap="wrap">
               {(selected as string[]).map((value) => (
@@ -66,7 +78,7 @@ const MultiSelect = ({ value, onChange, options, label }: Props) => {
           MenuProps={MenuProps}
         >
           {options.map((name) => (
-            <MenuItem key={name} value={name}>
+            <MenuItem key={name} value={name} data-cy={optionDataCyAttr}>
               {name}
             </MenuItem>
           ))}
