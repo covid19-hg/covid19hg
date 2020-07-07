@@ -7,6 +7,20 @@ import { Container } from "../components/materialUIContainers";
 import { HTMLContent } from "../components/Content";
 import { Typography } from "@material-ui/core";
 
+export const AboutPageTemplate = ({ content }) => {
+  return (
+    <Container fixed={true} marginTop={1}>
+      <Typography>
+        <HTMLContent content={content} />
+      </Typography>
+    </Container>
+  );
+};
+
+AboutPageTemplate.propTypes = {
+  content: PropTypes.string,
+};
+
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/about/");
@@ -14,11 +28,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout title="About">
       {canonicalLinkMetaTag}
-      <Container fixed={true} marginTop={1}>
-        <Typography>
-          <HTMLContent content={post.html} />
-        </Typography>
-      </Container>
+      <AboutPageTemplate content={post.html} />
     </Layout>
   );
 };
