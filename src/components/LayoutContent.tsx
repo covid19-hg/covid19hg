@@ -138,6 +138,7 @@ const LayoutContent = ({ title, children }: Props) => {
       ),
     },
     { href: "/acknowledgements/", label: "Acknowledgements" },
+    { href: "/media/", label: "Media" },
   ];
   const drawerItems = linkInfo.map(({ href, label }, index) => (
     <ListItem button={false} key={index}>
