@@ -36,7 +36,7 @@ in leafcutter splice variation GTEx v8 Lung (Bonf-p = 2.10e-06).
 
 **Authors:** Nicholas Mancuso, Zeyun Lu, Shyamalika Gopalan, Kangcheng Hou, Bogdan Pasaniuc
 
-**Data**: [covid_07022020.twas.sp_twas.pwas.tar.bz2](https://storage.googleapis.com/covid19-hg-in-silico-followup/TWAS/covid_07022020.twas.sp_twas.pwas.tar.bz2)
+**Data**: [covid19hgi.fusion.tar.bz2](https://storage.googleapis.com/covid19-hg-in-silico-followup/TWAS/covid19hgi.fusion.tar.bz2)
 
 **README**: [covid19_063020.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/TWAS/covid19_063020.docx)
 
