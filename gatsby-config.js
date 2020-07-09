@@ -5,7 +5,7 @@ const localConfig = dotEnv.config({
 });
 if (localConfig.error) {
   console.warn(
-    "Cannot load local env variables. Ignore if on CI or if no local-specifiv env variables are needed.\n",
+    "Cannot load local env variables. Ignore if on CI, if no local-specifiv env variables are needed or if using netlify dev.\n",
     localConfig.error
   );
 }
