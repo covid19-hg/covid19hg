@@ -27,13 +27,15 @@ export interface CheckboxInfo {
 interface Props {
   checkboxes: CheckboxInfo[];
   label: string;
+  dataCyAttr: string;
 }
-const CheckboxGroup = ({ checkboxes, label }: Props) => {
+const CheckboxGroup = ({ checkboxes, label, dataCyAttr }: Props) => {
   const classes = useStyles();
   const checkboxElems = checkboxes.map(
     ({ label, isChecked, onChange }, index) => (
       <FormControlLabel
         key={index}
+        data-cy={dataCyAttr}
         control={
           <Checkbox
             checked={isChecked}

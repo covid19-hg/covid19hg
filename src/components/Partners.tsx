@@ -17,6 +17,14 @@ import MultiSelect from "./MultiSelect";
 import TextSearch from "./TextSearch";
 import { useTheme } from "@material-ui/core/styles";
 import { useMediaQuery } from "@material-ui/core";
+import {
+  partnersStudyTypeFilter,
+  partnersGeneticAnalysisFilter,
+  partnersAssaysPlannedOption,
+  partnersAssaysPlannedSelector,
+  partnersResearchCategoriesOption,
+  partnersResearchCategoriesSelector,
+} from "../cypressTestDataAttrs";
 
 const assayNames = assayOptions.map(({ name }) => name);
 
@@ -200,7 +208,11 @@ const Partners = ({
     },
   ];
   const studyTypeElem = (
-    <CheckboxGroup label="Study Type" checkboxes={studyTypeCheckboxes} />
+    <CheckboxGroup
+      label="Study Type"
+      checkboxes={studyTypeCheckboxes}
+      dataCyAttr={partnersStudyTypeFilter}
+    />
   );
 
   const assaysPlannedElem = (
@@ -215,6 +227,8 @@ const Partners = ({
       }}
       options={assayNames}
       label="Assays Planned"
+      mainDataCyAttr={partnersAssaysPlannedSelector}
+      optionDataCyAttr={partnersAssaysPlannedOption}
     />
   );
 
@@ -258,6 +272,7 @@ const Partners = ({
     <CheckboxGroup
       label="Genetic Analysis"
       checkboxes={geneticAnalysisCheckboxes}
+      dataCyAttr={partnersGeneticAnalysisFilter}
     />
   );
 
@@ -282,6 +297,8 @@ const Partners = ({
         }}
         options={researchCategoryNames}
         label="Research Categories"
+        mainDataCyAttr={partnersResearchCategoriesSelector}
+        optionDataCyAttr={partnersResearchCategoriesOption}
       />
     );
   }

@@ -6,6 +6,17 @@
   YARN_VERSION = "1.22.4"
   YARN_FLAGS = "--no-ignore-optional"
   NODE_VERSION = "12.16.1"
+
+  # Cypress plugin settings:
+  # https://github.com/cypress-io/netlify-plugin-cypress/tree/67984d074a7faef06eadf0cf642ef4636b43ed7f#recommended
+  # cache Cypress binary in local "node_modules" folder
+  # so Netlify caches it
+  CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+  # set TERM variable for terminal output
+  TERM = "xterm"
+
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
+[[plugins]]
+  package = "netlify-plugin-cypress"
 

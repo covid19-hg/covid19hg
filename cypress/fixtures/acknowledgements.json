@@ -1,0 +1,298 @@
+{
+  "data": [
+    {
+      "contributor": "Eco de Geus",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-netherlands"],
+      "affiliation": "Department of Biological Psychology, Vrije Universiteit Amsterdam",
+      "id": "recK94QLaKhCuJOdX"
+    },
+    {
+      "contributor": "Meike Bartels",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-netherlands"],
+      "affiliation": "Department of Biological Psychology, Vrije Universiteit Amsterdam",
+      "id": "recMeCZCi8HMV7uPC"
+    },
+    {
+      "contributor": "Michel G Nivard",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-netherlands"],
+      "affiliation": "Department of Biological Psychology, Vrije Universiteit Amsterdam",
+      "id": "recIKZ7ubXgC5LgPS"
+    },
+    {
+      "contributor": "Jouke-Jan Hottenga",
+      "role": "Analysis",
+      "studyIds": ["rec-netherlands"],
+      "affiliation": "Department of Biological Psychology, Vrije Universiteit Amsterdam",
+      "id": "recaNaaKko5ratP1R"
+    },
+    {
+      "contributor": "Alexandre C Pereira",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-brazil"],
+      "affiliation": "Heart Institute, University of Sao Paulo, Brazil",
+      "id": "recxl0YQzBE1r1iSh"
+    },
+    {
+      "contributor": "Jose E Krieger",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-brazil"],
+      "affiliation": "Heart Institute, University of Sao Paulo, Brazil",
+      "id": "rec4G1LBLJb9UA4m7"
+    },
+    {
+      "contributor": "Emmanuelle Marques",
+      "role": "Technical support",
+      "studyIds": ["rec-brazil"],
+      "affiliation": "Heart Institute, University of Sao Paulo, Brazil",
+      "id": "recmQ4gMevWiAY6wT"
+    },
+    {
+      "contributor": "Cinthia E Jannes",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-brazil"],
+      "affiliation": "Heart Institute, University of Sao Paulo, Brazil",
+      "id": "recya5RWGLBD60ew8"
+    },
+    {
+      "contributor": "David A van Heel",
+      "role": "Analysis",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Queen Mary University of London",
+      "id": "recSXGzfORQbKKPli"
+    },
+    {
+      "contributor": "Bhavi Trivedi",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Queen Mary University of London",
+      "id": "recIN3VoDCaXVBXbB"
+    },
+    {
+      "contributor": "Karen A Hunt",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Queen Mary University of London",
+      "id": "recc9nFcNxbUxLJMW"
+    },
+    {
+      "contributor": "Qinqin Huang",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Wellcome Sanger Institute",
+      "id": "rect52XBKuBVk1r9J"
+    },
+    {
+      "contributor": "Hilary C Martin",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Wellcome Sanger Institute",
+      "id": "recBYsGHLSQNgVlhp"
+    },
+    {
+      "contributor": "Christopher Griffiths",
+      "role": "Other",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Queen Mary University of London",
+      "id": "recUYts8wf4YGjRpf"
+    },
+    {
+      "contributor": "Sarah Finer",
+      "role": "Other",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Queen Mary University of London",
+      "id": "recprpPJbhTYDreW4"
+    },
+    {
+      "contributor": "Dan Mason",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Bradford Institute for Health Research",
+      "id": "rec4gBbC97pCcAz9b"
+    },
+    {
+      "contributor": "John Wright",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Bradford Institute for Health Research",
+      "id": "rec2Q8gpvpN00rPVh"
+    },
+    {
+      "contributor": "Richard C Trembath",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-genes-health"],
+      "affiliation": "Kings College London",
+      "id": "reclFdXwJyspM5t3c"
+    },
+    {
+      "contributor": "Lude Franke",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-lifelines"],
+      "affiliation": "Department of Genetics, University Medical Centre Groningen, University of Groningen",
+      "id": "recUhklW7VPfL8KZL"
+    },
+    {
+      "contributor": "Marike Boezen",
+      "role": "Data collection and coordination",
+      "studyIds": ["rec-lifelines"],
+      "affiliation": "Department of Epidemiology, University Medical Centre Groningen, University of Groningen",
+      "id": "recS4XfekOONhNYQ1"
+    },
+    {
+      "contributor": "Patrick Deelen",
+      "role": "Analysis",
+      "studyIds": ["rec-lifelines"],
+      "affiliation": "Department of Genetics, University Medical Centre Groningen, University of Groningen",
+      "id": "rec0jJZTXQIyLBt8Q"
+    },
+    {
+      "contributor": "Annique Claringbould",
+      "role": "Analysis",
+      "studyIds": ["rec-lifelines"],
+      "affiliation": "Department of Genetics, University Medical Centre Groningen, University of Groningen",
+      "id": "recdxCH1JOTOXNpM2"
+    },
+    {
+      "contributor": "Esteban Lopera",
+      "role": "Analysis",
+      "studyIds": ["rec-lifelines"],
+      "affiliation": "Department of Genetics, University Medical Centre Groningen, University of Groningen",
+      "id": "recHYTmtUt4l1dSM7"
+    },
+    {
+      "contributor": "Robert Warmerdam",
+      "role": "Analysis",
+      "studyIds": ["rec-lifelines"],
+      "affiliation": "Department of Genetics, University Medical Center Groningen, University of Groningen",
+      "id": "reclZCwZqhVl09hCU"
+    },
+    {
+      "contributor": "Karolina Chwialkowska",
+      "role": "Administrative support",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Centre for Bioinformatics and Data Analysis, Medical University of Bialystok, Bialystok, Poland; IMAGENE.ME SA",
+      "id": "recgZzwOqtPymomXl"
+    },
+    {
+      "contributor": "Margherita Francescatto",
+      "role": "Administrative support",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Department of Medical, Surgical and Health Sciences, University of Trieste, Trieste, Italy",
+      "id": "rec8Gbuncu1gA7hT2"
+    },
+    {
+      "contributor": "Amy Trankiem ",
+      "role": "International Common Disease Alliance",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Broad Institute",
+      "id": "rec0KIsJtvCaG1QCL"
+    },
+    {
+      "contributor": "Matthew Solomonson",
+      "role": "Website",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Analytical and translational genetics unit, Massachusetts General Hospital, Boston, USA",
+      "id": "recmK4Fy8JGxE8qYz"
+    },
+    {
+      "contributor": "Kate Balaconis",
+      "role": "International Common Disease Alliance",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Broad Institute",
+      "id": "reckh2ZeZD26yfq1c"
+    },
+    {
+      "contributor": "Rachel Liao  ",
+      "role": "Leadership",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Broad Institute",
+      "id": "rec5KaMLEiHDJoCgZ"
+    },
+    {
+      "contributor": "Mark Daly",
+      "role": "Leadership",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Broad Institute",
+      "id": "recD3ocMS5t8fStRj"
+    },
+    {
+      "contributor": "Ben Neale",
+      "role": "Leadership",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Broad Institute",
+      "id": "recLXS2yTMWPJSBfc"
+    },
+    {
+      "contributor": "Andrea Ganna",
+      "role": "Leadership",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Broad Institute",
+      "id": "rectVXCCY1KoFD2jK"
+    },
+    {
+      "contributor": "Christine Stevens",
+      "role": "Administrative support",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Broad Institute",
+      "id": "recbxN6OlRYRTlUWE"
+    },
+    {
+      "contributor": "Huy Nguyen",
+      "role": "Website",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Analytical and translational genetics unit, Massachusetts General Hospital, Boston, USA",
+      "id": "recdweH7aL7SeBYKl"
+    },
+    {
+      "contributor": "Juha Karjalainen ",
+      "role": "Analysis",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Analytical and translational genetics unit, Massachusetts General Hospital, Boston, USA",
+      "id": "recc4adcoHAttYgz0"
+    },
+    {
+      "contributor": "Wei Zhou",
+      "role": "Analysis",
+      "adhocGroup": "COVID-19 Host Genetics Initiative Coordination",
+      "affiliation": "Analytical and translational genetics unit, Massachusetts General Hospital, Boston, USA",
+      "id": "receCGUifQGrqoVoE"
+    },
+    {
+      "contributor": "Nicholas Mancuso",
+      "role": "Analysis",
+      "adhocGroup": "In silico follow-up results",
+      "affiliation": "Department of Preventive Medicine, Keck School of Medicine, University of Southern California, Los Angeles, USA",
+      "id": "reclrcJ6aubMZidxS"
+    },
+    {
+      "contributor": "Zeyun Lu",
+      "role": "Analysis",
+      "adhocGroup": "In silico follow-up results",
+      "affiliation": "Department of Preventive Medicine, Keck School of Medicine, University of Southern California, Los Angeles, USA",
+      "id": "rect7CBBCYO91ym6V"
+    },
+    {
+      "contributor": "Shyamalika Gopalan",
+      "role": "Analysis",
+      "adhocGroup": "In silico follow-up results",
+      "affiliation": "Department of Preventive Medicine, Keck School of Medicine, University of Southern California, Los Angeles, USA",
+      "id": "recNO27O8bdTSh7eL"
+    },
+    {
+      "contributor": "Kangcheng Hou",
+      "role": "Analysis",
+      "adhocGroup": "In silico follow-up results",
+      "affiliation": "David Geffen School of Medicine, University of California, Los Angeles, USA",
+      "id": "recS7BOyvlZJXRSfa"
+    },
+    {
+      "contributor": "Bogdan Pasaniuc",
+      "role": "Analysis",
+      "adhocGroup": "In silico follow-up results",
+      "affiliation": "David Geffen School of Medicine, University of California, Los Angeles, USA",
+      "id": "recMmNQH7fgTLGVc2"
+    }
+  ]
+}

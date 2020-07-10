@@ -14,16 +14,14 @@ import {
   State as PartnersState,
 } from "./Partners";
 import CircularProgress from "@material-ui/core/CircularProgress";
-
-const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
-if (typeof RECAPTCHA_KEY === "undefined") {
-  throw new Error(`
-  Env var GATSBY_APP_SITE_RECAPTCHA_KEY is undefined!
-  You probably forget to set it in your Netlify build environment variables.
-  Make sure to get a Recaptcha key at https://www.netlify.com/docs/form-handling/#custom-recaptcha-2-with-your-own-settings
-  Note this demo is specifically for Recaptcha v2
-  `);
-}
+import RECAPTCHA_KEY from "./recaptchaKey";
+import {
+  partnersInvestigatorContactFormName,
+  partnersInvestigatorContactFormEmail,
+  partnersInvestigatorContactFormMessage,
+  partnersInvestigatorContactFormCancelButton,
+  partnersInvestigatorContactFormSendButton,
+} from "../cypressTestDataAttrs";
 
 const SET_STATE_ACTION_NAME = "SET_STATE";
 const RESET_ACTION_NAME = "RESET";
@@ -239,6 +237,7 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
               required={true}
               fullWidth={true}
               margin="normal"
+              data-cy={partnersInvestigatorContactFormName}
               onChange={(e) =>
                 dispatch({
                   type: SET_STATE_ACTION_NAME,
@@ -254,6 +253,7 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
               required={true}
               fullWidth={true}
               margin="normal"
+              data-cy={partnersInvestigatorContactFormEmail}
               onChange={(e) =>
                 dispatch({
                   type: SET_STATE_ACTION_NAME,
@@ -270,6 +270,7 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
               fullWidth={true}
               multiline={true}
               margin="normal"
+              data-cy={partnersInvestigatorContactFormMessage}
               onChange={(e) =>
                 dispatch({
                   type: SET_STATE_ACTION_NAME,
@@ -282,7 +283,11 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
             />
             <Recaptcha sitekey={RECAPTCHA_KEY} onChange={onRecaptchaChange} />
             <DialogActions>
-              <Button onClick={cancelButtonClickHandler} color="primary">
+              <Button
+                onClick={cancelButtonClickHandler}
+                color="primary"
+                data-cy={partnersInvestigatorContactFormCancelButton}
+              >
                 {cancelButtonContent}
               </Button>
               <Button
@@ -290,6 +295,7 @@ const InvestigatorContactForm = <K extends keyof PartnersState>({
                 color="primary"
                 type="submit"
                 onClick={sendButtonClickHandler}
+                data-cy={partnersInvestigatorContactFormSendButton}
               >
                 {sendButtonContent}
               </Button>

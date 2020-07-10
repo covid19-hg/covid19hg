@@ -6,6 +6,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import { makeStyles } from "@material-ui/core";
 import { submittedDataMarkerColor } from "./MapMarker";
+import { partnersStudyListItemCypressDataAttr } from "../cypressTestDataAttrs";
 
 const useMaterialStyles = makeStyles(() => ({
   iconRoot: {
@@ -57,6 +58,7 @@ const SmartListItem = (props: Props) => {
       selected={isSelected}
       onClick={onClick}
       ref={rememberEl}
+      data-cy={partnersStudyListItemCypressDataAttr}
     >
       <ListItemIcon>{icon}</ListItemIcon>
       <ListItemText>{study}</ListItemText>

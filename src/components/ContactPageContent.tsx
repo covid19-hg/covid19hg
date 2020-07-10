@@ -7,16 +7,13 @@ import Recaptcha from "react-google-recaptcha";
 import { Container } from "./materialUIContainers";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles, Theme, Button } from "@material-ui/core";
-
-const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
-if (typeof RECAPTCHA_KEY === "undefined") {
-  throw new Error(`
-  Env var GATSBY_APP_SITE_RECAPTCHA_KEY is undefined!
-  You probably forget to set it in your Netlify build environment variables.
-  Make sure to get a Recaptcha key at https://www.netlify.com/docs/form-handling/#custom-recaptcha-2-with-your-own-settings
-  Note this demo is specifically for Recaptcha v2
-  `);
-}
+import {
+  contactFormNameCypressDataAttr,
+  contactFormEmailCypressDataAttr,
+  contactFormMessageCypressDataAttr,
+  contactFormSubmitCypressDataAttr,
+} from "../cypressTestDataAttrs";
+import RECAPTCHA_KEY from "./recaptchaKey";
 
 const encode = (data: any) => {
   return Object.keys(data)
@@ -83,6 +80,7 @@ const ContactPageContent = () => {
         </noscript>
         <TextField
           name="name"
+          data-cy={contactFormNameCypressDataAttr}
           variant="outlined"
           label="Your Name"
           fullWidth={true}
@@ -91,6 +89,7 @@ const ContactPageContent = () => {
         />
         <TextField
           name="email"
+          data-cy={contactFormEmailCypressDataAttr}
           variant="outlined"
           label="Email"
           fullWidth={true}
@@ -99,6 +98,7 @@ const ContactPageContent = () => {
         />
         <TextField
           name="message"
+          data-cy={contactFormMessageCypressDataAttr}
           variant="outlined"
           label="Message"
           multiline={true}
@@ -118,6 +118,7 @@ const ContactPageContent = () => {
             variant="contained"
             disabled={!submitButtonEnabled}
             type="submit"
+            data-cy={contactFormSubmitCypressDataAttr}
           >
             Send
           </Button>
