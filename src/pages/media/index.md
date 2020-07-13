@@ -3,6 +3,11 @@ templateKey: media-page
 title: Media
 articles:
   - title: >
+      How hundreds of scientists from 50 nations are collaborating on Slack to study genetics & COVID-19
+    url: https://thegeneticspodcast.fireside.fm/39
+    source: Genetics Podcast
+    date: July 9, 2020
+  - title: >
       DNA Inherited From Neanderthals May Increase Risk of Covid-19
     url: https://www.nytimes.com/2020/07/04/health/coronavirus-neanderthals.html
     source: New York Times
