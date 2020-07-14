@@ -36,7 +36,10 @@ const DataSharingPageContent = ({ qas, dataSharingWorkflowImage }: Props) => {
   ));
   return (
     <Container marginTop={1} fixed={true}>
-      <Img fluid={dataSharingWorkflowImage.childImageSharp.fluid} />
+      <Img
+        fluid={dataSharingWorkflowImage.childImageSharp.fluid}
+        loading="eager"
+      />
       {pairs}
     </Container>
   );

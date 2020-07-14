@@ -120,6 +120,8 @@ const IndexPageContent = ({
   return (
     <>
       <Img fluid={image.childImageSharp.fluid} />
+        loading="eager"
+      />
       <Container marginTop={2} fixed={true}>
         <Grid container={true} spacing={2} marginTop={10}>
           <Grid item={true} xs={12}>
