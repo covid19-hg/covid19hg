@@ -119,7 +119,8 @@ const IndexPageContent = ({
   });
   return (
     <>
-      <Img fluid={image.childImageSharp.fluid} />
+      <Img
+        fluid={image.childImageSharp.fluid}
         loading="eager"
       />
       <Container marginTop={2} fixed={true}>
