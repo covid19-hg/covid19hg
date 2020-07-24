@@ -114,4 +114,24 @@ projects:
     contact-persons:
       - Lea Davis
       - Eric Kerchberger
+  - title: Post COVID-19 lung fibrosis project 
+    description: >-
+      Early reports based on radiologic evidence suggest that lung fibrosis might be 
+      a short-term sequelae of COVID-19 but the extent to which this is progressive over time, 
+      and how this relates to interventions during the acute phase of COVID-19 infection are yet
+      to be understood. As many countries move beyond the first wave of the pandemic, studies are
+      being established to define and understand COVID-19 sequelae. Even if only a small proportion
+      of individuals go on to develop progressive pulmonary fibrosis after COVID-19, the scale of the
+      pandemic means that those individuals will still represent a substantial patient population.
+
+      This project aims to understand the genetic determinants of post-COVID-19 fibrosis and to use this 
+      to yield valuable knowledge about the genes and pathways that promote fibrotic processes during 
+      infection and recovery from coronavirus infection. This information could also enable identification
+      of individuals who might be at highest risk of progressive fibrosis for whom earlier intervention with 
+      anti-fibrotic medicines would be of benefit.
+    slack-channel: '#covid19-hg-postcovid-fibrosis'
+    contact-persons:
+      - Tomoko Nakanishi
+      - Brent Richards
+      - Louise Wain 	
 ---
