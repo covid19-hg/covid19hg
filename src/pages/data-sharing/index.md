@@ -58,9 +58,8 @@ qas:
       All researchers can apply for access to the initiative's data deposited on
       EGA and AnVIL via their respective DAC. For data at the EGA, the DAC is
       composed by the PIs of the studies that have deposited the data, and will
-      facilitate access to the full data pool. For data on the AnVIL, a HGI
-      specific DAC composed of members of the HGI will manage data access via
-      [DUOS](https://duos.broadinstitute.org/). 
+      facilitate access to the full data pool. For data on the AnVIL, access will 
+      be managed by a DAC at the NIH.
 
 
       All researchers are required to follow the code of conduct outlined in
