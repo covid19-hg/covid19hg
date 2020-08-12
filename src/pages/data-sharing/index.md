@@ -6,13 +6,13 @@ qas:
     answer: >-
       You can submit data in two ways. You can submit *results summary
       statistics* (calculated and formatted according to the [analysis
-      plan](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit?usp=sharing))
+      plan](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing))
       or you can submit *individual-level data*.
 
 
       We prefer you submit individual-level data because they can be used beyond
       the few analyses that are described in the [analysis
-      plan](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit?usp=sharing).
+      plan](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing).
 
 
       **Results summary statistics**
@@ -20,7 +20,7 @@ qas:
 
       Information on how to upload results summary statistics are given in the
       [analysis
-      plan](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit?usp=sharing)
+      plan](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing)
       in the section “Results upload instructions”
 
 
@@ -58,7 +58,7 @@ qas:
       All researchers can apply for access to the initiative's data deposited on
       EGA and AnVIL via their respective DAC. For data at the EGA, the DAC is
       composed by the PIs of the studies that have deposited the data, and will
-      facilitate access to the full data pool. For data on the AnVIL, access will 
+      facilitate access to the full data pool. For data on the AnVIL, access will
       be managed by a DAC at the NIH.
 
 
