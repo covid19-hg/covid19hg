@@ -8,9 +8,7 @@ projectsIntro: >-
 
 
   #### **As a reminder the centralized analyses are based on
-  [this](https://docs.google.com/document/d/1okamrqYmJfa35ClLvCt_vEe4PkvrTwggHq7T3jbeyCI/edit?usp=sharing)
-  phenotype definitions and
-  [this](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit?ts=5e964dc2#)
+  [this](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing)
   analysis plan.**
 projects:
   - title: Clonal Hematopoiesis
@@ -114,24 +112,24 @@ projects:
     contact-persons:
       - Lea Davis
       - Eric Kerchberger
-  - title: Post COVID-19 lung fibrosis project 
+  - title: Post COVID-19 lung fibrosis project
     description: >-
-      Early reports based on radiologic evidence suggest that lung fibrosis might be 
-      a short-term sequelae of COVID-19 but the extent to which this is progressive over time, 
+      Early reports based on radiologic evidence suggest that lung fibrosis might be
+      a short-term sequelae of COVID-19 but the extent to which this is progressive over time,
       and how this relates to interventions during the acute phase of COVID-19 infection are yet
       to be understood. As many countries move beyond the first wave of the pandemic, studies are
       being established to define and understand COVID-19 sequelae. Even if only a small proportion
       of individuals go on to develop progressive pulmonary fibrosis after COVID-19, the scale of the
       pandemic means that those individuals will still represent a substantial patient population.
 
-      This project aims to understand the genetic determinants of post-COVID-19 fibrosis and to use this 
-      to yield valuable knowledge about the genes and pathways that promote fibrotic processes during 
+      This project aims to understand the genetic determinants of post-COVID-19 fibrosis and to use this
+      to yield valuable knowledge about the genes and pathways that promote fibrotic processes during
       infection and recovery from coronavirus infection. This information could also enable identification
-      of individuals who might be at highest risk of progressive fibrosis for whom earlier intervention with 
+      of individuals who might be at highest risk of progressive fibrosis for whom earlier intervention with
       anti-fibrotic medicines would be of benefit.
     slack-channel: '#covid19-hg-postcovid-fibrosis'
     contact-persons:
       - Tomoko Nakanishi
       - Brent Richards
-      - Louise Wain 	
+      - Louise Wain
 ---
