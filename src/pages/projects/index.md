@@ -24,7 +24,8 @@ projects:
       may be a critical driver of CH. Therefore, studying the acute effects of
       SARS-CoV-2 infection on the dynamics of CH would provide insight into the
       potentiators of CH. We seek to understand how clonal hematopoiesis might
-      influence COVID-19 illness severity.
+      influence COVID-19 illness severity and conversely how acute infection
+      with SARS-CoV-2 might promote expansion of CHIP.
     contact-persons:
       - Philip Awadalla
       - Pradeep Natarajan
