@@ -7,33 +7,29 @@ projectsIntro: >-
   they require specialized approaches or focus on specific patients groups.**
 
 
-  #### **As a reminder the centralized analyses are based on
-  [this](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing)
-  analysis plan.**
+  #### **As a reminder the centralized analyses are based on [this](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing) analysis plan.**
 projects:
   - title: Clonal Hematopoiesis
-    description: >
-      The presence of pre-existing cardiovascular and lung disease are known to
-      be associated with severe COVID-19. Beyond medical comorbidities, age is a
-      strong independent predictor of COVID-19 severity and may be related to
-      age-related changes in inflammatory cells.  Clonal Hematopoiesis is known
-      to alter the inflammatory profile of healthy individuals and may, in part,
-      be a mediator of its ill-effects including cardiovascular disease.
-      Age-related somatic mutations in circulating inflammatory cells have been
-      shown to predispose to chronic inflammatory dysregulation. In some cases,
-      these involve the same pathways implicated in COVID-19. However, whether
-      CH predisposes to severe COVID-19 or affects the complications of COVID-19
-      is unknown. Conversely, inflammatory stress may be a critical driver of
-      CH. Therefore, studying the acute effects of SARS-CoV-2 infection on the
-      dynamics of CH would provide insight into the potentiators of CH. We seek
-      to understand how clonal hematopoiesis might influence COVID-19 illness
-      severity and conversely how acute infection with SARS-CoV-2 might promote
-      expansion of CHIP.
+    description: The presence of pre-existing cardiovascular and lung disease are
+      known to be associated with severe COVID-19. Beyond medical comorbidities,
+      age is a strong independent predictor of COVID-19 severity and may be
+      related to age-related changes in inflammatory cells.  Clonal
+      Hematopoiesis is known to alter the inflammatory profile of healthy
+      individuals and may, in part, be a mediator of its ill-effects including
+      cardiovascular disease. Age-related somatic mutations in circulating
+      inflammatory cells have been shown to predispose to chronic inflammatory
+      dysregulation. In some cases, these involve the same pathways implicated
+      in COVID-19. However, whether CH predisposes to severe COVID-19 or affects
+      the complications of COVID-19 is unknown. Conversely, inflammatory stress
+      may be a critical driver of CH. Therefore, studying the acute effects of
+      SARS-CoV-2 infection on the dynamics of CH would provide insight into the
+      potentiators of CH. We seek to understand how clonal hematopoiesis might
+      influence COVID-19 illness severity.
     contact-persons:
       - Philip Awadalla
       - Pradeep Natarajan
       - Kelly Bolton
-    slack-channel: '#covid19-hg-clonalhematopoeisis'
+    slack-channel: "#covid19-hg-clonalhematopoeisis"
   - title: COVID19 vascular complications
     description: >
       Recent publications suggest that vascular complications are common in
@@ -45,46 +41,17 @@ projects:
       thrombotic events in 3.7%.
 
 
-      Two recent French studies have underlined an unexpected high number of VTE
-      (mainly pulmonary embolism - PE) with a prevalence of 16% (64/150) in
-      Strasbourg (3) and 21% (22/107) in Lille despite a conventional
-      thromboprophylaxis in COVID19 patients admitted in ICU. This high increase
-      in PE prevalence which is twice higher than the frequency of PE in the
-      influenza ICU patients may worsen the respiratory prognosis of COVID-19
-      patients. The low number of associated deep vein thrombosis (DVT)in
-      COVID-19 patients may suggest that they have pulmonary thrombosis rather
-      than embolism. In another recent series of 221 patients with COVID-19
-      hospitalized in Union hospital, Wuhan, 5% developed acute ischemic stroke
-      (5 large-vessel occlusion, 3 small vessel occlusion, and 3 cardioembolic
-      strokes), 0.5% cerebral venous sinus thrombosis, 0.5% intracerebral
-      hemorrhage.
+      Two recent French studies have underlined an unexpected high number of VTE (mainly pulmonary embolism - PE) with a prevalence of 16% (64/150) in Strasbourg (3) and 21% (22/107) in Lille despite a conventional thromboprophylaxis in COVID19 patients admitted in ICU. This high increase in PE prevalence which is twice higher than the frequency of PE in the influenza ICU patients may worsen the respiratory prognosis of COVID-19 patients. The low number of associated deep vein thrombosis (DVT)in COVID-19 patients may suggest that they have pulmonary thrombosis rather than embolism. In another recent series of 221 patients with COVID-19 hospitalized in Union hospital, Wuhan, 5% developed acute ischemic stroke (5 large-vessel occlusion, 3 small vessel occlusion, and 3 cardioembolic strokes), 0.5% cerebral venous sinus thrombosis, 0.5% intracerebral hemorrhage.
 
 
-      While in this and other series COVID19 patients with cerebrovascular
-      complications were significantly older than those without, recent reports
-      from New-York hospitals have described large-vessel strokes as a
-      presenting feature in several young patients. The mechanisms underlying
-      these vascular complications is unclear and could involve excessive
-      inflammation, hypoxia, immobilization and obesity (for VTE),
-      hypercoagulability diffuse intravascular coagulation, cardio-embolism from
-      COVID-19-related cardiac injury and arrhythmia, and possibly invasion of
-      the central nervous system by SARS-CoV-2 leading to encephalopathy. Stroke
-      and VTE genetic predisposition in the general population has been
-      confirmed by recent waves of Genome Wide Association (GWAs) and genetic
-      factors may also modulate the risk of such complications in COVID19
-      patients. Better understanding the mechanisms underlying the risk of
-      vascular / thrombotic complications in COVID19 patients has important
-      implications for prevention strategies.
+      While in this and other series COVID19 patients with cerebrovascular complications were significantly older than those without, recent reports from New-York hospitals have described large-vessel strokes as a presenting feature in several young patients. The mechanisms underlying these vascular complications is unclear and could involve excessive inflammation, hypoxia, immobilization and obesity (for VTE), hypercoagulability diffuse intravascular coagulation, cardio-embolism from COVID-19-related cardiac injury and arrhythmia, and possibly invasion of the central nervous system by SARS-CoV-2 leading to encephalopathy. Stroke and VTE genetic predisposition in the general population has been confirmed by recent waves of Genome Wide Association (GWAs) and genetic factors may also modulate the risk of such complications in COVID19 patients. Better understanding the mechanisms underlying the risk of vascular / thrombotic complications in COVID19 patients has important implications for prevention strategies.
 
-      We aim to identify genetic risk factors associated with the risk of
-      vascular complications (stroke and VTE) in COVID-19 patients, using both
-      an agnostic approach and focusing on known genetic risk factors for these
-      vascular diseases.
+      We aim to identify genetic risk factors associated with the risk of vascular complications (stroke and VTE) in COVID-19 patients, using both an agnostic approach and focusing on known genetic risk factors for these vascular diseases.
     contact-persons:
       - Israel Fernández Cadenas
       - Stéphanie Debette
       - David Alexandre Tregouet
-    slack-channel: '#covid19-hg-stroke-vte'
+    slack-channel: "#covid19-hg-stroke-vte"
   - title: Acute respiratory distress syndrome
     description: >-
       The most severe outcome among COVID-19 cases includes acute respiratory
@@ -98,36 +65,28 @@ projects:
       sepsis.
 
 
-      The primary research question includes: Which host genetic susceptibility
-      factors are associated with ARDS or ARDS-like phenotypes in the context of
-      respiratory viruses OR sepsis?
+      The primary research question includes: Which host genetic susceptibility factors are associated with ARDS or ARDS-like phenotypes in the context of respiratory viruses OR sepsis?
 
 
-      Discovery of these variants will then enable further comparisons with
-      other consortium or investigator-led analyses. For example: Which host
-      genetic susceptibility factors for COVID-19 ARDS are unique to SARS-CoV-2
-      infection and which ones are shared with ARDS subsequent to other
-      respiratory viruses OR sepsis?
-    slack-channel: '#ardsgwas'
+      Discovery of these variants will then enable further comparisons with other consortium or investigator-led analyses. For example: Which host genetic susceptibility factors for COVID-19 ARDS are unique to SARS-CoV-2 infection and which ones are shared with ARDS subsequent to other respiratory viruses OR sepsis?
+    slack-channel: "#ardsgwas"
     contact-persons:
       - Lea Davis
       - Eric Kerchberger
   - title: Post COVID-19 lung fibrosis project
     description: >-
-      Early reports based on radiologic evidence suggest that lung fibrosis might be
-      a short-term sequelae of COVID-19 but the extent to which this is progressive over time,
-      and how this relates to interventions during the acute phase of COVID-19 infection are yet
-      to be understood. As many countries move beyond the first wave of the pandemic, studies are
-      being established to define and understand COVID-19 sequelae. Even if only a small proportion
-      of individuals go on to develop progressive pulmonary fibrosis after COVID-19, the scale of the
-      pandemic means that those individuals will still represent a substantial patient population.
+      Early reports based on radiologic evidence suggest that lung fibrosis
+      might be a short-term sequelae of COVID-19 but the extent to which this is
+      progressive over time, and how this relates to interventions during the
+      acute phase of COVID-19 infection are yet to be understood. As many
+      countries move beyond the first wave of the pandemic, studies are being
+      established to define and understand COVID-19 sequelae. Even if only a
+      small proportion of individuals go on to develop progressive pulmonary
+      fibrosis after COVID-19, the scale of the pandemic means that those
+      individuals will still represent a substantial patient population.
 
-      This project aims to understand the genetic determinants of post-COVID-19 fibrosis and to use this
-      to yield valuable knowledge about the genes and pathways that promote fibrotic processes during
-      infection and recovery from coronavirus infection. This information could also enable identification
-      of individuals who might be at highest risk of progressive fibrosis for whom earlier intervention with
-      anti-fibrotic medicines would be of benefit.
-    slack-channel: '#covid19-hg-postcovid-fibrosis'
+      This project aims to understand the genetic determinants of post-COVID-19 fibrosis and to use this to yield valuable knowledge about the genes and pathways that promote fibrotic processes during infection and recovery from coronavirus infection. This information could also enable identification of individuals who might be at highest risk of progressive fibrosis for whom earlier intervention with anti-fibrotic medicines would be of benefit.
+    slack-channel: "#covid19-hg-postcovid-fibrosis"
     contact-persons:
       - Tomoko Nakanishi
       - Brent Richards
