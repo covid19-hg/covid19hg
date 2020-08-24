@@ -31,28 +31,30 @@ projects:
       - Pradeep Natarajan
       - Kelly Bolton
     slack-channel: "#covid19-hg-clonalhematopoeisis"
-  - title: COVID19 vascular complications
-    description: >
-      Recent publications suggest that vascular complications are common in
-      COVID19 patients, especially complications of the ischemic / thrombotic
-      type, and that they may be associated with unfavorable outcomes. In a
-      series of 184 ICU patients admitted in 3 Dutch hospitals with proven
-      COVID-19 pneumonia, 31% developed thrombotic complications, including of
-      imaging-confirmed venous thromboembolism (VTE) in 27% and arterial
-      thrombotic events in 3.7%.
-
-
-      Two recent French studies have underlined an unexpected high number of VTE (mainly pulmonary embolism - PE) with a prevalence of 16% (64/150) in Strasbourg (3) and 21% (22/107) in Lille despite a conventional thromboprophylaxis in COVID19 patients admitted in ICU. This high increase in PE prevalence which is twice higher than the frequency of PE in the influenza ICU patients may worsen the respiratory prognosis of COVID-19 patients. The low number of associated deep vein thrombosis (DVT)in COVID-19 patients may suggest that they have pulmonary thrombosis rather than embolism. In another recent series of 221 patients with COVID-19 hospitalized in Union hospital, Wuhan, 5% developed acute ischemic stroke (5 large-vessel occlusion, 3 small vessel occlusion, and 3 cardioembolic strokes), 0.5% cerebral venous sinus thrombosis, 0.5% intracerebral hemorrhage.
-
-
-      While in this and other series COVID19 patients with cerebrovascular complications were significantly older than those without, recent reports from New-York hospitals have described large-vessel strokes as a presenting feature in several young patients. The mechanisms underlying these vascular complications is unclear and could involve excessive inflammation, hypoxia, immobilization and obesity (for VTE), hypercoagulability diffuse intravascular coagulation, cardio-embolism from COVID-19-related cardiac injury and arrhythmia, and possibly invasion of the central nervous system by SARS-CoV-2 leading to encephalopathy. Stroke and VTE genetic predisposition in the general population has been confirmed by recent waves of Genome Wide Association (GWAs) and genetic factors may also modulate the risk of such complications in COVID19 patients. Better understanding the mechanisms underlying the risk of vascular / thrombotic complications in COVID19 patients has important implications for prevention strategies.
-
-      We aim to identify genetic risk factors associated with the risk of vascular complications (stroke and VTE) in COVID-19 patients, using both an agnostic approach and focusing on known genetic risk factors for these vascular diseases.
+  - title: Chr3-clinical trajectories project
+    description: The strongest genetic signal for COVID19 severity is located on
+      chromosome 3 and overlaps several genes. However, it is currently unknown
+      1) which is the likely causal gene and 2) if patients carrying the risk
+      haplotype have different clinical trajectories than those that do not. In
+      this project, we will focus on patients hospitalized for COVID19 and study
+      the association between the chromosomes 3 signal and several longitudinal
+      clinical measures. In particular, we will focus on longitudinal
+      biomarkers, clinical complications/manifestations, and different subtypes
+      of COVID19 patients. The analysis will benefit from combined
+      individual-level data.
+    slack-channel: "#covid19-hg-clinical-values"
     contact-persons:
-      - Israel Fernández Cadenas
-      - Stéphanie Debette
-      - David Alexandre Tregouet
-    slack-channel: "#covid19-hg-stroke-vte"
+      - Brent Richards
+      - Andrea Ganna
+      - Luca Valenti
+      - Alessandra Renieri
+      - Eva Schulte
+      - Hugo Zeberg
+      - Luis Bujanda
+      - Maria Butti
+      - Manuel Romero Gomez
+      - Migeotte Isabelle
+      - Marta Alarcón
   - title: Acute respiratory distress syndrome
     description: >-
       The most severe outcome among COVID-19 cases includes acute respiratory
@@ -92,28 +94,26 @@ projects:
       - Tomoko Nakanishi
       - Brent Richards
       - Louise Wain
-  - title: Chr3-clinical trajectories project
-    description: The strongest genetic signal for COVID19 severity is located on
-      chromosome 3 and overlaps several genes. However, it is currently unknown
-      1) which is the likely causal gene and 2) if patients carrying the risk
-      haplotype have different clinical trajectories than those that do not. In
-      this project, we will focus on patients hospitalized for COVID19 and study
-      the association between the chromosomes 3 signal and several longitudinal
-      clinical measures. In particular, we will focus on longitudinal
-      biomarkers, clinical complications/manifestations, and different subtypes
-      of COVID19 patients. The analysis will benefit from combined
-      individual-level data.
-    slack-channel: "#covid19-hg-clinical-values"
+  - title: COVID19 vascular complications
+    description: >
+      Recent publications suggest that vascular complications are common in
+      COVID19 patients, especially complications of the ischemic / thrombotic
+      type, and that they may be associated with unfavorable outcomes. In a
+      series of 184 ICU patients admitted in 3 Dutch hospitals with proven
+      COVID-19 pneumonia, 31% developed thrombotic complications, including of
+      imaging-confirmed venous thromboembolism (VTE) in 27% and arterial
+      thrombotic events in 3.7%.
+
+
+      Two recent French studies have underlined an unexpected high number of VTE (mainly pulmonary embolism - PE) with a prevalence of 16% (64/150) in Strasbourg (3) and 21% (22/107) in Lille despite a conventional thromboprophylaxis in COVID19 patients admitted in ICU. This high increase in PE prevalence which is twice higher than the frequency of PE in the influenza ICU patients may worsen the respiratory prognosis of COVID-19 patients. The low number of associated deep vein thrombosis (DVT)in COVID-19 patients may suggest that they have pulmonary thrombosis rather than embolism. In another recent series of 221 patients with COVID-19 hospitalized in Union hospital, Wuhan, 5% developed acute ischemic stroke (5 large-vessel occlusion, 3 small vessel occlusion, and 3 cardioembolic strokes), 0.5% cerebral venous sinus thrombosis, 0.5% intracerebral hemorrhage.
+
+
+      While in this and other series COVID19 patients with cerebrovascular complications were significantly older than those without, recent reports from New-York hospitals have described large-vessel strokes as a presenting feature in several young patients. The mechanisms underlying these vascular complications is unclear and could involve excessive inflammation, hypoxia, immobilization and obesity (for VTE), hypercoagulability diffuse intravascular coagulation, cardio-embolism from COVID-19-related cardiac injury and arrhythmia, and possibly invasion of the central nervous system by SARS-CoV-2 leading to encephalopathy. Stroke and VTE genetic predisposition in the general population has been confirmed by recent waves of Genome Wide Association (GWAs) and genetic factors may also modulate the risk of such complications in COVID19 patients. Better understanding the mechanisms underlying the risk of vascular / thrombotic complications in COVID19 patients has important implications for prevention strategies.
+
+      We aim to identify genetic risk factors associated with the risk of vascular complications (stroke and VTE) in COVID-19 patients, using both an agnostic approach and focusing on known genetic risk factors for these vascular diseases.
     contact-persons:
-      - Brent Richards
-      - Andrea Ganna
-      - Luca Valenti
-      - Alessandra Renieri
-      - Eva Schulte
-      - Hugo Zeberg
-      - Luis Bujanda
-      - Maria Butti
-      - Manuel Romero Gomez
-      - Migeotte Isabelle
-      - Marta Alarcón
+      - Israel Fernández Cadenas
+      - Stéphanie Debette
+      - David Alexandre Tregouet
+    slack-channel: "#covid19-hg-stroke-vte"
 ---
