@@ -92,4 +92,28 @@ projects:
       - Tomoko Nakanishi
       - Brent Richards
       - Louise Wain
+  - title: Chr3-clinical trajectories project
+    description: The strongest genetic signal for COVID19 severity is located on
+      chromosome 3 and overlaps several genes. However, it is currently unknown
+      1) which is the likely causal gene and 2) if patients carrying the risk
+      haplotype have different clinical trajectories than those that do not. In
+      this project, we will focus on patients hospitalized for COVID19 and study
+      the association between the chromosomes 3 signal and several longitudinal
+      clinical measures. In particular, we will focus on longitudinal
+      biomarkers, clinical complications/manifestations, and different subtypes
+      of COVID19 patients. The analysis will benefit from combined
+      individual-level data.
+    slack-channel: "#covid19-hg-clinical-values"
+    contact-persons:
+      - Brent Richards
+      - Andrea Ganna
+      - Luca Valenti
+      - Alessandra Renieri
+      - Eva Schulte
+      - Hugo Zeberg
+      - Luis Bujanda
+      - Maria Butti
+      - Manuel Romero Gomez
+      - Migeotte Isabelle
+      - Marta Alarcón
 ---
