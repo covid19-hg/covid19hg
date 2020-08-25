@@ -55,6 +55,8 @@ projects:
       - Manuel Romero Gomez
       - Migeotte Isabelle
       - Marta Alarcón
+      - Alexandre Pereira
+      - Andre Franke
   - title: Acute respiratory distress syndrome
     description: >-
       The most severe outcome among COVID-19 cases includes acute respiratory
