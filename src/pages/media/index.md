@@ -36,4 +36,9 @@ articles:
     url: https://www.wsj.com/articles/hunt-is-on-for-genetic-clues-to-why-coronavirus-impact-varies-11586259827
     source: Wall Street Journal
     date: April 7, 2020
+  - title: >
+      Why Some People Get Terribly Sick from COVID-19
+    url: https://www.scientificamerican.com/article/why-some-people-get-terribly-sick-from-covid-19/
+    source: Scientific American
+    date: August 20, 2020
 ---
