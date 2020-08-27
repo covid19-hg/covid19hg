@@ -53,7 +53,8 @@ Most of the current conversation between participants is happening on the ICDA s
 
 Resources that are available and should continue to be shared across participants:
 
-* [Questionnaires](https://docs.google.com/document/d/12O6h5EcVCb7y3w8vJPEef1Tpjg0x2fmge9c1uhYTlfo/edit).
+* [Data dictionary](https://docs.google.com/spreadsheets/d/1RXrJIzHKkyB8qx5tHLQjcBioiDAOrQ3odAuqMS3pUUI/edit#gid=549383528)
+* [Questionnaires](https://docs.google.com/document/d/12O6h5EcVCb7y3w8vJPEef1Tpjg0x2fmge9c1uhYTlfo/edit)
 * [Consent/protocols](https://drive.google.com/drive/folders/101UkwCExOS5T-8ZhioCmEwLjDuywZiOl)
 * [Register of participant studies](https://www.covid19hg.org/partners/). Registration can be done [here](https://www.covid19hg.org/register/).
 
