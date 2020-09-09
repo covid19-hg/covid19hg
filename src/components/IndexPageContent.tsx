@@ -1,37 +1,62 @@
 import React from "react";
 import { Container, Grid } from "./materialUIContainers";
-import {
-  Typography,
-  Link,
-  Card,
-  CardContent,
-  makeStyles,
-  Theme,
-} from "@material-ui/core";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import { Typography, Link, makeStyles, Theme } from "@material-ui/core";
 import GatsbyLink from "gatsby-link";
+import Box from "@material-ui/core/Box";
 import BlogRoll from "./BlogRoll";
 import Img from "gatsby-image";
-import clsx from "clsx";
 
 const useStyles = makeStyles((theme: Theme) => ({
-  card: {
-    height: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+  featureItem: {
+    textDecoration: "none",
+    display: "block",
+    marginBottom: theme.spacing(1),
   },
-  cardAsLink: {
-    textDecoration: "underline",
+  featureItemTitle: {
     color: theme.palette.primary.main,
-    "&:visited": {
-      color: theme.palette.primary.main,
-    },
-    "&:hover": {
-      color: theme.palette.secondary.main,
-    },
+    textDecoration: "underline",
+  },
+  featureItemSubtitle: {
+    color: theme.palette.text.primary,
   },
 }));
+
+const FeatureItem = (props: {
+  title: string;
+  subtitle: string;
+  link: string;
+}) => {
+  const { title, subtitle, link } = props;
+  const classes = useStyles();
+  if (link[0] === "/") {
+    return (
+      <GatsbyLink to={link} className={classes.featureItem}>
+        <Typography variant="h6" className={classes.featureItemTitle}>
+          {title}
+        </Typography>
+        <Typography variant="body1" className={classes.featureItemSubtitle}>
+          {subtitle}
+        </Typography>
+      </GatsbyLink>
+    );
+  } else {
+    return (
+      <Link
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes.featureItem}
+      >
+        <Typography variant="h6" className={classes.featureItemTitle}>
+          {title}
+        </Typography>
+        <Typography variant="body1" className={classes.featureItemSubtitle}>
+          {subtitle}
+        </Typography>
+      </Link>
+    );
+  }
+};
 
 interface Props {
   image: any;
@@ -39,90 +64,45 @@ interface Props {
   subheading: string;
   mainpitch: { title: string; description: string };
   description: string;
-  intro: { blurbs: any[] };
+  learnCollaborate: { title: string; subtitle: string; link: string }[];
+  dataResults: { title: string; subtitle: string; link: string }[];
 }
 const IndexPageContent = ({
   image,
   mainpitch,
   heading,
   description,
-  intro,
+  learnCollaborate,
+  dataResults,
 }: Props) => {
-  const classes = useStyles();
-  const features = intro.blurbs.map((blurb, index) => {
-    const xsWidth = 12;
-    const mdWidth = 6;
-    let content: React.ReactElement<any>;
-    if (blurb.image === null) {
-      // Must be the "see our partners" entry
-      content = (
-        <Container
-          disableGutters={true}
-          display="flex"
-          justifyContent="center"
-          alignItems={"center" as "center"}
-        >
-          <Typography variant="h4">{blurb.text}</Typography>
-        </Container>
-      );
-    } else {
-      content = (
-        <>
-          <Container width={300} marginBottom={1}>
-            <PreviewCompatibleImage imageInfo={blurb} />
-          </Container>
-          <Typography>{blurb.text}</Typography>
-        </>
-      );
-    }
-    const link = blurb.link;
-    if (link) {
-      if (link[0] === "/") {
-        // Use gatsby link for internal links:
-        return (
-          <Grid item={true} xs={xsWidth} md={mdWidth} key={index}>
-            <Card
-              className={clsx(classes.card, classes.cardAsLink)}
-              to={link}
-              // @ts-ignore
-              component={GatsbyLink}
-            >
-              <CardContent>{content}</CardContent>
-            </Card>
-          </Grid>
-        );
-      } else {
-        // Use normal anchor tag for external link:
-        return (
-          <Grid item={true} xs={xsWidth} md={mdWidth} key={index}>
-            <Card
-              className={clsx(classes.card, classes.cardAsLink)}
-              component={Link as any}
-              // @ts-ignore
-              href={link}
-              underline="none"
-            >
-              <CardContent>{content}</CardContent>
-            </Card>
-          </Grid>
-        );
-      }
-    } else {
-      return (
-        <Grid item={true} xs={xsWidth} md={mdWidth} key={index}>
-          <Card className={classes.card}>
-            <CardContent>{content}</CardContent>
-          </Card>
-        </Grid>
-      );
-    }
-  });
+  const learnCollaborateItems = learnCollaborate.map(
+    ({ link, title, subtitle }) => (
+      <FeatureItem title={title} subtitle={subtitle} link={link} key={title} />
+    )
+  );
+  const learnCollaborateElem = (
+    <Grid item={true} xs={12} md={6}>
+      <Typography variant="h4" gutterBottom={true}>
+        Learn and collaborate
+      </Typography>
+      <Box>{learnCollaborateItems}</Box>
+    </Grid>
+  );
+  const dataResultsItems = dataResults.map(({ link, title, subtitle }) => (
+    <FeatureItem title={title} subtitle={subtitle} link={link} key={title} />
+  ));
+  const dataResultsElem = (
+    <Grid item={true} xs={12} md={6}>
+      <Typography variant="h4" gutterBottom={true}>
+        Data and results
+      </Typography>
+      <Box>{dataResultsItems}</Box>
+    </Grid>
+  );
+
   return (
     <>
-      <Img
-        fluid={image.childImageSharp.fluid}
-        loading="eager"
-      />
+      <Img fluid={image.childImageSharp.fluid} loading="eager" />
       <Container marginTop={2} fixed={true}>
         <Grid container={true} spacing={2} marginTop={10}>
           <Grid item={true} xs={12}>
@@ -139,10 +119,11 @@ const IndexPageContent = ({
           </Grid>
         </Grid>
         <Grid container={true} spacing={3} marginTop={2} marginBottom={2}>
-          {features}
+          {learnCollaborateElem}
+          {dataResultsElem}
         </Grid>
         <Typography variant="h4">News</Typography>
-        <BlogRoll />
+        <BlogRoll maxNumItems={4} />
       </Container>
     </>
   );

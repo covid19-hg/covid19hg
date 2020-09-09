@@ -22,16 +22,19 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 interface Props {
+  maxNumItems: number | undefined;
   data: {
     allMarkdownRemark: {
       edges: any[];
     };
   };
 }
-const BlogItemListing = ({ data }: Props) => {
+const BlogItemListing = ({ data, maxNumItems }: Props) => {
   const classes = useStyles();
   const { edges: posts } = data.allMarkdownRemark;
-  const postElems = posts.map(({ node: post }) => (
+  const filteredPosts =
+    maxNumItems === undefined ? posts : posts.slice(0, maxNumItems);
+  const postElems = filteredPosts.map(({ node: post }) => (
     <Grid item={true} xs={12} md={6} key={post.fields.slug}>
       <Card className={classes.post}>
         <CardContent>

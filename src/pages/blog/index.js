@@ -11,7 +11,7 @@ const BlogIndexPage = () => {
     <Layout title="News">
       {canonicalLinkMetaTag}
       <Container>
-        <BlogRoll />
+        <BlogRoll maxNumItems={undefined} />
       </Container>
     </Layout>
   );
