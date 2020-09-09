@@ -3,8 +3,6 @@ templateKey: blog-post
 title: First round of meta analysis results
 date: 2020-04-30T04:02:35.905Z
 description: '-'
-featuredpost: true
-featuredimage: /img/apple-touch-icon.png
 tags:
   - '#results'
 ---
@@ -12,7 +10,7 @@ We have released the first round of meta-analysis results [here](https://drive.g
 
 We want to thank the participating studies:
 
-\- UK Biobank (analyzed by Danny Wilson, Konrad Karczewski, Tomoko Nakanishi and Manuel Rivas) 
+\- UK Biobank (analyzed by Danny Wilson, Konrad Karczewski, Tomoko Nakanishi and Manuel Rivas)
 
 \- Finngen (analyzed by Juha Karjalainen)
 

@@ -2,8 +2,6 @@
 templateKey: blog-post
 title: Second release of meta-analysis results
 date: 2020-05-17T13:58:54.797Z
-featuredpost: true
-featuredimage: /img/apple-touch-icon.png
 tags:
   - '#meta-analysis'
 type: blog-post

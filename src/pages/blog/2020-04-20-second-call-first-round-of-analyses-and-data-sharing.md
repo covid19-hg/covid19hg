@@ -2,8 +2,6 @@
 templateKey: blog-post
 title: 'Second call, first round of analyses and data sharing'
 date: 2020-04-20T09:54:24.603Z
-featuredpost: false
-featuredimage: /img/apple-touch-icon.png
 tags:
   - "#datasharing"
   - "#analysis"

@@ -26,7 +26,6 @@ export default ({ maxNumItems }: Props) => {
                   title
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
-                  featuredpost
                 }
               }
             }

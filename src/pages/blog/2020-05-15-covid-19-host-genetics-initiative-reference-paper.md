@@ -2,8 +2,6 @@
 templateKey: blog-post
 title: COVID-19 host genetics initiative reference paper
 date: 2020-05-15T04:57:48.815Z
-featuredpost: true
-featuredimage: /img/apple-touch-icon.png
 tags:
   - '#reference'
 type: blog-post
