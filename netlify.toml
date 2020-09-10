@@ -3,7 +3,7 @@
   command = "echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && yarn run build"
   functions = "lambda"
 [build.environment]
-  YARN_VERSION = "1.22.4"
+  YARN_VERSION = "1.22.5"
   YARN_FLAGS = "--no-ignore-optional"
   NODE_VERSION = "12.16.1"
 
