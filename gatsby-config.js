@@ -1,4 +1,5 @@
 const dotEnv = require("dotenv");
+const { gatsbyRemarkAutolinkHeadersClassName } = require("./buildConstants");
 
 const localConfig = dotEnv.config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -78,6 +79,9 @@ module.exports = {
           {
             resolve: "gatsby-remark-autolink-headers",
             options: {
+              className: gatsbyRemarkAutolinkHeadersClassName,
+              enableCustomId: true,
+              // This is the height of the AppBar:
               offsetY: "64",
             },
           },

@@ -29,9 +29,6 @@ learnCollaborate:
   - title: Meeting archive
     subtitle: View agendas and watch recordings of previous Covid19 hg meetings
     link: /meeting-archive/
-  - title: Media coverage
-    subtitle: Read articles published about Covid19 hg in popular media
-    link: /media/
   - title: Projects
     subtitle: Learn about specialized projects happening within the initiative
     link: /projects/
@@ -48,19 +45,13 @@ dataResults:
     link: https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit
   - title: Support for genotyping and sequencing
     subtitle: A list of organizations that can help genotyping and sequencing
-    link: /about#support-for-genotyping-and-sequencing
+    link: /about#genotyping-sequencing-support
   - title: Contributing data
     subtitle: Information about submitting data, regulations, and compliance
     link: /data-sharing/
   - title: Terms of use
     subtitle: Policy on data release, usage, and authorship
-    link: /about#terms-of-use-of-results-and-authorship
-  - title: How to interpret the results (for laypeople)
-    subtitle: What these results mean for individuals and society
-    link: /
-  - title: How to interpret the results (for scientists)
-    subtitle: What these results mean for researchers
-    link: /
+    link: /about#terms-of-use
   - title: View latest results
     subtitle: Meta-analysis results and data downloads
     link: /results/
