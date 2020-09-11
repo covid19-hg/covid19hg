@@ -2,20 +2,6 @@
 templateKey: index-page
 title: The COVID-19 Host Genetics Initiative
 image: /img/header-transparent.png
-heading: Objectives
-subheading: '-'
-mainpitch:
-  title: Mission
-  description: >-
-    The COVID-19 host genetics initiative brings together the human genetics
-    community to generate, share and analyze data to learn the genetic
-    determinants of COVID-19 susceptibility, severity and outcomes. Such
-    discoveries could help to generate hypotheses for drug repurposing, identify
-    individuals at unusually high or low risk, and contribute to global
-    knowledge of the biology of SARS-CoV-2 infection and disease.
-description: >-
-  The COVID-19 host genetics initiative is a bottom-up collaborative effort that
-  has three main aims:
 learnCollaborate:
   - title: Covid19 Host Genetics Initiative basics
     subtitle: An introduction to the initiative
@@ -43,9 +29,6 @@ dataResults:
   - title: Analysis approach
     subtitle: How the initiative plans and carries out analyses
     link: https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit
-  - title: Support for genotyping and sequencing
-    subtitle: A list of organizations that can help genotyping and sequencing
-    link: /about#genotyping-sequencing-support
   - title: Contributing data
     subtitle: Information about submitting data, regulations, and compliance
     link: /data-sharing/
@@ -62,20 +45,4 @@ dataResults:
     subtitle: People and projects that have contributed data so far
     link: /acknowledgements/
 
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/image-needed.png
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
 ---

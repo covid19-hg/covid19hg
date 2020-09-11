@@ -60,21 +60,10 @@ const FeatureItem = (props: {
 
 interface Props {
   image: any;
-  heading: string;
-  subheading: string;
-  mainpitch: { title: string; description: string };
-  description: string;
   learnCollaborate: { title: string; subtitle: string; link: string }[];
   dataResults: { title: string; subtitle: string; link: string }[];
 }
-const IndexPageContent = ({
-  image,
-  mainpitch,
-  heading,
-  description,
-  learnCollaborate,
-  dataResults,
-}: Props) => {
+const IndexPageContent = ({ image, learnCollaborate, dataResults }: Props) => {
   const learnCollaborateItems = learnCollaborate.map(
     ({ link, title, subtitle }) => (
       <FeatureItem title={title} subtitle={subtitle} link={link} key={title} />
@@ -104,21 +93,7 @@ const IndexPageContent = ({
     <>
       <Img fluid={image.childImageSharp.fluid} loading="eager" />
       <Container marginTop={2} fixed={true}>
-        <Grid container={true} spacing={2} marginTop={10}>
-          <Grid item={true} xs={12}>
-            <Typography variant="h4" gutterBottom={true}>
-              {mainpitch.title}
-            </Typography>
-            <Typography gutterBottom={true}>{mainpitch.description}</Typography>
-          </Grid>
-          <Grid item={true} xs={12}>
-            <Typography variant="h4" gutterBottom={true}>
-              {heading}
-            </Typography>
-            <Typography gutterBottom={true}>{description}</Typography>
-          </Grid>
-        </Grid>
-        <Grid container={true} spacing={3} marginTop={2} marginBottom={2}>
+        <Grid container={true} spacing={3} marginTop={10} marginBottom={2}>
           {learnCollaborateElem}
           {dataResultsElem}
         </Grid>
