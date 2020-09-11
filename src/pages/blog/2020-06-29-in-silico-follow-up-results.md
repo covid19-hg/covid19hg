@@ -14,7 +14,7 @@ Here we post the results from the in-silico follow up analysis done of summary s
 
 **Authors:** Emil Uffelmann, Jeanne Savage, Philip Jansen, Christiaan de Leeuw, Danielle Posthuma
 
-**Data**: [](https://storage.googleapis.com/covid19-hg-in-silico-followup/magma/CTG_insilico_COVID19-hg_29062020freeze_provisional.zip)[CTG_insilico_COVID19-hg_29062020freeze_provisional.zip](https://storage.googleapis.com/covid19-hg-in-silico-followup/magma/CTG_insilico_COVID19-hg_29062020freeze_provisional.zip)
+**Data**: [CTG_insilico_COVID19-hg_29062020freeze_provisional.zip](https://storage.googleapis.com/covid19-hg-in-silico-followup/magma/CTG_insilico_COVID19-hg_29062020freeze_provisional.zip)
 
 ## TWAS
 
@@ -103,6 +103,8 @@ ANA_C1__V2
 **Data**: [PheWAS_RELEASE3_2July20_EM.7z](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_RELEASE3_2July20_EM.7z)
 
 **README**: [PheWAS_READEME_R3_EM.txt](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_READEME_R3_EM.txt)
+
+
 
 ## S-PrediXcan/MetaXcan
 
