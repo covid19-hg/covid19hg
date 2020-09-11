@@ -3,8 +3,6 @@ templateKey: blog-post
 title: First call and new registration form
 date: 2020-03-30T07:29:42.430Z
 description: '-'
-featuredpost: false
-featuredimage: /img/blog-index.jpg
 tags:
   - "#first call"
   - "#registration"

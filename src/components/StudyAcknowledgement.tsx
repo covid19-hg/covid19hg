@@ -77,7 +77,9 @@ const StudyAcknowledgement = ({
   } else {
     title = (
       <Typography
-        variant="h5" component="h3" gutterBottom={true}
+        variant="h5"
+        component="h3"
+        gutterBottom={true}
         data-cy={acknowledgementsStudyTitle}
       >
         {studyName}

@@ -3,7 +3,6 @@ templateKey: blog-post
 title: 'April 17, 2020 meeting'
 date: 2020-04-17T15:28:20.565Z
 description: 'Meeting notes from 4/17/2020 9:00am EDT / 1pm GMT / 2pm BST'
-featuredpost: false
 tags:
   - Archive
 type: meeting-notes

@@ -3,8 +3,6 @@ templateKey: blog-post
 title: Collaboration with the International Common Disease Alliance (ICDA)
 date: 2020-03-19T19:41:07.950Z
 description: '-'
-featuredpost: false
-featuredimage: /img/blog-index.jpg
 tags:
   - Partnership
 type: blog-post

@@ -8,9 +8,6 @@ const theme = createMuiTheme({
     primary: {
       main: "#142166",
     },
-    text: {
-      primary: "hsl(0, 0%, 29%)",
-    },
     error: {
       main: "hsl(348, 86%, 61%)",
     },

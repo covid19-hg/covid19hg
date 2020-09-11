@@ -23,7 +23,23 @@ import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
 import { useTheme } from "@material-ui/core/styles";
 
+const {
+  gatsbyRemarkAutolinkHeadersClassName,
+} = require("../../buildConstants");
+
 const useStyles = makeStyles((theme: Theme) => ({
+  // We're trying to override the styling created here
+  // https://github.com/gatsbyjs/gatsby/blob/ac9158bf3d404b3f7d586419bdf9ce297091c055/packages/gatsby-remark-autolink-headers/src/gatsby-ssr.js#L15-L49
+  // in order to hide the SVG anchor icon:
+  "@global": {
+    [`.${gatsbyRemarkAutolinkHeadersClassName}.${gatsbyRemarkAutolinkHeadersClassName}.before`]: {
+      visibility: "hidden",
+    },
+    [`.${gatsbyRemarkAutolinkHeadersClassName}.${gatsbyRemarkAutolinkHeadersClassName}.${gatsbyRemarkAutolinkHeadersClassName} svg`]: {
+      visibility: "hidden",
+    },
+  },
+
   appBarDesktop: {
     width: `calc(100% - ${drawerWidthFromTheme(theme)}px)`,
     marginLeft: drawerWidthFromTheme(theme),
