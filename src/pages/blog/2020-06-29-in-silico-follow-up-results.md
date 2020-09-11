@@ -14,7 +14,7 @@ Here we post the results from the in-silico follow up analysis done of summary s
 
 **Authors:** Emil Uffelmann, Jeanne Savage, Philip Jansen, Christiaan de Leeuw, Danielle Posthuma
 
-**Data**: [](https://storage.googleapis.com/covid19-hg-in-silico-followup/magma/CTG_insilico_COVID19-hg_29062020freeze_provisional.zip)[CTG_insilico_COVID19-hg_29062020freeze_provisional.zip](https://storage.googleapis.com/covid19-hg-in-silico-followup/magma/CTG_insilico_COVID19-hg_29062020freeze_provisional.zip)
+**Data**: [CTG_insilico_COVID19-hg_29062020freeze_provisional.zip](https://storage.googleapis.com/covid19-hg-in-silico-followup/magma/CTG_insilico_COVID19-hg_29062020freeze_provisional.zip)
 
 ## TWAS
 
@@ -26,7 +26,7 @@ CXCR6 (ENSG00000172215.5) twas_p=0.00000378
 
 in total mRNA abundance GTEx v8 Lung (Bonf-p = 4.187e-06), and 
 
-IFNAR2 (ENSG00000159110.19;33252830:33262561:clu\_33271) twas_p=0.00000137
+IFNAR2 (ENSG00000159110.19;33252830:33262561:clu_33271) twas_p=0.00000137
 IFNAR2 (ENSG00000159110.19;33230216:33244951:clu_33269) twas_p=0.0000013
 IFNAR2 (ENSG00000159110.19;33246482:33246718:clu_33270) twas_p=0.00000204
 
@@ -103,6 +103,8 @@ ANA_C1__V2
 **Data**: [PheWAS_RELEASE3_2July20_EM.7z](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_RELEASE3_2July20_EM.7z)
 
 **README**: [PheWAS_READEME_R3_EM.txt](https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/PheWAS_READEME_R3_EM.txt)
+
+
 
 ## S-PrediXcan/MetaXcan
 
