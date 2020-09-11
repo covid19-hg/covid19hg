@@ -115,10 +115,10 @@ projects:
       We aim to identify genetic risk factors associated with the risk of vascular complications (stroke and VTE) in COVID-19 patients, using both an agnostic approach and focusing on known genetic risk factors for these vascular diseases.
 
 
-      Markdown test unescaped underscore COVID19_HGI_ANA_B2_V2_20200629 test.
+      Markdown test unescaped underscore COVID19_HGI_ANA_B2_V220200629 test.
 
 
-      Markdown test escaped underscore COVID19\_HGI\_ANA\_B2\_V2\_20200629 test.
+      Markdown test escaped underscore COVID19\_HGI\_ANA\_B2\_V220200629 test.
     contact-persons:
       - Israel Fernández Cadenas
       - Stéphanie Debette
