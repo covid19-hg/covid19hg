@@ -11,10 +11,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     textDecoration: "none",
     display: "block",
     marginBottom: theme.spacing(1),
+    "&:hover": {
+      textDecoration: "none",
+    },
   },
   featureItemTitle: {
-    color: theme.palette.primary.main,
-    textDecoration: "underline",
+    "&:hover": {
+      textDecoration: "underline",
+    },
   },
   featureItemSubtitle: {
     color: theme.palette.text.primary,
@@ -28,15 +32,24 @@ const FeatureItem = (props: {
 }) => {
   const { title, subtitle, link } = props;
   const classes = useStyles();
+  const content = (
+    <>
+      <Typography
+        variant="h5"
+        className={classes.featureItemTitle}
+        color="primary"
+      >
+        {title}
+      </Typography>
+      <Typography variant="body1" className={classes.featureItemSubtitle}>
+        {subtitle}
+      </Typography>
+    </>
+  );
   if (link[0] === "/") {
     return (
       <GatsbyLink to={link} className={classes.featureItem}>
-        <Typography variant="h6" className={classes.featureItemTitle}>
-          {title}
-        </Typography>
-        <Typography variant="body1" className={classes.featureItemSubtitle}>
-          {subtitle}
-        </Typography>
+        {content}
       </GatsbyLink>
     );
   } else {
@@ -47,12 +60,7 @@ const FeatureItem = (props: {
         rel="noopener noreferrer"
         className={classes.featureItem}
       >
-        <Typography variant="h6" className={classes.featureItemTitle}>
-          {title}
-        </Typography>
-        <Typography variant="body1" className={classes.featureItemSubtitle}>
-          {subtitle}
-        </Typography>
+        {content}
       </Link>
     );
   }

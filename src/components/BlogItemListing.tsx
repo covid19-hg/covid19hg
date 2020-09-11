@@ -16,6 +16,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   post: {
     padding: theme.spacing(2),
   },
+  postTitle: {
+    color: theme.palette.primary.main,
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
   readMore: {
     backgroundColor: theme.palette.background.default,
   },
@@ -38,7 +45,12 @@ const BlogItemListing = ({ data, maxNumItems }: Props) => {
     <Grid item={true} xs={12} md={6} key={post.fields.slug}>
       <Card className={classes.post}>
         <CardContent>
-          <Typography variant="h5" component={GatsbyLink} to={post.fields.slug}>
+          <Typography
+            variant="h5"
+            component={GatsbyLink}
+            to={post.fields.slug}
+            className={classes.postTitle}
+          >
             {post.frontmatter.title}
           </Typography>
           <Typography variant="h6"> {post.frontmatter.date} </Typography>
