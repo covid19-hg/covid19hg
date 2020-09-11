@@ -97,7 +97,7 @@ projects:
       - Brent Richards
       - Louise Wain
   - title: COVID19 vascular complications
-    description: >
+    description: >-
       Recent publications suggest that vascular complications are common in
       COVID19 patients, especially complications of the ischemic / thrombotic
       type, and that they may be associated with unfavorable outcomes. In a
@@ -113,6 +113,12 @@ projects:
       While in this and other series COVID19 patients with cerebrovascular complications were significantly older than those without, recent reports from New-York hospitals have described large-vessel strokes as a presenting feature in several young patients. The mechanisms underlying these vascular complications is unclear and could involve excessive inflammation, hypoxia, immobilization and obesity (for VTE), hypercoagulability diffuse intravascular coagulation, cardio-embolism from COVID-19-related cardiac injury and arrhythmia, and possibly invasion of the central nervous system by SARS-CoV-2 leading to encephalopathy. Stroke and VTE genetic predisposition in the general population has been confirmed by recent waves of Genome Wide Association (GWAs) and genetic factors may also modulate the risk of such complications in COVID19 patients. Better understanding the mechanisms underlying the risk of vascular / thrombotic complications in COVID19 patients has important implications for prevention strategies.
 
       We aim to identify genetic risk factors associated with the risk of vascular complications (stroke and VTE) in COVID-19 patients, using both an agnostic approach and focusing on known genetic risk factors for these vascular diseases.
+
+
+      Markdown test unescaped underscore COVID19_HGI_ANA_B2_V2_20200629 test.
+
+
+      Markdown test escaped underscore COVID19\_HGI\_ANA\_B2\_V2\_20200629 test.
     contact-persons:
       - Israel Fernández Cadenas
       - Stéphanie Debette
