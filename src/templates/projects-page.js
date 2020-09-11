@@ -10,12 +10,13 @@ const ProjectsPage = ({ data }) => {
   const {
     markdownRemark: {
       frontmatter: { title, projectsIntro, projects },
+      html,
     },
   } = data;
   return (
     <Layout title={title}>
       {canonicalLinkMetaTag}
-      <ProjectsPageContent projects={projects} projectsIntro={projectsIntro} />
+      <ProjectsPageContent projects={projects} projectsIntro={projectsIntro} bodyContent={html}/>
     </Layout>
   );
 };
@@ -39,6 +40,7 @@ export const pageQuery = graphql`
           slack_channel
         }
       }
+      html
     }
   }
 `;

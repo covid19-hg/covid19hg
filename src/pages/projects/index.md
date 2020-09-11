@@ -125,3 +125,7 @@ projects:
       - David Alexandre Tregouet
     slack-channel: "#covid19-hg-stroke-vte"
 ---
+
+Markdown test unescaped underscore COVID19_HGI_ANA_B2_V220200629 test.
+
+Markdown test escaped underscore COVID19\_HGI\_ANA\_B2\_V220200629 test.

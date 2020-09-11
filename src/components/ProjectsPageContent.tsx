@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Grid } from "./materialUIContainers";
 import { Typography, Card, CardContent } from "@material-ui/core";
 import ReactMarkdown from "react-markdown";
+import { HTMLContent } from "./Content";
 
 interface Props {
   projectsIntro: string;
@@ -11,8 +12,9 @@ interface Props {
     contact_persons: { name: string }[];
     slack_channel: string;
   }[];
+  bodyContent: string
 }
-const ProjectsPageContent = ({ projects, projectsIntro }: Props) => {
+const ProjectsPageContent = ({ projects, projectsIntro, bodyContent }: Props) => {
   const projectElems = projects.map(
     ({ title, description, contact_persons, slack_channel }, index) => {
       const contactPersonsText = contact_persons.join(", ") + ".";
@@ -46,6 +48,9 @@ const ProjectsPageContent = ({ projects, projectsIntro }: Props) => {
       <Grid container={true} spacing={2}>
         {projectElems}
       </Grid>
+      <Typography>
+        <HTMLContent content={bodyContent} className="" />
+      </Typography>
     </Container>
   );
 };
