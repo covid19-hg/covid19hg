@@ -37,9 +37,7 @@ module.exports = async () => {
               timeCreated: Date.parse(fields["Time created"]),
               mapLocation: fields["Map location"],
               emails: parseEmailField(fields["Email"]),
-              hasSubmittedData:
-                Array.isArray(fields["Data"]) === true &&
-                fields["Data"].length > 0,
+              hasSubmittedData: !!fields["Data"],
               id,
             };
           });

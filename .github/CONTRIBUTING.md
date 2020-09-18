@@ -13,8 +13,22 @@ After that, set up the project as follows:
 This [link](https://docs.netlify.com/cli/get-started/#obtain-a-token-via-the-command-line) shows the permission dialog that you should expect to see.
 - `yarn netlify link --name condescending-perlman-ec107b`.
 - `yarn netlify dev` to start a local development server.
+This command will securely download environment variables and use them in the development build.
 After a few minutes, the server will be ready and you can access it on port `8888` of `localhost`.
 You can safely ignore the following warning message if it shows up in the terminal: `warning: Cannot load local env variables [...].`.
+- If you want to run a production build locally (for example, to troubleshoot a failed build on the server), run `yarn netlify build`.
+
+# Netlify functions
+
+You can create and develop Netlify functions locally using the Netlify CLI.
+If you use `netlify dev` to locally develop the front-end, the front-end will use the local version of Netlify functions.
+This allows you to develop and test Netlify functions locally before deploying to production.
+
+- To create a new Netlify function, run [`yarn netlify functions:create [function-name]`](https://cli.netlify.com/commands/functions/#functionscreate).
+You will be offered a number of templates to choose from.
+Usually those templates are good enough for the functionality that this website needs.
+- To manually invoke a Netlify function for testing, run [`yarn netlify functions:invoke [function-name] --no-identity`](https://cli.netlify.com/commands/functions/#functionsinvoke).
+For example, to invoke the `partners` function (responsible for fetching data for the Partners page), run `yarn netlify functions:invoke partners --no-identity`.
 
 ## Unit tests
 
