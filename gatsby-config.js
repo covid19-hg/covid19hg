@@ -1,3 +1,4 @@
+/* eslint-env node */
 const dotEnv = require("dotenv");
 const { gatsbyRemarkAutolinkHeadersClassName } = require("./buildConstants");
 

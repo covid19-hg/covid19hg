@@ -123,7 +123,7 @@ const LeftHalfLeftColumnItem = (props: { children: React.ReactNode }) => (
     md={3}
     xs={12}
     display="flex"
-    alignItems={"center" as "center"}
+    alignItems={"center" as const}
   >
     {props.children}
   </Grid>
@@ -137,7 +137,7 @@ const LeftHalfRightColumnItem = ({
     md={9}
     xs={12}
     display="flex"
-    alignItems={"center" as "center"}
+    alignItems={"center" as const}
     {...rest}
   >
     {children}
@@ -285,7 +285,7 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
         <Grid
           container={true}
           display="flex"
-          alignItems={"center" as "center"}
+          alignItems={"center" as const}
           marginTop={1}
         >
           <Grid item={true} md={4}>

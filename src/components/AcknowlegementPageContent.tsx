@@ -1,9 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { Container, Grid } from "../components/materialUIContainers";
 import { fetchJSON } from "../Utils";
-import _sortBy from "lodash/sortBy";
-import _last from "lodash/last";
-import _uniq from "lodash/uniq";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import {
@@ -16,8 +13,6 @@ import {
   Theme,
 } from "@material-ui/core";
 import { processContributorList } from "./acknowledgementUtils";
-import _sumBy from "lodash/sumBy";
-import _zip from "lodash/zip";
 import Study from "./StudyAcknowledgement";
 import {  AirtableDatum, ContributorDatum as RawContributor } from "../types";
 

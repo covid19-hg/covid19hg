@@ -3,7 +3,6 @@ import _sumBy from "lodash/sumBy";
 import _minBy from "lodash/minBy";
 import _last from "lodash/last";
 import type {  ContributorDatum as RawContributor, AirtableDatum } from "../types";
-import _partition from "lodash/partition";
 import _uniq from "lodash/uniq";
 
 interface BaseContributor {

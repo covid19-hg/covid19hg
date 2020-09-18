@@ -42,7 +42,7 @@ interface Props {
 const ResultsPageContent = ({ releases }: Props) => {
   const [selectedRelease, setSelectedRelease] = useState(0);
 
-  const handleChange = (_event: React.ChangeEvent<{}>, value: number) => {
+  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setSelectedRelease(value);
   };
 

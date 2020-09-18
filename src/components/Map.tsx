@@ -492,7 +492,7 @@ const MapWrapper = (props: MapWrapperProps) => {
           height="40vh"
           display="flex"
           justifyContent="center"
-          alignItems={"center" as "center"}
+          alignItems={"center" as const}
         >
           <CircularProgress />
         </Grid>

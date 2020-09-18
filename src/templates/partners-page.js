@@ -10,10 +10,7 @@ import {
 } from "../components/partnersPageUtils";
 import PartnersPageContent from "../components/PartnersPageContent";
 
-const ProductPage = ({ data, location }) => {
-  const {
-    markdownRemark: { frontmatter },
-  } = data;
+const ProductPage = ({ location }) => {
 
   const selectedPartner = getSelectedPartner(location);
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag(`/${partnersRoute}/`);

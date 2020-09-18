@@ -1,4 +1,4 @@
-const _ = require("lodash");
+/* eslint-env node */
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const ForkTSCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");

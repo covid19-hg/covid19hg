@@ -108,7 +108,7 @@ const Analysis = ({ analysis }: { analysis: AnalysisProps }) => {
             </Grid>
           </Grid>
 
-          <Grid container={true} alignItems={"center" as "center"} spacing={1}>
+          <Grid container={true} alignItems={"center" as const} spacing={1}>
             <Grid item={true} xs={leftColumnWidthXs} md={leftColumnWidthMd}>
               <Typography variant="h6">Phenotype</Typography>
             </Grid>
