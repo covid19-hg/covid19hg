@@ -16,7 +16,11 @@ const ProjectsPage = ({ data }) => {
   return (
     <Layout title={title}>
       {canonicalLinkMetaTag}
-      <ProjectsPageContent projects={projects} projectsIntro={projectsIntro} bodyContent={html}/>
+      <ProjectsPageContent
+        projects={projects}
+        projectsIntro={projectsIntro}
+        bodyContent={html}
+      />
     </Layout>
   );
 };

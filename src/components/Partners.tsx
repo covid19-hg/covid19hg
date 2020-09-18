@@ -335,9 +335,9 @@ const Partners = ({
     />
   );
 
-  let card: React.ReactElement<any>
+  let card: React.ReactElement<any>;
   if (listData === undefined) {
-    card = (<div/>);
+    card = <div />;
   } else {
     const filteredData = listData.filter(({ id }) => filteredIds.includes(id));
     if (

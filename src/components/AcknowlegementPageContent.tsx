@@ -14,8 +14,7 @@ import {
 } from "@material-ui/core";
 import { processContributorList } from "./acknowledgementUtils";
 import Study from "./StudyAcknowledgement";
-import {  AirtableDatum, ContributorDatum as RawContributor } from "../types";
-
+import { AirtableDatum, ContributorDatum as RawContributor } from "../types";
 
 const useStyles = makeStyles((theme: Theme) => ({
   citation: {
@@ -23,18 +22,17 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-
 interface FetchedContributorData {
-  data: RawContributor[]
+  data: RawContributor[];
 }
 
 interface FetchedData {
-  contributors: RawContributor[]
-  studies: AirtableDatum[]
+  contributors: RawContributor[];
+  studies: AirtableDatum[];
 }
 
 interface FetchedPartnersData {
-  data: AirtableDatum[]
+  data: AirtableDatum[];
 }
 
 const AcknowledgementPageContent = () => {
@@ -45,13 +43,15 @@ const AcknowledgementPageContent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-          const [fetchedContributors, FetchedPartnersData] = await Promise.all([
-            fetchJSON<FetchedContributorData>( "/.netlify/functions/acknowledgement"),
-            fetchJSON<FetchedPartnersData>("/.netlify/functions/partners")
-          ])
-          const {data: contributors} = fetchedContributors
-          const {data: studies} = FetchedPartnersData
-          setData({contributors, studies})
+        const [fetchedContributors, FetchedPartnersData] = await Promise.all([
+          fetchJSON<FetchedContributorData>(
+            "/.netlify/functions/acknowledgement"
+          ),
+          fetchJSON<FetchedPartnersData>("/.netlify/functions/partners"),
+        ]);
+        const { data: contributors } = fetchedContributors;
+        const { data: studies } = FetchedPartnersData;
+        setData({ contributors, studies });
       } catch (e) {
         console.error(e);
       }

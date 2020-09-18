@@ -11,7 +11,6 @@ import {
 import PartnersPageContent from "../components/PartnersPageContent";
 
 const ProductPage = ({ location }) => {
-
   const selectedPartner = getSelectedPartner(location);
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag(`/${partnersRoute}/`);
 

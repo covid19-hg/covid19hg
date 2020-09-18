@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => {
 });
 
 const RegisterPageContent = () => {
-  const [airTable, setAirTable] = useState<React.ReactElement<any>>((<div/>));
+  const [airTable, setAirTable] = useState<React.ReactElement<any>>(<div />);
   const containerElRef = useRef<HTMLDivElement | null>(null);
   const classes = useStyles();
   useEffect(() => {

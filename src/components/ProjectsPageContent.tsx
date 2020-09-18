@@ -12,9 +12,13 @@ interface Props {
     contact_persons: { name: string }[];
     slack_channel: string;
   }[];
-  bodyContent: string
+  bodyContent: string;
 }
-const ProjectsPageContent = ({ projects, projectsIntro, bodyContent }: Props) => {
+const ProjectsPageContent = ({
+  projects,
+  projectsIntro,
+  bodyContent,
+}: Props) => {
   const projectElems = projects.map(
     ({ title, description, contact_persons, slack_channel }, index) => {
       const contactPersonsText = contact_persons.join(", ") + ".";
