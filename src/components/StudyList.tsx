@@ -45,7 +45,7 @@ const StudyList = ({
           order={listFlexOrder}
           display="flex"
           justifyContent="center"
-          alignItems={"center" as "center"}
+          alignItems={"center" as const}
           height={listAndMapHeight}
         >
           <CircularProgress />
@@ -76,7 +76,7 @@ const StudyList = ({
           md={columnWidthMd}
           order={listTitleFlexOrder}
           display="flex"
-          alignItems={"center" as "center"}
+          alignItems={"center" as const}
         >
           <Typography
             variant="h5"

@@ -100,7 +100,7 @@ const Release = (release: Props) => {
       <Typography variant="h4">{release.title}</Typography>
       <Grid
         container={true}
-        alignItems={"center" as "center"}
+        alignItems={"center" as const}
         spacing={2}
         marginTop={1}
       >

@@ -2,8 +2,10 @@ import _sortBy from "lodash/sortBy";
 import _sumBy from "lodash/sumBy";
 import _minBy from "lodash/minBy";
 import _last from "lodash/last";
-import type {  ContributorDatum as RawContributor, AirtableDatum } from "../types";
-import _partition from "lodash/partition";
+import type {
+  ContributorDatum as RawContributor,
+  AirtableDatum,
+} from "../types";
 import _uniq from "lodash/uniq";
 
 interface BaseContributor {
@@ -228,7 +230,6 @@ export const processContributorList = (
       });
     }
   }
-
 
   for (const { studyIds, role, name: contributorName } of studyContributors) {
     for (const studyId of studyIds) {

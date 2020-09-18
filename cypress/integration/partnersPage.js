@@ -9,7 +9,6 @@ import {
   partnersInvestigatorContactFormName,
   partnersInvestigatorContactFormEmail,
   partnersInvestigatorContactFormMessage,
-  partnersInvestigatorContactFormCancelButton,
   partnersInvestigatorContactFormSendButton,
 } from "../../src/cypressTestDataAttrs";
 

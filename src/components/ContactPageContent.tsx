@@ -60,7 +60,7 @@ const ContactPageContent = () => {
   };
 
   const onRecaptchaChange = (val: string | undefined) => {
-    if (!!val) {
+    if (val) {
       setSubmitButtonEnabled(true);
     }
   };
