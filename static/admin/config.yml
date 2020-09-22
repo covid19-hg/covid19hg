@@ -75,6 +75,23 @@ collections:
                 name: contact-persons
                 widget: list
                 field: {label: Name, name: name, widget: string}
+      - file: "src/pages/media/index.md"
+        label: "Media Coverage"
+        name: "media"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden"}
+          - label: Media Articles
+            required: true
+            name: articles
+            widget: list
+            fields:
+              - {label: News Article Title, name: title, widget: string, required: true}
+              - {label: News Source, name: source, widget: string, required: true}
+              - {label: News Article URL, name: url, widget: string, required: true}
+              - label: News Article Date
+                name: date
+                widget: datetime
+                dateFormat: "MMMM D, YYYY"
 
       - file: "src/pages/index.md"
         label: "Landing Page"
