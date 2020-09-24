@@ -62,7 +62,7 @@ To read more about COVID-19 Host Genetics Initiative, check out coverage in the 
 
 [Vanity Fair](https://www.vanityfair.com/news/2020/04/genetic-chances-of-dying-from-coronavirus)
 
-[NY Times](https://www.vanityfair.com/news/2020/04/genetic-chances-of-dying-from-coronavirus)
+[NY Times](https://www.nytimes.com/2020/06/03/health/coronavirus-blood-type-genetics.html)
 
 ## Acknowledgements
 
