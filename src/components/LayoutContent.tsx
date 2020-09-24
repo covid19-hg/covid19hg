@@ -38,6 +38,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     [`.${gatsbyRemarkAutolinkHeadersClassName}.${gatsbyRemarkAutolinkHeadersClassName}.${gatsbyRemarkAutolinkHeadersClassName} svg`]: {
       visibility: "hidden",
     },
+    ".manual-md-inline-caption": {
+      textAlign: "center",
+      width: "80%",
+      margin: "0 auto",
+    }
   },
 
   appBarDesktop: {
