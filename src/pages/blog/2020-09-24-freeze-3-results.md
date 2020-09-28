@@ -21,7 +21,7 @@ In our study, we are comparing genetic variation between cases, people who are h
 
 ![ Current results from data freeze 3 (July 2020)](scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
-<strong>Figure 1: Current results from data freeze 3 (July 2020).</strong> The results shown above compares genetic data between 3,199 cases (patients who were hospitalized from COVID-19) and 897,488 controls (patients who were COVID-19 negative).
+<strong>Figure 1: Current results from data freeze 3 (July 2020).</strong> The results shown above compares genetic data between 3,199 cases (patients who were hospitalized from COVID-19) and 897,488 controls (samples from the population presumed to be COVID-19 negative).
 </figcaption>
 
 ## The COVID-19 HGI discovers genetic variation associated with COVID-19 severity
