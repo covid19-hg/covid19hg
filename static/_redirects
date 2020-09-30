@@ -5,3 +5,4 @@ https://covid19hg.com/*  https://www.covid19hg.org/:splat 301!
 
 # Internal redirects
 /faq/ /data-sharing/
+/blog/2020-06-29-in-silico-follow-up-results/ /in-silico-follow-up/
