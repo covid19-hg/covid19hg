@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: COVID-19 HGI Results as of July 2, 2020
+title: COVID-19 HGI Results for Data Freeze 3 (July 2020)
 date: 2020-09-25T13:58:54.797Z
 tags: []
 type: blog-post

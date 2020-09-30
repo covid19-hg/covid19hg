@@ -14,9 +14,10 @@ interface Props {
   helmet: React.ReactNode;
   tags: string[];
   title: string;
+  date: string;
 }
 
-const BlogPostContent = ({ content, tags, helmet, title }: Props) => {
+const BlogPostContent = ({ content, tags, helmet, title, date }: Props) => {
   const classes = useStyles();
   const tagElems = tags.map((tag, index) => (
     <Chip label={tag} key={index} className={classes.chip} />
@@ -25,7 +26,10 @@ const BlogPostContent = ({ content, tags, helmet, title }: Props) => {
   return (
     <Container marginTop={2} fixed={true}>
       {helmet || ""}
-      <Typography variant="h4">{title}</Typography>
+      <Typography variant="h4" gutterBottom={true}>
+        {title}
+      </Typography>
+      <Typography>{date}</Typography>
       <Typography>
         <HTMLContent content={content} className="" />
       </Typography>
