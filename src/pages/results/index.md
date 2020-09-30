@@ -2,6 +2,528 @@
 templateKey: results-page
 title: Results
 releases:
+  - date: September 30, 2020
+    title: COVID19-hg GWAS meta-analyses round 4
+    notes: Meta-analysis was done with fixed effects inverse variance weighting.Results are available in genome builds 38 and 37. An AF filter of 0.001 and an INFO filter of 0.6 was applied to each study before meta.
+    data_columns:
+      - column: "#CHR"
+        description: chromosome
+      - column: POS
+        description: chromosome position
+      - column: REF
+        description: reference and non-effect allele
+      - column: ALT
+        description: alternative and effect allele (beta is for this allele)
+      - column: SNP
+        description: "#CHR:POS:REF:ALT"
+      - column: "{STUDY}_AF_Allele2"
+        description: allele frequency in {STUDY} or 0.5 if not available
+      - column: "{STUDY}_AF_fc"
+        description: allele frequency in {STUDY} / allele frequency in gnomAD v3 (1000000 if frequency in gnomAD is 0)
+      - column: all_meta_N
+        description: number of studies that had the variant after AF and INFO filtering and as such were used for the meta
+      - column: all_inv_var_meta_beta
+        description: effect size on log(OR) scale
+      - column: all_inv_var_meta_sebeta
+        description: standard error of effect size
+      - column: all_inv_var_meta_p
+        description: p-value
+      - column: all_inv_var_het_p
+        description: p-value from Cochran's Q heterogeneity test
+      - column: all_meta_sample_N
+        description: total sample size
+      - column: all_meta_AF
+        description: allele frequency in the meta-analysis
+      - column: rsid
+        description: risd
+      - column: AF_fc
+        description: calculated based on each study's ancestry in gnomAD or all populations if the ancestry is not present in gnomAD
+    authors:
+      - name: COVID19-HG data contributors
+        study: COVID19-HG
+        affiliation: Various
+    studyAbbreviations:
+      - abbreviation: Amsterdam_UMC_COVID_study_group
+        full_name: Amsterdam UMC COVID study group
+      - abbreviation: Ancestry
+        full_name: Ancestry
+      - abbreviation: BRACOVID
+        full_name: Genetic determinants of COVID-19 complications in the Brazilian population
+      - abbreviation: BelCovid
+        full_name: Genetic modifiers for COVID-19 related illness
+      - abbreviation: BQC19
+        full_name: Biobanque Quebec COVID19
+      - abbreviation: DECODE
+        full_name: deCODE
+      - abbreviation: Corea
+        full_name: "(Genetics of COVID-related Manifestation)"
+      - abbreviation: EstBB
+        full_name: Estonian Biobank
+      - abbreviation: FinnGen
+        full_name: FinnGen
+      - abbreviation: GENCOVID
+        full_name: GEN-COVID, reCOVID
+      - abbreviation: genomicc
+        full_name: genomiCC
+      - abbreviation: GNH
+        full_name: Genes & Health
+      - abbreviation: GS
+        full_name: Generation Scotland
+      - abbreviation: HOSTAGE
+        full_name: COVID19-Host(a)ge
+      - abbreviation: Helix
+        full_name: Helix Exome+ COVID-19 Phenotypes
+      - abbreviation: INTERVAL
+        full_name: UK Blood Donors Cohort
+      - abbreviation: MGI
+        full_name: Michigan Genomics Initiative
+      - abbreviation: MVP
+        full_name: Million Veterans Program
+      - abbreviation: NTR
+        full_name: Netherlands Twin Register
+      - abbreviation: PHBB
+        full_name: Partners Healthcare Biobank
+      - abbreviation: PMBB
+        full_name: Penn Medicine Biobank
+      - abbreviation: QGP
+        full_name: Qatar Genome Program
+      - abbreviation: SPGRX
+        full_name: Determining the Molecular Pathways and Genetic Predisposition of the
+          Acute Inflammatory Process Caused by SARS-CoV-2
+      - abbreviation: Stanford
+        full_name: Genomic epidemiology of SARS-Cov-2 and host genetics in Coronavirus Disease
+          2019 (COVID-19)
+      - abbreviation: SweCovid
+        full_name: The genetic predisposition to severe COVID-19
+      - abbreviation: UKBB
+        full_name: UK Biobank
+    analyses:
+      - name: A2_ALL
+        phenotype: very severe respiratory confirmed covid vs. population
+        population: All
+        downloads:
+          - name: COVID19_HGI_A2_ALL_20200930.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_A2_ALL_20200930.b37.txt.gz
+          - name: COVID19_HGI_A2_ALL_20200930.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_A2_ALL_20200930.b37.txt.gz.tbi
+          - name: COVID19_HGI_A2_ALL_20200930.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_A2_ALL_20200930.txt.gz 
+          - name: COVID19_HGI_A2_ALL_20200930.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_A2_ALL_20200930.txt.gz.tbi
+          - name: COVID19_HGI_A2_ALL_20200930.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_A2_ALL_20200930.txt.gz_1.0E-5.txt
+        manhattan:
+          image: /img/200930/A2_ALL_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
+        qqplot:
+          image: /img/200930/A2_ALL_inv_var_meta_p_all_inv_var_meta_p_qqplot.png
+        studies:
+          - study: Amsterdam_UMC_COVID_study_group_EUR
+            cases: 66
+            controls: 1413
+          - study: BQC19_EUR
+            cases: 55
+            controls: 480
+          - study: BRACOVID_AMR
+            cases: 450
+            controls: 1637
+          - study: FinnGen_FIN
+            cases: 54
+            controls: 238657
+          - study: GENCOVID_EUR
+            cases: 468
+            controls: 2472
+          - study: GNH_SAS
+            cases: 24
+            controls: 27353
+          - study: SPGRX_EUR
+            cases: 101
+            controls: 302
+          - study: SweCovid_EUR
+            cases: 78
+            controls: 3778
+          - study: genomicc_EUR
+            cases: 1676
+            controls: 8380
+      - name: B1_ALL
+        phenotype: hospitalized covid vs. not hospitalized covid
+        population: All
+        downloads:
+          - name: COVID19_HGI_B1_ALL_20200930.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B1_ALL_20200930.b37.txt.gz
+          - name: COVID19_HGI_B1_ALL_20200930.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B1_ALL_20200930.b37.txt.gz.tbi
+          - name: COVID19_HGI_B1_ALL_20200930.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B1_ALL_20200930.txt.gz
+          - name: COVID19_HGI_B1_ALL_20200930.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B1_ALL_20200930.txt.gz.tbi
+          - name: COVID19_HGI_B1_ALL_20200930.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B1_ALL_20200930.txt.gz_1.0E-5.txt
+        manhattan:
+          image: /img/200930/B1_ALL_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
+        qqplot:
+          image: /img/200930/B1_ALL_inv_var_meta_p_all_inv_var_meta_p_qqplot.png
+        studies:
+          - study: DECODE_EUR
+            cases: 89
+            controls: 1808
+          - study: FinnGen_FIN
+            cases: 83
+            controls: 224
+          - study: GNH_SAS
+            cases: 62
+            controls: 41
+          - study: PMBB_AFR
+            cases: 66
+            controls: 100
+          - study: QGP_ARAB
+            cases: 60
+            controls: 640
+          - study: SPGRX_EUR
+            cases: 311
+            controls: 51
+          - study: UKBB_EUR
+            cases: 413
+            controls: 897
+          - study: Ancestry_EUR
+            cases: 250
+            controls: 1967
+          - study: BQC19_EUR
+            cases: 55
+            controls: 151
+      - name: B2_ALL
+        phenotype: hospitalized covid vs. population
+        population: All
+        downloads:
+          - name: COVID19_HGI_B2_ALL_20200930.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B2_ALL_20200930.b37.txt.gz
+          - name: COVID19_HGI_B2_ALL_20200930.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B2_ALL_20200930.b37.txt.gz.tbi
+          - name: COVID19_HGI_B2_ALL_20200930.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B2_ALL_20200930.txt.gz
+          - name: COVID19_HGI_B2_ALL_20200930.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B2_ALL_20200930.txt.gz.tbi
+          - name: COVID19_HGI_B2_ALL_20200930.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_B2_ALL_20200930.txt.gz_1.0E-5.txt
+        manhattan:
+          image: /img/200930/B2_ALL_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
+        qqplot:
+          image: /img/200930/B2_ALL_inv_var_meta_p_all_inv_var_meta_p_qqplot.png
+        studies:
+        - study: Amsterdam_UMC_COVID_study_group_EUR
+          cases: 108
+          controls: 1413
+        - study: BQC19_EUR
+          cases: 181
+          controls: 354
+        - study: BRACOVID_AMR
+          cases: 756
+          controls: 1637
+        - study: BelCovid_EUR
+          cases: 109
+          controls: 1484
+        - study: Corea_EAS
+          cases: 69
+          controls: 6500
+        - study: DECODE_EUR
+          cases: 89
+          controls: 274322
+        - study: FinnGen_FIN
+          cases: 83
+          controls: 238628
+        - study: GENCOVID_EUR
+          cases: 571
+          controls: 2472
+        - study: GNH_SAS
+          cases: 62
+          controls: 27353
+        - study: HOSTAGE_EUR
+          cases: 1610
+          controls: 2205
+        - study: PMBB_AFR
+          cases: 66
+          controls: 8536
+        - study: QGP_ARAB
+          cases: 60
+          controls: 13360
+        - study: SPGRX_EUR
+          cases: 311
+          controls: 302
+        - study: UKBB_EUR
+          cases: 413
+          controls: 420118
+        - study: Ancestry_EUR
+          cases: 250
+          controls: 1967
+        - study: SweCovid_EUR
+          cases: 78
+          controls: 3778
+        - study: genomicc_EUR
+          cases: 1676
+          controls: 8380
+      - name: C1_ALL
+        phenotype: covid vs. lab/self-reported negative
+        population: All
+        downloads:
+          - name: COVID19_HGI_C1_ALL_20200930.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C1_ALL_20200930.b37.txt.gz
+          - name: COVID19_HGI_C1_ALL_20200930.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C1_ALL_20200930.b37.txt.gz.tbi
+          - name: COVID19_HGI_C1_ALL_20200930.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C1_ALL_20200930.txt.gz
+          - name: COVID19_HGI_C1_ALL_20200930.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C1_ALL_20200930.txt.gz.tbi
+          - name: COVID19_HGI_C1_ALL_20200930.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C1_ALL_20200930.txt.gz_1.0E-5.txt
+        manhattan:
+          image: /img/200930/C1_ALL_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
+        qqplot:
+          image: /img/200930/C1_ALL_inv_var_meta_p_all_inv_var_meta_p_qqplot.png
+        studies:
+          - study: BQC19_EUR
+            cases: 206
+            controls: 327
+          - study: DECODE_EUR
+            cases: 1897
+            controls: 29014
+          - study: EstBB_EUR
+            cases: 313
+            controls: 12019
+          - study: GNH_SAS
+            cases: 114
+            controls: 256
+          - study: INTERVAL_EUR
+            cases: 161
+            controls: 1119
+          - study: MGI_EUR
+            cases: 122
+            controls: 508
+          - study: MVP_AFR
+            cases: 1217
+            controls: 9204
+          - study: MVP_EUR
+            cases: 1520
+            controls: 24135
+          - study: MVP_HIS
+            cases: 510
+            controls: 3325
+          - study: NTR_EUR
+            cases: 145
+            controls: 117
+          - study: PHBB_AFR
+            cases: 60
+            controls: 375
+          - study: PHBB_EUR
+            cases: 151
+            controls: 3118
+          - study: PHBB_HIS
+            cases: 66
+            controls: 276
+          - study: PMBB_AFR
+            cases: 166
+            controls: 934
+          - study: UKBB_AFR
+            cases: 68
+            controls: 268
+          - study: UKBB_CSA
+            cases: 66
+            controls: 350
+          - study: UKBB_EUR
+            cases: 1310
+            controls: 13646
+          - study: genomicsengland100kgp_EUR
+            cases: 218
+            controls: 1617
+          - study: Ancestry_EUR
+            cases: 2417
+            controls: 14933
+          - study: FinnGen_FIN
+            cases: 83
+            controls: 224
+          - study: QGP_ARAB
+            cases: 60
+            controls: 640
+          - study: SPGRX_EUR
+            cases: 311
+            controls: 51
+      - name: C2_ALL
+        phenotype: covid vs. population
+        population: All
+        downloads:
+          - name: COVID19_HGI_C2_ALL_20200930.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C2_ALL_20200930.b37.txt.gz
+          - name: COVID19_HGI_C2_ALL_20200930.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C2_ALL_20200930.b37.txt.gz.tbi
+          - name: COVID19_HGI_C2_ALL_20200930.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C2_ALL_20200930.txt.gz
+          - name: COVID19_HGI_C2_ALL_20200930.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C2_ALL_20200930.txt.gz.tbi
+          - name: COVID19_HGI_C2_ALL_20200930.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_C2_ALL_20200930.txt.gz_1.0E-5.txt
+        manhattan:
+          image: /img/200930/C2_ALL_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
+        qqplot:
+          image: /img/200930/C2_ALL_inv_var_meta_p_all_inv_var_meta_p_qqplot.png
+        studies:
+          - study: Corea_EAS
+            cases: 108
+            controls: 6500
+          - study: DECODE_EUR
+            cases: 1897
+            controls: 273257
+          - study: EstBB_EUR
+            cases: 313
+            controls: 138272
+          - study: FinnGen_FIN
+            cases: 357
+            controls: 238354
+          - study: GENCOVID_EUR
+            cases: 734
+            controls: 2472
+          - study: GNH_SAS
+            cases: 114
+            controls: 27301
+          - study: Helix_EUR
+            cases: 178
+            controls: 5441
+          - study: INTERVAL_EUR
+            cases: 161
+            controls: 41674
+          - study: MGI_EUR
+            cases: 122
+            controls: 51458
+          - study: MVP_AFR
+            cases: 1217
+            controls: 6085
+          - study: MVP_EUR
+            cases: 1520
+            controls: 7600
+          - study: MVP_HIS
+            cases: 510
+            controls: 2550
+          - study: NTR_EUR
+            cases: 145
+            controls: 5252
+          - study: PHBB_AFR
+            cases: 60
+            controls: 2445
+          - study: PHBB_EUR
+            cases: 151
+            controls: 29966
+          - study: PHBB_HIS
+            cases: 66
+            controls: 2405
+          - study: PMBB_AFR
+            cases: 166
+            controls: 8436
+          - study: QGP_ARAB
+            cases: 700
+            controls: 13360
+          - study: SPGRX_EUR
+            cases: 362
+            controls: 302
+          - study: Stanford_EUR
+            cases: 109
+            controls: 191
+          - study: UKBB_AFR
+            cases: 68
+            controls: 6465
+          - study: UKBB_CSA
+            cases: 66
+            controls: 8487
+          - study: UKBB_EUR
+            cases: 1305
+            controls: 370602
+          - study: genomicsengland100kgp_EUR
+            cases: 218
+            controls: 62302
+          - study: BQC19_EUR
+            cases: 206
+            controls: 327
+          - study: Ancestry_EUR
+            cases: 2417
+            controls: 14933
+          - study: Amsterdam_UMC_COVID_study_group_EUR
+            cases: 108
+            controls: 1413
+          - study: BRACOVID_AMR
+            cases: 756
+            controls: 1637
+          - study: BelCovid_EUR
+            cases: 109
+            controls: 1484
+          - study: HOSTAGE_EUR
+            cases: 1610
+            controls: 2205
+          - study: SweCovid_EUR
+            cases: 78
+            controls: 3778
+          - study: genomicc_EUR
+            cases: 1676
+            controls: 8380
+      - name: D1_ALL
+        phenotype: predicted covid from self-reported symptoms vs. predicted or self-reported non-covid
+        population: All
+        downloads:
+          - name: COVID19_HGI_D1_ALL_20200930.b37.txt.gz
+            description: GRCh37 liftover
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_D1_ALL_20200930.b37.txt.gz
+          - name: COVID19_HGI_D1_ALL_20200930.b37.txt.gz.tbi
+            description: GRCh37 liftover (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_D1_ALL_20200930.b37.txt.gz.tbi
+          - name: COVID19_HGI_D1_ALL_20200930.txt.gz
+            description: GRCh38
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_D1_ALL_20200930.txt.gz
+          - name: COVID19_HGI_D1_ALL_20200930.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_D1_ALL_20200930.txt.gz.tbi
+          - name: COVID19_HGI_D1_ALL_20200930.txt.gz_1.0E-5.txt
+            description: GRCh38 (filtered)
+            url: https://storage.googleapis.com/covid19-hg-public/20200915/results/20200930/COVID19_HGI_D1_ALL_20200930.txt.gz_1.0E-5.txt
+        manhattan:
+          image: /img/200930/D1_ALL_inv_var_meta_p_all_inv_var_meta_p_manhattan.png
+        qqplot:
+          image: /img/200930/D1_ALL_inv_var_meta_p_all_inv_var_meta_p_qqplot.png
+        studies:
+          - study: GS_EUR
+            cases: 132
+            controls: 3610
+          - study: GeneRISK_EUR
+            cases: 154
+            controls: 3451
+          - study: Helix_EUR
+            cases: 605
+            controls: 4778
+          - study: NTR_EUR
+            cases: 603
+            controls: 4669
+          - study: RS_EUR
+            cases: 283
+            controls: 2387
   - date: July 2, 2020
     title: COVID19-hg GWAS meta-analyses round 3
     notes: Meta-analysis was done with inverse variance weighting. Analysis carried out on GRCh38; results also available through GRCh37 liftover. An AF filter of 0.0001 and an INFO filter of 0.6 was applied to each study prior to meta-analysis.
