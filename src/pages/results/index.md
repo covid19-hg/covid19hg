@@ -3,7 +3,7 @@ templateKey: results-page
 title: Results
 releases:
   - date: September 30, 2020
-    title: COVID19-hg GWAS meta-analyses round 4
+    title: COVID19-hg GWAS meta-analyses round 4 (alpha)
     notes: Meta-analysis was done with fixed effects inverse variance weighting.Results are available in genome builds 38 and 37. An AF filter of 0.001 and an INFO filter of 0.6 was applied to each study before meta.
     data_columns:
       - column: "#CHR"

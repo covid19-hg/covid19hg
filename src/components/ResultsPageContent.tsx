@@ -54,7 +54,7 @@ const ResultsPageContent = ({ releases }: Props) => {
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab label="Release 4 (September 2020)" {...a11yProps(0)} />
+          <Tab label="Release 4 Alpha (September 2020)" {...a11yProps(0)} />
           <Tab label="Release 3 (June 2020)" {...a11yProps(1)} />
           <Tab label="Release 2 (May 2020)" {...a11yProps(2)} />
         </Tabs>
