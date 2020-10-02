@@ -11,6 +11,7 @@ import {
   Theme,
 } from "@material-ui/core";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+const { defaultLangKey } = require("../../languages");
 
 const useStyles = makeStyles((theme: Theme) => ({
   post: {
@@ -39,8 +40,13 @@ interface Props {
 const BlogItemListing = ({ data, maxNumItems }: Props) => {
   const classes = useStyles();
   const { edges: posts } = data.allMarkdownRemark;
+  const englishPosts = posts.filter(
+    (post) => post.node.fields.langKey === defaultLangKey
+  );
   const filteredPosts =
-    maxNumItems === undefined ? posts : posts.slice(0, maxNumItems);
+    maxNumItems === undefined
+      ? englishPosts
+      : englishPosts.slice(0, maxNumItems);
   const postElems = filteredPosts.map(({ node: post }) => (
     <Grid item={true} xs={12} md={6} key={post.fields.slug}>
       <Card className={classes.post}>

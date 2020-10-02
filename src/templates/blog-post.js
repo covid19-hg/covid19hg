@@ -17,6 +17,9 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
         date={post.frontmatter.date}
+        langKey={post.fields.langKey}
+        langs={post.frontmatter.langs}
+        slug={post.fields.slug}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -46,6 +49,7 @@ export const pageQuery = graphql`
       id
       fields {
         slug
+        langKey
       }
       html
       frontmatter {
@@ -53,6 +57,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        langs
       }
     }
   }

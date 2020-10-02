@@ -2,6 +2,7 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const ForkTSCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const { defaultLangKey } = require("./languages");
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "develop") {
@@ -34,6 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
             id
             fields {
               slug
+              langKey
             }
             frontmatter {
               tags
@@ -51,17 +53,45 @@ exports.createPages = ({ actions, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges;
 
-    posts.forEach((edge) => {
+    const defaultLangPosts = posts.filter(
+      ({ node }) =>
+        !node.fields.langKey || node.fields.langKey === defaultLangKey
+    );
+
+    defaultLangPosts.forEach((edge) => {
       const id = edge.node.id;
+      const component = path.resolve(
+        `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+      );
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
+        component,
         // additional data can be passed via context
         context: {
           id,
+          slug: edge.node.fields.slug,
+          langKey: defaultLangKey,
+        },
+      });
+    });
+    const otherLangPosts = posts.filter(
+      ({ node }) =>
+        !!node.fields.langKey && node.fields.langKey !== defaultLangKey
+    );
+    console.log("otherLangPosts", otherLangPosts);
+    otherLangPosts.forEach((innerEdge) => {
+      const pagePath = innerEdge.node.fields.slug.replace(".", "/");
+      console.log("creating page with path", pagePath);
+      createPage({
+        path: pagePath,
+        component: path.resolve(
+          `src/templates/${String(innerEdge.node.frontmatter.templateKey)}.js`
+        ),
+        context: {
+          id: innerEdge.node.id,
+          slug: innerEdge.node.fields.slug,
+          langKey: innerEdge.node.fields.langKey,
         },
       });
     });
@@ -71,7 +101,10 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (
+    node.internal.type === `MarkdownRemark` &&
+    node.internal.fieldOwners.slug !== "gatsby-plugin-i18n"
+  ) {
     const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
