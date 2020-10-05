@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: October 2, 2020 meeting
-date: 2020-10-05T19:14:36.457Z
+date: 2020-10-02T19:14:36.457Z
 tags:
   - Archive
 type: meeting-notes
