@@ -80,12 +80,12 @@ const BlogPostContent = ({
 
   return (
     <Container marginTop={2} fixed={true}>
-      {helmet || ""}
+      {helmet}
+      {translationListingElem}
       <Typography variant="h4" gutterBottom={true}>
         {title}
       </Typography>
       <Typography gutterBottom={true}>{date}</Typography>
-      {translationListingElem}
       <Typography>
         <HTMLContent content={content} className="" />
       </Typography>
