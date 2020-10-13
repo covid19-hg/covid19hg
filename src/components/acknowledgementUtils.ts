@@ -1,6 +1,5 @@
 import _sortBy from "lodash/sortBy";
 import _sumBy from "lodash/sumBy";
-import _minBy from "lodash/minBy";
 import _last from "lodash/last";
 import type {
   ContributorDatum as RawContributor,
@@ -83,27 +82,28 @@ const getLeftRightDifference = <T>(
   return difference;
 };
 
+// Add items one-by-one to left or right column to minimize differences in
+// height between them:
 export const splitIntoTwoBalancedLists = <T>(
   items: T[],
-  getValue: (item: T) => number
+  getItemHeight: (item: T) => number
 ): [T[], T[]] => {
-  const sorted = _sortBy(items, getValue).reverse();
   const left: T[] = [];
   const right: T[] = [];
-  for (const item of sorted) {
+  for (const item of items) {
     const diffIfAddedToLeft = getLeftRightDifference(
       left,
       right,
       item,
       Side.Left,
-      getValue
+      getItemHeight
     );
     const diffIfAddedToRight = getLeftRightDifference(
       left,
       right,
       item,
       Side.Right,
-      getValue
+      getItemHeight
     );
     if (diffIfAddedToLeft <= diffIfAddedToRight) {
       left.push(item);
@@ -112,30 +112,6 @@ export const splitIntoTwoBalancedLists = <T>(
     }
   }
   return [left, right];
-};
-
-interface DifferenceForPartitionIndex {
-  difference: number;
-  partitionIndex: number;
-}
-export const getPartitionPointToMinimizeDifferences = <T>(
-  items: T[],
-  getValue: (item: T) => number
-): [T[], T[]] => {
-  const differencesForPartitionIndex: DifferenceForPartitionIndex[] = [];
-  for (let i = 0; i < items.length - 1; i += 1) {
-    const left = items.slice(0, i + 1);
-    const right = items.slice(i + 1);
-    const leftSum = _sumBy(left, getValue);
-    const rightSum = _sumBy(right, getValue);
-    const difference = Math.abs(leftSum - rightSum);
-    differencesForPartitionIndex.push({ difference, partitionIndex: i });
-  }
-  const min = _minBy(
-    differencesForPartitionIndex,
-    ({ difference }) => difference
-  )!.partitionIndex;
-  return [items.slice(0, min + 1), items.slice(min + 1)];
 };
 
 const approxHeightOfStudyTitle = 4;
@@ -156,15 +132,20 @@ const getDisplayedStudy = (
   );
   let leftRoleLists: RoleList[];
   let rightRoleLists: RoleList[];
+  // Use two-column layout for large screen and one-column layout for small
+  // screen:
   if (isLargeScreen) {
     const [left, right] = splitIntoTwoBalancedLists(
-      unprocessedRoleList,
+      _sortBy(unprocessedRoleList, getRoleListApproxHeight).reverse(),
       getRoleListApproxHeight
     );
     leftRoleLists = left;
     rightRoleLists = right;
   } else {
-    leftRoleLists = unprocessedRoleList;
+    leftRoleLists = _sortBy(
+      unprocessedRoleList,
+      getRoleListApproxHeight
+    ).reverse();
     rightRoleLists = [];
   }
   const approxRoleListsHeight = Math.max(
@@ -185,7 +166,6 @@ export const processContributorList = (
   studies: AirtableDatum[],
   isLargeScreen: boolean
 ) => {
-  const unsortedProcessedStudies: ProcessedStudies = new Map();
   const studyLookup = new Map(
     studies.map(({ id, study }) => [id, study] as const)
   );
@@ -231,18 +211,19 @@ export const processContributorList = (
     }
   }
 
+  const allContributorsPerStudy: ProcessedStudies = new Map();
   for (const { studyIds, role, name: contributorName } of studyContributors) {
     for (const studyId of studyIds) {
       const studyName = studyLookup.get(studyId);
       if (studyName !== undefined) {
-        const retrievedStudy = unsortedProcessedStudies.get(studyId);
+        const retrievedStudy = allContributorsPerStudy.get(studyId);
         let study: ProcessedStudy;
         if (retrievedStudy === undefined) {
           study = {
             name: studyName,
             contributorsByRole: new Map(),
           };
-          unsortedProcessedStudies.set(studyId, study);
+          allContributorsPerStudy.set(studyId, study);
         } else {
           study = retrievedStudy;
         }
@@ -262,7 +243,7 @@ export const processContributorList = (
     }
   }
   const processedStudies = _sortBy(
-    [...unsortedProcessedStudies.entries()],
+    [...allContributorsPerStudy.entries()],
     ([, { name }]) => name.toLowerCase()
   );
 
@@ -295,23 +276,13 @@ export const processContributorList = (
     getDisplayedStudy(study, id, isLargeScreen)
   );
 
+  // Use two-column layout for large screen and one-column layout for small screen:
   let leftColumnStudies: DisplayedStudy[], rightColumnStudies: DisplayedStudy[];
   if (isLargeScreen) {
-    const [left, right] = getPartitionPointToMinimizeDifferences(
+    [leftColumnStudies, rightColumnStudies] = splitIntoTwoBalancedLists(
       displayedProcessedStudies,
       getStudyApproxHeight
     );
-    const joined = [...left, ...right];
-    leftColumnStudies = [];
-    rightColumnStudies = [];
-    for (let i = 0; i < joined.length; i += 1) {
-      const study = joined[i];
-      if (i % 2 == 0) {
-        leftColumnStudies.push(study);
-      } else {
-        rightColumnStudies.push(study);
-      }
-    }
   } else {
     leftColumnStudies = displayedProcessedStudies;
     rightColumnStudies = [];
