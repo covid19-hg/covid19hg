@@ -57,14 +57,26 @@ exports.createPages = ({ actions, graphql }) => {
       ({ node }) =>
         !node.fields.langKey || node.fields.langKey === defaultLangKey
     );
+    const otherLangPosts = posts.filter(
+      ({ node }) =>
+        !!node.fields.langKey && node.fields.langKey !== defaultLangKey
+    );
 
     defaultLangPosts.forEach((edge) => {
       const id = edge.node.id;
+      const slug = edge.node.fields.slug;
       const component = path.resolve(
         `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
       );
+      const translationPosts = otherLangPosts.filter((innerEdge) =>
+        innerEdge.node.fields.slug.includes(slug)
+      );
+      const otherLanguages = translationPosts.map(
+        (innerEdge) => innerEdge.node.fields.langKey
+      );
+
       createPage({
-        path: edge.node.fields.slug,
+        path: slug,
         tags: edge.node.frontmatter.tags,
         component,
         // additional data can be passed via context
@@ -72,27 +84,28 @@ exports.createPages = ({ actions, graphql }) => {
           id,
           slug: edge.node.fields.slug,
           langKey: defaultLangKey,
+          langs: otherLanguages,
         },
       });
-    });
-    const otherLangPosts = posts.filter(
-      ({ node }) =>
-        !!node.fields.langKey && node.fields.langKey !== defaultLangKey
-    );
-    console.log("otherLangPosts", otherLangPosts);
-    otherLangPosts.forEach((innerEdge) => {
-      const pagePath = innerEdge.node.fields.slug.replace(".", "/");
-      console.log("creating page with path", pagePath);
-      createPage({
-        path: pagePath,
-        component: path.resolve(
-          `src/templates/${String(innerEdge.node.frontmatter.templateKey)}.js`
-        ),
-        context: {
-          id: innerEdge.node.id,
-          slug: innerEdge.node.fields.slug,
-          langKey: innerEdge.node.fields.langKey,
-        },
+      translationPosts.forEach((innerEdge) => {
+        const pagePath = innerEdge.node.fields.slug.replace(".", "/");
+        const langKey = innerEdge.node.fields.langKey;
+        const langs = [defaultLangKey].concat(
+          otherLanguages.filter((item) => item !== langKey)
+        );
+        createPage({
+          path: pagePath,
+          component: path.resolve(
+            `src/templates/${String(innerEdge.node.frontmatter.templateKey)}.js`
+          ),
+          context: {
+            id: innerEdge.node.id,
+            slug: innerEdge.node.fields.slug,
+            langKey,
+            langs,
+            canonicalLink: slug,
+          },
+        });
       });
     });
   });

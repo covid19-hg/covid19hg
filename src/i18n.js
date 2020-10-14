@@ -6,6 +6,7 @@ export const codeToLanguage = (code) =>
     en: "English",
     es: "Spanish",
     zh: "Chinese",
+    ko: "Korean",
   }[code]);
 
 export const createLanguageLink = (slug, lang) => {

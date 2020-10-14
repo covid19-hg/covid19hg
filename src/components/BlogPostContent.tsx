@@ -49,7 +49,12 @@ const BlogPostContent = ({
       );
       const translationLinkElems = foreignTranslations.map((lang, index) => {
         const pre = index < foreignTranslations.length - 1 ? " " : " and ";
-        const post = index < foreignTranslations.length - 1 ? "," : ".";
+        const post =
+          index < foreignTranslations.length - 2
+            ? ", "
+            : index === foreignTranslations.length - 2
+            ? " "
+            : ".";
         return (
           <>
             {pre}
