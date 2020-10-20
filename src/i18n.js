@@ -7,6 +7,17 @@ export const codeToLanguage = (code) =>
     es: "Spanish",
     zh: "Chinese",
     ko: "Korean",
+    ar: "Arabic",
+    bn: "Bengali",
+    ca: "Catalan",
+    da: "Danish",
+    nl: "Dutch",
+    fi: "Finnish",
+    fr: "French",
+    de: "German",
+    el: "Greek",
+    hi: "Hindi",
+    hu: "Hungarian",
   }[code]);
 
 export const createLanguageLink = (slug, lang) => {
