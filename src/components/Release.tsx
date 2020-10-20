@@ -85,7 +85,6 @@ const Release = (release: Props) => {
     <Analysis analysis={analysis} key={analysis.name} />
   ))
 
-
   return (
     <Container disableGutters={true}>
       <Typography variant="h4">{release.title}</Typography>
@@ -120,6 +119,9 @@ const Release = (release: Props) => {
 
         <Grid item={true} xs={12}>
           <Typography align="center">An interactive data browser will be available soon.</Typography>
+          <Typography align="center" style={{ color: '#FF8C00' }}>
+            Note: variants with heterogeneity p-value less than 0.001 across studies are in orange
+          </Typography>
         </Grid>
       </Grid>
       <Grid container={true} marginTop={2} spacing={4}>
