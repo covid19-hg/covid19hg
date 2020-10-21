@@ -21,6 +21,7 @@ export const codeToLanguage = (code) =>
     it: "Italian",
     ja: "Japanese",
     ms: "Malay",
+    ro: "Romanian",
   }[code]);
 
 export const createLanguageLink = (slug, lang) => {
