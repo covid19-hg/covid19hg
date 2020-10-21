@@ -120,7 +120,7 @@ const Release = (release: Props) => {
         <Grid item={true} xs={12}>
           <Typography align="center">An interactive data browser will be available soon.</Typography>
           <Typography align="center" style={{ color: '#FF8C00' }}>
-            Note: variants with heterogeneity p-value less than 0.001 across studies are in orange
+            Note: variants with heterogeneity p-value less than 0.001 across studies are in orange.
           </Typography>
         </Grid>
       </Grid>
