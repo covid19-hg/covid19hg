@@ -20,6 +20,8 @@ export type AnalysisProps = {
   }[]
   manhattan: any
   qqplot: any
+  noPlots: boolean
+  includes23AndMe: boolean
   studies: {
     cases: number
     controls: number
@@ -52,6 +54,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Analysis = ({ analysis }: { analysis: AnalysisProps }) => {
+
   const classes = useStyles()
   const studyTableRows = analysis.studies.map(({ study, cases, controls }: any) => (
     <AlternatelyShadedTableRow key={study}>
@@ -95,6 +98,15 @@ const Analysis = ({ analysis }: { analysis: AnalysisProps }) => {
               </Grid>
             )}
           </Grid>
+
+
+            {analysis.includes23AndMe && (
+              <Typography style={{ color: '#8b0000', paddingBottom: 20 }}>
+                Please note: the plots shown here display results from an analysis <strong>with</strong> the 23andMe study
+                  included. However, due to privacy, the downloadable gz files <strong>do not</strong> include the 23andMe study.
+                A limited version of the analysis that includes the 23andMe study is available in the file labeled "10K".
+              </Typography>
+            )}
 
           <Grid container={true} alignItems={'center' as const} spacing={1}>
             <Grid item={true} xs={leftColumnWidthXs} md={leftColumnWidthMd}>
