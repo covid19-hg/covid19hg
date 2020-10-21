@@ -22,6 +22,13 @@ export const codeToLanguage = (code) =>
     ja: "Japanese",
     ms: "Malay",
     ro: "Romanian",
+    ru: "Russian",
+    sr: "Serbian",
+    sl: "Slovenian",
+    sv: "Swedish",
+    ta: "Tamil",
+    mk: "Macedonian",
+    pl: "Polish",
   }[code]);
 
 export const createLanguageLink = (slug, lang) => {
