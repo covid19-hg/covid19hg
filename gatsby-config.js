@@ -1,7 +1,7 @@
 /* eslint-env node */
 const dotEnv = require("dotenv");
 const { gatsbyRemarkAutolinkHeadersClassName } = require("./buildConstants");
-const languages = require("./languages");
+const { defaultLangKey } = require("./src/i18n");
 
 const localConfig = dotEnv.config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyDefault: languages.defaultLangKey,
+        langKeyDefault: defaultLangKey,
         useLangKeyLayout: false,
       },
     },

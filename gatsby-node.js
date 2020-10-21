@@ -2,7 +2,7 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const ForkTSCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-const { defaultLangKey } = require("./languages");
+const { defaultLangKey } = require("./src/i18n");
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "develop") {

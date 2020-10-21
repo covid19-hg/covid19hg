@@ -11,7 +11,7 @@ import {
   Theme,
 } from "@material-ui/core";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-const { defaultLangKey } = require("../../languages");
+const { defaultLangKey } = require("../i18n");
 
 const useStyles = makeStyles((theme: Theme) => ({
   post: {

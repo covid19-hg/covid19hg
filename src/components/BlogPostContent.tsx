@@ -3,8 +3,8 @@ import { Container } from "../components/materialUIContainers";
 import { Typography, Chip, makeStyles, Theme } from "@material-ui/core";
 import { HTMLContent } from "./Content";
 import { Link } from "gatsby";
-const { codeToLanguage, createLanguageLink } = require("../i18n");
-const { defaultLangKey } = require("../../languages");
+import sortBy from "lodash/sortBy";
+const { createLanguageLink, defaultLangKey, languages } = require("../i18n");
 
 const useStyles = makeStyles((theme: Theme) => ({
   chip: {
@@ -44,9 +44,10 @@ const BlogPostContent = ({
   } else {
     const languageLink = createLanguageLink(slug, langKey);
     if (langKey === defaultLangKey) {
-      const foreignTranslations = langs.filter(
-        (lang) => lang !== defaultLangKey
+      const foreignTranslations = sortBy(
+        langs.filter((lang) => lang !== defaultLangKey)
       );
+
       const translationLinkElems = foreignTranslations.map((lang, index) => {
         const pre = index < foreignTranslations.length - 1 ? " " : " and ";
         const post =
@@ -58,7 +59,9 @@ const BlogPostContent = ({
         return (
           <>
             {pre}
-            <Link to={languageLink(lang)}>{codeToLanguage(lang)}</Link>
+            <Link to={languageLink(lang)}>
+              {languages.get(lang).nativeName}
+            </Link>
             {post}
           </>
         );
@@ -72,7 +75,8 @@ const BlogPostContent = ({
       translationListingElem = (
         <Typography>
           <em>
-            This is a translation in {codeToLanguage(langKey)}. You can also{" "}
+            This is a translation in {languages.get(langKey).englishName}. You
+            can also{" "}
             <Link to={languageLink(defaultLangKey)}>
               read the original English version
             </Link>
