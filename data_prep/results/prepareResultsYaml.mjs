@@ -8,11 +8,11 @@ const VERSION = '20201020'
 const RESULTS_PREFIX = 'COVID19_HGI'
 
 const B37_GZ_SUFFIX = '.b37.txt.gz'
-// const B37_TBI_SUFFIX = '.b37.txt.gz.tbi'
+const B37_TBI_SUFFIX = '.b37.txt.gz.tbi'
 const B37_FILTERED_SUFFIX = '.b37_1.0E-5.txt'
 
 const B38_GZ_SUFFIX = '.txt.gz'
-// const B38_TBI_SUFFIX = '.txt.gz.tbi'
+const B38_TBI_SUFFIX = '.txt.gz.tbi'
 const B38_FILTERED_SUFFIX = '.txt.gz_1.0E-5.txt'
 const B38_23ANDME_GZ_SUFFIX = '.10k.txt.gz'
 
@@ -80,10 +80,10 @@ analyses = analyses.map((analysis) => ({
 
 const downloadTypes = [
   { type: 'grch37_gz', description: 'GRCh37 liftover', suffix: B37_GZ_SUFFIX },
-  // { type: "grch37_tbi", description: "GRCh37 (.tbi)", suffix: B37_TBI_SUFFIX },
+  { type: "grch37_tbi", description: "GRCh37 (.tbi)", suffix: B37_TBI_SUFFIX },
   { type: 'grch37_filtered', description: 'GRCh37 (filtered)', suffix: B37_FILTERED_SUFFIX },
   { type: 'grch38_gz', description: 'GRCh38', suffix: B38_GZ_SUFFIX },
-  // { type: "grch38_tbi", description: "GRCh38 (.tbi)", suffix: B38_TBI_SUFFIX },
+  { type: "grch38_tbi", description: "GRCh38 (.tbi)", suffix: B38_TBI_SUFFIX },
   { type: 'grch38_filtered', description: 'GRCh38 (filtered)', suffix: B38_FILTERED_SUFFIX },
   { type: 'grch38_with_23andme', description: 'GRCh38 with 23andMe 10K', suffix: B38_23ANDME_GZ_SUFFIX },
 ]
@@ -147,7 +147,7 @@ const release = {
   date: 'October 20, 2020',
   title: 'COVID19-hg GWAS meta-analyses round 4',
   notes:
-    'Meta-analysis was done with fixed effects inverse variance weighting.Results are available in genome builds 38 and 37. An AF filter of 0.001 and an INFO filter of 0.6 was applied to each study before meta.',
+    'Meta-analysis was done with fixed effects inverse variance weighting. Results are available in genome builds 38 and 37. An AF filter of 0.001 and an INFO filter of 0.6 was applied to each study before meta. 1000G EUR phase 3 samples were used as a panel for pruning. Nine genome-wide significant SNPs from C2 and B2 analyses AND SNPs +/-100kb with P<0.01 around these top SNPs selected (no r2 threshold) coming to total 461 SNPs (MAF max 0.1%). Excluding the regions above, the top 9539 SNPs from clumps using MAF 1% variants, r2=0.1, kb=250.',
   data_columns: [
     {
       column: '#CHR',
