@@ -26,6 +26,7 @@ exports.languages = new Map([
     "ar",
     { englishName: "Arabic", nativeName: "العربية", direction: rightToLeft },
   ],
+  ["fa", { englishName: "Farsi", nativeName: "فارسی", direction: rightToLeft }],
   [
     "bn",
     { englishName: "Bengali", nativeName: "বাংলা", direction: leftToRight },
