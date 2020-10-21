@@ -5,9 +5,18 @@ releases:
   - date: 'October 20, 2020'
     title: COVID19-hg GWAS meta-analyses round 4
     notes: >-
-      Meta-analysis was done with fixed effects inverse variance
-      weighting.Results are available in genome builds 38 and 37. An AF filter
-      of 0.001 and an INFO filter of 0.6 was applied to each study before meta.
+      Meta-analysis was done with fixed effects inverse variance weighting.
+      Results are available in genome builds 38 and 37. An AF filter of 0.001
+      and an INFO filter of 0.6 was applied to each study before meta. 
+
+      1000G EUR phase 3 samples were used as a panel for pruning. 
+
+      Nine genome-wide significant SNPs from C2 and B2 analyses AND SNPs
+      +/-100kb with P<0.01 around these top SNPs selected (no r2 threshold)
+      coming to total 461 SNPs (MAF max 0.1%). 
+
+      Excluding the regions above, the top 9539 SNPs from clumps using MAF 1%
+      variants, r2=0.1, kb=250
     data_columns:
       - column: '#CHR'
         description: chromosome
@@ -135,6 +144,10 @@ releases:
             description: GRCh37 liftover
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_A1_ALL_20201020.b37.txt.gz
+          - name: COVID19_HGI_A1_ALL_20201020.b37.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_A1_ALL_20201020.b37.txt.gz.tbi
           - name: COVID19_HGI_A1_ALL_20201020.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
@@ -143,6 +156,10 @@ releases:
             description: GRCh38
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_A1_ALL_20201020.txt.gz
+          - name: COVID19_HGI_A1_ALL_20201020.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_A1_ALL_20201020.txt.gz.tbi
           - name: COVID19_HGI_A1_ALL_20201020.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
@@ -174,6 +191,10 @@ releases:
             description: GRCh37 liftover
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_A2_ALL_leave_23andme_20201020.b37.txt.gz
+          - name: COVID19_HGI_A2_ALL_leave_23andme_20201020.b37.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_A2_ALL_leave_23andme_20201020.b37.txt.gz.tbi
           - name: COVID19_HGI_A2_ALL_leave_23andme_20201020.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
@@ -182,6 +203,10 @@ releases:
             description: GRCh38
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_A2_ALL_leave_23andme_20201020.txt.gz
+          - name: COVID19_HGI_A2_ALL_leave_23andme_20201020.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_A2_ALL_leave_23andme_20201020.txt.gz.tbi
           - name: COVID19_HGI_A2_ALL_leave_23andme_20201020.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
@@ -247,6 +272,10 @@ releases:
             description: GRCh37 liftover
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_B1_ALL_20201020.b37.txt.gz
+          - name: COVID19_HGI_B1_ALL_20201020.b37.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_B1_ALL_20201020.b37.txt.gz.tbi
           - name: COVID19_HGI_B1_ALL_20201020.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
@@ -255,6 +284,10 @@ releases:
             description: GRCh38
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_B1_ALL_20201020.txt.gz
+          - name: COVID19_HGI_B1_ALL_20201020.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_B1_ALL_20201020.txt.gz.tbi
           - name: COVID19_HGI_B1_ALL_20201020.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
@@ -312,6 +345,10 @@ releases:
             description: GRCh37 liftover
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/eur/COVID19_HGI_B2_ALL_eur_leave_23andme_20201020.b37.txt.gz
+          - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20201020.b37.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/eur/COVID19_HGI_B2_ALL_eur_leave_23andme_20201020.b37.txt.gz.tbi
           - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20201020.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
@@ -320,6 +357,10 @@ releases:
             description: GRCh38
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/eur/COVID19_HGI_B2_ALL_eur_leave_23andme_20201020.txt.gz
+          - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20201020.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/eur/COVID19_HGI_B2_ALL_eur_leave_23andme_20201020.txt.gz.tbi
           - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20201020.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
@@ -367,7 +408,6 @@ releases:
           - study: genomicc_EUR
             cases: 1676
             controls: 8380
-        noPlots: true
       - name: B2_ALL
         population: All
         phenotype: Hospitalized covid vs. population
@@ -376,6 +416,10 @@ releases:
             description: GRCh37 liftover
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_B2_ALL_leave_23andme_20201020.b37.txt.gz
+          - name: COVID19_HGI_B2_ALL_leave_23andme_20201020.b37.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_B2_ALL_leave_23andme_20201020.b37.txt.gz.tbi
           - name: COVID19_HGI_B2_ALL_leave_23andme_20201020.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
@@ -384,6 +428,10 @@ releases:
             description: GRCh38
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_B2_ALL_leave_23andme_20201020.txt.gz
+          - name: COVID19_HGI_B2_ALL_leave_23andme_20201020.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_B2_ALL_leave_23andme_20201020.txt.gz.tbi
           - name: COVID19_HGI_B2_ALL_leave_23andme_20201020.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
@@ -476,6 +524,10 @@ releases:
             description: GRCh37 liftover
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_C1_ALL_leave_23andme_20201020.b37.txt.gz
+          - name: COVID19_HGI_C1_ALL_leave_23andme_20201020.b37.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_C1_ALL_leave_23andme_20201020.b37.txt.gz.tbi
           - name: COVID19_HGI_C1_ALL_leave_23andme_20201020.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
@@ -484,6 +536,10 @@ releases:
             description: GRCh38
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_C1_ALL_leave_23andme_20201020.txt.gz
+          - name: COVID19_HGI_C1_ALL_leave_23andme_20201020.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_C1_ALL_leave_23andme_20201020.txt.gz.tbi
           - name: COVID19_HGI_C1_ALL_leave_23andme_20201020.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
@@ -576,6 +632,10 @@ releases:
             description: GRCh37 liftover
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_C2_ALL_leave_23andme_20201020.b37.txt.gz
+          - name: COVID19_HGI_C2_ALL_leave_23andme_20201020.b37.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_C2_ALL_leave_23andme_20201020.b37.txt.gz.tbi
           - name: COVID19_HGI_C2_ALL_leave_23andme_20201020.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
@@ -584,6 +644,10 @@ releases:
             description: GRCh38
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_C2_ALL_leave_23andme_20201020.txt.gz
+          - name: COVID19_HGI_C2_ALL_leave_23andme_20201020.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_C2_ALL_leave_23andme_20201020.txt.gz.tbi
           - name: COVID19_HGI_C2_ALL_leave_23andme_20201020.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
@@ -715,6 +779,10 @@ releases:
             description: GRCh37 liftover
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/eur/COVID19_HGI_C2_ALL_eur_leave_23andme_20201020.b37.txt.gz
+          - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20201020.b37.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/eur/COVID19_HGI_C2_ALL_eur_leave_23andme_20201020.b37.txt.gz.tbi
           - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20201020.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
@@ -723,6 +791,10 @@ releases:
             description: GRCh38
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/eur/COVID19_HGI_C2_ALL_eur_leave_23andme_20201020.txt.gz
+          - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20201020.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/eur/COVID19_HGI_C2_ALL_eur_leave_23andme_20201020.txt.gz.tbi
           - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20201020.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
@@ -794,7 +866,6 @@ releases:
           - study: genomicc_EUR
             cases: 1676
             controls: 8380
-        noPlots: true
       - name: D1_ALL
         population: All
         phenotype: >-
@@ -805,6 +876,10 @@ releases:
             description: GRCh37 liftover
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_D1_ALL_20201020.b37.txt.gz
+          - name: COVID19_HGI_D1_ALL_20201020.b37.txt.gz.tbi
+            description: GRCh37 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_D1_ALL_20201020.b37.txt.gz.tbi
           - name: COVID19_HGI_D1_ALL_20201020.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
@@ -813,6 +888,10 @@ releases:
             description: GRCh38
             url: >-
               https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_D1_ALL_20201020.txt.gz
+          - name: COVID19_HGI_D1_ALL_20201020.txt.gz.tbi
+            description: GRCh38 (.tbi)
+            url: >-
+              https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020/COVID19_HGI_D1_ALL_20201020.txt.gz.tbi
           - name: COVID19_HGI_D1_ALL_20201020.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
