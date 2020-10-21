@@ -1,5 +1,4 @@
 import fs from 'fs'
-import path from 'path'
 import yaml from 'js-yaml'
 
 const RESULTS_URL = 'https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020'
@@ -36,6 +35,13 @@ let analyses = [
   },
   { analysis_id: 'B1_ALL', phenotype: 'Hospitalized covid vs. not hospitalized covid', population: 'All' },
   {
+    analysis_id: 'B2_ALL_eur_leave_23andme',
+    phenotype: 'Hospitalized covid vs. population, leave out 23andMe',
+    population: 'Eur',
+    noPlots: true,
+    dirPrefix: 'eur',
+  },
+  {
     analysis_id: 'B2_ALL',
     phenotype: 'Hospitalized covid vs. population',
     population: 'All',
@@ -49,6 +55,13 @@ let analyses = [
   },
   { analysis_id: 'C2_ALL', phenotype: 'Covid vs. population', population: 'All', includes23AndMe: true },
   {
+    analysis_id: 'C2_ALL_eur_leave_23andme',
+    phenotype: 'Covid vs. population, leave out 23andMe',
+    population: 'Eur',
+    noPlots: true,
+    dirPrefix: 'eur',
+  },
+  {
     analysis_id: 'D1_ALL',
     phenotype: 'Predicted covid from self-reported symptoms vs. predicted or self-reported non-covid',
     population: 'All',
@@ -57,7 +70,7 @@ let analyses = [
 
 analyses = analyses.map((analysis) => ({
   ...analysis,
-  meta: JSON.parse(fs.readFileSync(`./${analysis.analysis_id}.json`)).meta,
+  meta: JSON.parse(fs.readFileSync(`./metadata/${analysis.analysis_id}.json`)).meta,
 }))
 
 analyses = analyses.map((analysis) => ({
@@ -88,21 +101,33 @@ analyses = analyses.map((analysis) => {
       })
       .map((downloadType) => {
         version = downloadType.type === 'grch38_with_23andme' ? VERSION : version
+
         const fileName = `${RESULTS_PREFIX}_${analysis.analysis_id}_${version}${downloadType.suffix}`
+
+        const url = analysis.dirPrefix
+          ? `${RESULTS_URL}/${analysis.dirPrefix}/${fileName}`
+          : `${RESULTS_URL}/${fileName}`
+
         return {
           name: fileName,
           description: downloadType.description,
-          url: path.join(RESULTS_URL, fileName),
+          url,
         }
       }),
   }
 })
 
-analyses = analyses.map((analysis) => ({
-  ...analysis,
-  manhattan: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${MANHATTAN_SUFFIX}` },
-  qqplot: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${QQPLOT_SUFFIX}` },
-}))
+analyses = analyses.map((analysis) => {
+  if (!analysis.noPlots) {
+    return {
+      ...analysis,
+      manhattan: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${MANHATTAN_SUFFIX}` },
+      qqplot: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${QQPLOT_SUFFIX}` },
+    }
+  } else {
+    return analysis
+  }
+})
 
 analyses = analyses.map((analysis) => {
   const {
@@ -306,14 +331,14 @@ const release = {
       abbreviation: 'UKBB',
       full_name: 'UK Biobank',
     },
-    { abbreviation: 'BoSCO', full_name: '' },
+    { abbreviation: 'BoSCO', full_name: 'Bonn Study of COVID19 genetics' },
     { abbreviation: '23ANDME', full_name: '23andMe' },
     { abbreviation: 'Italy_HOSTAGE', full_name: 'Italy COVID19-Host(a)ge' },
     { abbreviation: 'Spain_HOSTAGE', full_name: 'Spain COVID19-Host(a)ge' },
     { abbreviation: 'genomicsengland100kgp', full_name: 'Genomics England' },
     { abbreviation: 'Lifelines', full_name: 'Lifelines' },
     { abbreviation: 'GeneRISK', full_name: 'Gene Risk' },
-    { abbreviation: 'RS', full_name: '' },
+    { abbreviation: 'RS', full_name: 'Rotterdam Study' },
   ],
   analyses,
 }
@@ -342,4 +367,18 @@ if (studiesWithoutData.length > 1) {
   console.warn(studiesWithoutData, 'were not in dataset')
 }
 
-fs.writeFileSync('2010-10-20-release.json', JSON.stringify(release), 'utf8')
+const previousReleasesFileContents = fs.readFileSync('./previousReleases.yaml', 'utf8')
+
+const previousReleases = yaml.safeLoad(previousReleasesFileContents)
+
+const releases = { ...previousReleases, releases: [release, ...previousReleases.releases] }
+
+const jsonString = JSON.stringify(releases)
+
+const json = JSON.parse(jsonString)
+
+const releasesYamlStr = yaml.safeDump(json)
+
+const releasesYamlStrWithDocumentSeperator = `---\n${releasesYamlStr}`
+
+fs.writeFileSync('../../src/pages/results/index.md', releasesYamlStrWithDocumentSeperator, 'utf8')

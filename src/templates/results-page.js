@@ -51,6 +51,7 @@ export const pageQuery = graphql`
             name
             phenotype
             population
+            includes23AndMe
             downloads {
               name
               description
