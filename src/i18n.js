@@ -18,6 +18,9 @@ export const codeToLanguage = (code) =>
     el: "Greek",
     hi: "Hindi",
     hu: "Hungarian",
+    it: "Italian",
+    ja: "Japanese",
+    ms: "Malay",
   }[code]);
 
 export const createLanguageLink = (slug, lang) => {
