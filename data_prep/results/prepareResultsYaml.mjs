@@ -14,7 +14,28 @@ const B37_FILTERED_SUFFIX = '.b37_1.0E-5.txt'
 const B38_GZ_SUFFIX = '.txt.gz'
 const B38_TBI_SUFFIX = '.txt.gz.tbi'
 const B38_FILTERED_SUFFIX = '.txt.gz_1.0E-5.txt'
-const B38_23ANDME_GZ_SUFFIX = '.10k.txt.gz'
+
+const B38_10K_GZ_SUFFIX = '.10k.txt.gz'
+const B38_10K_TBI_SUFFIX = '.10k.txt.gz.tbi'
+
+const downloadTypes = [
+  { type: 'full_grch37_gz', description: 'GRCh37 liftover', suffix: B37_GZ_SUFFIX },
+  { type: "full_grch37_tbi", description: "GRCh37 (.tbi)", suffix: B37_TBI_SUFFIX },
+  { type: 'grch37_filtered', description: 'GRCh37 (filtered)', suffix: B37_FILTERED_SUFFIX },
+
+  { type: 'full_grch38_gz', description: 'GRCh38', suffix: B38_GZ_SUFFIX },
+  { type: "full_grch38_tbi", description: "GRCh38 (.tbi)", suffix: B38_TBI_SUFFIX },
+  { type: 'grch38_filtered', description: 'GRCh38 (filtered)', suffix: B38_FILTERED_SUFFIX },
+
+  { type: '23andme_grch38_10k', description: 'GRCh38 with 23andMe 10K', suffix: B38_10K_GZ_SUFFIX },
+  { type: '23andme_grch38_10k_tbi', description: 'GRCh38 with 23andMe 10K (.tbi)', suffix: B38_10K_TBI_SUFFIX },
+
+  { type: '23andme_grch38', description: 'GRCh38 leave out 23andMe', versionModifier: 'leave_23andme', suffix: B38_GZ_SUFFIX },
+  { type: "23andme_grch38_tbi", description: "GRCh38 leave out 23andMe (.tbi)", versionModifier: 'leave_23andme', suffix: B38_TBI_SUFFIX },
+
+  { type: "23andme_grch37", description: "GRCh37 leave out 23andMe", versionModifier: 'leave_23andme', suffix: B37_GZ_SUFFIX },
+  { type: "23andme_grch37_tbi", description: "GRCh37 leave out 23andMe (.tbi)", versionModifier: 'leave_23andme', suffix: B37_TBI_SUFFIX },
+]
 
 const PLOT_FOLDER = '/img/201020'
 const MANHATTAN_SUFFIX = 'inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png'
@@ -34,13 +55,13 @@ let analyses = [
     includes23AndMe: true,
   },
   { analysis_id: 'B1_ALL', phenotype: 'Hospitalized covid vs. not hospitalized covid', population: 'All' },
-  {
-    analysis_id: 'B2_ALL_eur_leave_23andme',
-    phenotype: 'Hospitalized covid vs. population, leave out 23andMe',
-    population: 'Eur',
-    noPlots: true,
-    dirPrefix: 'eur',
-  },
+  // {
+  //   analysis_id: 'B2_ALL_eur_leave_23andme',
+  //   phenotype: 'Hospitalized covid vs. population, leave out 23andMe',
+  //   population: 'Eur',
+  //   noPlots: true,
+  //   dirPrefix: 'eur',
+  // },
   {
     analysis_id: 'B2_ALL',
     phenotype: 'Hospitalized covid vs. population',
@@ -54,13 +75,13 @@ let analyses = [
     includes23AndMe: true,
   },
   { analysis_id: 'C2_ALL', phenotype: 'Covid vs. population', population: 'All', includes23AndMe: true },
-  {
-    analysis_id: 'C2_ALL_eur_leave_23andme',
-    phenotype: 'Covid vs. population, leave out 23andMe',
-    population: 'Eur',
-    noPlots: true,
-    dirPrefix: 'eur',
-  },
+  // {
+  //   analysis_id: 'C2_ALL_eur_leave_23andme',
+  //   phenotype: 'Covid vs. population, leave out 23andMe',
+  //   population: 'Eur',
+  //   noPlots: true,
+  //   dirPrefix: 'eur',
+  // },
   {
     analysis_id: 'D1_ALL',
     phenotype: 'Predicted covid from self-reported symptoms vs. predicted or self-reported non-covid',
@@ -78,30 +99,25 @@ analyses = analyses.map((analysis) => ({
   studies: analysis.meta.map((s) => ({ study: s.name, cases: s.n_cases, controls: s.n_controls })),
 }))
 
-const downloadTypes = [
-  { type: 'grch37_gz', description: 'GRCh37 liftover', suffix: B37_GZ_SUFFIX },
-  { type: "grch37_tbi", description: "GRCh37 (.tbi)", suffix: B37_TBI_SUFFIX },
-  { type: 'grch37_filtered', description: 'GRCh37 (filtered)', suffix: B37_FILTERED_SUFFIX },
-  { type: 'grch38_gz', description: 'GRCh38', suffix: B38_GZ_SUFFIX },
-  { type: "grch38_tbi", description: "GRCh38 (.tbi)", suffix: B38_TBI_SUFFIX },
-  { type: 'grch38_filtered', description: 'GRCh38 (filtered)', suffix: B38_FILTERED_SUFFIX },
-  { type: 'grch38_with_23andme', description: 'GRCh38 with 23andMe 10K', suffix: B38_23ANDME_GZ_SUFFIX },
-]
 
 analyses = analyses.map((analysis) => {
-  let version = analysis.includes23AndMe ? `leave_23andme_${VERSION}` : VERSION
   return {
     ...analysis,
     downloads: downloadTypes
       .filter((downloadType) => {
-        if (!analysis.includes23AndMe && downloadType.type === 'grch38_with_23andme') {
+        if (!analysis.includes23AndMe && downloadType.type.includes('23andme')) {
+          return false
+        }
+        return true
+      })
+      .filter((downloadType) => {
+        if (analysis.includes23AndMe && downloadType.type.includes('full')) {
           return false
         }
         return true
       })
       .map((downloadType) => {
-        version = downloadType.type === 'grch38_with_23andme' ? VERSION : version
-
+        let version = downloadType.versionModifier ? `${downloadType.versionModifier}_${VERSION}` : VERSION
         const fileName = `${RESULTS_PREFIX}_${analysis.analysis_id}_${version}${downloadType.suffix}`
 
         const url = analysis.dirPrefix
@@ -168,15 +184,6 @@ const release = {
     {
       column: 'SNP',
       description: '#CHR:POS:REF:ALT',
-    },
-    {
-      column: '{STUDY}_AF_Allele2',
-      description: 'allele frequency in {STUDY} or 0.5 if not available',
-    },
-    {
-      column: '{STUDY}_AF_fc',
-      description:
-        'allele frequency in {STUDY} / allele frequency in gnomAD v3 (1000000 if frequency in gnomAD is 0)',
     },
     {
       column: 'all_meta_N',
