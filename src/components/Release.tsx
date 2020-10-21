@@ -49,6 +49,9 @@ const Release = (release: Props) => {
     </AlternatelyShadedTableRow>
   ))
 
+
+  debugger
+
   const abbreviationTable = (
     <Table size="small">
       <TableHead>
