@@ -20,6 +20,6 @@ type: blog-post
 
 **Data**: [Table_S1_COVID19_GWAS_Javierre2016_PCHiC_COGS_v2_GWAS_v4.txt](https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/PCHi-C-priority/Table_S1_COVID19_GWAS_Javierre2016_PCHiC_COGS_v2_GWAS_v4.txt)
 
-**Supplementary Figures & Table S2**: COGS_Supplementary_Figures_and_Table_S2_v2_GWAS_v4.pdf
+**Supplementary Figures & Table S2**: [COGS_Supplementary_Figures_and_Table_S2_v2_GWAS_v4.pdf](https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/PCHi-C-priority/COGS_Supplementary_Figures_and_Table_S2_v2_GWAS_v4.pdf)
 
 **README**: [*README_COVID19hg* COGS_v2_GWAS_v4.pdf](https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/PCHi-C-priority/_README_COVID19hg_%20COGS_v2_GWAS_v4.pdf)
