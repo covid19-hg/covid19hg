@@ -64,7 +64,7 @@ Suuremman näytemäärän saavuttamiseksi, otamme mukaan edelleen uusia analyyse
 
 Toivomme saavamme uutta tietoa seuraavista julkistamistamme tuloksista, jossa tulee olemaan 50% suurempi määrä näytteitä nykyiseen verrattuna. Aiomme myös kerätä monipuolisempaa tietoa COVID-19 potilaiden oireista. Tutustu sivustoon uudestaan lokakuussa 2020 ja lue lisää uusista tuloksista!
 
-Käyttäen alustavia tuloksiamme, salapoliisin työ voi alkaa. Konsortiomme jäsenet ja muut tieteilijät voivat tehdä lisätutkimuksia. On tarkeää ymmärtää biologisia prosesseja, joihin nämä geenit liittyvät ja kuinka nämä vaikuttavat COVID-19 taudissa. Jos haluat lisätietoa seurantatutkimuksista, seuraa tätä [linkkiä](/2020-06-29-in-silico-follow-up-results/). Yksi näistä tutkimuksista etsii tietoa siitä, kuinka geneettinen variaatio on assosioitunut vakavasti sairastuneiden potilaiden tautimuotoon. Teemme töitä geneettisten löytöjen ymmärtämiseksi, koska tämä voi auttaa COVID-19 potilaiden kliinisessa hoidossa.
+Käyttäen alustavia tuloksiamme, salapoliisin työ voi alkaa. Konsortiomme jäsenet ja muut tieteilijät voivat tehdä lisätutkimuksia. On tarkeää ymmärtää biologisia prosesseja, joihin nämä geenit liittyvät ja kuinka nämä vaikuttavat COVID-19 taudissa. Jos haluat lisätietoa seurantatutkimuksista, seuraa tätä [linkkiä](/blog/2020-06-29-in-silico-follow-up-results/). Yksi näistä tutkimuksista etsii tietoa siitä, kuinka geneettinen variaatio on assosioitunut vakavasti sairastuneiden potilaiden tautimuotoon. Teemme töitä geneettisten löytöjen ymmärtämiseksi, koska tämä voi auttaa COVID-19 potilaiden kliinisessa hoidossa.
 
 ## Tutkimuksesta muualla
 

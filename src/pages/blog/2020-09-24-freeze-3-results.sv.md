@@ -33,7 +33,7 @@ Figur 1 ovan visar en visuell sammanfattning av de senaste [resultaten](/results
 
 ![Figur 2: Visualisering av UCSC Genome Browser.](hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
-<strong>Figur 2: Visualisering av a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a>.</strong> Den schematiska bilden visar generna( tex. CXCR6, SLC6A20, CCR1), som befinner sig i regionen av intresse på kromosom 3.
+<strong>Figur 2: Visualisering av <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a>.</strong> Den schematiska bilden visar generna( tex. CXCR6, SLC6A20, CCR1), som befinner sig i regionen av intresse på kromosom 3.
 </figcaption>
 
 ![Figur 3: Illustration av ACE-2 receptorn.](unnamed.png)
@@ -55,7 +55,7 @@ För det andra, definitionen av sjukdomens svårighetsgrad kan variera från en 
 
 För att utöka provstorleken tar vi kontinuerligt emot information från medverkande studier. Nästa analys kommer att göras i slutet av september och resultaten kommer tidigast att ges ut i början av oktober. Vi hoppas på att erhålla mera information gällande promises att ha en provstorlek på upp till 50% av det vi har nu. Vi ser också fram emot att samla in mer omfattande och detaljrik data om symptom, som COVID-19-patienterna har. Kolla pånytt här för att läsa om vad vi har lärt oss i oktober 2020!
 
-Genom att använda våra preliminära resultat börjar detektivarbetet. Vårt konsortium och andra forskare kan genomföra flera studier för att bättre förstå de biologiska processer som påverkas av dessa gener och hur detta kan vara relevant för utgången av COVID-19. Om du vill ha mera uppgifter om påföljande studier, fortsätt till denna [länk](/2020-06-29-in-silico-follow-up-results/). En sådan studie kommer att undersöka hur den genetiska variationen är associerad med utgången speciellt hos svårast insjuknade patienterna, som behövt sjukhushusvård. Vi är ivriga att förstå våra genetiska resultat och hur de i framtiden kan leda till bättre klinisk behandling av COVID-19-patienter eller en bättre sjukdomsbehandling.
+Genom att använda våra preliminära resultat börjar detektivarbetet. Vårt konsortium och andra forskare kan genomföra flera studier för att bättre förstå de biologiska processer som påverkas av dessa gener och hur detta kan vara relevant för utgången av COVID-19. Om du vill ha mera uppgifter om påföljande studier, fortsätt till denna [länk](/blog/2020-06-29-in-silico-follow-up-results/). En sådan studie kommer att undersöka hur den genetiska variationen är associerad med utgången speciellt hos svårast insjuknade patienterna, som behövt sjukhushusvård. Vi är ivriga att förstå våra genetiska resultat och hur de i framtiden kan leda till bättre klinisk behandling av COVID-19-patienter eller en bättre sjukdomsbehandling.
 
 ## Övriga källor
 
