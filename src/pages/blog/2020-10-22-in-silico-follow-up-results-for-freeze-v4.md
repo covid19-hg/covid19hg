@@ -6,6 +6,10 @@ tags:
   - "#in-silico"
 type: blog-post
 ---
+**DISCLAIMER: In-silico analyses posted in this page are uploaded by partners of the COVID-19 HGI, but not peer reviewed or subjected by extensive quality control by the community. Please keep that in mind when using these results.**
+
+**\-------------------------------------------------------------------------**
+
 **Prioritization of putative target genes underpinning COVID-19 host GWAS traits based on high-resolution 3D chromosomal topology**
 
 **Summary.** GWAS variants commonly map to DNA regulatory regions, many of which are located away from their target genes, coming into their proximity through 3D chromosomal interactions. We previously generated high-resolution Capture Hi-C data on the chromosomal contacts involving all annotated gene promoters in 17 human primary blood cell types (including endothelial precursors) and developed COGS, a statistical pipeline for GWAS gene prioritisation based on these data [(Javierre et al., 2016)](https://paperpile.com/c/JwJn3h/zTY1). Applying COGS to COVID-19 host GWAS data using the same panel of cell types, we prioritise multiple putative associated genes such as those known to be involved in immune function (including *ETS1*, *IFNAR1/2, OAS3, CCR1* and others) and lung biology (such as *DPP9* and *FOXP4*). Full results are listed in Table S1, with Manhattan plots shown in Figures S1-S7 and examples of prioritised loci shown in Figures S8-S11. These data, used in conjunction with other prioritisation approaches, will aid in the understanding of COVID-19 pathology, paving the way for novel treatments.
