@@ -16,6 +16,6 @@ plots:
 clean:
 	rm -rf metadata
 
-results: plots metadata 
+results: metadata 
 	node prepareResultsYaml.mjs
 
