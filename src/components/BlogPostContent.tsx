@@ -50,7 +50,7 @@ const BlogPostContent = ({
 
   let translationListingElem: React.ReactNode,
     languageDirection: LanguageDirection;
-  if (langs === null) {
+  if (langs === null || langs.length === 0) {
     translationListingElem = null;
     languageDirection = LanguageDirection.LeftToRight;
   } else {
