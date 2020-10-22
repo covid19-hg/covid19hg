@@ -114,6 +114,49 @@ collections:
               - {label: Title, name: title, widget: string}
               - {label: Subtitle, name: subtitle, widget: string}
               - {label: Link, name: link, widget: string}
+      - file: "src/pages/in-silico-follow-up/index.md"
+        label: "In Silico Follow-up"
+        name: "in-silico-follow-up"
+        fields:
+          - label: Releases
+            name: releases
+            widget: list
+            fields:
+              - {name: title, label: Release title, widget: string, required: true}
+              - {name: intro, label: Release intro, widget: string, required: true}
+              - name: analyses
+                label: Analyses
+                required: true
+                widget: list
+                fields:
+                  - {name: title, label: Analysis title, widget: string, required: true}
+                  - {name: summary, label: Analysis summary, widget: markdown, required: true}
+                  - name: charts
+                    required: false
+                    label: Charts & Graphs
+                    widget: list
+                    fields:
+                      - {name: title, label: Graph title, widget: string, required: true}
+                      - {name: description, label: Graph description, widget: markdown, required: false}
+                      - name: imageLinks
+                        required: false
+                        label: Graph image links
+                        widget: list
+                        field: {name: url, label: URL, widget: string, required: true}
+                  - name: authors
+                    required: true
+                    label: Authors
+                    widget: list
+                    field: {name: name, label: Name, required: true}
+                  - name: files
+                    required: true
+                    label: Files
+                    widget: list
+                    fields:
+                      - {name: description, label: File Description (Data/README etc), widget: string, required: true}
+                      - {name: filename, label: Filename, widget: string, required: true}
+                      - {name: link, label: Link, widget: string, required: true}
+
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
