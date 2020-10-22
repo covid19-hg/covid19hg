@@ -21,6 +21,7 @@ export default ({ maxNumItems }: Props) => {
                 id
                 fields {
                   slug
+                  langKey
                 }
                 frontmatter {
                   title

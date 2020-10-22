@@ -6,9 +6,15 @@ import Layout from "../components/NewLayout";
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
 import BlogPostContent from "../components/BlogPostContent";
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data;
-  const canonicalLinkMetaTag = useCanonicalLinkMetaTag(post.fields.slug);
+  const canonicalLink = pageContext.canonicalLink
+    ? pageContext.canonicalLink
+    : post.fields.slug;
+  const canonicalLinkMetaTag = useCanonicalLinkMetaTag(
+    post.fields.slug,
+    canonicalLink
+  );
 
   return (
     <Layout title="News">
@@ -17,6 +23,9 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
         date={post.frontmatter.date}
+        langKey={post.fields.langKey}
+        langs={pageContext.langs}
+        slug={post.fields.slug}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -46,6 +55,7 @@ export const pageQuery = graphql`
       id
       fields {
         slug
+        langKey
       }
       html
       frontmatter {
