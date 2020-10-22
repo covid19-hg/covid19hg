@@ -6,7 +6,7 @@ tags:
   - "#in-silico"
 type: blog-post
 ---
-**DISCLAIMER: In-silico analyses posted in this page are uploaded by partners of the COVID-19 HGI, but not peer reviewed or subjected by extensive quality control by the community. Please keep that in mind when using these results.**
+**DISCLAIMER: In-silico analyses posted in this page are uploaded by partners of the COVID-19 HGI, but not peer reviewed or subjected to extensive quality control by the community. Please keep that in mind when using these results.**
 
 **\-------------------------------------------------------------------------**
 
