@@ -34,7 +34,12 @@ export const pageQuery = graphql`
             charts {
               title
               description
-              imageLinks
+              externalImages
+              internalImages {
+                image {
+                  publicURL
+                }
+              }
             }
             authors
             files {

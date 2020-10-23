@@ -41,14 +41,15 @@ interface File {
 }
 
 interface Chart {
-  title: string;
+  title: string | null;
   description: string | null;
-  imageLinks: string[] | null;
+  externalImages: string[] | null;
+  internalImages: { image: { publicURL: string } }[] | null;
 }
 
 const Chart = (props: { chart: Chart }) => {
   const {
-    chart: { title, description, imageLinks },
+    chart: { title, description, externalImages, internalImages },
   } = props;
   const descriptionElem =
     description === null ? null : (
@@ -56,17 +57,30 @@ const Chart = (props: { chart: Chart }) => {
         <ReactMarkdown source={description} />
       </Typography>
     );
-  let images: React.ReactNode;
-  if (imageLinks === null) {
-    images = null;
+  let externalImageElems: React.ReactNode;
+  if (externalImages === null) {
+    externalImageElems = null;
   } else {
-    images = imageLinks.map((link) => <img width="80%" src={link} />);
+    externalImageElems = externalImages.map((link) => (
+      <img width="80%" src={link} />
+    ));
   }
+  let internalImageElems: React.ReactNode;
+  if (internalImages === null) {
+    internalImageElems = null;
+  } else {
+    internalImageElems = internalImages.map(({ image: { publicURL } }) => (
+      <img width="80%" src={publicURL} />
+    ));
+  }
+  const titleElem =
+    title === null ? null : <Typography variant="h6">{title}</Typography>;
   return (
     <>
-      <Typography variant="h6">{title}</Typography>
+      {titleElem}
       {descriptionElem}
-      {images}
+      {externalImageElems}
+      {internalImageElems}
     </>
   );
 };

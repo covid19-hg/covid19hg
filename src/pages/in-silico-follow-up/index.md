@@ -8,6 +8,23 @@ releases:
       extensive quality control by the community. Please keep that in mind when
       using these results."
     analyses:
+      - title: Fine-mapping
+        summary: >-
+          **Summary:** We conducted statistical fine-mapping of the meta-analysis results (full genome-wide results from the `leave_23andme` file), assuming a single causal variant per locus and a shared causal effect across studies. For each locus with P < 5e-8 (3 Mb window around the lead variant), we applied approximate Bayes factor (ABF) with a prior variance W = 0.04 ([Wakefield, J. 2009](https://onlinelibrary.wiley.com/doi/abs/10.1002/gepi.20359)) to estimate posterior inclusion probability (PIP) and 95/99% credible sets. Although ABF estimates several variants with high PIP, **we note that the results should be interpreted cautiously given potential biases from different phenotyping/genotyping/imputation across studies**. In particular, missing variants and heterogeneity among the cohorts could undermine meta-analysis fine-mapping significantly, as illustrated by the discrepancy between a manhattan plot vs. observed LD structure in gnomAD.
+        authors:
+          - Masahiro Kanai
+          - Hilary Finucane
+        charts:
+          - internalImages:
+            - image: ../../../static/img/covid19_hgi_b2_all_leave_23andme_20201020.chr21.31742905-34742905.png
+        files:
+          - description: Data
+            filename: COVID19_HGI_20201020_ABF.tar.gz
+            link: https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/finemapping/COVID19_HGI_20201020_ABF.tar.gz
+          - description: README
+            filename: README.md
+            link: https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/finemapping/README.md
+
       - title: Prioritization of putative target genes underpinning COVID-19 host GWAS
           traits based on high-resolution 3D chromosomal topology
         summary: GWAS variants commonly map to DNA regulatory regions, many of which are
@@ -40,6 +57,9 @@ releases:
           - description: Supplementary Figures & Table S2
             filename: COGS_Supplementary_Figures_and_Table_S2_v2_GWAS_v4.pdf
             link: https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/PCHi-C-priority/COGS_Supplementary_Figures_and_Table_S2_v2_GWAS_v4.pdf
+        charts:
+          - internalImages:
+            - image: ../../../static/img/picture1.png
       - title: Detecting independent genetic signals - GCTA COJO
         summary: >-
           In order to identify all independent variants, I used the GCTA
@@ -62,6 +82,9 @@ releases:
 
 
           I used the independent variants to prioritise genes within a 500Kb window (either side) with the PoPS method. This method is a gene prioritization method that leverages genome-wide signal from GWAS summary statistics and incorporates data from an extensive set of public bulk and single-cell expression datasets, curated biological pathways, and predicted protein-protein interactions (<https://www.medrxiv.org/content/10.1101/2020.09.08.20190561v1>). The PoPS analysis assigns a Polygenic Priority Score to each of 18,383 protein coding genes, based on the GWAS summary statistics. The gene with the highest PoPS score within 500Kb window from the independent variant is assigned as the prioritised gene for the locus. Prioritised genes for the GWS hits include VSTM2A, TYK2, IFNAR2, DPP9 and CCHCR1 both for A2 and B2, LZTFL1 for A2, B2 and C2, OAS3, LAMB1 and DSCAM for A2, FYCO1 for B1, BARHL2, OAS1 and SURF6 for B2, SLC6A20 for C1 and OBP2B and TCF19 for C2.
+        charts:
+          - internalImages:
+            - image: ../../../static/img/screen-shot-2020-10-22-at-8.29.27-pm.png
         authors:
           - Stavroula Kanoni, PhD
         files:
@@ -161,10 +184,10 @@ releases:
           from different phenotyping/genotyping/imputation across studies.
         charts:
           - title: COVID19_HGI_ANA_B2_V2_20200629.chr3.44367532-47367532.ABF
-            imageLinks:
+            externalImages:
               - https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/COVID19_HGI_ANA_B2_V2_20200629.chr3.44367532-47367532.ABF.png
           - title: COVID19_HGI_ANA_C2_V2_20200629.chr3.44367022-47367022.ABF
-            imageLinks:
+            externalImages:
               - https://storage.googleapis.com/covid19-hg-in-silico-followup/finemapping/COVID19_HGI_ANA_C2_V2_20200629.chr3.44367022-47367022.ABF.png
         authors:
           - Masahiro Kanai
@@ -185,10 +208,10 @@ releases:
           This analysis aims at detecting colocalisation of GWAS signal (p<1e-5) with methylation and expression quantitative traits loci (mQTL and eQTL respectly) from 11 mQTL and eQTL datasets (ref:<https://cnsgenomics.com/software/smr/#DataResource>). Top SMR results (p<1e-5) are reported. This archive contains two README files (\*.txt and \*.docx format), 2 SMR plots and a result file. Columns of the result file are described here:<https://cnsgenomics.com/software/smr/#SMR&HEIDIanalysis>.
         charts:
           - title: CCR3
-            imageLinks:
+            externalImages:
               - https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_CCR3.png
           - title: LZTFL1
-            imageLinks:
+            externalImages:
               - https://storage.googleapis.com/covid19-hg-in-silico-followup/SMR/SMR_cg00634029_LZTFL1.png
         authors:
           - Loic Yengo
@@ -219,7 +242,7 @@ releases:
 
 
               - LD clumping was performed at SNPs with Pvalue<10-5, r2=0.1. No outcome passed Bonferroni correction.
-            imageLinks:
+            externalImages:
               - https://storage.googleapis.com/covid19-hg-in-silico-followup/phewas/phewas_plot_hes_icd10_covariates_15PCs.png
           - title: ANA_C2__V2
             description: >
