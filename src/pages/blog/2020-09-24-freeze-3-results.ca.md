@@ -6,7 +6,7 @@ tags: []
 type: blog-post
 ---
 
-Escrit en anglès per Brooke Wolford i Kumar Veerapen traduït al català per Israel Fernández Cadenas i Jordi Pérez Tur
+Escrit en anglès per Brooke Wolford i Kumar Veerapen traduït al català per Israel Fernández Cadenas i Jordi Pérez-Tur
 
 La pandèmia COVID-19 ha afectat la vida quotidiana de les societats de tot el món. Científics de tot el món treballen dur per entendre millor el virus i la malaltia. Representem un d’aquests grups, la COVID-19 Host Genetics Initiative (HGI), un equip internacional de genetistes centrat en la identificació de la variació genètica humana que influeix en les respostes a la infecció per SARS-CoV-2 i la seva malaltia posterior, COVID-19. Treballant junts, tenim curiositat per saber quines parts de l’ADN d’una persona poden influir en si algú desenvolupa COVID-19 i, si ho fa, quina gravetat tindrà la malaltia.
 
@@ -49,6 +49,7 @@ Per tal d’abordar la limitació de la mida de la mostra, continuem acceptant e
 
 Amb els resultats preliminars que hem obtingut fins ara, comença el treball de detectius per trobar les causes moleculars de les diferències clíniques. Investigadors del nostre consorci, i altres científics, poden dur a terme estudis addicionals per entendre millor els processos biològics afectats per aquests gens, i com això pot ser rellevant per als resultats del COVID-19. Si voleu més detalls sobre els estudis de seguiment, aneu a aquest [enllaç](/blog/2020-06-29-in-silico-follow-up-results/). Un d'aquests estudis explorarà com aquesta variació genètica s'associa amb els resultats específicament entre els pacients hospitalitzats més afectats. Estem encantats d’entendre millor les nostres troballes genètiques amb l’esperança que puguin conduir a un millor gestió clínica dels pacients amb COVID-19 o tractaments contra la malaltia.
 
+
 ## Més recursos
 
 Per obtenir més informació sobre COVID-19 Host Genetics Initiative, consulteu la cobertura a la premsa popular.
@@ -62,7 +63,7 @@ Per obtenir més informació sobre COVID-19 Host Genetics Initiative, consulteu 
 
 ## Agraïments
 
-Gràcies a Rachel Liao, Caitlin Cooney, CGC, Karen Zusi, Andrea Ganna, Alina Chan, Sophie Limou, Shea Andrews i Jamal Nasir per comentaris i revisions reflexius. Traducció feta al català per Israel Fernández-Cadenas i Jordi Pérez-Tur.
+Gràcies a Rachel Liao, Caitlin Cooney, CGC, Karen Zusi, Andrea Ganna, Alina Chan, Sophie Limou, Shea Andrews i Jamal Nasir per comentaris i revisions reflexius.
 
 ## Nota al peu de pàgina
 Una gràfica de Manhattan (el nom és adequat perquè els cims haurien d’assemblar-se a la ciutat de Nova York) és una visualització habitual dels resultats de GWAS. La línia horitzontal, o eix x ("Chromosome", cromosoma en anglès), mostra les posicions de les variants genètiques a través dels 23 cromosomes (els humans tenen 22 parells de cromosomes més alguna combinació dels cromosomes sexuals X i Y). La línia vertical, o eix y (“-log10p”), mostra una mesura de significació estadística anomenada valors p, transformada en una escala logarítmica negativa. Cada punt de la trama mostra la significació estadística (el valor p) de l'associació entre una variant genètica en una posició cromosòmica determinada (anomenat SNP, pronunciat "retall") amb el resultat de la malaltia mesurat en cada persona. Com més alt sigui el punt a l’eix vertical, més probable és que aquest SNP s’associï amb el resultat d’interès (al nostre cas, la gravetat del COVID-19). La nostra metodologia és prudent: mentre que molts estudis requereixen un valor p inferior a 0,05 per considerar que una troballa és significativa, necessitem un valor p inferior a 0,00000005 (indicat per la línia vermella) per millorar la confiança en els nostres resultats. Si el punt és superior a la línia vermella, considerem que l'associació genètica és "estadísticament significativa" i, per tant, podem dissenyar experiments per validar i entendre la rellevància biològica dels SNPs.
