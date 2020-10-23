@@ -40,7 +40,7 @@ dataResults:
     link: /results/
   - title: In silico follow up
     subtitle: Computational analyses based on the genetic association results
-    link: /blog/2020-06-29-in-silico-follow-up-results/
+    link: /blog/2020-10-22-in-silico-follow-up-results-for-freeze-v4/
   - title: Data contributor acknowledgements
     subtitle: People and projects that have contributed data so far
     link: /acknowledgements/

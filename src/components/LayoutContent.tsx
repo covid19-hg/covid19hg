@@ -151,7 +151,7 @@ const LayoutContent = ({ title, children }: Props) => {
     { href: "/register/", label: "Register" },
     { href: "/results/", label: "Results" },
     {
-      href: "/blog/2020-06-29-in-silico-follow-up-results/",
+      href: "/blog/2020-10-22-in-silico-follow-up-results-for-freeze-v4/",
       label: (
         <React.Fragment>
           <em>In silico</em> follow-up results
