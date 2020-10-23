@@ -53,5 +53,9 @@ I used the independent variants to prioritise genes within a 500Kb window (eithe
 ![](/img/screen-shot-2020-10-22-at-8.29.27-pm.png)
 
 **Author**: Stavroula Kanoni, PhD
+
+
 **Data**: [COVID19_HGI_20201020.IndependentVariants.GenePrioritisation.zip](https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/GCTA_COJO/COVID19_HGI_20201020.IndependentVariants.GenePrioritisation.zip)
+
+
 **README**: [COVID19_HGI_GenePrioritisation_ReadMe_SKanoni.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/GCTA_COJO/COVID19_HGI_GenePrioritisation_ReadMe_SKanoni.docx)
