@@ -14,7 +14,7 @@ type: blog-post
 
 **Fine-mapping**
 
-**Summary:** We conducted statistical fine-mapping of the meta-analysis results (full genome-wide results from the `leave_23andme` file), assuming a single causal variant per locus and a shared causal effect across studies. For each locus with P < 5e-8 (3 Mb window around the lead variant), we applied approximate Bayes factor (ABF) with a prior variance W = 0.04 ([Wakefield, J. 2009](https://onlinelibrary.wiley.com/doi/abs/10.1002/gepi.20359)) to estimate posterior inclusion probability (PIP) and 95/99% credible sets. Although ABF estimates several variants with high PIP, **we note that the results should be interpreted cautiously given potential biases from different phenotyping/genotyping/imputation across studies**. In particular, missing variants and heterogeneity among the cohorts could undermine meta-analysis fine-mapping significantly, as illustrated by the discrepancy between a manhattan plot vs. observed LD structure in gnomAD.
+**Summary:** We conducted statistical fine-mapping of the meta-analysis results (full genome-wide results from the `leave_23andme` file), assuming a single causal variant per locus and a shared causal effect across studies (without accounting for heterogeneity between studies). For each locus with P < 5e-8 (3 Mb window around the lead variant), we applied approximate Bayes factor (ABF) with a prior variance W = 0.04 ([Wakefield, J. 2009](https://onlinelibrary.wiley.com/doi/abs/10.1002/gepi.20359)) to estimate posterior inclusion probability (PIP) and 95/99% credible sets. Although ABF estimates several variants with high PIP, **we note that the results should be interpreted cautiously given potential biases from different phenotyping/genotyping/imputation across studies**. In particular, missing variants and heterogeneity among the cohorts could undermine meta-analysis fine-mapping significantly, as illustrated by the discrepancy between a manhattan plot vs. observed LD structure in gnomAD.
 
 ![](/img/covid19_hgi_b2_all_leave_23andme_20201020.chr21.31742905-34742905.png)
 
@@ -56,8 +56,6 @@ I used the independent variants to prioritise genes within a 500Kb window (eithe
 
 **Author**: Stavroula Kanoni, PhD
 
-
 **Data**: [COVID19_HGI_20201020.IndependentVariants.GenePrioritisation.zip](https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/GCTA_COJO/COVID19_HGI_20201020.IndependentVariants.GenePrioritisation.zip)
-
 
 **README**: [COVID19_HGI_GenePrioritisation_ReadMe_SKanoni.docx](https://storage.googleapis.com/covid19-hg-in-silico-followup/V4/GCTA_COJO/COVID19_HGI_GenePrioritisation_ReadMe_SKanoni.docx)
