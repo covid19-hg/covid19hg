@@ -57,6 +57,26 @@ projects:
       - Marta Alarcón
       - Alexandre Pereira
       - Andre Franke
+  - description: >-
+      The COVID-19 pandemic represents an enormous challenge to the world's
+      healthcare systems. The disease is characterized by a highly heterogeneous
+      phenotypic response to SARS-CoV-2 infection, with the large majority of
+      infected individuals having only mild or even no symptoms. However, the
+      severe cases can rapidly evolve towards a critical respiratory distress
+      syndrome and multiple organ failure. 
+
+
+      We believe that the host genetic background plays an important role in COVID-19 susceptibility and progression. Compared to GWAS, WES and WGS have the advantage to bring out both common and very rare variants pinpointing directly to possible severity/protective genes. Both classical gene burden test and innovative analysis using Artificial Intelligence (such as LASSO Regression and Topological Data Analysis) are planned in order to implement a predictive model explaining COVID-19 susceptibility and severity. 
+
+
+      Crucially, we are interested in building an international network of participating cohorts, allowing for larger sample size. Thus, if you would like to join our consortium in order to contribute whole exome or whole genome-sequencing data, please contact us on the ICDA Slack channel below and fill in the cohort description table [here](https://docs.google.com/spreadsheets/d/1Ah71g2ooPr7r_yqBocmN9LUvuIhyqOn5GOJx3BC9vwA/edit#gid=0).
+    title: WES/WGS working group within the HGI
+    slack-channel: "#covid19-hg-wes-wgs"
+    contact-persons:
+      - Alessandra Renieri
+      - Francesca Mari
+      - Brent Richards
+      - Guillaume Butler-La Porte
   - title: Acute respiratory distress syndrome
     description: >-
       The most severe outcome among COVID-19 cases includes acute respiratory
