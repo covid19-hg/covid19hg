@@ -20,7 +20,7 @@ exports.languages = new Map([
   ],
   [
     "ko",
-    { englishName: "Korean", nativeName: "조선말", direction: leftToRight },
+    { englishName: "Korean", nativeName: "한국어", direction: leftToRight },
   ],
   [
     "ar",
