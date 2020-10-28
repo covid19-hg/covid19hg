@@ -21,6 +21,7 @@ export default () => (
               id
               fields {
                 slug
+                langKey
               }
               frontmatter {
                 title
