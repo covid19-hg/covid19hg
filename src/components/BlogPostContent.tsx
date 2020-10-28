@@ -44,9 +44,6 @@ const BlogPostContent = ({
   slug,
 }: Props) => {
   const classes = useStyles();
-  const tagElems = tags.map((tag, index) => (
-    <Chip label={tag} key={index} className={classes.chip} />
-  ));
 
   let translationListingElem: React.ReactNode,
     languageDirection: LanguageDirection;
@@ -104,6 +101,23 @@ const BlogPostContent = ({
     }
   }
 
+  let tagElem: React.ReactNode;
+  if (!!tags && tags.length > 0) {
+    const tagElems = tags.map((tag, index) => (
+      <Chip label={tag} key={index} className={classes.chip} />
+    ));
+    tagElem = (
+      <>
+        <Typography variant="h5" gutterBottom={true} dir={languageDirection}>
+          Tags
+        </Typography>
+        {tagElems}
+      </>
+    );
+  } else {
+    tagElem = null;
+  }
+
   return (
     <Container marginTop={2} fixed={true}>
       {helmet}
@@ -117,10 +131,7 @@ const BlogPostContent = ({
       <Typography dir={languageDirection}>
         <HTMLContent content={content} className="" />
       </Typography>
-      <Typography variant="h5" gutterBottom={true} dir={languageDirection}>
-        Tags
-      </Typography>
-      {tagElems}
+      {tagElem}
     </Container>
   );
 };
