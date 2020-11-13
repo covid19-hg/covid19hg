@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       textAlign: "center",
       width: "80%",
       margin: "0 auto",
-    }
+    },
   },
 
   appBarDesktop: {
@@ -144,6 +144,7 @@ const LayoutContent = ({ title, children }: Props) => {
     { href: "/about/", label: "About" },
     { href: "/partners/", label: "Partners" },
     { href: "/projects/", label: "Projects" },
+    { href: "/publications/", label: "Publications" },
     { href: "/data-sharing/", label: "Data Sharing" },
     { href: "/blog/", label: "News" },
     { href: "/meeting-archive/", label: "Meeting Archive" },

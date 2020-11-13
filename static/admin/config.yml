@@ -114,6 +114,50 @@ collections:
               - {label: Title, name: title, widget: string}
               - {label: Subtitle, name: subtitle, widget: string}
               - {label: Link, name: link, widget: string}
+      - file: "src/pages/publications/index.md"
+        label: "Publications"
+        name: "publications"
+        fields:
+          - label: Intro
+            name: publications_page_intro
+            widget: text
+            required: true
+          - label: Studies
+            name: studies
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+                required: true
+              - label: Links
+                name: links
+                required: true
+                widget: list
+                fields:
+                  - {label: Description, name: description, widget: string, required: true}
+                  - {label: URL, name: url, widget: string, required: true}
+              - label: Posted Date
+                name: posted_date
+                widget: datetime
+                format: Do MMMM YYYY
+                required: true
+              - label: Cases description
+                name: cases_description
+                widget: string
+                required: false
+              - label: Controls description
+                name: controls_description
+                widget: string
+                required: false
+              - label: Genome-wide significant loci
+                name: genome_wide_significant_loci
+                widget: string
+                required: false
+              - label: First publication
+                name: first_publication
+                widget: string
+                required: false
       - file: "src/pages/in-silico-follow-up/index.md"
         label: "In Silico Follow-up"
         name: "in-silico-follow-up"
