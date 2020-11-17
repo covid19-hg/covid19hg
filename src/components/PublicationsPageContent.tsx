@@ -17,12 +17,17 @@ interface Publication {
 const useStyles = makeStyles((theme: Theme) => ({
   leftColumn: {
     textAlign: "right",
+    fontWeight: "bold",
+  },
+  grid: {
+    alignItems: "center",
   },
   card: {
     margin: theme.spacing(2, 0),
   },
   link: {
     textDecoration: "underline",
+    marginRight: theme.spacing(1),
   },
 }));
 
@@ -125,7 +130,7 @@ const PublicationsPageContent = ({ intro, publications }: Props) => {
             <Typography variant="h5" gutterBottom={true}>
               {name}
             </Typography>
-            <Grid container={true} spacing={2}>
+            <Grid container={true} spacing={2} className={classes.grid}>
               <Grid
                 item={true}
                 xs={leftColumnSize}
