@@ -26,7 +26,7 @@ studies:
     first_publication: OAS1/2/3 locus, DPP9 locus, TYK2 locus, IFNAR2/IL10RB/IFNAR1
       locus, HLA-G locus, CCHCR1 locus, NOTCH4 locus
   - posted_date: 9th October 2020
-    name: Roberts, Park et al
+    name: Roberts, Park et al - ANCESTRY.COM
     links:
       - description: Preprint
         url: https://www.medrxiv.org/content/10.1101/2020.10.06.20205864v1
@@ -39,7 +39,7 @@ studies:
     first_publication: IVNS1ABP locus (male-specific), SRRM1 locus, Immunoglobulin
       Lambda Locus locus
   - posted_date: 7th September 2020
-    name: Shelton, Shastri et al
+    name: Shelton, Shastri et al - 23ANDME
     links:
       - description: Preprint
         url: https://www.medrxiv.org/content/10.1101/2020.09.04.20188318v1
