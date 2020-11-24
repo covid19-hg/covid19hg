@@ -21,7 +21,7 @@ La pandemia da COVID-19 ha condizionato la vita di tutti i giorni a livello glob
 Nel presente sono state confrontate le differenze genetiche tra pazienti ospedalizzati positivi al SARS-CoV-2, e controlli della popolazione generale negativi per COVID-19. Questo confronto viene chiamato Genome Wide Association Study (GWAS, maggiori info su  [video](https://www.youtube.com/watch?v=cgyc55JhdcM) o [l’infografica](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies)). Questo grafico riassume i risultati combinati di otto differenti studi, per un totale di 3,199 pazienti e 897,488 controlli.
 
 
-![ Current results from data freeze 3 (July 2020)](scicomm_blog_post_20200924.png)
+![ Current results from data freeze 3 (July 2020)](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 1.</strong> Il confronto tra dati genetici di 3,199 casi (pazienti ospedalizzati per COVID-19) e 897,488 controlli (pazienti COVID-19 negativi) suggerisce un locus sul cromosoma 3 che potrebbe predisporre all’infezione.
 </figcaption>
@@ -32,12 +32,12 @@ La Figura 1 riassume i [risultati](/results/) attuali della COVID-19 HGI e mostr
 La proteina ACE2 è la ‘porta’ usata dal virus SARS-CoV-2 per entrare nelle nostre cellule. Quindi, è possibile che una variante genetica del gene SLC6A20 influenzi l'ingresso del virus nelle cellule (Figura 3). La scoperta di queste associazioni statistiche sono solo il primo passo nel processo di ricerca in ambito genetico, relativamente alla gravità della COVID-19.
 
 
-![Figura 2. Dettaglio della regione di interesse sul cromosoma 3 (dal UCSC Genome Browser). ](hgt_genome_32a4d_7bc390.jpg)
+![Figura 2. Dettaglio della regione di interesse sul cromosoma 3 (dal UCSC Genome Browser). ](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 2. Dettaglio della regione di interesse sul cromosoma 3 (dal <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a>).</strong> I segmenti in questa figura indicano in geni (es. CXCR6, SLC6A20, CCR1).
 </figcaption>
 
-![ACE-2 receptor illustration](unnamed.png)
+![ACE-2 receptor illustration](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 3.</strong> Modalità con cui il recettore ACE-2 permette l’ingresso del virus SARS-CoV-2 nella cellula ospite (modificato da <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>).
 </figcaption>

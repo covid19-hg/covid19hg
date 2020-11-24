@@ -25,7 +25,7 @@ Magyar nyelvre fordította: Várnai Réka Pécsi Tudományegyetem Általános Or
 A vizsgálat során kórházba került, SARS-CoV-2 pozitív esetek, azaz betegek genetikai variációit hasonlítjuk össze olyan átlag populációból származó kontroll személyekkel, akiknek nincs pozitív COVID-19 tesztjük. Ezt az összehasonlítást Genome Wide Association Study-nak vagyis GWAS-nek hívják. Ez a genom egészére kiterjedő asszociációs vizsgálat. Kérjük, tekintse meg ezt a [videót](https://www.youtube.com/watch?v=cgyc55JhdcM)  vagy [infografikát](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) a GWAS illusztrált magyarázatához! 2020. júliusáig nyolc különböző vizsgálat eredményeinek összesítésével összesen 3199 eset, azaz beteg és 897 488 kontroll személy eredményeit elemeztük.
 
 
-![1. ábra: Eredmények 2020. júliusi időpillanatban.](scicomm_blog_post_20200924.png)
+![1. ábra: Eredmények 2020. júliusi időpillanatban.](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>1. ábra: Eredmények 2020. júliusi időpillanatban.</strong> A fenti ábra 3199 eset (COVID-19 miatt kórházba került beteg) és 897 488 kontroll (COVID-19 negatívnak feltételezett személy) genetikai eredményeit hasonlítja össze.
 </figcaption>
@@ -35,12 +35,12 @@ A vizsgálat során kórházba került, SARS-CoV-2 pozitív esetek, azaz betegek
 A fenti 1. ábra a COVID-19 HGI legfrissebb [eredményeinek](/results/) képi összefoglalása. A képi megjelenítés ezen formáját Manhattan plot-nak hívják, az ábra részletes leírása a lábjegyzetben olvasható. Röviden: a Manhattan plot egy tulajdonság (pl. COVID-19) és a teljes genomban megtalálható genetikai variánsok közötti összefüggések megjelenítésére használható. Kutatásunk során egy statisztikailag szignifikáns régióra lettünk figyelmesek a 3-as kromoszómán (nézze a pontozott függőleges vonalat a 3. kromoszóma felett, a vízszintes x tengely mentén). Előfordul, hogy egy régió több, egymáshoz közel elhelyezkedő gént tartalmaz. A COVID-19 súlyosságában szerepet játszó, statisztikailag szignifikáns genetikai régió leszűkítéséhez és a specifikus gén meghatározásához ezért további vizsgálatok szükségesek. A 3. kromoszómán azonosított régiót több gén fedi le (ld. a 2. ábrán felsorolt ​​összes gént) és nem világos, hogy mely specifikus gén függ össze a COVID-19 súlyosságával. Figyelemreméltó feltételezéseink ezzel kapcsolatban a következők. Számos kemokinhez kapcsolódó gén található ebben a régióban, mint például a CXCR6 és a CCR1. A kemokinek az immunsejtek mozgását szabályozzák és elengedhetetlenek a veleszületett immunrendszer [működéséhez](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/). Az SLC6A20 gén szintén ebben a régióban található és olyan fehérjét termel, amelyről ismert, hogy kötődik az ACE2-hez. Az ACE2 fehérje olyan, mint egy ajtó, amelyet a SARS-CoV-2 vírus használ a sejtjeinkbe való belépéshez (3. ábra). Ez azt jelenti, hogy az SLC6A20 genetikai variációja befolyásolhatja a vírus bejutását az emberi sejtbe! Ezen genetikai összefüggések felfedezése a kutatási folyamat első lépései.
 
 
-![2. ábra: Képi megjelenítés az UCSC Genome Browser segítségével](hgt_genome_32a4d_7bc390.jpg)
+![2. ábra: Képi megjelenítés az UCSC Genome Browser segítségével](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>2. ábra: Képi megjelenítés az <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a> segítségével.</strong> Az ábra a 3. kromoszómán azonosított régióban található géneket (például CXCR6, SLC6A20, CCR1) mutatja.
 </figcaption>
 
-![3. ábra: Az ACE-2 receptor illusztrációja.](unnamed.png)
+![3. ábra: Az ACE-2 receptor illusztrációja.](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>3. ábra: Az ACE-2 receptor illusztrációja.</strong> IAz ábra az ACE-2 receptor működését, ezáltal a SARS-CoV-2 vírus emberi sejtbe történő bejutását mutatja be. Az ábra a következő webhelyről származik: <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>

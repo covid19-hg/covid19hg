@@ -23,7 +23,7 @@ type: blog-post
 
 私たちの研究では、入院していてSARS-CoV-2検査の結果が陽性であるCOVID-19症例の方々と、世間一般の集団の中でCOVID-19陽性ではない対照群の方々にみられる、遺伝的な変異を比較しています。この比較は、ゲノムワイド相関解析（Genome-Wide Association Study, GWAS）と呼ばれています。GWASについては、こちらの[ビデオ](https://www.youtube.com/watch?v=cgyc55JhdcM) や[インフォグラフィック](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) による図解をご覧ください（訳注：リンク先は英語となります）。私たちは、2020年7月時点で、8つの異なる研究、合計3,199人の症例と897,488人の対照例からなる解析結果を、組み合わせました。
 
-![図1：データフリーズバージョン 3 (2020年7月) から得られた現時点での結果。](scicomm_blog_post_20200924.png)
+![図1：データフリーズバージョン 3 (2020年7月) から得られた現時点での結果。](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>図1：データフリーズバージョン 3 (2020年7月) から得られた現時点での結果。</strong>上記に示された結果は、3,199人の症例（COVID-19により入院した患者）と897,488人の対照例（COVID-19集団コントロール）の遺伝情報を比較したものです。
 </figcaption>
@@ -33,12 +33,12 @@ type: blog-post
 上図1はCOVID-19 HGIの最新の（訳注：2020年7月2日時点）[解析結果](/results/) を図示したものです。この図は、マンハッタンプロットと呼ばれています。図の詳細な説明は、脚注を参照ください。簡単に言えば、マンハッタンプロットとは、形質（例：COVID-19）と遺伝的変異の関連をゲノム全体にわたって図示したものです。私たちは、統計的に有意な関連を示す染色体3番上の一領域を同定しました（横軸Xで示された染色体3番上につらなる縦の点列に注目してください）。時には、一つの領域に複数の隣接した遺伝子が含まれることがあります。複数の遺伝子を含む領域からCOVID-19 の重症度に関係する特定の遺伝子を絞り込むためには、さらなる研究が必要です。今回同定された染色体3番上の領域には、複数の遺伝子が含まれています（全ての遺伝子名リストは図2を参照）。この狭い領域のうちどの特定の遺伝子がCOVID-19 の重症度に関連するかは未だ判明していません。しかしながら、いくつかの興味深い手がかりが見つかりました！この領域には、CXCR6やCCR1といったケモカインに関連する遺伝子が複数存在しています。ケモカインは免疫細胞の移動を制御し、[自然免疫系の適切な機能に必要不可欠](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/) です（訳注：リンク先は英語となります）。また、この領域中のSLC6A20と呼ばれる遺伝子は、ACE2に結合するタンパク質を生成します。ACE2タンパク質は、新型コロナウイルス（SARS-CoV-2）が私たちの細胞へ侵入する際に用いるドアのような役割をします（図3）。つまり、SLC6A20上の遺伝的変異がウイルスの侵入へ影響を与える可能性があるということです！もちろん、これらの遺伝的関連に基づく私たちの発見は、研究過程の初期段階であり、さらなる研究が期待されます。
 
 
-![図2: UCSC Genome Browserによる遺伝子領域の図示。](hgt_genome_32a4d_7bc390.jpg)
+![図2: UCSC Genome Browserによる遺伝子領域の図示。](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>図2: <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a>による遺伝子領域の図示。</strong> 図中では、今回同定された染色体3番上の一領域に存在する遺伝子（例：CXCR6, SLC6A20, CCR1）が示されている。
 </figcaption>
 
-![図3：ACE-2受容体の図解。](unnamed.png)
+![図3：ACE-2受容体の図解。](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>図3：ACE-2受容体の図解。</strong> この図解では、ACE-2がいかに宿主細胞における受容体として働き、新型コロナウイルス（SARS-CoV-2）の感染に介在するかを示しています。図の出典： <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>

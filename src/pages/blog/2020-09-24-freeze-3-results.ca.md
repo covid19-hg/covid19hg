@@ -14,7 +14,7 @@ La pandèmia COVID-19 ha afectat la vida quotidiana de les societats de tot el m
 
 Al nostre estudi, comparem la variació genètica entre casos, persones hospitalitzades i que també tenen una prova positiva de SARS-CoV-2, amb controls que són persones de la població general que no tenen una prova positiva de COVID-19. Aquesta comparació s’anomena estudi d’associació genòmica, o GWAS. Mireu aquest [vídeo](https://www.youtube.com/watch?v=cgyc55JhdcM) o [infografia](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) (tots dos en anglés) per obtenir una explicació il·lustrada de GWAS. A juliol de 2020, hem combinat els resultats de vuit estudis diferents per a un total de 3.199 casos i 897.488 controls.
 
-![Resultats actuals a juliol de 2020](scicomm_blog_post_20200924.png)
+![Resultats actuals a juliol de 2020](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 1: Resultats actuals a juliol de 2020.</strong>  Els resultats mostrats comparen dades genètiques entre 3.199 casos (pacients que van ser hospitalitzats per COVID-19) i 897.488 controls (mostres de la població que es presumeix que són COVID-19 negatives).
 </figcaption>
@@ -23,12 +23,12 @@ Al nostre estudi, comparem la variació genètica entre casos, persones hospital
 
 A la figura 1, es mostra un resum visual dels [resultats més recents](/results/) de la COVID-19 HGI. A este tipus de figures se’ls coneix com gràfiques Manhattan, consulteu la nota a peu de pàgina per obtenir una descripció completa d’aquesta visualització. En resum, s’utilitza una gràfica Manhattan per visualitzar associacions entre un tret (per exemple, COVID-19) i variants genètiques a tot el genoma. Observem una regió estadísticament significativa al cromosoma 3 (notem la línia vertical de punts sobre el cromosoma 3, tal com s’indica a l’eix x horitzontal, amb punts que sobrepassen la línea horitzontal roja que marca el nivell de significació estadística). De vegades, una regió inclou múltiples gens que estan a prop l’un de l’altre. Es necessitaran investigacions addicionals per reduir la regió estadísticament significativa al gen específic implicat en la gravetat del COVID-19. La regió identificada al cromosoma 3 es solapa amb diversos gens (vegeu tots els noms de gens que apareixen a la figura 2). No està clar quin gen específic d’aquesta estreta regió s’associa amb la gravetat del COVID-19. Tot i això, tenim algunes pistes interessants. Hi ha diversos gens relacionats amb quimiocines en aquesta regió, com ara CXCR6 i CCR1. Les quimiocines controlen el moviment de les cèl·lules immunes i són [fonamentals perquè el sistema immunitari innat funcioni correctament](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/). El gen SLC6A20 també es troba en aquesta regió i produeix una proteïna que se sap que s’uneix a ACE2. La proteïna ACE2 és com una porta que el virus SARS-CoV-2 utilitza per entrar a les nostres cèl·lules (Figura 3). Això significa que és possible que la variació genètica del SLC6A20 estigui influint en l’entrada de virus. Aquests resultats del nostre descobriment d’associacions genètiques són només el primer pas del procés de recerca.
 
-![Visualització des del navegador de genomes UCSC](hgt_genome_32a4d_7bc390.jpg)
+![Visualització des del navegador de genomes UCSC](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 2: Visualització des del <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">navegador de genomes UCSC</a></strong> Aquesta figura mostra els gens (per exemple, CXCR6, SLC6A20, CCR1) a la nostra regió d’interès del cromosoma 3 amb altres que també s’hi troben localitzats en ella però que, almenys en aquest moment, pensem que no són importants pel que fa a la COVID-19.
 </figcaption>
 
-![Il·lustració del receptor ACE-2](unnamed.png)
+![Il·lustració del receptor ACE-2](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 3: Il·lustració del receptor ACE-2. </strong> La il·lustració mostra com ACE-2 funciona com a receptor en una cèl·lula hoste, mediant així la infecció pel virus SARS-CoV-2. Aquesta xifra s’ha adaptat de <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>

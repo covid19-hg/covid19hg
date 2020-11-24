@@ -20,7 +20,7 @@ Die COVID-19-Pandemie beeinträchtigt den Alltag von uns allen. Wissenschaftler 
 
 In unserer Studie vergleichen wir die genetische Variation von Patienten mit einem positiven Test auf SARS-CoV-2, die ins Krankenhaus eingeliefert wurden, und Menschen aus der Allgemeinbevölkerung. Dieser Vergleich wird als genomweite Assoziationsstudie (genome-wide association study, GWAS) bezeichnet. Sehen Sie sich dieses [Video](https://www.youtube.com/watch?v=cgyc55JhdcM) oder diese [Infografik](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) an, um eine illustrierte Erklärung der GWAS zu erhalten. Bis zum Juli 2020 konnten wir die Ergebnisse von acht verschiedenen Studien mit insgesamt 3.199 Patienten und 897.488 Kontrollen zusammenfassen.
 
-![ Aktuelle Ergebnisse laut Stand vom Juli 2020 (Data-Freeze 3)](scicomm_blog_post_20200924.png)
+![ Aktuelle Ergebnisse laut Stand vom Juli 2020 (Data-Freeze 3)](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Abbildung 1: Aktuelle Ergebnisse laut Stand vom Juli 2020 (Data-Freeze 3). </strong> Die oben gezeigten Ergebnisse vergleichen genetische Daten zwischen 3.199 Patienten (Patienten, die aufgrund von COVID-19 ins Krankenhaus eingeliefert wurden) und 897.488 Kontrollen aus der Allgemeinbevölkerung.
 </figcaption>
@@ -30,12 +30,12 @@ In unserer Studie vergleichen wir die genetische Variation von Patienten mit ein
 Abbildung 1 fasst die aktuellen [Ergebnisse](/results/) der COVID-19 HGI grafisch zusammen. Diese Darstellungsweise wird als Manhattan-Plot bezeichnet; eine vollständige Beschreibung dieser Grafik finden Sie in der Fußnote. Kurz gesagt, ein Manhattan-Plot wird verwendet, um Assoziationen zwischen einem Merkmal (z.B. COVID-19) und genetischen Varianten über das gesamte Genom hinweg zu visualisieren. Hierbei sehen wir eine statistisch signifikante Region auf Chromosom 3 (erkennbar als gepunktete vertikale Linie über Chromosom 3 auf der horizontalen x-Achse). Wie in Abbildung 2 zu erkennen ist, beinhaltet diese Region mehrere Gene. Bisher ist nicht klar, welches Gen innerhalb dieser Region mit dem COVID-19-Schweregrad assoziiert ist. Es bedarf zusätzlicher Forschung, um die statistisch signifikante Region auf eine spezifische genetische Veränderung oder ein spezifisches Gen einzugrenzen, das den Schweregrad von COVID-19 beeinflusst. Dennoch sind bereits einige interessante Kandidaten dabei. So befinden sich in der Region einige Gene, die mit Chemokinen im Zusammenhang stehende Proteine kodieren. Chemokine steuern die Bewegung von Immunzellen und sind essentiell für die korrekte Funktion des angeborenen Immunsystems. Das Gen SLC6A20, das sich ebenfalls in der assoziierten Region befindet, kodiert ein Protein, welches an das Protein ACE2 bindet und mit diesem kommuniziert. Das Protein ACE2 ist wie eine Tür, durch die das SARS-CoV-2 Virus in unsere Zellen eintreten kann (Abbildung 3). Somit ist es möglich, dass genetische Variationen in SLC6A20 das Eindringen des Virus in die Zelle beeinflussen könnten. Die hier gefundenen genetischen Assoziationen sind aber nur der erste Schritt des Forschungsvorhabens..
 
 
-![Darstellung aus dem UCSC Genome Browser](hgt_genome_32a4d_7bc390.jpg)
+![Darstellung aus dem UCSC Genome Browser](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Abbildung 2: Darstellung aus dem <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a> .</strong>  Die Abbildung zeigt die Gene (z.B. CXCR6, SLC6A20, CCR1) in der für uns interessanten Region auf Chromosom 3.
 </figcaption>
 
-![Veranschaulichung des Andockens des SARS-CoV-2 Virus an den ACE-2-Rezeptor](unnamed.png)
+![Veranschaulichung des Andockens des SARS-CoV-2 Virus an den ACE-2-Rezeptor](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Abbildung 3: Veranschaulichung des Andockens des SARS-CoV-2 Virus an den ACE-2-Rezeptor.</strong> Die Abbildung zeigt, wie das ACE-2 Protein der menschlichen Zelle als Rezeptor für das Andocken und Eindringen in die Zelle und damit das Auslösen der Infektion von SARS-CoV-2 verwendet wird. Diese Abbildung wurde von <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a> adaptiert.
 </figcaption>

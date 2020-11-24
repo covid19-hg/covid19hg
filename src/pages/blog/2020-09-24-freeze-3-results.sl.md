@@ -22,7 +22,7 @@ COVID-19 pandemija je vplivala na vse aspekte življenja družb. Znanstveniki vs
 V naši raziskavi primerjamo genetske razlike med primeri, ljudmi ki so bili sprejeti v bolnišnico in so imeli pozitivni rezultat testa za okužbo s SARS-CoV-2, in kontrolami, ljudmi izbranimi iz splošne populacije, ki niso imeli pozitivnega testa za okužbo. Ta primerjava se imenuje raziskava asociacije po celotnem genomu (angl. genome wide association study (GWAS)). Za bolj podroben opis GWAS si oglejte sledeči video posnetek in ilustracijo. Z julijem 2020 smo združili rezultate osmih različnih raziskav, kar je skupaj doprineslo 3.199 primerov in 897.488 kontrol.
 
 
-![Slika 1: Trenutni rezultati (julij 2020).](scicomm_blog_post_20200924.png)
+![Slika 1: Trenutni rezultati (julij 2020).](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Slika 1: Trenutni rezultati (julij 2020).</strong> Zgoraj prikazani rezultati so plod primerjave genetskih podatkov med 3.199 primeri (pacienti ki so bili hospitalizirani zaradi okužbe s COVID-19) in 897.488 kontrolami (pacienti brez okužbe s COVID-19).
 </figcaption>
@@ -32,12 +32,12 @@ V naši raziskavi primerjamo genetske razlike med primeri, ljudmi ki so bili spr
 Slika 1 prikazuje vizualni opis najnovejših [rezultatov](/results/) s strani COVID-19 HGI. Na sliki je prikazan t.i. “Manhattan plot”. “Manhattan plot” se uporablja za slikovni prikaz asociacije med genetskimi variacijami celotnega genoma in kliničnimi izidi. Opazimo lahko eno statistično pomembno regijo na 3. kromosomu (vertikalna pikčasta črta). Včasih se v takih pomembnih regijah nahaja več genov. Za natančno določitev genov dejansko odgovornih za resnost okužbe s COVID-19 so potrebne še dodatne raziskave, vendar je v tej regiji par zanimivih genov kandidatov, npr. CXCR6 in CCR1 (Slika 2). Ti geni vplivajo na kemokine. Kemokini nadzirajo premikanje imunskih celic in so [kritični za normalno delovanje prirojenega imunskega sistema](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/). Gen SLC6A20 se tudi nahaja v isti regiji in je odgovoren za sintezo proteina, ki se veže na protein ACE-2. Protein ACE-2 omogoča virusu SARS-CoV-2 vstop v naše celice (Slika 3). To namiguje na možnost vpliva genetske variacije SLC6A20 na virusni vstop! Rezultati genetskih variacij so šele prvi korak širše zbirke raziskav.
 
 
-![Slika 2: Slikovni prikaz “UCSC Genome Browser”.](hgt_genome_32a4d_7bc390.jpg)
+![Slika 2: Slikovni prikaz “UCSC Genome Browser”.](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Slika 2: Slikovni prikaz <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">“UCSC Genome Browser”</a>.</strong> Črte v sliki prikazujejo gene (npr. CXCR6, SLC6A20, CCR1) v regiji zanimanja na kromosomu 3.
 </figcaption>
 
-![ACE-2 receptor illustration](unnamed.png)
+![ACE-2 receptor illustration](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Slika 3: Ilustracija ACE-2 receptorja.</strong> Ilustracija prikazuje vlogo ACE-2 proteina kot receptorja v gostiteljski celici, kar omogoči infekcijo s SARS-CoV-2 virusom. Slika je bila prirejena po <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>

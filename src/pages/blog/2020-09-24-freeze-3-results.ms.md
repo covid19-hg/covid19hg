@@ -22,7 +22,7 @@ Pandemik COVID-19 telah memberi kesan pada kehidupan seharian masyarakat di selu
 Dalam kajian kami, kami membandingkan data dari variasi genetik antara kumpulan “kes” (orang yang diwadkan di hospital dan juga diperiksa positif untuk SARS-CoV-2) dan kumpulan “kawalan” (orang dari populasi umum yang tidak mempunyai ujian positif untuk COVID-19, juga dianggap negatif untuk COVID-19). Perbandingan ini disebut “Genome Wide Association Study” (Penyelidikan Hubung Kait Seluruh Genom), atau GWAS. Sila lawati [video](https://www.youtube.com/watch?v=cgyc55JhdcM) atau [infografik](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) ini untuk penjelasan lanjutan mengenai GWAS (di dalam Bahasa Inggeris)! Sehingga Julai 2020, kami telah menggabungkan hasil kajian daripada lapan kajian berbeza untuk sejumlah 3,199 kes dan 897,488 kawalan.
 
 
-![Rajah 1: Hasil terkini dari pembekuan data 3 (Julai 2020).](scicomm_blog_post_20200924.png)
+![Rajah 1: Hasil terkini dari pembekuan data 3 (Julai 2020).](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Rajah 1: Hasil terkini dari pembekuan data 3 (Julai 2020).</strong>  Hasil yang ditunjukkan di atas membandingkan data genetik antara 3,199 kes (pesakit yang dimasukkan ke hospital dari COVID-19) dan 897,488 kawalan (sampel dari populasi yang dianggap negatif COVID-19).
 </figcaption>
@@ -32,12 +32,12 @@ Dalam kajian kami, kami membandingkan data dari variasi genetik antara kumpulan 
 Rajah 1 menunjukkan ringkasan visual hasil terbaru dari COVID-19 HGI berdasarkan plot Manhattan (sila lihat nota kaki untuk penerangan lengkap mengenai interpretasi rajah ini). Secara ringkasnya, rajah Manhattan digunakan untuk memaparkan hubungan antara sifat (contohnya COVID-19) dan variasi genetik di seluruh genom. Kami melihat satu kawasan yang ketara atau signifikan secara statistik pada Kromosom 3 (seperti ditunjukan di Rajah 1 oleh taburan titik berpuncak di Kromosom 3, Paksi X mendatar). Kadang kala, ianya menunjukkan sebahagian yang merangkumi pelbagai gen yang berdekatan antara satu sama lain. Kajian mendalam diperlukan untuk memahami variasi genetik yang signifikan pada gen yang terlibat dalam menentukan tahap keparahan COVID-19. Kawasan yang dikenal pasti pada Kromosom 3 bertindih dengan pelbagai gen (rujuk nama gen yang disenaraikan dalam Rajah 2). Namun begitu, ianya tidak jelas di mana gen khususnya yang dikaitkan dengan keparahan COVID-19. Walaubagaimanapun, kami mempunyai beberapa hasil yang menarik! Terdapat beberapa gen yang berkaitan dengan kemokin (kumpulan sistem imun) di rantau ini, seperti CXCR6 dan CCR1. Kemokin mengawal pergerakan sel-sel imun dan sangat penting untuk memastikan sistem imun berfungsi dengan lancar. Gen SLC6A20 juga dapat dikesan di bahagian ini. Gen ini menghasilkan protein yang dikenalpasti untuk mengikat protein  ACE2. Protein ACE2 berfungsi di dalam sel sebagai pintu yang digunakan oleh virus SARS-CoV-2 untuk memasuki sel (Rajah 3). Ini bermakna bahawa hasil menemui variasi genetik dalam SLC6A20 mungkin berfungsi untuk mempengaruhi kemasukan virus SARS-CoV-2 dalam sel manusia! Hasil ini dari GWAS kami dapat membuka langkah seterusnya dalam proses penyelidikan ini.
 
 
-![Rajah 2: Visualisasi dari UCSC Genome Browser](hgt_genome_32a4d_7bc390.jpg)
+![Rajah 2: Visualisasi dari UCSC Genome Browser](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Rajah 2: Visualisasi dari <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a>.</strong> Lintasan dalam gambar ini menunjukkan gen ( seperti CXCR6, SLC6A20, CCR1) di kawasan menarik yang kita mengenal pasti dalam Kromosom 3.
 </figcaption>
 
-![Rajah 3: Ilustrasi reseptor ACE-2.](unnamed.png)
+![Rajah 3: Ilustrasi reseptor ACE-2.](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Rajah 3: Ilustrasi reseptor ACE-2.</strong> Ilustrasi ini menunjukkan bagaimana ACE-2 berfungsi sebagai reseptor dalam sel manusia, dan seterusnya mungkin menjadi penyebab jangkitan dari virus SARS-CoV-2. Rajah ini diadaptasi dari  <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>
