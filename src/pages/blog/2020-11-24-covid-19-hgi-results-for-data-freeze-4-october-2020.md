@@ -73,9 +73,7 @@ The COVID-19 HGI also ran an analysis to associate chromosomal regions with pati
 
 **Figure 3. A Manhattan plot showing the GWAS results for COVID-19 partial-susceptibility in 30,937 COVID-19 cases and 1.5 million controls.** The analysis identified one independent significant association to COVID-19 partial-susceptibility (indicated by red box around genetic “peaks” rising above the red horizontal line representing the predetermined statistical [p-value threshold](https://www.vox.com/latest-news/2019/3/22/18275913/statistical-significance-p-values-explained)) in addition to regions also associated with COVID-19 severity on chromosome 3, 9, and 21. See the footnote of our[ first blog post](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) for an explanation of this data visualization.
 
-
-
-# Our next steps
+## Our next steps
 
 We are excited to report that our latest findings further explain the potential genetic etiology for the development of severe COVID-19. However, it’s important to keep in mind that while GWAS helps us identify these regions, more research is needed to determine the true causal genes in these regions and the biological mechanisms involved in disease severity.
 
@@ -83,7 +81,7 @@ Consistent with other studies, our latest results provide additional evidence th
 
 As illustrated by the increase of cases from July to October, we are continuously expanding our study. At the next data freeze in December 2020, we will repeat our analysis with an increased sample size which will hopefully replicate our findings in this post and potentially identify new genetic variants associated with COVID-19. In addition, we are refining how we define cases and controls for future analysis. Through these additional genetic studies we are hopeful we can improve the understanding of how genetic variation influences COVID-19 severity and partial-susceptibility.
 
-# Acknowledgements
+## Acknowledgements
 
 Thank you to Shea Andrews and Andrea Ganna for thoughtful feedback and revisions. We would especially like to acknowledge all the studies that contributed to the results from our study (Figure 4).
 
