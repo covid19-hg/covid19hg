@@ -69,7 +69,7 @@ Finally, the association on chromosome 21 is near the genes *[IFNAR2](https://ww
 
 The COVID-19 HGI also ran an analysis to associate chromosomal regions with patients with a partial-susceptibility to COVID-19 (i.e., patients with positive COVID-19 tests that were not hospitalized). We identified regions on chromosomes 3, 9, and 21 (Figure 3). Most of these regions overlap those identified in our COVID-19 severity analysis (Figure 2). But we also identified a region on chromosome 3 that contains multiple genes, and we aren’t sure which may be driving this association (red box in Figure 3).
 
-![A Manhattan plot of cases versus controls showing significant associations on chromosomes 3, 9, and 21.](/img/oct2020_c2_manhattan.png)
+![A Manhattan plot of cases versus controls showing significant associations on chromosomes 3, 9, and 21.](/img/release4_susceptibilitymanhattan.jpg)
 
 **Figure 3. A Manhattan plot showing the GWAS results for COVID-19 partial-susceptibility in 30,937 COVID-19 cases and 1.5 million controls.** The analysis identified one independent significant association to COVID-19 partial-susceptibility (indicated by red box around genetic “peaks” rising above the red horizontal line representing the predetermined statistical [p-value threshold](https://www.vox.com/latest-news/2019/3/22/18275913/statistical-significance-p-values-explained)) in addition to regions also associated with COVID-19 severity on chromosome 3, 9, and 21. See the footnote of our[ first blog post](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) for an explanation of this data visualization.
 
@@ -87,6 +87,6 @@ As illustrated by the increase of cases from July to October, we are continuousl
 
 Thank you to Shea Andrews and Andrea Ganna for thoughtful feedback and revisions. We would especially like to acknowledge all the studies that contributed to the results from our study (Figure 4).
 
-![List of partners and a map of contributing studies ](/img/oct2020_study_partners.png)
+![List of partners and a map of contributing studies ](/img/contributing_studies.png)
 
 **Figure 4:** **List of partners that contributed to COVID-19 HGI.** Adapted from [Andrea Ganna’s presentation](https://www.ashg.org/publications-news/press-releases/results-covid-19-host-genetics-initiative-study-announced/) on the COVID-19 HGI at the American Society of Human Genetics Meeting in October 2020.
