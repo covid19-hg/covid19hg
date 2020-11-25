@@ -89,4 +89,4 @@ Thank you to Shea Andrews and Andrea Ganna for thoughtful feedback and revisions
 
 ![List of partners and a map of contributing studies ](/img/oct2020_study_partners.png)
 
-**Figure 4:** **List of partners that contributed to COVID-19 HGI.** Adapted from [Andrea Gana’s presentation](https://www.ashg.org/publications-news/press-releases/results-covid-19-host-genetics-initiative-study-announced/) on the COVID-19 HGI at the American Society of Human Genetics Meeting in October 2020.
+**Figure 4:** **List of partners that contributed to COVID-19 HGI.** Adapted from [Andrea Ganna’s presentation](https://www.ashg.org/publications-news/press-releases/results-covid-19-host-genetics-initiative-study-announced/) on the COVID-19 HGI at the American Society of Human Genetics Meeting in October 2020.
