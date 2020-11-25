@@ -21,7 +21,7 @@ COVID-19 pandemin har globalt påverkat påverkat människors vardag. Forskare v
 I vår studie jämför vi den genetiska variationen mellan patienter, dvs personer som har blivit inlagda på sjukhus och testat positivt för SARS-CoV-2,  och kontroller, som är personer från den allmänna populationen, vilka inte testat positivt för COVID-19. Den här jämförelsen kallas för en Genome Wide Association Study (GWAS). Titta på denna [video](https://www.youtube.com/watch?v=cgyc55JhdcM) eller denna [informationsgrafik](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) för en illustrerad beskrivning av GWAS! Daterat juli 2020 har vi ett kombinerat resultat baserat på åtta olika studier gällande totalt 3,199 patienter och 897,488 kontroller.
 
 
-![Figur1: Aktuella resultat från data freeze 3 (Juli 2020).](scicomm_blog_post_20200924.png)
+![Figur1: Aktuella resultat från data freeze 3 (Juli 2020).](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figur1: Aktuella resultat från data freeze 3 (Juli 2020).</strong>Resultaten ovan jämför genetisk data mellan 3,199 patienter (patienter, som blivit intagna på sjukhus pga COVID-19) och 897,488 kontroller (personer från den allmänna populationen, vilka antas vara negativa för COVID-19).
 </figcaption>
@@ -31,12 +31,12 @@ I vår studie jämför vi den genetiska variationen mellan patienter, dvs person
 Figur 1 ovan visar en visuell sammanfattning av de senaste [resultaten](/results/) från COVD-19 HGI. Detta kallas för en ”Manhattan plot”, vänligen läs fotnoten för en omfattande beskrivning av visualiseringen. Kortfattat, en ”Manhattan plot” används för att visa association mellan en egenskap (tex COVID-19) och genetiska varianter över hela genomet. Vi observerar ett statistiskt signifikant område på kromosom 3 (observera den punktstreckade, vertikala linjen ovanför kromosom 3, som är indikerad på den horisontala X-axeln). Ibland inkluderar en region ett flertal närliggande gener. Det kräver fortsatt forskning för att begränsa den statistiskt signifikanta regionen till en specifik gen, som är involverad i svårighetsgraden av COVID-19. Den identifierade regionen på kromosom 3 överlappar med flera gener( se en lista på alla gennamn i Figur 2). Det är inte klarlagt vilken specifik gen inom denna begränsade region, som är associerad med svårighetsgraden av COVID-19. Hur som helst så har vi några intressanta ledtrådar! Det finns ett flertal kemokin-relaterade gener inom detta område, så som CXCR6 och CCR1. Kemokiner kontrollerar immuncellernas rörelse och är [kritiska för att det medfödda immunförsvaret](https://www.covid19hg.org/results/) skall fungera ordentligt. Genen SLC6A20 finns också i denna region, och den tillverkar ett protein som är känt för att binda till ACE2. Proteinet ACE2 i sin tur fungerar som en dörr, vilket SARS-CoV-2 använder som ingång till våra celler (Figur 3). Detta betyder att det är möjligt att genetisk variation hos SLC6A20 påverkar viralt inträde! De här resultaten från våra upptäckter av genetisk association är endast det första steget i forskningsprocessen.
 
 
-![Figur 2: Visualisering av UCSC Genome Browser.](hgt_genome_32a4d_7bc390.jpg)
+![Figur 2: Visualisering av UCSC Genome Browser.](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Figur 2: Visualisering av <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a>.</strong> Den schematiska bilden visar generna( tex. CXCR6, SLC6A20, CCR1), som befinner sig i regionen av intresse på kromosom 3.
 </figcaption>
 
-![Figur 3: Illustration av ACE-2 receptorn.](unnamed.png)
+![Figur 3: Illustration av ACE-2 receptorn.](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figur 3: Illustration av ACE-2 receptorn.</strong>  Illustrationen visar hur ACE-2 fungerar som en receptor på en värdcell, och på detta sätt förmedlar infektionen från SARS-CoV-viruset. Den här figuren är tagen från <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>

@@ -23,7 +23,7 @@ type: blog-post
 본 연구에서는, 입원한 코로나19바이러스 양성 환자들의 유전형과 코로나바이러스 감염증(COVID-19) 증상이 없는 일반 인구의 유전형을 비교하고 있습니다. 이러한  비교분석 방법을  전체유전체 상관분석 연구 또는 GWAS(Genome Wide Association Study) 라고 합니다. GWAS에 대한 자세한 설명은 이 영상 또는 인포그래픽을 참조하세요! 2020년 7월 현재 연구단은 8개의 다른 연구로부터 총 3,199건의 양성 샘플과 89만 7,488건의 대조군을 종합 분석한 결과를  발표하였습니다.
 
 
-![그림 1: 데이터 버젼3 결과(2020년 7월).](scicomm_blog_post_20200924.png)
+![그림 1: 데이터 버젼3 결과(2020년 7월).](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>그림 1: 데이터 버젼3 결과(2020년 7월).</strong> 위 표시된 결과는  3,199건 양성군(COVID-19로 입원  환자)과 89만 7,488건의 대조군(COVID-19 음성 환자) 사이의 유전형 데이터를 비교한 결과입니다.
 </figcaption>
@@ -33,12 +33,12 @@ type: blog-post
 위 그림 1은 코로나19 환자유전학이니셔티브의 최근 연구결과를 시각적으로 요약한 것입니다. 이런 시각화 방식을  맨해튼플랏이라고 하며, 이 기법에 대한 설명은 각주를 참조해 주시기 바랍니다.  맨해튼플랏은 전유전체에 걸쳐 형질(예: COVID-19)과 유전형 사이의 연관성을 시각화하는 데 사용됩니다. 연구단은 3번 염색체에서 통계적으로 유의한 영역을 발견하였습니다 (가로축에 표시된 3번 염색체 위에 수직으로 표시된 점선들). 이런 지역은 서로 가까이 위치한 다수의 유전자가 포함된 넓은 지역일 수 도 있습니다. 통계적으로 유의미한 넓은 염색체 영역에서 COVID-19 중증도와 정말로 연관이 있는 특정 유전자를 밝혀내기 위해서는 추가적인 연구가 필요합니다. 이번 연구를 통해 밝혀진 3번 염색체 지역은 다수의 유전자가 위치한 지역입니다 (그림 2 에 열거된 모든 유전자 참조). 이 지역에 포함된 여러 유전자 중 어떤 유전자가 COVID-19 중증도와 관련이 있는지는 밝혀지지 않았습니다. 하지만, 연구단은 몇 가지 흥미로운 단서를 발견하였습니다! 이 지역에는 CXCR6, CCR1과 같은 여러 케모카인 관련 유전자가 있습니다. 케모카인은 면역세포들의 이동을 조절하며 선천적 면역체계의 정상적인 기능에도 중요한 것으로 알려져 있습니다. 그중 SLC6A20 유전자가 이 지역에 위치하며, 이 유전자가 만드는 단백질은 ACE2와 결합하는 것으로 알려져있습니다. ACE2 단백질은 코로나19바이러스가 숙주 세포내로 들어가기 위해 사용하는 문과 같은 단백질입니다 (그림 3). 이 결과는 SLC6A20 유전자 변이가 바이러스 유입에 영향을 미친다는 것을 의미합니다!  연구단의 이러한 유전적 연관성 발견은 연구의 첫 단계 일 뿐입니다.
 
 
-![그림 2: UCSC 게놈 브라우저를 통한 시각화.](hgt_genome_32a4d_7bc390.jpg)
+![그림 2: UCSC 게놈 브라우저를 통한 시각화.](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>그림 2: <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC 게놈 브라우저를</a> 통한 시각화.</strong>  이 트랙은 연구결과 3번 염색체 영역에 위치한 유전자(예: CXCR6, SLC6A20, CCR1)를 보여줍니다.
 </figcaption>
 
-![그림 3: ACE-2 수용체 그림.](unnamed.png)
+![그림 3: ACE-2 수용체 그림.](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>그림 3: ACE-2 수용체 그림.</strong> Illustration shows how ACE-2 works as a receptor in a host cell, thereby mediating infection from the SARS-CoV-2 virus.  위 그림은 숙주세포에서 ACE-2가 어떻게 수용체 역할을 하여 코로나19바이러스 감염을 매개하는지를 보여주고 있습니다. 이 그림은<a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">다음</a> 에서 인용되었습니다.
 </figcaption>

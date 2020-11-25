@@ -22,7 +22,7 @@ Pandemija KOVID-19 uticala je na svakodnevni život društava širom sveta. Nau�
 U našoj studiji upoređujemo genetske varijacije između obolelih, a to su hospitalizovani i oni sa pozitivnim testom na SARS-CoV-2, i kontrola, a to su ljudi iz opšte populacije koji nemaju pozitivan test na KOVID-19. Ovo poređenje naziva se studija genomskih asocijacija - GWAS (eng. Genome-Wide Association Study). Pogledajte ovaj [video](https://www.youtube.com/watch?v=cgyc55JhdcM) ili [grafik](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) za pojašnjenje! Od jula 2020. sakupili smo rezultate osam različitih studija sa ukupno 3.199 obolelih slučajeva i 897.488 kontrola.
 
 
-![Figura 1: Trenutni rezultati trećeg izdanja (jul 2020.).](scicomm_blog_post_20200924.png)
+![Figura 1: Trenutni rezultati trećeg izdanja (jul 2020.).](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 1: Trenutni rezultati trećeg izdanja (jul 2020.).</strong> Gore prikazani rezultati upoređuju genetske podatke 3.199 obolelih slučajeva (pacijenti koji su hospitalizovani zbog KOVID-19) i 897.488 kontrola (uzorci iz populacije za koje se pretpostavlja da su KOVID-19 negativni).
 </figcaption>
@@ -32,12 +32,12 @@ U našoj studiji upoređujemo genetske varijacije između obolelih, a to su hosp
 Figura 1, iznad, slikovito prikazuje najnovije [rezultate](/results/) KOVID-19 HGI. Ovo se naziva Menhetn grafik, pogledajte fusnotu za potpuni opis ove vizualizacije. Ukratko, Menhetn grafik se koristi za prikazivanje povezanosti između neke osobine (npr. KOVID-19) i genetskih varijanti u celom genomu. Primećujemo jednu statistički značajnu regiju na hromozomu 3 (uočite tačkastu vertikalnu liniju iznad hromozoma 3, što je naznačeno na horizontalnoj osi). Ponekad region uključuje više gena koji su blizu jedan drugom. Potrebna su dodatna istraživanja kako bi se statistički značajna regija suzila na jedan specifični gen povezan sa težinom kliničke slike KOVID-19. Region identifikovana na hromozomu 3 uključuje više gena (pogledajte sva imena gena navedena u Figuri 2). Nije jasno koji je specifični gen u ovom uskom regionu povezan sa težinom kliničke slike KOVID-19. Međutim, imamo nekoliko zanimljivih naznaka! U ovom regionu postoji nekoliko gena povezanih sa hemokinom, kao što su CXCR6 i CCR1. Hemokini kontrolišu kretanje imunih ćelija i [presudni su za pravilno funkcionisanje urođenog imunološkog sistema](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/). Gen SLC6A20 je takođe u ovom regionu i stvara protein za koji se zna da se vezuje za ACE2 receptore. Protein ACE2 je poput vrata koja virus SARS-CoV-2 koristi za ulazak u naše ćelije (Figura 3). To znači da potencijalna genetska varijacija u genu SLC6A20 utiče na ulazak virusa! Ovi rezultati našeg otkrivanja genetskih asocijacija samo su prvi korak u istraživačkom procesu.
 
 
-![Figura 2: Grafički prikaz sa pretraživača genoma UCSC.](hgt_genome_32a4d_7bc390.jpg)
+![Figura 2: Grafički prikaz sa pretraživača genoma UCSC.](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 2: Grafički prikaz sa <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">pretraživača genoma UCSC</a>.</strong> Ova slika prikazuje gene (npr. CXCR6, SLC6A20, CCR1) u našem regionu od interesa na hromozomu 3.
 </figcaption>
 
-![Figura 3: Ilustracija ACE-2 receptora.](unnamed.png)
+![Figura 3: Ilustracija ACE-2 receptora.](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 3: Ilustracija ACE-2 receptora.</strong> Ilustracija pokazuje kako ACE-2 deluje kao receptor u ćeliji domaćina, posredujući tako kod infekcije virusom SARS-CoV-2. Ova figura je prilagođena sa stranice:  <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>

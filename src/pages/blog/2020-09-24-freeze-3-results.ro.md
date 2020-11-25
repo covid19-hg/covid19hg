@@ -25,7 +25,7 @@ Pandemia COVID-19 a afectat viețile societăților din întreaga lume. Oameni d
 În studiul nostru, comparăm variaţiile genetice dintre cazuri, persoane care au fost spitalizate şi au avut un test pozitiv pentru SARS-CoV-2, şi controale care sunt persoane din populaţia generală care nu au fost testate pozitiv pentru COVID-19. Această comparaţie se numeşte Genome Wide Association Study (Studiu de Asociaţie de-a lungul Genomului), des prescurtat - GWAS. În acest video [video](https://www.youtube.com/watch?v=cgyc55JhdcM) sau [infographic](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) puteţi vedea explicaţia ilustrată a unui GWAS! Până în iulie 2020, avem rezultatele combinate din opt studii diferite care cuprind în total 3.199 de cazuri şi 897.488 de controale.
 
 
-![Figura 1: Rezultatele actuale de la înghețarea datelor 3 (iulie 2020).](scicomm_blog_post_20200924.png)
+![Figura 1: Rezultatele actuale de la înghețarea datelor 3 (iulie 2020).](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 1: Rezultatele actuale de la înghețarea datelor 3 (iulie 2020).</strong> Rezultatele illustrate deasupra compară datele genetice între 3.199 de cazuri (pacienţi spitalizaţi din cauza COVID-19) şi 897.488 de controale (persoane testate negativ pentru COVID-19).
 </figcaption>
@@ -37,12 +37,12 @@ Pandemia COVID-19 a afectat viețile societăților din întreaga lume. Oameni d
 Uneori, o regiune include mai multe gene care sunt foarte apropiate. Va fi nevoie de cercetare adiţională ca să putem reduce regiunea semnificativă la gena care e implicată în severitatea COVID-19. Regiunea identificată pe cromozomul 3 se suprapune cu mai multe gene (vezi lista cu numele genelor în Figura 2). Nu este clar care dintre genele aflate în regiunea respectivă este asociată cu severitatea COVID-19. Totuşi, avem nişte piste interesante! Există mai multe gene legate de chemokine în această regiune, cum ar fi CXCR6 și CCR1. Chemokinele controlează mișcarea celulelor imune și sunt molecule [cu rol important în funcționarea corectă a sistemul imunitar înnăscut](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/). Gena SLC6A20 se găseşte şi ea în această regiune, şi produce o proteină care se ştie că se leagă de ACE2. Proteina ACE2 este ca o uşă pe care virusul SARS-CoV-2 o foloseşte ca să intre în celulele noastre (Figura 3). Asta înseamnă că ar fi posibil ca o variaţie genetică în SLC6A20 să influenţeze intrarea virusului! Aceste rezultate din descoperirea asociaţiilor genetice reprezintă doar primul pas în procesul de cercetare.
 
 
-![Figura 2: Vizualizare din UCSC Genome Browser.](hgt_genome_32a4d_7bc390.jpg)
+![Figura 2: Vizualizare din UCSC Genome Browser.](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 2: Vizualizare din <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a>.</strong> Traseul din această figură arată genele (de exemplu, CXCR6, SLC6A20, CCR1) în regiunea noastră de interes pe cromozomul 3.
 </figcaption>
 
-![Figura 3: Ilustrarea receptorului ACE-2.](unnamed.png)
+![Figura 3: Ilustrarea receptorului ACE-2.](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 3: Ilustrarea receptorului ACE-2.</strong>  Imaginea ilustrează cum funcţionează ACE-2 ca receptor în celula gazdă, astfel încât mediază infecţia cu virusul SARS-CoV-2. Această imagine a fost adaptată de la
  <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.

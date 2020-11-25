@@ -22,7 +22,7 @@ De COVID-19 pandemie heeft over de hele wereld een sterke impact op het dagelijk
 
 In onze studie vergelijken we het DNA van ziektegevallen, mensen die positief getest zijn voor het SARS-CoV-2 virus en hiervoor opgenomen zijn, met controlegroepen van mensen uit de algemene bevolking die niet positief getest zijn voor COVID-19. De studie opzet waarmee DNA tussen mensen wordt vergeleken, wordt een Genome Wide Association Study (Genoombrede Associatie Studie) genoemd, vaak afgekort als GWAS. In deze [video](https://www.youtube.com/watch?v=cgyc55JhdcM) en [infographic](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) wordt het concept van GWAS uitgelegd aan de hand van illustraties.Tot juli 2020 hebben we resultaten gecombineerd van acht verschillende studies, die in totaal, 3,199 ziektegevallen en 897,488 controles omvatten.
 
-![Huidige resultaten van data freeze 3 (juli 2020)](scicomm_blog_post_20200924.png)
+![Huidige resultaten van data freeze 3 (juli 2020)](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figuur 1: Huidige resultaten van data freeze 3 (juli 2020).</strong> Hierboven worden de resultaten getoond die verkregen werden door genetische data van 3,199 corona patiënten (patiënten die in het ziekenhuis opgenomen zijn voor COVID-19) en 897,488 controles (individuen uit de algemene bevolking waarvan aangenomen is dat ze COVID-19 negatief zijn.
 </figcaption>
@@ -35,12 +35,12 @@ De regio op chromosoom 3 die betrokken is, bevat verschillende genen (voor een o
 
 De vinden van deze genen die betrokken zijn bij de ziekte ernst van COVID-19 zijn de eerste stap in het onderzoeksproces.
 
-![Visualisatie met de UCSC Genome Browser](hgt_genome_32a4d_7bc390.jpg)
+![Visualisatie met de UCSC Genome Browser](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Figuur 2: Visualisatie met de <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a></strong>.  De afbeelding toont een overzicht van de genen (o.a., CXCR6, SLC6A20, CCR1) in de regio op chromosoom 3 die betrokken zijn bij COVID-19 ziekte ernst.
 </figcaption>
 
-![Illustratie van de ACE-2 receptor](unnamed.png)
+![Illustratie van de ACE-2 receptor](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figuur 3: Illustratie van de ACE-2 receptor.</strong> Het figuur toont de werking van ACE-2 als receptor van de host cel, die daarmee de infectie door het SARS-CoV-2 virus faciliteert. Dit figuur is afgeleid van: <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>

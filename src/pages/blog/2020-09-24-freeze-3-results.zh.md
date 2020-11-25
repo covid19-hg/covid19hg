@@ -22,7 +22,7 @@ COVID-19大流行病影响了世界各地社会的日常生活。世界各地的
 
 在我们的研究中，我们在对病例（即SARS-CoV-2检测阳性的住院病例）与对照组（即不患COVID-19的普通人群）之间的遗传变异进行比较。这种比较被称为全基因组关联研究，或GWAS。请看此[视频](https://www.youtube.com/watch?v=cgyc55JhdcM)或[信息图](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies), 获取对GWAS的图解说明! 截至2020年7月，我们已经合并了8项不同研究的结果，共计3,199例病例和897,488例对照。
 
-![数据冻结3的当前结果（2020年7月）](scicomm_blog_post_20200924.png)
+![数据冻结3的当前结果（2020年7月）](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>图1：数据冻结3的当前结果（2020年7月）。</strong> 上面显示的结果比较了3,199例病例（因COVID-19住院的患者）和897,488例对照（COVID-19阴性的患者）之间的遗传数据。
 </figcaption>
@@ -31,12 +31,12 @@ COVID-19大流行病影响了世界各地社会的日常生活。世界各地的
 
 上图1显示了COVID-19 HGI的[最新结果](/results/)的可视化摘要。该图形称为曼哈顿图，关于这种可视化的完整描述请参考脚注。简而言之，曼哈顿图用于可视化一个性状（如COVID-19）和整个基因组的遗传变异之间的关联。我们在3号染色体上观察到一个具有统计学意义的区域（注意3号染色体上方的垂直虚线，如水平x轴所示）。有时，一个区域包含多个彼此靠近的基因，这需要额外的研究来将统计学意义上的区域缩小到涉及COVID-19严重性的特定基因。在3号染色体上发现的区域与多个基因重叠（见图2中列出的所有基因名称）。 目前还不清楚这个狭窄区域内的哪个特定基因与COVID-19的严重性相关，不过我们确实发现了有一些有趣的线索。该区域内有几个与趋化因子相关的基因，如CXCR6和CCR1。趋化因子控制免疫细胞的运动，[对先天免疫系统的正常运转至关重要](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/)。SLC6A20基因也在这个区域，它产生一种已知与ACE2结合的蛋白质。ACE2蛋白就像SARS-CoV-2病毒用来进入我们细胞的门一样（图3）。这意味着SLC6A20的遗传变异有可能影响病毒进入宿主细胞的过程，但我们发现的这些结果只是研究过程中的第一步。
 
-![来自UCSC基因组浏览器的可视化](hgt_genome_32a4d_7bc390.jpg)
+![来自UCSC基因组浏览器的可视化](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>图2： 来自<a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC基因组浏览器</a>的可视化。</strong> 此图中的轨道显示了3号染色体上我们感兴趣的区域中的基因（例如CXCR6，SLC6A20，CCR1）。
 </figcaption>
 
-![ACE-2受体图解](unnamed.png)
+![ACE-2受体图解](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>图3：ACE-2受体图解。</strong> 插图显示了ACE-2如何作为受体在宿主细胞中发挥作用，从而介导来自SARS-CoV-2病毒的感染。此图改编自 <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>

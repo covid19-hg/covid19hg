@@ -21,7 +21,7 @@ Pandemia COVID-19 wpłynęła na codzienne życie społeczeństw na całej kuli 
 W naszych badaniach porównujemy zmienność genetyczną pomiędzy grupą badaną, czyli osobami hospitalizowanymi ze względu na zakażenie SARS-CoV-2, z grupą kontrolną, czyli nie zakażonymi osobami z populacji. Tego typu porównanie nazywa się badaniem asocjacyjnym całego genomu (z ang. Genome Wide Association Study, GWAS). Obejrzyj [film](https://www.youtube.com/watch?v=cgyc55JhdcM) lub [infografikę](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies), aby lepiej zrozumieć podejście GWAS. Do lipca 2020 roku połączyliśmy wyniki pochodzące z ośmiu różnych projektów, obejmujące w sumie 3 199 osób z grupy badanej i 897 488 osób z grupy kontrolnej.
 
 
-![Rysunek 1: Aktualne wyniki z trzeciej rundy analiz (lipiec 2020). ](scicomm_blog_post_20200924.png)
+![Rysunek 1: Aktualne wyniki z trzeciej rundy analiz (lipiec 2020). ](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Rysunek 1: Aktualne wyniki z trzeciej rundy analiz (lipiec 2020). </strong> TPowyższe wyniki prezentują porównanie danych genetycznych pomiędzy 3 199 osobami z grupy badanej (pacjentami hospitalizowanymi z powodu COVID-19) a 897 488 osobami z grupy kontrolnej (próbki z populacji uznanej za negatywną pod względem COVID-19).
 </figcaption>
@@ -31,12 +31,12 @@ W naszych badaniach porównujemy zmienność genetyczną pomiędzy grupą badan�
 Rysunek 1 (powyżej) prezentuje podsumowanie ostatnich [wyników](/results/) Konsorcjum COVID-19 HGI. Tego typu wykres nazywany jest wykresem typu Manhattan. Pełny opis tego wykresu znajduje się pod rysunkiem 1. W skrócie, wykres typu Manhattan jest wykorzystywany w celu zwizualizowania asocjacji pomiędzy cechą (np. hospitalizacją z powodu COVID-19), a wariantami genetycznymi w genomie. Zaobserwowaliśmy jeden statystycznie istotny rejon w chromosomie 3 (zaznaczony jako wykropkowana pionowa linia powyżej chromosomu 3, który zaznaczono na osi x). W niektórych przypadkach, takich jak ten, zidentyfikowany rejon zawiera wiele genów, które są położone blisko siebie. W kolejnym etapie dodatkowe badania są  konieczne do zawężenia takiego statystycznie istotnego rejonu do poziomu konkretnego genu związanego z ciężkim przebiegiem choroby COVID-19. Zidentyfikowany na chromosomie 3 rejon obejmuje kilka genów - ich nazwy i położenie zaznaczono na Rysunku 2. Obecnie nie wiadomo, który konkretnie gen w tym wąskim rejonie jest powiązany z ciężkością przebiegu choroby COVID-19. Niemniej jednak mamy pewne interesujące przypuszczenia! W tym rejonie znajduje się bowiem kilka genów związanych z chemokinami, takich jak CXCR6 i CCR1. Chemokiny kontrolują migrację komórek odpornościowych i są [kluczowe do prawidłowego funkcjonowania systemu odporności nieswoistej](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/).  Ponadto, w zidentyfikowanym rejonie krótkiego ramienia chromosomu 3 zlokalizowany jest gen SLC6A20, który koduje białko wiążące się z ACE2. ACE2 natomiast jest białkiem receptorowym, które funkcjonuje podobnie do drzwi, stanowiąc miejsce wnikania wirusa SARS-CoV-2 do naszych komórek (Rysunek 3). Oznacza to, że zmienność genetyczna w genie SLC6A20 może wpływać na poziom przechodzenia cząsteczek wirusa do wnętrza naszych komórek. Te wyniki naszych odkryć dotyczących powiązań genetycznych są dopiero pierwszym krokiem w procesie badawczym.
 
 
-![Rysunek 2: Wizualizacja pochodząca z przeglądarki genomowej UCSC Genome Browser.](hgt_genome_32a4d_7bc390.jpg)
+![Rysunek 2: Wizualizacja pochodząca z przeglądarki genomowej UCSC Genome Browser.](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Rysunek 2: Wizualizacja pochodząca z przeglądarki genomowej <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a>.</strong> Ścieżka na rysunku ukazuje wszystkie geny (np. CXCR6, SLC6A20, CCR1) znajdujące się w istotnym dla przebiegu choroby COVID-19 rejonie, zidentyfikowanym na chromosomie 3.
 </figcaption>
 
-![Rysunek 3: Receptor ACE-2.](unnamed.png)
+![Rysunek 3: Receptor ACE-2.](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Rysunek 3: Receptor ACE-2.</strong> Ilustracja prezentuje jak działa ACE-2 jako receptor komórki gospodarza pośredniczący w infekcji wirusem SARS-CoV-2. Źródło: <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.
 </figcaption>

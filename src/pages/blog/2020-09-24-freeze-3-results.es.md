@@ -20,7 +20,7 @@ La pandemia de COVID-19 ha afectado la vida cotidiana de las sociedades de todo 
 
 En nuestro estudio, comparamos la variación genética entre casos, personas que tienen una prueba positiva para SARS-CoV-2 y están hospitalizadas, con controles que son personas de la población general que no tienen una prueba positiva de COVID-19. Este tipo de comparación se denomina estudio de asociación del genoma completo o GWAS (siglas en inglés). ¡Vea este [vídeo](https://www.youtube.com/watch?v=cgyc55JhdcM) o [infografía](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) para obtener una explicación ilustrada de GWAS! A julio de 2020, hemos combinado los resultados de ocho estudios diferentes para un total de 3.199 casos y 897.488 controles.
 
-![Figura 1: Resultados de los datos obtenidos hasta julio de 2020.](scicomm_blog_post_20200924.png)
+![Figura 1: Resultados de los datos obtenidos hasta julio de 2020.](/img/scicomm_blog_post_20200924.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 1: Resultados de los datos obtenidos hasta julio de 2020.</strong>  El gráfico muestra los resultados del contraste a nivel genético entre 3.199 casos (pacientes que han sido hospitalizados por COVID-19) y 897.488 controles (muestras de población presuntamente negativa para COVID-19)
 </figcaption>
@@ -30,12 +30,12 @@ En nuestro estudio, comparamos la variación genética entre casos, personas que
 La Figura 1, arriba, muestra un resumen visual de los [resultados](/results/) más recientes del COVID-19 HGI. A este tipo de figuras se les conoce como gráficos de Manhattan (consulte la nota a pie de página para obtener una descripción completa de esta visualización). En resumen, se utiliza un gráfico de Manhattan para representar asociaciones entre un rasgo (por ejemplo, COVID-19) y variaciones genéticas en todo el genoma. Observamos una región estadísticamente significativa en el cromosoma 3 (vea la línea vertical punteada sobre el cromosoma 3, como se indica en el eje horizontal). A veces, una región incluye varios genes cercanos entre sí y son necesarias investigaciones adicionales para reducir la región estadísticamente significativa al gen específico implicado en la gravedad del COVID-19. La región identificada en el cromosoma 3 se solapa con múltiples genes (vea los genes enumerados en la Figura 2). No está claro qué gen específico dentro de esta estrecha región está asociado con la gravedad del COVID-19. Sin embargo, ¡tenemos algunas pistas interesantes! Hay varios genes relacionados con las quimiocinas en esta región, como CXCR6 y CCR1. Las quimiocinas controlan el movimiento de las células inmunitarias y son fundamentales para que el [sistema inmunológico innato](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/) funcione correctamente. El gen SLC6A20 también se encuentra en esta región y produce una proteína que se une a ACE2. La proteína ACE2 es como una puerta que usa el virus SARS-CoV-2 para entrar en nuestras células (Figura 3). ¡Esto significa que es posible que la variación genética en SLC6A20 esté influyendo en la entrada del virus! Estos resultados de nuestro descubrimiento de asociaciones genéticas son solo el primer paso en el proceso de investigación.
 
 
-![Figura 2: Visualización del UCSC Genome Browser.](hgt_genome_32a4d_7bc390.jpg)
+![Figura 2: Visualización del UCSC Genome Browser.](/img/hgt_genome_32a4d_7bc390.jpg)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 2: Visualización del <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a>.</strong>  Las líneas en esta figura muestran los genes (p. ej. CXCR6, SLC6A20, CCR1) en nuestra región de interés del cromosoma 3.
 </figcaption>
 
-![Figura 3: Ilustración del receptor ACE-2.](unnamed.png)
+![Figura 3: Ilustración del receptor ACE-2.](/img/unnamed.png)
 <figcaption class="manual-md-inline-caption">
 <strong>Figura 3: Ilustración del receptor ACE-2.</strong>La ilustración muestra cómo el ACE-2 funciona como receptor en la célula huésped, mediando en la infección del virus SARS-CoV-2.
 Esta figura ha sido adaptada de: <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a>.

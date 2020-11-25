@@ -44,6 +44,12 @@ To run the Cypress integration tests:
 - In another terminal window, run `yarn cypress:open`.
 This will open a UI where you can select which test suites to run.
 
+## Adding and editing blog posts
 
+- Log in to the visual editor interface at [covi19hg.org/admin](https://www.covid19hg.org/admin/)
+- Choose "Blog" among the collections in the left sidebar and pick an existing blog post to edit or click "New blog" in the top right corner to create a new post.
+- The editor allows allows rich text formatting as shown below:
 
+![Insert heading, bold/italicize text, add link](insert-heading-instructions.png)
 
+![Insert image](insert-image-instructions.png)
