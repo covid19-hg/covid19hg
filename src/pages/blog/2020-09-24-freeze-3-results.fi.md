@@ -2,11 +2,13 @@
 templateKey: blog-post
 title: COVID-19 HGI Tutkimuksen tulokset 2.7.2020 mennessä
 date: 2020-09-25T13:58:54.797Z
-tags: []
+tags:
+  - COVID19
 type: blog-post
 ---
-
 Brooke Wolford ja Kumar Veerapen COVID-19 HGI tutkimuksen puolesta
+
+Kääntänyt Minttu Marttila
 
 <small>
 <em>
@@ -20,8 +22,8 @@ COVID-19 pandemia on muuttanut yhteiskuntien elämää ympäri maailmaa. Tieteil
 
 Vertaamme tutkimuksessamme geneettistä variaatiota tautitapauksien (case), henkilö joka on sairaalahoidossa ja jolla on positiivinen SARS-CoV-2 testin tulos, kontrolleihin (controls) jotka kuuluvat tavallisiin kansalaisiin eivätkä ole saaneet positiivista testiä COVID-19 taudille. Tätä vertailua kutsutaan genomin laajuiseksi assosiaatio analyysiksi (Genome Wide Association Study, GWAS) Katso tämä [video](https://www.youtube.com/watch?v=cgyc55JhdcM) tai [infokaavio](https://www.broadinstitute.org/visuals/explainer-genome-wide-association-studies) selventämään GWAS käsitettä! Heinäkuussa 2020 olemme koonneet yhteen tulokset kahdeksasta tutkimuksesta ja meillä on yhteensä 3199 tautitapausta ja 897488 kontrollia.
 
-
 ![ Datan keräys 3 tulokset (Heinäkuu 2020)](/img/scicomm_blog_post_20200924.png)
+
 <figcaption class="manual-md-inline-caption">
 <strong>Kuva 1: Datan keräys 3 tulokset (Heinäkuu 2020).</strong> Tulokset yllä vertaavat geneettistä dataa 3199 tautitapauksesta (potilaista jotka ovat sairaalassa COVID-19 tartunnan takia)
 ja 897488 kontrollista (näytteet kansalaisilta joiden oletetaan olevan negatiivisia COVID-19 taudille).
@@ -33,13 +35,14 @@ Kuva 1 kokoaa yhteen COVID-19 HGI:n viimeisimmät [tulokset](/results/). Tätä 
 
 Joskus alue sisältää monia geenejä, jotka ovat lähellä toisiaan. Tarvitaan lisätutkimusta että löydetään tilastollisesti merkittävältä alueelta spesifinen geeni, joka on tärkeä COVID-19 taudin vakavassa muodossa. Kromosomissa 3 identifioidulla alueella on 3 geeniä (Kuvassa 2 on listattu kaikki geenit). Ei ole selvää mikä geeneistä kapealla alueella on assosioitunut COVID-19 vakavan tautimuodon kanssa. Meillä on kuitenkin mielenkiintoisia vaihtoehtoja! Alueelta löytyy muutamia kemokiinien sukuisia geenejä, kuten CXCR6 ja CCR1. Kemokiinit säätelevät immuunisolujen liikkeitä ja ovat [kriittisiä synnynnäisen vastustukyvyn](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4448619/) toiminnalle. Alueelta löytyy myös SLC6A20 geeni. Se tuottaa proteiinia, jonka tiedetään sitoutuvan ACE2 reseptoriin. ACE2 proteiini on kuin portti, jota SARS-CoV-2 virus käyttää päästäkseen sisään soluihin (Kuva 3). Tämä tarkoittaa sitä että SLC6A20 geenin geneettinen variaatio voi vaikuttaa viruksen kykyyn infektoida soluja. Nämä geneettiset assosiaatiot ovat vasta tutkimusten ensimmäinen askel.
 
-
 ![Kuvakaappaus  UCSC Genome Browser selaimesta](/img/hgt_genome_32a4d_7bc390.jpg)
+
 <figcaption class="manual-md-inline-caption">
 <strong>Kuva 2: Kuvakaappaus  <a href="https://genome.ucsc.edu" target="_blank" rel="noopener noreferrer">UCSC Genome Browser</a> selaimesta.</strong> Tämä kuva näyttää missä geenit (CXCR6, SLC6A20, CCR1 etc.) ovat kromosomissa 3.
 </figcaption>
 
 ![Kuva ACE-2 receptorista](/img/unnamed.png)
+
 <figcaption class="manual-md-inline-caption">
 <strong>Kuva 3: Kuva ACE-2 receptorista.</strong> Kuva näyttää miten ACE-2 reseptori toimii isäntäsolussa SARS-CoV-2 infektion aikana. Kuva on muokattu <a href="https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified" target="_blank" rel="noopener noreferrer">https://www.rndsystems.com/resources/articles/ace-2-sars-receptor-identified</a> sivustolta.
 </figcaption>
@@ -69,7 +72,6 @@ Käyttäen alustavia tuloksiamme, salapoliisin työ voi alkaa. Konsortiomme jäs
 ## Tutkimuksesta muualla
 
 COVID-19 Host Genetics Initiative tutkimuksesta on julkaistu myös sanomalehdissä.
-
 
 [Washington Post](https://www.washingtonpost.com/opinions/2020/04/27/covid-19-quickly-kills-some-while-others-dont-show-symptoms-can-genetics-explain-this/)
 
