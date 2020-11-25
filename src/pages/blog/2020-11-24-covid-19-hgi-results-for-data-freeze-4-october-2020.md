@@ -3,7 +3,7 @@ templateKey: blog-post
 title: COVID-19 HGI Results for Data Freeze 4 (October 2020)
 date: 2020-11-24T00:18:47.653Z
 tags:
-  - COVID-19
+  - COVID19
   - genetics
   - biomedical research
   - scicomm
