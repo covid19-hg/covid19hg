@@ -36,7 +36,7 @@ d. Initial considerations for a publication mechanism (Michelle Trenkmann, Natur
 
 a. Mendelian Randomization efforts (Shea Andrews, MSSM) [[Slides](https://drive.google.com/file/d/1XUT8pr2-4nsbm6VjvD-v6OkQLeaiL9hM/view?usp=sharing)]
 
-b. WGS/WES efforts (Gundula Povysil, Columbia) [[Slides](https://drive.google.com/file/d/1uyFaXBaBq2hUZu-AbhHJ0mPLA11hGeHJ/view?usp=sharing)]; (Alessandra Renieri, Univ. of Siena)
+b. WGS/WES efforts (Gundula Povysil, Columbia) [[Slides](https://drive.google.com/file/d/1uyFaXBaBq2hUZu-AbhHJ0mPLA11hGeHJ/view?usp=sharing)]; (Alessandra Renieri, Univ. of Siena) [[Slides](https://drive.google.com/file/d/17O9BLfAzPo8PPYoJA_tuE130DaDwkZhm/view?usp=sharing)].
 
 **Q&A:** [[here](https://docs.google.com/spreadsheets/d/1BD_X92-vk3juXocqHJkE3WXFHkm9BuJ8fwJu3CUw-PA/edit?usp=sharing)]
 
