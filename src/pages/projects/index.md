@@ -72,7 +72,14 @@ projects:
       Crucially, we are interested in building an international network of participating cohorts, allowing for larger sample size. Thus, if you would like to join our consortium in order to contribute whole exome or whole genome-sequencing data, please contact us on the ICDA Slack channel below and fill in the cohort description table [here](https://docs.google.com/spreadsheets/d/1Ah71g2ooPr7r_yqBocmN9LUvuIhyqOn5GOJx3BC9vwA/edit#gid=0).
 
 
-      View previous meeting recordings [here](https://drive.google.com/drive/folders/1FUYu-iltbVXLZcSDCU6yi7aL3T3PN1sH).
+      View previous meeting recordings below:
+
+      - [Oct 2, 2020](https://drive.google.com/file/d/1JWlzWtjBLfMeQsCf8xnvC5QpflPdZDZO/view?usp=sharing)
+
+      - [Oct 23, 2020](https://drive.google.com/file/d/1-fdvgIEz3iN2ftMsAdk2B6NNvSXRlKyu/view?usp=sharing)
+
+      - [Nov 12, 2020](https://drive.google.com/file/d/1D4mRdgiBDNKQKk0S4piUF6w1r05qQsg0/view?usp=sharing)
+
     title: WES/WGS working group within the HGI
     slack-channel: "#covid19-hg-wes-wgs"
     contact-persons:
