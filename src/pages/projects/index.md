@@ -10,22 +10,26 @@ projectsIntro: >-
   #### **As a reminder the centralized analyses are based on [this](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing) analysis plan.**
 projects:
   - title: Clonal Hematopoiesis
-    description: The presence of pre-existing cardiovascular and lung disease are
-      known to be associated with severe COVID-19. Beyond medical comorbidities,
-      age is a strong independent predictor of COVID-19 severity and may be
-      related to age-related changes in inflammatory cells.  Clonal
-      Hematopoiesis is known to alter the inflammatory profile of healthy
-      individuals and may, in part, be a mediator of its ill-effects including
-      cardiovascular disease. Age-related somatic mutations in circulating
-      inflammatory cells have been shown to predispose to chronic inflammatory
-      dysregulation. In some cases, these involve the same pathways implicated
-      in COVID-19. However, whether CH predisposes to severe COVID-19 or affects
-      the complications of COVID-19 is unknown. Conversely, inflammatory stress
-      may be a critical driver of CH. Therefore, studying the acute effects of
-      SARS-CoV-2 infection on the dynamics of CH would provide insight into the
-      potentiators of CH. We seek to understand how clonal hematopoiesis might
-      influence COVID-19 illness severity and conversely how acute infection
-      with SARS-CoV-2 might promote expansion of CHIP.
+    description: >-
+      The presence of pre-existing cardiovascular and lung disease are known to
+      be associated with severe COVID-19. Beyond medical comorbidities, age is a
+      strong independent predictor of COVID-19 severity and may be related to
+      age-related changes in inflammatory cells.  Clonal Hematopoiesis is known
+      to alter the inflammatory profile of healthy individuals and may, in part,
+      be a mediator of its ill-effects including cardiovascular disease.
+      Age-related somatic mutations in circulating inflammatory cells have been
+      shown to predispose to chronic inflammatory dysregulation. In some cases,
+      these involve the same pathways implicated in COVID-19. However, whether
+      CH predisposes to severe COVID-19 or affects the complications of COVID-19
+      is unknown. Conversely, inflammatory stress may be a critical driver of
+      CH. Therefore, studying the acute effects of SARS-CoV-2 infection on the
+      dynamics of CH would provide insight into the potentiators of CH. We seek
+      to understand how clonal hematopoiesis might influence COVID-19 illness
+      severity and conversely how acute infection with SARS-CoV-2 might promote
+      expansion of CHIP.
+
+
+      Preprint: <https://www.medrxiv.org/content/10.1101/2020.11.12.20230821v1>
     contact-persons:
       - Philip Awadalla
       - Pradeep Natarajan
@@ -83,7 +87,6 @@ projects:
       - [Nov 26, 2020](https://drive.google.com/file/d/1u4_XTJeYHlQfoGQe31gICAIHZvlv4hg3/view?usp=sharing)
 
       - [Dec 3, 2020](https://drive.google.com/file/d/177IlrmHGKHMZm9xRdgdeJsua_qFn00By/view?usp=sharing)
-
     title: WES/WGS working group within the HGI
     slack-channel: "#covid19-hg-wes-wgs"
     contact-persons:
