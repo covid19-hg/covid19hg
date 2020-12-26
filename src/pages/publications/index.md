@@ -7,7 +7,7 @@ publications_page_intro: Many of the participating groups in COVID-19 Host
   follow-up work based on specific discovered loci, even if that work may have
   been based on unpublished analyses of the HGI.
 studies:
-  - posted_date: 26th December 2020
+  - posted_date: 16th December 2020
     name: "Horowitz, Kosmicki et al - REGENERON "
     links:
       - description: Preprint
