@@ -19,7 +19,7 @@
     "@sendgrid/mail": "7.0.0",
     "airtable": "0.8.1",
     "handlebars": "4.7.6",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "node-fetch": "2.6.1"
   }
 }
