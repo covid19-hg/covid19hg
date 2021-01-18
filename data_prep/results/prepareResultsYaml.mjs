@@ -1,9 +1,9 @@
 import fs from 'fs'
 import yaml from 'js-yaml'
 
-const RESULTS_URL = 'https://storage.googleapis.com/covid19-hg-public/20200915/results/20201020'
+const RESULTS_URL = 'https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107'
 
-const VERSION = '20201020'
+const VERSION = '20210107'
 
 const RESULTS_PREFIX = 'COVID19_HGI'
 
@@ -29,91 +29,41 @@ const downloadTypes = [
   { type: 'full_grch38_gz', description: 'GRCh38', suffix: B38_GZ_SUFFIX },
   { type: 'full_grch38_tbi', description: 'GRCh38 (.tbi)', suffix: B38_TBI_SUFFIX },
   { type: 'grch38_filtered', description: 'GRCh38 (filtered)', suffix: B38_FILTERED_SUFFIX },
-
-  { type: '23andme_grch38_10k', description: 'GRCh38 with 23andMe 10K', suffix: B38_10K_GZ_SUFFIX },
-  // { type: '23andme_grch38_10k_tbi', description: 'GRCh38 with 23andMe 10K (.tbi)', suffix: B38_10K_TBI_SUFFIX },
-
-  { type: '23andme_grch37_10k', description: 'GRCh37 with 23andMe 10K', suffix: B37_10K_GZ_SUFFIX },
-  // { type: '23andme_grch37_10k_tbi', description: 'GRCh37 with 23andMe 10K (.tbi)', suffix: B38_10K_TBI_SUFFIX },
-
-  {
-    type: '23andme_grch38',
-    description: 'GRCh38 leave out 23andMe',
-    versionModifier: 'leave_23andme',
-    suffix: B38_GZ_SUFFIX,
-  },
-  {
-    type: '23andme_grch38_tbi',
-    description: 'GRCh38 leave out 23andMe (.tbi)',
-    versionModifier: 'leave_23andme',
-    suffix: B38_TBI_SUFFIX,
-  },
-
-  {
-    type: '23andme_grch37',
-    description: 'GRCh37 leave out 23andMe',
-    versionModifier: 'leave_23andme',
-    suffix: B37_GZ_SUFFIX,
-  },
-  {
-    type: '23andme_grch37_tbi',
-    description: 'GRCh37 leave out 23andMe (.tbi)',
-    versionModifier: 'leave_23andme',
-    suffix: B37_TBI_SUFFIX,
-  },
 ]
 
-const PLOT_FOLDER = '/img/201020'
+const PLOT_FOLDER = '/img/20210118'
 const MANHATTAN_SUFFIX = 'inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png'
+const MANHATTAN_LOGLOG_SUFFIX = 'inv_var_meta_p_flag_all_inv_var_meta_p_manhattan_loglog.png'
 const QQPLOT_SUFFIX = 'inv_var_meta_p_flag_all_inv_var_meta_p_qqplot.png'
 
-let analyses = [
+let phenotypes = [
   {
-    analysis_id: 'A1_ALL',
-    phenotype: 'Very severe respiratory confirmed covid vs. not hospitalized covid',
-    population: 'all',
-    includes23AndMe: false,
+    phenotypeId: 'A2_ALL',
+    description: 'Very severe respiratory confirmed covid vs. population',
   },
+  { phenotypeId: 'B1_ALL', description: 'Hospitalized covid vs. not hospitalized covid' },
   {
-    analysis_id: 'A2_ALL',
-    phenotype: 'Very severe respiratory confirmed covid vs. population',
-    population: 'All',
-    includes23AndMe: true,
+    phenotypeId: 'B2_ALL',
+    description: 'Hospitalized covid vs. population',
   },
-  { analysis_id: 'B1_ALL', phenotype: 'Hospitalized covid vs. not hospitalized covid', population: 'All' },
-  {
-    analysis_id: 'B2_ALL_eur_leave_23andme',
-    phenotype: 'Hospitalized covid vs. population, leave out 23andMe',
-    population: 'Eur',
-    noPlots: true,
-    dirPrefix: 'eur',
-  },
-  {
-    analysis_id: 'B2_ALL',
-    phenotype: 'Hospitalized covid vs. population',
-    population: 'All',
-    includes23AndMe: true,
-  },
-  {
-    analysis_id: 'C1_ALL',
-    phenotype: 'Covid vs. lab/self-reported negative',
-    population: 'All',
-    includes23AndMe: true,
-  },
-  { analysis_id: 'C2_ALL', phenotype: 'Covid vs. population', population: 'All', includes23AndMe: true },
-  {
-    analysis_id: 'C2_ALL_eur_leave_23andme',
-    phenotype: 'Covid vs. population, leave out 23andMe',
-    population: 'Eur',
-    noPlots: true,
-    dirPrefix: 'eur',
-  },
-  {
-    analysis_id: 'D1_ALL',
-    phenotype: 'Predicted covid from self-reported symptoms vs. predicted or self-reported non-covid',
-    population: 'All',
-  },
+  { phenotypeId: 'C2_ALL', description: 'Covid vs. population' },
 ]
+
+const subsets = [
+  { subsetId: 'leave_23andme', population: 'All' },
+  { subsetId: 'leave_UKBB', population: 'All' },
+  { subsetId: 'eur', population: 'Eur' },
+  { subsetId: 'eur_leave_ukbb', population: 'Eur' },
+]
+
+let analyses = phenotypes.reduce((acc, { phenotypeId, description }) => {
+  const analyses = subsets.map((subset) => ({
+    analysis_id: `${phenotypeId}_${subset.subsetId}`,
+    phenotype: description,
+    population: subset.population,
+  }))
+  return [...acc, ...analyses]
+}, [])
 
 analyses = analyses.map((analysis) => ({
   ...analysis,
@@ -128,33 +78,20 @@ analyses = analyses.map((analysis) => ({
 analyses = analyses.map((analysis) => {
   return {
     ...analysis,
-    downloads: downloadTypes
-      .filter((downloadType) => {
-        if (!analysis.includes23AndMe && downloadType.type.includes('23andme')) {
-          return false
-        }
-        return true
-      })
-      .filter((downloadType) => {
-        if (analysis.includes23AndMe && downloadType.type.includes('full')) {
-          return false
-        }
-        return true
-      })
-      .map((downloadType) => {
-        let version = downloadType.versionModifier ? `${downloadType.versionModifier}_${VERSION}` : VERSION
-        const fileName = `${RESULTS_PREFIX}_${analysis.analysis_id}_${version}${downloadType.suffix}`
+    downloads: downloadTypes.map((downloadType) => {
+      let version = downloadType.versionModifier ? `${downloadType.versionModifier}_${VERSION}` : VERSION
+      const fileName = `${RESULTS_PREFIX}_${analysis.analysis_id}_${version}${downloadType.suffix}`
 
-        const url = analysis.dirPrefix
-          ? `${RESULTS_URL}/${analysis.dirPrefix}/${fileName}`
-          : `${RESULTS_URL}/${fileName}`
+      const url = analysis.dirPrefix
+        ? `${RESULTS_URL}/${analysis.dirPrefix}/${fileName}`
+        : `${RESULTS_URL}/${fileName}`
 
-        return {
-          name: fileName,
-          description: downloadType.description,
-          url,
-        }
-      }),
+      return {
+        name: fileName,
+        description: downloadType.description,
+        url,
+      }
+    }),
   }
 })
 
@@ -163,6 +100,7 @@ analyses = analyses.map((analysis) => {
     return {
       ...analysis,
       manhattan: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${MANHATTAN_SUFFIX}` },
+      manhattan_loglog: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${MANHATTAN_LOGLOG_SUFFIX}` },
       qqplot: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${QQPLOT_SUFFIX}` },
     }
   } else {
@@ -177,16 +115,16 @@ analyses = analyses.map((analysis) => {
     phenotype,
     downloads,
     manhattan,
+    manhattan_loglog,
     qqplot,
     studies,
-    includes23AndMe,
   } = analysis
-  return { name: analysis_id, population, phenotype, downloads, manhattan, qqplot, studies, includes23AndMe }
+  return { name: analysis_id, population, phenotype, downloads, manhattan, manhattan_loglog, qqplot, studies }
 })
 
 const release = {
-  date: 'October 20, 2020',
-  title: 'COVID19-hg GWAS meta-analyses round 4',
+  date: 'January 18, 2021',
+  title: 'COVID19-hg GWAS meta-analyses round 5',
   notes:
     'Meta-analysis was done with fixed effects inverse variance weighting. Results are available in genome builds 38 and 37. An AF filter of 0.001 and an INFO filter of 0.6 was applied to each study before meta. 1000G EUR phase 3 samples were used as a panel for pruning. Nine genome-wide significant SNPs from C2 and B2 analyses AND SNPs +/-100kb with P<0.01 around these top SNPs selected (no r2 threshold) coming to total 461 SNPs (MAF max 0.1%). Excluding the regions above, the top 9539 SNPs from clumps using MAF 1% variants, r2=0.1, kb=250.',
   data_columns: [
@@ -371,6 +309,27 @@ const release = {
     { abbreviation: 'Lifelines', full_name: 'Lifelines' },
     { abbreviation: 'GeneRISK', full_name: 'Gene Risk' },
     { abbreviation: 'RS', full_name: 'Rotterdam Study' },
+
+    { abbreviation: 'CU', full_name: '' },
+    { abbreviation: 'GHS_Freeze_145', full_name: '' },
+    { abbreviation: 'JapanTaskForce', full_name: '' },
+    { abbreviation: 'idipaz24genetics', full_name: '' },
+    { abbreviation: 'FHoGID', full_name: '' },
+    { abbreviation: 'UCLA', full_name: 'UCLA Precision Health COVID-19 Biobank' },
+    {
+      abbreviation: 'Genetics_COVID19_Korea',
+      full_name: 'Genetic influences on severity of COVID-19 illness in Korea',
+    },
+    { abbreviation: 'LGDB', full_name: '' },
+    { abbreviation: 'ACCOuNT', full_name: '' },
+    { abbreviation: 'BioVU', full_name: '' },
+    { abbreviation: 'CCPM', full_name: 'The Colorado Center for Personalized Medicine' },
+    { abbreviation: 'GCAT', full_name: '' },
+    { abbreviation: 'GFG', full_name: '' },
+    { abbreviation: 'Genotek', full_name: '' },
+    { abbreviation: 'SINAI_COVID', full_name: '' },
+    { abbreviation: 'TOPMed_CHRIS10K', full_name: '' },
+    { abbreviation: 'TOPMed_Gardena', full_name: '' },
   ],
   analyses,
 }
@@ -408,6 +367,8 @@ const releases = { ...previousReleases, releases: [release, ...previousReleases.
 const jsonString = JSON.stringify(releases)
 
 const json = JSON.parse(jsonString)
+
+console.log(json)
 
 const releasesYamlStr = yaml.safeDump(json)
 
