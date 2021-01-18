@@ -54,9 +54,10 @@ const ResultsPageContent = ({ releases }: Props) => {
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab label="Release 4 (October 2020)" {...a11yProps(0)} />
-          <Tab label="Release 3 (June 2020)" {...a11yProps(1)} />
-          <Tab label="Release 2 (May 2020)" {...a11yProps(2)} />
+          <Tab label="Release 5 (January 2021)" {...a11yProps(0)} />
+          <Tab label="Release 4 (October 2020)" {...a11yProps(1)} />
+          <Tab label="Release 3 (June 2020)" {...a11yProps(2)} />
+          <Tab label="Release 2 (May 2020)" {...a11yProps(3)} />
         </Tabs>
       </Box>
       <Container marginTop={2} fixed={true}>
@@ -68,6 +69,9 @@ const ResultsPageContent = ({ releases }: Props) => {
         </TabPanel>
         <TabPanel value={selectedRelease} index={2}>
           <Release {...releases[2]} />
+        </TabPanel>
+        <TabPanel value={selectedRelease} index={3}>
+          <Release {...releases[3]} />
         </TabPanel>
       </Container>
     </>

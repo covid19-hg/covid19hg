@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Card, CardContent, Typography, makeStyles, Theme, Link, Divider } from '@material-ui/core'
 import { Grid } from './materialUIContainers'
 import _sumBy from 'lodash/sumBy'
@@ -19,6 +19,7 @@ export type AnalysisProps = {
     url: string
   }[]
   manhattan: any
+  manhattan_loglog: any
   qqplot: any
   noPlots: boolean
   includes23AndMe: boolean
@@ -54,6 +55,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Analysis = ({ analysis }: { analysis: AnalysisProps }) => {
+  const [showLogLog] = useState(true)
 
   const classes = useStyles()
   const studyTableRows = analysis.studies.map(({ study, cases, controls }: any) => (
@@ -77,6 +79,14 @@ const Analysis = ({ analysis }: { analysis: AnalysisProps }) => {
       <TableBody>{studyTableRows}</TableBody>
     </Table>
   )
+
+  const manhattanPlot =
+    showLogLog && analysis.manhattan_loglog && analysis.manhattan_loglog.image ? (
+      <img src={analysis.manhattan_loglog.image.publicURL} className={classes.plot} />
+    ) : (
+      analysis.manhattan &&
+      analysis.manhattan.image && <img src={analysis.manhattan.image.publicURL} className={classes.plot} />
+    )
   return (
     <Grid item={true} xs={12}>
       <Card>
@@ -85,29 +95,24 @@ const Analysis = ({ analysis }: { analysis: AnalysisProps }) => {
             {analysis.name}
           </Typography>
           <Divider />
-
           <Grid container={true} marginTop={2} spacing={1}>
-            {analysis.manhattan && (
-              <Grid item={true} xs={12} md={8}>
-                <img src={analysis.manhattan.image.publicURL} className={classes.plot} />
-              </Grid>
-            )}
-            {analysis.qqplot && (
+            <Grid item={true} xs={12} md={8}>
+              {manhattanPlot}{' '}
+            </Grid>
+            {analysis.qqplot && analysis.qqplot.image && (
               <Grid item={true} xs={12} md={4}>
                 <img src={analysis.qqplot.image.publicURL} className={classes.plot} />
               </Grid>
             )}
           </Grid>
-
-
-            {analysis.includes23AndMe && (
-              <Typography style={{ color: '#8b0000', paddingBottom: 20 }}>
-                Please note: the plots shown here display results from an analysis <strong>with</strong> the 23andMe study
-                  included. However, due to privacy, the downloadable gz files <strong>do not</strong> include the 23andMe study.
-                A limited version of the analysis that includes the 23andMe study is available in the file labeled "10K".
-              </Typography>
-            )}
-
+          {analysis.includes23AndMe && (
+            <Typography style={{ color: '#8b0000', paddingBottom: 20 }}>
+              Please note: the plots shown here display results from an analysis <strong>with</strong> the
+              23andMe study included. However, due to privacy, the downloadable gz files{' '}
+              <strong>do not</strong> include the 23andMe study. A limited version of the analysis that
+              includes the 23andMe study is available in the file labeled "10K".
+            </Typography>
+          )}
           <Grid container={true} alignItems={'center' as const} spacing={1}>
             <Grid item={true} xs={leftColumnWidthXs} md={leftColumnWidthMd}>
               <Typography variant="h6">Phenotype</Typography>

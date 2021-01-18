@@ -67,6 +67,11 @@ export const pageQuery = graphql`
                 publicURL
               }
             }
+            manhattan_loglog {
+              image {
+                publicURL
+              }
+            }
             qqplot {
               image {
                 publicURL
