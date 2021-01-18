@@ -245,30 +245,30 @@ releases:
         population: All
         phenotype: Very severe respiratory confirmed covid vs. population
         downloads:
-          - name: COVID19_HGI_A2_ALL_leave_UKBB_20210107.b37.txt.gz
+          - name: COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_20210107.b37.txt.gz
-          - name: COVID19_HGI_A2_ALL_leave_UKBB_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_A2_ALL_leave_UKBB_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_A2_ALL_leave_UKBB_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_20210107.txt.gz
-          - name: COVID19_HGI_A2_ALL_leave_UKBB_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.txt.gz
+          - name: COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_20210107.txt.gz.tbi
-          - name: COVID19_HGI_A2_ALL_leave_UKBB_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.txt.gz.tbi
+          - name: COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_leave_UKBB_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/A2_ALL_leave_UKBB_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -340,30 +340,30 @@ releases:
         population: Eur
         phenotype: Very severe respiratory confirmed covid vs. population
         downloads:
-          - name: COVID19_HGI_A2_ALL_eur_20210107.b37.txt.gz
+          - name: COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_20210107.b37.txt.gz
-          - name: COVID19_HGI_A2_ALL_eur_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_A2_ALL_eur_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_A2_ALL_eur_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_20210107.txt.gz
-          - name: COVID19_HGI_A2_ALL_eur_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.txt.gz
+          - name: COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_20210107.txt.gz.tbi
-          - name: COVID19_HGI_A2_ALL_eur_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.txt.gz.tbi
+          - name: COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/A2_ALL_eur_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -423,30 +423,31 @@ releases:
         population: Eur
         phenotype: Very severe respiratory confirmed covid vs. population
         downloads:
-          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.b37.txt.gz
+          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.b37.txt.gz
-          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.txt.gz
-          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz
+          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.txt.gz.tbi
-          - name: COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz.tbi
+          - name: >-
+              COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_A2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/A2_ALL_eur_leave_ukbb_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -601,30 +602,30 @@ releases:
         population: All
         phenotype: Hospitalized covid vs. not hospitalized covid
         downloads:
-          - name: COVID19_HGI_B1_ALL_leave_UKBB_20210107.b37.txt.gz
+          - name: COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_20210107.b37.txt.gz
-          - name: COVID19_HGI_B1_ALL_leave_UKBB_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_B1_ALL_leave_UKBB_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_B1_ALL_leave_UKBB_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_20210107.txt.gz
-          - name: COVID19_HGI_B1_ALL_leave_UKBB_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.txt.gz
+          - name: COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_20210107.txt.gz.tbi
-          - name: COVID19_HGI_B1_ALL_leave_UKBB_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.txt.gz.tbi
+          - name: COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_leave_UKBB_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/B1_ALL_leave_UKBB_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -690,30 +691,30 @@ releases:
         population: Eur
         phenotype: Hospitalized covid vs. not hospitalized covid
         downloads:
-          - name: COVID19_HGI_B1_ALL_eur_20210107.b37.txt.gz
+          - name: COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_20210107.b37.txt.gz
-          - name: COVID19_HGI_B1_ALL_eur_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_B1_ALL_eur_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_B1_ALL_eur_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_20210107.txt.gz
-          - name: COVID19_HGI_B1_ALL_eur_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.txt.gz
+          - name: COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_20210107.txt.gz.tbi
-          - name: COVID19_HGI_B1_ALL_eur_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.txt.gz.tbi
+          - name: COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/B1_ALL_eur_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -764,30 +765,31 @@ releases:
         population: Eur
         phenotype: Hospitalized covid vs. not hospitalized covid
         downloads:
-          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.b37.txt.gz
+          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.b37.txt.gz
-          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.txt.gz
-          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.txt.gz
+          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.txt.gz.tbi
-          - name: COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.txt.gz.tbi
+          - name: >-
+              COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B1_ALL_eur_leave_ukbb_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/B1_ALL_eur_leave_ukbb_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -978,30 +980,30 @@ releases:
         population: All
         phenotype: Hospitalized covid vs. population
         downloads:
-          - name: COVID19_HGI_B2_ALL_leave_UKBB_20210107.b37.txt.gz
+          - name: COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_20210107.b37.txt.gz
-          - name: COVID19_HGI_B2_ALL_leave_UKBB_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_B2_ALL_leave_UKBB_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_B2_ALL_leave_UKBB_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_20210107.txt.gz
-          - name: COVID19_HGI_B2_ALL_leave_UKBB_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.txt.gz
+          - name: COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_20210107.txt.gz.tbi
-          - name: COVID19_HGI_B2_ALL_leave_UKBB_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.txt.gz.tbi
+          - name: COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_leave_UKBB_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/B2_ALL_leave_UKBB_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -1118,30 +1120,30 @@ releases:
         population: Eur
         phenotype: Hospitalized covid vs. population
         downloads:
-          - name: COVID19_HGI_B2_ALL_eur_20210107.b37.txt.gz
+          - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_20210107.b37.txt.gz
-          - name: COVID19_HGI_B2_ALL_eur_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_B2_ALL_eur_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_B2_ALL_eur_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_20210107.txt.gz
-          - name: COVID19_HGI_B2_ALL_eur_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.txt.gz
+          - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_20210107.txt.gz.tbi
-          - name: COVID19_HGI_B2_ALL_eur_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.txt.gz.tbi
+          - name: COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/B2_ALL_eur_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -1222,30 +1224,31 @@ releases:
         population: Eur
         phenotype: Hospitalized covid vs. population
         downloads:
-          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.b37.txt.gz
+          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.b37.txt.gz
-          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.txt.gz
-          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz
+          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.txt.gz.tbi
-          - name: COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz.tbi
+          - name: >-
+              COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_B2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/B2_ALL_eur_leave_ukbb_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -1517,30 +1520,30 @@ releases:
         population: All
         phenotype: Covid vs. population
         downloads:
-          - name: COVID19_HGI_C2_ALL_leave_UKBB_20210107.b37.txt.gz
+          - name: COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_20210107.b37.txt.gz
-          - name: COVID19_HGI_C2_ALL_leave_UKBB_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_C2_ALL_leave_UKBB_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_C2_ALL_leave_UKBB_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_20210107.txt.gz
-          - name: COVID19_HGI_C2_ALL_leave_UKBB_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.txt.gz
+          - name: COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_20210107.txt.gz.tbi
-          - name: COVID19_HGI_C2_ALL_leave_UKBB_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.txt.gz.tbi
+          - name: COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_leave_UKBB_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/C2_ALL_leave_UKBB_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -1711,30 +1714,30 @@ releases:
         population: Eur
         phenotype: Covid vs. population
         downloads:
-          - name: COVID19_HGI_C2_ALL_eur_20210107.b37.txt.gz
+          - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_20210107.b37.txt.gz
-          - name: COVID19_HGI_C2_ALL_eur_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_C2_ALL_eur_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_C2_ALL_eur_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_20210107.txt.gz
-          - name: COVID19_HGI_C2_ALL_eur_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.txt.gz
+          - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_20210107.txt.gz.tbi
-          - name: COVID19_HGI_C2_ALL_eur_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.txt.gz.tbi
+          - name: COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/C2_ALL_eur_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
@@ -1857,30 +1860,31 @@ releases:
         population: Eur
         phenotype: Covid vs. population
         downloads:
-          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.b37.txt.gz
+          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz
             description: GRCh37 liftover
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.b37.txt.gz
-          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.b37.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz
+          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz.tbi
             description: GRCh37 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.b37.txt.gz.tbi
-          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.b37_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.b37.txt.gz.tbi
+          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.b37_1.0E-5.txt
             description: GRCh37 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.b37_1.0E-5.txt
-          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.txt.gz
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.b37_1.0E-5.txt
+          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz
             description: GRCh38
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.txt.gz
-          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.txt.gz.tbi
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz
+          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz.tbi
             description: GRCh38 (.tbi)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.txt.gz.tbi
-          - name: COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz.tbi
+          - name: >-
+              COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz_1.0E-5.txt
             description: GRCh38 (filtered)
             url: >-
-              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_20210107.txt.gz_1.0E-5.txt
+              https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_C2_ALL_eur_leave_ukbb_23andme_20210107.txt.gz_1.0E-5.txt
         manhattan:
           image: >-
             /img/20210118/C2_ALL_eur_leave_ukbb_inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png
