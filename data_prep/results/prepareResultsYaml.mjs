@@ -126,7 +126,7 @@ const release = {
   date: 'January 18, 2021',
   title: 'COVID19-hg GWAS meta-analyses round 5',
   notes:
-    'Meta-analysis was done with fixed effects inverse variance weighting. Results are available in genome builds 38 and 37. An AF filter of 0.001 and an INFO filter of 0.6 was applied to each study before meta. 1000G EUR phase 3 samples were used as a panel for pruning. Nine genome-wide significant SNPs from C2 and B2 analyses AND SNPs +/-100kb with P<0.01 around these top SNPs selected (no r2 threshold) coming to total 461 SNPs (MAF max 0.1%). Excluding the regions above, the top 9539 SNPs from clumps using MAF 1% variants, r2=0.1, kb=250.',
+    'Meta-analysis was done with fixed effects inverse variance weighting. Results are available in genome builds 38 and 37. An AF filter of 0.001 and an INFO filter of 0.6 was applied to each study before meta.',
   data_columns: [
     {
       column: '#CHR',
@@ -180,11 +180,6 @@ const release = {
     {
       column: 'rsid',
       description: 'risd',
-    },
-    {
-      column: 'AF_fc',
-      description:
-        "calculated based on each study's ancestry in gnomAD or all populations if the ancestry is not present in gnomAD",
     },
   ],
   authors: [
@@ -310,26 +305,25 @@ const release = {
     { abbreviation: 'GeneRISK', full_name: 'Gene Risk' },
     { abbreviation: 'RS', full_name: 'Rotterdam Study' },
 
-    { abbreviation: 'CU', full_name: '' },
-    { abbreviation: 'GHS_Freeze_145', full_name: '' },
-    { abbreviation: 'JapanTaskForce', full_name: '' },
-    { abbreviation: 'idipaz24genetics', full_name: '' },
-    { abbreviation: 'FHoGID', full_name: '' },
+    { abbreviation: 'CU', full_name: 'Columbia University COVID19 Biobank' },
+    { abbreviation: 'GHS_Freeze_145', full_name: 'Geisinger Health System' },
+    { abbreviation: 'JapanTaskForce', full_name: 'Japan Coronavirus Taskforce' },
+    { abbreviation: 'idipaz24genetics', full_name: '24Genetics' },
+    { abbreviation: 'FHoGID', full_name: 'FHoGID' },
     { abbreviation: 'UCLA', full_name: 'UCLA Precision Health COVID-19 Biobank' },
     {
       abbreviation: 'Genetics_COVID19_Korea',
       full_name: 'Genetic influences on severity of COVID-19 illness in Korea',
     },
-    { abbreviation: 'LGDB', full_name: '' },
-    { abbreviation: 'ACCOuNT', full_name: '' },
-    { abbreviation: 'BioVU', full_name: '' },
+    { abbreviation: 'LGDB', full_name: 'Latvia COVID-19 research platform' },
+    { abbreviation: 'ACCOuNT', full_name: 'ACCOuNT' },
+    { abbreviation: 'BioVU', full_name: 'Vanderbilt Biobank' },
     { abbreviation: 'CCPM', full_name: 'The Colorado Center for Personalized Medicine' },
-    { abbreviation: 'GCAT', full_name: '' },
-    { abbreviation: 'GFG', full_name: '' },
-    { abbreviation: 'Genotek', full_name: '' },
-    { abbreviation: 'SINAI_COVID', full_name: '' },
-    { abbreviation: 'TOPMed_CHRIS10K', full_name: '' },
-    { abbreviation: 'TOPMed_Gardena', full_name: '' },
+    { abbreviation: 'GCAT', full_name: 'Genomes for Life' },
+    { abbreviation: 'GFG', full_name: 'Genes for Good' },
+    { abbreviation: 'Genotek', full_name: 'Genotek COVID-19 study' },
+    { abbreviation: 'SINAI_COVID', full_name: 'Analysis of COVID-19 within New York' },
+    { abbreviation: 'TOPMed_CHRIS10K', full_name: 'CHRIS' },
   ],
   analyses,
 }

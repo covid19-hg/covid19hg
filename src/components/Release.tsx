@@ -114,12 +114,19 @@ const Release = (release: Props) => {
           {dataFieldsTable}
         </Grid>
 
-        <Grid item={true} xs={12}>
-          <Typography align="center">An interactive data browser will be available soon.</Typography>
+        {release.title == "COVID19-hg GWAS meta-analyses round 4" && 
+          <Grid item={true} xs={12}>
           <Typography align="center" style={{ color: '#FF8C00' }}>
             Note: variants with heterogeneity p-value less than 0.001 across studies are in orange.
           </Typography>
-        </Grid>
+        </Grid>}
+
+        {release.title == "COVID19-hg GWAS meta-analyses round 5" && 
+          <Grid item={true} xs={12}>
+          <Typography align="center" style={{ color: 'green' }}>
+            Note: variants with heterogeneity p-value less than 0.001 across studies are in green.
+          </Typography>
+        </Grid>}
       </Grid>
       <Grid container={true} marginTop={2} spacing={4}>
         {analysisElems}
