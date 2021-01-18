@@ -50,24 +50,25 @@ let phenotypes = [
 ]
 
 const subsets = [
-  { subsetId: 'leave_23andme', population: 'All' },
-  { subsetId: 'leave_UKBB', population: 'All' },
-  { subsetId: 'eur', population: 'Eur' },
-  { subsetId: 'eur_leave_ukbb', population: 'Eur' },
+  { subsetDownloadId: 'leave_23andme', subsetDisplayId: 'leave_23andme', population: 'All' }, // good
+  { subsetDownloadId: 'leave_UKBB_23andme', subsetDisplayId: 'leave_UKBB', population: 'All' }, //
+  { subsetDownloadId: 'eur_leave_23andme', subsetDisplayId: 'eur', population: 'Eur' },
+  { subsetDownloadId: 'eur_leave_ukbb_23andme', subsetDisplayId: 'eur_leave_ukbb', population: 'Eur' },
 ]
 
 let analyses = phenotypes.reduce((acc, { phenotypeId, description }) => {
   const analyses = subsets.map((subset) => ({
-    analysis_id: `${phenotypeId}_${subset.subsetId}`,
+    analysisDownloadId: `${phenotypeId}_${subset.subsetDownloadId}`,
     phenotype: description,
     population: subset.population,
+    analysisDisplayId: `${phenotypeId}_${subset.subsetDisplayId}`,
   }))
   return [...acc, ...analyses]
 }, [])
 
 analyses = analyses.map((analysis) => ({
   ...analysis,
-  meta: JSON.parse(fs.readFileSync(`./metadata/${analysis.analysis_id}.json`)).meta,
+  meta: JSON.parse(fs.readFileSync(`./metadata/${analysis.analysisDisplayId}.json`)).meta,
 }))
 
 analyses = analyses.map((analysis) => ({
@@ -80,7 +81,7 @@ analyses = analyses.map((analysis) => {
     ...analysis,
     downloads: downloadTypes.map((downloadType) => {
       let version = downloadType.versionModifier ? `${downloadType.versionModifier}_${VERSION}` : VERSION
-      const fileName = `${RESULTS_PREFIX}_${analysis.analysis_id}_${version}${downloadType.suffix}`
+      const fileName = `${RESULTS_PREFIX}_${analysis.analysisDownloadId}_${version}${downloadType.suffix}`
 
       const url = analysis.dirPrefix
         ? `${RESULTS_URL}/${analysis.dirPrefix}/${fileName}`
@@ -99,9 +100,9 @@ analyses = analyses.map((analysis) => {
   if (!analysis.noPlots) {
     return {
       ...analysis,
-      manhattan: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${MANHATTAN_SUFFIX}` },
-      manhattan_loglog: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${MANHATTAN_LOGLOG_SUFFIX}` },
-      qqplot: { image: `${PLOT_FOLDER}/${analysis.analysis_id}_${QQPLOT_SUFFIX}` },
+      manhattan: { image: `${PLOT_FOLDER}/${analysis.analysisDisplayId}_${MANHATTAN_SUFFIX}` },
+      manhattan_loglog: { image: `${PLOT_FOLDER}/${analysis.analysisDisplayId}_${MANHATTAN_LOGLOG_SUFFIX}` },
+      qqplot: { image: `${PLOT_FOLDER}/${analysis.analysisDisplayId}_${QQPLOT_SUFFIX}` },
     }
   } else {
     return analysis
@@ -110,7 +111,7 @@ analyses = analyses.map((analysis) => {
 
 analyses = analyses.map((analysis) => {
   const {
-    analysis_id,
+    analysisDisplayId,
     population,
     phenotype,
     downloads,
@@ -119,7 +120,16 @@ analyses = analyses.map((analysis) => {
     qqplot,
     studies,
   } = analysis
-  return { name: analysis_id, population, phenotype, downloads, manhattan, manhattan_loglog, qqplot, studies }
+  return {
+    name: analysisDisplayId,
+    population,
+    phenotype,
+    downloads,
+    manhattan,
+    manhattan_loglog,
+    qqplot,
+    studies,
+  }
 })
 
 const release = {
