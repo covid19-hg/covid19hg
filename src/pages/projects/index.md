@@ -98,7 +98,7 @@ projects:
       - Alessandra Renieri
       - Francesca Mari
       - Brent Richards
-      - Guillaume Butler-La Porte
+      - Guillaume Butler-Laporte
   - title: Acute respiratory distress syndrome
     description: >-
       The most severe outcome among COVID-19 cases includes acute respiratory
