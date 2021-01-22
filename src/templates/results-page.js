@@ -5,13 +5,13 @@ import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
 import ResultsPageContent from "../components/ResultsPageContent";
 import { graphql } from "gatsby";
 
-const ResultsPage = ({ data, release }) => {
+const ResultsPage = ({data}) => {
+  const {markdownRemark: {frontmatter}} = data
   const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/results/");
-  const { frontmatter } = data.markdownRemark;
   return (
     <Layout title={frontmatter.title}>
       {canonicalLinkMetaTag}
-      <ResultsPageContent releases={frontmatter.releases} />
+      <ResultsPageContent release={frontmatter.release} />
     </Layout>
   );
 };
@@ -26,12 +26,12 @@ ResultsPage.propTypes = {
 export default ResultsPage;
 
 export const pageQuery = graphql`
-  query ResultsPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "results-page" } }) {
+  query ResultsPageTemplate($id: String) {
+    markdownRemark(id: { eq: $id }) {
+      id
       frontmatter {
         title
-        releases {
-          title
+        release {
           date
           notes
           data_columns {
