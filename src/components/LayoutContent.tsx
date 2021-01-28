@@ -150,6 +150,14 @@ const LayoutContent = ({ title, children }: Props) => {
     { href: "/meeting-archive/", label: "Meeting Archive" },
     { href: "/contact/", label: "Contact" },
     { href: "/register/", label: "Register" },
+    {
+      href: "https://app.covid19hg.org",
+      label: (
+        <React.Fragment>
+          Browser
+        </React.Fragment>
+      ),
+    },
     { href: "/results/", label: "Results" },
     {
       href: "/blog/2020-10-22-in-silico-follow-up-results-for-freeze-v4/",

@@ -5,3 +5,6 @@ https://covid19hg.com/*  https://www.covid19hg.org/:splat 301!
 
 # Internal redirects
 /faq/ /data-sharing/
+
+# Browser
+/browser/ https://app.covid19hg.org
