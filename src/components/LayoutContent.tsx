@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, } from "react";
 import {
   makeStyles,
   Theme,
@@ -9,11 +9,7 @@ import {
   IconButton,
   Hidden,
   Divider,
-  List,
-  ListItem,
-  ListItemText,
   useMediaQuery,
-  Link,
 } from "@material-ui/core";
 import DefaultHelmet from "./DefaultHelmet";
 import useSiteMetadata from "./SiteMetadata";
@@ -22,6 +18,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
 import { useTheme } from "@material-ui/core/styles";
+import { LargeNavMenu } from "./LargeNavMenu";
 
 const {
   gatsbyRemarkAutolinkHeadersClassName,
@@ -128,6 +125,7 @@ interface Props {
   children: React.ReactNode;
 }
 
+
 const LayoutContent = ({ title, children }: Props) => {
   const classes = useStyles();
   const { title: siteTitle, description, siteUrl } = useSiteMetadata();
@@ -139,51 +137,6 @@ const LayoutContent = ({ title, children }: Props) => {
   const closeDrawer = () => setIsOpenNonDesktop(false);
   const drawerVariant = isDesktop ? "permanent" : "persistent";
 
-  const linkInfo = [
-    { href: "/", label: "Home" },
-    { href: "/about/", label: "About" },
-    { href: "/partners/", label: "Partners" },
-    { href: "/projects/", label: "Projects" },
-    { href: "/publications/", label: "Publications" },
-    { href: "/data-sharing/", label: "Data Sharing" },
-    { href: "/blog/", label: "News" },
-    { href: "/meeting-archive/", label: "Meeting Archive" },
-    { href: "/contact/", label: "Contact" },
-    { href: "/register/", label: "Register" },
-    { href: "/results/", label: "Results" },
-    {
-      href: "https://app.covid19hg.org",
-      label: (
-        <React.Fragment>
-          Browser
-        </React.Fragment>
-      ),
-    },
-    {
-      href: "/blog/2020-10-22-in-silico-follow-up-results-for-freeze-v4/",
-      label: (
-        <React.Fragment>
-          <em>In silico</em> follow-up results
-        </React.Fragment>
-      ),
-    },
-    { href: "/acknowledgements/", label: "Acknowledgements" },
-    { href: "/media/", label: "Media" },
-  ];
-  const drawerItems = linkInfo.map(({ href, label }, index) => (
-    <ListItem button={false} key={index}>
-      <ListItemText>
-        <Link
-          component={GatsbyLink}
-          to={href}
-          className={classes.navLink}
-          underline="none"
-        >
-          {label}
-        </Link>
-      </ListItemText>
-    </ListItem>
-  ));
   return (
     <>
       <DefaultHelmet
@@ -249,7 +202,8 @@ const LayoutContent = ({ title, children }: Props) => {
           </Hidden>
         </div>
         <Divider />
-        <List> {drawerItems} </List>
+        {/* <List> {drawerItems} </List> */}
+        <LargeNavMenu/>
       </Drawer>
       <div
         className={clsx({

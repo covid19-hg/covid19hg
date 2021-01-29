@@ -8,7 +8,7 @@ type: blog-post
 ---
 Updated results and summary statistic downloads are now available from the (still small but growing!) COVID-19 GWAS meta-analysis. Analyses this time include severity, susceptibility and COVID-19 associated symptoms.
 
-Results are downloadable at <https://www.covid19hg.org/results/>
+Results are downloadable at <https://www.covid19hg.org/results/r2/>
 
 As a reminder, these results are based on [phenotype definition V1](https://docs.google.com/document/d/1eMdzhO5xk-MACxjz-kOUJLP6Jort5KuwoOa_u-aZPHs/edit?usp=sharing) and [analysis plan V1](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit?usp=sharing)[](https://docs.google.com/document/d/1Pcq1jttF8W7ifEUXA6-a1WVMsUyEoAybS6IqvuP-Uv8/edit?usp=sharing)
 

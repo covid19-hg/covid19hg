@@ -4,7 +4,7 @@ import Layout from "../components/NewLayout";
 import useCanonicalLinkMetaTag from "../components/useCanonicalLinkMetaTag";
 
 const AcknowledgementPage = () => {
-  const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/results/");
+  const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/acknowledgements/");
   return (
     <Layout title="Acknowledgements">
       {canonicalLinkMetaTag}
