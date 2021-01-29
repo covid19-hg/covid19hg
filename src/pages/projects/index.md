@@ -90,13 +90,15 @@ projects:
 
       - [Dec 17, 2020](https://drive.google.com/file/d/19_HPhqTCwC4JK-RwCYUd4Nfp7UruASbz/view?usp=sharing)
 
+      - [Jan 21, 2021](https://drive.google.com/file/d/1QT21NslQKM9SnsF2SJkWToxxL86mfCC1/view?usp=sharing)
+
     title: WES/WGS working group within the HGI
     slack-channel: "#covid19-hg-wes-wgs"
     contact-persons:
       - Alessandra Renieri
       - Francesca Mari
       - Brent Richards
-      - Guillaume Butler-La Porte
+      - Guillaume Butler-Laporte
   - title: Acute respiratory distress syndrome
     description: >-
       The most severe outcome among COVID-19 cases includes acute respiratory
