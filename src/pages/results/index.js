@@ -19,6 +19,7 @@ const LatestResultsPage = ({data}) => {
 
 export default LatestResultsPage;
 
+// eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query LatestResultsPage {
     allMarkdownRemark(
