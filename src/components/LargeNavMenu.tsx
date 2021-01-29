@@ -152,10 +152,11 @@ export const LargeNavMenu = () => {
     data: { largeNavMenuExpandedNodeIds, largeNavMenuSelectedNodeIds },
     set,
   } = useContext(Context)
+  // eslint-disable-next-line @typescript-eslint/ban-types
   const handleToggle = (_: React.ChangeEvent<{}>, nodeIds: string[]) => {
     set({ largeNavMenuExpandedNodeIds: nodeIds })
   }
-
+  // eslint-disable-next-line @typescript-eslint/ban-types
   const handleSelect = (_: React.ChangeEvent<{}>, nodeIds: string[]) => {
     set({ largeNavMenuSelectedNodeIds: nodeIds })
   }

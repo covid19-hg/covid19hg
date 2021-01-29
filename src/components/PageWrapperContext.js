@@ -7,6 +7,7 @@ const defaultContextValue = {
     largeNavMenuExpandedNodeIds: [],
     largeNavMenuSelectedNodeIds: [],
   },
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   set: () => {}
 }
 
