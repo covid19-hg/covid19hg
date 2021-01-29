@@ -11,7 +11,7 @@ studies:
     name: COVID-19 HGI data freeze 4
     links:
       - description: Website
-        url: /results/
+        url: /results/r4/
   - posted_date: 25th September 2020
     name: Genetics Of Mortality In Critical Care (GenOMICC consortium)
     links:
@@ -51,7 +51,7 @@ studies:
     name: COVID-19 HGI data freeze 3
     links:
       - description: Website
-        url: /results/
+        url: /results/r3/
   - posted_date: 2nd June 2020
     name: Ellinghaus, Degenhardt et al.
     links:
@@ -68,5 +68,5 @@ studies:
     name: COVID-19 HGI data freeze 2
     links:
       - description: Website
-        url: /results/
+        url: /results/r2/
 ---

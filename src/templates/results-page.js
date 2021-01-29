@@ -7,7 +7,7 @@ import { graphql } from "gatsby";
 
 const ResultsPage = ({data}) => {
   const {markdownRemark: {frontmatter}} = data
-  const canonicalLinkMetaTag = useCanonicalLinkMetaTag("/results/");
+  const canonicalLinkMetaTag = useCanonicalLinkMetaTag(data.markdownRemark.fields.slug);
   return (
     <Layout title={frontmatter.title}>
       {canonicalLinkMetaTag}
@@ -29,6 +29,9 @@ export const pageQuery = graphql`
   query ResultsPageTemplate($id: String) {
     markdownRemark(id: { eq: $id }) {
       id
+      fields {
+        slug
+      }
       frontmatter {
         title
         release {
