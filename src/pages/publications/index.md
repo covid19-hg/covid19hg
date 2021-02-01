@@ -7,6 +7,11 @@ publications_page_intro: Many of the participating groups in COVID-19 Host
   follow-up work based on specific discovered loci, even if that work may have
   been based on unpublished analyses of the HGI.
 studies:
+  - posted_date: 1st February 2021
+    name: COVID-19 HGI data freeze 5
+    links:
+      - description: Website
+        url: /results/
   - posted_date: 16th December 2020
     name: "Horowitz, Kosmicki et al - REGENERON "
     links:
