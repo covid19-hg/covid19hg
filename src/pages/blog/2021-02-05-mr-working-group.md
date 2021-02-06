@@ -20,7 +20,7 @@ Note: This blog is intended for an audience of scientists and contains terminolo
 
 Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is a highly transmissible and pathogenic virus that emerged in late 2019 and as of February 2021 has resulted in more than 2.4 million deaths (further reading: [Dong, Ru, and Gardner, 2020](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30120-1/fulltext)). The threat SARS-CoV-2 presents is not uniform; certain pre-existing health issues predispose individuals to a higher risk of SARS-CoV-2 infection and/or COVID-19 severity (further reading: [Williamson _et al._, 2020](https://www.nature.com/articles/s41586-020-2521-4)).
 
-There are still a few questions that remain to COVID-19 infections such as: , what are these, at times known and at other times unknown or hidden, factors that increase an individual’s risk of SARS-CoV-2 infection, hospitalization due to COVID-19, or critical illness? How can we rule out other causes for this severity that are associated with the hidden factors but not caused by them?
+There are still a few questions that remain to COVID-19 infections such as: what are these, at times known and at other times unknown or hidden, factors that increase an individual’s risk of SARS-CoV-2 infection, hospitalization due to COVID-19, or critical illness? How can we rule out other causes for this severity that are associated with the hidden factors but not caused by them?
 
 Using observational studies where risk factors in people who have a disease are compared to those who don’t, it is possible to identify putative risk factors that increase (or potentially decrease) the risk of infection or the severity of disease. These types of studies have identified a number of risk factors associated with COVID-19 severity including obesity, type 2 diabetes, and kidney disease (further reading: [Williamson _et al._, 2020](https://www.nature.com/articles/s41586-020-2521-4), [Jain _et al._, 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7246302/)). Even with the presence of these conditions, it is difficult to disentangle whether the factor itself is causing increased SARS-COV-2 infection or COVID-19 severity, or other unseen forces associated with the disease driving the risk.
 
@@ -84,4 +84,4 @@ For studies contributing to the final freeze 5 meta-analysis, please refer to th
 Eirini Marouli, PhD, Mari Niemi, PhD, Laura Sloofman, PhD, J.E Savage, PhD, P.R Jansen, PhD, Camelia Minica, PhD, Joseph Buxbaum, PhD, and [Shea Andrews, PhD](mailto:shea.andrews@mssm.edu).
 
 
-Contributing Studies that allowed this fantastic work to be completed can be found here: [https://www.covid19hg.org/acknowledgements/](/acknowledgements/)
+Contributing Studies that allowed this fantastic work to be completed can be found [here](https://www.covid19hg.org/acknowledgements/)
