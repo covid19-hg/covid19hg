@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Distinguishing causality from correlation `:` What factors drive SARS-CoV-2 infection and Covid-19 Severity?
+title: Distinguishing causality from correlation -- What factors drive SARS-CoV-2 infection and Covid-19 Severity?
 date: 2021-02-05
 tags: []
 type: blog-post
@@ -14,9 +14,8 @@ Edited by Kumar Veerapen, PhD and Brooke Wolford, BS
 Note: This blog is intended for an audience of scientists and contains terminology specific to the field of genetics & genomics.
 </em>
 </small>
-
 <br/>
-
+<br/>
 
 Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is a highly transmissible and pathogenic virus that emerged in late 2019 and as of February 2021 has resulted in more than 2.4 million deaths (further reading: [Dong, Ru, and Gardner, 2020](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30120-1/fulltext)). The threat SARS-CoV-2 presents is not uniform; certain pre-existing health issues predispose individuals to a higher risk of SARS-CoV-2 infection and/or COVID-19 severity (further reading: [Williamson _et al._, 2020](https://www.nature.com/articles/s41586-020-2521-4)).
 
