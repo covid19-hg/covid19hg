@@ -56,6 +56,10 @@ const navItems: NavItem[] = [
         icon: Book,
         children: [
           {
+            href: '/blog/2021-02-05-mr-working-group/',
+            label: 'Mendelian Randomization',
+          },
+          {
             href: '/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/',
             label: 'Scientific Summary (R4)',
           },
@@ -67,6 +71,7 @@ const navItems: NavItem[] = [
         label: 'Meeting Archive',
         icon: Notes,
         children: [
+          { href: '/blog/2021-01-29-january-25-2021-meeting/', label: 'January 25, 2021' },
           { href: '/blog/2020-11-24-november-19-2020-meeting/', label: 'November 19, 2020' },
           { href: '/blog/2020-10-28-october-23-2020-meeting/', label: 'October 23, 2020' },
           { href: '/blog/2020-10-05-october-2-2020-meeting/', label: 'October 2, 2020' },
