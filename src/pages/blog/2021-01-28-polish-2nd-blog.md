@@ -1,0 +1,89 @@
+---
+templateKey: blog-post
+title: polish-2nd-blog
+date: 2021-01-28T12:24:39.170Z
+type: blog-post
+---
+# Wyniki konsorcjum COVID-19 HGI z analizy nr 4 (październik 2020)
+
+24 listopada 2020
+
+Napisane przez Jamal Nasir, Brooke Wolford i Kumar Veerapen w imieniu konsorcjum “COVID-19 HGI”. Edytowane przez Emi Harry, Atanu Kumar Dutta i Rachel Liao.
+
+Przetłumaczone na język polski przez Karolinę Chwiałkowską, Elżbietę Kaja, Dorotę Pasko.
+
+*Informacja: Konsorcjum COVID-19 Host Genetics Initiative (HGI) reprezentuje ponad 1000 naukowców z 54 krajów świata współpracujących, aby dzielić się danymi, pomysłami, rekrutacją pacjentów i rozpowszechniać wspólnie uzyskiwane wyniki. Aby zapoznać się z projektem naszych badań lub wynikami z poprzedniej analizy nr 3 (lipiec 2020), przeczytaj nasz [inauguracyjny post na blogu](https://www.covid19hg.org/pl/blog/2020-09-24-freeze-3-results/). Nasze badania są ciągle w toku a wyniki prezentujemy iteracyjnie i podsumowujemy przez [posty na blogu](https://www.covid19hg.org/blog/) i w sekcji z [wynikami](https://www.covid19hg.org/results/) na naszej stronie internetowej. Jeżeli jakiekolwiek słownictwo tego tekstu jest niezrozumiałe, prosimy kierować zapytania drogą mailową na adres hgi-faq@icda.bio – chętnie zaktualizujemy informacje w celu ich wyjaśnienia. W najbliższych tygodniach zostaną udostępnione dodatkowe informacje wyjaśniające koncepcje i terminologię projektu. W międzyczasie, w celu poznania podstaw genetyki proponujemy zajrzeć tutaj.*
+
+## Konsorcjum COVID-19 Host Genetics Initiative dodaje dodatkowe próbki, identyfikuje regiony genetyczne istotnie powiązane z ciężkością przebiegu COVID-19
+
+W lipcu 2020 zidentyfikowaliśmy zmienność genetyczną u człowieka związaną z ciężkim przebiegiem COVID-19 (zobacz wyniki [tutaj](https://www.covid19hg.org/results/)) jako wyniki analiz asocjacyjnych w skali całego genomu - [GWAS (Genome Wide Association Study)](https://www.broadinstitute.org/files/styles/visuals_style/public/GWAS-Explainer-08-02-17.jpg?itok=-6sgc6nN) opartych o dane pozyskane z 3 199 pacjentów zakażonych SARS-CoV-2 (grupa badana) i 897 488 osób z grupy kontrolnej (aby uzyskać więcej informacji, zajrzyj do naszego poprzedniego [postu](https://www.covid19hg.org/pl/blog/2020-09-24-freeze-3-results/)). Od tamtej pory zwiększyliśmy liczebność grupy badanej ponad dziesięciokrotnie do ponad 30 tysięcy osób zakażonych SARS-CoV-2 i 1,47 miliona osób w grupie kontrolnej dzięki połączeniu danych z 34 projektów z 16 krajów. Lista partnerów badawczych znajduje się [tutaj](https://www.covid19hg.org/partners/). Szczegóły dotyczące naszego zestawu danych są zaprezentowane na rysunku nr 1.
+
+![](https://lh3.googleusercontent.com/VlBnwCHNQYCboOYxrCCzknbBoDW99OWSottE5gFSufngi3DQ3WgrK_MuWAbKjJAqwIF0OhWhYPIdQuidgfU8w4Y-nuD25Sj0cKSJ4MHyn2NWzKtnZZvXNQ5Ed_TuYKVWidjYiLao)
+
+Rysunek 1: Definicje grup badanych i kontrolnych do poszczególnych analiz prowadzonych w ramach naszych badań. Zaadaptowane z [prezentacji Andrea Ganna](https://www.ashg.org/publications-news/press-releases/results-covid-19-host-genetics-initiative-study-announced/) przedstawionej na konferencji Amerykańskiego Towarzystwa Genetyki Człowieka (ASHG - American Society of Human Genetics) w październiku 2020.
+
+Co zmieniło się w wyniku zwiększenia liczebności próby? Dostarczyliśmy teraz solidnych dowodów dla siedmiu regionów genomowych istotnie związanych z ciężkim przebiegiem COVID-19 (Figura 2), zlokalizowanych na chromosomach 3, 6, 9, 12, 19 i 21; oraz jeden dodatkowy sygnał na chromosomie 3 związany z częściową podatnością na COVID-19 (Figura 3). Uważamy, że mogliśmy dokonać tak znaczących odkryć dzięki uzyskaniu wysokiej jakości danych od naszych globalnych współpracowników. Wiele z tych regionów zostało zidentyfikowanych dzięki udziałowi projektu Genetics of Mortality in Critical Care (GenOMICC) ([Pairo-Castineira i wsp.](https://www.medrxiv.org/content/10.1101/2020.09.24.20200048v2)), który pozwolił podwoić liczbę naszych przypadków, szczególnie u hospitalizowanych pacjentów z COVID-19 oraz tych w stanie krytycznym.
+
+## Nowe odkrycia wskazują, że odporność i funkcjonowanie płuc mogą przyczyniać się do rozwoju ciężkiego COVID-19
+
+Najnowsze wyniki analiz GWAS pozwoliły na identyfikację siedmiu regionów genomowych i wzmocnienie dowodów na związek ciężkiego przebiegu COVID-19 z zaburzeniami w obrębie układu immunologicznego. Wykonaliśmy analizę nacelowaną na asocjację zmienności w regionach chromosomowych z pacjentami wykazującymi symptomy ciężkiego przebiegu COVID-19 (np. pacjenci hospitalizowani). Udało się nam z sukcesem zidentyfikować regiony na chromosomach 3, 6, 9, 12, 19, i 21 (Rysunek 2) w obrębie których zlokalizowane są geny regulujące układ odpornościowy lub pełniące rolę w rozwoju chorób płuc. Co oznacza każdy z tych regionów chromosomowych?
+
+![](https://lh3.googleusercontent.com/fv1ebcvmP7vYJW8IfMl3U8I6iB3QdL8TDUGg-OFMb9nxSwBkTH-PGtY9wdE02edag2sTV_hYNaxCfoeH9eN39K3ZsUthTn3LHLl93JFPszzB0wEjQO9pMuVZMQc610_ix5JFzxA7)
+
+Rysunek 2. Wykres typu Manhattan prezentujący wyniki analizy GWAS ukierunkowanej na związek z ciężkim przebiegiem COVID-19 oparte o dane dla 8 638 pacjentów hospitalizowanych i 1,7 miliona kontroli. Analiza pozwoliła na identyfikację niezależnych asocjacji oznaczonych czerwonymi prostokątami wokół pików genetycznych wznoszących się ponad horyzontalną linię reprezentującą z góry założony [próg istotności](https://www.vox.com/latest-news/2019/3/22/18275913/statistical-significance-p-values-explained) statystycznej. Udało się zidentyfikować dodatkowe rejony, poza znanym już regionem na chromosomie 3. Loci są oznaczone symbolami genów zlokalizowanych w pobliżu mogę pełnić istotną rolę biologiczną. Zwróć uwagę na przypis zawarty w naszym [pierwszym poście na blogu](https://www.covid19hg.org/pl/blog/2020-09-24-freeze-3-results/), gdzie są opisane szczegóły tego rodzaju wizualizacji danych.
+
+#### Chromosom 3
+
+Powtórzyliśmy i potwierdziliśmy poprzednie wyniki uzyskane przez nas w lipcu 2020 r., w których zidentyfikowaliśmy związek między wariantami genetycznymi na chromosomie 3, a ciężkością i częściową podatnością na COVID-19. (Region ten został również opisany w innych ostatnich badaniach, w tym [Ellinghaus i wsp.](https://www.nejm.org/doi/full/10.1056/NEJMoa2020283), [Shelton i wsp.](https://www.medrxiv.org/content/10.1101/2020.09.04.20188318v1), [Pairo-Castineira i wsp.](https://www.medrxiv.org/content/10.1101/2020.09.24.20200048v2), and [Roberts i wsp.](https://www.medrxiv.org/content/10.1101/2020.10.06.20205864v1)). Ten region obejmuje kilka dobrze znanych genów, związanych z regulacją układu odpornościowego, które kodują [receptory chemokin](https://www.immunology.org/public-information/bitesized-immunology/receptors-and-molecules/chemokines-introduction), w tym: [CXCR6](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CXCR6), [CCR1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CCR1), [CCR3](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CCR3) i [CCR9](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CCR9).
+
+#### Chromosom 6
+
+Warianty genetyczne istotne dla ciężkiego przebiegu COVID-19 zidentyfikowaliśmy również w regionach obejmujących gen [FOXP4](https://www.genecards.org/cgi-bin/carddisp.pl?gene=FOXP4) (na chromosomie 6), który odgrywa rolę w rozwoju [raka płuc](https://pubmed.ncbi.nlm.nih.gov/25994569/). Warto zwrócić uwagę na fakt, że warianty genetyczne związane z ciężkością przebiegu COVID-19 w naszych badaniach wykazują większą częstość występowania w niektórych populacjach. Genetycy wykorzystują parametr częstości występowania wariantów genetycznych w celu zbadania potencjalnego wpływu tych wariantów na daną cechę lub chorobę. Im rzadziej występujący wariant, tym bardziej prawdopodobne jest, że ten wariant niesie ze sobą ryzyko występowania cechy lub choroby. Wariant zidentyfikowany w pobliżu genu FOXP4 jest uznawany jako rzadki u Europejczyków, wśród których pojawia się u 1% populacji. Niemniej jednak pojawia się częściej w populacji Azji Wschodniej (39%) i Hiszpańskiej/Latynoskiej (18%), dlatego jeszcze nie rozumiemy wpływu tego wariantu na ciężkość przebiegu COVID-19.
+
+Ponadto, zidentyfikowaliśmy drugi niezależny region na chromosomie 6 leżący w [głównym układzie zgodności tkankowej](https://www.britannica.com/science/major-histocompatibility-complex) (MHC – Major Histocompatibility Complex), w którym znajdują się geny tworzące ważne białka systemu odpornościowego. Obserwowany efekt wynikający z wariantów w tym regionie był jednak różny w różnych badaniach, dlatego nie mamy pewności, czy ten sygnał jest specyficzny dla danej populacji pacjentów.
+
+#### Chromosom 9
+
+Powszechnie znane były medialne [doniesienia](https://edition.cnn.com/2020/07/16/health/blood-types-coronavirus-wellness-scn/index.html), że grupa krwi jest związana a przebiegiem choroby COVID-19, a konkretnie, że grupa krwi A niesie ze sobą większe ryzyko choroby niż grupa 0, która działa ochronnie. Odkrycie to zostało opublikowane w czasopiśmie [New England Journal of Medicine](https://www.nejm.org/doi/full/10.1056/NEJMoa2020283), jako wstępny wydruk badań organizacji [23andMe](https://www.medrxiv.org/content/10.1101/2020.09.04.20188318v1). W naszym [pierwszym poście na blogu](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/), pisaliśmy, że nasze Konsorcjum nie zidentyfikowało regionu na chromosomie 9 związanego z genami AB0. Obecnie, gdy dysponowaliśmy dwukrotnie większą grupą badaną, zaobserwowaliśmy związek tego regionu z działaniem ochronnym przed COVID-19. Niemniej jednak, podobnie jak w przypadku regionu MHC na chromosomie 6, asocjacja ta wypadała różnie w różnych badaniach, stąd nie mamy pewności czy ten sygnał jest specyficzny dla danej populacji.
+
+#### Chromosom 12
+
+Asocjacje z przebiegiem COVID-19 zostały również zidentyfikowane na chromosomie 12 w pobliżu genów z grupy OAS, które kodują aktywatory antywirusowych enzymów restrykcyjnych działających jako mechanizm obronny przeciwko wirusom. Poszczególne warianty genetyczne w tym regionie są również znane z ochronnego efektu w przewlekłej białaczce limfatycznej.
+
+#### Chromosom 19
+
+Na chromosomie 19 zidentyfikowaliśmy dwa istotne dla COVID-19 regiony. Pierwszy z nich jest zlokalizowany w pobliżu genu [DPP9](https://www.genecards.org/cgi-bin/carddisp.pl?gene=DPP9), który jest zaangażowany w zwiększone ryzyko [zwłóknienia płuc](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4745857/). Co ciekawe, białko DPP9 jest podobne do białka DPP4, które wpływa na zdolność do wnikania do komórek człowieka innego wirusa z grupy koronawirusów – MERS (Middle East Respiratory Syndrome).
+
+Drugi interesujący region genomowy zidentyfikowany na chromosomie 19 zawiera wariant genetyczny w pobliżu genu [TYK2](https://www.bms.com/assets/bms/us/en-us/pdf/tyk2-pathway-fact-sheet.pdf). Warianty w genie TYK2 zostały już [wcześniej zaobserwowane](https://www.sciencedirect.com/science/article/pii/S1074761306004791) u pacjentów z pierwotnymi niedoborami odporności, czyli w sytuacji gdy pacjent ma upośledzoną odpowiedź na stymulację systemu odpornościowego oraz zwiększoną podatność na wirusowe infekcje.
+
+Jednym z dobrze poznanych wariantów w genie TYK2 jest wariant związany ze zmniejszonym ryzykiem występowania wielu chorób autoimmunogicznych (np. toczeń rumieniowaty układowy oraz reumatoidalne zapalenie stawów) u osób posiadających ten wariant (nie wszystkie warianty są złe, w tym przypadku wariant chroni przed chorobą). Ten sam wariant w genie TYK2 jest istotnie zasocjowany z ciężkim przebiegiem COVID-19. Mimo, że stosowane leczenie chorób autoimmunologicznych celowane w gen TYK2 mogłoby być zaadoptowane do [leczenia pacjentów](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30262-0/fulltext) chorych na COVID-19, dalsze badania są konieczne, gdyż warianty genetyczne w TYK2 mają opozycyjne działanie na choroby autoimmunologiczne (ochronne) i na COVID-19 (zwiększające ryzyko).
+
+#### Chromosom 21
+
+Zidentyfikowaliśmy asocjację na chromosomie 21 niedaleko genów [IFNAR2](https://www.genecards.org/cgi-bin/carddisp.pl?gene=IFNAR2&keywords=INFAR2) i [IL10RB](https://www.genecards.org/cgi-bin/carddisp.pl?gene=IL10RB&keywords=IL10RB). Należy zauważyć że jest to bardzo interesujący sygnał ponieważ gen IFNAR2 koduje podjednostkę cząsteczki immunologicznej zwanej receptorem interferonów która jest istotna dla [odporności przeciwwirusowej](https://www.cell.com/trends/genetics/fulltext/S0168-9525(20)30231-6). [Badania kliniczne](https://www.covid19treatmentguidelines.nih.gov/immune-based-therapy/immunomodulators/interferons/) są w trakcie testów by używać interferony jako sposób leczenia dla chorych w początkowej fazie infekcji COVID-19, natomiast wiele jest wciąż nieznane na ten temat. Co ciekawe, zauważyliśmy że wariant związany z ciężkim przebiegiem COVID-19 jest częściej obserwowany wśród kobiet niż wśród mężczyzn. Niemniej jednak, cały czas ulepszamy pobieranie próbek od uczestników naszego konsorcjum by móc uwzględnić prawdopodobna płciowa stronniczość asocjacji genetycznych wśród hospitalizowanych pacjentów z COVID-19
+
+## Dodatkowy region na chromosomie 3 jest powiązany z częściową wrażliwością na COVID-19
+
+Konsorcjum HGI COVID-19 przeanalizowało również możliwe genetyczne powiązania wśród pacjentów z częściową wrażliwością na COVID-19 (pacjenci których otrzymali pozytywny wynik testu na COVID-19 natomiast nie byli hospitalizowani). Zidentyfikowaliśmy regiony na chromosomie 3, 9 oraz 21 (Rysunek 3). Większość z tych regionów pokrywa się z tymi zidentyfikowanymi przez analizy uwzględniające pacjentów z ciężkim przebiegiem COVID-19 (Rysunek 2). Natomiast dodatkowo zidentyfikowaliśmy region na chromosomie 3 który zawiera wiele genów i na tym etapie nie jesteśmy pewni, co dokładnie przewodzi tym asocjacjom (czerwona ramka na Rysunku 3)
+
+![](https://lh4.googleusercontent.com/A39aXnntQLeeT5APVrgEsnYI_QTopt7frgU1q_EwXPh91KAGUu1To0Waalj-MoeYsW-4J5OKc9L0PA9BxCKnSGWt7euQxyZ8P-fWiCpmZM5wAbeTUU8MfXO-8tvdV2jr5WvbKOlG)
+
+Rysunek 3. Wykres typu Manhattan przedstawiający wyniki GWAS dotyczące częściowej podatności na COVID-19 oparte o dane dane dla 30,937 pacjentów z częściową podatnością na COVID-19 i 1.5 miliona kontroli. Analiza zidentyfikowała jeden niezależny, znaczący związek z częściową podatnoscia na COVID-19 (wskazany przez czerwona ramke wokół genetycznych „pikow” wznoszących się powyżej czerwonej linii która reprezentuje wcześniej określone granice wyznaczająca statystycznie znaczącą wartość dla [p-wartości](https://www.vox.com/latest-news/2019/3/22/18275913/statistical-significance-p-values-explained)) oprócz regionów również powiązanych z ciężkim przebiegiem COVID-19 na chromosomach 3,9 i 21. Zobacz przypis w naszym [pierwszym poście na blogu](https://www.covid19hg.org/pl/blog/2020-09-24-freeze-3-results/) dla wyjaśnienia takiego sposobu wizualizacji wyników
+
+## Nasze następne kroki
+
+Bardzo się cieszymy, że nasze najnowsze odkrycia dodatkowo wyjaśniają potencjalne genetyczne podłoże rozwoju ciężkiego przebiegu COVID-19.
+
+Należy jednak pamiętać, że chociaż GWAS pomaga nam zidentyfikować te regiony, potrzeba więcej badań, aby określić prawdziwe geny przyczynowe w tych regionach i mechanizmy biologiczne związane z ciężkością choroby.
+
+Zgodnie z innymi badaniami, nasze najnowsze wyniki dostarczają dodatkowych dowodów na to, że zmienność genetyczna człowieka może wpływać na ciężki przebieg COVID-19, prawdopodobnie poprzez wpływ na odpowiedź immunologiczna u osoby zakażonej SARS-CoV-2. Kilka zespołów naukowców wykorzystuje te wyniki GWAS do dalszych analiz, w celu odkrycia szlaków biochemicznych związanych z ciężkim przebiegiem COVID-19. Mogą one dostarczyć wskazówek do zrozumienia postępu choroby, a tym samym przyczynić się do klinicznego zrozumienia choroby i późniejszego leczenia pacjentów. Bieżące analizy uzupełniające pomagają również w identyfikacji pojedynczego genu przyczynowego, gdy powiązany region ma wiele genów, jak na przykład na chromosomie 3, oraz w określeniu, na które tkanki te warianty genetyczne mogą potencjalnie wpływać (więcej informacji można znaleźć w najnowszym [wpisie na blogu](https://www.covid19hg.org/blog/2020-10-28-twas-working-group/) przygotowanym przez naukowców).
+
+Jak widać liczba pacjentów w naszych analizach znacząco wzrosła pomiędzy lipcem a październikiem i stale pracujemy nad tym by poszerzać nasze badania. Przy następnym zamrożeniu danych w grudniu 2020, powtórzymy naszą analizę ze zwiększona ilością pacjentów, co, miejmy nadzieję, powtórzy nasze odkrycia, które raportujemy w tym poście i potencjalnie zidentyfikuje nowe warianty genetyczne związane z COVID-19. Ponadto udoskonalamy sposób, w jaki definiujemy pacjentów a grupy chorych i osób z grupy kontrolnej na potrzeby przyszłych analiz. Mamy nadzieję, że dzięki tym dodatkowym badaniom genetycznym uda nam się lepiej zrozumieć, w jaki sposób zmienność genetyczna wpływa na ciężkość przechodzenia COVID-19.
+
+## Podziękowania:
+
+Bardzo dziękujemy Shea Andrews oraz Andrea Ganna za przemyślane opinie i poprawki. Chcielibyśmy szczególnie podziękować za wszystkie badania które przyczyniły się do uzyskania wyników z naszych analiz (Rysunek 4).
+
+![](https://lh3.googleusercontent.com/bn7Th-XSIHFH4CF-zMk-3acofCF9oebVgDaQju9Z8GqvY8aMyGlPPgIlQyQa51JkHF1viJXVjR5PASF_iUpqjcUkKZAWzh5vUZZUnLM3OIU106x7A_hiQp93gMX3pwgp8BshCapn)
+
+Rysunek 4. Lista partnerów którzy przyczynili się do Konsorcjum HGI COVID-19. Na podstawie [prezentacji Andrei Ganna](https://www.ashg.org/publications-news/press-releases/results-covid-19-host-genetics-initiative-study-announced/) na temat HGI COVID-19 prezentowanej na konferencji ASHG w październiku 2020.
