@@ -1,0 +1,92 @@
+---
+templateKey: blog-post
+title: Spanish-2nd-blog
+date: 2021-01-28T12:13:21.089Z
+tags:
+  - COVID19
+  - Genética
+  - Investigación biomédica
+  - Comunicación de la ciencia
+type: blog-post
+---
+Resultados de COVID-19 HGI, Versión 4 (octubre 2020)
+
+24 de noviembre de 2020
+
+Escrito por Jamal Nasir, Brooke Wolford y Kumar Veerapen en nombre del COVID-19 HGI
+
+Editado por Emi Harry, Atanu Kumar Dutta y Rachel Liao
+
+Traducido al español por Alicia Utrilla, Andrés Moreno, Carmen L Cadilla, Carolina Medina-Gómez, David Gómez Cabrero, Leire Moya, Ricardo Verdugo y Ruth Zárate.
+
+Nota: la Iniciativa COVID-19 Host Genetics Initiative (HGI) representa un consorcio de más de 1000 científicos de más de 54 países que trabajan en colaboración para compartir datos, ideas, reclutar pacientes y difundir sus hallazgos. A modo de introducción sobre el diseño de nuestro estudio o para ver los resultados de julio de 2020 (data freeze 3), lea nuestra [primera publicación del blog](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/). Nuestra investigación es iterativa y resumimos nuestros nuevos resultados a través de [publicaciones en el blog](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) y en la sección de [resultados](https://www.covid19hg.org/results/) de nuestro sitio web. Finalmente, si no está familiarizado con algún término aquí utilizado, envíenos un correo electrónico a [hgi-faq@icda.bio](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/hgi-faq@icda.bio) - estaremos encantados de ampliar la información. En las próximas semanas, se publicará información adicional explicando conceptos y terminología. Mientras tanto, eche un vistazo a [este](https://medlineplus.gov/genetics/understanding/) recurso sobre conceptos básicos de genética.
+
+La iniciativa COVID-19 HGI añade más participantes al estudio e identifica regiones del genoma humano que juegan un papel en el desarrollo de COVID-19 grave
+
+En julio de 2020 informamos sobre la identificación de variantes genéticas humanas que están asociadas con COVID-19 severo (ver [resultados aquí](https://www.covid19hg.org/results/)) y sobre el resultado de un [estudio de asociación de genoma completo (GWAS)](https://www.broadinstitute.org/files/styles/visuals_style/public/GWAS-Explainer-08-02-17.jpg?itok=-6sgc6nN) en 3,199 pacientes con COVID-19 y 897,488 controles (consulte más información en nuestra primera publicación de [blog](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/hgi-faq@icda.biohgi-faq@icda.bio)). Desde entonces, casi hemos multiplicado por diez el número de casos hasta más de 30.000 y hemos aumentado el número de controles a 1,47 millones, mediante la combinación de datos de 34 estudios de un total de 16 países. Puede encontrar la lista de los estudios participantes [aquí](https://www.covid19hg.org/partners/). El desglose de nuestro conjunto de datos se muestra en la Figura 1.
+
+![](https://lh4.googleusercontent.com/hqmoetfHpoiui1m4Wpu2E4V0C_OkpqUCVt8HCs6bLzCbMyhNwLXSrwmn0FXSC8XXqo-4ud4SOtFK2fcNOxCihj1-qkx3zSWp59lBQSJN80ojqk4Mm60xKhvhdYxHYpFT2OMU80ut)Figura 1: Definición de casos y controles para cada uno de los análisis realizados en nuestro estudio. Tenga en cuenta que el SARS-CoV-2 es el virus que causa la infección por COVID-19. Adaptado de la [presentación de Andrea Ganna](https://www.ashg.org/publications-news/press-releases/results-covid-19-host-genetics-initiative-study-announced/) sobre COVID-19 HGI en la reunión anual de la Sociedad Americana de Genética Humana en octubre de 2020.
+
+¿Qué resultados han cambiado a raíz del aumento en el tamaño de muestra? Ahora tenemos pruebas sólidas de siete regiones genómicas asociadas con la enfermedad COVID-19 grave (Figura 2) en los cromosomas 3, 6, 9, 12, 19 y 21; y una señal adicional en el cromosoma 3 asociada con la susceptibilidad parcial a COVID-19 (Figura 3). Creemos que estos importantes hallazgos son el resultado de la alta calidad de los datos enviados por nuestros colaboradores de todo el mundo. Muchas de estas regiones fueron identificadas por el estudio Genetics of Mortality in Critical Care (GenOMICC) ([Pairo-Castineira et al)](https://www.medrxiv.org/content/10.1101/2020.09.24.20200048v2), que permitió duplicar nuestro número de casos, específicamente en pacientes de COVID-19 hospitalizados y en estado crítico.
+
+Nuevos hallazgos implican a la inmunidad y la función pulmonar como posibles contribuyentes al desarrollo de COVID-19 grave
+
+El último análisis GWAS identificó de forma robusta asociaciones en siete regiones cromosómicas, lo que fortaleció la evidencia de que la gravedad de COVID-19 podría atribuirse a una alteración en el sistema inmunológico. Realizamos un análisis para asociar regiones cromosómicas con pacientes que experimentan síntomas graves de COVID-19 (es decir, pacientes hospitalizados). Identificamos con éxito regiones en los cromosomas 3, 6, 9, 12, 19 y 21 (Figura 2) que albergan genes que regulan la inmunidad o juegan un papel en las enfermedades pulmonares. ¿Qué significa cada una de estas regiones cromosómicas?
+
+![](https://lh5.googleusercontent.com/3r-YfTKCh8vVLHxK6bdzXxm5ZDD4CCSaTur0dO7jVwl07aSOEN7NvmOxB_HymeHEeWq1qmbQYy_W-cTMT4BVdeOlOCwgDm561y256cV1uS6XhOttlUnR0jCSPuG3QQTYbWlgFnXc)
+
+Figura 2. Diagrama de Manhattan en el que se representan los resultados de GWAS para la gravedad de COVID-19 en 8,638 casos hospitalizados por COVID-19 y 1.7 millones de controles. El análisis identificó asociaciones significativas independientes, como indican los recuadros rojos alrededor de los "picos" genéticos que se elevan por encima de la línea horizontal roja, que representa el [umbral del valor estadístico](https://www.vox.com/latest-news/2019/3/22/18275913/statistical-significance-p-values-explained) predeterminado de la p. Esto se suma a nuestra asociación previamente identificada en el cromosoma 3. Los loci están marcados por el gen o genes cercanos con potencial significado biológico. Consulte la nota a pie de página de nuestra [primera publicación de blog](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) para obtener una explicación de esta visualización de datos.
+
+Cromosoma 3
+
+Confirmamos nuestros resultados de julio de 2020, en los que pudimos identificar una asociación entre variantes genéticas en el cromosoma 3 y la gravedad y susceptibilidad parcial de COVID-19. (Esta región también se ha identificado en otros estudios recientes, incluidos [Ellinghaus et al](https://www.nejm.org/doi/full/10.1056/NEJMoa2020283) , [Shelton et al](https://www.medrxiv.org/content/10.1101/2020.09.04.20188318v1) , [Pairo-Castineira et al](https://www.medrxiv.org/content/10.1101/2020.09.24.20200048v2) , y [Roberts et al.](https://www.medrxiv.org/content/10.1101/2020.10.06.20205864v1)) Esta región del cromosoma 3 está cerca de varios genes relacionados con el sistema inmunológico bien conocidos para los [receptores de quimiocinas](https://www.immunology.org/public-information/bitesized-immunology/receptors-and-molecules/chemokines-introduction), incluyendo [CXCR6](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CXCR6) , [CCR1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CCR1) , [CCR3](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CCR3) , y [CCR9](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CCR9).
+
+Cromosoma 6
+
+Hemos identificado variantes genéticas en una región cercana al gen [FOXP4](https://www.genecards.org/cgi-bin/carddisp.pl?gene=FOXP4), que interviene en el desarrollo del cáncer de pulmón. Es importante recalcar que algunas de las variantes que encontramos asociadas con la gravedad de COVID-19 en nuestro estudio tienen una frecuencia más alta en algunas poblaciones que en otras. En primera instancia, los genetistas usan la frecuencia como indicio de cómo de perjudicial puede ser una variante. Cuanto menos frecuente es una variante, más probable es que esta variante sea la causa de un rasgo particular o una enfermedad. La variante identificada cerca de FOXP4 se considera rara en europeos, donde está presente en el 1% de la población. Sin embargo, la misma variante es más frecuente en individuos de Asia oriental (39%) y América Latina (18%), por lo que aún no hemos podido entender el efecto que esta variante ejerce en la gravedad de COVID-19.
+
+Adicionalmente, hemos identificado otra región asociada con la gravedad de COVID-19 en el cromosoma 6. Esta señal de asociación se ubica en el [complejo mayor de histocompatibilidad](http://es.wikipedia.org/wiki/Complejo_mayor_de_histocompatibilidad) (CMH), una región que contiene genes esenciales en el funcionamiento del sistema inmunitario. No obstante, el efecto conferido por las variantes en esta región difiere mucho entre los estudios participantes y, por lo tanto, no estamos seguros de si esta señal es quizá específica de un grupo de pacientes en particular.
+
+Cromosoma 9
+
+Es posible que haya escuchado en las noticias que existe una asociación entre el COVID-19 y los grupos sanguíneos. Más específicamente, que personas con grupo sanguíneo A tienen mayor riesgo de desarrollar la enfermedad mientras que personas del grupo O parecen estar protegidas. Esto se ha publicado tanto en la prestigiosa revista de medicina [New England Journal of Medicine](https://www.nejm.org/doi/full/10.1056/NEJMoa2020283) como en una prepublicación de la compañía [23andMe](https://www.medrxiv.org/content/10.1101/2020.09.04.20188318v1). En nuestra primera publicación de [blog](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/), informamos sobre que nuestra iniciativa (COVID-19 HGI) no pudo identificar esta región en el cromosoma 9, que se conoce como la región del grupo sanguíneo ABO. Ahora que hemos duplicado el número de individuos incluidos en nuestro estudio, también observamos una asociación genética protectora en esta región. Sin embargo, de manera similar a la asociación observada en el CMH en el cromosoma 6, la magnitud de esta asociación varía mucho de estudio a estudio, por lo que no podemos estar seguros de si esta señal es específica para un grupo determinado de pacientes.
+
+Cromosoma 12
+
+En el cromosoma 12, hemos encontrado asociaciones cercanas al grupo de genes OAS, que codifican activadores de enzimas de restricción antivirales y, por tanto, funcionan como un mecanismo protector frente al virus. Se ha demostrado previamente que las variantes genéticas particulares de esta región están asociadas con la leucemia linfocítica crónica, con un efecto protector.
+
+Cromosoma 19
+
+Identificamos dos regiones en el cromosoma 19. La primera está cerca de [DPP9](https://www.genecards.org/cgi-bin/carddisp.pl?gene=DPP9), un gen asociado con un mayor riesgo de [fibrosis pulmonar](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4745857/). Curiosamente, la proteína DPP9 está estrechamente relacionada con DPP4, que es la proteína que afecta a la capacidad de otro coronavirus, el del síndrome respiratorio de Oriente Medio (MERS, por sus siglas en inglés), para entrar en las células humanas.
+
+La segunda región genómica identificada en el cromosoma 19 incluye una variante genética cercana al gen [TYK2](https://www.bms.com/assets/bms/us/en-us/pdf/tyk2-pathway-fact-sheet.pdf). [Previamente se han observado](https://www.sciencedirect.com/science/article/pii/S1074761306004791) variantes en el gen TYK2 en pacientes con síndromes de inmunodeficiencia primaria, condiciones en las que un individuo presenta una respuesta deficiente a la estimulación del sistema inmunológico y una mayor susceptibilidad a infecciones virales.
+
+Una variación genética muy conocida en TYK2 se asocia con un menor riesgo de múltiples enfermedades autoinmunes (por ejemplo, lupus y artritis reumatoide) en personas que tienen esta variante (no todas las variantes son nocivas y esta protege contra el rasgo). Sin embargo, esta misma variante de TYK2 se asocia significativamente con COVID-19 severo en nuestro estudio. Aunque los tratamientos existentes para enfermedades autoinmunes que se enfocan en TYK2 podrían reutilizarse [para tratar COVID-19](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30262-0/fulltext), se necesita más investigación, ya que la variante genética en TYK2 tiene un efecto opuesto entre las enfermedades autoinmunes (protectora) y COVID-19 (riesgo).
+
+Cromosoma 21
+
+Para finalizar, la asociación identificada en el cromosoma 21 se encuentra cerca de los genes [IFNAR2](https://www.genecards.org/cgi-bin/carddisp.pl?gene=IFNAR2&keywords=INFAR2) e [IL10RB](https://www.genecards.org/cgi-bin/carddisp.pl?gene=IL10RB&keywords=IL10RB). Esta asociación es de especial interés porque el gen IFNAR2 forma parte de una molécula inmunológica, denominada receptor de interferón, que es importante en la [inmunidad antiviral](https://www.cell.com/trends/genetics/fulltext/S0168-9525(20)30231-6). Actualmente, se [están realizando ensayos clínicos](https://www.covid19treatmentguidelines.nih.gov/immune-based-therapy/immunomodulators/interferons/) para el uso de interferones como tratamiento de pacientes durante la fase temprana de la infección por COVID-19, pero todavía hay un gran desconocimiento al respecto. Como dato de interés, también encontramos que la variante genética asociada con pacientes graves de COVID-19 era más significativa en mujeres que en hombres. Debido a este resultado, estamos mejorando nuestra colección de muestras mediante los socios colaboradores para incluir el estudio de sesgos por género en asociaciones genéticas en pacientes hospitalizados por COVID-19.
+
+Una región adicional en el cromosoma 3 está asociada con susceptibilidad parcial a COVID-19.
+
+El COVID-19 HGI también realizó un análisis para identificar asociaciones entre regiones cromosómicas y una susceptibilidad parcial en pacientes de COVID-19 (es decir, pacientes con pruebas de COVID-19 positivas que no fueron hospitalizados). Identificamos regiones en los cromosomas 3, 9 y 21 (Figura 3). La mayoría de estas regiones se superponen con las identificadas en nuestro análisis de gravedad de COVID-19 (Figura 2). Pero también identificamos una región en el cromosoma 3 que contiene múltiples genes y no estamos seguros de cuál de ellos puede puede ser el responsable de esta asociación (recuadro rojo en la Figura 3).
+
+![](https://lh3.googleusercontent.com/rOXKZsEDjFXW04w9LvehxM2wdz_tVJqADWLCxajYVXcol9CBrAm6n2E0NEtcB1FywDdRuc2Zk4Aagprry6krMBOa1oKQXjR8SF5Z6hEI6ZtqbnU1v_dSf8mFoGePRgcaPOX7KBXD)Figura 3. Diagrama de Manhattan que muestra los resultados de GWAS para la susceptibilidad parcial de COVID-19 en 30,937 casos de COVID-19 y 1,5 millones de controles. El análisis identificó una asociación significativa independiente con la susceptibilidad parcial a COVID-19 (indicada por un cuadro rojo alrededor de los "picos" genéticos que se elevan por encima de la línea horizontal roja, que representa el [umbral del valor-p estadístico](https://www.vox.com/latest-news/2019/3/22/18275913/statistical-significance-p-values-explained) predeterminado) además de las regiones también asociadas con la gravedad de COVID-19 en los cromosomas 3, 9 y 21. Consulte la nota al pie de la [primera publicación de nuestro blog](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) para obtener una explicación de este tipo de visualización de datos.
+
+Próximos pasos
+
+Estamos encantados de que nuestros últimos descubrimientos expliquen de forma más amplia el papel potencial que la etiología genética juega en los casos de COVID-19 que desarrollan síntomas más severos. A pesar de esto, hay que recordar que, mientras el análisis GWAS ayuda a identificar regiones genómicas asociadas con la enfermedad, se necesita más investigación para determinar los verdaderos genes causales en dichas localizaciones, así como los mecanismos biológicos que desencadenan dichos síntomas severos.
+
+De manera similar a estudios anteriores, nuestros resultados proporcionan evidencia científica adicional de que la variedad genética humana puede impactar en el desarrollo de casos severos de COVID-19, posiblemente al influir en la respuesta inmunológica de una persona infectada por SARS-CoV-2. Numerosos equipos de científicos están usando estos resultados de GWAS como base para sus análisis con el fin de identificar secuencias bioquímicas asociadas con casos graves de COVID-19. Estos estudios podrían ayudar a un mejor entendimiento del desarrollo biológico de la enfermedad y así mejorar el manejo de pacientes. Otros estudios en curso están tratando de identificar cuál es el gen causal único cuando en una región genómica en particular hay varios genes potencialmente asociados, como por ejemplo en el cromosoma 3, e identificar qué tejidos podrían estar más dañados por dichas variantes genéticas (para más información, lea este reciente artículo del [blog científico](https://www.covid19hg.org/blog/2020-10-28-twas-working-group/)).
+
+Como muestra el aumento de casos incluidos desde el mes de julio hasta octubre, estamos ampliando continuamente nuestro estudio. En diciembre de 2020 repetiremos los análisis con un tamaño de muestra mayor, con lo cual esperamos confirmar los resultados presentados aquí y posiblemente identificar nuevas variantes genéticas asociadas a COVID-19. Además, estamos refinando nuestra definición de “casos” y “controles” para análisis futuros. A través de estos estudios genéticos adicionales, esperamos poder mejorar nuestra comprensión de cómo la variación genética influye en la gravedad de la enfermedad COVID-19 y en la susceptibilidad a la infección por SARS-CoV-2.
+
+Agradecimientos
+
+Gracias a Shea Andrews y Andrea Ganna por sus comentarios y revisiones. También a todos los centros de investigación y hospitales que han contribuido a los resultados de nuestro estudio (Figura 4).
+
+
+
+![](https://lh3.googleusercontent.com/aHw4gXMy-a5aqskocwSO6tdoTkNZkz666QhviqO50ZxEHOgmMUdXDsyoLkdvFPynJFCpza4_4bSD239-KARN_TwnojxATSwtn4jBYVnoUzGUe0drUowWkJJrMD_CYmCeyeYZ6_I-)
+
+Figura 4: Lista de colaboradores que han contribuido a COVID-19 HGI. Adaptado de [la presentación de Andrea Ganna](https://www.ashg.org/publications-news/press-releases/results-covid-19-host-genetics-initiative-study-announced/) sobre COVID-19 HGI en la American Society of Human Genetics Meeting en octubre de 2020.
