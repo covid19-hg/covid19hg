@@ -7,6 +7,21 @@ publications_page_intro: Many of the participating groups in COVID-19 Host
   follow-up work based on specific discovered loci, even if that work may have
   been based on unpublished analyses of the HGI.
 studies:
+  - posted_date: 18th January 2021
+    name: COVID-19 HGI data freeze 5
+    links:
+      - description: Website
+        url: /results/
+  - posted_date: 16th December 2020
+    name: "Horowitz, Kosmicki et al - REGENERON "
+    links:
+      - description: Preprint
+        url: https://www.medrxiv.org/content/10.1101/2020.12.14.20248176v1
+    cases_description: 11,356 individuals with COVID-19
+    controls_description: 651,047 individuals with no record of SARS-CoV-2 infection
+    genome_wide_significant_loci: " SLC6A20/CXCR6 locus, CCHCR1 locus, DPP9 locus,
+      IFNAR2/IL10RB/IFNAR1 locus, CCNG1 locus, ACSF3 locus, FPR1 locus"
+    first_publication: CCNG1 locus, ACSF3 locus, FPR1 locus
   - posted_date: 20th October 2020
     name: COVID-19 HGI data freeze 4
     links:
@@ -17,6 +32,8 @@ studies:
     links:
       - description: Preprint
         url: https://www.medrxiv.org/content/10.1101/2020.09.24.20200048v2
+      - description: Paper
+        url: https://www.nature.com/articles/s41586-020-03065-y
     cases_description: 2244 critically-ill Covid-19 patients from 208 UK intensive
       care units (ICUs)
     controls_description: population controls from UKBB, 100K Genomes, Generation Scotland
