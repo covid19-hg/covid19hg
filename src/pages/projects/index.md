@@ -98,6 +98,8 @@ projects:
 
       - [Feb 4, 2021](https://drive.google.com/file/d/15ZhEJ4_V0iVWL7xXeU13aGAtmvkeOqMU/view?usp=sharing)
 
+      - [Feb 11, 2021](https://drive.google.com/file/d/1d70mO4u2qHZOiD6NQ-39NfFLXJan59Dk/view)
+
     title: WES/WGS working group within the HGI
     slack-channel: "#covid19-hg-wes-wgs"
     contact-persons:
