@@ -1,13 +1,14 @@
 ---
 templateKey: blog-post
-title: Distinguishing causality from correlation -- What factors drive SARS-CoV-2 infection and Covid-19 Severity?
-date: 2021-02-05
+title: Distinguishing causality from correlation -- What factors drive
+  SARS-CoV-2 infection and Covid-19 Severity?
+date: 2021-02-05T00:00:00.000Z
 tags: []
 type: blog-post
 ---
 Written by Annika Faucon and [Shea Andrews, PhD](mailto:shea.andrews@mssm.edu)
 
-Edited by Kumar Veerapen, PhD and Brooke Wolford, BS
+Edited by Kumar Veerapen, PhD
 
 <small>
 <em>
