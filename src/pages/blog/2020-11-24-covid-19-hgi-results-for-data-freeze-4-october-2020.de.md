@@ -22,7 +22,7 @@ Im Juli 2020 berichteten wir über die Identifikation genetischer Varianten im M
 
 
 
-![](https://lh3.googleusercontent.com/bJDt0ya5iZ7yMQ60d1HZP9GPCZDm6ycSydDy0qHHWBzMsG1NZSM2Esxi4Erto8HJB4wrkZbKUtTCC-P4gTojc9qJt8XghQwz9TXggIScE8IC79N0kY5QtyX5BsVslDiUIlV6Lf0D=w1500)
+![](https://lh3.googleusercontent.com/bJDt0ya5iZ7yMQ60d1HZP9GPCZDm6ycSydDy0qHHWBzMsG1NZSM2Esxi4Erto8HJB4wrkZbKUtTCC-P4gTojc9qJt8XghQwz9TXggIScE8IC79N0kY5QtyX5BsVslDiUIlV6Lf0D=w700)
 
 Abbildung 1: Definition der Fälle und Kontrollen für die beiden von uns in dieser Studie durchgeführten Analysen. SARS-CoV-2 ist das Virus, das die COVID-19-Infektion verursacht. Die Abbildung wurde in modifizierter Form aus [Andrea Gannas Vortrag](https://www.ashg.org/publications-news/press-releases/results-covid-19-host-genetics-initiative-study-announced/) über die COVID-19 HGI auf der Tagung der American Society of Human Genetics im Oktober 2020 übernommen.
 
@@ -44,7 +44,7 @@ Wie genau sind diese chromosomalen Regionen zu beurteilen?
 
 
 
-![](https://lh5.googleusercontent.com/_yReSF77kAk9hYIdWROQ88KRmb-kmynUpG5x2Li95MVTfeB_Mk3XnZUhVRM7n8OGKvK-aGoNGd-mN6T-qfysHoy7Gp1-s-_5JNitRZ-9qE8pBLtaQMaOia5pDQsQqbfbyJnYm_rz=w1500)
+![](https://lh5.googleusercontent.com/_yReSF77kAk9hYIdWROQ88KRmb-kmynUpG5x2Li95MVTfeB_Mk3XnZUhVRM7n8OGKvK-aGoNGd-mN6T-qfysHoy7Gp1-s-_5JNitRZ-9qE8pBLtaQMaOia5pDQsQqbfbyJnYm_rz=w700)
 
 
 
@@ -96,7 +96,7 @@ Neben der Studie zum Schweregrad der COVID-19-Erkrankung soll die zweite Analyse
 
 
 
-![](https://lh6.googleusercontent.com/orrCnAeZJ7C8MAAAfXyhLJ021o0srDUenGdJJEP6Vjxdk86P8THLCPcljYfPJWYoxLZg_J4T4pPwNEW1GpTlcD8NRMQ1oUH4gHYn5VeDa4krhffGEdYcAOfHiPNtYKSUD522K0tP=w1500)
+![](https://lh6.googleusercontent.com/orrCnAeZJ7C8MAAAfXyhLJ021o0srDUenGdJJEP6Vjxdk86P8THLCPcljYfPJWYoxLZg_J4T4pPwNEW1GpTlcD8NRMQ1oUH4gHYn5VeDa4krhffGEdYcAOfHiPNtYKSUD522K0tP=w700)
 
 
 
@@ -116,7 +116,7 @@ Unser Dank gilt Shea Andrews und Andrea Ganna für das durchdachte Feedback und 
 
 
 
-![](https://lh6.googleusercontent.com/sAXzzVz7wmPQAwRoKCGFb3jF2eeM72R1V04j5_ceuFzs355g0EeM6hrHWoWiJ0Yxk6i15K723xKbWoNXO-Ej20sWV6OYpLZwMqe9AakfceuJebYi9_ERmzRZksDk2U5h2HSRz176=w1500)
+![](https://lh6.googleusercontent.com/sAXzzVz7wmPQAwRoKCGFb3jF2eeM72R1V04j5_ceuFzs355g0EeM6hrHWoWiJ0Yxk6i15K723xKbWoNXO-Ej20sWV6OYpLZwMqe9AakfceuJebYi9_ERmzRZksDk2U5h2HSRz176=w700)
 
 
 
