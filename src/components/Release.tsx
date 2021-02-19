@@ -101,32 +101,58 @@ const Release = (release: Props) => {
         </Grid>
 
         <Grid item={true} xs={releaseLeftColumnWidthXs} md={releaseLeftColumnWidthMd}>
-          <Typography variant="h6">Release Notes</Typography>
-        </Grid>
-        <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
-          <Typography> {release.notes}</Typography>
-        </Grid>
-
-        <Grid item={true} xs={releaseLeftColumnWidthXs} md={releaseLeftColumnWidthMd}>
           <Typography variant="h6">Data Columns</Typography>
         </Grid>
         <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
           {dataFieldsTable}
         </Grid>
 
-        {release.title == "COVID19-hg GWAS meta-analyses round 4" && 
-          <Grid item={true} xs={12}>
-          <Typography align="center" style={{ color: '#FF8C00' }}>
-            Note: variants with heterogeneity p-value less than 0.001 across studies are in orange.
-          </Typography>
-        </Grid>}
+        <Grid item={true} xs={releaseLeftColumnWidthXs} md={releaseLeftColumnWidthMd}>
+          <Typography variant="h6">Release Notes</Typography>
+        </Grid>
+        <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
+          <Typography> {release.notes}</Typography>
+        </Grid>
 
-        {release.title == "COVID19-hg GWAS meta-analyses round 5" && 
+        {release.date === 'January 18, 2021' && (
+          <>
+            <Grid item={true} xs={releaseLeftColumnWidthXs} md={releaseLeftColumnWidthMd}>
+              <Typography variant="h6">Extras</Typography>
+            </Grid>
+            <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
+              <Typography>
+                <strong style={{ color: 'blue' }}>**New**</strong> the full downloads below do not contain the
+                23andMe samples (the most well-powered analyses), however the top 10K SNPs from analyses that
+                include 23andMe samples are available{' '}
+                <a href="https://storage.googleapis.com/covid19-hg-public/20201215/results/20210107/COVID19_HGI_10k_SNPs.zip">
+                  here.
+                </a>
+              </Typography>
+              <Typography style={{ marginTop: 5 }}>
+                There are additional leave-one-out results not listed here available at this storage bucket:{' '}
+                <code>gs://covid19-hg-public/20201215/results/20210107</code>. You will need{' '}
+                <a href="https://cloud.google.com/storage/docs/gsutil_install">gsutil</a> to list and download
+                these files.
+              </Typography>
+            </Grid>
+          </>
+        )}
+
+        {release.date == 'October 20, 2020' && (
           <Grid item={true} xs={12}>
-          <Typography align="center" style={{ color: 'green' }}>
-            Note: variants with heterogeneity p-value less than 0.001 across studies are in green.
-          </Typography>
-        </Grid>}
+            <Typography align="center" style={{ color: '#FF8C00' }}>
+              Note: variants with heterogeneity p-value less than 0.001 across studies are in orange.
+            </Typography>
+          </Grid>
+        )}
+
+        {release.date == 'January 18, 2021' && (
+          <Grid item={true} xs={12}>
+            <Typography align="center" style={{ color: 'green' }}>
+              Note: variants with heterogeneity p-value less than 0.001 across studies are in green.
+            </Typography>
+          </Grid>
+        )}
       </Grid>
       <Grid container={true} marginTop={2} spacing={4}>
         {analysisElems}
