@@ -40,7 +40,7 @@ The ongoing concerted international effort is gradually unravelling the role of 
 
 A typical feature of human infections is that not all individuals develop clinical disease, and for those who are infected, there is variability in severity ([Kenney et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28853921/)). The COVID-19 pandemic is no different: there is wide variability in disease onset, clinical symptoms, severity, and prognosis. According to several studies, around 80% of COVID-19 patients were classified as mild (did not develop pneumonia or had a mild case of it), while up to 20% progressed to critical stage with likely death of respiratory failure ([Fu et al., 2020](https://pubmed.ncbi.nlm.nih.gov/32283155/)) (Figure 2).
 
-![Variability of symptoms in COVID-19 patients](figure2)
+![Variability of symptoms in COVID-19 patients](/img/litreview_figure2.png)
 
 **Figure 2. Variability of symptoms in COVID-19 patients.**  Figure created by Sophie Limou, PhD
 
@@ -53,7 +53,7 @@ Compared to mild or asymptomatic patients, those who were severely affected had 
 Studies investigating the host responses to other infectious diseases, such as SARS-CoV, HIV, influenza, and several other common viruses, have indicated that the host genetic background plays an essential role ([Wang et al., 2020](https://pubmed.ncbi.nlm.nih.gov/33298875/)) (Figure 3).
 
 
-![Gene categories involved in infectious diseases](figure3)
+![Gene categories involved in infectious diseases](/img/litreview_figure3.png)
 
 **Figure 3. Gene categories involved in infectious diseases.** Variations in many genes are associated with infectious disease severity and susceptibility. Each gene encodes for a protein that carries out its distinct cellular function (labelled in bold). Abbreviation: Th, T helper. (Image from [Kenney et al., (2017)](https://pubmed.ncbi.nlm.nih.gov/28853921/)).
 
