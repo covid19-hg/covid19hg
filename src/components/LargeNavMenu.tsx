@@ -56,6 +56,10 @@ const navItems: NavItem[] = [
         icon: Book,
         children: [
           {
+            href: '/blog/2021-02-19-layperson-lit-review/',
+            label: 'Literature Review',
+          },
+          {
             href: '/blog/2021-02-05-mr-working-group/',
             label: 'Mendelian Randomization',
           },
