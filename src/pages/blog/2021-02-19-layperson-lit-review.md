@@ -53,7 +53,7 @@ Compared to mild or asymptomatic patients, those who were severely affected had 
 Studies investigating the host responses to other infectious diseases, such as SARS-CoV, HIV, influenza, and several other common viruses, have indicated that the host genetic background plays an essential role ([Wang et al., 2020](https://pubmed.ncbi.nlm.nih.gov/33298875/)) (Figure 3).
 
 
-![Gene categories involved in infectious diseases](/img/litreview_figure3.png)
+![Gene categories involved in infectious diseases](/img/litReview_figure3.png)
 
 **Figure 3. Gene categories involved in infectious diseases.** Variations in many genes are associated with infectious disease severity and susceptibility. Each gene encodes for a protein that carries out its distinct cellular function (labelled in bold). Abbreviation: Th, T helper. (Image from [Kenney et al., (2017)](https://pubmed.ncbi.nlm.nih.gov/28853921/)).
 
