@@ -1,5 +1,4 @@
 const Airtable = require("airtable");
-const parseEmailField = require("../contact-investigator/parseEmailField");
 
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
