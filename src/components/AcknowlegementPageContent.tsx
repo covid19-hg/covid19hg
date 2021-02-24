@@ -44,7 +44,7 @@ const AcknowledgementPageContent = () => {
     const fetchData = async () => {
       try {
         const [fetchedContributors, FetchedPartnersData] = await Promise.all([
-          import("../acknowledgement.json") as Promise<FetchedContributorData>,
+          import("../acknowledgement.json") as unknown as Promise<FetchedContributorData>,
           fetchJSON<FetchedPartnersData>("/.netlify/functions/partners"),
         ]);
         const { default: contributors} = fetchedContributors;
