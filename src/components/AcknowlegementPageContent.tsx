@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 interface FetchedContributorData {
-  data: RawContributor[];
+  default: RawContributor[];
 }
 
 interface FetchedData {
@@ -44,12 +44,10 @@ const AcknowledgementPageContent = () => {
     const fetchData = async () => {
       try {
         const [fetchedContributors, FetchedPartnersData] = await Promise.all([
-          fetchJSON<FetchedContributorData>(
-            "/.netlify/functions/acknowledgement"
-          ),
+          import("../acknowledgement.json"),
           fetchJSON<FetchedPartnersData>("/.netlify/functions/partners"),
         ]);
-        const { data: contributors } = fetchedContributors;
+        const { default: contributors} = fetchedContributors;
         const { data: studies } = FetchedPartnersData;
         setData({ contributors, studies });
       } catch (e) {
