@@ -1,0 +1,56 @@
+name: Periodically fetch and process new data
+on:
+  schedule:
+    # Note: UTC time
+    # https://crontab.guru/
+    - cron: '0 * * * *'
+
+jobs:
+  update-data:
+    name: Fetch and save contributors data
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout code and submodule
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.16.0"
+
+      # From
+      # https://github.com/actions/cache/blob/b8204782bbb5f872091ecc5eb9cb7d004e35b1fa/examples.md#node---yarn
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          # Change suffix "v1" for cache busting:
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}-v1
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: cd fetchContributors && yarn --frozen-lockfile
+
+      - name: Execute data fetching script
+        run: node fetchContributors/index.js
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+
+      - name: Check if any files have changed
+        run: echo "::set-output name=POST_FETCHING_GIT_STATUS::$(git diff-index HEAD | wc -l | awk '{$1=$1;print}')"
+        id: git-status
+
+      - name: Commit new data and push if there are changes
+        if: steps.git-status.outputs.POST_FETCHING_GIT_STATUS > 0
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add src/*
+          git commit -m "Update contributors data"
+          git push origin $GITHUB_REF
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN}}
