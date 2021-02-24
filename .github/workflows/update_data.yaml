@@ -52,5 +52,3 @@ jobs:
           git add src/*
           git commit -m "Update contributors data"
           git push origin $GITHUB_REF
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN}}
