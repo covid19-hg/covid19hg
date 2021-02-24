@@ -1,3 +1,4 @@
+/* eslint-env node */
 const fetchAdditionalContributorsData = require("./fetchAdditionalContributorsData");
 const fs = require("fs");
 const path = require("path");

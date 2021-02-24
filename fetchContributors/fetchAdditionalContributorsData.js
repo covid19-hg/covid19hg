@@ -1,3 +1,4 @@
+/* eslint-env node */
 const Airtable = require("airtable");
 
 Airtable.configure({
