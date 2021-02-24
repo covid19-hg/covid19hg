@@ -41,7 +41,7 @@ jobs:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
 
       - name: Check if any files have changed
-        run: echo "::set-output name=POST_FETCHING_GIT_STATUS::$(git diff-index HEAD | wc -l | awk '{$1=$1;print}')"
+        run: echo "::set-output name=POST_FETCHING_GIT_STATUS::$(git diff-index HEAD)"
         id: git-status
 
       - name: Commit new data and push if there are changes
