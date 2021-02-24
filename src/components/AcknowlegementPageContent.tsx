@@ -12,8 +12,8 @@ import {
   makeStyles,
   Theme,
 } from "@material-ui/core";
-import { processContributorList } from "./acknowledgementUtils";
-import Study from "./StudyAcknowledgement";
+import { processContributorList, splitProcessedStudiesIntoTwoBalancedLists } from "./acknowledgementUtils";
+import {  StudyAcknowledgement } from "./StudyAcknowledgement";
 import { AirtableDatum, ContributorDatum as RawContributor } from "../types";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -75,85 +75,99 @@ const AcknowledgementPageContent = () => {
     } else {
       const { contributors, studies } = data;
       const {
-        leftColumnStudies,
-        rightColumnStudies,
-        adhocGroups,
-      } = processContributorList(contributors, studies, isLargeScreen);
+        processedStudies,
+        processedAdhocGroups,
+      } = processContributorList(contributors, studies);
 
       if (isLargeScreen) {
-        const leftColumnElems = leftColumnStudies.map((study, index) => (
-          <Study
-            study={study}
-            key={index}
-            linkToPartnersPage={true}
-            isLargeScreen={true}
-          />
-        ));
-        const rightColumnElems = rightColumnStudies.map((study, index) => (
-          <Study
-            study={study}
-            key={index}
-            linkToPartnersPage={true}
-            isLargeScreen={true}
-          />
-        ));
-        const leftColumn = (
-          <Grid item={true} xs={6}>
-            {leftColumnElems}
-          </Grid>
-        );
-        const rightColumn = (
-          <Grid item={true} xs={6}>
-            {rightColumnElems}
-          </Grid>
-        );
+        const [leftColumnStudies, rightColumnStudies] = splitProcessedStudiesIntoTwoBalancedLists(processedStudies)
+        const leftColumnStudyElems = leftColumnStudies.map(([id, processedStudy], index) => {
+          return (
+            <StudyAcknowledgement
+              key={index}
+              study={processedStudy}
+              partnerId={id}
+              shouldLinkToPartnersPage={true}
+            />
+          )
+        })
+        const rightColumnStudyElems = rightColumnStudies.map(([id, processedStudy], index) => {
+          return (
+            <StudyAcknowledgement
+              key={index}
+              study={processedStudy}
+              partnerId={id}
+              shouldLinkToPartnersPage={true}
+            />
+          )
+        })
         studyElems = (
           <Grid container={true} spacing={2}>
-            {leftColumn}
-            {rightColumn}
+            <Grid item={true} xs={6}>
+              {leftColumnStudyElems}
+            </Grid>
+            <Grid item={true} xs={6}>
+              {rightColumnStudyElems}
+            </Grid>
           </Grid>
-        );
-
-        const adhocItems = adhocGroups.map((group, index) => (
-          <Grid item={true} xs={6} key={index}>
-            <Study
-              study={group}
-              linkToPartnersPage={false}
-              isLargeScreen={true}
+        )
+        const [leftColumnAdhocGroups, rightColumnAdhocGroups] = splitProcessedStudiesIntoTwoBalancedLists( [...processedAdhocGroups.entries()])
+        const leftColumnAdhocGroupElems = leftColumnAdhocGroups.map(([, processedStudy], index) => {
+          return (
+            <StudyAcknowledgement
+              key={index}
+              study={processedStudy}
+              shouldLinkToPartnersPage={false}
             />
-          </Grid>
-        ));
+          )
+        })
+        const rightColumnAdhocGroupElems = rightColumnAdhocGroups.map(([, processedStudy], index) => {
+          return (
+            <StudyAcknowledgement
+              key={index}
+              study={processedStudy}
+              shouldLinkToPartnersPage={false}
+            />
+          )
+        })
         adhocGroupElems = (
           <Grid container={true} spacing={2}>
-            {adhocItems}
+            <Grid item={true} xs={6}>
+              {leftColumnAdhocGroupElems}
+            </Grid>
+            <Grid item={true} xs={6}>
+              {rightColumnAdhocGroupElems}
+            </Grid>
           </Grid>
-        );
+        )
       } else {
-        const elems = leftColumnStudies.map((study, index) => (
-          <Study
-            study={study}
-            key={index}
-            linkToPartnersPage={true}
-            isLargeScreen={false}
-          />
-        ));
+        const individualStudyElems = processedStudies.map(([id, processedStudy], index) => {
+          return (
+            <StudyAcknowledgement
+              key={index}
+              study={processedStudy}
+              partnerId={id}
+              shouldLinkToPartnersPage={true}
+            />
+          )
+        })
         studyElems = (
           <Grid container={true} spacing={2}>
-            {elems}
+            {individualStudyElems}
           </Grid>
-        );
-        const adhocItems = adhocGroups.map((group, index) => (
-          <Grid item={true} xs={12} key={index}>
-            <Study
-              study={group}
-              linkToPartnersPage={false}
-              isLargeScreen={false}
+        )
+        const individualAdhocGroupElems = [...processedAdhocGroups.entries()].map(([, adhocGroup], index) => {
+          return (
+            <StudyAcknowledgement
+              key={index}
+              study={adhocGroup}
+              shouldLinkToPartnersPage={false}
             />
-          </Grid>
-        ));
+          )
+        })
         adhocGroupElems = (
           <Grid container={true} spacing={2}>
-            {adhocItems}
+            {individualAdhocGroupElems}
           </Grid>
         );
       }

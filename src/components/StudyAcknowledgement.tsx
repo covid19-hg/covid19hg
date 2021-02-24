@@ -1,6 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
-  Grid,
   Card,
   CardContent,
   Typography,
@@ -9,8 +8,7 @@ import {
 } from "@material-ui/core";
 import { Link as GatsbyLink } from "gatsby";
 import { getPartnerPath } from "./partnersPageUtils";
-import { DisplayedStudy, RoleList } from "./acknowledgementUtils";
-import { sortByLastName } from "./acknowledgementUtils";
+import { ProcessedStudy } from "./acknowledgementUtils";
 import { acknowledgementsStudyTitle } from "../cypressTestDataAttrs";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -20,58 +18,32 @@ const useStyles = makeStyles((theme: Theme) => ({
   roleTitle: {
     marginTop: theme.spacing(1),
   },
+  mainContent: {
+    columnCount: 2,
+  }
 }));
 
-interface LargeScreenColumnProps {
-  roleLists: RoleList[];
-}
+type Props = {
+  study: ProcessedStudy;
+} & (
+  {shouldLinkToPartnersPage: true, partnerId: string} |
+  {shouldLinkToPartnersPage: false}
+)
 
-export const LargeScreenColumn = ({ roleLists }: LargeScreenColumnProps) => {
-  const classes = useStyles();
-  const elems = roleLists.map(({ name: roleName, contributors }) => {
-    const sorted = sortByLastName(contributors).map((name, index) => (
-      <Typography key={index}>{name}</Typography>
-    ));
-    return (
-      <React.Fragment key={roleName}>
-        <Typography variant="h6" component="h3" className={classes.roleTitle}>
-          {roleName}
-        </Typography>
-        {sorted}
-      </React.Fragment>
-    );
-  });
-  return (
-    <Grid item={true} xs={6}>
-      {elems}
-    </Grid>
-  );
-};
-
-interface Props {
-  study: DisplayedStudy;
-  linkToPartnersPage: boolean;
-  isLargeScreen: boolean;
-}
-
-const StudyAcknowledgement = ({
-  study,
-  linkToPartnersPage,
-  isLargeScreen,
-}: Props) => {
-  const { id: studyId, name: studyName, leftRoleLists, rightRoleLists } = study;
+export const StudyAcknowledgement = (props: Props) => {
+  const {contributorsByRole, name} = props.study;
   const classes = useStyles();
   let title: React.ReactElement<any>;
-  if (linkToPartnersPage === true) {
+  if (props.shouldLinkToPartnersPage === true) {
     title = (
       <Typography
         variant="h5"
         component={GatsbyLink}
-        to={getPartnerPath(studyId)}
+        to={getPartnerPath(props.partnerId)}
         gutterBottom={true}
         data-cy={acknowledgementsStudyTitle}
       >
-        {studyName}
+        {name}
       </Typography>
     );
   } else {
@@ -82,44 +54,34 @@ const StudyAcknowledgement = ({
         gutterBottom={true}
         data-cy={acknowledgementsStudyTitle}
       >
-        {studyName}
+        {name}
       </Typography>
     );
   }
 
-  let content: React.ReactNode;
-  if (isLargeScreen) {
-    const leftColumn = <LargeScreenColumn roleLists={leftRoleLists} />;
-    const rightColumn = <LargeScreenColumn roleLists={rightRoleLists} />;
-    content = (
-      <Grid container={true} spacing={2}>
-        {leftColumn}
-        {rightColumn}
-      </Grid>
-    );
-  } else {
-    content = leftRoleLists.map(({ name: roleName, contributors }) => {
-      const sorted = sortByLastName(contributors).map((name, index) => (
-        <Typography key={index}>{name}</Typography>
-      ));
-      return (
-        <React.Fragment key={roleName}>
-          <Typography variant="h6" component="h3" gutterBottom={true}>
-            {roleName}
-          </Typography>
-          {sorted}
-        </React.Fragment>
-      );
-    });
-  }
+  const contentElems = [...contributorsByRole.entries()].map(([roleName, roleMembers]) => {
+    const roleMemberElems = roleMembers.map((roleMemberName, index) => (
+      <Typography key={index}>{roleMemberName}</Typography>
+    ))
+    return (
+      <Fragment key={roleName}>
+        <Typography variant="h6" component="h3" className={classes.roleTitle}>
+          {roleName}
+        </Typography>
+        {roleMemberElems}
+      </Fragment>
+    )
+  })
+
   return (
     <Card className={classes.studyRoot}>
       <CardContent>
         {title}
-        {content}
+        <div className={classes.mainContent}>
+          {contentElems}
+        </div>
       </CardContent>
     </Card>
   );
 };
 
-export default StudyAcknowledgement;

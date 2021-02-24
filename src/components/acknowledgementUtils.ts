@@ -5,7 +5,6 @@ import type {
   ContributorDatum as RawContributor,
   AirtableDatum,
 } from "../types";
-import _uniq from "lodash/uniq";
 
 interface BaseContributor {
   name: string;
@@ -33,30 +32,12 @@ export interface ProcessedStudy {
   contributorsByRole: Map<string, string[]>;
 }
 
-export type ProcessedStudies = Map<string, ProcessedStudy>;
-
-export interface RoleList {
-  name: string;
-  contributors: string[];
-}
-export interface DisplayedStudy {
-  name: string;
-  id: string;
-  approxRoleListsHeight: number;
-  leftRoleLists: RoleList[];
-  rightRoleLists: RoleList[];
-}
+type ProcessedStudies = Map<string, ProcessedStudy>;
 
 export type Contributor = StudyContributor | AdhocContributor;
 
 export const sortByLastName = (names: string[]) =>
   _sortBy(names, (name) => _last(name.toLowerCase().split(" ")));
-
-// Approximate height of a role's title compared to the height of a line of
-// normal paragaph text:
-const approxHeightOfRoleTitle = 2;
-const getRoleListApproxHeight = ({ contributors }: RoleList) =>
-  contributors.length + approxHeightOfRoleTitle;
 
 enum Side {
   Left,
@@ -114,57 +95,22 @@ export const splitIntoTwoBalancedLists = <T>(
   return [left, right];
 };
 
-const approxHeightOfStudyTitle = 4;
-const getStudyApproxHeight = ({ approxRoleListsHeight }: DisplayedStudy) =>
-  approxRoleListsHeight + approxHeightOfStudyTitle;
+export const splitProcessedStudiesIntoTwoBalancedLists = (pairs: [string, ProcessedStudy][]) =>
+  splitIntoTwoBalancedLists(pairs, getStudyApproxHeight)
 
-const getDisplayedStudy = (
-  { name: studyName, contributorsByRole }: ProcessedStudy,
-  id: string,
-  isLargeScreen: boolean
-): DisplayedStudy => {
-  const unprocessedRoleList: RoleList[] = _sortBy(
-    [...contributorsByRole.entries()].map(([role, contributors]) => ({
-      name: role,
-      contributors: _uniq(contributors),
-    })),
-    ({ name }) => name
-  );
-  let leftRoleLists: RoleList[];
-  let rightRoleLists: RoleList[];
-  // Use two-column layout for large screen and one-column layout for small
-  // screen:
-  if (isLargeScreen) {
-    const [left, right] = splitIntoTwoBalancedLists(
-      _sortBy(unprocessedRoleList, getRoleListApproxHeight).reverse(),
-      getRoleListApproxHeight
-    );
-    leftRoleLists = left;
-    rightRoleLists = right;
-  } else {
-    leftRoleLists = _sortBy(
-      unprocessedRoleList,
-      getRoleListApproxHeight
-    ).reverse();
-    rightRoleLists = [];
+// These are measured empirically:
+const approxHeightOfStudyTitle = 1.16;
+const approxHeightOfRoleTitle = 1.3
+export const getStudyApproxHeight = ([, {contributorsByRole}]: [unknown, ProcessedStudy]) => {
+  let summedHeightsOfAllRoles = 0
+  for (const roleMembers of contributorsByRole.values()) {
+    summedHeightsOfAllRoles += (approxHeightOfRoleTitle + roleMembers.length * 1)
   }
-  const approxRoleListsHeight = Math.max(
-    _sumBy(leftRoleLists, getRoleListApproxHeight),
-    _sumBy(rightRoleLists, getRoleListApproxHeight)
-  );
-  return {
-    approxRoleListsHeight,
-    id,
-    leftRoleLists,
-    rightRoleLists,
-    name: studyName,
-  };
-};
-
+  return summedHeightsOfAllRoles / 2 + approxHeightOfStudyTitle
+}
 export const processContributorList = (
   contributors: RawContributor[],
   studies: AirtableDatum[],
-  isLargeScreen: boolean
 ) => {
   const studyLookup = new Map(
     studies.map(({ id, study }) => [id, study] as const)
@@ -272,29 +218,7 @@ export const processContributorList = (
     contributorsInThisRole.push(contributorName);
   }
 
-  const displayedProcessedStudies = processedStudies.map(([id, study]) =>
-    getDisplayedStudy(study, id, isLargeScreen)
-  );
-
-  // Use two-column layout for large screen and one-column layout for small screen:
-  let leftColumnStudies: DisplayedStudy[], rightColumnStudies: DisplayedStudy[];
-  if (isLargeScreen) {
-    [leftColumnStudies, rightColumnStudies] = splitIntoTwoBalancedLists(
-      displayedProcessedStudies,
-      getStudyApproxHeight
-    );
-  } else {
-    leftColumnStudies = displayedProcessedStudies;
-    rightColumnStudies = [];
-  }
-
-  const displayedAdhocGroups = [...processedAdhocGroups.values()].map((group) =>
-    getDisplayedStudy(group, "", isLargeScreen)
-  );
-
   return {
-    leftColumnStudies,
-    rightColumnStudies,
-    adhocGroups: displayedAdhocGroups,
+    processedAdhocGroups, processedStudies
   };
 };
