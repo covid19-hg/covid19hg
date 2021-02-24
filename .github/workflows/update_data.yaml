@@ -45,7 +45,7 @@ jobs:
         id: git-status
 
       - name: Commit new data and push if there are changes
-        if: steps.git-status.outputs.POST_FETCHING_GIT_STATUS > 0
+        if: steps.git-status.outputs.POST_FETCHING_GIT_STATUS != ""
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
