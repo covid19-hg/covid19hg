@@ -14,7 +14,6 @@
   "author": "Netlify",
   "license": "MIT",
   "dependencies": {
-    "airtable": "^0.8.1",
-    "lodash": "4.17.15"
+    "airtable": "^0.8.1"
   }
 }
