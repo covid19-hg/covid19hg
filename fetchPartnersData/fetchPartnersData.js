@@ -1,5 +1,6 @@
+/* eslint-env node */
 const Airtable = require("airtable");
-const parseEmailField = require("../contact-investigator/parseEmailField");
+const parseEmailField = require("../lambda/contact-investigator/parseEmailField");
 
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",

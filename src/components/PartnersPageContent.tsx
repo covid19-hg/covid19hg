@@ -37,7 +37,7 @@ const extractCoordFromFetchResult = ({ features }: MapboxGeocodingResponse) => {
 };
 
 interface FetchedPartnersData {
-  data: AirtableDatum[];
+  default: AirtableDatum[];
 }
 
 interface Props {
@@ -55,11 +55,9 @@ const PartnersPageContent = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const airtableData = await fetchJSON<FetchedPartnersData>(
-          "/.netlify/functions/partners"
-        );
+        const airtableData = await (import("../partners.json") as unknown as Promise<FetchedPartnersData>)
 
-        const unsortedListData = airtableData.data.map((elem) => {
+        const unsortedListData = airtableData.default.map((elem) => {
           const allTextElems = [];
           if (elem.investigator !== undefined) {
             allTextElems.push(elem.investigator.toLowerCase());

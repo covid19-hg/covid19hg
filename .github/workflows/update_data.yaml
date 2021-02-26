@@ -3,7 +3,7 @@ on:
   schedule:
     # Note: UTC time
     # https://crontab.guru/
-    - cron: '30 * * * *'
+    - cron: "15 * * * *"
 
 jobs:
   update-data:
@@ -32,11 +32,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Install dependencies
+      - name: Install dependencies for contributors data fetching script
         run: cd fetchContributors && yarn --frozen-lockfile
 
-      - name: Execute data fetching script
+      - name: Install dependencies for partners data fetching script
+        run: cd fetchPartnersData && yarn --frozen-lockfile
+
+      - name: Execute contributors data fetching script
         run: node fetchContributors/index.js
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+
+      - name: Execute partners data fetching script
+        run: node fetchPartnersData/index.js
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
 
