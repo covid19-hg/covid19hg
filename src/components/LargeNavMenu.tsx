@@ -75,6 +75,7 @@ const navItems: NavItem[] = [
         label: 'Meeting Archive',
         icon: Notes,
         children: [
+          { href: '/blog/2021-03-02-february-26-2021-meeting/', label: 'February 26, 2021' },
           { href: '/blog/2021-01-29-january-25-2021-meeting/', label: 'January 25, 2021' },
           { href: '/blog/2020-11-24-november-19-2020-meeting/', label: 'November 19, 2020' },
           { href: '/blog/2020-10-28-october-23-2020-meeting/', label: 'October 23, 2020' },
