@@ -10,8 +10,6 @@ tags:
 type: blog-post
 ---
 
-January 25th, 2021
-
 Written by [Minttu Martilla](https://twitter.com/MinttuMarttila1), Annika Faucon, Nirmal Vadgama,  Shea Andrews, Brooke Wolford, and Kumar Veerapen on behalf of the COVID-19 HGI
 
 *Note: The COVID-19 Host Genetics Initiative (HGI) represents a consortium of over 2000 scientists from over 54 countries working collaboratively to share data, ideas, recruit patients and disseminate our findings. For a primer on our study design, please read our [inaugural blog post](/blog/2020-09-24-freeze-3-results/). Our research is iterative, and we summarize our new results via [blog posts](/blog/) and on the [results](/results/r5/) section of our website. Finally, if any vocabulary here is unfamiliar, please send us an email at [hgi-faq@icda.bio](mailto:hgi-faq@icda.bio)—we’d be happy to update the information here to provide more clarity. In the coming weeks, additional information explaining concepts or terminology will be made available. In the interim, take a look at [this](https://medlineplus.gov/genetics/understanding/) resource to review the basics of genetics.*
