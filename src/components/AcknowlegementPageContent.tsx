@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { Container, Grid } from "../components/materialUIContainers";
-import { fetchJSON } from "../Utils";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import {
@@ -32,7 +31,7 @@ interface FetchedData {
 }
 
 interface FetchedPartnersData {
-  data: AirtableDatum[];
+  default: AirtableDatum[];
 }
 
 const AcknowledgementPageContent = () => {
@@ -45,10 +44,10 @@ const AcknowledgementPageContent = () => {
       try {
         const [fetchedContributors, FetchedPartnersData] = await Promise.all([
           import("../acknowledgement.json") as unknown as Promise<FetchedContributorData>,
-          fetchJSON<FetchedPartnersData>("/.netlify/functions/partners"),
+          import("../partners.json") as unknown as Promise<FetchedPartnersData>
         ]);
         const { default: contributors} = fetchedContributors;
-        const { data: studies } = FetchedPartnersData;
+        const { default: studies } = FetchedPartnersData;
         setData({ contributors, studies });
       } catch (e) {
         console.error(e);
