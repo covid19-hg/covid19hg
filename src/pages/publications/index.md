@@ -14,6 +14,14 @@ studies:
     controls_description: Up to 2,070,709 controls
     genome_wide_significant_loci: 15 genome-wide significant loci, 11 associated
       with severity, 4 with susceptibility
+  - posted_date: 26th January 2021
+    name: Roberts, Partha, Rhead et al. - ANCESTRY DNA 2
+    links:
+      - url: https://www.medrxiv.org/content/10.1101/2021.01.24.21250324v1
+        description: Preprint
+    genome_wide_significant_loci: GALNT18 at chr 11
+    cases_description: 8,868 COVID-19 positives
+    controls_description: 64,161
   - posted_date: 18th January 2021
     name: COVID-19 HGI data freeze 5
     links:
