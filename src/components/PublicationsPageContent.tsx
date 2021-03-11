@@ -52,7 +52,7 @@ const PublicationsPageContent = ({ intro, publications }: Props) => {
     }) => {
       const leftColumnSize = 2;
       const rightColumnSize = 10;
-      const linkElems = links.map(({ description, url }) => {
+      const linkElems = links && links.map(({ description, url }) => {
         const urlElem = url.startsWith("/") ? (
           <GatsbyLink key={url} className={classes.link} to={url}>
             {description}
