@@ -14,6 +14,9 @@ studies:
     controls_description: Up to 2,070,709 controls
     genome_wide_significant_loci: 15 genome-wide significant loci, 11 associated
       with severity, 4 with susceptibility
+    links:
+      - description: Preprint
+        url: https://www.medrxiv.org/content/10.1101/2021.03.10.21252820v1
   - posted_date: 26th January 2021
     name: Roberts, Partha, Rhead et al. - ANCESTRY DNA 2
     links:
