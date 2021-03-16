@@ -10,11 +10,11 @@ tags:
 type: blog-post
 ---
 
-Written by [Minttu Martilla](https://twitter.com/MinttuMarttila1), Annika Faucon, Nirmal Vadgama,  Shea Andrews, Brooke Wolford, and Kumar Veerapen on behalf of the COVID-19 HGI
+Written by [Minttu Marttila](https://twitter.com/MinttuMarttila1), Annika Faucon, Nirmal Vadgama,  Shea Andrews, Brooke Wolford, and Kumar Veerapen on behalf of the COVID-19 HGI
 
 *Note: The COVID-19 Host Genetics Initiative (HGI) represents a consortium of over 2000 scientists from over 54 countries working collaboratively to share data, ideas, recruit patients and disseminate our findings. For a primer on our study design, please read our [inaugural blog post](/blog/2020-09-24-freeze-3-results/). Our research is iterative, and we summarize our new results via [blog posts](/blog/) and on the [results](/results/r5/) section of our website. Finally, if any vocabulary here is unfamiliar, please send us an email at [hgi-faq@icda.bio](mailto:hgi-faq@icda.bio)—we’d be happy to update the information here to provide more clarity. In the coming weeks, additional information explaining concepts or terminology will be made available. In the interim, take a look at [this](https://medlineplus.gov/genetics/understanding/) resource to review the basics of genetics.*
 
-
+**Scientific article of this release is now on [medRXiv](https://www.medrxiv.org/content/10.1101/2021.03.10.21252820v1).**
 
 ## Latest data freeze (release 5) increases sample size and robustness in genetic findings
 
@@ -41,7 +41,8 @@ Upon collecting the genetic data produced by our contributors, we performed GWAS
 
 ![Figure 3. Miami plot of genome-wide association results for COVID-19.](/img/release5_fig3.png)
 
-**Figure 3. Miami plot of genome-wide association results for COVID-19.** The top panel shows results of genome-wide association study of hospitalized COVID-19 and controls (_analysis A_), and bottom panel the results of reported SARS-CoV-2 infection and controls (_analysis C_).  
+**Figure 3. Miami plot of genome-wide association results for COVID-19.** The top panel shows results of genome-wide association study of hospitalized COVID-19 and controls (_analysis B_), and bottom panel the results of reported SARS-CoV-2 infection and controls (_analysis C_).  
+  
 
 
 ## The role of diverse samples
@@ -66,7 +67,7 @@ Risk factors identified in association studies may not point to a causal basis o
 
 ![Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection.](/img/release5_fig5.png)
 
-**Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection.** Traits are listed on X-axis and COVID-19 phenotypes on Y-axis. Blue represents negative genetic correlation and protective Mendelian randomization (MR) causal estimates and red represents positive genetic correlation and risk MR causal estimates. Larger squares correspond to more significant correlation. Causal estimates that pass a statistical significance threshold are marked with asterisk.
+**Figure 5: Genetic correlations and Mendelian randomization causal estimates between 38 traits and COVID-19 severity and SARS-CoV-2 reported infection.** Traits are listed on X-axis and COVID-19 phenotypes on Y-axis. Blue represents negative genetic correlation and protective Mendelian randomization (MR) causal estimates and red represents positive genetic correlation and risk MR causal estimates. Larger squares correspond to more significant correlation. Causal estimates that pass a statistical significance threshold are marked with asterisk.
 
 
 ## A global collaborative effort to understand COVID-19 host genetics
