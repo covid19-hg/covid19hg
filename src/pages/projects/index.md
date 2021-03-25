@@ -78,30 +78,34 @@ projects:
 
       View previous meeting recordings below:
 
-      - [Oct 2, 2020](https://drive.google.com/file/d/1JWlzWtjBLfMeQsCf8xnvC5QpflPdZDZO/view?usp=sharing)
 
-      - [Oct 23, 2020](https://drive.google.com/file/d/1-fdvgIEz3iN2ftMsAdk2B6NNvSXRlKyu/view?usp=sharing)
+      * [Oct 2, 2020](https://drive.google.com/file/d/1JWlzWtjBLfMeQsCf8xnvC5QpflPdZDZO/view?usp=sharing)
 
-      - [Nov 12, 2020](https://drive.google.com/file/d/1D4mRdgiBDNKQKk0S4piUF6w1r05qQsg0/view?usp=sharing)
+      * [Oct 23, 2020](https://drive.google.com/file/d/1-fdvgIEz3iN2ftMsAdk2B6NNvSXRlKyu/view?usp=sharing)
 
-      - [Nov 26, 2020](https://drive.google.com/file/d/1u4_XTJeYHlQfoGQe31gICAIHZvlv4hg3/view?usp=sharing)
+      * [Nov 12, 2020](https://drive.google.com/file/d/1D4mRdgiBDNKQKk0S4piUF6w1r05qQsg0/view?usp=sharing)
 
-      - [Dec 3, 2020](https://drive.google.com/file/d/177IlrmHGKHMZm9xRdgdeJsua_qFn00By/view?usp=sharing)
+      * [Nov 26, 2020](https://drive.google.com/file/d/1u4_XTJeYHlQfoGQe31gICAIHZvlv4hg3/view?usp=sharing)
 
-      - [Dec 17, 2020](https://drive.google.com/file/d/19_HPhqTCwC4JK-RwCYUd4Nfp7UruASbz/view?usp=sharing)
+      * [Dec 3, 2020](https://drive.google.com/file/d/177IlrmHGKHMZm9xRdgdeJsua_qFn00By/view?usp=sharing)
 
-      - [Jan 14, 2021](https://drive.google.com/file/d/1B547ihhJH0WCSjmJx74Vm0yHqgn5UVVu/view?usp=sharing)
+      * [Dec 17, 2020](https://drive.google.com/file/d/19_HPhqTCwC4JK-RwCYUd4Nfp7UruASbz/view?usp=sharing)
 
-      - [Jan 21, 2021](https://drive.google.com/file/d/1QT21NslQKM9SnsF2SJkWToxxL86mfCC1/view?usp=sharing)
+      * [Jan 14, 2021](https://drive.google.com/file/d/1B547ihhJH0WCSjmJx74Vm0yHqgn5UVVu/view?usp=sharing)
 
-      - [Jan 28, 2021](https://drive.google.com/file/d/14CIrnHkmTdfuVeN9m4Fk4PS9D_r_tRR9/view?usp=sharing)
+      * [Jan 21, 2021](https://drive.google.com/file/d/1QT21NslQKM9SnsF2SJkWToxxL86mfCC1/view?usp=sharing)
 
-      - [Feb 4, 2021](https://drive.google.com/file/d/15ZhEJ4_V0iVWL7xXeU13aGAtmvkeOqMU/view?usp=sharing)
+      * [Jan 28, 2021](https://drive.google.com/file/d/14CIrnHkmTdfuVeN9m4Fk4PS9D_r_tRR9/view?usp=sharing)
 
-      - [Feb 11, 2021](https://drive.google.com/file/d/1d70mO4u2qHZOiD6NQ-39NfFLXJan59Dk/view)
+      * [Feb 4, 2021](https://drive.google.com/file/d/15ZhEJ4_V0iVWL7xXeU13aGAtmvkeOqMU/view?usp=sharing)
 
-      - [Feb 25, 2021](https://drive.google.com/file/d/1E6I_3VkteTrh8xZ8j5wo6LdXD-hIY8eo/view)
+      * [Feb 11, 2021](https://drive.google.com/file/d/1d70mO4u2qHZOiD6NQ-39NfFLXJan59Dk/view)
 
+      * [Feb 25, 2021](https://drive.google.com/file/d/1E6I_3VkteTrh8xZ8j5wo6LdXD-hIY8eo/view)
+
+      * [Mar 4 2021](https://drive.google.com/file/d/1xG4rnLf4JYzuw4tT6MzH0O_rwtF56tCb/view?usp=sharing)
+
+      * [Mar 11 2021](https://drive.google.com/file/d/1-RUj0_N7cA0RjjdqHffXhFWw6nh8xr16/view?usp=sharing)
     title: WES/WGS working group within the HGI
     slack-channel: "#covid19-hg-wes-wgs"
     contact-persons:
