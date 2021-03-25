@@ -332,7 +332,7 @@ const release = {
     { abbreviation: 'GCAT', full_name: 'Genomes for Life' },
     { abbreviation: 'GFG', full_name: 'Genes for Good' },
     { abbreviation: 'Genotek', full_name: 'Genotek COVID-19 study' },
-    { abbreviation: 'SINAI_COVID', full_name: 'Analysis of COVID-19 within New York' },
+    { abbreviation: 'MSHS_CGI', full_name: 'Mount Sinai Health System COVID-19 Genomics Initiative' },
     { abbreviation: 'TOPMed_CHRIS10K', full_name: 'CHRIS' },
   ],
   analyses,
