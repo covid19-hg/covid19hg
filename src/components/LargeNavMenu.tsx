@@ -45,6 +45,7 @@ const navItems: NavItem[] = [
       // {href: "/sequencing-support/", label: "Sequencing support"},
       { href: '/partners/', label: 'Study partners' },
       { href: '/projects/', label: 'Projects' },
+      { href: '/contact/', label: 'Contact' },
     ],
   },
   {
