@@ -20,9 +20,9 @@ Informacja: Konsorcjum COVID-19 Host Genetics Initiative (HGI) reprezentuje pona
 
 #### Artykuł naukowy opisujący najnowsze wyniki jest dostępny [tutaj.](https://www.medrxiv.org/content/10.1101/2021.03.10.21252820v1)
 
-Najnowsza analiza (nr 5) została wykonana na większej niż poprzednio grupie badanych oraz zyskała większą wiarygodność odkryć genetycznych.
+**Najnowsza analiza (nr 5) została wykonana na większej niż poprzednio grupie badanych oraz zyskała większą wiarygodność odkryć genetycznych.**
 
-#### Konsorcjum COVID-19 HGI regularnie publikuje obszerne dane genetyczne pochodzące ze swoich badań prowadząc największe w historii analizy typu [GWAS (Genome Wide Association Study)](https://www.broadinstitute.org/files/styles/visuals_style/public/GWAS-Explainer-08-02-17.jpg?itok=-6sgc6nN). Analiza jest rekordowa zarówno pod względem ilości uczestników projektu (ponad 2 miliony osób), jak również liczby zaangażowanych badaczy (ponad 2000 naukowców). Poniżej opisujemy wyniki najnowszej, piątej analizy. W poprzedniej analizie (nr 4) opublikowaliśmy warianty genetyczne w genomie człowieka powiązane z ciężkim przebiegiem choroby COVID-19 (przeczytaj nasze post na blogu dedykowane dla osób niezwiązanych z nauką z [analizy 3](https://www.covid19hg.org/pl/blog/2020-09-24-freeze-3-results/) i [analizy 4](https://www.covid19hg.org/pl/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/)). Zidentyfikowaliśmy te warianty poprzez analizę GWAS przeprowadzoną dla 30 000 osób zakażonych SARS-CoV-2 (grupa badana) i 1,47 miliona osób nie zakażonych (grupa kontrolna). W analizie nr 5 zwiększyliśmy liczebność grup do prawie 50 000 w grupie badanej oraz do ponad 2 milionów osób w grupie kontrolnej, poprzez połączenie danych z 47 projektów prowadzonych w 19 krajach (Rysunek 1). Dzięki zwiększeniu liczebności obu grup, poprawiła się przede wszystkim wiarygodność naszych wyników. W poniższej analizie, podjęliśmy również próbę zwiększenia różnorodności populacji. Analizowanie genów w populacjach o zróżnicowanym pochodzeniu etnicznym pomaga lepiej zrozumieć genetyczne warianty wpływające na ciężkość przebiegu choroby COVID-19 oraz ich obecność w populacjach na całym świecie. Spośród 47 zaangażowanych w analizę projektów naukowych, 19 zawiera próbki pochodzące spoza Europy.
+Konsorcjum COVID-19 HGI regularnie publikuje obszerne dane genetyczne pochodzące ze swoich badań prowadząc największe w historii analizy typu [GWAS (Genome Wide Association Study)](https://www.broadinstitute.org/files/styles/visuals_style/public/GWAS-Explainer-08-02-17.jpg?itok=-6sgc6nN). Analiza jest rekordowa zarówno pod względem ilości uczestników projektu (ponad 2 miliony osób), jak również liczby zaangażowanych badaczy (ponad 2000 naukowców). Poniżej opisujemy wyniki najnowszej, piątej analizy. W poprzedniej analizie (nr 4) opublikowaliśmy warianty genetyczne w genomie człowieka powiązane z ciężkim przebiegiem choroby COVID-19 (przeczytaj nasze post na blogu dedykowane dla osób niezwiązanych z nauką z [analizy 3](https://www.covid19hg.org/pl/blog/2020-09-24-freeze-3-results/) i [analizy 4](https://www.covid19hg.org/pl/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/)). Zidentyfikowaliśmy te warianty poprzez analizę GWAS przeprowadzoną dla 30 000 osób zakażonych SARS-CoV-2 (grupa badana) i 1,47 miliona osób nie zakażonych (grupa kontrolna). W analizie nr 5 zwiększyliśmy liczebność grup do prawie 50 000 w grupie badanej oraz do ponad 2 milionów osób w grupie kontrolnej, poprzez połączenie danych z 47 projektów prowadzonych w 19 krajach (Rysunek 1). Dzięki zwiększeniu liczebności obu grup, poprawiła się przede wszystkim wiarygodność naszych wyników. W poniższej analizie, podjęliśmy również próbę zwiększenia różnorodności populacji. Analizowanie genów w populacjach o zróżnicowanym pochodzeniu etnicznym pomaga lepiej zrozumieć genetyczne warianty wpływające na ciężkość przebiegu choroby COVID-19 oraz ich obecność w populacjach na całym świecie. Spośród 47 zaangażowanych w analizę projektów naukowych, 19 zawiera próbki pochodzące spoza Europy.
 
 
 
@@ -30,13 +30,15 @@ Najnowsza analiza (nr 5) została wykonana na większej niż poprzednio grupie b
 
 Rysunek 1. Lista partnerów Konsorcjum HGI COVID-19, którzy przyczynili się do analizy nr 5. Spośród 47 projektów, 19 zawiera dane populacji spoza Europy. Na podstawie [prezentacji Andrei Ganna](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) na temat HGI COVID-19 z dnia 25 stycznia 2021.
 
+
+
 ## Struktura badania
 
 Podobnie jak podczas poprzednich badań, przeprowadziliśmy trzy typy analiz (Rysunek 2): A) krytyczny przebieg COVID-19 (kończący się wspomaganiem oddychania lub śmiercią z powodu COVID-19), B) hospitalizacja z powodu COVID-19 i C ) podatność na zakażenie SARS-CoV-2. Analizy te mają na celu uchwycenie cech genetycznych związanych zarówno z podatnością na zakażenie SARS-CoV-2, jak i ciężkością przebiegu COVID-19. Ostatnia analiza (Analiza C) miała na celu wykrycie wariantów genetycznych przyczyniających się do zakażenia SARS-CoV-2. Analiza ta obejmowała wszystkie przypadki choroby COVID-19, niezależnie od obecności lub nasilenia objawów. Wyniki analizy, definicje przypadków i kontroli oraz liczebność prób przedstawiono na Rysunku 2.
 
-![](https://lh3.googleusercontent.com/CiPW38vjnkNbh3uH_oZnulWK2cmmMRWL40vBXotyBZA_QCewk-T-3WuzaDPj5QxytFAGYWdl7cRcg-gy6h_mj5iMKMgZ0EEvyWVSt_edzZl1YhIDUyR-nh4tIoaJmxyMIsR53jNR)
 
 
+Rysunek 2: Definicja przypadków (badanych) i kontroli dla każdej analizy w badaniu nr 5. Należy zauważyć, że SARS-CoV-2 to wirus, który powoduje chorobę COVID-19. Na podstawie [prezentacji Andrei Ganna](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) z 25 stycznia 2021 r.
 
 
 
@@ -44,23 +46,13 @@ Podobnie jak podczas poprzednich badań, przeprowadziliśmy trzy typy analiz (Ry
 
 Po zebraniu danych genetycznych dostarczonych przez naszych współpracowników, przeprowadziliśmy GWAS zgodnie z definicjami na Rysunku 2. Wcześniej, w [analizie nr 4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/), podkreślaliśmy nowe sygnały genetyczne dotyczące podatności i ciężkości COVID-19 w 7 regionach chromosomów. Regiony te wskazują na etiologię w zaburzeniach odporności wrodzonej i dysfunkcji płuc zgodnie z wiodącą wiedzą kliniczną dotyczącą zakażeń COVID-19. W analizie nr 5 zidentyfikowaliśmy 15 regionów istotnych w skali całego genomu we wszystkich chromosomach: region chromosomu 1 wykazywał istotność w skali całego genomu tylko w analizie krytycznie chorych (analiza A); region chromosomu 11 ma większy wpływ w analizie ciężkości przebiegu choroby niż w podatności na zakażenie (analiza B); a 4 z tych regionów chromosomowych są specyficzne dla zakażenia zgłoszonego przez SARS-CoV-2 (analiza C). Na Rysunku 3 przedstawiamy graficzną reprezentację tych wyników jako wykres w Miami (panelowa wersja [wykresu Manhattan](https://en.wikipedia.org/wiki/Manhattan_plot). Nazwana na cześć Miami, jako odzwierciedlenie odbicia panoramy Miami na wodzie).
 
-![](https://lh3.googleusercontent.com/KjYDaYSp10qnSTgK1DxuIbLReaWvgDkDqDxWozwZ_LDNMOTmJQSuOkf7d5ooIcLzGqtWssXMmAScJ6aovVGt9fAHMJHchYbVJlAEYVgTnlR1RvNSg4I5QEVB9qywJAbPHmeoqnSr)
-
 Rysunek 3. Wykres Miami przedstawiający wyniki asocjacji całego genomu dla COVID-19. Górny panel przedstawia wyniki badania asocjacyjnego całego genomu pacjentów hospitalizowanych z powodu COVID-19 i kontroli (analiza B), a dolny panel wyniki związane z podatnością na zakażenie SARS-CoV-2 w stosunku do kontroli (analiza C).
-
-<!--StartFragment-->
-
-
-
-<!--EndFragment-->
-
-
 
 ## Rola różnorodności prób
 
 Należy zdawać sobie sprawę, że w przypadku wielu badań genetycznych różnorodność pobieranych próbek jest głównym problemem (omówionym [tutaj](https://www.vox.com/science-and-health/2018/10/22/17983568/dna-tests-precision-medicine-genetics-gwas-diversity-all-of-us)). W związku z tym staraliśmy się zwiększyć różnorodność w naszym zbiorze prób w miarę rozwoju badań (Rysunek 4). Podjęte wysiłki w zakresie pobierania próbek doprowadziły do zidentyfikowania nowych czynników genetycznych związanych z COVID-19 (nasze poprzednie wyniki są omówione w postach na blogach dla [analiz nr 3](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) i [4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/)). Dzięki jednoczesnej identyfikacji genetycznych czynników ryzyka za pomocą naszych metod analitycznych, jesteśmy w stanie obserwować warianty genetyczne w genach lub w ich pobliżu. Jak dotąd większość zidentyfikowanych przez nas genów wskazuje na zwiększone ryzyko związane z mechanizmami komórkowymi, regulacją odpowiedzi immunologicznej i czynnością serca. Identyfikacja tych czynników ryzyka może ostatecznie doprowadzić do rozwoju terapii ukierunkowanych na procesy związane ze zidentyfikowanymi genami.
 
-![](https://lh3.googleusercontent.com/5DuGrAQ8cGuT25k2sn8dQx6cf4qQJip8siYKd-KFQGeyW_zWdedv7pS5OBEp3SFhvuVcyMSLP1JJzN2kopY_pNIfq8NgryMWkdSrDeD2FReclfuwwCgP9v8F0na4y9QAfu2r1AiW)
+
 
 Rysunek 4. Przegląd badań konsorcjantów biorących udział w inicjatywie dotyczącej roli genetyki człowieka w przebiegu COVID-19 i rozkładu głównych grup etnicznych w meta-analizach. W analizie nr 5, 19 badań dotyczyło populacji pozaeuropejskich: 7 Afroamerykanów, 5 Amerykanów z domieszkami, 4 wschodnioazjatyckie, 2 południowoazjatyckie i 1 arabska. Diamenty reprezentują efektywną wielkość prób (wielkość prób, która będzie miała statystycznie istotny wpływ na uzyskane wyniki) badanych w różnych lokalizacjach geograficznych.
 
@@ -74,25 +66,17 @@ Wreszcie, w analizie C, dla zgłoszonych infekcji SARS-CoV-2, znaleziono 3 nowe 
 
 W naszych analizach geny wpływające na układ odpornościowy odgrywają ważną rolę w COVID-19. Częścią naszych odkryć są również geny zaangażowane w czynność płuc i serca oraz procesy neuronalne. Choroby serca były wcześniej zgłaszane jako czynnik podatności na COVID-19 a objawy neuronalne były zgłaszane jako część choroby COVID-19.
 
-
-
 **Korelacja nie oznacza związku przyczynowego**
 
 Czynniki ryzyka zidentyfikowane w badaniach asocjacyjnych mogą nie wskazywać na przyczynę podatności lub ciężkości COVID-19. W związku z tym zastosowaliśmy metodę zwaną [randomizacją mendlowską (MR)](https://en.wikipedia.org/wiki/Mendelian_randomization), która wykorzystuje informacje genomowe do wnioskowania o związkach przyczynowych. MR to metoda wykorzystująca warianty genetyczne, o których wiadomo, że wpływają na daną ekspozycję (np. BMI) w celu zbadania przyczynowego wpływu wystawienia na efekty choroby. Aby przyjrzeć się bliżej, opisaliśmy MR w niedawnym [poście](https://www.covid19hg.org/blog/2021-02-05-mr-working-group/) na blogu (skierowanym do odbiorców naukowych). W ramach trzech fenotypów COVID-19 zidentyfikowaliśmy statystycznie istotne związki przyczynowe między trzema wynikami COVID-19 a 6 cechami (z 38 wybranych cech które przebadaliśmy, Rysunek 4), Stwierdziliśmy, że przewidywany genetycznie wyższy wskaźnik masy ciała (BMI) był związany z wyższym ryzykiem zakażenia SARS-CoV-2 i hospitalizacji z powodu COVID-19. Wynik ten potwierdza wyniki badań obserwacyjnych, które potwierdziły zwiększone ryzyko ciężkich następstw COVID-19 związane z wyższym BMI. Ponadto genetycznie przewidywanie palenie tytoniu wiązało się ze zwiększonym ryzykiem hospitalizacji z powodu COVID-19.
-
-
 
 #### ![Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection.](https://lh3.googleusercontent.com/HEso-VZu-iUonl1jMhuGv4jvEkSjO2mI5GmiqpG0JEbd8-lZpodCfcHjEORqUvzcfpFAtun3V0DO0d03KPt98CxrX254HlftmeI-HyW-kg_MBow6YgubV9gt2cKeWgFYcK0KfLwC "Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection.")
 
 Rysunek 5: Korelacje genetyczne i szacunki przyczynowe dotyczące randomizacji mendlowskiej między 43 cechami a ciężkością COVID-19 i zakażeniem zgłoszonym przez SARS-CoV-2. Cechy są wymienione na osi X, a fenotypy COVID-19 na osi Y. Kolor niebieski reprezentuje ujemną korelację genetyczną i ochronne szacunki przyczynowe randomizacji mendlowskiej (MR), a kolor czerwony oznacza dodatnią korelację genetyczną i zwiększone ryzyko MR. Większe kwadraty odpowiadają bardziej znaczącej korelacji. Szacunki przyczynowe, które przekraczają próg istotności statystycznej, są oznaczone gwiazdką.
 
-
-
 **Globalna wspólna próba zrozumienia genetyki COVID-19**
 
 W obecnym globalnym kryzysie pandemii COVID-19 wyniki te pokazują siłę globalnego wysiłku 47 różnych uczestników. W sumie zidentyfikowaliśmy 15 regionów genomowych powiązanych z podatnością i ciężkością COVID-19. Aby dokładniej zbadać przyczynowość tych regionów, wykorzystaliśmy wnioskowanie statystyczne (tj. Randomizację mendlowską), aby zidentyfikować 8 cech o statystycznie istotnej przyczynowości sygnałami zidentyfikowanymi przy pomocy analiz GWAS. Obecnie finalizujemy nasze wyniki w artykule naukowym. W miarę jak będziemy walczyć z globalną pandemią COVID-19, Konsorcjum COVID-19 HGI będzie iteracyjnie publikować wyniki analiz genetycznych. Współpracując, możemy wygenerować solidne wnioski wymagane do lepszego zrozumienia czynników biologicznych i klinicznej prezentacji COVID-19.
-
-
 
 #### Podziękowania
 
