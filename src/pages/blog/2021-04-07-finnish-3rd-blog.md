@@ -1,0 +1,111 @@
+---
+templateKey: blog-post
+title: Finnish-3rd-blog
+date: 2021-04-07T09:26:42.233Z
+type: blog-post
+---
+**COVID-19 HGI Tulokset tammikuussa 2021 (Data Freeze 5)**
+
+**Tammikuu 02, 2021**
+
+
+
+Kirjoittaneet [Minttu Marttila](https://twitter.com/MinttuMarttila1), Annika Faucon, Nirmal Vadgama, Shea Andrews, Brooke Wolford, and Kumar Veerapen, COVID-19 HGI tutkimuksen puolesta, käännös Minttu Marttila
+
+
+
+The COVID-19 Host Genetics Initiative (HGI) on yli 2000 tukijan konsortio. Tutkijat ovat 54 maasta ja tekevät yhteistyötä datan ja ideoiden jakamisessa, potilaiden rekrytoinnissa ja tulosten julkistamisessa. Tutkimuksen suunnitelmasta voit lukea ensimmäisestä blogi kirjoituksestamme. Tutkimuksemme on interaktiivista ja tiivistämme uudet tulokset blogi kirjoituksiin ja tulokset osioon verkkosivuillamme. Jos tarvitset apua sivuston sanaston tai sisällön ymmärtämisessä, lähetä sähköpostia osoitteeseen hgi-faq@icda.bio. Autamme mielellämme. Tulevina viikkoina lisätietoa terminologiasta tulee sivustolle. Lisätietoa genetiikan perusteista löytyy täältä.
+
+
+
+**Uusin näytekeräys (data freeze 5) lisäsi näytemäärää ja vahvisti geneettisiä löydöksiä**
+
+
+
+The COVID-19 HGI tutkimus löysi vahvoja geneettisiä signaaleja ja on historian laajin genomin laajuinen assosiaatio tutkimus (Genome Wide Association Study, GWAS): sekä tutkimukseen osallistuneiden suhteen (>2 miljoonaa henkilöä) että osallistuneiden tutkijoiden määrän suhteen (>2000 tutkijaa). Viime näytekeräyksessä (data freeze 4), raportoimme geneettisten alueiden assosiaatiosta vakavaan COVID-19 tautiin (lue viimeiset blogimme [data freeze 3](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) ja [data freeze 4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/) keräyksistä). Löysimme variantit GWAS tutkimuksen avulla yli 30 000 potilaasta (case) ja 1.47 miljoonassa kontrolli henkilöstä (control), joilla ei ollut COVID-19 tautia. Tammikuun 2021 näytekeräyksessä (data freeze 5), näytemäärämme nousi lähes 50 000 COVID-19 potilaaseen ja yli 2 miljoonaan kontrolliin kun yhdistimme datan 47 tutkimuksesta, jotka tulivat 19 maasta (Kuva 1). Näytemäärän lisääntyminen vahvisti analyysimme luotettavuutta. Tässä näytekeräyksessä halusimme lisätä myös tutkimusotoksen monimuotoisuutta. Kun tutkimusotoksen osallistujat ovat syntyperältään eri maanosista, se auttaa meitä paremmin ymmärtämään geneettistä muuntelua, jotka vaikuttavat COVID-19 taudin alttiuteen ja vaikeusasteeseen ympäri maailmaa. Mukana olevista 47 tutkimuksesta, 19 osallistujat olivat syntyperältään muita kuin eurooppalaisia.
+
+
+
+![](https://lh5.googleusercontent.com/5uxrhp0acpH6gbz9WZOq-OkdCns337haqH-EvkmN0tdC2kn-vPRsjVkwDie4ciSJ2bMmvrjbGMqFJZ5VWVzMiTfpOee0W2Hffp91z4uumBztgl1AQ3BX2Dy5N8_Xt86f-JmwD_Vh)
+
+
+
+Kuva 1: Lista COVID-19 HGI tutkimukseen osallistuneista (Data freeze 5). Osallistuneista 47 tutkimuksesta, 19 tutkimuksessa osallistujat olivat syntyperältään muita kuin eurooppalaisia. Muokattu Andrea Gannan esityksestä tammikuun 25. 2021.
+
+
+
+Tutkimuksen rakenne
+
+Kuten edellisissä näytekeräyksissä, tutkimme kolmea vaihtoehtoa (Kuva 2): A) kriittisesti COVID-19 tautiin sairastuneet (potilaat tarvitsivat apua hengitykseen tai kuolivat COVID-19 tautiin), B) COVID-19 taudin vuoksi sairaalaan joutuneet ja C) SARS-CoV-2 infektion saaneet. Näiden analyysien on tarkoitus paljastaa geneettisiä assosiaatioita SARS-CoV-2 infektion alttiudelle ja COVID-19 taudin vaikeille muodoille. Viimeinen analyysi (analyysi C) etsi geneettisiä variantteja, jotka vaikuttivat SARS-CoV-2 infektion alttiuteen. Tässä analyysissä olivat mukana kaikki tautitapaukset (cases) vakavuusasteesta riippumatta. Analyysien tulokset, tautitapausten ja kontrollien määritelmät ja näytemäärät löytyvät kuvasta 2.
+
+
+
+![](https://lh3.googleusercontent.com/SuRLCYXA3ggmM19_jcFZvvfhrOnX4yw-YCCNG-S-mgiR3lYSh_niKj8VrqBEZLWQM8Wx-icnTmxonhbS4EnfHOGipFLQX_bcFFLA0OViFp9YBR2b5fkn2GL2GvOEguMoEOLJzMZK)
+
+
+
+**Kuva 2**: Tautitapausten ja kontrollien jaottelu eri analyyseissa (data freeze 5). SARS-CoV-2 on virus, joka aiheuttaa COVID-19 infektion. Muokattu [Andrea Gannan esityksestä](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) tammikuun 25. 2021.
+
+**COVID-19 tautiin assosioituvat geenialueet viittaavat synnynnäiseen vastustuskykyyn ja keuhkojen toimintahäiriöön**
+
+
+
+Kerättyämme yhteistyökumppaneidemme tuottaman geneettisen datan, teimme GWAS analyysin kuten kuvassa 2 on määritelty. Aiemmassa näytekeräyksessä ([data freeze 4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/)), löysimme uusia geneettisiä signaaleja jotka vaikuttavat COVID-19 taudin alttiuteen ja vaikeusasteeseen seitsemältä kromosomin alueelta. Näiden alueiden etiologia viittaa synnynnäiseen immuniteettiin ja keuhkojen toimintahäiriöön. Tämä on samalla linjalla COVID-19 taudin nykyisen kliinisen ymmärryksen kanssa. Uusimmassa näytekeräyksessä löysimme 15 genominlaajuisesti merkittävää kromosomin aluetta: 1 kromosomin alue on genominlaajuisesti merkittävä vain kriittisesti sairailla potilailla (analyysi A), 11 kromosomin alueella on korkeampi vaikutus sairauden vaikeusasteeseen kuin raportoituun infektioon (analyysi B) ja 4 näistä kromosomin alueista on spesifisiä SARS-CoV-2 raportoidulle infektiolle (analyysi C). Kuvassa 3 näkyy graafinen esitys näistä tuloksista Miami kuviossa (Miami plot; Se on kuin peilikuva versio [Manhattan plot](https://en.wikipedia.org/wiki/Manhattan_plot)ista. Se on nimetty Miamin kaupungin mukaan, kun horisontti heijastuu vedestä.)
+
+
+
+![](https://lh6.googleusercontent.com/9_UHD2M1D5nWBEl3twyHUwCUwxkbW5Rxh0pnjLXFwi_F2_k9fR-fUQI6ccrw3Qg6SkTIkFhhufWXxIuK4GOY9Z80xi2gg2ZCU5QxGiJlHpGSx0oZDSBNSlFYDoiLdf19dmKENJbw)
+
+
+
+**Kuva 3.** Miami kuvio genomin laajuisen assosiaation tuloksista COVID-19 taudille. Yläpaneelissa on genomin laajuisen assosiaatio tulokset sairaalahoitoon joutuneille COVID-19 potilaille ja kontrolleille (analyysi B), ja alapaneelissa on raportoidun SARS-CoV-2 infektion saaneille potilaille ja kontrolleille (analyysi C).
+
+
+
+**Monimuotoiset näytteet**
+
+Monissa geneettisissä tutkimuksissa, näytteiden syntyperän monimuotoisuus on suuri ongelma (selitetty täällä). Niinpä halusimme kasvattaa näytteidemme monimuotoisuutta kun tutkimus kasvoi (Kuva 4). Parannettu monimuotoisempi näytekokoelmamme auttoi meitä löytämään uusia geneettisiä tekijöitä, jotka assosioituvat COVID-19 tautiin (aikaisemmista tuloksistamme kerrotaan blogeissa [data](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) freeze 3 ja [data freeze 4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/)). Analyyttisiä metodeja käyttämällä löysimme geneettisiä riskitekijöitä: löysimme geneettisiä variantteja geeneissä tai niiden lähellä. Suurin osa löytämistämme geeneistä viittaa lisääntyneeseen riskiin solumekanismeissa, immuunipuolustuksessa ja sydämen toiminnassa. Näiden riskitekijöiden löytyminen voi johtaa hoitoihin jotka kohdistuvat identifioituihin geeneihin.
+
+
+
+![](https://lh4.googleusercontent.com/vzuoLcOHfEuoO3ADx3Mv-hj7Fn2G_mI5ZaBonkoQ0Qg4bJEHWTzq6vMo7R0s6WzW3G2ngVfsLCSATusWWB_wm_eIFCwag8txOavLUgg3n-1b2SU-0sKZsJqg7_ZhJ_eXggjMnS1D)
+
+
+
+**Kuva 4.** Yleiskuva COVID-19 HGI konsortioon osallistuvista tutkimuksista ja meta-analyysin näytteiden syntyperä maanosittain. Viimeisessä näytekeräyksessä oli mukana 19 tutkimusta, joissa osallistujien syntyperä ei ollut eurooppalainen: 7 afrikan amerikkalaista, 5 sekoitetun syntyperän amerikkalaista, 4 itä-aasialaista, 2 etelä-aasialaista ja 1 arabi. Timantit näyttävät efektiivisen näytekoon (näytekoon, joka on tilastollisesti merkittävä tieteellisten tapahtumien todentamiseen) eri maanosissa.
+
+
+
+Löysimme 9 uutta kromosomin aluetta, jotka assosioituivat COVID-19 taudin kanssa. Kriittisen sairauden analyysissa A, nämä olivat lähellä geenejä: [LZTFL1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=LZTFL1) kromosomissa 3 ja [TAC4](https://www.genecards.org/cgi-bin/carddisp.pl?gene=TAC4) kromosomissa 17. LZTFL1 säätelee proteiinien kuljetusta värekarvan kalvolle. Värekarvat ovet ripsien kaltaisia ulokkeita, jotka ulkonevat solusta. Niitä löytyy ilmateistä, keuhkoista ja monista muista elimistä. LZTFL1 osallistuu myös immuunipuolustukseen. TAC4 proteiini säätelee verenpainetta ja immuunijärjestelmää.
+
+Potilaissa, jotka olivat joutuneet sairaalahoitoon löysimme variantteja lähellä 4 geeniä (Analyysissa B). Ensin löysimme alueen [THBS3](https://www.genecards.org/cgi-bin/carddisp.pl?gene=THBS3) geenissä kromosomissa 1. THBS3 proteiini esiintyy sydämessä ja sen määrä lisääntyy sydänsairauksissa. Toiseksi löysimme kromosomialueen [SCN1A](https://www.genecards.org/cgi-bin/carddisp.pl?gene=SCN1A) geenissä kromosomissa 2. Variaatiot SCN1A geenissä aiheuttavat epilepsiakohtauksia. Kolmanneksi löysimme kromosomialueen [TMEM65](https://www.genecards.org/cgi-bin/carddisp.pl?gene=TMEM65) geenistä kromosomissa 8. TMEM65 proteiini säätelee sydämen kehitystä ja toimintaa. Sillä voi olla rooli myös solun energia aineenvaihdunnassa. Variantilla, joka löydettiin analyysissamme on 12% frekvenssi itä-aasialaisessa väestössä ja 1% eurooppalaisessa väestössä. Alleelifrekvenssit kuvaavat variaation määrää tietyssä geenissä tai kromosomin alueella. Viimeiseksi löysimme kromosomi alueen [KANSL1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=KANSL1) geenissä kromosomissa 17. KANSL1 proteiinin on arveltu osallistuvan neurologisiin prosesseihin.
+
+Viimeiseksi löysimme SARS-CoV-2 infektion saaneilla potilailla (analyysi C) 3 uutta assosiaatiota lähellä geenejä [ZBTB11](https://www.genecards.org/cgi-bin/carddisp.pl?gene=ZBTB11) kromosomissa 3, [DNAH5](https://www.genecards.org/cgi-bin/carddisp.pl?gene=DNAH5) kromosomissa 5 ja [PPP1R15A](https://www.genecards.org/cgi-bin/carddisp.pl?gene=PPP1R15A) kromosomissa 19. Ensimmäinen löytämämme geeni [ZBTB11](https://www.genecards.org/cgi-bin/carddisp.pl?gene=ZBTB11) tuottaa proteiinia ZBTB11, joka säätelee immuunisolujen kehitystä. Seuraavaksi löysimme kromosomin alueen [DNAH5](https://www.genecards.org/cgi-bin/carddisp.pl?gene=DNAH5) geenissä, jonka variantit aiheuttavat viallisten värekarvojen oireyhtymän (primary ciliary dyskinesia) johtaen karvan liikkeen vajaavuuteen. Tämä aiheuttaa toistuvia hengitystieinfektioita, keuhkoputkentulehdusta ja hedelmättömyyttä. Viimeiseksi löysimme kromosomin alueen läheltä [PPP1R15A](https://www.genecards.org/cgi-bin/carddisp.pl?gene=PPP1R15A) geeniä kromosomissa 19. PPP1R15A proteiini aiheuttaa kasvun viivästymää ja solukuolemia, jotka aiheutuvat DNA vaurioista, negatiivisista kasvusignaaleista ja proteiinin väärästä rakenteesta.
+
+
+
+Immuunipuolustukseen vaikuttavilla geeneillä on tärkeä rooli COVID-19 taudissa analyyseissamme. Löysimme myös geenejä jotka ovat tärkeitä keuhkojen ja sydämen toiminnalle ja neurologisille prosesseille. Sydänsairaudet on aiemmin todettu altistavaksi tekijäksi COVID-19 taudille ja potilailla on raportoitu neurologisia oireita.
+
+
+
+**Korrelaatio ei tarkoita syy-seuraussuhdetta**
+
+Assosiaatiotutkimuksissa havaitut riskitekijät eivät välttämättä löydä syytä COVID-19 taudin alttiuteen ja vakavuusasteeseen. Tämän vuoksi käytimme menetelmää nimeltä [Mendel-satunnaistus (Mendelian randomization, MR)](https://en.wikipedia.org/wiki/Mendelian_randomization), joka käyttää geneettistä informaatiota syy-seuraussuhteiden löytämiseen. MR käyttää geneettisiä variantteja joiden tiedetään vaikuttavan tiettyyn altistukseen (esim. BMI) tutkiakseen altistuksen vaikutusta sairauteen. Tarkempaa tietoa löytyy aiemmasta [blogi kirjoituksestamme](https://www.covid19hg.org/blog/2021-02-05-mr-working-group/) (suunnattu tieteelliselle yleisölle). Löysimme tilastollisesti merkittäviä syy-seuraussuhteita kolmessa eri COVID-19 fenotyypissä (analyysit A, B ja C) ja 6 piirteessä (kaiken kaikkiaan 38 piirrettä testattiin, Kuva 4). Geneettisesti ennustettu korkea painoindeksi (BMI) assosioitui korkeampaan SARS-CoV-2 infektion riskiin ja COVID-19 taudin sairaalahoitoon. Tämä tukee havaintotutkimuksia, joissa on todettu kohonneen BMI:n ja vakavan COVID-19 taudin liittyvän yhteen. Lisäksi geneettisesti ennustettu tupakointi assosioitui kohonneeseen riskiin joutua sairaalaan COVID-19 taudin kanssa.
+
+
+
+![](https://lh5.googleusercontent.com/qetLN0PY6hUQFUQbDaxlJAle6W_Nd_sIW3kaXm6n-aD-eV5zSTE0rWG-KlJoPoXka3lfa0Wqq3ENfdkA-Dpi-4_hJYcArnqKcQqmx0AZrlVn_HQUk5PwTBgxutzC0cFV_OduRZnN)
+
+
+
+**Kuva 5.** Geneettinen korrelaatio ja Mendel-satunnaistuksen syy-seuraussuhteet 38 piirteessä COVID-19 taudin suhteen. Piirteet on listattu X-akselilla ja COVID-19 fenotyypit Y-akselilla. Sininen tarkoittaa negatiivista geneettistä korrelaatiota ja suojaavaa Mendel-satunnaistuksen (MR) syy-seuraussuhdetta. Punainen tarkoittaa positiivista geneettistä korrelaatiota ja kohonnutta riskiä MR syy-seuraussuhteissa. Suuremmat ruudut tarkoittavat merkittävämpää korrelaatiota. Syy-seuraussuhteet, jotka ylittävät tilastollisesti merkittävän raja-arvon on merkitty tähdellä.
+
+**Maailman laajuinen hanke COVID-19 taudin genetiikan selvittämiseksi**
+
+Tutkimuksemme tulokset osoittavat globaalin yhteistyön merkityksen nykyisessä maailman laajuisessa COVID-19 pandemiassa. Löysimme yhteensä 15 geneettistä aluetta, jotka assosioituivat COVID-19 tautiin. Tutkiaksemme tarkemmin alueita käytimme tilastollista päättelyä (Mendel-satunnaistaminen) ja löysimme 8 piirrettä, jolla oli tilastollisesti merkittävä syy-seuraussuhde COVID-19 GWAS signaaleihin. Olemme parhaillaan viimeistelemässä tieteellistä artikkelia tuloksista. Kun jatkamme COVID-19 pandemiassa luovimista, COVID-19 HGI jatkaa tutkimustulosten tuottamista interaktiivisesti. Työskentelemällä yhdessä voimme tuottaa vahvoja geneettisiä tuloksia ja ymmärtää paremmin COVID-19 taudin biologisia tekijöitä ja kliinistä kuvaa.
+
+
+
+**Kiitos**
+
+Haluamme kiittää Andrea Gannaa palautteesta ja rakentavista kommenteista.
