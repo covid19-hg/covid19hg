@@ -7,8 +7,6 @@ tags:
     Forschung
 type: blog-post
 ---
-<!--StartFragment-->
-
 # COVID-19 HGI-Ergebnisse, Version 5 (Januar 2021)
 
 2. March, 2021
@@ -16,8 +14,6 @@ type: blog-post
 Geschrieben von [Minttu Marttila](https://twitter.com/MinttuMarttila1), Annika Faucon, Nirmal Vadgama, Shea Andrews, Brooke Wolford, und Kumar Veerapen, ins Deutsche übersetzt von Christina Roos, Eva Schulte, Claudia Schurmann und Alexander Teumer im Namen der COVID-19 HGI
 
 Hinweis: Die COVID-19 Host Genetics Initiative (HGI) repräsentiert ein Konsortium von über 2000 Wissenschaftlern aus über 54 Ländern, die zusammenarbeiten, um Daten und Ideen auszutauschen, Patienten zu rekrutieren und wissenschaftliche Ergebnisse zu verbreiten. Für einen Leitfaden zu unserem Studiendesign oder den Ergebnissen vom Juli 2020 (Version 3) lesen Sie bitte unseren [ersten Blog-Beitrag](https://www.covid19hg.org/de/blog/2020-09-24-freeze-3-results/). Unsere Forschung baut auf den vorangegangenen Ergebnissen auf, und wir fassen unsere neuesten Erkenntnisse in [Blog-Beiträgen](https://www.covid19hg.org/blog/) und im [Ergebnisbereich unserer Website](https://www.covid19hg.org/results/) zusammen. Wenn Ihnen ein Fachbegriff nicht geläufig sein sollte, senden Sie uns bitte eine E-Mail an [hgi-faq@icda.bio](http://hgi-faq@icda.bio) — wir werden die Erklärungen hier gerne aktualisieren, um das Verständnis zu erleichtern. In den kommenden Wochen werden zusätzliche Informationen zur Erläuterung von Konzepten oder Fachtermini zur Verfügung gestellt werden. In der Zwischenzeit können Sie einen Blick auf [diese Seite](https://medlineplus.gov/genetics/understanding/) werfen, die Ihnen die Grundlagen der Genetik ein wenig näher bringt. Wir bitten um Ihr Verständnis, dass ein Großteil der verlinkten Fachliteratur leider lediglich in englischer Sprache zur Verfügung steht.
-
-
 
 Der wissenschaftliche Artikel zu den Ergebnissen aus Version 5 ist auf [medRXiv](https://www.medrxiv.org/content/10.1101/2021.03.10.21252820v1) verfügbar.
 
@@ -27,19 +23,19 @@ Die COVID-19 HGI hat in ihren vorangegangenen Veröffentlichungen nach und nach 
 
 ![](https://lh6.googleusercontent.com/4cBUl1jsnnjxbXsy0LHLf9XJWc1nkvTiWvv8ytQuuv9nhu96wIHriz1XoOEPVRvX0fQfgmc928oMEsv-sL9dFg6vGhqYURh54A1NYq2MG0Eh24WgJQsEfpqh31t8mTw4aqgVhHi1)
 
-
-
 Abbildung 1: Liste der Partner, die zur aktuellen Analyse (Version 5) de COVID-19 HGI beigetragen haben. Von den 47 beitragenden Studien umfassten 19 nicht-europäische Populationen. Angepasst aus einer Präsentation von Andrea Ganna vom 25. Januar 2021.
 
 ## Aufbau der Studie
 
 Wie in den vorherigen Versionen untersuchen wir weiterhin drei Endpunkte (Abbildung 2): A) Eine schwere COVID-19 Erkrankung bei der die Patienten beatmet werden müssen oder an COVID-19 sterben, B) eine Krankenhauseinweisung wegen COVID-19 und C) eine Infektion mit SARS-CoV-2 an sich. Diese Analysen zielen darauf ab, genetische Merkmale zu erfassen, die sowohl mit der Anfälligkeit für als auch mit dem Schweregrad der Erkrankung assoziiert sind. Die letzte Analyse (Analyse C) zielte darauf ab, genetische Varianten zu erfassen, die mit einer erfassten Infektion mit SARS-CoV-2 assoziiert sind. Diese Analyse schloss alle Fälle ein, unabhängig vom Vorhandensein oder Schweregrad von Symptomen. Die Analysen inklusive ihrer Fall- und Kontrolldefinitionen sowie Stichprobengrößen sind in Abbildung 2 dargestellt.
 
-![](https://lh3.googleusercontent.com/CiPW38vjnkNbh3uH_oZnulWK2cmmMRWL40vBXotyBZA_QCewk-T-3WuzaDPj5QxytFAGYWdl7cRcg-gy6h_mj5iMKMgZ0EEvyWVSt_edzZl1YhIDUyR-nh4tIoaJmxyMIsR53jNR)
+
+
+
+
+
 
 Abbildung 2: Definition von Fällen und Kontrollen für die einzelnen Analysen. Beachten Sie, dass SARS-CoV-2 das Virus ist, das die COVID-19-Erkrankung verursacht. Angepasst aus einer [Präsentation von Andrea Ganna](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) vom 25. Januar 2021.
-
-
 
 ## Genomische Regionen, die mit COVID-19 assoziiert sind, weisen auf eine Rolle der angeborene Immunität und der Lungenfunktion hin
 
@@ -47,37 +43,23 @@ Nach dem Zusammenführen der genetischen Daten, die von unseren Partnern generie
 
 ![](https://lh3.googleusercontent.com/KjYDaYSp10qnSTgK1DxuIbLReaWvgDkDqDxWozwZ_LDNMOTmJQSuOkf7d5ooIcLzGqtWssXMmAScJ6aovVGt9fAHMJHchYbVJlAEYVgTnlR1RvNSg4I5QEVB9qywJAbPHmeoqnSr)
 
-
-
 Abbildung 3. Miami-Plot der GWAS-Ergebnisse für COVID-19. Das obere Feld zeigt die genomweiten Assoziationsergebnisse für hospitalisierte COVID-19-Patienten vs. Kontrollen (Analyse B), das untere Feld zeigt die Ergebnisse für SARS-CoV-2-Infektionen allgemein vs. Kontrollen (Analyse C).
 
 ## Relevanz der unterschiedlichen Herkunft der Studienteilnehmer
 
 Bei vielen genetischen Studien stellt der Zugang zu Proben aus vielfältigen Populationen eine Herausforderung dar (genauere Ausführung [hier](https://www.vox.com/science-and-health/2018/10/22/17983568/dna-tests-precision-medicine-genetics-gwas-diversity-all-of-us)). Daher war die Ausweitung unserer Studie auf nicht-europäische Populationen ein zentrales Ziel der Version 5 unserer Analysen (Abbildung 4). Diese verstärkten Bemühungen haben dazu geführt, dass wir neue genetische Faktoren identifizieren konnten, die nur in bestimmten globalen Populationen mit COVID-19 assoziiert sind (unsere vorherigen Ergebnisse werden in den [Blog-Beiträgen zu den Versionen 3](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) und [4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/) diskutiert). Mit unseren Analysemethoden, können wir genetische Risikofaktoren in oder in der Nähe von einzelnen oder einer Gruppe von Genen beobachten. Bisher deuten die meisten der von uns identifizierten Gene auf ein erhöhtes Risiko in den Bereichen zellulärer Mechanismen, der Immunregulation und der Herzfunktion hin. Mit der gezielten weiteren Erforschung der identifizierten Gene kann die Beschreibung dieser Risikofaktoren zur Entwicklung von neuen Therapieansätzen beitragen.
 
-
-
 ![](https://lh4.googleusercontent.com/dKUKg5JgVoxv5_VPD2XPVUSr4-TleO5BD0l5G6Isp2BYhA9ce09cRSzzy0w4aoBrUZNbL3a5DaYRKxh_dBDWhKgfN8dNviCwt46NjJdHs5H4j_6ANXTPOSDIBHX_pRv50jUPjkg9)
-
-
 
 Abbildung 4. Überblick über die an der aktuellen Analyse (Version 5) der Covid-19 HGI beteiligten Studien und Zusammensetzung der Metaanalysen stratifiziert nach ethnischer Herkunft. In den aktuellen Ergebnissen sind 19 Studien mit nicht-europäischen Bevölkerungsgruppen berücksichtigt: 7 Studien trugen mit afroamerikanischen, 5 mit lateinamerikanischen, 4 mit ostasiatischen, 2 mit südasiatischen und 1 mit arabischen Populationen zur Diversität bei. Die Diamanten zeigen die Stichprobengröße an den verschiedenen Standorte weltweit.
 
-
-
 **Neun neue Chromosomenregionen, die mit COVID-19 assoziiert sind**
-
-
 
 In Analyse A (Schwer Erkrankte) sind diese in der Nähe von zwei Genen: [LZTFL1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=LZTFL1) auf Chromosom 3 und [TAC4](https://www.genecards.org/cgi-bin/carddisp.pl?gene=TAC4) auf Chromosom 17. Das Protein LZTFL1 reguliert den Transport von Proteinen zur sogenannten Ziliarmembran. Zilien sind haarartige Strukturen, die sich außen auf der Zelle befinden. Sie kommen in den oberen Atemwegen, der Lunge und vielen anderen Organen vor. LZTFL1 ist zudem an der Immunantwort beteiligt. Das TAC4-Protein spielt eine Rolle in der Regulation von Blutdruck und Immunsystem.
 
 In Analyse B (Patienten, mit COVID-19-bedingtem Krankenhausaufenthalt) fanden wir Assoziationen mit Varianten nahe 4 Genen: THBS3 auf Chromosom 1, SCN1A auf Chromosom 2, TMEM65 auf Chromosom 8, and KANSL1 auf Chromosom 17. Das [THBS3](https://www.genecards.org/cgi-bin/carddisp.pl?gene=THBS3) Gen kodiert für das Protein THBS3, das im Herzen exprimiert und bei Herzerkrankungen hochreguliert wird. Für genetische Varianten in [SCN1A](https://www.genecards.org/cgi-bin/carddisp.pl?gene=SCN1A) wurde gezeigt, dass diese mit dem Auftreten epileptischer Anfälle verbunden seinen können. [TMEM65](https://www.genecards.org/cgi-bin/carddisp.pl?gene=TMEM65) kodiert für das TMEM65-Protein, das eine Rolle bei der Herzentwicklung, der Regulation der Reizleitung im Herzen und der Herzfunktion spielt. Möglicherweise spielt es zudem eine Rolle im zellulären Energiestoffwechsel. Interessanterweise hat die in unserer Analyse identifizierte Variante nahe/in TMEM65 eine Häufigkeit von 12% in der ostasiatischen aber nur 1% in der europäischen Bevölkerung. Die Häufigkeit unterschiedlicher Allele beschreibt das Ausmaß der Variation in einem bestimmten Gen oder einer bestimmten chromosomalen Region. Für das von [KANSL1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=KANSL1) kodierte Protein KANSL1 wird eine Beteiligung in neuronalen Prozessen vermutet.
 
-
-
 Abschließend wurden in Analyse C (SARS-CoV-2-Infektionen jeglicher Schwere) 3 neue Assoziationen in genomischen Regionen gefunden: ZBTB11 auf Chromosom 3, DNAH5 auf Chromosom 5 und PPP1R15A auf Chromosom 19. Zunächst zeigte sich eine Assoziation mit einer Region in der Nähe des Gens [ZBTB11](https://www.genecards.org/cgi-bin/carddisp.pl?gene=ZBTB11) auf Chromosom 3. Dieses Gen kodiert für das Protein ZBTB11, von dem gezeigt wurde, dass es die Entwicklung von Immunzellen reguliert. Zweitens identifizierten wir eine chromosomale Region in [DNAH5](https://www.genecards.org/cgi-bin/carddisp.pl?gene=DNAH5) auf Chromosom 5. Genetische Varianten in DNAH5 werden für die primäre Ziliardyskinesie, also eine seltene erbliche Erkrankung bei der es zu einer fehlerhafte Bewegung der Zilien kommt, verantwortlich gemacht. Patienten mit einer primären Ziliardyskinesie leiden an wiederkehrenden Atemwegsinfektionen, Hals-Nasen-Ohren-Symptomen und Unfruchtbarkeit. Schließlich fanden wir eine Chromosomenregion in der Nähe von [PPP1R15A](https://www.genecards.org/cgi-bin/carddisp.pl?gene=PPP1R15A) auf Chromosom 19. Dieses Gen kodiert für das Protein PPP1R15A, von dem gezeigt wurde, dass es Wachstumsstillstand und Zelltod als Reaktion auf DNA-Schäden, negative Wachstumssignale und falsche Proteinstrukturen vermittelt.
-
-
 
 Gene, die das Immunsystem beeinflussen, spielen laut unserer Analysen eine wichtige Rolle bei COVID-19. Darüber hinaus und vielleicht weniger erwartet, finden sich auch Gene, die an der Lungen- und Herzfunktion sowie an neuronalen Prozessen beteiligt sind. Gut vereinbar hiermit ist, dass Herzerkrankungen bekannte Risikofaktoren für eine erhöhte Anfälligkeit für COVID-19 darstellen und neuronale Symptome als Teil der COVID-19-Krankheitsbildes beschrieben wurden.
 
@@ -85,11 +67,7 @@ Gene, die das Immunsystem beeinflussen, spielen laut unserer Analysen eine wicht
 
 Risikofaktoren, die in Beobachtungsstudien identifiziert werden, weisen möglicherweise nicht auf eine kausale Grundlage der COVID-19-Anfälligkeit oder -Schwere hin. Aus diesem Grund haben wir eine Methode namens [Mendelsche Randomisierung (MR)](https://en.wikipedia.org/wiki/Mendelian_randomization) angewendet, die genomische Informationen nutzt, um kausale Zusammenhänge abzuleiten. MR ist eine Methode, die genetische Varianten verwendet, von denen bekannt ist, dass sie ein bestimmtes Merkmal (z.B. Body-Mass-Index, BMI) beeinflussen, um den kausalen Effekt des Merkmals auf die Erkrankung zu untersuchen. Einblicke in die MR finden sich in unserem kürzlich erschienenen [Blogbeitrag](https://www.covid19hg.org/blog/2021-02-05-mr-working-group/) (für das wissenschaftliche Publikum). Über die drei COVID-19-Phänotypen hinweg identifizierten wir statistisch signifikante kausale Assoziationen zwischen den drei COVID-19-Phänotypen und 6 Merkmalen (von 38 ausgewählten und getesteten Merkmalen, Abbildung 4). Wir fanden heraus, dass ein genetisch vorbestimmter höherer BMI mit einem erhöhten Risiko für eine SARS-CoV-2-Infektion und COVID-19-Hospitalisierung einhergeht. Dieses Ergebnis bestätigt Befunde aus Beobachtungsstudien, die ein erhöhtes Risiko für schwere COVID-19-Erkrankungen in Verbindung mit einem höheren BMI beobachtet haben. Zusätzlich war auch genetisch vorhergesagtes Rauchen mit einem erhöhten Risiko für COVID-19-Hospitalisierung assoziiert.
 
-
-
 ![](https://lh4.googleusercontent.com/hjG4Ra3rpTaxixPH0RGOKymkZF9tJJcRAvKepSpzrLlOmNRNVNF51fKeDR46dNKaZC4FBJbDT7VbO2D_esm6LoNBtyHMVcgON1xVl6uNPxUPVCQXzRKhWKB-nE1xwogB9bZiZjDN)
-
-
 
 Abbildung 5: Genetische Korrelationen und Kausalschätzer der Mendelschen Randomisierungs-Analysen zwischen 38 Merkmalen und dem COVID-19-Schweregrad bzw. einer berichteten SARS-CoV-2-Infektion. Die Merkmale sind auf der X-Achse und die COVID-19-Phänotypen auf der Y-Achse aufgeführt. Blau steht für negative genetische Korrelation und protektive kausale Effekte aus den Mendelschen Randomisierungsanalysen (MR) und rot für positive genetische Korrelation und Risiko-MR-Kausalschätzer. Größere Quadrate entsprechen einer stärkeren Korrelation. Kausalschätzer, die eine statistische Signifikanzschwelle überschreiten, sind mit einem Sternchen markiert.
 
