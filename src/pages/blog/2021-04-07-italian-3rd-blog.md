@@ -42,11 +42,7 @@ Queste analisi sono volte a identificare le caratteristiche genetiche associate 
 
 Una volta raccolti i dati genetici generati dai nostri collaboratori, abbiamo eseguito uno studio GWAS in linea con le definizioni riportate in Figura 2. In precedenza, nella release 4 ([data freeze 4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/)), si erano evidenziati i nuovi segnali genetici associati alla suscettibilità e severità del COVID-19 in 7 regioni cromosomiche. Queste regioni puntano sull’eziologia dell'immunità innata e della disfunzione polmonare: in linea con la principale comprensione clinica delle infezioni da COVID-19. Nella release 5, abbiamo identificato 15 regioni genomiche significative tra tutti i cromosomi: una regione cromosomica è risultata significativa solo nell' analisi genomica sulla condizione di malattia grave da COVID-19 (analisi A); 11 regioni cromosomiche sono risultate avere un effetto maggiore nell' analisi genomica sulla severità da COVID-19 rispetto a quello individuato dall’analisi effettuata sulle infezioni da SARS-CoV-2 (analisi B); e 4 regioni cromosomiche sono risultate specifiche dell'infezione riportata da SARS-CoV-2 (analisi C). Nella Figura 3, è illustrata una rappresentazione grafica di questi risultati sotto forma di grafico denominato “Miami plot” (una versione del [Manhattan plot](https://en.wikipedia.org/wiki/Manhattan_plot) suddivisa in pannelli. Il nome deriva dalla città di Miami la cui linea d’orizzonte si riflette sull'acqua).
 
-<!--StartFragment-->
-
 ![](https://lh5.googleusercontent.com/9log2EMiKwzhgMjJaKw_vAQStoQi8-EfIjdkLC4lI6h40JlYOrFb-ZqWCuQGD3188LDR79DrL_Rf_SIykZOdGoBbw9KuC896WM1-cXgaZSlrWur65gRt8uUO3IEU25qVvSMHe-i4)
-
-<!--EndFragment-->
 
 **Figure 3.** “Miami plot” che mostra i risultati dello studio GWAS sul COVID-19. Il pannello superiore mostra I risultati dello studio GWAS condotto su pazienti ospedalizzati per COVID-19 e controlli (analisi B); il pannello inferiore mostra i risultati dello studio GWAS condotto su pazienti con dichiarate infezioni da SARS-CoV-2 e controlli (analisi C).
 
