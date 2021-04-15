@@ -30,7 +30,7 @@ projects:
     slack-channel: "#covid19-hg-longcovid"
     contact-persons:
       - Vilma Lammi
-      - Hanna Ollila
+      - Hanna M. Ollila
       - George Davey Smith
   - description: >-
       The COVID-19 pandemic represents an enormous challenge to the world's
