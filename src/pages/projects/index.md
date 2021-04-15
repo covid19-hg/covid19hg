@@ -9,24 +9,29 @@ projectsIntro: >-
 
   #### **As a reminder the centralized analyses are based on [this](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing) analysis plan.**
 projects:
-  - title: Post/long COVID-19
+  - title: Post-acute COVID-19
     description: >-
-      Early reports based on radiologic evidence suggest that lung fibrosis
-      might be a short-term sequelae of COVID-19 but the extent to which this is
-      progressive over time, and how this relates to interventions during the
-      acute phase of COVID-19 infection are yet to be understood. As many
-      countries move beyond the first wave of the pandemic, studies are being
-      established to define and understand COVID-19 sequelae. Even if only a
-      small proportion of individuals go on to develop progressive pulmonary
-      fibrosis after COVID-19, the scale of the pandemic means that those
-      individuals will still represent a substantial patient population.
+      Emerging evidence suggests that some patients suffer from various
+      persistent symptoms after the acute phase of COVID-19 infection. The
+      prevalence of this so-called post-acute COVID, long COVID, or post-COVID
+      syndrome/conditions, is yet to be determined. Given the magnitude of the
+      pandemic, even if only a small proportion of the infected suffer from
+      prolonged sequelae, this will cause a major burden on healthcare systems,
+      individuals and families.\
 
-      This project aims to understand the genetic determinants of post-COVID-19 fibrosis and to use this to yield valuable knowledge about the genes and pathways that promote fibrotic processes during infection and recovery from coronavirus infection. This information could also enable identification of individuals who might be at highest risk of progressive fibrosis for whom earlier intervention with anti-fibrotic medicines would be of benefit.
+      The “long-haulers” include individuals who had a severe infection in the acute phase as well as those with mild symptoms. A wide spectrum of lingering symptoms have been reported in several organs and tissues, including the lungs, cardiovascular system, pancreas, liver and brain.\
+
+      Various pathophysiological mechanisms have been suggested, e.g. tissue destruction, prolonged infection, autoimmune process, and hypercoagulability. Most likely several mechanisms are involved, and patient groups may have very different mechanisms and disease trajectories. We are now forming a working group to address the host genetics of this very heterogenic phenotype, using longitudinal registry data and questionnaires.
+
+
+      \
+
+      If you're interested in joining the discussion on how to harmonise phenotypes/diagnoses or questionnaires, or have other ideas on how to collaborate, please join. We will also soon add here a link to a form to collect information on the cohorts willing to contribute.
     slack-channel: "#covid19-hg-longcovid"
     contact-persons:
-      - Tomoko Nakanishi
-      - Brent Richards
-      - Louise Wain
+      - Vilma Lammi
+      - Hanna Ollila
+      - George Davey Smith
   - description: >-
       The COVID-19 pandemic represents an enormous challenge to the world's
       healthcare systems. The disease is characterized by a highly heterogeneous
