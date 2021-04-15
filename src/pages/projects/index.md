@@ -9,58 +9,24 @@ projectsIntro: >-
 
   #### **As a reminder the centralized analyses are based on [this](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing) analysis plan.**
 projects:
-  - title: Clonal Hematopoiesis
+  - title: Post/long COVID-19
     description: >-
-      The presence of pre-existing cardiovascular and lung disease are known to
-      be associated with severe COVID-19. Beyond medical comorbidities, age is a
-      strong independent predictor of COVID-19 severity and may be related to
-      age-related changes in inflammatory cells.  Clonal Hematopoiesis is known
-      to alter the inflammatory profile of healthy individuals and may, in part,
-      be a mediator of its ill-effects including cardiovascular disease.
-      Age-related somatic mutations in circulating inflammatory cells have been
-      shown to predispose to chronic inflammatory dysregulation. In some cases,
-      these involve the same pathways implicated in COVID-19. However, whether
-      CH predisposes to severe COVID-19 or affects the complications of COVID-19
-      is unknown. Conversely, inflammatory stress may be a critical driver of
-      CH. Therefore, studying the acute effects of SARS-CoV-2 infection on the
-      dynamics of CH would provide insight into the potentiators of CH. We seek
-      to understand how clonal hematopoiesis might influence COVID-19 illness
-      severity and conversely how acute infection with SARS-CoV-2 might promote
-      expansion of CHIP.
+      Early reports based on radiologic evidence suggest that lung fibrosis
+      might be a short-term sequelae of COVID-19 but the extent to which this is
+      progressive over time, and how this relates to interventions during the
+      acute phase of COVID-19 infection are yet to be understood. As many
+      countries move beyond the first wave of the pandemic, studies are being
+      established to define and understand COVID-19 sequelae. Even if only a
+      small proportion of individuals go on to develop progressive pulmonary
+      fibrosis after COVID-19, the scale of the pandemic means that those
+      individuals will still represent a substantial patient population.
 
-
-      Preprint: <https://www.medrxiv.org/content/10.1101/2020.11.12.20230821v1>
+      This project aims to understand the genetic determinants of post-COVID-19 fibrosis and to use this to yield valuable knowledge about the genes and pathways that promote fibrotic processes during infection and recovery from coronavirus infection. This information could also enable identification of individuals who might be at highest risk of progressive fibrosis for whom earlier intervention with anti-fibrotic medicines would be of benefit.
+    slack-channel: "#covid19-hg-longcovid"
     contact-persons:
-      - Philip Awadalla
-      - Pradeep Natarajan
-      - Kelly Bolton
-    slack-channel: "#covid19-hg-clonalhematopoeisis"
-  - title: Chr3-clinical trajectories project
-    description: The strongest genetic signal for COVID19 severity is located on
-      chromosome 3 and overlaps several genes. However, it is currently unknown
-      1) which is the likely causal gene and 2) if patients carrying the risk
-      haplotype have different clinical trajectories than those that do not. In
-      this project, we will focus on patients hospitalized for COVID19 and study
-      the association between the chromosomes 3 signal and several longitudinal
-      clinical measures. In particular, we will focus on longitudinal
-      biomarkers, clinical complications/manifestations, and different subtypes
-      of COVID19 patients. The analysis will benefit from combined
-      individual-level data.
-    slack-channel: "#covid19-hg-clinical-values"
-    contact-persons:
+      - Tomoko Nakanishi
       - Brent Richards
-      - Andrea Ganna
-      - Luca Valenti
-      - Alessandra Renieri
-      - Eva Schulte
-      - Hugo Zeberg
-      - Luis Bujanda
-      - Maria Butti
-      - Manuel Romero Gomez
-      - Migeotte Isabelle
-      - Marta Alarcón
-      - Alexandre Pereira
-      - Andre Franke
+      - Louise Wain
   - description: >-
       The COVID-19 pandemic represents an enormous challenge to the world's
       healthcare systems. The disease is characterized by a highly heterogeneous
@@ -115,6 +81,62 @@ projects:
       - Francesca Mari
       - Brent Richards
       - Guillaume Butler-Laporte
+  - title: Clonal Hematopoiesis
+    description: >-
+      The presence of pre-existing cardiovascular and lung disease are known to
+      be associated with severe COVID-19. Beyond medical comorbidities, age is a
+      strong independent predictor of COVID-19 severity and may be related to
+      age-related changes in inflammatory cells.  Clonal Hematopoiesis is known
+      to alter the inflammatory profile of healthy individuals and may, in part,
+      be a mediator of its ill-effects including cardiovascular disease.
+      Age-related somatic mutations in circulating inflammatory cells have been
+      shown to predispose to chronic inflammatory dysregulation. In some cases,
+      these involve the same pathways implicated in COVID-19. However, whether
+      CH predisposes to severe COVID-19 or affects the complications of COVID-19
+      is unknown. Conversely, inflammatory stress may be a critical driver of
+      CH. Therefore, studying the acute effects of SARS-CoV-2 infection on the
+      dynamics of CH would provide insight into the potentiators of CH. We seek
+      to understand how clonal hematopoiesis might influence COVID-19 illness
+      severity and conversely how acute infection with SARS-CoV-2 might promote
+      expansion of CHIP.
+
+
+      Preprint: <https://www.medrxiv.org/content/10.1101/2020.11.12.20230821v1>
+    contact-persons:
+      - Philip Awadalla
+      - Pradeep Natarajan
+      - Kelly Bolton
+    slack-channel: ""
+  - title: Chr3-clinical trajectories project
+    description: >-
+      The strongest genetic signal for COVID19 severity is located on chromosome
+      3 and overlaps several genes. However, it is currently unknown 1) which is
+      the likely causal gene and 2) if patients carrying the risk haplotype have
+      different clinical trajectories than those that do not. In this project,
+      we will focus on patients hospitalized for COVID19 and study the
+      association between the chromosomes 3 signal and several longitudinal
+      clinical measures. In particular, we will focus on longitudinal
+      biomarkers, clinical complications/manifestations, and different subtypes
+      of COVID19 patients. The analysis will benefit from combined
+      individual-level data.
+
+
+      Preprint: <https://www.medrxiv.org/content/10.1101/2021.03.07.21252875v1>[](https://www.medrxiv.org/content/10.1101/2020.11.12.20230821v1)
+    slack-channel: ""
+    contact-persons:
+      - Brent Richards
+      - Andrea Ganna
+      - Luca Valenti
+      - Alessandra Renieri
+      - Eva Schulte
+      - Hugo Zeberg
+      - Luis Bujanda
+      - Maria Butti
+      - Manuel Romero Gomez
+      - Migeotte Isabelle
+      - Marta Alarcón
+      - Alexandre Pereira
+      - Andre Franke
   - title: Acute respiratory distress syndrome
     description: >-
       The most severe outcome among COVID-19 cases includes acute respiratory
@@ -136,24 +158,6 @@ projects:
     contact-persons:
       - Lea Davis
       - Eric Kerchberger
-  - title: Post COVID-19 lung fibrosis project
-    description: >-
-      Early reports based on radiologic evidence suggest that lung fibrosis
-      might be a short-term sequelae of COVID-19 but the extent to which this is
-      progressive over time, and how this relates to interventions during the
-      acute phase of COVID-19 infection are yet to be understood. As many
-      countries move beyond the first wave of the pandemic, studies are being
-      established to define and understand COVID-19 sequelae. Even if only a
-      small proportion of individuals go on to develop progressive pulmonary
-      fibrosis after COVID-19, the scale of the pandemic means that those
-      individuals will still represent a substantial patient population.
-
-      This project aims to understand the genetic determinants of post-COVID-19 fibrosis and to use this to yield valuable knowledge about the genes and pathways that promote fibrotic processes during infection and recovery from coronavirus infection. This information could also enable identification of individuals who might be at highest risk of progressive fibrosis for whom earlier intervention with anti-fibrotic medicines would be of benefit.
-    slack-channel: "#covid19-hg-postcovid-fibrosis"
-    contact-persons:
-      - Tomoko Nakanishi
-      - Brent Richards
-      - Louise Wain
   - title: COVID19 vascular complications
     description: >
       Recent publications suggest that vascular complications are common in
