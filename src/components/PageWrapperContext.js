@@ -4,7 +4,7 @@ import React from "react"
 
 const defaultContextValue = {
   data: {
-    largeNavMenuExpandedNodeIds: [],
+    largeNavMenuExpandedNodeIds: ["About", "News", "Data Sharing", "Results", "Acknowledgements"],
     largeNavMenuSelectedNodeIds: [],
   },
   // eslint-disable-next-line @typescript-eslint/no-empty-function
