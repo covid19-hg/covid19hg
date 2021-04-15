@@ -103,7 +103,7 @@ const IndexPageContent = ({ image, learnCollaborate, dataResults }: Props) => {
       <Container marginTop={5} fixed={true}>
         <Card variant="outlined">
           <CardContent>
-            <Typography variant="h5" align="center">Next data freeze: 15th of April</Typography>
+            <Typography variant="h5" align="center">Next data freeze: 30th of April</Typography>
           </CardContent>
         </Card>
         <Grid container={true} spacing={3} marginTop={2} marginBottom={2}>
