@@ -24,9 +24,9 @@ In order to study these variants, we need a different type of technology to “r
 
 Studying rare variants is difficult: only a few (if any) patients in each cohort will carry a rare variant that has a high likelihood of truly causing severe COVID-19. This leads to the following challenges:
 
-    1) Large sample sizes are required to identify rare pathogenic variants.
-    2) The available genome-wide association study (GWAS) statistical methods perform poorly when dealing with rare events.
-    3) Finding rare variants with meaningful biological etiology and pooling patients’ rare variants across multiple cohorts poses a logistical challenge.
+1) Large sample sizes are required to identify rare pathogenic variants.
+2) The available genome-wide association study (GWAS) statistical methods perform poorly when dealing with rare events.
+3) Finding rare variants with meaningful biological etiology and pooling patients’ rare variants across multiple cohorts poses a logistical challenge.
 
 
 ## COVID-19 Host Genetics and Rare Variants: The WES/WGS Working Group
@@ -48,7 +48,7 @@ The WES/WGS working group had our first data freeze on December 17th 2020. Thus 
 
 
 
-![Figure 1: Map of projects and project leaders taking part in Whole Genome Sequencing/ Whole Exome Sequencing Working Group Data Freeze 2 (as of March 7, 2021)](/img/wgs-fig1.jpg)
+![Figure 1: Map of projects and project leaders taking part in Whole Genome Sequencing/ Whole Exome Sequencing Working Group Data Freeze 2 (as of March 7, 2021)](/img/wgs-fig1.png)
 
 **Figure 1: Map of projects and project leaders taking part in Whole Genome Sequencing/ Whole Exome Sequencing Working Group Data Freeze 2 (as of March 7, 2021).** In green: countries who were represented in Data Freeze 1. In red: new countries for Data Freeze 2.
 
