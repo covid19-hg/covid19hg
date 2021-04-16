@@ -17,14 +17,14 @@ projects:
       syndrome/conditions, is yet to be determined. Given the magnitude of the
       pandemic, even if only a small proportion of the infected suffer from
       prolonged sequelae, this will cause a major burden on healthcare systems,
-      individuals and families.\
+      individuals and families.
 
-      The “long-haulers” include individuals who had a severe infection in the acute phase as well as those with mild symptoms. A wide spectrum of lingering symptoms have been reported in several organs and tissues, including the lungs, cardiovascular system, pancreas, liver and brain.\
+      The “long-haulers” include individuals who had a severe infection in the acute phase as well as those with mild symptoms. A wide spectrum of lingering symptoms have been reported in several organs and tissues, including the lungs, cardiovascular system, pancreas, liver and brain.
 
-      Various pathophysiological mechanisms have been suggested, e.g. tissue destruction, prolonged infection, autoimmune process, and hypercoagulability. Most likely several mechanisms are involved, and patient groups may have very different mechanisms and disease trajectories. We are now forming a working group to address the host genetics of this very heterogenic phenotype, using longitudinal registry data and questionnaires.
+      Various pathophysiological mechanisms have been suggested, e.g. tissue destruction, prolonged infection, autoimmune process, and hypercoagulability. Most likely several mechanisms are involved, and patient groups may have very different mechanisms and disease trajectories. 
 
 
-      \
+      We are now forming a working group to address the host genetics of this very heterogeneous phenotype, using longitudinal registry data and questionnaires.
 
       If you're interested in joining the discussion on how to harmonise phenotypes/diagnoses or questionnaires, or have other ideas on how to collaborate, please join. We will also soon add here a link to a form to collect information on the cohorts willing to contribute.
     slack-channel: "#covid19-hg-longcovid"
