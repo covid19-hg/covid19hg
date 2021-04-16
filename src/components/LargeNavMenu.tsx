@@ -57,7 +57,7 @@ const navItems: NavItem[] = [
         icon: Book,
         children: [
           {
-            href: `blog/2021-04-15-wgswesupdate/`,
+            href: `/blog/2021-04-15-wgswesupdate/`,
             label: `WGS / WES Group Update Summary`,
           },
           {
