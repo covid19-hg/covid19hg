@@ -29,11 +29,7 @@ Abbildung 1: Liste der Partner, die zur aktuellen Analyse (Version 5) de COVID-1
 
 Wie in den vorherigen Versionen untersuchen wir weiterhin drei Endpunkte (Abbildung 2): A) Eine schwere COVID-19 Erkrankung bei der die Patienten beatmet werden müssen oder an COVID-19 sterben, B) eine Krankenhauseinweisung wegen COVID-19 und C) eine Infektion mit SARS-CoV-2 an sich. Diese Analysen zielen darauf ab, genetische Merkmale zu erfassen, die sowohl mit der Anfälligkeit für als auch mit dem Schweregrad der Erkrankung assoziiert sind. Die letzte Analyse (Analyse C) zielte darauf ab, genetische Varianten zu erfassen, die mit einer erfassten Infektion mit SARS-CoV-2 assoziiert sind. Diese Analyse schloss alle Fälle ein, unabhängig vom Vorhandensein oder Schweregrad von Symptomen. Die Analysen inklusive ihrer Fall- und Kontrolldefinitionen sowie Stichprobengrößen sind in Abbildung 2 dargestellt.
 
-
-
-
-
-
+![](/img/screen-shot-2021-04-15-at-10.48.43-pm.png)
 
 Abbildung 2: Definition von Fällen und Kontrollen für die einzelnen Analysen. Beachten Sie, dass SARS-CoV-2 das Virus ist, das die COVID-19-Erkrankung verursacht. Angepasst aus einer [Präsentation von Andrea Ganna](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) vom 25. Januar 2021.
 
