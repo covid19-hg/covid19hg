@@ -104,4 +104,10 @@ studies:
     links:
       - description: Website
         url: /results/
+  - posted_date: 13th May 2020
+    name: COVID-19 Host Genetics Initiative Introduction
+    first_publication: ""
+    links:
+      - url: https://europepmc.org/article/PMC/7220587#free-full-text
+        description: Paper
 ---
