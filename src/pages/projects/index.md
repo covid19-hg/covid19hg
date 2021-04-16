@@ -21,7 +21,7 @@ projects:
 
       The “long-haulers” include individuals who had a severe infection in the acute phase as well as those with mild symptoms. A wide spectrum of lingering symptoms have been reported in several organs and tissues, including the lungs, cardiovascular system, pancreas, liver and brain.\
 
-      Various pathophysiological mechanisms have been suggested, e.g. tissue destruction, prolonged infection, autoimmune process, and hypercoagulability. Most likely several mechanisms are involved, and patient groups may have very different mechanisms and disease trajectories. We are now forming a working group to address the host genetics of this very heterogenic phenotype, using longitudinal registry data and questionnaires.
+      Various pathophysiological mechanisms have been suggested, e.g. tissue destruction, prolonged infection, autoimmune process, and hypercoagulability. Most likely several mechanisms are involved, and patient groups may have very different mechanisms and disease trajectories. We are now forming a working group to address the host genetics of this very heterogeneous phenotype, using longitudinal registry data and questionnaires.
 
 
       \
