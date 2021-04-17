@@ -9,24 +9,10 @@ exports.leftToRight = leftToRight;
 exports.rightToLeft = rightToLeft;
 
 exports.languages = new Map([
-  ["en", { englishName: "English", nativeName: "", direction: leftToRight }],
-  [
-    "es",
-    { englishName: "Spanish", nativeName: "Español", direction: leftToRight },
-  ],
-  [
-    "zh",
-    { englishName: "Chinese", nativeName: "汉语", direction: leftToRight },
-  ],
-  [
-    "ko",
-    { englishName: "Korean", nativeName: "한국어", direction: leftToRight },
-  ],
   [
     "ar",
     { englishName: "Arabic", nativeName: "العربية", direction: rightToLeft },
   ],
-  ["fa", { englishName: "Farsi", nativeName: "فارسی", direction: rightToLeft }],
   [
     "bn",
     { englishName: "Bengali", nativeName: "বাংলা", direction: leftToRight },
@@ -40,8 +26,24 @@ exports.languages = new Map([
     { englishName: "Danish", nativeName: "Dansk", direction: leftToRight },
   ],
   [
-    "nl",
-    { englishName: "Dutch", nativeName: "Nederlands", direction: leftToRight },
+    "de",
+    { englishName: "German", nativeName: "Deutsch", direction: leftToRight },
+  ],
+  [
+    "el",
+    { englishName: "Greek", nativeName: "Ελληνικά", direction: leftToRight },
+  ],
+  [
+    "en", 
+    { englishName: "English", nativeName: "", direction: leftToRight },
+  ],
+  [
+    "es",
+    { englishName: "Spanish", nativeName: "Español", direction: leftToRight },
+  ],
+  [
+    "fa", 
+    { englishName: "Farsi", nativeName: "فارسی", direction: rightToLeft },
   ],
   [
     "fi",
@@ -52,12 +54,8 @@ exports.languages = new Map([
     { englishName: "French", nativeName: "Français", direction: leftToRight },
   ],
   [
-    "de",
-    { englishName: "German", nativeName: "Deutsch", direction: leftToRight },
-  ],
-  [
-    "el",
-    { englishName: "Greek", nativeName: "Ελληνικά", direction: leftToRight },
+    "he",
+    { englishName: "Hebrew", nativeName: "עברית", direction: leftToRight },
   ],
   [
     "hi",
@@ -68,6 +66,10 @@ exports.languages = new Map([
     { englishName: "Hungarian", nativeName: "Magyar", direction: leftToRight },
   ],
   [
+    "ko",
+    { englishName: "Korean", nativeName: "한국어", direction: leftToRight },
+  ],
+  [
     "it",
     { englishName: "Italian", nativeName: "Italiano", direction: leftToRight },
   ],
@@ -76,12 +78,20 @@ exports.languages = new Map([
     { englishName: "Japanese", nativeName: "日本語", direction: leftToRight },
   ],
   [
+    "mk",
+    { englishName: "Macedonian", nativeName: "Mакедонски", direction: leftToRight },
+  ],
+  [
     "ms",
-    {
-      englishName: "Malay",
-      nativeName: "Bahasa Melayu",
-      direction: leftToRight,
-    },
+    { englishName: "Malay", nativeName: "Bahasa Melayu", direction: leftToRight },
+  ],
+  [
+    "nl",
+    { englishName: "Dutch", nativeName: "Nederlands", direction: leftToRight },
+  ],
+  [
+    "pl",
+    { englishName: "Polish", nativeName: "Polski", direction: leftToRight },
   ],
   [
     "ro",
@@ -92,33 +102,28 @@ exports.languages = new Map([
     { englishName: "Russian", nativeName: "Русский", direction: leftToRight },
   ],
   [
-    "sr",
-    { englishName: "Serbian", nativeName: "Српски", direction: leftToRight },
+    "sl",
+    { englishName: "Slovenian", nativeName: "Slovenščina", direction: leftToRight },
   ],
   [
-    "sl",
-    {
-      englishName: "Slovenian",
-      nativeName: "Slovenščina",
-      direction: leftToRight,
-    },
+    "sr",
+    { englishName: "Serbian", nativeName: "Српски", direction: leftToRight },
   ],
   [
     "sv",
     { englishName: "Swedish", nativeName: "Svenska", direction: leftToRight },
   ],
-  ["ta", { englishName: "Tamil", nativeName: "தமிழ்", direction: leftToRight }],
   [
-    "mk",
-    {
-      englishName: "Macedonian",
-      nativeName: "Mакедонски",
-      direction: leftToRight,
-    },
+    "ta", 
+    { englishName: "Tamil", nativeName: "தமிழ்", direction: leftToRight },
   ],
   [
-    "pl",
-    { englishName: "Polish", nativeName: "Polski", direction: leftToRight },
+    "yi", 
+    { englishName: "Yiddish", nativeName: "ייִדיש", direction: leftToRight },
+  ],
+  [
+    "zh",
+    { englishName: "Chinese", nativeName: "汉语", direction: leftToRight },
   ],
 ]);
 
