@@ -61,7 +61,7 @@ const navItems: NavItem[] = [
             label: `WGS / WES Group Update Summary`,
           },
           {
-            href: `/blog/2021-03-02-data-freeze-5-results/`,
+            href: `/blog/2021-03-02-freeze-5-results/`,
             label: `Scientific Summary (R5)`,
           },
           {
