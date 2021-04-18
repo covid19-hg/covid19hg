@@ -55,7 +55,7 @@ exports.languages = new Map([
   ],
   [
     "he",
-    { englishName: "Hebrew", nativeName: "עברית", direction: leftToRight },
+    { englishName: "Hebrew", nativeName: "עברית", direction: rightToLeft },
   ],
   [
     "hi",
@@ -119,7 +119,7 @@ exports.languages = new Map([
   ],
   [
     "yi", 
-    { englishName: "Yiddish", nativeName: "ייִדיש", direction: leftToRight },
+    { englishName: "Yiddish", nativeName: "ייִדיש", direction: rightToLeft },
   ],
   [
     "zh",
