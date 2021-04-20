@@ -40,7 +40,7 @@ A COVID-19 HGI a korábbi publikációk során ismételten felhívta a figyelmet
 
 
 
-![](https://lh4.googleusercontent.com/ndrw4fD_zef_qkF_rbktw2aMWgBgBjM5eIA7WZ80jt72CIlxpHvWCkTmqBIjWzseIEcH2sfTgPHOfc2U_PqTLc_PrKDtt9F8bA__KmCfRikjvAlzwvb6jsTGDSU_aEije0jnxKM)
+<img alt="" src="https://lh4.googleusercontent.com/ndrw4fD_zef_qkF_rbktw2aMWgBgBjM5eIA7WZ80jt72CIlxpHvWCkTmqBIjWzseIEcH2sfTgPHOfc2U_PqTLc_PrKDtt9F8bA__KmCfRikjvAlzwvb6jsTGDSU_aEije0jnxKM" width="100%" />
 
 **1. ábra:** A COVID-19 HGI 5. adatfagyasztás eredményeiben közreműködők felsorolása. A 47 tanulmányból 19 nem-európai lakosságot képvisel. [Andrea Ganna 2021. január 25-i előadásából](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) adaptálva.
 
@@ -54,7 +54,7 @@ A korábbi adatfagyasztásokhoz hasonlóan továbbra is három lehetséges kimen
 
 
 
-![](https://lh5.googleusercontent.com/K4GkDHW1hi29EE01ssS_FR1KzkfKC1drtL5agL54e0QwUWlh83DVV9fAKgd2cU18UCuYqxbfkhMxvX0cEkclHKwhL9FqQuV6velOA45fj6YD6K78MNEAyTcW8djOhJOEdb7xTVM)
+<img alt="" src="https://lh5.googleusercontent.com/K4GkDHW1hi29EE01ssS_FR1KzkfKC1drtL5agL54e0QwUWlh83DVV9fAKgd2cU18UCuYqxbfkhMxvX0cEkclHKwhL9FqQuV6velOA45fj6YD6K78MNEAyTcW8djOhJOEdb7xTVM" width="100%" />
 
 **2. ábra:** Az esetek és a kontrollok meghatározása az egyes elemzéseknél az 5. adatfagyasztás pillanatában. Kérjük, vegye figyelembe, hogy a SARS-CoV-2 az a vírus, amely a COVID-19 fertőzést okozza! [Andrea Ganna 2021. január 25-i előadásából](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) adaptálva.
 
@@ -64,7 +64,7 @@ A korábbi adatfagyasztásokhoz hasonlóan továbbra is három lehetséges kimen
 
 A közreműködő partnereink által rendelkezésre bocsátott genetikai adatokból a 2. ábra szerint GWAS (teljes genom asszociációs vizsgálat) elemzést végeztünk. Korábbi, [4. adatfagyasztás](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/) során 7 kromoszóma régióban található, új genetikai szignálokra hívtuk fel a figyelmet, melyek a COVID-19 fogékonysággal és súlyosságával állhatnak összefüggésben. Ezek a régiók a veleszületett immunitás és a tüdő diszfunkció etiológiája felé mutatnak: összhangban a súlyos COVID-19 fertőzések klinikai megjelenésével. Az 5. adatfagyasztás során összesen 15 genetikailag szignifikáns régiót azonosítottunk: 1 kromoszóma régiónak kizárólag a kritikus állapotú betegek esetében volt jelentősége (A elemzés); 11 kromoszóma régió a kórházi ellátást igénylő esetekben fordult elő gyakrabban (B elemzés); és 4 kromoszóma régió mutatott összefüggést a SARS-CoV-2 fertőzéssel (C elemzés). A 3. ábrán ezen eredmények grafikus ábrázolását mutatjuk be ún. Miami plot-ként (ez a [Manhattan](https://en.wikipedia.org/wiki/Manhattan_plot) plot panelizált változata. A nevet Miami városról kapta, mivel a megjelenés hasonlít Miami látképének tükröződésére a vízen).
 
-![Figure 3. Miami plot of genome-wide association results for COVID-19.](https://lh5.googleusercontent.com/hb_3WUONqP2brvf8F7zGay2iL7emHGH-YFn5lZ_xotjQgDrwEl_fWPaCwwnuqaHgolaa8310M93cT07LMRlhENrQMk78a0mU24BTc00SMpNZymVXt0G45TbZ9xhNhQbcyC-K-Zc)
+<img alt="Figure 3. Miami plot of genome-wide association results for COVID-19." src="https://lh5.googleusercontent.com/hb_3WUONqP2brvf8F7zGay2iL7emHGH-YFn5lZ_xotjQgDrwEl_fWPaCwwnuqaHgolaa8310M93cT07LMRlhENrQMk78a0mU24BTc00SMpNZymVXt0G45TbZ9xhNhQbcyC-K-Zc" width="100%" />
 
 **3. ábra**: A COVID-19 genom asszociációs vizsgálat eredményeinek Miami diagramja. A felső panel a kórházi ellátást igénylő COVID-19 és a kontrollok genom asszociációs vizsgálatának eredményeit mutatja (B elemzés), az alsó panel pedig a jelentett SARS-CoV-2 fertőzés és kontrollok eredményeit (C elemzés).
 
@@ -72,7 +72,7 @@ A közreműködő partnereink által rendelkezésre bocsátott genetikai adatokb
 
 Megértjük, hogy számos genetikai vizsgálat során a mintagyűjtés sokfélesége jelenti a fő gondot (részletezve [itt](https://www.vox.com/science-and-health/2018/10/22/17983568/dna-tests-precision-medicine-genetics-gwas-diversity-all-of-us)). Emiatt arra törekedtünk, hogy tanulmányunk gyarapodása során javítsuk mintáink változatosságát (4. ábra). A továbbfejllesztett mintagyűjtési erőfeszítéseink a COVID-19-hez kapcsolódó új genetikai tényezők azonosításához vezettek (korábbi eredményeinket a [3](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/). és [4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/). adatfagyasztás eredményeit tárgyaló blogbejegyzéseinkben tárgyaljuk). Analitikai módszereinkkel a genetikai kockázati tényezők egyidejű azonosításával képesek vagyunk megfigyelni genetikai variánsokat a génekben vagy azokhoz közel. Az eddig általunk azonosított gének többsége a celluláris mechanizmusok, az immunszabályozás és a szívműködés fokozott kockázatára mutat. Ezen kockázati tényezők meghatározása végső soron az azonosított gének célzott kezelését eredményezheti.
 
-![Figure 4. Overview of the studies contributing to the COVID-19 host genetics initiative and composition by major ancestry groups in meta-analyses.](https://lh4.googleusercontent.com/Oqqsg_UZvHgW2cir6Pt-ObqOpK9iK7j3xgk9_kRBxFrK5FgqSVJm1ZX4DZGbWipzXsqL2ztAtnnyimcUg2jQxMYL2V_BF66vHW3o7nY1RrHay2T41Et7FW4I_LUm2GMieOEx1S0)
+<img alt="Figure 4. Overview of the studies contributing to the COVID-19 host genetics initiative and composition by major ancestry groups in meta-analyses." src="https://lh4.googleusercontent.com/Oqqsg_UZvHgW2cir6Pt-ObqOpK9iK7j3xgk9_kRBxFrK5FgqSVJm1ZX4DZGbWipzXsqL2ztAtnnyimcUg2jQxMYL2V_BF66vHW3o7nY1RrHay2T41Et7FW4I_LUm2GMieOEx1S0" width="100%" />
 
 **4. ábra:** A COVID-19 HGI eredményeihez hozzájáruló vizsgálatok fő népcsoportjai meta-analízisek alapján. Az 5. adatfagyasztás során 19 tanulmány rendelkezett nem-európai populációval: 7 afroamerikai, 5 kevert amerikai, 4 kelet-ázsiai, 2 dél-ázsiai és 1 arab. A gyémánt alakzatok a különböző földrajzi helyekről származó hatékony mintaméretet mutatják (a minta nagysága, amely statisztikai szempontból szignifikáns hatást fog elérni tudományos esetekben).
 
@@ -90,7 +90,7 @@ Elemzésünk alapján az immunrendszert befolyásoló gének fontos szerepet já
 
 Az asszociációs vizsgálatokban azonosított kockázati tényezők nem feltétlen utalnak a COVID-19 érzékenységének vagy súlyosságának ok-okozati alapjaira. Emiatt a [Mendeli véletlenszerűség](https://en.wikipedia.org/wiki/Mendelian_randomization) (MR, Mendeli Randomizáció) nevű módszert alkalmaztuk, amely genetikai információkat használ az oksági összefüggések megállapítására. Az MR módszer során olyan genetikai variánsokat használnak, amelyekről ismert, hogy befolyásolnak egy adott hajlamot (pl. BMI), hogy megvizsgálják a hajlam okozati hatását a betegség kimenetelére. Az érthetőség céljából egy nemrégiben megjelent (a tudományos közönség számára készült) [blogbejegyzésünkben](https://www.covid19hg.org/blog/2021-02-05-mr-working-group/) további információt talál az MR módszerről. A három COVID-19 fenotípusban statisztikailag szignifikáns okozati összefüggéseket azonosítottunk a három COVID-19 kimenetel és 6 tulajdonság között (a 38 kiválasztott, tesztelt tulajdonság közül – 4. ábra). Megállapítottuk, hogy a magasabb testtömeg-indexre (BMI) való hajlam a SARS-CoV-2 fertőzés és a COVID-19 kórházi kezelés magasabb kockázatával járt együtt. Ez az eredmény megerősíti azon megfigyeléses tanulmányok eredményeit, amelyek rámutattak arra, hogy a megnövekedett BMI a súlyos COVID-19 kimenetel fokozott kockázatával jár. Továbbá a dohányzásra való genetikai hajlam a kórházi ápolást igénylő COVID-19 megnövekedett kockázatával járt együtt.
 
-![Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection.](https://lh3.googleusercontent.com/8wZSpccJT3X6WM_19TZuo5ev7XzgrESYdTa67TNl9IwhO0jY9ezJ3UmdtlHoz97K7JDVgXw7MXEJ1ogzedPsbcXXXnEc7aBoBhVdVt1yrx4cRLaNCAzaQxhDA0QW2gZDY2E0zXg)
+<img alt="Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection." src="https://lh3.googleusercontent.com/8wZSpccJT3X6WM_19TZuo5ev7XzgrESYdTa67TNl9IwhO0jY9ezJ3UmdtlHoz97K7JDVgXw7MXEJ1ogzedPsbcXXXnEc7aBoBhVdVt1yrx4cRLaNCAzaQxhDA0QW2gZDY2E0zXg" width="100%" />
 
 **5. ábra**: Genetikai összefüggések és a Mendeli randomizáció okozati becslések 38 tulajdonság, valamint a COVID-19 súlyossága és az ismert SARS-CoV-2 fertőzés között. A tulajdonságok az X tengelyen, a COVID-19 fenotípusok az Y tengelyen láthatók. A kék szín negatív genetikai összefüggést mutat, azaz protektív jegy; a piros szín pozitív genetikai összefüggést és nagyobb kockázatot jelent. A nagyobb négyzetek szignifikánsabb összefüggésnek felelnek meg. A statisztikai szignifikancia küszöböt meghaladó oksági becsléseket csillaggal jelöltük.
 

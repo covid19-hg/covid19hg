@@ -22,7 +22,7 @@ COVID-19HGI מייצגת קונסורציום של למעלה מ -2,000 מדענ
 
 ה- COVID-19 HGI הראה קשרים גנטיים חזקים במהדורות הקודמות שלנו ומייצג את [מחקר האסוציאציות](https://www.broadinstitute.org/files/styles/visuals_style/public/GWAS-Explainer-08-02-17.jpg%3Fitok%3D-6sgc6nN) הגדול ביותר [בגנום](https://www.broadinstitute.org/files/styles/visuals_style/public/GWAS-Explainer-08-02-17.jpg%3Fitok%3D-6sgc6nN) (GWAS) בהיסטוריה: הן מבחינת משתתפי המחקר (> 2 מיליון אנשים) והן מבחינת מספר משתפי הפעולה (> 2,000 מדענים. ). כאן אנו מתארים תוצאות משחרור הקפאת הנתונים העדכני ביותר שלנו, מס' 5. בהקפאת הנתונים הקודמת שלנו (שחרור 4), דיווחנו על זיהוי של גרסאות גנטיות אנושיות הקשורות ל- COVID-19 (ראה פוסטים בבלוג שלנו לאנשים שאינם מדענים בנושא [שחרור](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) נתונים [3](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) ו [שחרור 4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/) ). זיהינו את הגרסאות הללו באמצעות GWAS בלמעלה מ- 30,000 חולי COVID-19 (כלומר, מקרים) ו- 1.47 מיליון בני אדם שאינם COVID-19 (כלומר, בקרות). בהקפאת נתונים 5, הגדלנו עוד יותר את גודל המדגם לכמעט 50,000 מקרי COVID-19 ולמעלה משני מיליון בקרות על ידי שילוב נתונים מ -47 מחקרים ב -19 מדינות (איור 1). על ידי הגדלת גודל המדגם, אנו משפרים את אמינות הממצאים שלנו. בהקפאת נתונים זו, ניסינו גם לשפר את מגוון האוכלוסיות. לימוד גנטיקה על פני אוכלוסיות ממוצא גנטי מגוון עוזר לנו להבין טוב יותר גרסאות גנטיות משפיעות על חומרת COVID-19 והשפעתן ברחבי העולם. מתוך 47 המחקרים התורמים, 19 כללו אוכלוסיות שאינן אירופיות.
 
-![](https://lh3.googleusercontent.com/tw4Izg82-UYXrqYbE5nhxpjH-bWjuxILVELDSC0A1J2KnsXQs7PQWI88edQMry3rbv4f89rFaZk46LX8VUSh1y_szXvtUrMT_2PGfJJC_N2d4EDjy_nt4gOMWlHBCznbfNCPoC8)
+<img alt="" src="https://lh3.googleusercontent.com/tw4Izg82-UYXrqYbE5nhxpjH-bWjuxILVELDSC0A1J2KnsXQs7PQWI88edQMry3rbv4f89rFaZk46LX8VUSh1y_szXvtUrMT_2PGfJJC_N2d4EDjy_nt4gOMWlHBCznbfNCPoC8" width="100%" />
 
 איור 1: רשימת התורמים ל- COVID-19 HGI לשחרור הקפאת נתונים 5 - מתוך 47 המחקרים התורמים, 19 כללו אוכלוסיות שאינן אירופיות. עיבוד [מהמצגת של אנדראה גאנה](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) ב- 25 בינואר 2021.
 
@@ -36,7 +36,7 @@ COVID-19HGI מייצגת קונסורציום של למעלה מ -2,000 מדענ
 
 מטרתם של ניתוחים אלו היא לזהות תכונות גנטיות הקשורות הן לרגישות והן לחומרה ל- COVID-19 . הניתוח האחרון (ג) נועד לאתר וריאנטים גנטיים התורמים לזיהום מדווח של COVID-19. ניתוח זה כלל את כל המקרים, ללא קשר לנוכחותם או לחומרתם של התסמינים. תוצאות הניתוח והגדרות המקרה והבקרה שלהם וגודל המדגם מוצגים באיור 2.
 
-![](https://lh4.googleusercontent.com/PzxbmODo7cJvGFbWvLFWb-BIekV_ELn_uNrhM59VSbgSLfPB04ZS_epOn7fEawKYR0q5Nu6lloiTQzbZet2n4QSRcbGcSL1PMQZOBk_BcTTd3kh7GuyIl62FkVo549HTmlSmTy4)
+<img alt="" src="https://lh4.googleusercontent.com/PzxbmODo7cJvGFbWvLFWb-BIekV_ELn_uNrhM59VSbgSLfPB04ZS_epOn7fEawKYR0q5Nu6lloiTQzbZet2n4QSRcbGcSL1PMQZOBk_BcTTd3kh7GuyIl62FkVo549HTmlSmTy4" width="100%" />
 
 איור 2: הגדרת מקרים ובקרות עבור כל אחד מהניתוחים בהקפאת נתונים 5. יש לציין כי ש- SARS-CoV-2 הוא הנגיף שגורם לזיהום COVID-19. עיבוד [מהמצגת של אנדראה גאנה](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) ב- 25 בינואר 2021.
 
@@ -44,7 +44,7 @@ COVID-19HGI מייצגת קונסורציום של למעלה מ -2,000 מדענ
 
 עם איסוף הנתונים הגנטיים שהפיקו התורמים שלנו, ביצענו GWAS על פי ההגדרות באיור 2. בעבר, [בהקפאת נתונים 4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/) , הדגשנו קשרים גנטיים חדשים ברגישות ובחומרה ל- COVID-19 בשבעה אזורים כרומוזומלים. אזורים אלה מצביעים על תפקוד לקוי מולד של הריאות בהתאם להבנה הקלינית של זיהומי COVID-19. בהקפאת נתונים 5זיהינו 15 אזורים משמעותיים בכל הגנום בכל הכרומוזומים: לאזור כרומוזומלי אחד נצפה קשר משמעותי רק לקבוצת החולים הקשים ( קבוצה א ); ל- 11 אזורים כרומוזומלים נראתה השפעה גבוהה יותר על חומרת המחלה מאשר על חולים ( קבוצה ב ); ו -4 מתוך האזורי הכרומוזומלים הללו היו ספציפיים לזיהום שדווח על ידי חולים מאומתים ב-COVID-19 ( קבוצה ג ). באיור 3 אנו מציגים ייצוג גרפי של תוצאות אלו כעלילה של מיאמי (גרסת פאנל של [חלקה במנהטן](https://en.wikipedia.org/wiki/Manhattan_plot) . נקראת על שם מיאמי כקו הרקיע של מיאמי משתקפת על פני המים).
 
-![](https://lh5.googleusercontent.com/Kwl8cvb_fZ8ib-tCAp5IcddyCd4Jv8abvTOTVSoT7sKJ6hSXjNT1G8HtpBycWkkwOz9Y08bBzdjvT7gUEM9SDLqmwPefHivveaSqOyK4wakS2B0O6hfL1gKXzAlzH50pSDPwdd8)
+<img alt="" src="https://lh5.googleusercontent.com/Kwl8cvb_fZ8ib-tCAp5IcddyCd4Jv8abvTOTVSoT7sKJ6hSXjNT1G8HtpBycWkkwOz9Y08bBzdjvT7gUEM9SDLqmwPefHivveaSqOyK4wakS2B0O6hfL1gKXzAlzH50pSDPwdd8" width="100%" />
 
 איור 3. עלילת מיאמי של תוצאות האגודה בכל הגנום עבור COVID-19. הפאנל העליון מציג תוצאות של מחקר איגוד כללי בגנום של COVID-19 ובקרות מאושפזים ( ניתוח A ). הפאנל התחתון מציג תוצאות דיווח על זיהום ובקרות COVID-19 ( ניתוח C ).
 
@@ -52,7 +52,7 @@ COVID-19HGI מייצגת קונסורציום של למעלה מ -2,000 מדענ
 
 אנו מבינים שעם מחקרים גנטיים רבים, המגוון באיסוף דגימות הוא גורם חשוב (מובא [כאן](https://www.vox.com/science-and-health/2018/10/22/17983568/dna-tests-precision-medicine-genetics-gwas-diversity-all-of-us) ). ככזה, שאפנו לשפר את המגוון באוסף המדגמים שלנו ככל שמחקרנו גדל (איור 4). המאמץ המשופר שלנו לאיסוף דגימות הביא אותנו לזהות גורמים גנטיים חדשים הקשורים ל- COVID-19 (התוצאות הקודמות שלנו נדונות [בפוסטים בבלוג במהדורה 3](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) ו-[4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/) ). עם הזיהוי המקביל של גורמי סיכון גנטיים בשיטות האנליטיות שלנו , אנו מסוגלים לראות וריאציות גנטיות בגנים או בסמוך להם. עד כה, רוב הגנים שזיהינו מצביעים על סיכון מוגבר במנגנונים תאיים, בוויסות החיסון ובתפקוד הלב. זיהוי גורמי סיכון אלה יכול בסופו של דבר להוביל לטיפולים במיקוד לגנים המזוהים.
 
-![](https://lh6.googleusercontent.com/XAIy_kORNMxMl1aOpWnIwMINOZf_G_E6Eo-yXaNENdeT3HEooJWdY4H_BGMrWUbLsgpMB2u2-bJFKyzKIjyA7A1wxtmfbo5MSZeC6csV5M-RTc90ZeW1CzYgRcuBsD4r_ZxiqwE)
+<img alt="" src="https://lh6.googleusercontent.com/XAIy_kORNMxMl1aOpWnIwMINOZf_G_E6Eo-yXaNENdeT3HEooJWdY4H_BGMrWUbLsgpMB2u2-bJFKyzKIjyA7A1wxtmfbo5MSZeC6csV5M-RTc90ZeW1CzYgRcuBsD4r_ZxiqwE" width="100%" />
 
 איור 4. סקירה כללית על המחקרים התורמים ליוזמת הגנטיקה המארחת של COVID-19 ולהרכבם של קבוצות מוצא עיקריות במטא-אנליזות. בהקפאת נתונים 5 תרמו 19 מחקרים עם אוכלוסיות שאינן אירופיות: 7 אפריקאיות אמריקאיות, 5 אמריקניות מעורבות, 4 ממזרח אסיה, 2 מדרום אסיה ואוכלוסיה ערבית אחת. היהלומים מציגים את גודל המדגם האפקטיבי (גודל המדגם שימצא השפעה מובהקת סטטיסטית באירועים מדעיים) שהתקבל ממקומות גיאוגרפיים שונים.
 
@@ -70,7 +70,7 @@ COVID-19HGI מייצגת קונסורציום של למעלה מ -2,000 מדענ
 
 גורמי סיכון שזוהו במחקרי אסוציאציה עשויים שלא להצביע על בסיס סיבתי לרגישות או לחומרת COVID-19. ככזה השתמשנו בשיטה הנקראת [אקראיות מנדלית (MR)](https://en.wikipedia.org/wiki/Mendelian_randomization) , המשתמשת במידע גנומי כדי להסיק אסוציאציות סיבתיות. MR היא שיטה המשתמשת בגרסאות גנטיות הידועות כמשפיעות על חשיפה נתונה ( למשל BMI) לבחינת ההשפעה הסיבתית של חשיפה על תוצאות המחלה. למבט מקרוב, תיארנו את MR [בפוסט](https://www.covid19hg.org/blog/2021-02-05-mr-working-group/) שפורסם לאחרונה [בבלוג](https://www.covid19hg.org/blog/2021-02-05-mr-working-group/) (פונה לקהל המדעי. על פני שלושת הפנוטיפים של COVID-19, זיהינו קשר סיבתי מובהק סטטיסטית בין שלוש התוצאות של COVID-19 לבין 6 תכונות (מתוך 38 תכונות נבחרות) שבדקנו, איור 4). מצאנו כי BMI גבוה קשור לסיכון גבוה יותר לזיהום COVID-19 ולאשפוז בעקבות COVID-19. תוצאה זו מאשרת ממצאים ממחקרי תצפית, אשר נצפתה סיכון מוגבר לתוצאות חמורות של COVID-19 הקשורות לעלייה ב- BMI. בנוסף, עישון חזוי גנטית היה קשור לעלייה בסיכון לאשפוז COVID-19.
 
-![](https://lh6.googleusercontent.com/M34Wgqo1CDV9p9LK0wDK4IJQDCdDFBUvxmzraTHLlXqORWiVywZag7_S5EJJn7dzy0bii_tBsHI1SxD5N-YWQngBEbXayAmn06i1cquK4iR_B5NGaZZjQN3IsXIEv9fz26cYTr8)
+<img alt="" src="https://lh6.googleusercontent.com/M34Wgqo1CDV9p9LK0wDK4IJQDCdDFBUvxmzraTHLlXqORWiVywZag7_S5EJJn7dzy0bii_tBsHI1SxD5N-YWQngBEbXayAmn06i1cquK4iR_B5NGaZZjQN3IsXIEv9fz26cYTr8" width="100%" />
 
 איור 5: מתאם גנטי והערכות סיבתיות אקראיות מנדליאיות בין 43 תכונות לבין חומרת COVID-19 ו- COVID-19 דיווחו על זיהום. התכונות מפורטות על ציר X ו- COVID-19 פנוטיפים על ציר Y. כחול מייצג קורלציה גנטית שלילית והערכות סיבתיות מגן (אקראיות) מנדלית (MR) ואדום מייצג מתאם גנטי חיובי והערכות סיבתיות של MR בסיכון ריבועים גדולים יותר תואמים מתאם משמעותי יותר. הערכות סיבתיות שעוברות רף מובהקות סטטיסטית מסומנות בכוכבית.
 

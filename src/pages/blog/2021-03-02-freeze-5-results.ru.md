@@ -33,7 +33,7 @@ type: blog-post
 
 
 
-![](https://lh6.googleusercontent.com/XpTDV5d3UkjrTtnfZB-lv6Ry1QwCv8ivXmocoB6UITie4lILNtAb_RrX8XZB_GymapSyL41caCoUwJsrMAqKQPn1dp0jZ_tDzr4tu3EGUTxyT6RrpEQSEIpekRvZMlgC09OHLUFx)
+<img alt="" src="https://lh6.googleusercontent.com/XpTDV5d3UkjrTtnfZB-lv6Ry1QwCv8ivXmocoB6UITie4lILNtAb_RrX8XZB_GymapSyL41caCoUwJsrMAqKQPn1dp0jZ_tDzr4tu3EGUTxyT6RrpEQSEIpekRvZMlgC09OHLUFx" width="100%" />
 
 Рисунок 1. Список участников 5го этапа COVID-19 HGI. Из 47 исследований 19 включали неевропейские популяции. Получено из [презентации](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) Andrea Ganna от 25 января 2021 года.
 
@@ -43,7 +43,7 @@ type: blog-post
 
 
 
-![](https://lh4.googleusercontent.com/xCR3gBLFPCW90PHckwfo8eXdyOBe-q4RS9Gg3zwGHVQ5zWqs6SwNiyMzsw3-C1B7TxaIUKB3ITuJHJ3LLvIRR21MnBn3VKQeHDxXYWPRjXOdzd1nHxqadygSEVHSJqGiDIP54AsO)
+<img alt="" src="https://lh4.googleusercontent.com/xCR3gBLFPCW90PHckwfo8eXdyOBe-q4RS9Gg3zwGHVQ5zWqs6SwNiyMzsw3-C1B7TxaIUKB3ITuJHJ3LLvIRR21MnBn3VKQeHDxXYWPRjXOdzd1nHxqadygSEVHSJqGiDIP54AsO" width="100%" />
 
 Рисунок 2. Определение больных и контролей для каждого анализа в рамках 5го этапа. SARS-CoV-2 — это вирус, который вызывает инфекцию COVID-19. Получено из [презентации](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) Andrea Ganna от 25 января 2021 года.
 
@@ -55,7 +55,7 @@ type: blog-post
 
 
 
-![](https://lh6.googleusercontent.com/LIZ7njW36yPZ0Rd8_fupmPng13ovCehESWIFG1BIIy8twIMZE3_UZ9smNjWvf5eQzsitv55G-nPCNo7P3XsofmnvGUgX76xhoYldnlzWH5oY7XYIHKoGWeJ0HbgQZWY3vrzeamUV)
+<img alt="" src="https://lh6.googleusercontent.com/LIZ7njW36yPZ0Rd8_fupmPng13ovCehESWIFG1BIIy8twIMZE3_UZ9smNjWvf5eQzsitv55G-nPCNo7P3XsofmnvGUgX76xhoYldnlzWH5oY7XYIHKoGWeJ0HbgQZWY3vrzeamUV" width="100%" />
 
 Рисунок 3. Майами-график результатов GWAS для COVID-19. Верхняя панель отображает результаты сравнения госпитализированных с COVID-19 против контролей (анализ B), а нижняя панель содержит результаты сравнения людей, перенесших COVID-19 (в том числе, на основании анкетных данных) и контролей (анализ C).
 
@@ -65,7 +65,7 @@ type: blog-post
 
 
 
-![](https://lh4.googleusercontent.com/XvylVa-VnavxkoS6E38LNADlZxed9I8rehRC2KShzVvtKV0VqofsfkHO7Qn4n3tcBXobcR4089RbuEHgx9W3fGv8a-sc9wzyUfYJbmzkhhnEsLRRkWId_fTgx-HxQOstWpZc_jWY)
+<img alt="" src="https://lh4.googleusercontent.com/XvylVa-VnavxkoS6E38LNADlZxed9I8rehRC2KShzVvtKV0VqofsfkHO7Qn4n3tcBXobcR4089RbuEHgx9W3fGv8a-sc9wzyUfYJbmzkhhnEsLRRkWId_fTgx-HxQOstWpZc_jWY" width="100%" />
 
 Рисунок 4. Участники консорциума COVID-19 HGI, предоставившие данные для исследования и популяционный состав когорт, участвовавших в мета-анализе. В 5ом релизе учствовало 19 исследований, которые предоставили данные по неевропейским популяциям: 7 афроамериканских, 5 смешанно-американских, 4 восточноазиатских, 2 южноазиатских, 1 арабская. Ромбы иллюстрирует эффективный размер соответствующей когорты и географические координаты исследования.
 
@@ -91,7 +91,7 @@ type: blog-post
 
 
 
-![](https://lh3.googleusercontent.com/z-fU3PhbWu39Aj43qefLYkrJucHviiIm0ajQwwtiV569Pw3WtIZgwargRBg0losJhBNIz8BvMIgKncIdJz-suEtGHdoM4a2FfOQfeV8jpy3y-baSdkOXpDU3jgeyW_xkt7oidN_9)
+<img alt="" src="https://lh3.googleusercontent.com/z-fU3PhbWu39Aj43qefLYkrJucHviiIm0ajQwwtiV569Pw3WtIZgwargRBg0losJhBNIz8BvMIgKncIdJz-suEtGHdoM4a2FfOQfeV8jpy3y-baSdkOXpDU3jgeyW_xkt7oidN_9" width="100%" />
 
 Рисунок 5. Генетические корреляции и оценки причинно-следственных связей с помощью менделевской рандомизации между 38 признаками и заболеваемостью и тяжестью COVID-19. На оси X располагаются признаки, на оси Y — фенотипы COVID-19. Голубой цвет означает отрицательную генетическую корреляцию и протективный эффект в менделевской рандомизации, а красный цвет означает положительную генетическую корреляцию и повышающий риск эффект в менделевской рандомизации. Оценки, которые достигли статистического уровня значимости, отмечены звездочками.
 

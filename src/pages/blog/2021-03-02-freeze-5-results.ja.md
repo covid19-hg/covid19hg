@@ -38,7 +38,7 @@ COVID-19ホストジェネティクスイニシアティブ（COVID-19 HGI）は
 
 
 
-![Figure 1: List of COVID-19 HGI contributors for data freeze release 5](https://lh4.googleusercontent.com/4mwwVjshg0iaDWbQYzzGG_2_kqBOMjVOttpaAWxcf7J2VEhJKcEuWWssxRMzKDH7cBvAmuXm_YwWQ_sFM7SlEVdxQZ2qkV0v9IprCQubyR0io_HZ65qN01eUsVQ--OQzpS3LTqmR "Figure 1: List of COVID-19 HGI contributors for data freeze release 5")
+<img alt="Figure 1: List of COVID-19 HGI contributors for data freeze release 5" src="https://lh4.googleusercontent.com/4mwwVjshg0iaDWbQYzzGG_2_kqBOMjVOttpaAWxcf7J2VEhJKcEuWWssxRMzKDH7cBvAmuXm_YwWQ_sFM7SlEVdxQZ2qkV0v9IprCQubyR0io_HZ65qN01eUsVQ--OQzpS3LTqmR" width="100%" />
 
 図１：最新のデータ・フリーズ・バージョン5に参加・貢献した47件スタディの一覧。今回の解析に参加・貢献した47件のスタディ（これは、COVID-19 HGIに登録されたN=143件のスタディの約35%にあたります）のうち、19件は非ヨーロッパ系の集団が含まれていました。合計で210万件以上の遺伝的情報をもつサンプルが解析され、その中には49,562 件のCOVID-19 陽性の症例が含まれていました。図では、参加したスタディを、バイオバンク(Biobank)、臨床研究(Clinical studies)、そして消費者直販型(direct-to-consumer, 医療機関を介さずに提供される検査のこと)の遺伝的検査サービス会社(DTC companies)の3つのグループに分類し、スタディの名前と実施された国の略称を示しています。[Dr. Andrea Gannaの発表](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) (2021年1月25日)をもとに改変。
 
@@ -46,7 +46,7 @@ COVID-19ホストジェネティクスイニシアティブ（COVID-19 HGI）は
 
 これまでに報告したデータ・フリーズと同様、私たちは次に挙げる3つの臨床的な結果に着目してCOVID-19の症例を定義し、それぞれについて解析を実施しました（図2）：A) COVID-19の重症例（人工呼吸器などによる呼吸器系のサポートが必要になった、あるいはCOVID-19により死亡した），B) COVID-19により入院した症例、C) SARS-CoV-2への感染が確認された症例。これら3つの解析を行うことで、SARS-CoV-2とCOVID-19に対する感受性と重症度の両方について、相関をしめす遺伝的変異を同定することを目指しています。とくに、最後に述べた解析（解析C \[Analysis C]）では、SARS-CoV-2への感染報告に寄与する、遺伝的変異を検出することを目的としているため、症状の有無や重症度にかかわらず、すべての症例を解析対象に含めました。図2に、3つの解析それぞれに用いられた症例と対照群の定義とサンプル数を示します。
 
-![Figure 2: Definition of cases and controls for each of the analysis in data freeze 5.](https://lh3.googleusercontent.com/GFABmiU7cRsv0csvAg1FdS6p26aGqxkJjMWlV4mwvhCFeqXA6YesAW3nLrjfQRZ8GfRu5QMT89CRIu-ffLkzoNrR-QlxPASvNuZx0jmDc2SRgOYxotMhk2l5FXUE4C4pdCY8ttN6 "Figure 2: Definition of cases and controls for each of the analysis in data freeze 5.")
+<img alt="Figure 2: Definition of cases and controls for each of the analysis in data freeze 5." src="https://lh3.googleusercontent.com/GFABmiU7cRsv0csvAg1FdS6p26aGqxkJjMWlV4mwvhCFeqXA6YesAW3nLrjfQRZ8GfRu5QMT89CRIu-ffLkzoNrR-QlxPASvNuZx0jmDc2SRgOYxotMhk2l5FXUE4C4pdCY8ttN6" width="100%" />
 
 図２：最新のデータ・フリーズ・バージョン5において実施された3つの解析それぞれについての症例と対照例の定義。今回のリリースに含まれる3つの解析(解析A, B, C, 図中の3つ列にそれぞれ対応)について、症例(cases, 上段)と対照例(controls, 下段)の定義と，症例数と対照例数(N)を示した。[Dr. Andrea Gannaの発表](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) (2021年1月25日)をもとに改変。
 
@@ -56,7 +56,7 @@ COVID-19ホストジェネティクスイニシアティブ（COVID-19 HGI）は
 
 共同研究者らによるゲノムデータの収集の後、我々は図2に示された症例と対照例の定義にしたがって、GWASを実施しました。以前のデータ・フリーズ ・バージョン4では、COVID-19への感染しやすさや重症度に関連する7つの染色体領域での関連を報告しました。これらの領域は、COVID-19の病因として自然免疫や肺機能不全との関わりを示唆しており、主要な臨床的見解と一致しています。今回のデータ・フリーズ・バージョン5では、我々は15の統計的有意な染色体領域を同定しました。このうち、1領域は、COVID-19の最重症例とのみ有意な関連を示しました（解析A）。10領域は重症度との関連が、感染しやすさとの関連よりも強い効果を示しました（解析B）。そして、4領域は感染しやすさとの関連のみが認められました（解析C）。図3では、これらの結果をマイアミ・プロット (Miami plot) として図示しています（[マンハッタン・プロット](https://en.wikipedia.org/wiki/Manhattan_plot)を上下に並べた図で、マイアミの建物の輪郭が水面に反射する様子から名付けられました）。
 
-![Figure 3. Miami plot of genome-wide association results for COVID-19.](https://lh3.googleusercontent.com/Vj3X1H4syf9xw7C5ShPIX5eGx7z3Q0spJVvOVH8jZbRvJHd1GB7jpBEpV7Wx63JnULkZZVKdkqF_k5TScxB74F0p900-CxNIDVanjYZxhTNY7719cwQHCMKSv_Tp6WWpr1ANgQKt "Figure 3. Miami plot of genome-wide association results for COVID-19.")
+<img alt="Figure 3. Miami plot of genome-wide association results for COVID-19." src="https://lh3.googleusercontent.com/Vj3X1H4syf9xw7C5ShPIX5eGx7z3Q0spJVvOVH8jZbRvJHd1GB7jpBEpV7Wx63JnULkZZVKdkqF_k5TScxB74F0p900-CxNIDVanjYZxhTNY7719cwQHCMKSv_Tp6WWpr1ANgQKt" width="100%" />
 
 図3. COVID-19 GWAS結果のマイアミ・プロット. 上部パネルは、COVID-19による入院例と対照例のGWAS結果（解析B）を、下部パネルは報告されたSARS-CoV-2感染例と対照例のGWAS結果（解析B）を示しています。
 
@@ -66,7 +66,7 @@ COVID-19ホストジェネティクスイニシアティブ（COVID-19 HGI）は
 
 多くの遺伝学研究において、収集するサンプルの多様性が課題となっています (より詳しくは[こちら](https://www.vox.com/science-and-health/2018/10/22/17983568/dna-tests-precision-medicine-genetics-gwas-diversity-all-of-us)を参照)。それに従い我々も、研究規模が大きくなるにつれて収集するサンプルにおける多様性を高めることを目指しました(図4)。より多くのサンプルを集める中で、COVID-19に相関する新たな遺伝的要素を同定することが出来ました(今までの結果は[第3回](https://www.covid19hg.org/ja/blog/2020-09-24-freeze-3-results/)及び[第4回データリリースの記事](https://www.covid19hg.org/ja/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/)を参照)。我々の解析手法を用いてCOVID-19の遺伝的リスク要因を同定する一連の流れの中で、遺伝子上または近傍に位置する遺伝的変異を観測することが出来ました。現段階では、我々が同定した遺伝子の殆どが、細胞機能、免疫制御、そして心機能における異常のリスク上昇を示唆しています。これらのリスク要因を同定することで、最終的は同定された遺伝子をターゲットとする治療を可能にすることが期待されます。
 
-![Figure 4. Overview of the studies contributing to the COVID-19 host genetics initiative and composition by major ancestry groups in meta-analyses.](https://lh6.googleusercontent.com/WkwxciTjViqzwrm8QvcSzxGRruDAmhU9GIuuF95yPnYvcMeLsYy3HGK4q1a-G2bnpaMXsQk1v7GJJOHg9PDihJnYyr3gZnBR-tFnsFXYi7FsIcpabThEzp1-G2RN2sT4O_maeQEF "Figure 4. Overview of the studies contributing to the COVID-19 host genetics initiative and composition by major ancestry groups in meta-analyses.")
+<img alt="Figure 4. Overview of the studies contributing to the COVID-19 host genetics initiative and composition by major ancestry groups in meta-analyses." src="https://lh6.googleusercontent.com/WkwxciTjViqzwrm8QvcSzxGRruDAmhU9GIuuF95yPnYvcMeLsYy3HGK4q1a-G2bnpaMXsQk1v7GJJOHg9PDihJnYyr3gZnBR-tFnsFXYi7FsIcpabThEzp1-G2RN2sT4O_maeQEF" width="100%" />
 
 図4. COVID-19ホストジェネティクスイニシアティブ（COVID-19 HGI）に貢献している研究の概観、及び、メタアナリシスにおける主な遺伝的祖先集団の比較. データフリーズ5においては、ヨーロッパ人以外の集団から19の研究グループが貢献しました。その内訳は、アフリカンアメリカン：7:5、遺伝的に複数の祖先を持つアメリカ人の集団：5、東アジア人集団：4、南アジア人集団：2、及びアラビア人集団：1となっています。 ダイヤモンド型はそれぞれの地域における有効サンプルサイズ(近親関係の影響などを補正した、統計処理を行う際の実質的に有効なサンプルサイズ)を示す。
 
@@ -100,7 +100,7 @@ COVID-19ホストジェネティクスイニシアティブ（COVID-19 HGI）は
 
 
 
-![Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection.](https://lh3.googleusercontent.com/cz3_l9gnZfKuy6cvvQnPqIYoDpoE0AtmHxpw9uomO5WOLpBrSTS7sWx1cXjUwEiLpHxDz2f7qWtm1CkXD7-TIqbUNfCPMigivDIuQMC-IeI__l9YHlcSCKNVFapSWKfMX9d0Cb_q "Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection.")
+<img alt="Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection." src="https://lh3.googleusercontent.com/cz3_l9gnZfKuy6cvvQnPqIYoDpoE0AtmHxpw9uomO5WOLpBrSTS7sWx1cXjUwEiLpHxDz2f7qWtm1CkXD7-TIqbUNfCPMigivDIuQMC-IeI__l9YHlcSCKNVFapSWKfMX9d0Cb_q" width="100%" />
 
 図5：38個の因子とCOVID-19の重症度およびSARS-CoV-2感染との間の遺伝的相関およびメンデルランダム化による因果推定。X軸に38個の因子が、Y軸に3つのCOVID-19の表現型が記載されています。青は負の遺伝的相関と保護的因果推定を表し、赤は正の遺伝的相関とリスク因果推定を表します。正方形の大きさは統計学的有意性に対応します。統計的有意性の閾値を超える結果には、アスタリスクが付いています。
 

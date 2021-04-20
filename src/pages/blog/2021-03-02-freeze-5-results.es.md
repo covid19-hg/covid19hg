@@ -24,7 +24,7 @@ La iniciativa COVID-19 HGI ha demostrado previamente y de manera reiterada la ro
 
 
 
-![](https://lh4.googleusercontent.com/VkB8fQaDh8IhNEmy3AI9_jVc6DmXm4i9aK4RUqOlZwN41-pUU69qzg3O36eMtZhzDKu-5VUgfMnJExO9Gh2o3yfr76yfLO4fQv9cJhXM-bL4o8JW_j2I0IF9e2TEi57B7m_l6ScD)
+<img alt="" src="https://lh4.googleusercontent.com/VkB8fQaDh8IhNEmy3AI9_jVc6DmXm4i9aK4RUqOlZwN41-pUU69qzg3O36eMtZhzDKu-5VUgfMnJExO9Gh2o3yfr76yfLO4fQv9cJhXM-bL4o8JW_j2I0IF9e2TEi57B7m_l6ScD" width="100%" />
 
 Figura 1: Lista de colaboradores de HGI COVID-19 del último análisis realizado (data freeze 5). De los 47 estudios, 19 incluyeron poblaciones no europeas. Adaptado de la presentación de [Andrea Ganna](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) el 25 de enero de 2021.
 
@@ -32,7 +32,7 @@ Figura 1: Lista de colaboradores de HGI COVID-19 del último análisis realizado
 
 Como en anteriores análisis, seguimos examinando tres resultados (Figura 2): A) Enfermos graves de COVID-19 (con asistencia respiratoria o fallecidos por COVID-19), B) Hospitalizados por COVID-19 y C) Infectados por SARS-CoV-2. Estos análisis tienen como objetivo la identificación de las características genéticas asociadas tanto a la susceptibilidad como a la severidad del SARS-CoV-2 y la COVID-19. El análisis previo (Análisis C) tuvo como objetivo detectar variantes genéticas que contribuyeran a la infección por SARS-CoV-2. Este análisis incluyó todos los casos, independientemente de la presencia o gravedad de los síntomas. Los resultados del análisis y las definiciones de casos y controles, así como el tamaño muestral, están representados en la Figura 2.
 
-![](https://lh5.googleusercontent.com/uWXN8eoN_BqvEBtwKjzRlErKm_Y8rpO6SVKv49aR6CmPvhauNz3xQUHefROG9USlrgnaHtR4Y54fsKpKt7kBXoXKK_vU3BaRkkDER54HcsIHjzEPmdmshYmccFtLlZKHn4EcA18t)
+<img alt="" src="https://lh5.googleusercontent.com/uWXN8eoN_BqvEBtwKjzRlErKm_Y8rpO6SVKv49aR6CmPvhauNz3xQUHefROG9USlrgnaHtR4Y54fsKpKt7kBXoXKK_vU3BaRkkDER54HcsIHjzEPmdmshYmccFtLlZKHn4EcA18t" width="100%" />
 
 Figura 2: Definición de casos y controles para cada uno de los análisis realizados (data freeze 5). El SARS-CoV-2 es el virus que causa la infección de COVID-19. Adaptado de la [presentación de Andrea Ganna](https://www.covid19hg.org/blog/2021-01-29-januarhttps://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/y-25-2021-meeting/) el 25 de enero de 2021
 
@@ -44,7 +44,7 @@ Después de recopilar los datos genéticos producidos por nuestros colaboradores
 
 
 
-![Figure 3. Miami plot of genome-wide association results for COVID-19.](https://lh3.googleusercontent.com/t1LTCVIOCCKpgo17bcfWZPdm08MPp1pUbpvyp05YxoG9AU_dDlMOEuv9VvfSZWfDkBwQbRg3ASa2GJUFilj0yygICGdHjrSUJILlHp40yMeakRBPZ-CUgOnOQW5cLbUM6FI4Ss7h "Figure 3. Miami plot of genome-wide association results for COVID-19.")
+<img alt="Figure 3. Miami plot of genome-wide association results for COVID-19." src="https://lh3.googleusercontent.com/t1LTCVIOCCKpgo17bcfWZPdm08MPp1pUbpvyp05YxoG9AU_dDlMOEuv9VvfSZWfDkBwQbRg3ASa2GJUFilj0yygICGdHjrSUJILlHp40yMeakRBPZ-CUgOnOQW5cLbUM6FI4Ss7h" width="100%" />
 
 
 
@@ -56,7 +56,7 @@ Entendemos que al incluir muestras de muchos estudios genéticos diferentes, la 
 
 
 
-![Figure 4. Overview of the studies contributing to the COVID-19 host genetics initiative and composition by major ancestry groups in meta-analyses.](https://lh6.googleusercontent.com/BPphnDe8yd0pI1m5Buu0_93U-kLmtoqSOfrGINCfINum_RAjCTTYNHe8sC8l2H5zUF1IyATNXyBrM5PntIKHIB3FjE517FEIqnQM-F9ZNMZk256YbdXNR9eeiwL2zWeQjWypjj-L "Figure 4. Overview of the studies contributing to the COVID-19 host genetics initiative and composition by major ancestry groups in meta-analyses.")
+<img alt="Figure 4. Overview of the studies contributing to the COVID-19 host genetics initiative and composition by major ancestry groups in meta-analyses." src="https://lh6.googleusercontent.com/BPphnDe8yd0pI1m5Buu0_93U-kLmtoqSOfrGINCfINum_RAjCTTYNHe8sC8l2H5zUF1IyATNXyBrM5PntIKHIB3FjE517FEIqnQM-F9ZNMZk256YbdXNR9eeiwL2zWeQjWypjj-L" width="100%" />
 
 Figura 4. Perspectiva de los estudios que forman parte de la iniciativa COVID-19 HGI y composición de principales grupos de ancestros en meta-análisis. En el análisis 5, 19 estudios aportaron poblaciones no europeas: 7 de poblaciones afroamericanas, 5 de estadounidenses mixtas, 4 de Asia del Este, 2 de Asia del Sur y una población árabe. Los diamantes muestran el tamaño muestral efectivo (tamaño muestral necesario para encontrar diferencias significativas en los eventos científicos analizados) recibido de diversas localizaciones geográficas.
 
@@ -72,7 +72,7 @@ En nuestros análisis, los genes que afectan el sistema inmunológico juegan un 
 
 Cabe la posibilidad de que los factores de riesgo identificados en los estudios de asociación no apunten a las causas que generan susceptibilidad o severidad en los casos de COVID-19. Por ello, hemos empleado el método llamado [Aleatorizacion Mendeliana (AM)](https://es.wikipedia.org/wiki/Aleatorizaci%C3%B3n_mendeliana), el cual usa información genética para inferir asociaciones causales. El método AM consiste en usar variantes genéticas de las cuales se sabe que influyen en una causa concreta (por ejemplo el Índice de Masa Corporal, IMC) para examinar el efecto causal que determina el curso de una enfermedad. Para más información sobre el método de AM, lo describimos en un reciente [blog post](https://www.covid19hg.org/blog/2021-02-05-mr-working-group/) (dirigido a la audiencia científica), escrito para el público científico. De los tres fenotipos descritos para la COVID-19, hemos identificado asociaciones causales con significación estadística entre los tres fenotipos COVID-19 y seis rasgos de los 38 rasgos analizados, Figura 5). Asimismo, observamos que la predisposición genética a un IMC más elevado estaba asociada con un incremento del riesgo a ser infectado con SARS-CoV-2 y a la consecuente hospitalización por COVID-19. Este resultado confirma los hallazgos de estudios observacionales donde se ha descrito que el riesgo a presentar síntomas más severos de COVID-19 estaba asociado a un incremento del IMC. De manera similar, una predisposición genética a fumar estaba asociada con un incremento del riesgo a ser hospitalizado por COVID-19.
 
-![Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection.](https://lh4.googleusercontent.com/mLp1cCTK3Rxl0HDe-PhER27GJBw-ffWYkBLzd-j-fH6jINQimJK7vgZEqTm2lAOqJKxlDhcPQtLGDpHRtWZ4PvmxqPGDI7OzE97tNdgqlasxQ8nFa8Q_XqIqj0KR8VEdujwb1Rnw "Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection.")
+<img alt="Figure 5: Genetic correlations and Mendelian randomization causal estimates between 43 traits and COVID-19 severity and SARS-CoV-2 reported infection." src="https://lh4.googleusercontent.com/mLp1cCTK3Rxl0HDe-PhER27GJBw-ffWYkBLzd-j-fH6jINQimJK7vgZEqTm2lAOqJKxlDhcPQtLGDpHRtWZ4PvmxqPGDI7OzE97tNdgqlasxQ8nFa8Q_XqIqj0KR8VEdujwb1Rnw" width="100%" />
 
 Figura 5: Correlaciones genéticas y aleatorización Mendeliana estimadas entre 38 rasgos y la severidad de la enfermedad COVID-19 y la infección por SARS-CoV-2. Estas características están representadas en el eje X, y los fenotipos COVID-19 en el eje Y. El color azul representa correlaciones genéticas negativas y aleatorización Mendeliana protectora y el color rojo representa correlación genética positiva y la aleatorización Mendeliana de riesgo. Los cuadrados de mayor tamaño corresponden a una asociación más significativa. Aquellas estimaciones causales que presentan significación estadística están marcadas con un asterisco.
 

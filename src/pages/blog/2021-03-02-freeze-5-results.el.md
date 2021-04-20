@@ -30,7 +30,7 @@ type: blog-post
 
 
 
-![](https://lh4.googleusercontent.com/wk6MMRq7kKO3sL94QMQlYgXy4KeNBrI4-PvDAv6RpD5C7T-wuxPVQUXTpESSppGtwrMTVEOFhKGJyyKJ6sVB6h1Qu04WqvtebkUg2s4OiFY9LJqoM9mAg8NZAOEzXjNcScckgN_y)
+<img alt="" src="https://lh4.googleusercontent.com/wk6MMRq7kKO3sL94QMQlYgXy4KeNBrI4-PvDAv6RpD5C7T-wuxPVQUXTpESSppGtwrMTVEOFhKGJyyKJ6sVB6h1Qu04WqvtebkUg2s4OiFY9LJqoM9mAg8NZAOEzXjNcScckgN_y" width="100%" />
 
 Σχήμα 1: Κατάλογος των συντελεστών COVID-19 HGI για την απελευθέρωση παγώματος δεδομένων 5. Από τις 47 μελέτες που συνέβαλαν, οι 19 περιελάμβαναν μη ευρωπαϊκούς πληθυσμούς. Προσαρμόστηκε από την [παρουσίαση Andrea Ganna](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) στις 25 Ιανουαρίου 2021.
 
@@ -42,7 +42,7 @@ type: blog-post
 
 
 
-![](https://lh6.googleusercontent.com/QJQ6hHYI0nkKdUt6X8GSRfKPuVUrlcVjg5ysHbwN9waCT55AJXI47da1LOS3h3ko_fUmzNveFzXU2UPuat-xgQnn-h1GVi7OsniHexsUJHRHPhnz5aYpAGos4rpGSjFL0DKwN9iw)
+<img alt="" src="https://lh6.googleusercontent.com/QJQ6hHYI0nkKdUt6X8GSRfKPuVUrlcVjg5ysHbwN9waCT55AJXI47da1LOS3h3ko_fUmzNveFzXU2UPuat-xgQnn-h1GVi7OsniHexsUJHRHPhnz5aYpAGos4rpGSjFL0DKwN9iw" width="100%" />
 
 Σχήμα 2: Ορισμός ομάδων ασθενών και μαρτύρων για καθεμία από τις αναλύσεις στο πάγωμα δεδομένων 5. Σημειώστε ότι ο κορωνοϊός είναι ο ιός που προκαλεί τη νόσο COVID-19. Προσαρμόστηκε από την [παρουσίαση Andrea Ganna](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/) στις 25 Ιανουαρίου 2021.
 
@@ -54,7 +54,7 @@ type: blog-post
 
 
 
-![](https://lh5.googleusercontent.com/XLtVkV0d6Bdo6GFbNEIoknAT7NQy98EJ08s1wjVrby8ut7LSt1xfW6bphOYb8DM51cdC-u9oApBQLXnsQamNDzRSfVOWxRiSlmjFz5M3cMSmb8D7NKXW9egLjw_0L46j-vH2qccl)Σχήμα 3: Απεικόνιση Μαϊάμι αποτελεσμάτων συσχέτισης σε επίπεδο γονιδιώματος για την ασθένεια COVID-19. Το πάνω πάνελ δείχνει τα αποτελέσματα της μελέτης συσχέτισης σε ολόκληρο το γονιδίωμα για ασθενείς με σοβαρό COVID-19 που εισήχθησαν στο νοσοκομείο (ανάλυση Β), και στο κάτω πάνελ τα αποτελέσματα χρησιμοποιώντας όλους τους ασθενείς με λοίμωξη από τον κορωνοϊό σε αντιπαραβολή με δείγμα μαρτύρων (ανάλυση Γ).
+<img alt="" src="https://lh5.googleusercontent.com/XLtVkV0d6Bdo6GFbNEIoknAT7NQy98EJ08s1wjVrby8ut7LSt1xfW6bphOYb8DM51cdC-u9oApBQLXnsQamNDzRSfVOWxRiSlmjFz5M3cMSmb8D7NKXW9egLjw_0L46j-vH2qccl)Σχήμα" width="100%" />.
 
 
 
@@ -66,7 +66,7 @@ type: blog-post
 
 Μέχρι στιγμής, τα περισσότερα γονίδια που προσδιορίσαμε κατευθύνουν προς κυτταρικούς μηχανισμούς, τον έλεγχο του ανοσοποιητικού συστήματος και την καρδιακή λειτουργία. Ο προσδιορισμός αυτών των παραγόντων κινδύνου μπορεί τελικά να οδηγήσει σε θεραπείες στοχεύοντας τα γονίδια που ανιχνεύσαμε σε αυτήν την μελέτη.
 
-![](https://lh3.googleusercontent.com/523YlkeurP4bZdz3bnTQA_Ia9LZB0mQpPIsRpybuCZ9essRmMS3YyxfNLjppCX6vlufKQ9GkwNv_WEne0z7-o3hoK33FNO4P5oK5xkasxgv0hj7v_dhl_SFKa-DVsc7aimilwlZE)
+<img alt="" src="https://lh3.googleusercontent.com/523YlkeurP4bZdz3bnTQA_Ia9LZB0mQpPIsRpybuCZ9essRmMS3YyxfNLjppCX6vlufKQ9GkwNv_WEne0z7-o3hoK33FNO4P5oK5xkasxgv0hj7v_dhl_SFKa-DVsc7aimilwlZE" width="100%" />
 
 Σχήμα 4: Επισκόπηση των μελετών που συμβάλλουν στην κοινοπραξία COVID-19 HGI από μεγάλες ομάδες εθνοτήτων σε μετα-αναλύσεις. Στο πάγωμα δεδομένων 5, 19 μελέτες συνέβαλαν σε μη ευρωπαϊκούς πληθυσμούς: 7 Αφρο-αμερικανικοί, 5 αμερικανικοί πληθυσμοί με μίξη με άλλες εθνότητες, 4 Ανατολικής Ασίας, 2 Νότιας Ασίας και 1 Αραβικός πληθυσμός. Τα σχήματα που μοιάζουν με διαμάντια δείχνουν το δραστικό μέγεθος δείγματος που λαμβάνονται από διαφορετικές γεωγραφικές τοποθεσίες.
 
@@ -98,7 +98,7 @@ type: blog-post
 
 
 
-![](https://lh5.googleusercontent.com/O5RrTsb6m-6wwybolH6l1ixArOfc8j9HU1UqyzA-zuWJ_yvSEfYmHXJs5WoEB5n1JCipP6ZVm7McGbr6Jn670sWhUp_gaAGHYulf-11DyLyhJWMldjHHobLTBra9poKGSED6eSIj)
+<img alt="" src="https://lh5.googleusercontent.com/O5RrTsb6m-6wwybolH6l1ixArOfc8j9HU1UqyzA-zuWJ_yvSEfYmHXJs5WoEB5n1JCipP6ZVm7McGbr6Jn670sWhUp_gaAGHYulf-11DyLyhJWMldjHHobLTBra9poKGSED6eSIj" width="100%" />
 
 Σχήμα 5: Γενετικές συσχετίσεις (άνω διάγραμμα) και αιτιακές εκτιμήσεις Μεντελιανής τυχαιοποίησης (κάτω διάγραμμα) μεταξύ 38 φαινοτύπων με την σοβαρότητα της ασθένειας COVID-19 και με την ταυτοποιημένη μόλυνση με SARS-CoV-2. Οι φαινότυποι αναφέρονται στον άξονα Χ και τα χαρακτηριστικά COVID-19 στον άξονα Υ. Το μπλέ αντιπροσωπεύει την αρνητική γενετική συσχέτιση (προστατευτική) με COVID-19 και το κόκκινο αντιπροσωπεύει θετική γενετική συσχέτιση (αύξηση κινδύνου) σε σχέση με την ασθένεια COVID-19. Τα μεγαλύτερα τετράγωνα αντιστοιχούν σε πιο στατιστικά σημαντική συσχέτιση. Αιτιώδεις εκτιμήσεις που περνούν ένα όριο στατιστικής σημασίας επισημαίνονται με αστερίσκο.
 
