@@ -53,6 +53,16 @@ const navItems: NavItem[] = [
     icon: Announcement,
     children: [
       {
+        label: 'FAQ'
+        icon: Book,
+        children:[
+          {
+            href: `/2021-04-20-faq/`,
+            label: `HGI FAQ`,
+          }
+        ],
+      },
+      {
         label: 'Blog',
         icon: Book,
         children: [
