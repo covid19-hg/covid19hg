@@ -22,7 +22,7 @@ type: blog-post
 
 COVID-19 HGI在之前的版本中已经反复显示出稳健的遗传信号，并且代表了历史上最大的[全基因组关联研究](https://www.broadinstitute.org/files/styles/visuals_style/public/GWAS-Explainer-08-02-17.jpg?itok=-6sgc6nN)(GWAS)：无论是在研究参与者(>200万个体)还是合作者数量(>2000名科学家)方面。这里，我们描述了最新的数据冻结第5版的结果。在我们之前的数据冻结（第4版）中，我们报告了与严重的COVID-19相关的人类遗传变异（请看我们为非科学家撰写的关于数据发布[第3版](https://www.covid19hg.org/zh/blog/2020-09-24-freeze-3-results/)和[第4版](https://www.covid19hg.org/zh/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/)的博客文章）。我们通过GWAS在3万多名COVID-19患者（即病例）和147万名非COVID-19患者（即对照组）中发现了这些变异。在数据冻结第5版中，我们通过合并来自19个国家47项研究的数据，将样本量进一步增加到近5万例COVID-19病例和200多万例对照（图1）。通过增加样本量，我们也在提高研究结果的可信度。在这次数据冻结中，我们还试图提高人群的多样性。在不同遗传祖先的人群中研究遗传学有助于我们更好地了解影响COVID-19严重性的遗传变异及其在世界各地的影响。在47项贡献研究中，有19项包括了非欧洲人群。
 
-![](https://lh4.googleusercontent.com/cv0M99K5b6EA_b83A8oqhKjxUrjE9l74ShLhChghwv17TNFvLjcIg6c50Q9jGyaxsmGx9YRVbu2DLxYzzGY209Cjnkkq6YQkj4vQgUA9L9PX_OM6eUoXyumg8xCij5J5DHx7ZyKB)
+<img alt="" src="https://lh4.googleusercontent.com/cv0M99K5b6EA_b83A8oqhKjxUrjE9l74ShLhChghwv17TNFvLjcIg6c50Q9jGyaxsmGx9YRVbu2DLxYzzGY209Cjnkkq6YQkj4vQgUA9L9PX_OM6eUoXyumg8xCij5J5DHx7ZyKB" width="100%" />
 
 图1：COVID-19 HGI贡献者名单，在数据冻结发布第5版的47项贡献研究中，有19项包括非欧洲人群。改编自[Andrea Ganna在2021年1月25日的演讲](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/)。
 
@@ -30,7 +30,7 @@ COVID-19 HGI在之前的版本中已经反复显示出稳健的遗传信号，�
 
 与之前的数据冻结一样，我们继续研究三种结果（图2）。A）COVID-19危重症(最终依靠呼吸支持或死于COVID-19)，B）因COVID-19住院，C）被SARS-CoV-2感染。这些分析旨在捕捉与SARS-CoV-2和COVID-19的易感性和严重性相关的遗传特征。最后一项分析（分析C）旨在检测与报告的SARS-CoV-2感染相关的遗传变异。该分析包括所有病例，而不考虑症状的存在或严重程度。分析结果及其病例和对照的定义和样本大小见图2。
 
-![](https://lh5.googleusercontent.com/Hu9M5l-nzTrAAVU5BccBUQhu49KjTkXmN6AxkTKUSfbsH_y-p80CnDGHO2PlsV1I3sseAHlfrtIWuPEqFVCxz91cNrzheNCIWJ4npC3ie25fZm-R4ljMDVYmO-mfKlTTT-72Yxt8)
+<img alt="" src="https://lh5.googleusercontent.com/Hu9M5l-nzTrAAVU5BccBUQhu49KjTkXmN6AxkTKUSfbsH_y-p80CnDGHO2PlsV1I3sseAHlfrtIWuPEqFVCxz91cNrzheNCIWJ4npC3ie25fZm-R4ljMDVYmO-mfKlTTT-72Yxt8" width="100%" />
 
 图2：数据冻结5中每个分析的病例和对照的定义。请注意，SARS-CoV-2是导致COVID-19感染的病毒。改编自[Andrea Ganna在2021年1月25日的演讲](https://www.covid19hg.org/blog/2021-01-29-january-25-2021-meeting/)。
 
@@ -38,7 +38,7 @@ COVID-19 HGI在之前的版本中已经反复显示出稳健的遗传信号，�
 
 收集贡献者提供的遗传数据后，我们根据图2中的定义进行了全基因组关联分析研究。在之前的[数据冻结4](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/)中，我们重点研究了7个染色体区域中COVID-19的易感性和严重性方面的新遗传信号。这些区域指向先天免疫和肺功能障碍的病因：与COVID-19感染相关的最常见临床理解一致。在数据冻结5中，我们确定了所有染色体中15个全基因组范围的显著区域：1个染色体区域仅在危重性分析中具有基因组范围的显著意义（分析A）；在严重性分析中，有11个染色体区域的影响要高于已报告的感染相关研究（分析B）；这些染色体区域中的4个对SARS-CoV-2报告的感染具有特异性（分析C）。在图3中，我们将这些结果以迈阿密图（[曼哈顿图](https://en.wikipedia.org/wiki/Manhattan_plot)的多版块版本。因为迈阿密的天际线在水面的倒影而命名）的方式展示。
 
-![](https://lh4.googleusercontent.com/JzVBN0TyIMCR_YlJmomU7adLBYGa5VLJwSD2_L9_Gd4Edhfvb6lKQnanbnc_kDO-X1yDQD9hHzqrgVtJ8rhLHSKi7gbkrX-zvAgCaH3XrDwgoNT03rJa8UrL7sqNu3_7fGl_l0vL)
+<img alt="" src="https://lh4.googleusercontent.com/JzVBN0TyIMCR_YlJmomU7adLBYGa5VLJwSD2_L9_Gd4Edhfvb6lKQnanbnc_kDO-X1yDQD9hHzqrgVtJ8rhLHSKi7gbkrX-zvAgCaH3XrDwgoNT03rJa8UrL7sqNu3_7fGl_l0vL" width="100%" />
 
 图3. 迈阿密图所示COVID-19全基因组关联结果。上半幅图显示COVID-19住院病例和对照的全基因组关联研究的结果（分析B），下半幅图显示所报告的SARS-CoV-2感染和对照的结果（分析C）。
 
@@ -48,7 +48,7 @@ COVID-19 HGI在之前的版本中已经反复显示出稳健的遗传信号，�
 
 
 
-![](https://lh3.googleusercontent.com/Phs8t5xCt_wuFZskzFY97xvEOCHf03dKxBjCWcdfIsZJpSjVm1DqpB_0DaAEcQm6bDR8h85VP-lduUkia4GNWp3vOo35GWwkLHuqnEU9XmRIrFs3sPyCT4vUCZ5iFdr4Vp9in6IP)
+<img alt="" src="https://lh3.googleusercontent.com/Phs8t5xCt_wuFZskzFY97xvEOCHf03dKxBjCWcdfIsZJpSjVm1DqpB_0DaAEcQm6bDR8h85VP-lduUkia4GNWp3vOo35GWwkLHuqnEU9XmRIrFs3sPyCT4vUCZ5iFdr4Vp9in6IP" width="100%" />
 
 图4. 主要遗传背景组研究在整合分析中对COVID-19宿主遗传学计划的贡献和组成概述。在数据冻结5中，有19项研究贡献了非欧洲人群：7项非洲裔美国人群研究，5项混血美国人群研究，4项东亚人群研究，2项南亚人群和1项阿拉伯人群研究。菱形标志显示在不同地理位置获得的有效样本量（在科学研究中具有统计学显著影响的样本量）。
 
@@ -66,7 +66,7 @@ COVID-19 HGI在之前的版本中已经反复显示出稳健的遗传信号，�
 
 关联研究中确定的风险因素可能并不指向COVID-19易感性或严重性的因果基础。因此，我们采用了一种称为[孟德尔随机化（MR）](https://en.wikipedia.org/wiki/Mendelian_randomization)的方法，利用基因组信息推断因果关联。MR是一种利用已知影响给定暴露的遗传变异（如BMI）来研究暴露对疾病结果的因果效应的方法。为了更深入地了解，我们在最近的一篇[博客文章](https://en.wikipedia.org/wiki/Mendelian_randomization)中描述了MR（迎合科学观众。在三种COVID-19表型中，我们确定了三种COVID-19结果和6个性状之间具有统计学意义的因果关系（在我们测试的38个选定性状中，图4）。我们发现，基因预测的较高体重指数（BMI）与SARS-CoV-2感染和COVID-19住院的风险较高相关。这一结果印证了观察性研究的结果，观察到严重的COVID-19结局风险增加与BMI增加有关。此外，基因预测的吸烟与COVID-19住院风险增加有关。
 
-![](https://lh4.googleusercontent.com/468HzIa5LtmDq2_8JhtvTeoCif98jcaLAOAUngPPJJD6O91EoqfWgFdVj-4FzCPJo3YDwejYu2RvITlGAelEm277lGq3bPm5KPk-Dcn3DUosc9Kwj5yaZW79ygXng9aXDXds4JN1)
+<img alt="" src="https://lh4.googleusercontent.com/468HzIa5LtmDq2_8JhtvTeoCif98jcaLAOAUngPPJJD6O91EoqfWgFdVj-4FzCPJo3YDwejYu2RvITlGAelEm277lGq3bPm5KPk-Dcn3DUosc9Kwj5yaZW79ygXng9aXDXds4JN1" width="100%" />
 
 图5：38个性状与COVID-19严重程度和SARS-CoV-2报告感染之间的遗传相关性和孟德尔随机化因果估计。性状列在X轴上，COVID-19表型列在Y轴上。蓝色代表负遗传相关性和保护性孟德尔随机化（MR）因果估计，红色代表正遗传相关性和风险MR因果估计。更大的方块对应更显著的相关性。通过统计学意义阈值的因果估计值用星号标记。
 

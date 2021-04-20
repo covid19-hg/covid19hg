@@ -30,7 +30,7 @@ COVID-19 HGI secara berkala telah menunjukkan isyarat genetik yang kuat dalam si
 
 
 
-![](https://lh3.googleusercontent.com/TXGrAk5uKeWdGXGpZbDgkg7SKzlxYAPbkKrKYNwhf6RuIT2i8GcaKXxCfZI1uvmEgKLsQNkS77aHJq_Yt7TxtxMI0X5ChDr3yKJR1wfHd5mBjt1x5l8Yyd8cnKqrl-lzDmzu6KAV)
+<img alt="" src="https://lh3.googleusercontent.com/TXGrAk5uKeWdGXGpZbDgkg7SKzlxYAPbkKrKYNwhf6RuIT2i8GcaKXxCfZI1uvmEgKLsQNkS77aHJq_Yt7TxtxMI0X5ChDr3yKJR1wfHd5mBjt1x5l8Yyd8cnKqrl-lzDmzu6KAV" width="100%" />
 
 
 
@@ -46,7 +46,7 @@ Seperti data sebelumnya yang membeku, kami terus memeriksa tiga hasil (Gambar 2)
 
 
 
-![](https://lh4.googleusercontent.com/1eOufYMC60NYjIZEriI1MfZ4ppxUohWOwizLxACsFJXvS7bP-fWT9YwPfB6JOgEF_c7awb6bfA1GGGMc5wCEm377srAIZ2B7w6sxwwAeUpZlY_hK5TUNQzegqo2EPbR6Rg7tFM6s)
+<img alt="" src="https://lh4.googleusercontent.com/1eOufYMC60NYjIZEriI1MfZ4ppxUohWOwizLxACsFJXvS7bP-fWT9YwPfB6JOgEF_c7awb6bfA1GGGMc5wCEm377srAIZ2B7w6sxwwAeUpZlY_hK5TUNQzegqo2EPbR6Rg7tFM6s" width="100%" />
 
 
 
@@ -62,7 +62,7 @@ Setelah mengumpulkan data genetik yang dihasilkan oleh penyumbang kami, kami mel
 
 
 
-![](https://lh6.googleusercontent.com/aApEQGJv5uqmHE-IbsiIRuwiqw9XHDIvJV9xIhndaPdUTAbOAv7yeY529wDwO9W0VAQ43Gy1kH09-k_bJVWjroZsTbyXArOVWanPi6xgGJgiInhGiGQedHPykyj_HMYQmzWsYWkH)
+<img alt="" src="https://lh6.googleusercontent.com/aApEQGJv5uqmHE-IbsiIRuwiqw9XHDIvJV9xIhndaPdUTAbOAv7yeY529wDwO9W0VAQ43Gy1kH09-k_bJVWjroZsTbyXArOVWanPi6xgGJgiInhGiGQedHPykyj_HMYQmzWsYWkH" width="100%" />
 
 
 
@@ -78,7 +78,7 @@ Kami memahami bahawa dengan banyak kajian genetik, kepelbagaian dalam pengumpula
 
 
 
-![](https://lh4.googleusercontent.com/FP-SsIiS7KWk0ZyfdBpX8VNScc2qVQQo0qw-qW3EDSXUZcjcQxDnf4LN8G5RZRNRmeJYZo1nk4DWVai01oMsjp62Q3UwJsKUvT6HTiHPMwBywUyWvdtXr1xs943MnE2sezz9M2i5)
+<img alt="" src="https://lh4.googleusercontent.com/FP-SsIiS7KWk0ZyfdBpX8VNScc2qVQQo0qw-qW3EDSXUZcjcQxDnf4LN8G5RZRNRmeJYZo1nk4DWVai01oMsjp62Q3UwJsKUvT6HTiHPMwBywUyWvdtXr1xs943MnE2sezz9M2i5" width="100%" />
 
 Gambar 4. Gambaran keseluruhan kajian yang menyumbang kepada inisiatif dan komposisi genetik host COVID-19 oleh kumpulan keturunan utama dalam meta-analisis. Dalam pembekuan data 5, 19 kajian menyumbang dengan populasi bukan Eropah: 7 Afrika Amerika, 5 Amerika Campuran, 4 Asia Timur, 2 Asia Selatan dan 1 Arab. Berlian menunjukkan ukuran sampel yang berkesan (ukuran sampel yang akan mendapat kesan yang signifikan secara statistik dalam peristiwa ilmiah) yang diterima dari lokasi geografi yang berbeza.
 
@@ -108,7 +108,7 @@ Faktor risiko yang dikenal pasti dalam kajian persatuan mungkin tidak menunjukka
 
 
 
-![](https://lh3.googleusercontent.com/MjNcG1A71g3GpbzaZ5Ls0YQOTn-CEQE44SYPl2wxuP7RzJagXXYlGo7rVA-AB-Wu5HhchA2I0KQyy2Q8hJoAoVvxyOCw9pi_SaXa1_t8swYj0XFZFSXx_bFtX5sUl2sHE7eScwEF)
+<img alt="" src="https://lh3.googleusercontent.com/MjNcG1A71g3GpbzaZ5Ls0YQOTn-CEQE44SYPl2wxuP7RzJagXXYlGo7rVA-AB-Wu5HhchA2I0KQyy2Q8hJoAoVvxyOCw9pi_SaXa1_t8swYj0XFZFSXx_bFtX5sUl2sHE7eScwEF" width="100%" />
 
 Gambar 5: Korelasi genetik dan perkiraan penyebab rawak Mendelian antara 38 sifat dan keparahan COVID-19 dan jangkitan SARS-CoV-2 dilaporkan. Sifat disenaraikan pada paksi X dan fenotip COVID-19 pada paksi Y. Biru mewakili korelasi genetik negatif dan anggaran kausal rawak Mendelian pelindung (MR) dan merah mewakili korelasi genetik positif dan anggaran risiko kausal MR. Petak yang lebih besar sesuai dengan korelasi yang lebih signifikan. Anggaran sebab yang melepasi ambang kepentingan statistik ditandakan dengan tanda bintang.
 

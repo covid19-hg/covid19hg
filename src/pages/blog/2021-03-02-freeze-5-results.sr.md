@@ -20,7 +20,7 @@ KOVID-19 HGI je pokazao značajne genetske signale u prethodnim izdanjima i pred
 
 
 
-![](https://lh6.googleusercontent.com/4cBUl1jsnnjxbXsy0LHLf9XJWc1nkvTiWvv8ytQuuv9nhu96wIHriz1XoOEPVRvX0fQfgmc928oMEsv-sL9dFg6vGhqYURh54A1NYq2MG0Eh24WgJQsEfpqh31t8mTw4aqgVhHi1)
+<img alt="" src="https://lh6.googleusercontent.com/4cBUl1jsnnjxbXsy0LHLf9XJWc1nkvTiWvv8ytQuuv9nhu96wIHriz1XoOEPVRvX0fQfgmc928oMEsv-sL9dFg6vGhqYURh54A1NYq2MG0Eh24WgJQsEfpqh31t8mTw4aqgVhHi1" width="100%" />
 
 
 
@@ -34,7 +34,7 @@ Kao i u prethodnim izdanjima, nastavljamo da ispitujemo tri ishoda (slika 2): A)
 
 
 
-![](https://lh3.googleusercontent.com/CiPW38vjnkNbh3uH_oZnulWK2cmmMRWL40vBXotyBZA_QCewk-T-3WuzaDPj5QxytFAGYWdl7cRcg-gy6h_mj5iMKMgZ0EEvyWVSt_edzZl1YhIDUyR-nh4tIoaJmxyMIsR53jNR)
+<img alt="" src="https://lh3.googleusercontent.com/CiPW38vjnkNbh3uH_oZnulWK2cmmMRWL40vBXotyBZA_QCewk-T-3WuzaDPj5QxytFAGYWdl7cRcg-gy6h_mj5iMKMgZ0EEvyWVSt_edzZl1YhIDUyR-nh4tIoaJmxyMIsR53jNR" width="100%" />
 
 
 
@@ -48,7 +48,7 @@ Nakon prikupljanja genetskih podataka koje su proizveli naši saradnici, izveli 
 
 
 
-![](https://lh3.googleusercontent.com/KjYDaYSp10qnSTgK1DxuIbLReaWvgDkDqDxWozwZ_LDNMOTmJQSuOkf7d5ooIcLzGqtWssXMmAScJ6aovVGt9fAHMJHchYbVJlAEYVgTnlR1RvNSg4I5QEVB9qywJAbPHmeoqnSr)Slika 3. Majami prikaz rezultata povezanosti genoma sa KOVID-19. Gornji grafik prikazuje rezultate studije povezanosti genoma sa hospitalizacijom zbog KOVID-19 (analiza B), a donji grafik rezultate prijavljene SARS-CoV-2 infekcije (analiza C).
+<img alt="" src="https://lh3.googleusercontent.com/KjYDaYSp10qnSTgK1DxuIbLReaWvgDkDqDxWozwZ_LDNMOTmJQSuOkf7d5ooIcLzGqtWssXMmAScJ6aovVGt9fAHMJHchYbVJlAEYVgTnlR1RvNSg4I5QEVB9qywJAbPHmeoqnSr)Slika" width="100%" />.
 
 
 
@@ -56,7 +56,7 @@ Nakon prikupljanja genetskih podataka koje su proizveli naši saradnici, izveli 
 
 Znamo da je glavni problem u mnogim genetskim studijama raznolikost sakupljenih uzoraka (detaljnije [ovde](https://www.vox.com/science-and-health/2018/10/22/17983568/dna-tests-precision-medicine-genetics-gwas-diversity-all-of-us)). Zato smo se trudili da sa porastom našeg uzorka, povećamo i raznolikost (slika 4). Takvi naši napori pri prikupljanju uzoraka imali su za rezultat identifikaciju novih genetskih faktora povezanih sa KOVID-19 (o našim prethodnim rezultatima pročitajte u blogovima [3.](https://www.covid19hg.org/sr/blog/2020-09-24-freeze-3-results/) i [4.](https://www.covid19hg.org/blog/2020-11-24-covid-19-hgi-results-for-data-freeze-4-october-2020/) izdanja). Uz identifikaciju genetičkih faktora rizika, koristeći naše analitičke metode uspeli smo da uočimo genetske varijante u genima ili blizu njih. Do sada, većina gena koje smo identifikovali ukazuju na povećani rizik za poremećaje u ćelijskim mehanizmima, imunološkoj regulaciji i srčanoj funkciji. Identifikacija ovih faktora rizika nas može dovesti do tretmana koji utiču specifično na identifikovane gene.
 
-![](https://lh3.googleusercontent.com/5DuGrAQ8cGuT25k2sn8dQx6cf4qQJip8siYKd-KFQGeyW_zWdedv7pS5OBEp3SFhvuVcyMSLP1JJzN2kopY_pNIfq8NgryMWkdSrDeD2FReclfuwwCgP9v8F0na4y9QAfu2r1AiW)Slika 4. Pregled studija koje su doprinele genetskoj inicijativi domaćina KOVID-19 i sastavu glavnih grupa predaka u metaanalizi. U 5. izdanju, 19 studija je doprinelo populaciji van Evrope: sedam uključuje afro-amerikance, pet amerikance mešane genetske strukture, četiri studije uključuje istočno-azijsku populaciju, dve južno-azijsku i jedna arapsku populaciju. Dijamanti na slici pokazuju efektivnu veličinu uzorka (onu u kojoj je statistički značajan efekat) sa različitih geografskih lokacija.
+<img alt="" src="https://lh3.googleusercontent.com/5DuGrAQ8cGuT25k2sn8dQx6cf4qQJip8siYKd-KFQGeyW_zWdedv7pS5OBEp3SFhvuVcyMSLP1JJzN2kopY_pNIfq8NgryMWkdSrDeD2FReclfuwwCgP9v8F0na4y9QAfu2r1AiW)Slika" width="100%" /> sa različitih geografskih lokacija.
 
 
 
@@ -80,7 +80,7 @@ Naše analize pokazuju da geni koji utiču na imuni sistem igraju važnu ulogu u
 
 Faktori rizika identifikovani u studijama asocijacije možda neće predstavljati uzrok osetljivosti na KOVID-19 ili težinu kliničke slike. Zato smo koristili metodu koja se naziva Mendelova randomizacija (MR) koja koristi genetske informacije za utvrđivanje uzročno-posledičnih veza. MR je metoda koja koristi genetske varijante za koje je poznato da utiču na izloženost nekom faktoru (npr. Indeks telesne mase - eng. body mass index - BMI) da ispita uzročni efekat tog faktora na neki ishod. Za detalje opisali smo MR u skorašnjem [blogu](https://www.covid19hg.org/blog/2021-02-05-mr-working-group/) prilagođenom naučnoj publici. Identifikovali smo statistički značajne uzročno-posledične veze između tri ishoda KOVID-19 i šest faktora (od odabranih 38 faktora koje smo testirali, slika 4). Otkrili smo da je genetska predispozicija za veći BMI povezana sa većim rizikom od infekcije SARS-CoV-2 i hospitalizacije zbog KOVID-19. Ovaj rezultat potkrepljuje nalaze opservacionih studija, koje su pokazale da je povećani rizik od teških ishoda KOVID-19 povezan sa povećanim BMI. Pored toga, genetska predispozicija za pušenje je povezana sa povećanim rizikom od hospitalizacije KOVID-19.
 
-![](https://lh6.googleusercontent.com/iKVUglhDMbUfvneXDqZUE3ArCV7wuCvHG6KPjcBv69jyqC-DC41wXyntEWUZ_Fdj9MI7LNw0CFGKeE4idZ-Q-bjRFIr8iamdP2M-rvKvO0IY4_vJHNChAJC99ZTmGR59nDcSsgal)Slika 5: Genetske korelacije i rezultati Mendelove randomizacije uzročne veze između 38 faktora i ishoda KOVID-19 i infekcije SARS-CoV-2. Osobine su navedene na X-osi i fenotipovi KOVID-19 na Y-osi. Plava boja predstavlja negativnu genetsku korelaciju i zaštitne MR efekte, a crvena boja predstavlja pozitivnu genetsku korelaciju i rizične MR efekte. Veličina kvadrata srazmerna je jačini korelacije. Uzročni efekti koji prelaze prag statističke značajnosti označene su zvezdicom.
+<img alt="" src="https://lh6.googleusercontent.com/iKVUglhDMbUfvneXDqZUE3ArCV7wuCvHG6KPjcBv69jyqC-DC41wXyntEWUZ_Fdj9MI7LNw0CFGKeE4idZ-Q-bjRFIr8iamdP2M-rvKvO0IY4_vJHNChAJC99ZTmGR59nDcSsgal" width="100%" />Slika 5: Genetske korelacije i rezultati Mendelove randomizacije uzročne veze između 38 faktora i ishoda KOVID-19 i infekcije SARS-CoV-2. Osobine su navedene na X-osi i fenotipovi KOVID-19 na Y-osi. Plava boja predstavlja negativnu genetsku korelaciju i zaštitne MR efekte, a crvena boja predstavlja pozitivnu genetsku korelaciju i rizične MR efekte. Veličina kvadrata srazmerna je jačini korelacije. Uzročni efekti koji prelaze prag statističke značajnosti označene su zvezdicom.
 
 
 
