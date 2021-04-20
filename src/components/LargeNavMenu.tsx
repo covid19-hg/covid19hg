@@ -53,7 +53,7 @@ const navItems: NavItem[] = [
     icon: Announcement,
     children: [
       {
-        label: 'FAQ'
+        label: 'FAQ',
         icon: Book,
         children:[
           {
