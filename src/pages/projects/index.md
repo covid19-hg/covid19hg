@@ -79,6 +79,8 @@ projects:
       * [Mar 11 2021](https://drive.google.com/file/d/1-RUj0_N7cA0RjjdqHffXhFWw6nh8xr16/view?usp=sharing)
 
       * [Mar 25 2021](https://drive.google.com/file/d/1FxhrqHlM-CN_RmFFNSYyqEPl58HohMjJ/view?usp=sharing)
+
+      * [Apr 15 2021](https://drive.google.com/file/d/176C80T83_5mTVIXD8o7MtC-euIqNimkR/view?usp=sharing)
     title: WES/WGS working group within the HGI
     slack-channel: "#covid19-hg-wes-wgs"
     contact-persons:
