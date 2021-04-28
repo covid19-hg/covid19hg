@@ -94,6 +94,10 @@ exports.languages = new Map([
     { englishName: "Polish", nativeName: "Polski", direction: leftToRight },
   ],
   [
+    "pt",
+    { englishName: "Portuguese", nativeName: "Português", direction: leftToRight },
+  ],
+  [
     "ro",
     { englishName: "Romanian", nativeName: "Română", direction: leftToRight },
   ],
