@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid } from "./materialUIContainers";
-import { Typography, Link, makeStyles, Theme, Card, CardContent } from "@material-ui/core";
+import { Typography, Link, makeStyles, Theme } from "@material-ui/core";
 import GatsbyLink from "gatsby-link";
 import Box from "@material-ui/core/Box";
 import BlogRoll from "./BlogRoll";
@@ -101,11 +101,6 @@ const IndexPageContent = ({ image, learnCollaborate, dataResults }: Props) => {
     <>
       <Img fluid={image.childImageSharp.fluid} loading="eager" />
       <Container marginTop={5} fixed={true}>
-        <Card variant="outlined">
-          <CardContent>
-            <Typography variant="h5" align="center">Next data freeze: 30th of April</Typography>
-          </CardContent>
-        </Card>
         <Grid container={true} spacing={3} marginTop={2} marginBottom={2}>
           {learnCollaborateElem}
           {dataResultsElem}
