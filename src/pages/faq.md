@@ -68,7 +68,7 @@ The COVID-19 HGI contributors are already performing computational experiments t
 
 
 
-The COVID-19 HGI is a collaboration of researchers from across the world who are each conducting independent genetic studies and contributing the results to our meta-analysis. We currently stand at approximately 2,4001,200 researchers organized by the [International Common Disease Alliance](http://www.icda.bio), representing an unprecedented mobilization of geneticists and making us one of the largest global efforts for understanding the genetics of a particular disease. To date, we have global contributors from 47 groups (Figure 2).
+The COVID-19 HGI is a collaboration of researchers from across the world who are each conducting independent genetic studies and contributing the results to our meta-analysis. We currently stand at approximately 3,033 researchers organized by the [International Common Disease Alliance](http://www.icda.bio), representing an unprecedented mobilization of geneticists and making us one of the largest global efforts for understanding the genetics of a particular disease. To date, we have global contributors from 47 groups (Figure 2).
 
 
 ![Figure 2: List of COVID-19 HGI contributors for data freeze release 5](/img/release5_fig1.png)
