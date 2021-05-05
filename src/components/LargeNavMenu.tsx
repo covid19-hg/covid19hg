@@ -57,7 +57,7 @@ const navItems: NavItem[] = [
         icon: Book,
         children:[
           {
-            href: `/2021-04-20-faq/`,
+            href: `/faq/`,
             label: `HGI FAQ`,
           }
         ],
