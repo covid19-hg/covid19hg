@@ -138,6 +138,27 @@ const Release = (release: Props) => {
           </>
         )}
 
+        {release.date === 'June 15, 2021' && (
+          <>
+            <Grid item={true} xs={releaseLeftColumnWidthXs} md={releaseLeftColumnWidthMd}>
+              <Typography variant="h6">Extras</Typography>
+            </Grid>
+            <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
+              <Typography>
+                <strong style={{ color: 'orange' }}>**Note**</strong> a summary table of top results can be
+                found{' '}
+                <a href="https://docs.google.com/spreadsheets/d/1b9MqyivfJ7lk1BwaYCjd_P5kQRquunPW0BQljeLVags/edit#gid=0">
+                 here 
+                </a>.
+              </Typography>
+              <Typography style={{ marginTop: 10 }}>
+                <strong style={{ color: 'blue' }}>**Note**</strong> the full download files do not contain the
+                23andMe samples, but the plots display results from analyses that include the 23andMe.
+              </Typography>
+            </Grid>
+          </>
+        )}
+
         {release.date == 'October 20, 2020' && (
           <Grid item={true} xs={12}>
             <Typography align="center" style={{ color: '#FF8C00' }}>
@@ -146,7 +167,7 @@ const Release = (release: Props) => {
           </Grid>
         )}
 
-        {release.date == 'January 18, 2021' && (
+        {(release.date == 'January 18, 2021' || release.date == 'June 15, 2021') && (
           <Grid item={true} xs={12}>
             <Typography align="center" style={{ color: 'green' }}>
               Note: variants with heterogeneity p-value less than 0.001 across studies are in green.
