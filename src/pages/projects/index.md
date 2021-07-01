@@ -114,7 +114,7 @@ projects:
       expansion of CHIP.
 
 
-      Preprint: <https://www.medrxiv.org/content/10.1101/2020.11.12.20230821v1>
+      paper: <https://www.nature.com/articles/s41591-021-01371-0>[](https://www.medrxiv.org/content/10.1101/2020.11.12.20230821v1)
     contact-persons:
       - Philip Awadalla
       - Pradeep Natarajan
