@@ -2,9 +2,9 @@ import React from "react";
 import { Grid } from "./materialUIContainers";
 import { makeStyles, Theme } from "@material-ui/core";
 
-export const gridSpacing = 2;
+export const gridSpacing = 1;
 
-export const listAndMapHeight = "40vh";
+export const listAndMapHeight = "100vh";
 
 export type ExtractProps<
   TComponentOrTProps

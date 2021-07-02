@@ -385,39 +385,8 @@ const Partners = ({
 
   return (
     <Container marginTop={1}>
-      <Typography variant="h5" component="h2">
-        Find studies
-      </Typography>
-      <Grid container={true} spacing={gridSpacing} marginTop={1}>
-        <FilterControlContainer> {studyTypeElem} </FilterControlContainer>
-        <FilterControlContainer> {assaysPlannedElem} </FilterControlContainer>
-        <FilterControlContainer>
-          <CountrySelect
-            onChange={(_event, value: string) => {
-              const dispatchedValue = value === "" ? undefined : value;
-              const action: SetStateAction<typeof selectedCountryStateName> = {
-                type: SET_FORM_STATE,
-                payload: {
-                  name: selectedCountryStateName,
-                  value: dispatchedValue,
-                },
-              };
-              dispatch(action);
-            }}
-          />
-        </FilterControlContainer>
 
-        <FilterControlContainer> {geneticAnalysisElem} </FilterControlContainer>
-        <FilterControlContainer>
-          {researchCategoriesElem}
-        </FilterControlContainer>
-        <FilterControlContainer> {keywordSearchElem} </FilterControlContainer>
-      </Grid>
-
-      <Grid container={true} spacing={gridSpacing} marginTop={2}>
-        {listElem}
         {mapElem}
-      </Grid>
 
       <Container marginTop={4} disableGutters={true}>
         {card}

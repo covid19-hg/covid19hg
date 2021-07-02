@@ -36,7 +36,7 @@ const streetMapSourceId = "mapbox-streets";
 const terrainSourceId = "mapbox-terrain";
 const markerLayerId = "markers-layer";
 const visibilityFeatureStateName = "isVisible";
-const columnWidthMd = 8;
+const columnWidthMd = 12;
 const mapLegendFlexOrder = 2;
 const mapFlexOrder = 4;
 
@@ -153,26 +153,6 @@ const initializeMap = (
       ...getLandWaterBuiltMapboxLayer(streetMapSourceId),
       ...getPlaceLabelsPlaceLabelsMapboxLayer(streetMapSourceId),
       ...getAdministrativeBoundariesAdminMapboxLayer(streetMapSourceId),
-      {
-        id: markerLayerId,
-        type: "symbol",
-        source: markersSourceId,
-        layout: {
-          "text-field": ["to-string", ["get", "study"]],
-          "text-size": 14,
-          "text-justify": "left",
-          "text-anchor": "bottom-left",
-        },
-        paint: {
-          "text-translate": [9, 0],
-          "text-opacity": [
-            "case",
-            ["boolean", ["feature-state", visibilityFeatureStateName]],
-            1,
-            0,
-          ],
-        },
-      },
     ],
   };
 
@@ -462,7 +442,8 @@ const MapComponent = ({
         item={true}
         md={columnWidthMd}
         order={mapFlexOrder}
-        height="40vh"
+        width="100vw"
+        height="60vh"
         ref={mapElRef}
       />
     </>
@@ -489,7 +470,8 @@ const MapWrapper = (props: MapWrapperProps) => {
           item={true}
           md={columnWidthMd}
           order={mapFlexOrder}
-          height="40vh"
+          height="60vh"
+          width="100vw"
           display="flex"
           justifyContent="center"
           alignItems={"center" as const}
