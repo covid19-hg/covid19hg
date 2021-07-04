@@ -7,6 +7,11 @@ publications_page_intro: Many of the participating groups in COVID-19 Host
   follow-up work based on specific discovered loci, even if that work may have
   been based on unpublished analyses of the HGI.
 studies:
+  - posted_date: 8th June 2021
+    name: Data freeze 6
+    links:
+      - description: Website
+        url: /results/
   - posted_date: 5th March 2021
     name: COVID-19 HGI flagship paper
     cases_description: "6,179 critically ill cases, 13,641 hospitalised cases,
