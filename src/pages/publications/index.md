@@ -8,7 +8,7 @@ publications_page_intro: Many of the participating groups in COVID-19 Host
   been based on unpublished analyses of the HGI.
 studies:
   - posted_date: 8th June 2021
-    name: Data freeze 6
+    name: COVID-19 HGI data freeze 6
     links:
       - description: Website
         url: /results/
@@ -50,6 +50,9 @@ studies:
     links:
       - description: Website
         url: /results/
+    cases_description: ""
+    controls_description: ""
+    genome_wide_significant_loci: ""
   - posted_date: 25th September 2020
     name: Genetics Of Mortality In Critical Care (GenOMICC consortium)
     links:
