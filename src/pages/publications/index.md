@@ -22,6 +22,8 @@ studies:
     links:
       - description: Preprint
         url: https://www.medrxiv.org/content/10.1101/2021.03.10.21252820v1
+      - description: Paper
+        url: https://www.nature.com/articles/s41586-021-03767-x
   - posted_date: 26th January 2021
     name: Roberts, Partha, Rhead et al. - ANCESTRY DNA 2
     links:
