@@ -10,7 +10,7 @@ type: blog-post
 
 Geschrieben von James Priest, Brooke Wolford, Nirmal Vadgama, Sophie Limou, M Medina Gomez, Atanu Kumar Dutta, Claudia Schurmann, Fauzan Ahmad, Jamal Nasir, Kumar Veerapen, ins Deutsche übersetzt von Christina Roos, Eva Schulte, Claudia Schurmann und Alexander Teumer im Namen der COVID-19 HGI
 
-*Hinweis: Die COVID-19 Host Genetics Initiative (HGI) repräsentiert ein Konsortium von über 2000 Wissenschaftlern aus über 54 Ländern, die zusammenarbeiten, um Daten und Ideen auszutauschen, Patienten zu rekrutieren und wissenschaftliche Ergebnisse zu verbreiten. Für einen Leitfaden zu unserem Studiendesign lesen Sie bitte unseren [ersten Blog-Beitrag](https://www.covid19hg.org/de/blog/2020-09-24-freeze-3-results/). Unsere Forschung baut auf den vorangegangenen Ergebnissen auf, und wir fassen unsere neuesten Erkenntnisse in [Blog-Beiträgen](https://www.covid19hg.org/blog/) und im [Ergebnisbereich unserer Website](https://www.covid19hg.org/results/) zusammen. Wenn Ihnen ein Fachbegriff nicht geläufig sein sollte, senden Sie uns bitte eine E-Mail an [hgi-faq@icda.bio](http://hgi-faq@icda.bio/) — wir werden die Erklärungen hier gerne aktualisieren, um das Verständnis zu erleichtern.*
+*Hinweis: Die COVID-19 Host Genetics Initiative (HGI) repräsentiert ein Konsortium von über 2000 Wissenschaftlern aus über 54 Ländern, die zusammenarbeiten, um Daten und Ideen auszutauschen, Patienten zu rekrutieren und wissenschaftliche Ergebnisse zu verbreiten. Für einen Leitfaden zu unserem Studiendesign lesen Sie bitte unseren [ersten Blog-Beitrag](https://www.covid19hg.org/de/blog/2020-09-24-freeze-3-results/). Unsere Forschung baut auf den vorangegangenen Ergebnissen auf, und wir fassen unsere neuesten Erkenntnisse in [Blog-Beiträgen](https://www.covid19hg.org/blog/) und im [Ergebnisbereich unserer Website](https://www.covid19hg.org/results/) zusammen. Wenn Ihnen ein Fachbegriff nicht geläufig sein sollte, senden Sie uns bitte eine E-Mail an [hgi-faq@icda.bio](mailto:hgi-faq@icda.bio) — wir werden die Erklärungen hier gerne aktualisieren, um das Verständnis zu erleichtern.*
 
 Eine Infektion mit SARS-CoV-2 beim Menschen kann zu ganz unterschiedlichen Verläufen führen: von unbemerkten Infektionen über milde, erkältungsähnliche Erkrankungen bis hin zu schweren Verläufen, die zum Tod führen können. Ältere oder Menschen mit Vorerkrankungen haben statistisch das größte Risiko, an einer SARS-CoV2-Infektion zu sterben. Aber auch jüngere Menschen können schwer erkranken. Die COVID-19 Host Genetics Initiative (HGI) wurde gegründet, um zu verstehen, wie die genetische Variabilität beeinflusst, welcher Mensch vor einem schweren Verlauf der SARS-CoV-2-Infektion geschützt bzw. wer dafür anfällig ist.
 
@@ -19,7 +19,6 @@ Unsere Studie konzentriert sich auf die Beziehung zwischen genetischer Variabili
 Die COVID-19 Host Genetics Initiative (HGI) wurde im März 2020 auf dem ersten Höhepunkt der globalen COVID-19-Pandemie ins Leben gerufen, unter der Leitung der Dres. Andrea Ganna und Mark Daly vom [Institut für Molekulare Medizin in Finnland](https://www.fimm.fi/en/) (FIMM) bzw. dem [Broad Institute](https://www.broadinstitute.org/) von MIT und Harvard.
 
 **Haftungsausschluss: Die Ergebnisse dieser Studie müssen die Zuverlässigkeit ihrer Vorhersagekraft für Krankheitsschwere und Anfälligkeit gegenüber einer COVID-19-Infektion auf Grundlage der genetischen Information eines Menschen noch beweisen. Daher sind die von der HGI veröffentlichten Ergebnisse nicht für eine Genotypen-basierte Diagnose von COVID-19-Patienten geeignet.**
-
 
 ## Was ist die genetische Variabilität des Menschen?
 
@@ -38,7 +37,6 @@ Mit einer GWAS können wir testen, ob die genetische Variabilität mit einer Kra
 Hat eine Gruppe von Menschen mit schwerer Krankheit ein anderes Ausmaß genetischer Variabilität als eine Gruppe von Menschen ohne schwere Krankheit?
 
 Bezüglich COVID-19 zum Beispiel können wir testen, ob genetische Varianten die Wahrscheinlichkeit erhöhen, im Krankenhaus Unterstützung bei der Atmung (als ein Indikator für die Schwere der Erkrankung) zu benötigen. An jeder Stelle im genetischen Code, die unterschiedlich sein kann, vergleichen wir die Häufigkeit einer genetischen Variante von Fällen (d.h. in diesem Fall: Mensch mit positivem COVID-19-Test und Krankenhausaufenthalt mit Atmungsunterstützung) und Kontrollen (d.h. hier: Mensch mit positivem COVID-19-Test, aber ohne Krankenhausaufenthalt) (Abbildung 1).
-
 
 ![Figure 1: Interpreting risk based on genotype observation](https://lh4.googleusercontent.com/RvjgBDaGagDVAsv6Ue0gqLZy27hqVx1Wb3cruHqRSvL7VI6Ir1R8rvGk5DZ6Rdpp6irZdX21sYTICTY665yLwL0jSsvUrWBuSJSN-cF103Jl88xWFox3rTCNzdPosWgnDF9qI2OC "Figure 1: Interpreting risk based on genotype observation")
 
