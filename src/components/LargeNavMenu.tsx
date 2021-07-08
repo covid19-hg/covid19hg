@@ -57,6 +57,10 @@ const navItems: NavItem[] = [
         icon: Book,
         children: [
           {
+            href: `/blog/2021-07-07-multi-perspective-genomics-research-scientists-use-covid-19-host-genetics-initiative-genomic-data-to-solve-covid-19-conundrum/`,
+            label: `Literature Review Pt. II`,
+          },
+          {
             href: `/blog/faq/`,
             label: `HGI FAQ`,
           },

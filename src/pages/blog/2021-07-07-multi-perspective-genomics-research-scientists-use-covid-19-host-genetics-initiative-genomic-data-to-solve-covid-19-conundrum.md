@@ -5,7 +5,6 @@ title: "Multi-perspective Genomics Research: Scientists use COVID-19 Host
 date: 2021-07-07T16:19:00.051Z
 type: blog-post
 ---
-# Multi-perspective Genomics Research: Scientists use COVID-19 Host Genetics Initiative genomic data to characterize COVID-19
 
 #### Written by [Gita Pathak](https://twitter.com/gitapathakphd?lang=en), PhD; [Annika Faucon](https://twitter.com/faucon_b?lang=en) B.S.; [Atanu Kumar Dutta](https://www.nibmg.ac.in/?q=akd1-research), MD
 
