@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "# Multi-perspective Genomics Research: Scientists use COVID-19 Host
-  Genetics Initiative genomic data to solve COVID-19 conundrum"
+  Genetics Initiative genomic data to characterize COVID-19"
 date: 2021-07-07T16:19:00.051Z
 type: blog-post
 ---
