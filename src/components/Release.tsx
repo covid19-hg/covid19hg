@@ -155,6 +155,17 @@ const Release = (release: Props) => {
                 <strong style={{ color: 'blue' }}>**Note**</strong> the full download files do not contain the
                 23andMe samples, but the plots display results from analyses that include the 23andMe.
               </Typography>
+
+              <Typography style={{ marginTop: 5 }}>
+                There are additional not listed here available at this storage bucket:{' '}
+                <Typography style={{ marginTop: 5 }}><code>gs://covid19-hg-public/20210415/results/20210607</code></Typography> 
+                <Typography style={{ marginTop: 5 }}>You will need{' '}<a href="https://cloud.google.com/storage/docs/gsutil_install">gsutil</a> to list and download
+                these files.</Typography>
+              </Typography>
+
+              <Typography style={{ marginTop: 5 }}>
+                Included are ancestry-specific (AFR, EUR, HIS/AMR) and admixed (AFR/HIS/AMR) results for hospitalization and susceptibility scans are now available. Also the top 10k variants including 23andMe, as well as leave UKBB out results for all ancestries and EUR only are available.
+              </Typography>
             </Grid>
           </>
         )}
@@ -173,7 +184,7 @@ const Release = (release: Props) => {
               Note: variants with heterogeneity p-value less than 0.001 across studies are in green.
             </Typography>
           </Grid>
-        )}
+        )}k
       </Grid>
       <Grid container={true} marginTop={2} spacing={4}>
         {analysisElems}
