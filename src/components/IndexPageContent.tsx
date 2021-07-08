@@ -119,7 +119,7 @@ const IndexPageContent = ({ image, learnCollaborate, dataResults }: Props) => {
       <GatsbyLink style={{ marginTop: 5 }} className={classes.newPosts} to="https://www.nature.com/articles/s41586-021-03767-x">
             • Flagship publication in <em>Nature</em>
       </GatsbyLink>
-      <GatsbyLink style={{ marginTop: 5 }} className={classes.newPosts} to="">
+      <GatsbyLink style={{ marginTop: 5 }} className={classes.newPosts} to="https://www2.helsinki.fi/en/news/health-news/large-genomic-analysis-highlights-covid-19-risk-factors">
             • Press release for publication
       </GatsbyLink>
       <GatsbyLink style={{ marginTop: 5 }} className={classes.newPosts} to="/results/r6/">
