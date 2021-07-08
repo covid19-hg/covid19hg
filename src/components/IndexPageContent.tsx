@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid } from "./materialUIContainers";
-import { Typography, Link, makeStyles, Theme } from "@material-ui/core";
+import { Typography, Link, makeStyles, Theme, Card, CardContent } from "@material-ui/core";
 import GatsbyLink from "gatsby-link";
 import Box from "@material-ui/core/Box";
 import BlogRoll from "./BlogRoll";
@@ -22,6 +22,15 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   featureItemSubtitle: {
     color: theme.palette.text.primary,
+  },
+  newPosts: {
+    textDecoration: "none",
+    display: "block",
+    color: 'crimson',
+    marginBottom: '5px',
+    "&:hover": {
+      textDecoration: "none",
+    },
   },
 }));
 
@@ -72,6 +81,8 @@ interface Props {
   dataResults: { title: string; subtitle: string; link: string }[];
 }
 const IndexPageContent = ({ image, learnCollaborate, dataResults }: Props) => {
+  const classes = useStyles();
+
   const learnCollaborateItems = learnCollaborate.map(
     ({ link, title, subtitle }) => (
       <FeatureItem title={title} subtitle={subtitle} link={link} key={title} />
@@ -101,6 +112,28 @@ const IndexPageContent = ({ image, learnCollaborate, dataResults }: Props) => {
     <>
       <Img fluid={image.childImageSharp.fluid} loading="eager" />
       <Container marginTop={5} fixed={true}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography variant="h5" align="center">
+              <strong>Highlighted Links:</strong>
+      <GatsbyLink style={{ marginTop: 5 }} className={classes.newPosts} to="https://www.nature.com/articles/s41586-021-03767-x">
+            • Flagship publication in <em>Nature</em>
+      </GatsbyLink>
+      <GatsbyLink style={{ marginTop: 5 }} className={classes.newPosts} to="">
+            • Press release for publication
+      </GatsbyLink>
+      <GatsbyLink style={{ marginTop: 5 }} className={classes.newPosts} to="/results/r6/">
+            • Download GWAS release 6
+      </GatsbyLink>
+      <GatsbyLink style={{ marginTop: 5 }} className={classes.newPosts} to="/blog/2021-03-02-freeze-5-results">
+            • Summary of GWAS release 5
+      </GatsbyLink>
+      <GatsbyLink className={classes.newPosts} to="/blog/2021-07-07-multi-perspective-genomics-research-scientists-use-covid-19-host-genetics-initiative-genomic-data-to-solve-covid-19-conundrum/">
+            • Literature review of COVID-19 HGI-enabled studies
+      </GatsbyLink>
+            </Typography>
+          </CardContent>
+        </Card>
         <Grid container={true} spacing={3} marginTop={2} marginBottom={2}>
           {learnCollaborateElem}
           {dataResultsElem}
