@@ -5,7 +5,6 @@ title: "Multi-perspective Genomics Research: Scientists use COVID-19 Host
 date: 2021-07-07T16:19:00.051Z
 type: blog-post
 ---
-
 #### Written by [Gita Pathak](https://twitter.com/gitapathakphd?lang=en), PhD; [Annika Faucon](https://twitter.com/faucon_b?lang=en) B.S.; [Atanu Kumar Dutta](https://www.nibmg.ac.in/?q=akd1-research), MD
 
 #### Edited by Kumar Veerapen, PhD and Brooke Wolford, PhD
@@ -26,6 +25,8 @@ While many investigations have been launched using the [genetic study results](h
 ![](https://lh6.googleusercontent.com/QhhY-yrsP7_53wX0ZJmaQlo-z-_Is-J7GBcnheO-FGn9FJrOnbUB7vSDSPYtSbourFyok5yB1sNylgRK-88MYr6gHryup7eC-Br1B3donqlKKc-jxTm5D2_9K8mviJdwIsfO02id)
 
 **Figure 1: Overview of COVID-19 timeline, please see [(Wiersinga et al. 2020)](https://jamanetwork.com/journals/jama/fullarticle/2768391) for full text.**
+
+![](/img/screen-shot-2021-07-13-at-12.04.53-pm.png)
 
 ## Multi-omics investigations of COVID-19
 
