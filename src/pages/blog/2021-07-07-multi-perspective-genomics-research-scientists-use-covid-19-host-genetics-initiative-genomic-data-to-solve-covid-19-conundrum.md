@@ -7,7 +7,7 @@ type: blog-post
 ---
 #### Written by [Gita Pathak](https://twitter.com/gitapathakphd?lang=en), PhD; [Annika Faucon](https://twitter.com/faucon_b?lang=en) B.S.; [Atanu Kumar Dutta](https://www.nibmg.ac.in/?q=akd1-research), MD
 
-#### Edited by Kumar Veerapen, PhD and Brooke Wolford, PhD
+#### Edited by [Kumar Veerapen](https://twitter.com/mkveerpn?lang=en), PhD and [Brooke Wolford](https://twitter.com/bnwolford), PhD
 
 The Coronavirus Disease 2019 (COVID-19), caused by novel severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), has resulted in a pandemic claiming the lives of more than 3.2 million individuals and infecting more than 156 million individuals worldwide (WHO: <https://covid19.who.int/>). A complete timeline is reviewed in Figure 1 [(Wiersinga et al. 2020)](https://jamanetwork.com/journals/jama/fullarticle/2768391). The SARS-CoV-2 infection has variable severities in people, ranging from asymptomatic to severe life-threatening respiratory failure, coagulation, or neurological symptoms among other sequelae. This individual level variability in response to the infection has led scientists to investigate effects of genetic variation in the human genome that may explain the wide-spectrum of COVID-19 severity and susceptibility The COVID-19 Host Genetics Initiative (HGI) has brought together scientists and studies from all over the world to identify the genomic regions associated with COVID-19 symptoms. This large-scale effort periodically collects descriptive statistics of genotype associations with three sets of COVID-19 severity thresholds:
 
