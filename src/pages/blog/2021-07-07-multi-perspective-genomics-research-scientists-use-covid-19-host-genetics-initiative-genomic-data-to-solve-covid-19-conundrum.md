@@ -26,7 +26,9 @@ While many investigations have been launched using the [genetic study results](h
 
 **Figure 1: Overview of COVID-19 timeline, please see [(Wiersinga et al. 2020)](https://jamanetwork.com/journals/jama/fullarticle/2768391) for full text.**
 
-![](/img/screen-shot-2021-07-13-at-12.04.53-pm.png)
+
+
+![](/img/key_terms_small.jpg)
 
 ## Multi-omics investigations of COVID-19
 
