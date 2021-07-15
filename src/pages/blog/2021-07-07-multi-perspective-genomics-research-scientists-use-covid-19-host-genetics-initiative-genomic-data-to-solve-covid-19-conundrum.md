@@ -26,10 +26,6 @@ While many investigations have been launched using the [genetic study results](h
 
 **Figure 1: Overview of COVID-19 timeline, please see [(Wiersinga et al. 2020)](https://jamanetwork.com/journals/jama/fullarticle/2768391) for full text.**
 
-
-
-![](/img/key_terms_small.jpg)
-
 ## Multi-omics investigations of COVID-19
 
 Multi-omics investigations involve the integration of multiple layers of omics data (e.g. genomic, transcriptomic, proteomic). For example, genotypic variation is associated with gene splicing, and/or protein expression of genes within cis (local: 1MB) regions. In the following studies authors combined results of functional studies to make statistical predictions to learn about the pathology of COVID-19.
@@ -43,6 +39,8 @@ Another study by [Gita Pathak and colleagues](https://www.medrxiv.org/content/10
 A single-cell transcriptomic investigation by [John Fullard and colleagues](https://www.biorxiv.org/content/10.1101/2021.01.08.425999v1.full.pdf+html) analyzed brain tissues (dorsolateral prefrontal cortex, medulla oblongata and choroid plexus) of COVID-19 affected patients. The microglial activation was compared to genetically regulated expression profiles of brain and blood tissues using HGI summary statistics. This identified an over-representation of microglia-specific transcription factors, suggesting neuroinflammation in the brain tissues of COVID-19 patients.
 
 [Matteo D’Antonio and colleagues](https://www.medrxiv.org/content/10.1101/2021.05.10.21256423v1.full.pdf+html) investigated all loci associated with COVID-19 outcomes and tissue specific gene expression for 48 tissues to dissect the molecular mechanisms underlying potential genetic predisposition to SARS-Cov-2.
+
+![](/img/key_terms_small.jpg)
 
 ## Immunological links to COVID-19
 
