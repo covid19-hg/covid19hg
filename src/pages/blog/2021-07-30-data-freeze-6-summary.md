@@ -77,22 +77,22 @@ Solute carrier family 22 member 31, *SLC22A31*, chromosome 16 has a significant 
 
 
 
-### Rare lead variant in *ACE2*
+## Genetic variation in *ACE2* associated with COVID-19
 
-In our GWAS meta-analysis of all COVID-19 cases (125,584 cases versus 2,575,347 controls) we identified significant variants near *ACE2*. This is exciting because of ACE2’s role in SARS-CoV-2 infection. This gene was first discussed in [data freeze 3](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) (read link to learn more about *ACE2*) from July 2020 with its relationship to a variant discovered in *SLC6A20*. In short, ACE2 is a receptor for SARS-CoV-2 binding, and variants on this receptor would affect how tightly SARS-CoV-2 binds to our cells ([R&DSystems, ACE-2 receptor for SARS-CoV-2](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/)).
+In our GWAS meta-analysis of all COVID-19 cases (125,584 cases versus 2,575,347 controls) we identified significant variants near *ACE2*. This is exciting because of ACE2’s role in SARS-CoV-2 infection—first discussed in [data freeze 3](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/) (read link to learn more about *ACE2*) from July 2020 with its relationship to a variant discovered in *SLC6A20*. In short, ACE2 is a receptor for SARS-CoV-2 binding, and variants on this receptor would affect how tightly SARS-CoV-2 binds to our cells ([R&DSystems, ACE-2 receptor for SARS-CoV-2](https://www.covid19hg.org/blog/2020-09-24-freeze-3-results/)).
 
 
 The most significant variant is rare in contributing studies of European ancestries, but [more common in studies of South Asian ancestries](https://gnomad.broadinstitute.org/variant/X-15602217-T-C?dataset=gnomad_r3)—another great example of the importance of global representation in this analysis. While this rare variant is seven orders of magnitude more significant than other variants in the region, there are independently significant common variants nearby in the intron of *CA5PB1*.
 
 
 
-Rare variants in TLR7 likely involved in severe COVID-19
+## Rare variants in *TLR7* likely involved in severe COVID-19
 
-Complementary to the COVID-19 HGI’s work on common genetic variants, the whole-exome/whole-genome working group uses next-generation sequencing technology to find rare genetic variants (present in less than 0.1% of the population) that may lead to worse COVID-19 presentations. Studying rare variants requires large sample sizes, and the working group led by [Brent Richards](https://twitter.com/brentrichards19?lang=en) (McGill) and [Alessandra Renieri](https://twitter.com/renieriale?lang=en) (Sienna) has assembled the world’s largest cohort of patients with exome sequencing, tallying more than 3,400 severe cases and 500,000 controls. Preliminary results show a likely role of TLR7 in severe COVID-19, an immunity related gene involved in the detection of viral RNA. Patients with rare deleterious variants in that gene may have an increased odds of severe disease that is 17 times higher than those without such variants. However, more replication is needed, and the third data freeze is expected to be released in August of 2021.
+Complementary to the COVID-19 HGI’s work on common genetic variants, the whole-exome/whole-genome working group uses next-generation sequencing technology to find rare genetic variants (present in less than 0.1% of the population) that may lead to worse COVID-19 presentations. Studying rare variants requires large sample sizes, and the working group led by [Brent Richards](https://twitter.com/brentrichards19?lang=en) (McGill) and [Alessandra Renieri](https://twitter.com/renieriale?lang=en) (Sienna) has assembled the world’s largest cohort of patients with exome sequencing, tallying more than 3,400 severe cases and 500,000 controls. Preliminary results show a likely role of *TLR7* in severe COVID-19, an immunity related gene involved in the detection of viral RNA. Patients with rare deleterious variants in that gene may have an increased odds of severe disease that is 17 times higher than those without such variants. However, more replication is needed, and the third data freeze is expected to be released in August of 2021.
 
 
 
-Our Next Steps
+## Our Next Steps
 
 This sixth data freeze provides the largest insight yet into COVID-19 host genetics. These exciting new discoveries highlight the importance of international collaboration—the COVID-19 HGI includes 54 contributing studies including over 3,000 scientists worldwide. As always, our goal is to continue broadening the dataset with more samples to not only replicate these findings, but to identify other variants contributing to COVID-19 susceptibility and severity. Potential long term applications of these genetic findings could lead to improved COVID-19 treatments, prediction of individuals most at risk for severe COVID-19, and management of COVID-19 patients.
 
