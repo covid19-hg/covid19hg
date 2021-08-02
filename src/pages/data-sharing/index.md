@@ -43,17 +43,12 @@ qas:
       result browser](https://app.covid19hg.org/), via [GWAS
       catalog](https://www.ebi.ac.uk/gwas/), [Open Target
       Platform](https://www.targetvalidation.org/) and other portals.
-  - question: "## **Who will have access to the results summary statistics?**"
+  - question: "## **Can I access summary statistics from the individual studies?**"
     answer: On the [result page](https://www.covid19hg.org/results/), we make
       available the meta-analysis summary statistics for the combined studies.
       We also make available leave-one-out analysis. However, to access the
       study-specific summary statistics you will need to get in contact with
       each study PI separately.
-  - question: "## **Can I access summary statistics from the individual studies?**"
-    answer: On the [result page](https://www.covid19hg.org/results/), we make
-      available the meta-analysis summary statistics for the combined studies
-      with and without UK Biobank. However, to access the study-specific summary
-      statistics you will need to get in contact with each study PI separately.
   - question: "## **My data cannot leave my country, what can I do?**"
     answer: The EGA is working with the ELIXIR network to establish the EGA
       Federation network to enable data to be deposited within national
