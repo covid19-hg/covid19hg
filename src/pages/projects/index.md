@@ -10,37 +10,24 @@ projectsIntro: >-
   #### **As a reminder the centralized analyses are based on [this](https://docs.google.com/document/d/16ethjgi4MzlQeO0KAW_yDYyUHdB9kKbtfuGW4XYVKQg/edit?usp=sharing) analysis plan.**
 projects:
   - title: Long COVID
-    description: "Emerging evidence suggests that some patients suffer from various
+    description: >-
+      Emerging evidence suggests that some patients suffer from various
       persistent symptoms after the acute phase of COVID-19 infection. The
-      prevalence of this so-called Long COVID, Chronic COVID syndrome (CCS)\r
-
+      prevalence of this so-called Long COVID, Chronic COVID syndrome (CCS),
       Post-acute sequelae of COVID-19 (PASC), or Post-COVID-19
       syndrome/conditions, is yet to be determined. Given the magnitude of the
       pandemic, even if only a small proportion of the infected suffer from
       prolonged sequelae, this will cause a major burden on healthcare systems,
       individuals and families.
 
-      The “long-haulers” include individuals who had a severe infection in
-      the acute phase as well as those with mild symptoms. A wide spectrum of
-      lingering symptoms have been reported in several organs and tissues,
-      including the lungs, cardiovascular system, pancreas, liver and brain.
+      The “long-haulers” include individuals who had a severe infection in the acute phase as well as those with mild symptoms. A wide spectrum of lingering symptoms have been reported in several organs and tissues, including the lungs, cardiovascular system, pancreas, liver and brain.
 
-      Various pathophysiological mechanisms have been suggested, e.g.
-      tissue destruction, prolonged infection, autoimmune process, and
-      hypercoagulability. Most likely several mechanisms are involved, and
-      patient groups may have very different mechanisms and disease
-      trajectories.\ 
+      Various pathophysiological mechanisms have been suggested, e.g. tissue destruction, prolonged infection, autoimmune process, and hypercoagulability. Most likely several mechanisms are involved, and patient groups may have very different mechanisms and disease trajectories. 
 
 
-      We have formed a working group to address the host genetics of this
-      very heterogeneous phenotype, using longitudinal registry data and
-      questionnaires.
+      We have formed a working group to address the host genetics of this very heterogeneous phenotype, using longitudinal registry data and questionnaires.
 
-      If you're interested in joining the discussion on how to harmonise
-      phenotypes/diagnoses or questionnaires, or have other ideas on how to
-      collaborate, please join the discussion at our Slack channel or contact
-      Vilma Lammi ([at]helsinki.fi -> add your information in the study info
-      form)."
+      If you're interested in joining the discussion on how to harmonise phenotypes/diagnoses or questionnaires, or have other ideas on how to collaborate, please join the discussion at our Slack channel or contact Vilma Lammi ([at]helsinki.fi -> add your information in the study info form).
     slack-channel: "#covid19-hg-longcovid"
     contact-persons:
       - Vilma Lammi
