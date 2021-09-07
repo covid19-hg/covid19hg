@@ -26,7 +26,7 @@ projects:
       Various pathophysiological mechanisms have been suggested, e.g. tissue destruction, prolonged infection, autoimmune process, and hypercoagulability. Most likely several mechanisms are involved, and patient groups may have very different mechanisms and disease trajectories. 
 
 
-      We have formed a working group to address the host genetics of this very heterogeneous phenotype, using longitudinal registry data and questionnaires.
+      We have formed an international working group to address the host genetics of this very heterogeneous phenotype, using longitudinal registry data and questionnaires.
 
       If you're interested in joining the discussion on how to harmonise phenotypes/diagnoses or questionnaires, or have other ideas on how to collaborate, please join the discussion at our Slack channel or contact Vilma Lammi (\[at]helsinki.fi -> add your information in the study info form).
     slack-channel: "#covid19-hg-longcovid"
