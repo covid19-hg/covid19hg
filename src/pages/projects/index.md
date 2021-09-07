@@ -20,7 +20,8 @@ projects:
       prolonged sequelae, this will cause a major burden on healthcare systems,
       individuals and families. 
 
-      The “long-haulers” include individuals who had a severe infection in the acute phase as well as those with mild symptoms. A wide spectrum of lingering symptoms have been reported in several organs and tissues, including the lungs, cardiovascular system, pancreas, liver and brain. 
+
+      The “long-haulers” include individuals who had a severe infection in the acute phase as well as those with mild symptoms. A wide spectrum of lingering symptoms have been reported in several organs and tissues, including the lungs, cardiovascular system, pancreas, liver and brain. \
 
       Various pathophysiological mechanisms have been suggested, e.g. tissue destruction, prolonged infection, autoimmune process, and hypercoagulability. Most likely several mechanisms are involved, and patient groups may have very different mechanisms and disease trajectories. 
 
