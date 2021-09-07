@@ -28,7 +28,7 @@ projects:
 
       We have formed an international working group to address the host genetics of this very heterogeneous phenotype, using longitudinal registry data and questionnaires.
 
-      If you're interested in joining the discussion on how to harmonise phenotypes/diagnoses or questionnaires, or have other ideas on how to collaborate, please join the discussion at our Slack channel or contact Vilma Lammi (\[at]helsinki.fi -> add your information in the study info form).
+      If you're interested in joining the discussion on how to harmonise phenotypes/diagnoses or questionnaires, or have other ideas on how to collaborate, please join the discussion at our Slack channel or contact Vilma Lammi (\[at]helsinki.fi -> to add your information in the study info form and get invited to the working group's meetings and Slack).
     slack-channel: "#covid19-hg-longcovid"
     contact-persons:
       - Vilma Lammi
