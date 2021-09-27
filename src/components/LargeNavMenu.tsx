@@ -96,6 +96,7 @@ const navItems: NavItem[] = [
         label: 'Meeting Archive',
         icon: Notes,
         children: [
+          { href: '/blog/2021-09-27-september-20-2021-meeting/', label: 'September 20, 2021' },
           { href: '/blog/2021-06-17-june-14-2021-meeting/', label: 'June 14, 2021' },
           { href: '/blog/2021-04-15-april-9-2021/', label: 'April 9, 2021' },
           { href: '/blog/2021-03-02-february-26-2021-meeting/', label: 'February 26, 2021' },
@@ -214,11 +215,11 @@ export const LargeNavMenu = () => {
           {item.label}{' '}
         </GatsbyLink>
       ) : (
-        //@ts-expect-error
-        <Link href={item.href} className={classes.link} target={item.newTab && "_blank"} rel="noopener">
-          {item.label}
-        </Link>
-      )
+          //@ts-expect-error
+          <Link href={item.href} className={classes.link} target={item.newTab && "_blank"} rel="noopener">
+            {item.label}
+          </Link>
+        )
       labelContent = <div className={classes.treeItemLabelRoot}>{linkElem}</div>
     }
     const label = <div className={classes.treeItemLabelRoot}>{labelContent}</div>
