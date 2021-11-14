@@ -8,7 +8,7 @@ publications_page_intro: Many of the participating groups in COVID-19 Host
   been based on unpublished analyses of the HGI.
 studies:
   - posted_date: 11th November 2021
-    name: COVID-19 HGI data freeze 6 publication
+    name: COVID-19 HGI data freeze 6 preprint
     links:
       - url: https://www.medrxiv.org/content/10.1101/2021.11.08.21265944v1
         description: Preprint
