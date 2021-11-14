@@ -7,11 +7,23 @@ publications_page_intro: Many of the participating groups in COVID-19 Host
   follow-up work based on specific discovered loci, even if that work may have
   been based on unpublished analyses of the HGI.
 studies:
+  - posted_date: 11th November 2021
+    name: COVID-19 HGI data freeze 6 preprint
+    links:
+      - url: https://www.medrxiv.org/content/10.1101/2021.11.08.21265944v1
+        description: Preprint
+    first_publication: SFTPD, MUC5B and ACE2
+    genome_wide_significant_loci: "23"
+    cases_description: 9,376 critically ill cases, 25,027 hospitalised cases,
+      125,584 reported cases of SARS-CoV-2 infection
+    controls_description: Up to 2,836,272 controls
   - posted_date: 8th June 2021
     name: COVID-19 HGI data freeze 6
     links:
       - description: Website
         url: /results/
+    genome_wide_significant_loci: ""
+    first_publication: ""
   - posted_date: 5th March 2021
     name: COVID-19 HGI flagship paper
     cases_description: "6,179 critically ill cases, 13,641 hospitalised cases,
@@ -20,8 +32,6 @@ studies:
     genome_wide_significant_loci: 15 genome-wide significant loci, 11 associated
       with severity, 4 with susceptibility
     links:
-      - description: Preprint
-        url: https://www.medrxiv.org/content/10.1101/2021.03.10.21252820v1
       - description: Paper
         url: https://www.nature.com/articles/s41586-021-03767-x
   - posted_date: 26th January 2021
