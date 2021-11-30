@@ -38,6 +38,9 @@ dataResults:
   - title: View latest results
     subtitle: Meta-analysis results and data downloads
     link: /results/
+  - title: Data browser
+    subtitle: Browse results using the online browser
+    link: https://app.covid19hg.org/
   - title: In silico follow up
     subtitle: Computational analyses based on the genetic association results
     link: /blog/2020-10-22-in-silico-follow-up-results-for-freeze-v4/

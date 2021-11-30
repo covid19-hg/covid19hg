@@ -112,7 +112,7 @@ const IndexPageContent = ({ image, learnCollaborate, dataResults }: Props) => {
     <>
       <Img fluid={image.childImageSharp.fluid} loading="eager" />
       <Container marginTop={5} fixed={true}>
-        <Card variant="outlined">
+        {/*  <Card variant="outlined">
           <CardContent>
             <Typography variant="h5" align="center">
               <strong>Highlighted Links:</strong>
@@ -133,7 +133,7 @@ const IndexPageContent = ({ image, learnCollaborate, dataResults }: Props) => {
       </GatsbyLink>
             </Typography>
           </CardContent>
-        </Card>
+        </Card>*/}
         <Grid container={true} spacing={3} marginTop={2} marginBottom={2}>
           {learnCollaborateElem}
           {dataResultsElem}
