@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid } from "./materialUIContainers";
-import { Typography, Link, makeStyles, Theme, Card, CardContent } from "@material-ui/core";
+import { Typography, Link, makeStyles, Theme } from "@material-ui/core";
 import GatsbyLink from "gatsby-link";
 import Box from "@material-ui/core/Box";
 import BlogRoll from "./BlogRoll";
@@ -81,7 +81,7 @@ interface Props {
   dataResults: { title: string; subtitle: string; link: string }[];
 }
 const IndexPageContent = ({ image, learnCollaborate, dataResults }: Props) => {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const learnCollaborateItems = learnCollaborate.map(
     ({ link, title, subtitle }) => (
