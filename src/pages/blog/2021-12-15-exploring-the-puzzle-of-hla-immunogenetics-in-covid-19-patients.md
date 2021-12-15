@@ -21,7 +21,7 @@ The emergence of SARS-CoV-2 shook our lives almost two years ago. The virus has 
 
 The classical *Human Leukocyte Antigen* (HLA) genes are located on chromosome 6 within the human major histocompatibility complex (MHC) that was initially investigated for its seminal role in transplantation [](<>)outcomes. Classical HLA genes encode for cell surface molecules that process and present endogenous and exogenous antigens to the immune system. These molecules are essential for triggering efficient immune responses against non-self-peptides, including in the context of infectious diseases. Class I HLA molecules (e.g., A, B and C) are ubiquitously expressed and specifically interact with CD8 T cells, when class II HLA molecules (eg. DR, DQ, DP) are expressed by antigen-presenting cells and specifically activate CD4 T cells. 
 
-![](blob:https://www.covid19hg.org/888059a2-c66e-4d56-86e0-3a265786e987)
+![](/img/hla-Fig1.png)
 
 **Figure 1 | HLA molecules and antigen presentation.**
 

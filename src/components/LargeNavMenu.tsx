@@ -57,6 +57,10 @@ const navItems: NavItem[] = [
         icon: Book,
         children: [
           {
+            href: `/blog/2021-12-15-exploring-the-puzzle-of-hla-immunogenetics-in-covid-19-patients/`,
+            label: `HLA Immunogenetics`,
+          },
+          {
             href: `/blog/2021-07-30-data-freeze-6-summary/`,
             label: `Scientific Summary (R6)`,
           },
@@ -215,11 +219,11 @@ export const LargeNavMenu = () => {
           {item.label}{' '}
         </GatsbyLink>
       ) : (
-          //@ts-expect-error
-          <Link href={item.href} className={classes.link} target={item.newTab && "_blank"} rel="noopener">
-            {item.label}
-          </Link>
-        )
+        //@ts-expect-error
+        <Link href={item.href} className={classes.link} target={item.newTab && '_blank'} rel="noopener">
+          {item.label}
+        </Link>
+      )
       labelContent = <div className={classes.treeItemLabelRoot}>{linkElem}</div>
     }
     const label = <div className={classes.treeItemLabelRoot}>{labelContent}</div>
