@@ -6,7 +6,7 @@ tags:
   - Archive
 type: meeting-notes
 ---
-Webinar 13: February 1st, 2021 11:00am EST / 4:00pm GMT / 6:00pm CET
+Webinar 13: February 1st, 2022 11:00am EST / 4:00pm GMT / 6:00pm CET
 
 ## Agenda
 
