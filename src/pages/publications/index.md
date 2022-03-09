@@ -7,6 +7,14 @@ publications_page_intro: Many of the participating groups in COVID-19 Host
   follow-up work based on specific discovered loci, even if that work may have
   been based on unpublished analyses of the HGI.
 studies:
+  - posted_date: 7th March 2022
+    name: GenOMICC release 2
+    cases_description: 7,491 critically-ill cases
+    controls_description: 48,400 controls
+    links:
+      - url: https://www.nature.com/articles/s41586-022-04576-6
+        description: paper
+    genome_wide_significant_loci: 23 independent variants that significantly predispose to critical Covid-19
   - posted_date: 11th November 2021
     name: COVID-19 HGI data freeze 6 preprint
     links:
