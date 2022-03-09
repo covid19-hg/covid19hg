@@ -58,7 +58,7 @@ studies:
   - posted_date: 16th December 2020
     name: "Horowitz, Kosmicki et al - REGENERON "
     links:
-      - description: Preprint
+      - description: Paper
         url: https://www.medrxiv.org/content/10.1101/2020.12.14.20248176v1
     cases_description: 11,356 individuals with COVID-19
     controls_description: 651,047 individuals with no record of SARS-CoV-2 infection
