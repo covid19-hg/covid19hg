@@ -15,6 +15,15 @@ studies:
       - url: https://www.nature.com/articles/s41586-022-04576-6
         description: paper
     genome_wide_significant_loci: 23 independent variants that significantly predispose to critical Covid-19
+  - posted_date: 16th December 2020
+    name: "Horowitz, Kosmicki et al - REGENERON "
+    links:
+      - description: Paper
+        url: https://www.nature.com/articles/s41588-021-01006-7
+    cases_description: 52,630 individuals with COVID-19
+    controls_description: "704,016 individuals with no record of SARS-CoV-2 infection "
+    genome_wide_significant_loci: ""
+    first_publication: ACE2
   - posted_date: 11th November 2021
     name: COVID-19 HGI data freeze 6 preprint
     links:
@@ -55,16 +64,6 @@ studies:
     links:
       - description: Website
         url: /results/
-  - posted_date: 16th December 2020
-    name: "Horowitz, Kosmicki et al - REGENERON "
-    links:
-      - description: Paper
-        url: https://www.medrxiv.org/content/10.1101/2020.12.14.20248176v1
-    cases_description: 11,356 individuals with COVID-19
-    controls_description: 651,047 individuals with no record of SARS-CoV-2 infection
-    genome_wide_significant_loci: " SLC6A20/CXCR6 locus, CCHCR1 locus, DPP9 locus,
-      IFNAR2/IL10RB/IFNAR1 locus, CCNG1 locus, ACSF3 locus, FPR1 locus"
-    first_publication: CCNG1 locus, ACSF3 locus, FPR1 locus
   - posted_date: 20th October 2020
     name: COVID-19 HGI data freeze 4
     links:
