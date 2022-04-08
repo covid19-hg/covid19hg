@@ -98,11 +98,15 @@ const Release = (release: Props) => {
         <Box marginTop={2} padding={1}>
           <Typography variant="h6" gutterBottom={true}>
             <>
-              Links to analysis files can be found in this README:{' '}
+              Links to analysis files are contained in this README:{' '}
               <a href={`/covidhgi-freeze-7-readme.txt`} download>
                 covidhgi-freeze-7-readme.txt
               </a>
             </>
+          </Typography>
+
+          <Typography variant="h6" gutterBottom={true}>
+            This page will be updated soon.
           </Typography>
         </Box>
       </Container>
