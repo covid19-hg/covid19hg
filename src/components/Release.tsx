@@ -82,6 +82,33 @@ const Release = (release: Props) => {
     <Analysis analysis={analysis} key={analysis.name} />
   ))
 
+  if (release.date == 'April 8, 2022') {
+    return (
+      <Container disableGutters={true}>
+        <Typography variant="h4">{release.title}</Typography>
+
+        <Grid container={true} alignItems={'center' as const} spacing={2} marginTop={1}>
+          <Grid item={true} xs={releaseLeftColumnWidthXs} md={releaseLeftColumnWidthMd}>
+            <Typography variant="h6"> Release Date</Typography>
+          </Grid>
+          <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
+            <Typography> {release.date}</Typography>
+          </Grid>
+        </Grid>
+        <Box marginTop={2} padding={1}>
+          <Typography variant="h6" gutterBottom={true}>
+            <>
+              Links to analysis files can be found in this README:{' '}
+              <a href={`/covidhgi-freeze-7-readme.txt`} download>
+                covidhgi-freeze-7-readme.txt
+              </a>
+            </>
+          </Typography>
+        </Box>
+      </Container>
+    )
+  }
+
   return (
     <Container disableGutters={true}>
       <Typography variant="h4">{release.title}</Typography>
@@ -148,8 +175,9 @@ const Release = (release: Props) => {
                 <strong style={{ color: 'orange' }}>**Note**</strong> a summary table of top results can be
                 found{' '}
                 <a href="https://docs.google.com/spreadsheets/d/1b9MqyivfJ7lk1BwaYCjd_P5kQRquunPW0BQljeLVags/edit#gid=0">
-                 here 
-                </a>.
+                  here
+                </a>
+                .
               </Typography>
               <Typography style={{ marginTop: 10 }}>
                 <strong style={{ color: 'blue' }}>**Note**</strong> the full download files do not contain the
@@ -158,13 +186,20 @@ const Release = (release: Props) => {
 
               <Typography style={{ marginTop: 5 }}>
                 There are additional not listed here available at this storage bucket:{' '}
-                <Typography style={{ marginTop: 5 }}><code>gs://covid19-hg-public/20210415/results/20210607</code></Typography> 
-                <Typography style={{ marginTop: 5 }}>You will need{' '}<a href="https://cloud.google.com/storage/docs/gsutil_install">gsutil</a> to list and download
-                these files.</Typography>
+                <Typography style={{ marginTop: 5 }}>
+                  <code>gs://covid19-hg-public/20210415/results/20210607</code>
+                </Typography>
+                <Typography style={{ marginTop: 5 }}>
+                  You will need <a href="https://cloud.google.com/storage/docs/gsutil_install">gsutil</a> to
+                  list and download these files.
+                </Typography>
               </Typography>
 
               <Typography style={{ marginTop: 5 }}>
-                Included are ancestry-specific (AFR, EUR, HIS/AMR) and admixed (AFR/HIS/AMR) results for hospitalization and susceptibility scans are now available. Also the top 10k variants including 23andMe, as well as leave UKBB out results for all ancestries and EUR only are available.
+                Included are ancestry-specific (AFR, EUR, HIS/AMR) and admixed (AFR/HIS/AMR) results for
+                hospitalization and susceptibility scans are now available. Also the top 10k variants
+                including 23andMe, as well as leave UKBB out results for all ancestries and EUR only are
+                available.
               </Typography>
             </Grid>
           </>
@@ -184,7 +219,7 @@ const Release = (release: Props) => {
               Note: variants with heterogeneity p-value less than 0.001 across studies are in green.
             </Typography>
           </Grid>
-        )}k
+        )}
       </Grid>
       <Grid container={true} marginTop={2} spacing={4}>
         {analysisElems}

@@ -134,6 +134,7 @@ const navItems: NavItem[] = [
         label: 'Downloads',
         icon: CloudDownload,
         children: [
+          { href: '/results/r7/', label: 'Release 7' },
           { href: '/results/r6/', label: 'Release 6' },
           { href: '/results/r5/', label: 'Release 5' },
           { href: '/results/r4/', label: 'Release 4' },
