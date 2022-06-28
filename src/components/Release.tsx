@@ -82,37 +82,6 @@ const Release = (release: Props) => {
     <Analysis analysis={analysis} key={analysis.name} />
   ))
 
-  if (release.date == 'April 8, 2022') {
-    return (
-      <Container disableGutters={true}>
-        <Typography variant="h4">{release.title}</Typography>
-
-        <Grid container={true} alignItems={'center' as const} spacing={2} marginTop={1}>
-          <Grid item={true} xs={releaseLeftColumnWidthXs} md={releaseLeftColumnWidthMd}>
-            <Typography variant="h6"> Release Date</Typography>
-          </Grid>
-          <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
-            <Typography> {release.date}</Typography>
-          </Grid>
-        </Grid>
-        <Box marginTop={2} padding={1}>
-          <Typography variant="h6" gutterBottom={true}>
-            <>
-              Links to analysis files are contained in this README:{' '}
-              <a href={`/covidhgi-freeze-7-readme.txt`} download>
-                covidhgi-freeze-7-readme.txt
-              </a>
-            </>
-          </Typography>
-
-          <Typography variant="h6" gutterBottom={true}>
-            This page will be updated soon.
-          </Typography>
-        </Box>
-      </Container>
-    )
-  }
-
   return (
     <Container disableGutters={true}>
       <Typography variant="h4">{release.title}</Typography>
@@ -144,6 +113,31 @@ const Release = (release: Props) => {
         <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
           <Typography> {release.notes}</Typography>
         </Grid>
+
+        {release.date === 'Apr 8, 2022' && (
+          <>
+            <Grid item={true} xs={releaseLeftColumnWidthXs} md={releaseLeftColumnWidthMd}>
+              <Typography variant="h6">Extras</Typography>
+            </Grid>
+            <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
+              <Typography>
+                <strong style={{ color: 'blue' }}>**Note**</strong> the full downloads below do not contain
+                the 23andMe samples (the most well-powered analyses), however the top 10K SNPs from analyses
+                that include 23andMe samples are available <a href="">here.</a>
+              </Typography>
+              <Typography style={{ marginTop: 5 }}>
+                There are additional results described in this README:{' '}
+                <a href={`/covidhgi-freeze-7-readme.txt`} download>
+                  covidhgi-freeze-7-readme.txt
+                </a>{' '}
+                or look in this storage bucket:
+                <code> gs://covid19-hg-public/freeze_7/results/20220403</code>. You will need{' '}
+                <a href="https://cloud.google.com/storage/docs/gsutil_install">gsutil</a> to list and download
+                these files.
+              </Typography>
+            </Grid>
+          </>
+        )}
 
         {release.date === 'January 18, 2021' && (
           <>
