@@ -1,24 +1,24 @@
 import fs from 'fs'
 import yaml from 'js-yaml'
 
-const RESULTS_URL = 'https://storage.googleapis.com/covid19-hg-public/20210415/results/20210607'
+const RESULTS_URL = 'https://storage.googleapis.com/covid19-hg-public/freeze_7/results/20220403/main/sumstats'
 
-const VERSION = '20210607'
+const VERSION = '20220403'
 
 const RESULTS_PREFIX = 'COVID19_HGI'
 
-const B37_GZ_SUFFIX = '.b37.txt.gz'
-const B37_TBI_SUFFIX = '.b37.txt.gz.tbi'
+const B37_GZ_SUFFIX = '_GRCh37.tsv.gz'
+const B37_TBI_SUFFIX = '_GRCh37.tsv.gz.tbi'
 // const B37_FILTERED_SUFFIX = '.b37_1.0E-5.txt'
 
-const B38_GZ_SUFFIX = '.txt.gz'
-const B38_TBI_SUFFIX = '.txt.gz.tbi'
-// const B38_FILTERED_SUFFIX = '.txt.gz_1.0E-5.txt'
+const B38_GZ_SUFFIX = '.tsv.gz'
+const B38_TBI_SUFFIX = '.tsv.gz.tbi'
+const B38_FILTERED_SUFFIX = '_1e-5.tsv'
 
-// const B38_10K_GZ_SUFFIX = '.10k.txt.gz'
+const B38_10K_GZ_SUFFIX = '.10k.tsv.gz'
 // const B38_10K_TBI_SUFFIX = '.10k.txt.gz.tbi'
 
-// const B37_10K_GZ_SUFFIX = '.10k.b37.txt.gz'
+const B37_10K_GZ_SUFFIX = '.10k_GRCh37.tsv.gz'
 // const B37_10K_TBI_SUFFIX = '.10k.txt.gz.tbi'
 
 const downloadTypes = [
@@ -28,11 +28,15 @@ const downloadTypes = [
 
   { type: 'full_grch38_gz', description: 'GRCh38', suffix: B38_GZ_SUFFIX },
   { type: 'full_grch38_tbi', description: 'GRCh38 (.tbi)', suffix: B38_TBI_SUFFIX },
-  // { type: 'grch38_filtered', description: 'GRCh38 (filtered)', suffix: B38_FILTERED_SUFFIX },
+  { type: 'grch38_filtered', description: 'GRCh38 (filtered)', suffix: B38_FILTERED_SUFFIX },
+
+  // { type: 'grch38_10k', description: 'GRCh38 with 23andMe (top 10K SNPs)', suffix: B38_FILTERED_SUFFIX },
 ]
 
 const PLOT_FOLDER = `/img/${VERSION}`
-const MANHATTAN_SUFFIX = 'inv_var_meta_p_flag_all_inv_var_meta_p_manhattan.png'
+
+// loglog missing in release 7...
+const MANHATTAN_SUFFIX = 'inv_var_meta_p_flag_all_inv_var_meta_p_manhattan_loglog.png'
 const MANHATTAN_LOGLOG_SUFFIX = 'inv_var_meta_p_flag_all_inv_var_meta_p_manhattan_loglog.png'
 const QQPLOT_SUFFIX = 'inv_var_meta_p_flag_all_inv_var_meta_p_qqplot.png'
 
@@ -59,7 +63,7 @@ const subsets = [
 ]
 
 let analyses = phenotypes.reduce((acc, { phenotypeId, description }) => {
-  const analyses = subsets.map((subset) => ({
+  const analyses = subsets.map(subset => ({
     analysisDownloadId: `${phenotypeId}_${subset.subsetDownloadId}`,
     phenotype: description,
     population: subset.population,
@@ -69,20 +73,20 @@ let analyses = phenotypes.reduce((acc, { phenotypeId, description }) => {
   return [...acc, ...analyses]
 }, [])
 
-analyses = analyses.map((analysis) => ({
+analyses = analyses.map(analysis => ({
   ...analysis,
   meta: JSON.parse(fs.readFileSync(`./metadata/${analysis.analysisDisplayId}.json`)).meta,
 }))
 
-analyses = analyses.map((analysis) => ({
+analyses = analyses.map(analysis => ({
   ...analysis,
-  studies: analysis.meta.map((s) => ({ study: s.name, cases: s.n_cases, controls: s.n_controls })),
+  studies: analysis.meta.map(s => ({ study: s.name, cases: s.n_cases, controls: s.n_controls })),
 }))
 
-analyses = analyses.map((analysis) => {
+analyses = analyses.map(analysis => {
   return {
     ...analysis,
-    downloads: downloadTypes.map((downloadType) => {
+    downloads: downloadTypes.map(downloadType => {
       let version = downloadType.versionModifier ? `${downloadType.versionModifier}_${VERSION}` : VERSION
       const fileName = `${RESULTS_PREFIX}_${analysis.analysisDownloadId}_${version}${downloadType.suffix}`
 
@@ -99,7 +103,7 @@ analyses = analyses.map((analysis) => {
   }
 })
 
-analyses = analyses.map((analysis) => {
+analyses = analyses.map(analysis => {
   if (!analysis.noPlots) {
     return {
       ...analysis,
@@ -112,7 +116,7 @@ analyses = analyses.map((analysis) => {
   }
 })
 
-analyses = analyses.map((analysis) => {
+analyses = analyses.map(analysis => {
   const {
     analysisDisplayId,
     population,
@@ -136,7 +140,8 @@ analyses = analyses.map((analysis) => {
 })
 
 const release = {
-  date: 'June 15, 2021',
+  date: 'April 8, 2022',
+  title: 'COVID19-hg GWAS meta-analyses round 7',
   notes:
     'Meta-analysis was done with fixed effects inverse variance weighting. Results are available in genome builds 38 and 37. An AF filter of 0.001 and an INFO filter of 0.6 was applied to each study before meta.',
   data_columns: [
@@ -163,7 +168,7 @@ const release = {
     {
       column: 'all_meta_N',
       description:
-        'number of studies that had the variant after AF and INFO filtering and as such were used for the meta',
+        'number of studies that had the variant after AF 0.001 and INFO 0.6 filtering and as such were used for the meta',
     },
     {
       column: 'all_inv_var_meta_beta',
@@ -192,6 +197,18 @@ const release = {
     {
       column: 'all_inv_var_het_p',
       description: "p-value from Cochran's Q heterogeneity test",
+    },
+    {
+      column: 'lmso_inv_var_beta',
+      description: 'leave-most-significant-study-out analysis effect size',
+    },
+    {
+      column: 'lmso_inv_var_se',
+      description: 'leave-most-significant-study-out analysis standard error of effect size',
+    },
+    {
+      column: 'lmso_inv_var_pval',
+      description: 'leave-most-significant-study-out analysis p-value',
     },
     {
       column: 'all_meta_AF',
@@ -282,10 +299,10 @@ const release = {
       abbreviation: 'NTR',
       full_name: 'Netherlands Twin Register',
     },
-    // {
-    //   abbreviation: 'PHBB',
-    //   full_name: 'Partners Healthcare Biobank',
-    // },
+    {
+      abbreviation: 'PHBB',
+      full_name: 'Partners Healthcare Biobank',
+    },
     {
       abbreviation: 'PMBB',
       full_name: 'Penn Medicine Biobank',
@@ -326,7 +343,7 @@ const release = {
     { abbreviation: 'JapanTaskForce', full_name: 'Japan Coronavirus Taskforce' },
     { abbreviation: 'idipaz24genetics', full_name: '24Genetics' },
     { abbreviation: 'FHoGID', full_name: 'FHoGID' },
-    // { abbreviation: 'UCLA', full_name: 'UCLA Precision Health COVID-19 Biobank' },
+    { abbreviation: 'UCLA', full_name: 'UCLA Precision Health COVID-19 Biobank' },
     {
       abbreviation: 'Genetics_COVID19_Korea',
       full_name: 'Genetic influences on severity of COVID-19 illness in Korea',
@@ -340,44 +357,84 @@ const release = {
     { abbreviation: 'Genotek', full_name: 'Genotek COVID-19 study' },
     // { abbreviation: 'MSHS_CGI', full_name: 'Mount Sinai Health System COVID-19 Genomics Initiative' },
     { abbreviation: 'TOPMed_CHRIS10K', full_name: 'TOPMed CHRIS' },
-    { abbreviation: 'CHULACOVID', full_name: 'CHULACOVID' },
+    // { abbreviation: 'CHULACOVID', full_name: 'CHULACOVID' },
     { abbreviation: 'Egypt_hgCOVID_hub', full_name: 'Egypt hgCOVID hub' },
     { abbreviation: 'SaudiHumanGenomeProgram', full_name: 'Saudi Human Genome Program' },
-    { abbreviation: 'INMUNGEN_CoV2', full_name: 'Variability in immune response genes and severity of SARS-CoV-2 infection (INMUNGEN-CoV2 study)' },
+    {
+      abbreviation: 'INMUNGEN_CoV2',
+      full_name:
+        'Variability in immune response genes and severity of SARS-CoV-2 infection (INMUNGEN-CoV2 study)',
+    },
     { abbreviation: 'Vanda', full_name: 'Vanda COVID' },
     { abbreviation: 'ANCESTRY_Freeze_Four', full_name: 'Ancestry Freeze Four' },
     { abbreviation: 'CHOP_CAG', full_name: 'CHOP CAG' },
     { abbreviation: 'IranCovid', full_name: 'Iran Covid' },
-    { abbreviation: 'CCHC_AMR', full_name: 'CCHC COVID-19 GWAS' },
+    // { abbreviation: 'CCHC_AMR', full_name: 'CCHC COVID-19 GWAS' },
     { abbreviation: 'Coronagenes', full_name: 'Coronagenes' },
     { abbreviation: 'EXCEED', full_name: 'EXCEED' },
     { abbreviation: 'HUNT', full_name: 'HUNT' },
     { abbreviation: 'MOBA', full_name: 'The Norwegian Mother, Father and Child Cohort Study' },
     { abbreviation: 'SINAI_COVID', full_name: 'Mount Sinai Health System COVID-19 Genomics Initiative' },
-    { abbreviation: 'TwinsUK', full_name: 'TwinsUK' },
+    // { abbreviation: 'TwinsUK', full_name: 'TwinsUK' },
     { abbreviation: 'WGHS', full_name: "Women's Health Genome Study" },
-    { abbreviation: 'thaicovid', full_name: 'Host genetic factors in COVID-19 patients in relation to disease susceptibility, disease severity and pharmacogenomics' },
+    {
+      abbreviation: 'thaicovid',
+      full_name:
+        'Host genetic factors in COVID-19 patients in relation to disease susceptibility, disease severity and pharmacogenomics',
+    },
     { abbreviation: 'TOPMed_Gardena', full_name: 'TOPMed Gardena' },
-    { abbreviation: 'EraCORE', full_name: 'EraCore' },
-  ].sort((a, b) => (a.full_name && b.full_name && a.full_name.toLowerCase() > b.full_name.toLowerCase()) ? 1 : -1),
+    // { abbreviation: 'EraCORE', full_name: 'Erasmus MC Covid-19 Observational Research' },
+    { abbreviation: 'Charite', full_name: '' },
+    { abbreviation: 'JorCovid', full_name: '' },
+    { abbreviation: 'MexGen-COVID', full_name: 'MexGen-COVID Initiative' },
+    { abbreviation: 'POLISH_COVID_WGS', full_name: '' },
+    { abbreviation: 'SCOURGE', full_name: 'Spanish COalition to Unlock Research on host GEnetics on COVID-19' },
+    { abbreviation: 'JSA-COVID19', full_name: '' },
+    { abbreviation: 'CGEN', full_name: 'Canadian COVID-19 Human Host Genome Sequencing Databank' },
+    { abbreviation: 'ChiCovid', full_name: '' },
+    { abbreviation: 'IND_GJ_COVID19', full_name: '' },
+    { abbreviation: 'MexCovid', full_name: '' },
+    { abbreviation: 'ArmCovid', full_name: 'Armenia_Covid-19hg' },
+    { abbreviation: 'COMRI', full_name: '' },
+    { abbreviation: 'FrenchCovid', full_name: '' },
+    { abbreviation: 'Ioannina', full_name: 'Ioannina Biobank' },
+    { abbreviation: 'KazCovid', full_name: 'National Reseach Center for Cardiac Surgery, Nur-Sultan, Kazakhstan' },
+    { abbreviation: 'PakCovid', full_name: '' },
+    { abbreviation: 'ABCD', full_name: 'Adolescent Brain and Cognitive development study' },
+    { abbreviation: 'ALSPAC_G1', full_name: 'Avon Longitudinal Study of Parents and Children' },
+    { abbreviation: 'CCHC', full_name: 'CCHC COVID-19 GWAS' },
+    { abbreviation: 'DBDS', full_name: '' },
+    { abbreviation: 'ERACORE', full_name: 'Erasmus MC Covid-19 Observational Research' },
+    { abbreviation: 'TIKOCO', full_name: 'Tirschenreuth Study' },
+  ].sort((a, b) => {
+    let sortValA = (a.full_name || a.abbreviation).toLowerCase()
+    let sortValB = (b.full_name || b.abbreviation).toLowerCase()
+    return sortValA > sortValB ? 1 : -1
+  }
+  ),
   analyses,
 }
 
 const uniqueStudies = Array.from(
   new Set(
-    analyses.reduce((studies, analysis) => [...studies, ...analysis.studies.map((study) => study.study)], [])
+    analyses.reduce((studies, analysis) => [...studies, ...analysis.studies.map(study => study.study)], [])
   )
-).map((study) => study.split('_').slice(0, -1).join('_'))
+).map(study =>
+  study
+    .split('_')
+    .slice(0, -1)
+    .join('_')
+)
 
 const uniqueStudyAbbreviations = new Set(
   release.studyAbbreviations.reduce((abbreviations, study) => [...abbreviations, study.abbreviation], [])
 )
 
 const studiesWithoutAbbreviations = Array.from(uniqueStudies).filter(
-  (study) => !uniqueStudyAbbreviations.has(study)
+  study => !uniqueStudyAbbreviations.has(study)
 )
 const studiesWithoutData = Array.from(uniqueStudyAbbreviations).filter(
-  (study) => !uniqueStudies.includes(study)
+  study => !uniqueStudies.includes(study)
 )
 
 if (studiesWithoutAbbreviations.length > 1) {
@@ -395,7 +452,7 @@ if (studiesWithoutData.length > 1) {
 
 const jsonString = JSON.stringify({
   templateKey: 'results-page',
-  title: 'COVID19-hg GWAS meta-analyses round 6',
+  title: 'COVID19-hg GWAS meta-analyses round 7',
   release,
 })
 
@@ -407,4 +464,4 @@ const releasesYamlStr = yaml.safeDump(json)
 
 const releasesYamlStrWithDocumentSeperator = `---\n${releasesYamlStr}`
 
-fs.writeFileSync('../../src/pages/results/r6.md', releasesYamlStrWithDocumentSeperator, 'utf8')
+fs.writeFileSync('../../src/pages/results/r7.md', releasesYamlStrWithDocumentSeperator, 'utf8')
