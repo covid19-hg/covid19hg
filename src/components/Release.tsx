@@ -114,26 +114,44 @@ const Release = (release: Props) => {
           <Typography> {release.notes}</Typography>
         </Grid>
 
-        {release.date === 'Apr 8, 2022' && (
+        {release.date === 'April 8, 2022' && (
           <>
             <Grid item={true} xs={releaseLeftColumnWidthXs} md={releaseLeftColumnWidthMd}>
               <Typography variant="h6">Extras</Typography>
             </Grid>
             <Grid item={true} xs={releaseRightColumnWidthXs} md={releaseRightColumnWidthMd}>
               <Typography>
-                <strong style={{ color: 'blue' }}>**Note**</strong> the full downloads below do not contain
-                the 23andMe samples (the most well-powered analyses), however the top 10K SNPs from analyses
-                that include 23andMe samples are available <a href="">here.</a>
+                The downloads below do not contain the 23andMe samples (the most well-powered analyses),
+                however the top 10K SNPs from analyses that include 23andMe samples are available{' '}
+                <a href="https://storage.googleapis.com/covid19-hg-public/freeze_7/results/20220403/main/sumstats/COVID19_HGI_R7_10k_SNPs.zip">
+                  here.
+                </a>
               </Typography>
               <Typography style={{ marginTop: 5 }}>
-                There are additional results described in this README:{' '}
-                <a href={`/covidhgi-freeze-7-readme.txt`} download>
-                  covidhgi-freeze-7-readme.txt
-                </a>{' '}
-                or look in this storage bucket:
-                <code> gs://covid19-hg-public/freeze_7/results/20220403</code>. You will need{' '}
-                <a href="https://cloud.google.com/storage/docs/gsutil_install">gsutil</a> to list and download
-                these files.
+                <p>
+                  There are additional results with links in this README:{' '}
+                  <a href={`/covidhgi-freeze-7-readme.txt`} download>
+                    covidhgi-freeze-7-readme.txt
+                  </a>
+                  .
+                </p>
+              </Typography>
+              <Typography>
+                <p>
+                  Alternatively, you can browse the Google Cloud storage bucket:
+                  <code> gs://covid19-hg-public/freeze_7/results/20220403</code>. You will need{' '}
+                  <a href="https://cloud.google.com/storage/docs/gsutil_install">gsutil</a> to list and
+                  download these files.
+                </p>
+              </Typography>
+
+              <Typography style={{ marginTop: 5 }}>
+                <p>
+                  Included at <code>gs://covid19-hg-public/freeze_7/results/20220403/pop_spec/sumstats</code>{' '}
+                  are ancestry-specific (AFR, EUR, HIS/AMR) and admixed (AFR/HIS/AMR) results for
+                  hospitalization and susceptibility scans. Also the top 10k variants including 23andMe, as
+                  well as leave UKBB out results for all ancestries and EUR only.
+                </p>
               </Typography>
             </Grid>
           </>
