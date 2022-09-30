@@ -1,71 +1,67 @@
-import React from "react";
-import clsx from "clsx";
-import Chip from "@material-ui/core/Chip";
-import { makeStyles, Theme } from "@material-ui/core/styles";
-import OpenInNewIcon from "@material-ui/icons/OpenInNew";
-import Button from "@material-ui/core/Button";
-import { ListDatum } from "../types";
-import Typography from "@material-ui/core/Typography";
-import { Grid } from "./materialUIContainers";
-import { ExtractProps } from "./partnersPageStylingParams";
-import Link from "@material-ui/core/Link";
-import MuiCard from "@material-ui/core/Card";
-import { CardContent, Divider } from "@material-ui/core";
-import {
-  partnersDetailCardTitleCyDataAttr,
-  partnersInvestigatorContactButton,
-} from "../cypressTestDataAttrs";
+import React from 'react'
+import clsx from 'clsx'
+import Chip from '@material-ui/core/Chip'
+import { makeStyles, Theme } from '@material-ui/core/styles'
+import OpenInNewIcon from '@material-ui/icons/OpenInNew'
+import { ListDatum } from '../types'
+import Typography from '@material-ui/core/Typography'
+import { Grid } from './materialUIContainers'
+import { ExtractProps } from './partnersPageStylingParams'
+import Link from '@material-ui/core/Link'
+import MuiCard from '@material-ui/core/Card'
+import { CardContent, Divider } from '@material-ui/core'
+import { partnersDetailCardTitleCyDataAttr } from '../cypressTestDataAttrs'
 
-const viralSequencingColor = "rgb(204, 223, 254)";
-const transcriptomicsColor = "rgb(193, 244, 233)";
-const proteomicsColor = "rgb(210, 246, 197)";
-const metabolomicsColor = "rgb(255, 232, 182)";
-const antibodyProfilingColor = "rgb(206, 240, 253)";
-const immuneProfilingColor = "rgb(254, 225, 212)";
+const viralSequencingColor = 'rgb(204, 223, 254)'
+const transcriptomicsColor = 'rgb(193, 244, 233)'
+const proteomicsColor = 'rgb(210, 246, 197)'
+const metabolomicsColor = 'rgb(255, 232, 182)'
+const antibodyProfilingColor = 'rgb(206, 240, 253)'
+const immuneProfilingColor = 'rgb(254, 225, 212)'
 
-const viralSequencingStyleName = "viralSequencing";
-const transcriptomicsStyleName = "transcriptomics";
-const proteomicsStyleName = "proteomics";
-const metabolomicsStyleName = "metabolomics";
-const antibodyProfilingStyleName = "antibodyProfiling";
-const immuneProfilingStyleName = "immuneProfiling";
+const viralSequencingStyleName = 'viralSequencing'
+const transcriptomicsStyleName = 'transcriptomics'
+const proteomicsStyleName = 'proteomics'
+const metabolomicsStyleName = 'metabolomics'
+const antibodyProfilingStyleName = 'antibodyProfiling'
+const immuneProfilingStyleName = 'immuneProfiling'
 
 export const assayOptions = [
   {
-    name: "Viral sequencing",
+    name: 'Viral sequencing',
     styleName: viralSequencingStyleName,
     color: viralSequencingColor,
   },
   {
-    name: "Transcriptomics",
+    name: 'Transcriptomics',
     styleName: transcriptomicsStyleName,
     color: transcriptomicsColor,
   },
   {
-    name: "Proteomics",
+    name: 'Proteomics',
     styleName: proteomicsStyleName,
     color: proteomicsColor,
   },
   {
-    name: "Metabolomics",
+    name: 'Metabolomics',
     styleName: metabolomicsStyleName,
     color: metabolomicsColor,
   },
   {
-    name: "Antibody profiling",
+    name: 'Antibody profiling',
     styleName: antibodyProfilingStyleName,
     color: antibodyProfilingColor,
   },
   {
-    name: "Immune profiling",
+    name: 'Immune profiling',
     styleName: immuneProfilingStyleName,
     color: immuneProfilingColor,
   },
-];
+]
 const useStyles = makeStyles((theme: Theme) => ({
   titleContainerWithLink: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
   },
   openInNewIcon: {
     marginLeft: theme.spacing(1),
@@ -78,13 +74,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: theme.spacing(1),
   },
   wesChip: {
-    backgroundColor: "rgb(120, 166, 215)",
+    backgroundColor: 'rgb(120, 166, 215)',
   },
   wgsChip: {
-    backgroundColor: "rgb(163, 209, 157)",
+    backgroundColor: 'rgb(163, 209, 157)',
   },
   gwasChip: {
-    backgroundColor: "rgb(255, 245, 155)",
+    backgroundColor: 'rgb(255, 245, 155)',
   },
   chip: {
     margin: theme.spacing(0.5, 0.5, 0.5, 0),
@@ -113,42 +109,26 @@ const useStyles = makeStyles((theme: Theme) => ({
   contactButtonRoot: {
     marginLeft: theme.spacing(1),
     borderRadius: 20,
-    alignSelf: "center",
+    alignSelf: 'center',
   },
-}));
+}))
 
 const LeftHalfLeftColumnItem = (props: { children: React.ReactNode }) => (
-  <Grid
-    item={true}
-    md={3}
-    xs={12}
-    display="flex"
-    alignItems={"center" as const}
-  >
+  <Grid item={true} md={3} xs={12} display="flex" alignItems={'center' as const}>
     {props.children}
   </Grid>
-);
-const LeftHalfRightColumnItem = ({
-  children,
-  ...rest
-}: ExtractProps<typeof Grid>) => (
-  <Grid
-    item={true}
-    md={9}
-    xs={12}
-    display="flex"
-    alignItems={"center" as const}
-    {...rest}
-  >
+)
+const LeftHalfRightColumnItem = ({ children, ...rest }: ExtractProps<typeof Grid>) => (
+  <Grid item={true} md={9} xs={12} display="flex" alignItems={'center' as const} {...rest}>
     {children}
   </Grid>
-);
+)
 
 interface Props {
-  cardInfo: ListDatum;
-  showContactForm: VoidFunction;
+  cardInfo: ListDatum
+  showContactForm: VoidFunction
 }
-const Card = ({ cardInfo, showContactForm }: Props) => {
+const Card = ({ cardInfo }: Props) => {
   const {
     study,
     investigator,
@@ -168,22 +148,17 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
     otherAssays,
     studyLink,
     researchCategory,
-  } = cardInfo;
+  } = cardInfo
 
-  const classes = useStyles();
+  const classes = useStyles()
 
-  let cardTitle: React.ReactElement<any>;
+  let cardTitle: React.ReactElement<any>
   if (studyLink === undefined) {
     cardTitle = (
-      <Typography
-        variant="h5"
-        component="h4"
-        gutterBottom={true}
-        data-cy={partnersDetailCardTitleCyDataAttr}
-      >
+      <Typography variant="h5" component="h4" gutterBottom={true} data-cy={partnersDetailCardTitleCyDataAttr}>
         {study}
       </Typography>
-    );
+    )
   } else {
     cardTitle = (
       <Link
@@ -194,62 +169,39 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
         className={classes.titleContainerWithLink}
         data-cy={partnersDetailCardTitleCyDataAttr}
       >
-        <Typography
-          variant="h5"
-          component="h4"
-          color="inherit"
-          gutterBottom={true}
-        >
+        <Typography variant="h5" component="h4" color="inherit" gutterBottom={true}>
           {study}
         </Typography>
         <OpenInNewIcon className={classes.openInNewIcon} />
       </Link>
-    );
+    )
   }
 
-  let studyTypeText;
-  if (
-    retrospective === true &&
-    (prospective === false || prospective === undefined)
-  ) {
+  let studyTypeText
+  if (retrospective === true && (prospective === false || prospective === undefined)) {
     const retrospectiveSampleSizeText =
-      retrospectiveSampleSize === undefined
-        ? ""
-        : `(n=${retrospectiveSampleSize})`;
-    studyTypeText = `Retrospective${retrospectiveSampleSizeText}`;
-  } else if (
-    (retrospective === false || retrospective === undefined) &&
-    prospective === true
-  ) {
+      retrospectiveSampleSize === undefined ? '' : `(n=${retrospectiveSampleSize})`
+    studyTypeText = `Retrospective${retrospectiveSampleSizeText}`
+  } else if ((retrospective === false || retrospective === undefined) && prospective === true) {
     const prospectiveSampleSizeText =
-      prospectiveSampleSize === undefined ? "" : `(n=${prospectiveSampleSize})`;
-    studyTypeText = `Prospective ${prospectiveSampleSizeText}`;
+      prospectiveSampleSize === undefined ? '' : `(n=${prospectiveSampleSize})`
+    studyTypeText = `Prospective ${prospectiveSampleSizeText}`
   } else if (retrospective === true && prospective === true) {
     const prospectiveSampleSizeText =
-      prospectiveSampleSize === undefined ? "" : `(n=${prospectiveSampleSize})`;
+      prospectiveSampleSize === undefined ? '' : `(n=${prospectiveSampleSize})`
     const retrospectiveSampleSizeText =
-      retrospectiveSampleSize === undefined
-        ? ""
-        : `(n=${retrospectiveSampleSize})`;
-    studyTypeText = `Retrospective${retrospectiveSampleSizeText}, Prospective${prospectiveSampleSizeText}`;
+      retrospectiveSampleSize === undefined ? '' : `(n=${retrospectiveSampleSize})`
+    studyTypeText = `Retrospective${retrospectiveSampleSizeText}, Prospective${prospectiveSampleSizeText}`
   }
 
-  const wesChip =
-    wes === true ? (
-      <Chip label="WES" className={`${classes.wesChip} ${classes.chip}`} />
-    ) : null;
-  const wgsChip =
-    wgs === true ? (
-      <Chip label="WGS" className={`${classes.wgsChip} ${classes.chip}`} />
-    ) : null;
+  const wesChip = wes === true ? <Chip label="WES" className={`${classes.wesChip} ${classes.chip}`} /> : null
+  const wgsChip = wgs === true ? <Chip label="WGS" className={`${classes.wgsChip} ${classes.chip}`} /> : null
   const gwasChip =
-    genotyping === true ? (
-      <Chip label="GWAS" className={`${classes.gwasChip} ${classes.chip}`} />
-    ) : null;
+    genotyping === true ? <Chip label="GWAS" className={`${classes.gwasChip} ${classes.chip}`} /> : null
 
-  let mainAssayChips;
+  let mainAssayChips
   if (assaysPlanned === undefined) {
-    mainAssayChips = null;
+    mainAssayChips = null
   } else {
     mainAssayChips = assayOptions.map(({ name, styleName }) =>
       assaysPlanned.includes(name) ? (
@@ -261,46 +213,39 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
           className={`${classes[styleName]} ${classes.chip}`}
         />
       ) : null
-    );
+    )
   }
-  const contactButton =
-    cardInfo.shouldShowContactButton === true ? (
-      <Button
-        variant="outlined"
-        size="small"
-        className={classes.contactButtonRoot}
-        onClick={() => showContactForm()}
-        data-cy={partnersInvestigatorContactButton}
-      >
-        Contact
-      </Button>
-    ) : null;
-  let researchCategoriesElem;
+  const contactButton = null
+  // cardInfo.shouldShowContactButton === true ? (
+  //   <Button
+  //     variant="outlined"
+  //     size="small"
+  //     className={classes.contactButtonRoot}
+  //     onClick={() => showContactForm()}
+  //     data-cy={partnersInvestigatorContactButton}
+  //   >
+  //     Contact
+  //   </Button>
+  // ) : null;
+  let researchCategoriesElem
   if (researchCategory !== undefined && researchCategory.length > 0) {
     const chips = researchCategory.map((name) => (
       <Chip key={name} label={name} className={classes.researchCategoryChip} />
-    ));
+    ))
     researchCategoriesElem = (
       <>
-        <Grid
-          container={true}
-          display="flex"
-          alignItems={"center" as const}
-          marginTop={1}
-        >
+        <Grid container={true} display="flex" alignItems={'center' as const} marginTop={1}>
           <Grid item={true} md={4}>
-            <Typography className={classes.miniTitle}>
-              Research Categories
-            </Typography>
+            <Typography className={classes.miniTitle}>Research Categories</Typography>
           </Grid>
           <Grid item={true} md={8}>
             {chips}
           </Grid>
         </Grid>
       </>
-    );
+    )
   } else {
-    researchCategoriesElem = null;
+    researchCategoriesElem = null
   }
 
   return (
@@ -311,9 +256,7 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
         <Grid container={true} spacing={2} marginTop={1}>
           <Grid item={true} container={true} md={6}>
             <LeftHalfLeftColumnItem>
-              <Typography className={classes.miniTitle}>
-                Investigators
-              </Typography>
+              <Typography className={classes.miniTitle}>Investigators</Typography>
             </LeftHalfLeftColumnItem>
             <LeftHalfRightColumnItem display="flex">
               <Typography>{investigator}</Typography>
@@ -341,39 +284,27 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
             </LeftHalfRightColumnItem>
 
             <LeftHalfLeftColumnItem>
-              <Typography className={classes.miniTitle}>
-                Genetic Analysis
-              </Typography>
+              <Typography className={classes.miniTitle}>Genetic Analysis</Typography>
             </LeftHalfLeftColumnItem>
             <LeftHalfRightColumnItem>
               {wesChip} {wgsChip} {gwasChip}
             </LeftHalfRightColumnItem>
 
             <LeftHalfLeftColumnItem>
-              <Typography className={classes.miniTitle}>
-                Assays Planned
-              </Typography>
+              <Typography className={classes.miniTitle}>Assays Planned</Typography>
             </LeftHalfLeftColumnItem>
-            <LeftHalfRightColumnItem flexWrap="wrap">
-              {mainAssayChips}
-            </LeftHalfRightColumnItem>
+            <LeftHalfRightColumnItem flexWrap="wrap">{mainAssayChips}</LeftHalfRightColumnItem>
 
             <LeftHalfLeftColumnItem>
-              <Typography className={classes.miniTitle}>
-                Other Assays
-              </Typography>
+              <Typography className={classes.miniTitle}>Other Assays</Typography>
             </LeftHalfLeftColumnItem>
             <LeftHalfRightColumnItem> {otherAssays} </LeftHalfRightColumnItem>
           </Grid>
           <Grid item={true} md={6}>
-            <Typography className={classes.miniTitle}>
-              Research Question
-            </Typography>
+            <Typography className={classes.miniTitle}>Research Question</Typography>
             <Typography>{researchQuestion}</Typography>
 
-            <Typography
-              className={clsx(classes.miniTitle, classes.miniTitleRightColumn)}
-            >
+            <Typography className={clsx(classes.miniTitle, classes.miniTitleRightColumn)}>
               Study Design
             </Typography>
             <Typography>{studyDesignUnformatted}</Typography>
@@ -383,7 +314,7 @@ const Card = ({ cardInfo, showContactForm }: Props) => {
         </Grid>
       </CardContent>
     </MuiCard>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
