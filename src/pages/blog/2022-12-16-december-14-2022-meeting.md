@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: December 14, 2022 meeting
+title: December 15, 2022 meeting
 date: 2022-12-16T19:33:11.939Z
 tags:
   - Archive
