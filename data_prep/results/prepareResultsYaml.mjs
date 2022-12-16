@@ -24,7 +24,7 @@ const B38_FILTERED_SUFFIX = '_1e-5.tsv'
 // const B37_10K_GZ_SUFFIX = '.10k_GRCh37.tsv.gz'
 // const B37_10K_TBI_SUFFIX = '.10k.txt.gz.tbi'
 
-const LMSO_SUFFIX = '_inv_var_lmso.txt'
+// const LMSO_SUFFIX = '_inv_var_lmso.txt'
 
 const populations = ['afr', 'eas', 'eur', 'his', 'sas']
 
@@ -42,7 +42,7 @@ const downloadTypes = [
 
 const downloadTypesPopSpecific = [
   ...downloadTypes,
-  { type: 'leave_most_significant', description: 'Leave-most-significant-cohort-out stats for genome-wide significant variants', suffix: LMSO_SUFFIX },
+  // { type: 'leave_most_significant', description: 'Leave-most-significant-cohort-out stats for genome-wide significant variants', suffix: LMSO_SUFFIX },
 ]
 
 const PLOT_FOLDER = `/img/${VERSION}`
@@ -105,6 +105,12 @@ let analyses = phenotypes.reduce((acc, { phenotypeId, description }) => {
   })
   return [...acc, ...analyses]
 }, [])
+
+const excludeAnalysis = [
+  "B1_ALL_eas_leave_23andme", // only has 1 study
+]
+
+analyses = analyses.filter(a => !excludeAnalysis.includes(a.analysisDisplayId))
 
 analyses = analyses.map(analysis => ({
   ...analysis,
