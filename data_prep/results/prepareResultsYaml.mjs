@@ -1,7 +1,10 @@
 import fs from 'fs'
 import yaml from 'js-yaml'
 
-const RESULTS_URL = 'https://storage.googleapis.com/covid19-hg-public/freeze_7/results/20220403/main/sumstats'
+const RESULTS_URL = 'https://storage.googleapis.com/covid19-hg-public/freeze_7/results/20220403'
+
+const MAIN_PATH = 'main/sumstats'
+const POP_PATH = 'pop_spec/sumstats'
 
 const VERSION = '20220403'
 
@@ -15,11 +18,15 @@ const B38_GZ_SUFFIX = '.tsv.gz'
 const B38_TBI_SUFFIX = '.tsv.gz.tbi'
 const B38_FILTERED_SUFFIX = '_1e-5.tsv'
 
-const B38_10K_GZ_SUFFIX = '.10k.tsv.gz'
+// const B38_10K_GZ_SUFFIX = '.10k.tsv.gz'
 // const B38_10K_TBI_SUFFIX = '.10k.txt.gz.tbi'
 
-const B37_10K_GZ_SUFFIX = '.10k_GRCh37.tsv.gz'
+// const B37_10K_GZ_SUFFIX = '.10k_GRCh37.tsv.gz'
 // const B37_10K_TBI_SUFFIX = '.10k.txt.gz.tbi'
+
+const LMSO_SUFFIX = '_inv_var_lmso.txt'
+
+const populations = ['afr', 'eas', 'eur', 'his', 'sas']
 
 const downloadTypes = [
   { type: 'full_grch37_gz', description: 'GRCh37 liftover', suffix: B37_GZ_SUFFIX },
@@ -31,6 +38,11 @@ const downloadTypes = [
   { type: 'grch38_filtered', description: 'GRCh38 (filtered)', suffix: B38_FILTERED_SUFFIX },
 
   // { type: 'grch38_10k', description: 'GRCh38 with 23andMe (top 10K SNPs)', suffix: B38_FILTERED_SUFFIX },
+]
+
+const downloadTypesPopSpecific = [
+  ...downloadTypes,
+  { type: 'leave_most_significant', description: 'Leave-most-significant-cohort-out stats for genome-wide significant variants', suffix: LMSO_SUFFIX },
 ]
 
 const PLOT_FOLDER = `/img/${VERSION}`
@@ -59,17 +71,38 @@ const subsets = [
     subsetDisplayId: 'leave_23andme',
     plotDisplayId: '',
     population: 'All',
+    downloadTypes,
   },
+  ...populations.map(pop => ({
+    subsetDownloadId: `${pop}_leave23andme`,
+    subsetDisplayId: `${pop}_leave_23andme`,
+    plotDisplayId: `_${pop}_leave23andme`,
+    population: pop,
+    downloadTypes: downloadTypesPopSpecific,
+  }))
 ]
 
 let analyses = phenotypes.reduce((acc, { phenotypeId, description }) => {
-  const analyses = subsets.map(subset => ({
-    analysisDownloadId: `${phenotypeId}_${subset.subsetDownloadId}`,
-    phenotype: description,
-    population: subset.population,
-    analysisDisplayId: `${phenotypeId}_${subset.subsetDisplayId}`,
-    plotDisplayId: `${phenotypeId}${subset.plotDisplayId}`,
-  }))
+  const analyses = subsets.map(subset => {
+
+    let downloadPath
+
+    if (subset.population !== 'All') {
+      downloadPath = POP_PATH
+    } else {
+      downloadPath = MAIN_PATH
+    }
+
+    return ({
+      downloadPath,
+      analysisDownloadId: `${phenotypeId}_${subset.subsetDownloadId}`,
+      phenotype: description,
+      population: subset.population,
+      analysisDisplayId: `${phenotypeId}_${subset.subsetDisplayId}`,
+      plotDisplayId: `${phenotypeId}${subset.plotDisplayId}`,
+      downloadTypes: subset.downloadTypes,
+    })
+  })
   return [...acc, ...analyses]
 }, [])
 
@@ -86,12 +119,12 @@ analyses = analyses.map(analysis => ({
 analyses = analyses.map(analysis => {
   return {
     ...analysis,
-    downloads: downloadTypes.map(downloadType => {
+    downloads: analysis.downloadTypes.map(downloadType => {
       let version = downloadType.versionModifier ? `${downloadType.versionModifier}_${VERSION}` : VERSION
       const fileName = `${RESULTS_PREFIX}_${analysis.analysisDownloadId}_${version}${downloadType.suffix}`
 
-      const url = analysis.dirPrefix
-        ? `${RESULTS_URL}/${analysis.dirPrefix}/${fileName}`
+      const url = analysis.downloadPath
+        ? `${RESULTS_URL}/${analysis.downloadPath}/${fileName}`
         : `${RESULTS_URL}/${fileName}`
 
       return {
