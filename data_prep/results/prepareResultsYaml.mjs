@@ -89,6 +89,7 @@ let analyses = phenotypes.reduce((acc, { phenotypeId, description }) => {
 
     if (subset.population !== 'All') {
       downloadPath = POP_PATH
+
     } else {
       downloadPath = MAIN_PATH
     }
@@ -108,6 +109,7 @@ let analyses = phenotypes.reduce((acc, { phenotypeId, description }) => {
 
 const excludeAnalysis = [
   "B1_ALL_eas_leave_23andme", // only has 1 study
+  ...['afr', 'eas', 'eur', 'his', 'sas'].map(pop => `B1_ALL_${pop}_leave_23andme`),
 ]
 
 analyses = analyses.filter(a => !excludeAnalysis.includes(a.analysisDisplayId))
